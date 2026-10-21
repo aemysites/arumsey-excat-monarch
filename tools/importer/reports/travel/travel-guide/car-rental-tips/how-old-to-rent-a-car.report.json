@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/how-old-to-rent-a-car",
+  "path": "travel/travel-guide/car-rental-tips/how-old-to-rent-a-car",
+  "timestamp": "2026-10-21T19:10:44.210Z",
+  "title": "How Old Do You Have to Be to Rent a Car? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

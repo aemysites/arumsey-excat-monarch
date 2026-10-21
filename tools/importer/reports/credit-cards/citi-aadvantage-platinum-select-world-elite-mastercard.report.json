@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-aadvantage-platinum-select-world-elite-mastercard",
+  "path": "credit-cards/citi-aadvantage-platinum-select-world-elite-mastercard",
+  "timestamp": "2026-10-21T19:24:30.684Z",
+  "title": "Citi® / AAdvantage® Platinum Select® World Elite Mastercard® | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "section-subnav",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "benefits-showcase",
+    "hero-card",
+    "hero-card",
+    "cards-highlight",
+    "columns-key-terms",
+    "columns-key-terms",
+    "disclosure-links",
+    "cards-benefit-tiles"
+  ],
+  "fragments": [
+    "fragments/credit-card-categories"
+  ],
+  "importScript": "089f57e4feb6"
+}

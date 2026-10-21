@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/how-to-plan-a-vacation",
+  "path": "travel/travel-guide/travel-tips/how-to-plan-a-vacation",
+  "timestamp": "2026-10-21T19:17:04.039Z",
+  "title": "Planning a Vacation To Escape the Everyday | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

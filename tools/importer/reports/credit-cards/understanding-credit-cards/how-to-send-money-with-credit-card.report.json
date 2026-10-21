@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/understanding-credit-cards/how-to-send-money-with-credit-card",
+  "path": "credit-cards/understanding-credit-cards/how-to-send-money-with-credit-card",
+  "timestamp": "2026-10-21T17:54:53.924Z",
+  "title": "How to Send Money With a Credit Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/credit-cards/understanding-credit-cards/how-to-send-money-with-credit-card/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,31 @@
+{
+  "variantName": "section-subnav",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link + list",
+    "purpose": "in-page sub-section laid out as side-by-side columns: headed copy and bullet lists (What You Get / How It Works), a badge or photo beside copy, a centred CTA row, or centred icon columns"
+  },
+  "contentPattern": {
+    "structure": "one or more rows; each cell in a row is a column. A picture-only cell is a media column; any other cell is a text column (heading, text, lists, links), and a leading picture or icon paragraph in it is the column icon. A cell holding only a link to a /fragments/ page is replaced by that fragment. Colour comes from the section style (dark, blue), not from the block"
+  },
+  "options": [
+    { "class": "media-feature", "label": "Media Feature" },
+    { "class": "dark-promo", "label": "Dark Promo" },
+    { "class": "light", "label": "Light" },
+    { "class": "light-2", "label": "Light 2" }
+  ],
+  "memberVariantIds": [
+    "v_e94537b37998",
+    "v_76737aa668a1",
+    "v_df360cbc9f05",
+    "v_f5f6634888b7",
+    "v_3b62ad059133"
+  ],
+  "usage": "Use for in-page sub-sections split into columns. Default: equal text columns with headings and bullet lists. media-feature: a badge or photo next to heading and copy, centred. dark-promo: copy next to a rounded photo (put it in a dark section). light: a centred row of CTA buttons and links. light-2: centred icon columns with heading and text.",
+  "reuseGuidance": "Reuse for columned explanatory content inside a page. Use columns for generic layouts without these presets and cards for repeated clickable tiles."
+}

@@ -1,0 +1,223 @@
+/*
+ * Table Rates
+ * Default: citi.com content table (banking/compare-bank-accounts): white rows,
+ * #ccc row and column rules, #999 top rule, #eee group rows, #ddd caption band.
+ * Bordered: citi.com compare-table (small-business-banking/preferred-programs):
+ * #ccc grid, navy-to-blue gradient header cells with white letter-spaced titles.
+ * Font sizes are em-based so tables inside fine-print panels (12px) scale down.
+ */
+
+.table-rates {
+  --table-rates-rule: #ccc;
+  --table-rates-col-min: 160px;
+
+  width: 100%;
+}
+
+.table-rates .table-rates-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-rates table {
+  width: 100%;
+  min-width: calc(var(--table-rates-cols, 2) * var(--table-rates-col-min));
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* caption: compare-table section band (toggle-row-header) */
+.table-rates caption {
+  padding: 15px 16px;
+  background-color: #ddd;
+  color: var(--text-color);
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.table-rates caption p {
+  margin: 0;
+}
+
+/* header row */
+.table-rates thead tr {
+  border-top: 1px solid var(--border-color);
+}
+
+.table-rates th,
+.table-rates td {
+  padding: 8px 12px 16px;
+  border-right: 1px solid var(--table-rates-rule);
+  border-bottom: 1px solid var(--table-rates-rule);
+  text-align: left;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.table-rates th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.table-rates th:last-child,
+.table-rates td:last-child {
+  border-right: 0;
+}
+
+/* full-width group rows (row-header / custom-td-to-th2) */
+.table-rates .table-rates-group td {
+  padding: 16px 20px;
+  border-right: 0;
+  background-color: var(--rule-color);
+  font-size: 0.875em;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* comparison marks (check / dash cells) */
+.table-rates .table-rates-mark {
+  color: var(--link-color);
+  font-size: 1.25em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.table-rates picture,
+.table-rates img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* card art cells (card comparison header rows) */
+.table-rates :is(th, td):has(picture) {
+  color: #043567;
+  font-weight: 400;
+  text-align: center;
+}
+
+.table-rates :is(th, td):has(picture) picture,
+.table-rates :is(th, td):has(picture) img {
+  margin: 0 auto;
+}
+
+.table-rates :is(th, td):has(picture) img {
+  width: 171px;
+}
+
+.table-rates th p,
+.table-rates td p {
+  margin: 0;
+}
+
+.table-rates td p + p,
+.table-rates th p + p {
+  margin-top: 8px;
+}
+
+.table-rates :is(th, td) :is(ul, ol) {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.table-rates sup {
+  font-size: 0.75em;
+}
+
+.table-rates sup a:any-link {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* bordered option: full #ccc grid with gradient header cells */
+.table-rates.bordered table {
+  border: 1px solid var(--table-rates-rule);
+}
+
+.table-rates.bordered thead tr {
+  border-top: 0;
+}
+
+.table-rates.bordered thead th {
+  height: 72px;
+  padding: 8px 8px 12px;
+  border: 0;
+  background-color: #0a2a66;
+  background-image: linear-gradient(90deg, #061a40 0%, #0b2f6e 100%);
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.125;
+  letter-spacing: 1.5px;
+  vertical-align: middle;
+}
+
+.table-rates.bordered thead th:nth-child(2) {
+  background-image: linear-gradient(90deg, #0b3f8c 0%, #0a68b8 100%);
+}
+
+.table-rates.bordered thead th:nth-child(n + 3) {
+  background-image: linear-gradient(90deg, #0a5cb0 0%, #0b9ad8 100%);
+}
+
+.table-rates.bordered thead th strong {
+  font-weight: inherit;
+}
+
+.table-rates.bordered tbody td {
+  padding: 8px 24px 17px;
+  border-right: 1px solid var(--table-rates-rule);
+  border-bottom: 1px solid var(--table-rates-rule);
+  font-size: 0.875em;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.table-rates.bordered tbody td:first-child {
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+.table-rates.bordered sup a:any-link {
+  color: var(--link-color);
+}
+
+/* keep the row label visible while the grid scrolls sideways */
+.table-rates tbody tr:not(.table-rates-group) > :first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: var(--background-color);
+}
+
+@media (width >= 900px) {
+  .table-rates caption {
+    font-size: 1em;
+  }
+
+  .table-rates th,
+  .table-rates td {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .table-rates.bordered thead th {
+    padding: 10px 0 10px 24px;
+  }
+
+  .table-rates.bordered tbody td:first-child {
+    padding: 8px 18px;
+  }
+}

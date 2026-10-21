@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/banking/business-cd-accounts",
+  "path": "small-business/banking/business-cd-accounts",
+  "timestamp": "2026-10-21T16:34:47.047Z",
+  "title": "Business Certificate of Deposit (CD) Accounts | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-media",
+    "hero-chevron",
+    "section-subnav",
+    "accordion-feature",
+    "location-selector",
+    "columns-contact",
+    "columns-icon-features",
+    "carousel-cards",
+    "accordion-disclosure",
+    "cta-banner",
+    "cta-banner",
+    "columns-icon-strip"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

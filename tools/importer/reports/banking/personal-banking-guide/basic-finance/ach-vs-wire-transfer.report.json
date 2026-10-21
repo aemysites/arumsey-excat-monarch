@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/ach-vs-wire-transfer",
+  "path": "banking/personal-banking-guide/basic-finance/ach-vs-wire-transfer",
+  "timestamp": "2026-10-21T16:37:46.460Z",
+  "title": "ACH vs Wire Transfer: Which Is Right for You? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/personal-banking-guide/basic-finance/ach-vs-wire-transfer/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

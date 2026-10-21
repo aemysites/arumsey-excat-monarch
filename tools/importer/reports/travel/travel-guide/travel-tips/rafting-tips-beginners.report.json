@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/rafting-tips-beginners",
+  "path": "travel/travel-guide/travel-tips/rafting-tips-beginners",
+  "timestamp": "2026-10-21T19:17:43.413Z",
+  "title": "Essential Whitewater Rafting Tips for Beginners | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

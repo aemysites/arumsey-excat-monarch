@@ -1,0 +1,28 @@
+{
+  "variantName": "table-rates",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "table",
+    "purpose": "Rate, fee and comparison tables"
+  },
+  "contentPattern": {
+    "structure": "Rows of cells. A leading single-cell row becomes the caption; the first multi-cell row becomes the header when every cell has content; single-cell rows later in the table become full-width group rows; short rows are padded to the widest row"
+  },
+  "options": [
+    {
+      "class": "bordered",
+      "label": "Bordered"
+    }
+  ],
+  "memberVariantIds": [
+    "v_6bf1cd0fbfff",
+    "v_837ccd522fe4"
+  ],
+  "usage": "Rate tables, relationship pricing tiers, card agreement lists and program benefit comparisons",
+  "reuseGuidance": "Use bordered for a full cell grid."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/community-lending-homerun",
+  "path": "mortgage/community-lending-homerun",
+  "timestamp": "2026-10-21T17:58:20.508Z",
+  "title": "HomeRun® Mortgages | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "hero-chevron",
+    "section-subnav",
+    "location-selector",
+    "columns-contact",
+    "columns-contact",
+    "accordion-disclosure",
+    "columns-divided"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

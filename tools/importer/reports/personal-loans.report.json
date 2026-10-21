@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/personal-loans",
+  "path": "personal-loans",
+  "timestamp": "2026-10-21T16:35:36.322Z",
+  "title": "Personal Loans up to $30,000 fast. Apply online | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-icon",
+    "hero-chevron",
+    "accordion-feature",
+    "columns-icon-strip",
+    "cards-highlight",
+    "cards-highlight"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

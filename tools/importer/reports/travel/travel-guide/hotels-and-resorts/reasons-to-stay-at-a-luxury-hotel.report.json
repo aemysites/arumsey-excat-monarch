@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/reasons-to-stay-at-a-luxury-hotel",
+  "path": "travel/travel-guide/hotels-and-resorts/reasons-to-stay-at-a-luxury-hotel",
+  "timestamp": "2026-10-21T19:13:12.149Z",
+  "title": "Why Stay in a Luxury Hotel? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

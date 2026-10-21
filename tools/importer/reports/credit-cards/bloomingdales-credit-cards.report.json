@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/bloomingdales-credit-cards",
+  "path": "credit-cards/bloomingdales-credit-cards",
+  "timestamp": "2026-10-21T19:24:14.795Z",
+  "title": "Bloomingdale’s Credit Cards | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "tabs-feature",
+    "hero-card",
+    "cards-highlight"
+  ],
+  "fragments": [
+    "fragments/credit-cards/bloomingdales-credit-cards/cardmember-benefits",
+    "fragments/credit-cards/bloomingdales-credit-cards/loyallist-perks",
+    "fragments/credit-cards/bloomingdales-credit-cards/american-express"
+  ],
+  "importScript": "089f57e4feb6"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/personal-loans/learning-center/basics/business-loan-vs-personal-loan",
+  "path": "personal-loans/learning-center/basics/business-loan-vs-personal-loan",
+  "timestamp": "2026-10-21T17:59:41.140Z",
+  "title": "Business Loan vs. Personal Loan: Key Differences | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/personal-loans/learning-center/basics/business-loan-vs-personal-loan/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

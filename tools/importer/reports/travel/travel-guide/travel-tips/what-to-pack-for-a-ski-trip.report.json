@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/what-to-pack-for-a-ski-trip",
+  "path": "travel/travel-guide/travel-tips/what-to-pack-for-a-ski-trip",
+  "timestamp": "2026-10-21T19:18:49.038Z",
+  "title": "What to Pack for a Ski Trip | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

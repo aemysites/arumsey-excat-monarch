@@ -1,0 +1,34 @@
+{
+  "variantName": "accordion-disclosure",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button + text + list + link",
+    "purpose": "collapsible legal disclosure / terms and conditions with numbered footnotes, Go back / Back to top links and optional tables"
+  },
+  "contentPattern": {
+    "structure": "one row per disclosure: label cell (e.g. Important Terms and Conditions) | body cell (intro text, numbered footnote list, paragraphs, links, optional table); a body cell holding only a /fragments/ link loads that fragment"
+  },
+  "options": [
+    {
+      "class": "with-table",
+      "label": "With Table"
+    },
+    {
+      "class": "with-table-borderless-table",
+      "label": "With Table Borderless Table"
+    }
+  ],
+  "memberVariantIds": [
+    "v_5648004d41fb",
+    "v_601a53b8d474-1",
+    "v_456a6bf940fb",
+    "v_bd00b4ca04f5-2"
+  ],
+  "usage": "Legal footnotes and terms at the bottom of product and landing pages.",
+  "reuseGuidance": "Use for any collapsible legal or disclosure text. Add with-table when the body holds bordered tables, with-table-borderless-table for unbordered tables. For FAQ or product-information panels use accordion-feature."
+}

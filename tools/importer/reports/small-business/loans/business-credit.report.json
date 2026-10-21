@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/loans/business-credit",
+  "path": "small-business/loans/business-credit",
+  "timestamp": "2026-10-21T16:39:39.141Z",
+  "title": "Business Lines of Credit | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-icon",
+    "hero-chevron",
+    "section-subnav",
+    "location-selector",
+    "columns-contact",
+    "carousel-cards",
+    "carousel-cards",
+    "accordion-disclosure",
+    "cta-banner",
+    "columns-icon-strip",
+    "tabs-feature"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

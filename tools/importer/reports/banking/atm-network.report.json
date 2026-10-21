@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/atm-network",
+  "path": "banking/atm-network",
+  "timestamp": "2026-10-21T16:36:30.437Z",
+  "title": "Citibank ATMs | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "hero-chevron",
+    "section-subnav",
+    "accordion-feature"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

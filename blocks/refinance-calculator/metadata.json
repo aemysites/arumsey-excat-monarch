@@ -1,0 +1,22 @@
+{
+  "variantName": "refinance-calculator",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "button + heading + text + field",
+    "purpose": "Interactive cash-out refinance calculator"
+  },
+  "contentPattern": {
+    "structure": "Key/value rows (value = default, optional third cell = help text): Home value, Mortgage balance, Cash-out amount, Loan terms (comma list, e.g. 30-Year Fixed, 15-Year Fixed), Interest rate, LTV (default 80), Minimum cash-out (default 15000), Closing cost (% of loan, default 2), Button, Result title. Non-key rows before the first key row render above the calculator, rows after render under the form"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_1110bafa536c"
+  ],
+  "usage": "Home equity line of credit and rates pages",
+  "reuseGuidance": "All computation is client-side; no data leaves the browser."
+}

@@ -1,0 +1,28 @@
+{
+  "variantName": "cards-icon-links",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "a horizontal row of icon + label shortcut links (e.g. credit card categories)"
+  },
+  "contentPattern": {
+    "structure": "one row per item; cells: icon image (SVG) and a link whose text is the label (icon and link may share one cell)"
+  },
+  "options": [
+    {
+      "class": "light",
+      "label": "Light"
+    }
+  ],
+  "memberVariantIds": [
+    "v_cbb00b018f0c",
+    "v_cbb00b018f0c-1"
+  ],
+  "usage": "Category/shortcut link strips near the top of credit card product pages.",
+  "reuseGuidance": "Use for 4-8 short icon links. Use the light option when the section is dark."
+}

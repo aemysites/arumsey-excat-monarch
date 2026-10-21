@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/compare-credit-cards/CMA-PIT",
+  "path": "credit-cards/compare-credit-cards/cma-pit",
+  "timestamp": "2026-10-21T16:36:21.428Z",
+  "title": "Credit Cards - Cardmember Agreements",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "card-filter"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

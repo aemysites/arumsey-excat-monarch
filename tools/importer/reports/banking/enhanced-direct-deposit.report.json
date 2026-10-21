@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/enhanced-direct-deposit",
+  "path": "banking/enhanced-direct-deposit",
+  "timestamp": "2026-10-21T18:20:07.692Z",
+  "title": "Enhanced Direct Deposit | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "hero-chevron",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "cards-compare",
+    "cards-compare",
+    "columns-icon-strip"
+  ],
+  "fragments": [
+    "fragments/banking/enhanced-direct-deposit/accordion-feature-1"
+  ],
+  "importScript": "53dc5a5b589e"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/flex-pay-guide",
+  "path": "credit-cards/flex-pay-guide",
+  "timestamp": "2026-10-21T17:47:33.701Z",
+  "title": "Citi® Flex Pay Guide | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-hub"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

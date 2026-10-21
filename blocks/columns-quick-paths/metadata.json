@@ -1,0 +1,29 @@
+{
+  "variantName": "columns-quick-paths",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + link",
+    "purpose": "row of 2-3 short, divider-separated columns, each a quick path (icon + heading, optional text, arrow link) or a key term (label, value, fine print)"
+  },
+  "contentPattern": {
+    "structure": "one row, one cell per column; each cell holds an optional icon, a heading (or label), optional body text and an optional single-link paragraph as the CTA"
+  },
+  "options": [
+    { "class": "in-box-with-text", "label": "In Box With Text" },
+    { "class": "key-terms", "label": "Key Terms" },
+    { "class": "light", "label": "Light" }
+  ],
+  "memberVariantIds": [
+    "v_0b888a3b71c2-1",
+    "v_999345e368d7",
+    "v_d7341f49bb6b-1",
+    "v_d7341f49bb6b-2"
+  ],
+  "usage": "Use for a horizontal set of quick paths (Buy / Refinance / Use equity) or card key terms (Annual fee, APR, Balance transfer fee). Add in-box-with-text when the columns sit in a boxed panel with body copy, key-terms for label/value/fine-print stacks, light for light text on a dark section.",
+  "reuseGuidance": "Reuse for any 2-4 column, text-only row separated by vertical dividers. Use cards for image-led tiles and plain columns for media + text layouts."
+}

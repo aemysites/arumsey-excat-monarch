@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/home-mortgage",
+  "path": "mortgage/home-mortgage",
+  "timestamp": "2026-10-21T16:35:09.298Z",
+  "title": "Mortgage Loans | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-choice",
+    "hero-chevron",
+    "section-subnav",
+    "section-subnav",
+    "section-subnav",
+    "accordion-disclosure",
+    "cta-banner",
+    "columns-icon-strip",
+    "columns-quick-paths"
+  ],
+  "fragments": [
+    "fragments/zillow-rating",
+    "fragments/mortgage-contact",
+    "fragments/mortgage-contact-us"
+  ],
+  "importScript": "20a7308ac938"
+}

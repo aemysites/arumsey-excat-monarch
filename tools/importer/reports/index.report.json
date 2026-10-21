@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/",
+  "path": "index",
+  "timestamp": "2026-10-21T16:35:12.834Z",
+  "title": "Online Banking, Mortgages, Personal Loans, Investing | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "alert-banner",
+    "hero-login",
+    "cards-icon",
+    "cards-product",
+    "columns-choice",
+    "columns-media",
+    "columns-media"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

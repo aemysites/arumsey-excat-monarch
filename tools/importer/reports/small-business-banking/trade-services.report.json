@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business-banking/trade-services",
+  "path": "small-business-banking/trade-services",
+  "timestamp": "2026-10-21T16:37:24.804Z",
+  "title": "Trade Service Solutions for Businesses | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-media",
+    "columns-media",
+    "section-subnav",
+    "accordion-feature",
+    "hero-photo"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

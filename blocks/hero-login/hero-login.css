@@ -1,0 +1,531 @@
+/*
+ * hero-login: values from citi.com computed styles
+ * (default: app-hero-reskin on the homepage, 1440 / 1200 / 992 / 768 / 375;
+ * text-box-and-sign-on-panel: cds-row.partner-login-container-hero on
+ * /citi-partner/cititravel/login). Source breakpoints 768/992 are mapped to 600/900.
+ * The photo band is full bleed; the copy and sign-on panel sit on the 1076px
+ * content width so they line up with the rest of the page.
+ */
+
+/* variant overrides follow their base rules on purpose */
+/* stylelint-disable no-descending-specificity */
+
+main > .section > .hero-login-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.hero-login {
+  --hero-login-field-border: #888; /* rgb(136 136 136), cds-input border */
+  --hero-login-panel-footer: #eff3f8; /* rgb(239 243 248), passwordless bar */
+  --hero-login-icon-eye: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M12 16.6a4.6 4.6 0 1 0 0-9.2 4.6 4.6 0 0 0 0 9.2m3-4.6a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/%3E%3Cpath fill-rule='evenodd' d='M12.035 20c4.015 0 7.75-2.503 11.766-7.508a.88.88 0 0 0-.003-1.121C19.807 6.457 16.073 4 12.035 4 7.998 4 4.232 6.456.205 11.367a.88.88 0 0 0-.003 1.129C4.253 17.498 8.022 20 12.035 20m0-14.4c3.204 0 6.422 1.867 10.156 6.336-3.767 4.567-6.986 6.464-10.156 6.464-3.173 0-6.423-1.901-10.222-6.464C5.58 7.471 8.829 5.6 12.035 5.6'/%3E%3C/svg%3E");
+  --hero-login-icon-qr: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M1 16v3a4 4 0 0 0 3.875 3.998L5 23h3v1H5a5 5 0 0 1-5-5v-3zm23 0v3a5 5 0 0 1-5 5h-3v-1h3a4 4 0 0 0 3.998-3.875L23 19v-3zm-9.167.667a1 1 0 0 1 1 1V19a1 1 0 0 1-1 1H13.5a1 1 0 0 1-1-1v-1.333a1 1 0 0 1 1-1zm4.167 0a1 1 0 0 1 1 1V19a1 1 0 0 1-1 1h-1.333a1 1 0 0 1-1-1v-1.333a1 1 0 0 1 1-1zM9.5 12.5a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3.5a2 2 0 0 1 2-2zm5.333 5.167H13.5V19h1.333zm4.167 0h-1.333V19H19zM9.5 13.5H6a1 1 0 0 0-1 1V18a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1m5.333-1a1 1 0 0 1 1 1v1.333a1 1 0 0 1-1 1H13.5a1 1 0 0 1-1-1V13.5a1 1 0 0 1 1-1zm4.167 0a1 1 0 0 1 1 1v1.333a1 1 0 0 1-1 1h-1.333a1 1 0 0 1-1-1V13.5a1 1 0 0 1 1-1zm-4.167 1H13.5v1.333h1.333zm4.167 0h-1.333v1.333H19zM9.5 4a2 2 0 0 1 2 2v3.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM18 4a2 2 0 0 1 2 2v3.5a2 2 0 0 1-2 2h-3.5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM9.5 5H6a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1M18 5h-3.5a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1H18a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1M8 0v1H5a4 4 0 0 0-3.998 3.875L1 5v3H0V5a5 5 0 0 1 5-5zm11 0a5 5 0 0 1 5 5v3h-1V5a4 4 0 0 0-3.875-3.998L19 1h-3V0z'/%3E%3C/svg%3E");
+  --hero-login-icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2.5' d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+
+  position: relative;
+  box-sizing: border-box;
+  padding: 24px 0;
+  background-color: #fafafa; /* rgb(250 250 250) behind the angles photo */
+  color: var(--text-color);
+}
+
+/* background photo (Citi-futuristic-angles), cover, centred */
+.hero-login .hero-login-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-login .hero-login-background picture,
+.hero-login .hero-login-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero-login .hero-login-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-gutter);
+}
+
+/* copy column: centred on mobile, left from 600px */
+.hero-login .hero-login-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  min-width: 0;
+  text-align: center;
+}
+
+.hero-login .hero-login-content > * {
+  flex: 0 0 100%;
+}
+
+.hero-login .hero-login-content > :first-child {
+  margin-top: 0;
+}
+
+.hero-login .hero-login-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* subHeading-title: 12/18 Interstate Regular, 2px tracking, uppercase */
+.hero-login .hero-login-eyebrow {
+  margin: 0;
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  line-height: var(--body-line-height-xs);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-login .hero-login-eyebrow sup {
+  font-size: 9px;
+  line-height: 0;
+}
+
+/* heading-title: 32/40 mobile, 42/50 desktop, Interstate Bold */
+.hero-login .hero-login-content :is(h1, h2, h3) {
+  margin: 0 0 16px;
+  font-size: var(--heading-font-size-xxl);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-xxl);
+  color: var(--text-color);
+}
+
+/* introText */
+.hero-login .hero-login-content > p:not(.hero-login-eyebrow, .button-wrapper) {
+  margin: 0 0 10px;
+}
+
+/* CTA (cds-cta-lg primary) and the pricing link beside it */
+.hero-login .hero-login-content > p.button-wrapper {
+  flex: 0 0 auto;
+  margin: 20px 0;
+}
+
+.hero-login .hero-login-content > p.button-wrapper + p:last-child {
+  flex: 0 1 auto;
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  line-height: var(--body-line-height-s);
+}
+
+.hero-login .hero-login-content > p.button-wrapper + p:last-child a:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+main .hero-login .hero-login-content a.button:any-link {
+  padding: 13px 48px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* product card art: above the copy on mobile */
+.hero-login .hero-login-media {
+  display: flex;
+  order: -1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 24px;
+}
+
+.hero-login .hero-login-media picture,
+.hero-login .hero-login-media img {
+  display: block;
+  width: 100%;
+  max-width: 246px;
+  height: auto;
+}
+
+/* sign-on panel (form.passwordLoginBox): white card, 16px radius, soft shadow */
+.hero-login .hero-login-panel {
+  margin-top: 24px;
+  border-radius: 16px;
+  background-color: var(--background-color);
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
+  color: var(--text-color);
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero-login .hero-login-panel > :is(h2, h3, h4) {
+  margin: 0;
+  padding: 16px 16px 0;
+}
+
+.hero-login .hero-login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+  padding: 16px 16px 0;
+}
+
+.hero-login .hero-login-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* cds-label: 16px Interstate Regular */
+.hero-login .hero-login-field-text label,
+.hero-login .hero-login-field-password label {
+  display: block;
+  margin: 6px 0;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+/* cds-input: 52px tall, 8px radius, typed text bold Citi blue */
+.hero-login .hero-login-field-text input,
+.hero-login .hero-login-field-password input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 52px;
+  margin: 0;
+  padding: 13px 16px;
+  border: 1px solid var(--hero-login-field-border);
+  border-radius: 8px;
+  background-color: var(--background-color);
+  color: var(--link-color);
+  font: inherit;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.hero-login .hero-login-field-text input:focus,
+.hero-login .hero-login-field-password input:focus {
+  border-color: var(--link-color);
+  outline: 1px solid var(--link-color);
+}
+
+.hero-login .hero-login-field-password input {
+  padding-right: 64px;
+}
+
+/* show/hide password: 48 x 52 segment on the right of the input */
+.hero-login .hero-login-reveal {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 48px;
+  height: 52px;
+  margin: 0;
+  padding: 1px 13px;
+  border: 1px solid var(--hero-login-field-border);
+  border-radius: 0 8px 8px 0;
+  background-color: var(--background-color);
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.hero-login .hero-login-reveal::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  background-color: currentcolor;
+  mask: var(--hero-login-icon-eye) center / contain no-repeat;
+}
+
+.hero-login .hero-login-reveal[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 2px;
+  background-color: currentcolor;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hero-login .hero-login-field-checkbox,
+.hero-login .hero-login-select,
+.hero-login .hero-login-submit {
+  grid-column: 1 / -1;
+}
+
+/* Remember User ID: 24px box, 2px Citi blue border, label 16/18 light */
+.hero-login .hero-login-field-checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin: 26px 0 28px;
+  padding-left: 2px;
+  line-height: 18px;
+}
+
+.hero-login .hero-login-field-checkbox input {
+  flex: none;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: 2px solid var(--link-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  appearance: none;
+  cursor: pointer;
+}
+
+.hero-login .hero-login-field-checkbox input:checked {
+  background: var(--link-color) var(--hero-login-icon-check) center / 20px no-repeat;
+}
+
+.hero-login .hero-login-field-checkbox label {
+  cursor: pointer;
+}
+
+.hero-login .hero-login-select {
+  box-sizing: border-box;
+  min-height: 52px;
+  margin: 0 0 16px;
+  padding: 13px 16px;
+  border: 1px solid var(--hero-login-field-border);
+  border-radius: 6px;
+  background-color: var(--background-color);
+  color: var(--link-color);
+  font: inherit;
+  font-weight: 700;
+}
+
+/* cds-signon-button: full width, 40px tall */
+.hero-login button.button.hero-login-submit {
+  width: 100%;
+  margin: 0;
+  padding: 7px 16px;
+}
+
+/* Register / Activate . Forgot User ID or Password: 14px, links underlined */
+.hero-login .hero-login-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-top: 29px;
+  padding: 0 16px 11px;
+  font-size: var(--body-font-size-s);
+  line-height: 24px;
+}
+
+.hero-login .hero-login-links > p {
+  margin: 0;
+}
+
+.hero-login .hero-login-links a:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.hero-login .hero-login-connector {
+  margin: 0 5px;
+  color: #555; /* rgb(85 85 85), register-connector */
+  font-size: var(--body-font-size-m);
+}
+
+/* Passwordless Sign On: pale bar across the foot of the panel */
+.hero-login .hero-login-panel > .hero-login-passwordless {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 16px 24px;
+  background-color: var(--hero-login-panel-footer);
+  color: var(--link-color);
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.hero-login .hero-login-panel > .hero-login-passwordless::before {
+  content: "";
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: var(--hero-login-icon-qr) center / contain no-repeat;
+}
+
+.hero-login .hero-login-panel > .hero-login-passwordless a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* text-box-and-sign-on-panel (Citi Travel login): copy in a white box over a full-bleed photo */
+.hero-login.text-box-and-sign-on-panel {
+  padding: 24px 0;
+  background-color: transparent;
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-background img {
+  object-position: 0 0;
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-inner {
+  max-width: none;
+  padding: 0 24px;
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-content {
+  display: block;
+  padding: 30px;
+  border-radius: 14px;
+  background-color: var(--background-color);
+  color: var(--citi-bright-blue);
+  text-align: left;
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-eyebrow {
+  margin: 0 0 8px;
+  font-size: var(--body-font-size-s);
+  line-height: 18px;
+  text-transform: none;
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-content :is(h1, h2, h3) {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 57px;
+  letter-spacing: 2px;
+  color: var(--citi-bright-blue);
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-panel {
+  padding: 18px 18px 0;
+  border: 1px solid #dcdcdc;
+  box-shadow: 1px 1px 5px 0.05px rgb(105 105 105 / 54%);
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-panel > :is(h2, h3, h4) {
+  margin: 0 0 16px;
+  padding: 0;
+  font-size: var(--heading-font-size-l);
+  font-weight: var(--heading-font-weight);
+  line-height: 1.2;
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-form,
+.hero-login.text-box-and-sign-on-panel .hero-login-links {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-form {
+  padding-top: 0;
+}
+
+.hero-login.text-box-and-sign-on-panel button.button.hero-login-submit {
+  padding: 11px 16px;
+  background-color: var(--citi-brand-blue);
+}
+
+.hero-login.text-box-and-sign-on-panel .hero-login-panel > .hero-login-passwordless {
+  margin: 0 -18px;
+  color: var(--text-color);
+}
+
+@media (width >= 600px) {
+  .hero-login .hero-login-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    align-items: center;
+  }
+
+  .hero-login .hero-login-content {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .hero-login .hero-login-media {
+    order: 0;
+  }
+
+  .hero-login .hero-login-media picture,
+  .hero-login .hero-login-media img {
+    max-width: 320px;
+  }
+
+  .hero-login .hero-login-panel {
+    grid-column: 1 / -1;
+  }
+
+  .hero-login.text-box-and-sign-on-panel .hero-login-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width >= 900px) {
+  .hero-login {
+    padding: 24px 0 48px;
+  }
+
+  .hero-login .hero-login-inner {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero-login .hero-login-panel {
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  /* only copy + panel authored: copy takes the first two columns */
+  .hero-login:not(.text-box-and-sign-on-panel) .hero-login-content:first-child:nth-last-child(2) {
+    grid-column: span 2;
+  }
+
+  .hero-login.text-box-and-sign-on-panel {
+    display: flex;
+    align-items: center;
+    min-height: 570px;
+    padding: 24px 0;
+  }
+
+  .hero-login.text-box-and-sign-on-panel .hero-login-inner {
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+  }
+
+  .hero-login.text-box-and-sign-on-panel .hero-login-content {
+    padding: 30px 64px 30px 30px;
+  }
+
+  .hero-login.text-box-and-sign-on-panel .hero-login-panel {
+    box-sizing: border-box;
+    justify-self: center;
+    width: 100%;
+    max-width: 416px;
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-login {
+    padding: 48px 0 24px;
+  }
+
+  .hero-login .hero-login-panel {
+    margin-bottom: 16px;
+  }
+
+  .hero-login.text-box-and-sign-on-panel .hero-login-panel {
+    margin-bottom: 0;
+  }
+}

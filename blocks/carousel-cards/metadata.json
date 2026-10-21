@@ -1,0 +1,53 @@
+{
+  "variantName": "carousel-cards",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "image + heading + text + link + button",
+    "purpose": "a carousel of cards with prev/next buttons and slide indicators"
+  },
+  "contentPattern": {
+    "structure": "one row per slide; cells: optional image (or icon) and content (eyebrow, heading, text, link/button). A cell holding only a /fragments/ link is replaced by the fragment"
+  },
+  "options": [
+    {
+      "class": "icon-slides-in-box",
+      "label": "Icon Slides In Box"
+    },
+    {
+      "class": "image-beside-text",
+      "label": "Image Beside Text"
+    },
+    {
+      "class": "icon-slides-in-box-2",
+      "label": "Icon Slides In Box 2"
+    },
+    {
+      "class": "centre-card-enlarged",
+      "label": "Centre Card Enlarged"
+    },
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "icon-slides-in-box-3",
+      "label": "Icon Slides In Box 3"
+    }
+  ],
+  "memberVariantIds": [
+    "v_be4c1134c3bc",
+    "v_558f53ddadb6",
+    "v_15d7cddaeb9d",
+    "v_558f53ddadb6-1",
+    "v_686814174075",
+    "v_be4c1134c3bc-1",
+    "v_e0524228ed32"
+  ],
+  "usage": "Service carousels on small-business pages, feature carousels on loan/checking pages, featured hotels, money tips.",
+  "reuseGuidance": "Default shows 3 image cards per view. icon-slides-in-box(-2) shows 2 icon slides in one panel; -3 shows 4 centred icon slides; image-beside-text shows one wide slide; centre-card-enlarged enlarges the active centre card."
+}

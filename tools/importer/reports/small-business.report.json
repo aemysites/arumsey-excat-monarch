@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business",
+  "path": "small-business",
+  "timestamp": "2026-10-21T16:36:18.457Z",
+  "title": "Small Business Banking | citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-media",
+    "hero-chevron",
+    "section-subnav",
+    "columns-contact",
+    "columns-icon-features",
+    "carousel-cards",
+    "accordion-disclosure",
+    "cta-banner",
+    "cards-compare",
+    "cards-compare"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/banking/business-money-market-account",
+  "path": "small-business/banking/business-money-market-account",
+  "timestamp": "2026-10-21T16:36:51.445Z",
+  "title": "Citi Business Insured Money Market Account (IMMA) - Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-media",
+    "hero-chevron",
+    "section-subnav",
+    "accordion-feature",
+    "location-selector",
+    "columns-contact",
+    "columns-icon-features",
+    "carousel-cards",
+    "accordion-disclosure",
+    "cta-banner",
+    "cta-banner",
+    "columns-icon-strip"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,28 @@
+{
+  "variantName": "officer-finder",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "field",
+    "purpose": "Search for a home lending officer by location or last name"
+  },
+  "contentPattern": {
+    "structure": "Mode rows Label | placeholder | query parameter (e.g. Search by location | Location | location). Optional key/value rows: Endpoint (JSON search URL), Results page (URL to navigate to with the query), Button, No results, Error"
+  },
+  "options": [
+    {
+      "class": "location-input",
+      "label": "Location Input"
+    }
+  ],
+  "memberVariantIds": [
+    "v_99aff1c261d2",
+    "v_c3a47ce181c7"
+  ],
+  "usage": "Home lending officer finder page",
+  "reuseGuidance": "Without an Endpoint or Results page the block shows the Error message instead of searching. Use location-input for a single location field."
+}

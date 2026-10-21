@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/credit-card-rewards/airport-lounge-access",
+  "path": "credit-cards/credit-card-rewards/airport-lounge-access",
+  "timestamp": "2026-10-21T17:44:26.752Z",
+  "title": "What Citi Credit Cards Offer Airport Lounge Access? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/credit-cards/credit-card-rewards/airport-lounge-access/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

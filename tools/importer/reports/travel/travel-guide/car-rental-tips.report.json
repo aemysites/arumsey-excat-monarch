@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips",
+  "path": "travel/travel-guide/car-rental-tips",
+  "timestamp": "2026-10-21T19:23:05.254Z",
+  "title": "Car Rental Tips | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "089f57e4feb6"
+}

@@ -1,0 +1,48 @@
+{
+  "variantName": "accordion-feature",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "button + heading + list + link + table",
+    "purpose": "expandable FAQ, product and pricing information panels, or a call-to-action button that reveals content"
+  },
+  "contentPattern": {
+    "structure": "one row per item: label cell (question or title) | panel cell (rich text, lists, links, tables); a panel cell holding only a /fragments/ link loads that fragment (so a panel can contain other blocks)"
+  },
+  "options": [
+    {
+      "class": "cta-button",
+      "label": "Cta Button"
+    },
+    {
+      "class": "faq",
+      "label": "Faq"
+    },
+    {
+      "class": "no-icons",
+      "label": "No Icons"
+    },
+    {
+      "class": "red",
+      "label": "Red"
+    },
+    {
+      "class": "orange",
+      "label": "Orange"
+    }
+  ],
+  "memberVariantIds": [
+    "v_e69c6e30937b",
+    "v_a27cc8de6876",
+    "v_0ade3e7df1de",
+    "v_3a5c1cae4972",
+    "v_591bf340a439",
+    "v_ebdf921bcdcf"
+  ],
+  "usage": "FAQ lists, product and pricing information disclosures, and apply/open-account buttons that expand content.",
+  "reuseGuidance": "Use faq for question lists (one answer open at a time), no-icons to hide chevrons, cta-button to render the label as a button (red / orange change its colour). For legal footnotes use accordion-disclosure."
+}

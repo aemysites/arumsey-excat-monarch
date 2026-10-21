@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/buying-a-home",
+  "path": "mortgage/buying-a-home",
+  "timestamp": "2026-10-21T16:37:16.835Z",
+  "title": "Buying a Home | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-choice",
+    "hero-chevron",
+    "section-subnav",
+    "section-subnav",
+    "columns-contact",
+    "accordion-disclosure",
+    "cta-banner",
+    "cta-banner",
+    "columns-quick-paths"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

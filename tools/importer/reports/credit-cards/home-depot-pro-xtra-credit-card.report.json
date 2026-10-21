@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/home-depot-pro-xtra-credit-card",
+  "path": "credit-cards/home-depot-pro-xtra-credit-card",
+  "timestamp": "2026-10-21T19:25:37.859Z",
+  "title": "Pro Xtra Home Depot Credit Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "hero-card",
+    "cards-highlight",
+    "columns-key-terms",
+    "disclosure-links",
+    "cards-icon-links"
+  ],
+  "fragments": [
+    "fragments/credit-card-categories"
+  ],
+  "importScript": "089f57e4feb6"
+}

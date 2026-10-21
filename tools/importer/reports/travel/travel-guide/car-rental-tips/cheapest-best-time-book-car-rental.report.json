@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/cheapest-best-time-book-car-rental",
+  "path": "travel/travel-guide/car-rental-tips/cheapest-best-time-book-car-rental",
+  "timestamp": "2026-10-21T19:10:37.156Z",
+  "title": "Best & Cheapest Time to Rent a Car? Book In Advance! | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

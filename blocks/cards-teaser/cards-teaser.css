@@ -1,0 +1,284 @@
+/*
+ * cards-teaser: image-topped teaser cards.
+ * Values from citi.com computed styles (see migration-work/cards-teaser-extracted.css):
+ * default = small-business app-banner teasers (/small-business-banking/cash-management),
+ * with-topic-tags = mortgage.com article cards (/home-equity/line-of-credit "Related"),
+ * light-blue = travel tile cards (/credit-cards/cititravel/the-reserve-hotel-collection).
+ */
+
+.cards-teaser > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+
+.cards-teaser .cards-teaser-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: #333;
+}
+
+.cards-teaser .cards-teaser-card-image {
+  line-height: 0;
+}
+
+.cards-teaser .cards-teaser-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.cards-teaser .cards-teaser-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: rgb(0 0 0 / 10%) 0 1px 10px 0;
+}
+
+.cards-teaser .cards-teaser-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-teaser .cards-teaser-card-body > :last-child {
+  margin-bottom: 0;
+}
+
+.cards-teaser .cards-teaser-card-body :is(h2, h3, h4, h5, h6) {
+  margin: 0 0 8px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.cards-teaser .cards-teaser-card-body p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* citi.com reserves four lines (80px) for the teaser copy above the CTA */
+.cards-teaser:not(.with-topic-tags, .light-blue) .cards-teaser-card-body > p:has(+ .cards-teaser-cta) {
+  min-height: 80px;
+}
+
+.cards-teaser .cards-teaser-card-body :is(h2, h3, h4, h5, h6) sup {
+  font-size: 13.5px;
+}
+
+/* with-topic-tags headlines link the whole article title */
+.cards-teaser.with-topic-tags :is(h2, h3, h4, h5, h6) > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cards-teaser.with-topic-tags :is(h2, h3, h4, h5, h6) > a:hover {
+  text-decoration: underline;
+}
+
+/* CTA: blue text link with chevron (cds-button-inline-link cds-button-chevron-right) */
+.cards-teaser .cards-teaser-card-body p.cards-teaser-cta {
+  margin-top: auto;
+  padding-top: 0;
+}
+
+main .cards-teaser .cards-teaser-cta a:any-link {
+  display: inline-block;
+  padding: 2px;
+  border-radius: 6px;
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+main .cards-teaser .cards-teaser-cta a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.cards-teaser .cards-teaser-cta a::after {
+  content: '';
+  position: relative;
+  right: -2px;
+  display: inline-block;
+  width: 26px;
+  height: 24px;
+  vertical-align: top;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) 100% 50% / 32px 32px no-repeat;
+}
+
+/* ---------- with-topic-tags: white article cards with read time and tag pills ---------- */
+.cards-teaser.with-topic-tags > ul {
+  gap: 24px;
+}
+
+.cards-teaser.with-topic-tags .cards-teaser-card {
+  gap: 24px;
+  justify-content: space-between;
+  padding: 8px 8px 24px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.cards-teaser.with-topic-tags .cards-teaser-card-image {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.cards-teaser.with-topic-tags .cards-teaser-card-image img {
+  aspect-ratio: 4 / 3;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.cards-teaser.with-topic-tags .cards-teaser-card-body {
+  padding: 0 16px;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.cards-teaser.with-topic-tags .cards-teaser-card-body :is(h2, h3, h4, h5, h6),
+.cards-teaser.with-topic-tags .cards-teaser-card-body > p:not(.cards-teaser-eyebrow, .cards-teaser-cta) {
+  margin: 0;
+  color: #26292b;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.cards-teaser .cards-teaser-card-body p.cards-teaser-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  color: #4d5457;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
+/* clock glyph in front of the read time */
+.cards-teaser.with-topic-tags .cards-teaser-card-body p.cards-teaser-eyebrow::before {
+  content: '';
+  flex: none;
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13m0 1a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11m-.5 2h1v3.3l2.4 1.4-.5.9-2.9-1.7z'/%3E%3C/svg%3E") center / 16px 16px no-repeat;
+}
+
+.cards-teaser.with-topic-tags .cards-teaser-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: auto 0 0;
+  padding: 24px 0 0;
+}
+
+.cards-teaser.with-topic-tags .cards-teaser-tags li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 1px solid var(--citi-brand-blue);
+  border-radius: 90px;
+}
+
+main .cards-teaser.with-topic-tags .cards-teaser-tags a:any-link {
+  display: flex;
+  justify-content: center;
+  padding: 3px 12px;
+  color: var(--citi-brand-blue);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.12px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+main .cards-teaser.with-topic-tags .cards-teaser-tags a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- light-blue: white rounded tiles (travel tips on a blue band) ---------- */
+.cards-teaser.light-blue > ul {
+  gap: 24px;
+}
+
+.cards-teaser.light-blue .cards-teaser-card {
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #fff;
+  color: #3a3e40;
+}
+
+.cards-teaser.light-blue .cards-teaser-card-image img {
+  aspect-ratio: 2 / 1;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+
+.cards-teaser.light-blue .cards-teaser-card-body {
+  border-radius: 0 0 16px 16px;
+  box-shadow: none;
+  background-color: #fff;
+}
+
+.cards-teaser.light-blue .cards-teaser-card-body :is(h2, h3, h4, h5, h6) {
+  color: #26292b;
+}
+
+.cards-teaser.light-blue .cards-teaser-card-body > p:not(.cards-teaser-eyebrow, .cards-teaser-cta) {
+  margin: 0 0 16px;
+  color: #3a3e40;
+  font-weight: 300;
+}
+
+.cards-teaser.light-blue .cards-teaser-card-body p.cards-teaser-cta {
+  margin: auto 0 0;
+  padding-top: 10px;
+}
+
+main .cards-teaser.light-blue .cards-teaser-cta a:any-link {
+  color: var(--citi-brand-blue);
+  font-weight: 400;
+  line-height: 18px;
+}
+
+main .cards-teaser.light-blue .cards-teaser-cta a::after {
+  height: 18px;
+}
+
+/* default cards on a coloured band need a solid body behind the dark copy */
+main .section:is(.dark, .blue) .cards-teaser .cards-teaser-card-body {
+  background-color: #fff;
+}
+
+@media (width >= 600px) {
+  .cards-teaser > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 900px) {
+  .cards-teaser > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

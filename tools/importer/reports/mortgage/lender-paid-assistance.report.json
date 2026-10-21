@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/lender-paid-assistance",
+  "path": "mortgage/lender-paid-assistance",
+  "timestamp": "2026-10-21T17:58:30.756Z",
+  "title": "Closing Cost Assistance | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "hero-chevron",
+    "section-subnav",
+    "section-subnav",
+    "section-subnav",
+    "location-selector",
+    "columns-contact",
+    "columns-divided"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

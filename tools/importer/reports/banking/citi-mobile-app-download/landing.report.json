@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/citi-mobile-app-download/landing",
+  "path": "banking/citi-mobile-app-download/landing",
+  "timestamp": "2026-10-21T17:33:16.905Z",
+  "title": "Landing",
+  "template": "standard-content-page",
+  "blocks": [
+    "accordion-disclosure"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

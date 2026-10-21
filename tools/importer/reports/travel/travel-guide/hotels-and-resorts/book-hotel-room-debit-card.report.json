@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/book-hotel-room-debit-card",
+  "path": "travel/travel-guide/hotels-and-resorts/book-hotel-room-debit-card",
+  "timestamp": "2026-10-21T19:12:24.524Z",
+  "title": "Can You Book a Hotel Room with a Debit Card? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

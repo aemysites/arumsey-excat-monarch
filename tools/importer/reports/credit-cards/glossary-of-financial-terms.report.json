@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/glossary-of-financial-terms",
+  "path": "credit-cards/glossary-of-financial-terms",
+  "timestamp": "2026-10-21T16:38:08.772Z",
+  "title": "Glossary of Financial Terms | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "glossary"
+  ],
+  "fragments": [
+    "fragments/credit-cards/glossary-of-financial-terms/additional-resources"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,22 @@
+{
+  "variantName": "glossary",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "image + heading + text + field + button + list",
+    "purpose": "searchable A-Z glossary: intro card (title, disclaimer, sub heading, search field) over a background image, a vertical letter tab list, and term/definition rows for the selected letter"
+  },
+  "contentPattern": {
+    "structure": "optional first row with only a background image; single-cell rows before the terms are the intro (title, disclaimer, sub heading); then one row per term with the term in the first cell and the definition in the second (a single cell starting with a bold 'Term:' also works). Optional key/value rows: Search (search field label), No results (empty-state text). Single-cell rows after the terms are appended below (a /fragments/ link is loaded in place). Letter tabs are generated from the terms"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_a7060a1b788d-9"
+  ],
+  "usage": "Use for the glossary of financial terms page. Author terms in any order; they are grouped by first letter and only letters with terms get a tab. Searching filters across all letters.",
+  "reuseGuidance": "Reuse for any A-Z term list or FAQ index. For a short list without search or letter tabs, use an accordion or default content."
+}

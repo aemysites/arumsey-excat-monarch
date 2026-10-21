@@ -1,0 +1,25 @@
+{
+  "variantName": "disclosure-links",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "inline row of footnoted disclosure links (e.g. '1 Important Pricing & Information +') that jump to or expand legal disclosure content"
+  },
+  "contentPattern": {
+    "structure": "first cell: the disclosure link (an optional superscript footnote number before it); optional second cell: the disclosure content, which the link then toggles open. A link to a /fragments/ page becomes a toggle that loads the fragment; a #hash link scrolls to and opens the matching details element"
+  },
+  "options": [
+    { "class": "dark", "label": "Dark" }
+  ],
+  "memberVariantIds": [
+    "v_a7e0573c7734",
+    "v_a7e0573c7734-1"
+  ],
+  "usage": "Use under product hero/offer areas for 'Important Pricing & Information' and 'Additional Information' links. Add dark for light text on a dark section.",
+  "reuseGuidance": "Reuse for any short row of footnote or disclosure toggles. Long legal copy belongs in legal-disclosures; site-wide legal links in legal-links."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/things-to-do-in-the-usa",
+  "path": "travel/travel-guide/travel-tips/things-to-do-in-the-usa",
+  "timestamp": "2026-10-21T19:18:08.332Z",
+  "title": "Must-Take Trips in the United States | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

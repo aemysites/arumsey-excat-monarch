@@ -1,0 +1,160 @@
+.refinance-calculator .refinance-calculator-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+
+@media (width >= 900px) {
+  .refinance-calculator .refinance-calculator-layout {
+    grid-template-columns: 2fr 3fr;
+    align-items: start;
+  }
+}
+
+/* form */
+.refinance-calculator .refinance-calculator-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25em;
+}
+
+.refinance-calculator .refinance-calculator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  width: 100%;
+}
+
+.refinance-calculator .refinance-calculator-field label {
+  font-weight: 700;
+}
+
+.refinance-calculator .refinance-calculator-input {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0 0.75em;
+  border: 1px solid;
+}
+
+.refinance-calculator .refinance-calculator-input input,
+.refinance-calculator .refinance-calculator-input select {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0.75em 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+}
+
+.refinance-calculator .refinance-calculator-help,
+.refinance-calculator .refinance-calculator-note {
+  margin: 0;
+  font-size: 0.875em;
+}
+
+/* results */
+.refinance-calculator .refinance-calculator-results {
+  border: 1px solid;
+}
+
+.refinance-calculator .refinance-calculator-summary {
+  padding: 1.5em;
+  text-align: center;
+}
+
+.refinance-calculator .refinance-calculator-summary p {
+  margin: 0;
+}
+
+.refinance-calculator .refinance-calculator-amount {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.refinance-calculator .refinance-calculator-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5em;
+}
+
+.refinance-calculator .refinance-calculator-explain {
+  margin: 0;
+}
+
+.refinance-calculator .refinance-calculator-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.refinance-calculator .refinance-calculator-slider-value {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.refinance-calculator .refinance-calculator-slider input[type='range'] {
+  width: 100%;
+}
+
+.refinance-calculator .refinance-calculator-range {
+  display: flex;
+  justify-content: space-between;
+}
+
+.refinance-calculator .refinance-calculator-closing-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid;
+}
+
+.refinance-calculator .refinance-calculator-closing-options button {
+  margin: 0;
+  padding: 0.75em 0.5em;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.refinance-calculator .refinance-calculator-closing-options button.active {
+  outline: 2px solid;
+  outline-offset: -2px;
+}
+
+.refinance-calculator .refinance-calculator-closing-note {
+  margin: 0;
+  padding: 0.75em 1em;
+  font-size: 0.875em;
+}
+
+.refinance-calculator .refinance-calculator-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+@media (width >= 600px) {
+  .refinance-calculator .refinance-calculator-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.refinance-calculator .refinance-calculator-stat {
+  padding: 1em 1.5em;
+}
+
+.refinance-calculator .refinance-calculator-stat p {
+  margin: 0;
+}
+
+.refinance-calculator .refinance-calculator-stat-value {
+  font-size: 1.5em;
+  font-weight: 700;
+}

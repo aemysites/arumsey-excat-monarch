@@ -1,0 +1,53 @@
+{
+  "variantName": "notice-box",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "",
+    "purpose": "Boxed notice, disclosure or callout with optional image or icon"
+  },
+  "contentPattern": {
+    "structure": "One or more rows; a cell that holds only an image or icon becomes the media, all other cells become the body (heading, text, links). The last stand-alone link is treated as the call to action"
+  },
+  "options": [
+    {
+      "class": "contact",
+      "label": "Contact"
+    },
+    {
+      "class": "note",
+      "label": "Note"
+    },
+    {
+      "class": "icon-callout",
+      "label": "Icon Callout"
+    },
+    {
+      "class": "blue",
+      "label": "Blue"
+    },
+    {
+      "class": "with-image",
+      "label": "With Image"
+    },
+    {
+      "class": "with-icon",
+      "label": "With Icon"
+    }
+  ],
+  "memberVariantIds": [
+    "v_334aa3e068fb",
+    "v_54b45e40ab72",
+    "v_38d0cc241cc5",
+    "v_bd0e70ab7969",
+    "v_6996f5f9f6dc",
+    "v_87f61cb70024",
+    "v_f33c40417c0d"
+  ],
+  "usage": "Investment disclosures, benefit intros, icon callouts, PDF reader notes and inline cross-sell notices",
+  "reuseGuidance": "Pick contact/blue for centered intro panels, note for an eyebrow heading between rules, icon-callout or with-icon when an icon leads the text, with-image for image + text notes."
+}

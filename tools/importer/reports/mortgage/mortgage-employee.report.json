@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/mortgage-employee",
+  "path": "mortgage/mortgage-employee",
+  "timestamp": "2026-10-21T17:59:15.363Z",
+  "title": "Employee Mortgage Program | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-choice",
+    "columns-media",
+    "notice-box",
+    "hero-chevron",
+    "location-selector",
+    "accordion-disclosure",
+    "columns-divided"
+  ],
+  "fragments": [
+    "fragments/mortgage/mortgage-employee/columns-choice-1",
+    "fragments/mortgage/mortgage-employee/columns-choice-2",
+    "fragments/mortgage/mortgage-employee/accordion-disclosure-1"
+  ],
+  "importScript": "20a7308ac938"
+}

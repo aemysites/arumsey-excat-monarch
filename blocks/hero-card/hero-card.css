@@ -1,0 +1,1146 @@
+/*
+ * hero-card: credit-card product hero.
+ * Values from citi.com computed styles:
+ * - default: retail PDP header (bloomingdales-credit-cards .header-cards)
+ * - panel: tds-feature restatement (aadvantage-mile-up-credit-card)
+ * - photo: tds-hero-banner with frosted content panel (aadvantage-mile-up-credit-card)
+ * - photo-centred: centred tds-hero-banner (citi-strata-elite-credit-card catalog capture)
+ * Colour bands come from the section style; the block only swaps its foreground tokens.
+ * Variant rules intentionally override the shared rules by source order.
+ */
+
+/* stylelint-disable no-descending-specificity */
+
+/*
+ * photo layouts paint a full-bleed photo (citi.com tds-hero-banner spans the viewport),
+ * so they drop the section width and cover a band's padding instead of showing it
+ */
+main > .section > .hero-card-wrapper:has(> .hero-card.photo, > .hero-card.photo-centred) {
+  max-width: none;
+  padding: 0;
+}
+
+main > .section:is(.dark, .blue, .grey, .light, .light-blue, .highlight) > .hero-card-wrapper:first-child:has(> .hero-card.photo, > .hero-card.photo-centred) {
+  margin-top: calc(-1 * var(--section-band-padding));
+}
+
+main > .section:is(.dark, .blue, .grey, .light, .light-blue, .highlight) > .hero-card-wrapper:last-child:has(> .hero-card.photo, > .hero-card.photo-centred) {
+  margin-bottom: calc(-1 * var(--section-band-padding));
+}
+
+.hero-card {
+  --hero-card-text: var(--text-color);
+  --hero-card-heading: inherit;
+  --hero-card-muted: inherit;
+  --hero-card-link: var(--link-color);
+  --hero-card-rule: rgb(188 197 201);
+  --hero-card-surface: transparent;
+  --hero-card-button-bg: var(--citi-brand-blue);
+  --hero-card-button-text: #fff;
+  --hero-card-flag: rgb(19 132 109);
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  color: var(--hero-card-text);
+}
+
+.hero-card h2 {
+  margin: 0;
+  color: var(--hero-card-heading);
+}
+
+.hero-card p {
+  margin: 0;
+}
+
+/* h1 eyebrow (card name): drop the global heading look, the eyebrow rules below style it */
+.hero-card h1.hero-card-eyebrow {
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.hero-card a:any-link:not(.button) {
+  color: var(--hero-card-link);
+}
+
+/* optional full-bleed background image, painted behind the content */
+.hero-card .hero-card-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero-card .hero-card-background picture,
+.hero-card .hero-card-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero-card .hero-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-card .hero-card-media picture,
+.hero-card .hero-card-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-card .hero-card-content {
+  min-width: 0;
+}
+
+.hero-card .hero-card-eyebrow {
+  font-size: 14px;
+  line-height: 18.06px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+}
+
+/* italic paragraph: green offer flag */
+.hero-card .hero-card-badge {
+  place-self: flex-start start;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: var(--hero-card-flag);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.8px;
+  letter-spacing: -0.14px;
+}
+
+.hero-card .hero-card-badge em {
+  font-style: normal;
+}
+
+.hero-card .hero-card-badge a:any-link {
+  color: inherit;
+}
+
+/* highlights: "$0 / Annual Fee" style rate-and-fee pairs */
+.hero-card .hero-card-highlights {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-card .hero-card-highlights > li + li {
+  padding-left: 16px;
+  border-left: 1px solid var(--hero-card-rule);
+}
+
+.hero-card .hero-card-highlights > li > p {
+  margin: 0;
+}
+
+main .hero-card a.button.primary:any-link {
+  border: 1px solid var(--hero-card-button-bg);
+  border-radius: 8px;
+  background-color: var(--hero-card-button-bg);
+  color: var(--hero-card-button-text);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
+main .hero-card a.button.primary:hover {
+  border-color: var(--hero-card-button-bg);
+  background-color: var(--hero-card-button-bg);
+  color: var(--hero-card-button-text);
+  opacity: 0.9;
+}
+
+/* extras: legal copy, rate boxes, earn-rate grids */
+.hero-card .hero-card-extra-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.hero-card .hero-card-extra-item > :last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * legal copy: footnoted links ("1 Important Pricing...", then "2 Additional
+ * Information +") sit side by side; disclaimers and sign-on copy take a full line
+ */
+.hero-card .hero-card-extra-item:has(> p > sup:first-child + a) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.hero-card .hero-card-extra-item > p {
+  flex: 1 0 100%;
+}
+
+.hero-card .hero-card-extra-item > p:has(> sup:first-child + a),
+.hero-card .hero-card-extra-item > p:has(> sup:first-child + a) ~ p:has(> sup:only-child) {
+  flex: 0 1 auto;
+}
+
+.hero-card .hero-card-extra-item p {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.144px;
+}
+
+.hero-card .hero-card-extra-item a:any-link:not(.button) {
+  text-decoration: underline;
+}
+
+/* section bands: dark bands flip the foreground, light bands keep dark text */
+.section.dark .hero-card,
+.section.blue .hero-card {
+  --hero-card-text: #fff;
+  --hero-card-heading: inherit;
+  --hero-card-muted: rgb(230 235 237);
+  --hero-card-link: #fff;
+  --hero-card-button-bg: #fff;
+  --hero-card-button-text: var(--citi-brand-blue);
+}
+
+.section.grey .hero-card,
+.section.light .hero-card,
+.section.light-blue .hero-card {
+  --hero-card-text: rgb(38 41 43);
+  --hero-card-muted: rgb(58 62 64);
+  --hero-card-link: var(--citi-brand-blue);
+  --hero-card-button-bg: var(--citi-brand-blue);
+  --hero-card-button-text: #fff;
+}
+
+/* ---------- default: retail card header (card art + flag left, copy right) ---------- */
+.hero-card:not(.panel, .photo, .photo-centred) {
+  --hero-card-heading: rgb(4 53 103);
+  --hero-card-muted: rgb(74 74 74);
+  --hero-card-link: var(--link-color);
+  --hero-card-button-bg: rgb(4 53 103);
+  --hero-card-button-text: #fff;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-inner,
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-content {
+  display: contents;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) h2 {
+  font-size: 30.4px;
+  font-weight: 500;
+  line-height: 38px;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-eyebrow {
+  color: var(--hero-card-muted);
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-content > p:not(.hero-card-badge, .hero-card-eyebrow, .button-wrapper) {
+  padding-bottom: 10px;
+  color: var(--hero-card-muted);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 38px;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-content a:any-link:not(.button) {
+  text-decoration: underline;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .button-wrapper {
+  margin: 0;
+  text-align: center;
+}
+
+main .hero-card:not(.panel, .photo, .photo-centred) a.button.primary:any-link {
+  width: 280px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 6px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 52px;
+  letter-spacing: normal;
+}
+
+main .hero-card:not(.panel, .photo, .photo-centred) a.button.primary:hover {
+  background-color: var(--citi-navy);
+  opacity: 1;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-extra {
+  padding-top: 14.8px;
+  color: var(--hero-card-muted);
+  text-align: center;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-extra-item {
+  justify-content: center;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-extra-item p {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: normal;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-extra-item a:any-link:not(.button) {
+  color: var(--link-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* flag tab with a notched right edge, above the card art */
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-badge {
+  order: 2;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 279px;
+  max-width: 100%;
+  height: 31px;
+  margin-top: 54px;
+  padding: 0 24px;
+  border-radius: 10px 0 0 10px;
+  background-color: rgb(0 132 61);
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: normal;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 15px) 50%, 100% 100%, 0 100%);
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-media {
+  order: 3;
+  align-self: center;
+  margin-top: 10px;
+  padding-bottom: 28px;
+}
+
+.hero-card:not(.panel, .photo, .photo-centred) .hero-card-media img {
+  width: 150px;
+  border-radius: 5%;
+}
+
+/* ---------- panel: copy and card art in a rounded panel ---------- */
+.hero-card.panel {
+  --hero-card-text: #fff;
+  --hero-card-muted: rgb(230 235 237);
+  --hero-card-link: #fff;
+  --hero-card-surface: rgb(38 41 43);
+  --hero-card-button-bg: #fff;
+  --hero-card-button-text: var(--citi-brand-blue);
+
+  overflow: hidden;
+  padding-bottom: 24px;
+  border-radius: 16px;
+  background-color: var(--hero-card-surface);
+}
+
+.section.dark .hero-card.panel,
+.section.blue .hero-card.panel,
+.section.grey .hero-card.panel,
+.section.light .hero-card.panel,
+.section.light-blue .hero-card.panel {
+  --hero-card-surface: transparent;
+}
+
+.hero-card.panel .hero-card-inner {
+  display: contents;
+}
+
+.hero-card.panel .hero-card-media {
+  display: flex;
+  order: -1;
+  align-items: center;
+  justify-content: center;
+  padding: 41px 24px 40px;
+}
+
+.hero-card.panel .hero-card-media img {
+  width: 267px;
+  border-radius: 16px;
+}
+
+.hero-card.panel .hero-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 24px 0;
+}
+
+.hero-card.panel .hero-card-eyebrow {
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  color: var(--hero-card-muted);
+}
+
+.hero-card.panel .hero-card-badge {
+  margin-bottom: 8px;
+}
+
+.hero-card.panel h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.hero-card.panel .hero-card-content > p:not(.hero-card-badge, .hero-card-eyebrow, .button-wrapper) {
+  margin-top: 20px;
+  color: var(--hero-card-muted);
+  font-size: 16px;
+  line-height: 20.64px;
+  letter-spacing: 0.16px;
+}
+
+.hero-card.panel .button-wrapper {
+  margin: 28px 0 0;
+}
+
+main .hero-card.panel a.button.primary:any-link {
+  padding: 12px 16px;
+}
+
+.hero-card.panel .hero-card-extra {
+  padding: 24px 24px 0;
+}
+
+/* ---------- photo: frosted copy panel over a lifestyle photo ---------- */
+
+/* the copy panel is always light, whatever band the section sets */
+.hero-card.photo,
+.section.dark .hero-card.photo,
+.section.blue .hero-card.photo {
+  --hero-card-text: rgb(38 41 43);
+  --hero-card-muted: rgb(58 62 64);
+  --hero-card-link: var(--citi-brand-blue);
+  --hero-card-button-bg: var(--citi-brand-blue);
+  --hero-card-button-text: #fff;
+}
+
+.hero-card.photo {
+  padding: 64px 36px 24px; /* full bleed: citi.com container padding 0 36px 24px */
+  font-weight: 400;
+}
+
+.hero-card.photo .hero-card-background {
+  inset: 0 0 auto;
+  height: 120px;
+}
+
+.hero-card.photo .hero-card-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+}
+
+.hero-card.photo .hero-card-content {
+  display: contents;
+}
+
+.hero-card.photo .hero-card-content > *,
+.hero-card.photo .hero-card-media {
+  grid-column: 1 / -1;
+}
+
+.hero-card.photo .hero-card-media {
+  margin-bottom: 8px;
+}
+
+.hero-card.photo .hero-card-media img {
+  width: 140px;
+  border-radius: 8px;
+}
+
+.hero-card.photo .hero-card-eyebrow {
+  margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+
+.hero-card.photo .hero-card-badge {
+  margin-bottom: 8px;
+}
+
+.hero-card.photo h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26.4px;
+}
+
+.hero-card.photo .hero-card-content > p:not(.hero-card-badge, .hero-card-eyebrow, .button-wrapper) {
+  margin-bottom: 24px;
+  color: var(--hero-card-muted);
+  font-size: 14px;
+  line-height: 18.06px;
+  letter-spacing: 0.14px;
+}
+
+.hero-card.photo .hero-card-highlights {
+  margin-bottom: 24px;
+}
+
+.hero-card.photo .hero-card-highlights > li {
+  color: var(--hero-card-muted);
+  font-size: 12px;
+  line-height: 15.96px;
+}
+
+.hero-card.photo .hero-card-highlights strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--hero-card-text);
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+
+.hero-card.photo .button-wrapper {
+  margin: 0 0 24px;
+}
+
+main .hero-card.photo a.button.primary:any-link {
+  width: 200px;
+  padding: 16px 24px;
+}
+
+/* legal copy inside the panel, under a rule */
+.hero-card.photo .hero-card-content > .hero-card-extra:not(.hero-card-extra-columns) {
+  padding-top: 16px;
+  border-top: 1px solid var(--hero-card-rule);
+}
+
+.hero-card.photo .hero-card-content > .hero-card-extra .hero-card-extra-item > p:first-child:not(:has(> sup:first-child + a)) {
+  color: var(--hero-card-muted);
+  font-size: 12px;
+  line-height: 15.96px;
+  letter-spacing: 0.12px;
+}
+
+.hero-card.photo .hero-card-content > .hero-card-extra .hero-card-extra-item {
+  row-gap: 16px;
+}
+
+/* co-brand logo row: pinned to the photo corner */
+.hero-card.photo .hero-card-extra:has(> .hero-card-extra-item > picture:only-child) {
+  position: absolute;
+  top: 64px;
+  right: 36px;
+  padding: 0;
+  border: 0;
+}
+
+.hero-card.photo .hero-card-extra:has(> .hero-card-extra-item > picture:only-child) img {
+  display: block;
+  width: 112px;
+  height: auto;
+}
+
+/* rate box authored as a column row (tds-accelerator: Simplicity, Diamond Preferred) */
+.hero-card.photo .hero-card-extra-columns {
+  gap: 8px;
+  margin: 0 0 25px;
+  padding: 25px;
+  border-radius: 16px;
+  background-color: rgb(0 52 98 / 10%);
+  color: rgb(38 41 43);
+}
+
+/* the heading that closed the copy titles the box */
+.hero-card.photo .hero-card-extra-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: rgb(18 19 20);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: normal;
+}
+
+.hero-card.photo .hero-card-extra-columns .hero-card-extra-item {
+  padding-top: 15px;
+}
+
+.hero-card.photo .hero-card-extra-columns h3 {
+  margin: 0 0 4px;
+  color: rgb(38 41 43);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.hero-card.photo .hero-card-extra-columns p {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: normal;
+}
+
+.hero-card.photo .hero-card-extra-columns p + p {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* on a dark band the copy keeps its light panel so it stays readable */
+:where(.section.dark, .section.blue) .hero-card.photo .hero-card-inner {
+  padding: 24px;
+  border-radius: 24px;
+  background-color: rgb(255 255 255 / 80%);
+}
+
+/*
+ * photo with a rate box (tds-hero-banner abtest-simplicity / -diamond-preferred):
+ * an opaque white card over the photo, card art overhanging its top edge
+ */
+.hero-card.photo.hero-card-has-columns {
+  --hero-card-text: rgb(18 19 20);
+
+  padding: 95px 10px 0;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-background {
+  inset: 0;
+  height: auto;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-inner {
+  align-items: start;
+  padding: 50px 15px 10px;
+  background-color: #fff;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-media {
+  align-self: end;
+  margin: -100px 0 16px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-media img {
+  width: 154px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-eyebrow {
+  align-self: end;
+  margin-bottom: 16px;
+  color: rgb(18 19 20);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.96px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-content > h2 {
+  margin-bottom: 17px;
+  padding-top: 8px;
+  color: rgb(18 19 20);
+  font-size: 22px;
+  line-height: 25.74px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-content > h2:has(+ p:not(.button-wrapper, .hero-card-badge)) {
+  margin-bottom: 5px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-content > p:not(.hero-card-badge, .hero-card-eyebrow, .button-wrapper) {
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 0.16px;
+}
+
+.hero-card.photo.hero-card-has-columns .button-wrapper {
+  margin: 0 0 32px;
+}
+
+main .hero-card.photo.hero-card-has-columns a.button.primary:any-link {
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+
+/* rates & fees list: stacked, bold */
+.hero-card.photo.hero-card-has-columns .hero-card-highlights {
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 16px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-highlights > li {
+  color: rgb(18 19 20);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-highlights > li + li {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-content > .hero-card-extra:not(.hero-card-extra-columns) {
+  margin-bottom: 41px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-content > .hero-card-extra .hero-card-extra-item > p:first-child:not(:has(> sup:first-child + a)) {
+  line-height: 14.4px;
+}
+
+.hero-card.photo.hero-card-has-columns .hero-card-content > .hero-card-extra:not(.hero-card-extra-columns) p {
+  line-height: 16.8px;
+}
+
+/* ---------- photo-centred: centred stack over a dark photo ---------- */
+
+/* white copy over the dark photo, whatever band the section sets */
+.hero-card.photo-centred,
+.section.grey .hero-card.photo-centred,
+.section.light .hero-card.photo-centred,
+.section.light-blue .hero-card.photo-centred {
+  --hero-card-text: #fff;
+  --hero-card-muted: #fff;
+  --hero-card-link: #fff;
+  --hero-card-button-bg: #fff;
+  --hero-card-button-text: var(--citi-brand-blue);
+  --hero-card-rule: rgb(255 255 255 / 60%);
+}
+
+.hero-card.photo-centred {
+  padding: 32px 28px; /* full bleed: the 12px section gutter folds into the block padding */
+  background-color: #000;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hero-card.photo-centred .hero-card-inner {
+  align-items: center;
+}
+
+.hero-card.photo-centred .hero-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-card.photo-centred .hero-card-media {
+  margin-bottom: 24px;
+}
+
+.hero-card.photo-centred .hero-card-media img {
+  width: 250px;
+  border-radius: 8px;
+}
+
+.hero-card.photo-centred .hero-card-eyebrow {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.08px;
+}
+
+.hero-card.photo-centred .hero-card-badge {
+  align-self: center;
+  margin-bottom: 8px;
+}
+
+.hero-card.photo-centred h2 {
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.hero-card.photo-centred .hero-card-content > p:not(.hero-card-badge, .hero-card-eyebrow, .button-wrapper) {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.hero-card.photo-centred .button-wrapper {
+  margin: 0;
+}
+
+main .hero-card.photo-centred a.button.primary:any-link {
+  width: 200px;
+  padding: 16px 24px;
+}
+
+.hero-card.photo-centred .hero-card-highlights {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.hero-card.photo-centred .hero-card-highlights > li {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.hero-card.photo-centred .hero-card-highlights strong {
+  font-weight: 400;
+}
+
+/* earn-rate grid */
+.hero-card.photo-centred .hero-card-extra-columns {
+  gap: 24px;
+  margin-top: 40px;
+  padding: 24px 12px;
+  border-radius: 16px;
+  background-color: rgb(27 29 30);
+}
+
+.hero-card.photo-centred .hero-card-extra-columns h3 {
+  margin: 0 0 20px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background-color: rgb(95 99 102);
+  color: #fff;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.hero-card.photo-centred .hero-card-extra-columns p {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+}
+
+/* rate figure ("12x | 6x") under each heading */
+.hero-card.photo-centred .hero-card-extra-columns h3 + p {
+  margin-bottom: 16px;
+  font-size: 48px;
+  font-style: italic;
+  line-height: 56px;
+}
+
+.hero-card.photo-centred .hero-card-extra-columns h3 + p strong {
+  font-weight: 400;
+}
+
+.hero-card.photo-centred .hero-card-extra:not(.hero-card-extra-columns) {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.hero-card.photo-centred .hero-card-extra:not(.hero-card-extra-columns) + .hero-card-extra {
+  margin-top: 24px;
+}
+
+.hero-card.photo-centred .hero-card-extra:not(.hero-card-extra-columns) .hero-card-extra-item > p:first-child:not(:has(> sup:first-child + a)) {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.12px;
+}
+
+.hero-card.photo-centred .hero-card-extra-item:has(> picture:only-child) {
+  text-align: center;
+}
+
+/* co-brand logo row: authored last, shown above the card art (Globe catalog capture) */
+.hero-card.photo-centred > .hero-card-extra:has(> .hero-card-extra-item > picture:only-child) {
+  order: -1;
+  margin: 0 0 31px;
+}
+
+.hero-card.photo-centred > .hero-card-extra:has(> .hero-card-extra-item > picture:only-child) img {
+  width: 188px;
+}
+
+.hero-card.photo-centred .hero-card-extra-item > picture img {
+  width: 270px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (width >= 600px) {
+  .hero-card.photo-centred .hero-card-extra-columns {
+    grid-template-columns: repeat(min(var(--hero-card-columns, 2), 2), minmax(0, 1fr));
+  }
+}
+
+@media (width >= 900px) {
+  .hero-card .hero-card-extra-columns,
+  .hero-card.photo-centred .hero-card-extra-columns {
+    grid-template-columns: repeat(var(--hero-card-columns, 2), minmax(0, 1fr));
+  }
+
+  /* default: 341px card-art column beside the copy */
+  .hero-card:not(.panel, .photo, .photo-centred) {
+    display: grid;
+    grid-template-columns: 341px minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 52px;
+    align-items: start;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred).hero-card-media-end {
+    grid-template-columns: minmax(0, 1fr) 341px;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred) .hero-card-content {
+    display: block;
+    grid-area: 1 / 2;
+    padding-top: 30px;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred) .hero-card-media {
+    grid-area: 1 / 1 / span 2;
+    align-self: start;
+    margin: 0;
+    padding-top: 41px;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred) .hero-card-extra {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred).hero-card-media-end .hero-card-content,
+  .hero-card:not(.panel, .photo, .photo-centred).hero-card-media-end .hero-card-extra {
+    grid-column: 1;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred).hero-card-media-end .hero-card-media {
+    grid-column: 2;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred) .hero-card-media img {
+    width: 341px;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred) .hero-card-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 341px;
+    margin: 0;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred).hero-card-media-end .hero-card-badge {
+    right: 0;
+    left: auto;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred) .button-wrapper {
+    text-align: left;
+  }
+
+  .hero-card:not(.panel, .photo, .photo-centred) .hero-card-extra-item {
+    justify-content: flex-start;
+  }
+
+  /* panel: two equal columns, copy padded 40px 72px, card art centred */
+  .hero-card.panel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    align-content: center;
+    padding: 40px 0;
+  }
+
+  .hero-card.panel .hero-card-content {
+    grid-area: 1 / 1;
+    padding: 0 72px;
+  }
+
+  .hero-card.panel .hero-card-extra {
+    grid-column: 1;
+    padding: 24px 72px 0;
+  }
+
+  .hero-card.panel .hero-card-media {
+    grid-area: 1 / 2 / span 2;
+    align-self: center;
+    padding: 0;
+  }
+
+  .hero-card.panel.hero-card-media-start .hero-card-content,
+  .hero-card.panel.hero-card-media-start .hero-card-extra {
+    grid-column: 2;
+  }
+
+  .hero-card.panel.hero-card-media-start .hero-card-media {
+    grid-column: 1;
+  }
+
+  .hero-card.panel .hero-card-media img {
+    width: 379px;
+  }
+
+  .hero-card.panel h2 {
+    font-size: 48px;
+    line-height: 53.76px;
+  }
+
+  /*
+   * photo: frosted panel on the left, photo fills the block; content keeps
+   * citi.com's 1296px container (1320px less its 12px gutters) over the photo
+   */
+  .hero-card.photo {
+    --hero-card-gutter: max(32px, calc((100% - 1296px) / 2));
+
+    padding: 56px var(--hero-card-gutter) 96px;
+  }
+
+  .hero-card.photo .hero-card-background {
+    inset: 0;
+    height: auto;
+  }
+
+  .hero-card.photo .hero-card-inner {
+    box-sizing: border-box;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 8px;
+    max-width: 637px;
+    padding: 24px 40px;
+    border-radius: 24px;
+
+    /* no backdrop-filter: it would become the logo's containing block */
+    background-color: rgb(255 255 255 / 80%);
+  }
+
+  .hero-card.photo .hero-card-media {
+    grid-column: 1;
+    margin: -56px 0 32px;
+  }
+
+  .hero-card.photo .hero-card-media img {
+    width: 152px;
+  }
+
+  .hero-card.photo .hero-card-media + .hero-card-content > .hero-card-eyebrow:first-child {
+    grid-column: 2;
+    margin-bottom: 32px;
+  }
+
+  .hero-card.photo h2 {
+    font-size: 36px;
+    line-height: 43.2px;
+    letter-spacing: -0.36px;
+  }
+
+  .hero-card.photo .hero-card-extra:has(> .hero-card-extra-item > picture:only-child) {
+    top: auto;
+    right: var(--hero-card-gutter);
+    bottom: 96px;
+  }
+
+  .hero-card.photo .hero-card-extra:has(> .hero-card-extra-item > picture:only-child) img {
+    width: 270px;
+  }
+
+  .hero-card.photo .hero-card-extra-columns {
+    box-sizing: border-box;
+    max-width: 637px;
+  }
+
+  /*
+   * photo with a rate box: 1320px white card, card art and eyebrow on one line,
+   * CTA + highlights in a 395px column beside the rate box, legal copy under a rule
+   */
+  .hero-card.photo.hero-card-has-columns {
+    padding: 102px max(32px, calc((100% - 1320px) / 2)) 0;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-inner {
+    grid-template-columns: 200px 16px 179px minmax(0, 1fr);
+    grid-auto-flow: row dense;
+    column-gap: 0;
+    max-width: none;
+
+    /* 50px on citi.com, less the 5px the eyebrow sits above the copy's top edge */
+    padding: 45px 40px 10px;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-content > * {
+    grid-column: 1 / -1;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-media {
+    grid-column: 1;
+    margin: -105px 0 32px;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-media img {
+    width: 200px;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-media + .hero-card-content > .hero-card-eyebrow:first-child {
+    grid-column: 3 / -1;
+    margin-bottom: 32px;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-content > h2 {
+    margin-bottom: 22px;
+    padding-top: 0;
+    font-size: 38px;
+    line-height: 44.46px;
+    letter-spacing: normal;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-content > :is(.button-wrapper, .hero-card-highlights) {
+    grid-column: 1 / 4;
+  }
+
+  main .hero-card.photo.hero-card-has-columns a.button.primary:any-link {
+    width: 200px;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-highlights > li {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  /* rate box fills the rest of the CTA + highlights rows */
+  .hero-card.photo.hero-card-has-columns .hero-card-content > .hero-card-extra-columns {
+    grid-column: 4;
+    grid-row: span 2;
+    align-self: start;
+    gap: 8px 20px;
+    max-width: none;
+    padding: 24px;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-extra-columns .hero-card-extra-item {
+    padding-top: 25px;
+  }
+
+  .hero-card.photo.hero-card-has-columns .hero-card-extra-columns h3 {
+    margin-bottom: 10px;
+  }
+
+  main > .section.blue > .hero-card-wrapper:first-child:has(> .hero-card.photo, > .hero-card.photo-centred) {
+    margin-top: calc(-1 * var(--section-band-padding-l));
+  }
+
+  main > .section.blue > .hero-card-wrapper:last-child:has(> .hero-card.photo, > .hero-card.photo-centred) {
+    margin-bottom: calc(-1 * var(--section-band-padding-l));
+  }
+
+  /* photo-centred */
+  .hero-card.photo-centred {
+    padding: 48px max(32px, calc((100% - 1216px) / 2)) 56px;
+  }
+
+  .hero-card.photo-centred h2 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/how-far-out-can-you-book-hotel-room",
+  "path": "travel/travel-guide/hotels-and-resorts/how-far-out-can-you-book-hotel-room",
+  "timestamp": "2026-10-21T19:12:37.239Z",
+  "title": "How To Book a Hotel Room in Advance and Save Money | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

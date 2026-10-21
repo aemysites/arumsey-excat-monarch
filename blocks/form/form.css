@@ -1,0 +1,216 @@
+/* values from citi.com CDS calculator form (debt consolidation calculator) */
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height-m);
+}
+
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+}
+
+.form .form-field > h3,
+.form .form-field > p {
+  margin: 0;
+}
+
+.form label,
+.form legend {
+  display: block;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: var(--body-line-height-m);
+}
+
+.form .form-field > label {
+  margin: 6px 0 4px;
+}
+
+.form input:not([type='checkbox'], [type='radio']),
+.form select,
+.form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: 52px;
+  margin: 0 0 -2px;
+  padding: 13px 16px 13px 24px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  background-color: var(--background-color);
+  color: var(--citi-blue);
+  font-family: inherit;
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  line-height: var(--body-line-height-m);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--text-color-muted);
+  font-style: italic;
+  opacity: 1;
+}
+
+.form textarea {
+  height: auto;
+  min-height: 120px;
+  margin-bottom: 0;
+  resize: vertical;
+}
+
+/* optional Style column values: "currency" ($ prefix) and "percent" (% suffix) */
+.form .form-field.currency::before,
+.form .form-field.percent::after {
+  content: '';
+  position: absolute;
+  top: 48px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.form .form-field.currency::before {
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23056dae' d='M24.344 26.943c-1.31 1.238-2.506 1.59-4.322 1.59H20v2.92a.545.545 0 1 1-1.091 0v-2.992c-1.431-.185-2.883-.734-4.104-1.707a.546.546 0 1 1 .68-.854c1.328 1.06 2.999 1.541 4.537 1.541 1.562 0 2.497-.273 3.574-1.29.561-.53.768-1.128.768-2.168 0-1.446-.64-2.39-1.988-2.929-3.044-1.236-4.715-1.922-5.05-2.073a5.835 5.835 0 0 1-1.560-1.035c-.765-.714-1.220-1.580-1.220-2.595 0-2.550 1.631-3.980 4.363-4.232V8.545a.546.546 0 0 1 1.091 0v2.535c1.900.025 3.396.466 4.474 1.338a.547.547 0 0 1-.688.848c-.893-.724-2.209-1.096-3.963-1.096-2.737 0-4.187 1.050-4.187 3.180 0 .678.314 1.275.875 1.799.397.370.857.653 1.265.837.315.143 1.997.834 5.008 2.056 1.758.703 2.670 2.048 2.670 3.941 0 1.317-.306 2.202-1.110 2.960z'/%3E%3C/svg%3E");
+}
+
+.form .form-field.percent::after {
+  right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23056dae' d='M17 14.5c0-3.008-1.745-5.5-4-5.5s-4 2.492-4 5.5c0 3.007 1.745 5.500 4 5.500s4-2.494 4-5.500zM13 19c-1.610 0-3-1.985-3-4.500 0-2.516 1.390-4.500 3-4.500s3 1.984 3 4.500c0 2.515-1.390 4.500-3 4.500zm.227 11.418a.5.5 0 0 0 .692-.146l13-20a.5.5 0 0 0-.838-.545l-13 20a.5.5 0 0 0 .146.691zM27 31c2.255 0 4-2.493 4-5.500 0-3.008-1.745-5.500-4-5.500s-4 2.492-4 5.500c0 3.006 1.745 5.500 4 5.500zm0-10c1.610 0 3 1.984 3 4.500 0 2.515-1.390 4.500-3 4.500s-3-1.985-3-4.500c0-2.516 1.390-4.500 3-4.500z'/%3E%3C/svg%3E");
+}
+
+/* repeated field sets (built by form.js), e.g. one row per debt */
+.form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  padding: 0 16px;
+}
+
+.form .form-group + .form-group {
+  margin-top: 33px;
+}
+
+.form .form-group + .form-group::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: 16px;
+  left: 16px;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.form .form-group-index {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  margin-top: 36px;
+  padding: 12px;
+  border-radius: 48px;
+  background-color: #eff3f8;
+  color: var(--citi-blue);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.form .form-group-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.form form:has(> .form-group) {
+  gap: 0;
+}
+
+.form .form-choice-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form .form-choice-group legend {
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.form .form-choice {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.form .form-choice input {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.form .form-submit-wrapper,
+.form .form-button-wrapper {
+  align-items: flex-start;
+}
+
+.form .form-help {
+  font-size: var(--body-font-size-s);
+  line-height: var(--body-line-height-s);
+}
+
+.form .form-status[data-state='error'] {
+  font-weight: 600;
+}
+
+.form form[aria-busy='true'] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media (width >= 600px) {
+  .form .form-group {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr) 44px;
+    align-items: start;
+    margin-top: 32px;
+  }
+
+  .form .form-group + .form-group {
+    margin-top: 65px;
+  }
+
+  .form .form-group + .form-group::before {
+    top: -33px;
+    right: 56px;
+    left: 44px;
+  }
+}
+
+@media (width >= 900px) {
+  .form .form-group-fields {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form .form-group-fields > .form-field {
+    flex: 1 1 0;
+  }
+}

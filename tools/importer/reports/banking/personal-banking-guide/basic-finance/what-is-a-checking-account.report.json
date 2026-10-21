@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/what-is-a-checking-account",
+  "path": "banking/personal-banking-guide/basic-finance/what-is-a-checking-account",
+  "timestamp": "2026-10-21T18:54:44.896Z",
+  "title": "What Is a Checking Account? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

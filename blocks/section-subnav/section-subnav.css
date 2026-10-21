@@ -1,0 +1,472 @@
+/*
+ * section-subnav: in-page columns. Values from citi.com computed styles:
+ * default = info-list (banking/atm-network), media-feature = bank-on / banner
+ * (checking-account, mortgage), dark-promo = tds-feature-layout, light = dual-card
+ * cta-container (mortgage/purchase-rates), light-2 = tds-content-grid icon columns,
+ * link bar = travel navigationParent (travel/travel-guide).
+ * Colour comes from the section style (dark, blue); the block only swaps tokens.
+ */
+.section-subnav {
+  --section-subnav-text: inherit;
+  --section-subnav-heading: var(--heading-color);
+  --section-subnav-muted: var(--text-color-muted);
+  --section-subnav-link: var(--link-color);
+  --section-subnav-link-hover: var(--link-hover-color);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--section-subnav-text);
+}
+
+.section.dark .section-subnav,
+.section.blue .section-subnav {
+  --section-subnav-text: #fff;
+  --section-subnav-heading: #fff;
+  --section-subnav-muted: rgb(230 235 237);
+  --section-subnav-link: #fff;
+  --section-subnav-link-hover: #fff;
+}
+
+.section-subnav a:any-link {
+  color: var(--section-subnav-link);
+}
+
+.section-subnav a:hover {
+  color: var(--section-subnav-link-hover);
+}
+
+.section-subnav .section-subnav-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.section-subnav .section-subnav-item {
+  min-width: 0;
+}
+
+.section-subnav .section-subnav-item > :first-child {
+  margin-top: 0;
+}
+
+.section-subnav .section-subnav-item > :last-child {
+  margin-bottom: 0;
+}
+
+/* default: info-list columns (Interstate Light headings, disc lists) */
+.section-subnav h2,
+.section-subnav h3 {
+  color: var(--section-subnav-heading);
+}
+
+.section-subnav h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.section-subnav h3 {
+  margin: 0 0 12px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.section-subnav p {
+  margin: 0 0 16px;
+}
+
+.section-subnav ul {
+  margin: 0 0 16px;
+  padding: 0 0 0 20px;
+}
+
+.section-subnav li {
+  margin: 0 0 9px;
+}
+
+.section-subnav li:last-child {
+  margin-bottom: 0;
+}
+
+/* standalone text link: Citi CTA with a right chevron */
+.section-subnav .section-subnav-cta a:any-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: var(--body-font-weight);
+  line-height: var(--button-line-height);
+  text-decoration: none;
+}
+
+.section-subnav .section-subnav-cta a:any-link::after {
+  content: "";
+  flex: none;
+  width: 26px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) right center / 32px 32px no-repeat;
+}
+
+.section-subnav .section-subnav-cta a:hover {
+  text-decoration: underline;
+}
+
+/* a closing CTA sits on a common baseline across the columns */
+.section-subnav .section-subnav-item-has-cta {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-subnav .section-subnav-item-has-cta > .section-subnav-cta:last-child {
+  margin-top: auto;
+}
+
+/* icon columns: centred icon, heading, copy (tds-content-grid / small-business quick links) */
+.section-subnav .section-subnav-item-has-icon {
+  text-align: center;
+}
+
+.section-subnav .section-subnav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 0 16px;
+}
+
+.section-subnav .section-subnav-icon img {
+  display: block;
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-height: 66px;
+}
+
+.section-subnav .section-subnav-item-has-icon h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.section-subnav .section-subnav-item-has-icon .section-subnav-cta a:any-link::after {
+  content: none;
+}
+
+.section-subnav .section-subnav-media picture,
+.section-subnav .section-subnav-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* media-feature: badge or photo beside heading and copy, centred as a pair (bank-on / banner) */
+.section-subnav.media-feature .section-subnav-row-has-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* on phones the picture always leads its copy (banner image-right, feature-layout) */
+.section-subnav.media-feature .section-subnav-media {
+  order: -1;
+  max-width: 422px;
+}
+
+.section-subnav.media-feature .section-subnav-media img {
+  width: auto;
+}
+
+.section-subnav.media-feature .section-subnav-item {
+  max-width: 630px;
+}
+
+/* photo (JS-tagged, sized for the banner slot): fills the row width, cropped to 219px */
+.section-subnav.media-feature .section-subnav-media-photo {
+  align-self: stretch;
+  max-width: none;
+}
+
+.section-subnav.media-feature .section-subnav-media-photo img {
+  width: 100%;
+  height: 219px;
+  object-fit: cover;
+}
+
+/* icon (JS-tagged, e.g. the review quote mark): natural size, top-left above the copy */
+.section-subnav.media-feature .section-subnav-row-has-icon {
+  align-items: stretch;
+  gap: 12px;
+}
+
+.section-subnav.media-feature .section-subnav-media-icon {
+  align-self: flex-start;
+}
+
+@media (width >= 576px) {
+  .section-subnav.media-feature .section-subnav-media-photo img {
+    height: 400px;
+  }
+}
+
+/* citi.com banner headings: 32/42 regular on desktop (mortgage, small-business, card pages) */
+.section-subnav.media-feature h2 {
+  margin: 0 0 8px;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 400;
+  line-height: var(--heading-line-height-xl);
+}
+
+/* list items led by a bold title on its own line (banner h3 + description, e.g. J.D. Power) */
+.section-subnav.media-feature li > strong:first-child:has(+ br) {
+  font-size: var(--heading-font-size-l);
+  font-weight: 400;
+  line-height: var(--heading-line-height-l);
+}
+
+.section-subnav.media-feature h3 {
+  margin: 0 0 4px;
+  font-size: var(--heading-font-size-l);
+  line-height: var(--heading-line-height-l);
+}
+
+/* dark-promo: copy on a navy panel beside a rounded photo (tds-feature-layout) */
+.section-subnav.dark-promo .section-subnav-row {
+  gap: 16px;
+}
+
+.section-subnav.dark-promo .section-subnav-item {
+  --section-subnav-heading: #fff;
+  --section-subnav-link: #fff;
+  --section-subnav-link-hover: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 24px;
+  border-radius: 16px;
+  background-color: rgb(19 20 29);
+  color: rgb(230 235 237);
+}
+
+.section-subnav.dark-promo h2 {
+  margin: 0 0 24px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 36px;
+}
+
+.section-subnav.dark-promo h3 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.section-subnav.dark-promo .section-subnav-item p {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.section-subnav.dark-promo .section-subnav-media {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.section-subnav.dark-promo .section-subnav-media picture,
+.section-subnav.dark-promo .section-subnav-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* light: a centred row of CTAs, first one filled (dual-card cta-container) */
+.section-subnav.light .section-subnav-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.section-subnav.light .section-subnav-item {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section-subnav.light .section-subnav-item > p {
+  margin: 0;
+}
+
+.section-subnav.light .section-subnav-cta a:any-link {
+  box-sizing: border-box;
+  justify-content: center;
+  min-width: 192px;
+  padding: 11px 20px;
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+}
+
+.section-subnav.light .section-subnav-cta:first-child a:any-link {
+  padding: 11px 16px;
+  border-color: var(--button-primary-bg);
+  background-color: var(--button-primary-bg);
+  color: #fff;
+}
+
+.section-subnav.light .section-subnav-cta:first-child a:any-link::after {
+  content: none;
+}
+
+.section-subnav.light .section-subnav-cta:first-child a:hover {
+  border-color: var(--button-primary-hover-bg);
+  background-color: var(--button-primary-hover-bg);
+  color: #fff;
+  text-decoration: none;
+}
+
+.section-subnav.light .section-subnav-cta:first-child a:active {
+  border-color: var(--button-primary-active-bg);
+  background-color: var(--button-primary-active-bg);
+}
+
+/* light-2: centred heading + copy columns (tds-content-grid) */
+.section-subnav.light-2 .section-subnav-item {
+  text-align: center;
+}
+
+.section-subnav.light-2 h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.section-subnav.light-2 .section-subnav-item p,
+.section-subnav .section-subnav-item-has-icon p:not(.section-subnav-cta, .section-subnav-icon) {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.144px;
+}
+
+/* media-feature eyebrow above the heading (banner eyebrow-copy) */
+.section-subnav.media-feature .section-subnav-item > p:first-child:has(+ h2) {
+  margin: 0;
+  color: var(--section-subnav-muted);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* link bar: one list of links (Citi Travel sub-nav under the header) */
+.section-subnav.section-subnav-links {
+  background-color: var(--citi-light-blue);
+  box-shadow: 0 0 0 100vmax var(--citi-light-blue);
+  clip-path: inset(0 -100vmax);
+}
+
+.section-subnav.section-subnav-links .section-subnav-row {
+  display: block;
+}
+
+/* the bar starts at the page edge like the header nav it sits under */
+.section-subnav.section-subnav-links ul {
+  display: flex;
+  margin: 0 0 0 calc(50% - 50vw);
+  padding: 0 0 0 var(--content-gutter);
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.section-subnav.section-subnav-links li {
+  flex: none;
+  margin: 0;
+}
+
+.section-subnav.section-subnav-links .section-subnav-row .section-subnav-item li a:any-link {
+  display: block;
+  box-sizing: border-box;
+  height: 46px;
+  padding: 9px 20px 0;
+  border-radius: 8px 8px 0 0;
+  color: var(--citi-brand-blue);
+  font-weight: 400;
+  line-height: 30px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.section-subnav.section-subnav-links .section-subnav-row .section-subnav-item li a:hover {
+  color: var(--citi-brand-blue);
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .section-subnav .section-subnav-row {
+    grid-template-columns: repeat(var(--section-subnav-columns, 1), minmax(0, 1fr));
+  }
+
+  .section-subnav.media-feature .section-subnav-row-has-media {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .section-subnav.media-feature .section-subnav-media {
+    order: 0;
+    flex: 0 1 auto;
+  }
+
+  .section-subnav.media-feature .section-subnav-item {
+    flex: 0 1 auto;
+  }
+
+  /* banner: 422x400 photo pinned to the top, copy centred against it */
+  .section-subnav.media-feature .section-subnav-media-photo {
+    flex: 0 0 422px;
+    align-self: flex-start;
+  }
+
+  /* review tile: icon then copy, both from the top-left, copy takes the rest */
+  .section-subnav.media-feature .section-subnav-row-has-icon {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .section-subnav.media-feature .section-subnav-media-icon {
+    flex: none;
+  }
+
+  .section-subnav.dark-promo .section-subnav-row {
+    padding: 16px;
+  }
+
+  .section-subnav.dark-promo .section-subnav-item {
+    padding: 72px;
+  }
+
+  .section-subnav.dark-promo h2 {
+    font-size: 48px;
+    line-height: 53.76px;
+  }
+
+  .section-subnav.light-2 .section-subnav-row {
+    gap: 24px 48px;
+  }
+
+  .section-subnav.media-feature .section-subnav-row-has-icon > .section-subnav-item {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+}

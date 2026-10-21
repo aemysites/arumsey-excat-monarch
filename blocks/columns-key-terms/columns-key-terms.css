@@ -1,0 +1,292 @@
+/*
+ * columns-key-terms
+ * default = tds-ratesfees row (Annual fee / APR / Balance transfer fee),
+ * card-picker = tds-feature-layout "Explore our cards" (image + card links),
+ * light = light text (citi.com shows it on the dark AAdvantage Executive page).
+ * Values from citi.com computed styles; Citi Sans 400/500 map to Overpass 300/400.
+ */
+.columns-key-terms {
+  --columns-key-terms-text: #5e676b;
+  --columns-key-terms-strong: #26292b;
+  --columns-key-terms-rule-color: #bcc5c9;
+  --columns-key-terms-link: var(--citi-brand-blue);
+  --columns-key-terms-chevron: var(--citi-brand-blue);
+  --columns-key-terms-panel-bg: #fff;
+  --columns-key-terms-chevron-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.13 22.56c.31.316.82.32 1.136.011L18.1 12 7.266 1.429a.806.806 0 0 0-1.136.011.797.797 0 0 0 .011 1.131L15.804 12 6.14 21.429a.797.797 0 0 0-.011 1.131'/%3E%3C/svg%3E");
+
+  color: var(--columns-key-terms-text);
+}
+
+.columns-key-terms sup {
+  font-size: 0.75em;
+}
+
+.columns-key-terms .columns-key-terms-col {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.columns-key-terms img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- default: key terms ---------- */
+.columns-key-terms:not(.card-picker) .columns-key-terms-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.columns-key-terms:not(.card-picker) .columns-key-terms-col {
+  padding: 0 0 16px 24px;
+  border-bottom: 1px solid var(--columns-key-terms-rule-color);
+}
+
+.columns-key-terms .columns-key-terms-col > :where(p) {
+  margin: 0;
+}
+
+.columns-key-terms .columns-key-terms-label {
+  font-size: 14px;
+  line-height: 18.06px;
+  letter-spacing: 0.14px;
+}
+
+/* footnote links: 12px digit in brand blue */
+.columns-key-terms .columns-key-terms-label a:any-link,
+.columns-key-terms .columns-key-terms-note a:any-link {
+  color: var(--columns-key-terms-link);
+  letter-spacing: 0.2px;
+}
+
+.columns-key-terms .columns-key-terms-label a sup,
+.columns-key-terms .columns-key-terms-note a sup {
+  font-size: 12px;
+}
+
+.columns-key-terms .columns-key-terms-value {
+  color: var(--columns-key-terms-strong);
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+
+.columns-key-terms .columns-key-terms-value :is(strong, b) {
+  font-weight: var(--body-font-weight);
+}
+
+.columns-key-terms .columns-key-terms-label + .columns-key-terms-value {
+  margin-top: 8px;
+}
+
+.columns-key-terms .columns-key-terms-note {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 15.96px;
+}
+
+/* ---------- card-picker ---------- */
+.columns-key-terms.card-picker {
+  border-radius: 16px;
+}
+
+.columns-key-terms.card-picker .columns-key-terms-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.columns-key-terms:not(.card-picker) .columns-key-terms-row + .columns-key-terms-row {
+  margin-top: 16px;
+}
+
+/* citi.com drops the image column below desktop */
+.columns-key-terms.card-picker .columns-key-terms-img-col {
+  display: none;
+}
+
+.columns-key-terms.card-picker .columns-key-terms-col:not(.columns-key-terms-img-col) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: var(--columns-key-terms-panel-bg);
+}
+
+.columns-key-terms.card-picker .columns-key-terms-col > :is(h1, h2, h3, h4) {
+  margin: 0;
+  color: var(--columns-key-terms-strong);
+  font-size: 24px;
+  font-weight: var(--body-font-weight);
+  line-height: 30px;
+}
+
+.columns-key-terms .columns-key-terms-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns-key-terms .columns-key-terms-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-content: center;
+  align-items: center;
+  row-gap: 2px;
+  box-sizing: border-box;
+  min-height: 64px;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.columns-key-terms .columns-key-terms-card::after {
+  content: '';
+  grid-row: 1 / span 2;
+  grid-column: 3;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  background-color: var(--columns-key-terms-chevron);
+  mask: var(--columns-key-terms-chevron-icon) center / 16px 16px no-repeat;
+}
+
+.columns-key-terms .columns-key-terms-card-thumb {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  margin-right: 12px;
+}
+
+.columns-key-terms .columns-key-terms-card-thumb img {
+  width: 64px;
+  height: 40px;
+}
+
+.columns-key-terms .columns-key-terms-card > :not(.columns-key-terms-card-thumb) {
+  grid-column: 2;
+  margin: 0;
+}
+
+.columns-key-terms .columns-key-terms-card-eyebrow {
+  color: var(--columns-key-terms-strong);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18.06px;
+}
+
+.columns-key-terms .columns-key-terms-card > .columns-key-terms-card-title {
+  margin-bottom: 8px;
+  color: var(--columns-key-terms-strong);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.06px;
+}
+
+.columns-key-terms .columns-key-terms-card-link:any-link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.columns-key-terms .columns-key-terms-card:hover .columns-key-terms-card-link {
+  text-decoration: underline;
+}
+
+/* whole card row is the link target */
+.columns-key-terms .columns-key-terms-card-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+}
+
+/* ---------- light / dark bands: light text ---------- */
+.columns-key-terms.light,
+.section.dark .columns-key-terms,
+.section.blue .columns-key-terms {
+  --columns-key-terms-text: #e6ebed;
+  --columns-key-terms-strong: #fff;
+  --columns-key-terms-rule-color: rgb(255 255 255 / 30%);
+  --columns-key-terms-link: #fff;
+  --columns-key-terms-chevron: #fff;
+  --columns-key-terms-panel-bg: transparent;
+}
+
+/* light outside a dark band: carry the citi.com dark page colour (rgb 19 20 29) */
+.columns-key-terms.light {
+  background-color: #13141d;
+}
+
+.section.dark .columns-key-terms.light,
+.section.blue .columns-key-terms.light {
+  background-color: transparent;
+}
+
+@media (width >= 900px) {
+  .columns-key-terms:not(.card-picker) .columns-key-terms-row {
+    flex-direction: row;
+    gap: 24px;
+    padding-bottom: 8px;
+  }
+
+  .columns-key-terms:not(.card-picker) .columns-key-terms-col {
+    flex: 1 1 0;
+    padding: 0 0 0 24px;
+    border-bottom: 0;
+  }
+
+  .columns-key-terms:not(.card-picker) .columns-key-terms-col + .columns-key-terms-col {
+    border-left: 1px solid var(--columns-key-terms-rule-color);
+  }
+
+  .columns-key-terms.card-picker {
+    padding: 16px;
+  }
+
+  .columns-key-terms.card-picker .columns-key-terms-row {
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    gap: 16px;
+    min-height: 360px;
+  }
+
+  .columns-key-terms.card-picker .columns-key-terms-img-col {
+    display: block;
+  }
+
+  .columns-key-terms.card-picker .columns-key-terms-img-col picture {
+    display: block;
+    height: 100%;
+  }
+
+  .columns-key-terms.card-picker .columns-key-terms-img-col img {
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .columns-key-terms.card-picker .columns-key-terms-col:not(.columns-key-terms-img-col) {
+    padding: 40px 72px;
+  }
+
+  .columns-key-terms.card-picker .columns-key-terms-col > :is(h1, h2, h3, h4) {
+    font-size: 48px;
+    line-height: 53.76px;
+  }
+
+  .columns-key-terms .columns-key-terms-card-eyebrow,
+  .columns-key-terms .columns-key-terms-card > .columns-key-terms-card-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

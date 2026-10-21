@@ -1,0 +1,43 @@
+{
+  "variantName": "article-body",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "image + text + heading + link + table + list",
+    "purpose": "editorial article: hero with background image and title card, then the article body card with headings, text, lists, tables, images and inline promo banners"
+  },
+  "contentPattern": {
+    "structure": "row 1: hero image cell | text cell (eyebrow, H1 title, date / read time, optional CTA link); following one-cell rows: article body content in order; following multi-cell rows: inline promo banner (text | CTA | logo)"
+  },
+  "options": [
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "alt",
+      "label": "Alt"
+    },
+    {
+      "class": "alt-2",
+      "label": "Alt 2"
+    }
+  ],
+  "memberVariantIds": [
+    "v_a7060a1b788d-2",
+    "v_a7060a1b788d-3",
+    "v_a7060a1b788d-4",
+    "v_a7060a1b788d-5",
+    "v_a7060a1b788d-6",
+    "v_a7060a1b788d-7",
+    "v_a7060a1b788d-8",
+    "v_a7060a1b788d-10",
+    "v_a7060a1b788d-11"
+  ],
+  "usage": "Personal banking guide, credit card and lending learning-center articles.",
+  "reuseGuidance": "Use for long-form article pages. image gives a taller hero, alt bolds the first table column, alt-2 lets tables size to their content. Related-articles and additional-resources sections are separate blocks."
+}

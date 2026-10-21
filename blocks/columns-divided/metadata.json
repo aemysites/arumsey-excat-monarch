@@ -1,0 +1,29 @@
+{
+  "variantName": "columns-divided",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + list + link",
+    "purpose": "equal columns of heading + bulleted list or text, separated by vertical rules"
+  },
+  "contentPattern": {
+    "structure": "one row; one cell per column. Each cell: optional heading, list or text, optional link. four-columns lays the row out as four columns on desktop"
+  },
+  "options": [
+    {
+      "class": "four-columns",
+      "label": "Four Columns"
+    }
+  ],
+  "memberVariantIds": [
+    "v_7cacb410df2e",
+    "v_cb57d0e4ae46",
+    "v_b73c47ed7f18"
+  ],
+  "usage": "Benefits / requirements lists and short feature columns split by rules",
+  "reuseGuidance": "Use for 2-4 rule-separated text columns. Not for image + text (columns-media)."
+}

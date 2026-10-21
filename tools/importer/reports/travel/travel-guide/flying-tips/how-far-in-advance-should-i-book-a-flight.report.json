@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips/how-far-in-advance-should-i-book-a-flight",
+  "path": "travel/travel-guide/flying-tips/how-far-in-advance-should-i-book-a-flight",
+  "timestamp": "2026-10-21T19:11:35.556Z",
+  "title": "How Far in Advance Should You Book a Flight? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

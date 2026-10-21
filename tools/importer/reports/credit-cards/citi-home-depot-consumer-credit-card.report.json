@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-home-depot-consumer-credit-card",
+  "path": "credit-cards/citi-home-depot-consumer-credit-card",
+  "timestamp": "2026-10-21T19:24:48.414Z",
+  "title": "The Home Depot® Consumer Credit Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "hero-card",
+    "cards-highlight",
+    "columns-key-terms",
+    "disclosure-links",
+    "cards-benefit-tiles"
+  ],
+  "fragments": [
+    "fragments/credit-card-categories"
+  ],
+  "importScript": "089f57e4feb6"
+}

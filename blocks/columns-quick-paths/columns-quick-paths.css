@@ -1,0 +1,315 @@
+/*
+ * columns-quick-paths
+ * default / in-box-with-text: citi.com mortgage hero "rtb-tiles" (white box, icon + heading,
+ * optional text, chevron link). key-terms / light: card "rates & fees" strip
+ * (label, value, fine print) on light / dark backgrounds.
+ */
+
+/* ---------- default + in-box-with-text: quick-path tiles in a white box ---------- */
+.columns-quick-paths {
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+  color: var(--text-color);
+}
+
+/* optional intro row: box title above the tiles */
+
+/* flow-root keeps the heading margin inside: 44px title + 8px + 32px to the tiles */
+.columns-quick-paths .columns-quick-paths-intro {
+  display: flow-root;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.columns-quick-paths .columns-quick-paths-intro :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 8px;
+  color: rgb(51 51 51);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.columns-quick-paths .columns-quick-paths-intro p {
+  margin: 0 0 8px;
+}
+
+.columns-quick-paths .columns-quick-paths-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 17px;
+}
+
+.columns-quick-paths .columns-quick-paths-row + .columns-quick-paths-row {
+  margin-top: 17px;
+}
+
+.columns-quick-paths .columns-quick-paths-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.columns-quick-paths .columns-quick-paths-col > * {
+  margin: 0;
+}
+
+/* mobile: thin rule under every tile but the last */
+.columns-quick-paths .columns-quick-paths-row > .columns-quick-paths-col:not(:last-child)::after {
+  content: "";
+  align-self: stretch;
+  height: 1px;
+  margin-top: 14px;
+  background-color: var(--rule-color);
+}
+
+.columns-quick-paths .columns-quick-paths-head {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.columns-quick-paths .columns-quick-paths-head picture,
+.columns-quick-paths .columns-quick-paths-head img,
+.columns-quick-paths .columns-quick-paths-head .icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+}
+
+.columns-quick-paths .columns-quick-paths-head img {
+  object-fit: contain;
+}
+
+.columns-quick-paths .columns-quick-paths-col h1,
+.columns-quick-paths .columns-quick-paths-col h2,
+.columns-quick-paths .columns-quick-paths-col h3,
+.columns-quick-paths .columns-quick-paths-col h4,
+.columns-quick-paths .columns-quick-paths-col h5,
+.columns-quick-paths .columns-quick-paths-col h6 {
+  margin: 0 0 8px;
+  color: rgb(51 51 51);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/* headline block to text: 4px (source .tile-headline gap) */
+.columns-quick-paths .columns-quick-paths-col .columns-quick-paths-text {
+  margin: 4px 0 8px;
+  color: rgb(51 51 51);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.columns-quick-paths .columns-quick-paths-col .columns-quick-paths-text + .columns-quick-paths-text {
+  margin-top: 0;
+}
+
+/* headline to link: 4px (headline gap) + 14px (tile gap) */
+.columns-quick-paths .columns-quick-paths-col .columns-quick-paths-cta {
+  margin-top: 18px;
+}
+
+.columns-quick-paths .columns-quick-paths-col .columns-quick-paths-text + .columns-quick-paths-cta {
+  margin-top: 14px;
+}
+
+.columns-quick-paths .columns-quick-paths-cta a:any-link {
+  display: inline-block;
+  padding: 2px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: rgb(5 109 174);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.columns-quick-paths .columns-quick-paths-cta a:any-link::after {
+  content: "";
+  position: relative;
+  left: 2px;
+  display: inline-block;
+  width: 26px;
+  height: 24px;
+  vertical-align: top;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) center / 24px 24px no-repeat;
+}
+
+.columns-quick-paths .columns-quick-paths-cta a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.columns-quick-paths .columns-quick-paths-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- key-terms + light: rates & fees strip ---------- */
+.columns-quick-paths.key-terms,
+.columns-quick-paths.light {
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: rgb(94 103 107);
+}
+
+.columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-row {
+  gap: 16px;
+  padding: 0 0 8px;
+}
+
+.columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-row > .columns-quick-paths-col:not(:last-child)::after {
+  content: none;
+}
+
+.columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col + .columns-quick-paths-col {
+  padding-top: 16px;
+  border-top: 1px solid rgb(188 197 201);
+}
+
+.columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col .columns-quick-paths-label {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.06px;
+  letter-spacing: 0.14px;
+}
+
+.columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 4px;
+  color: rgb(38 41 43);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+
+.columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col .columns-quick-paths-text {
+  margin: 0;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.96px;
+}
+
+.columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col :is(.columns-quick-paths-label, .columns-quick-paths-text) a:any-link {
+  color: rgb(4 32 143);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  text-decoration: underline;
+}
+
+.columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col a sup {
+  font-size: inherit;
+}
+
+/* light: rates strip on a dark background (aa-exec page theme rgb(19 20 29)) */
+.columns-quick-paths.light {
+  padding: 24px 24px 16px;
+  background-color: rgb(19 20 29);
+  color: rgb(230 235 237);
+}
+
+.columns-quick-paths.light .columns-quick-paths-col :is(h1, h2, h3, h4, h5, h6),
+.columns-quick-paths.light .columns-quick-paths-col :is(.columns-quick-paths-label, .columns-quick-paths-text),
+.columns-quick-paths.light .columns-quick-paths-col :is(.columns-quick-paths-label, .columns-quick-paths-text) a:any-link {
+  color: #fff;
+}
+
+/* already on a dark band: no own background needed */
+main > .section:is(.dark, .blue) .columns-quick-paths.light {
+  padding: 0;
+  background-color: transparent;
+}
+
+@media (width >= 900px) {
+  /* tiles: 24px gap, 2px #eee divider, 24px gap */
+  .columns-quick-paths .columns-quick-paths-row {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 50px;
+  }
+
+  .columns-quick-paths .columns-quick-paths-row + .columns-quick-paths-row {
+    margin-top: 24px;
+  }
+
+  .columns-quick-paths .columns-quick-paths-col {
+    flex: 1 1 0;
+  }
+
+  .columns-quick-paths .columns-quick-paths-row > .columns-quick-paths-col:not(:last-child)::after {
+    content: none;
+  }
+
+  .columns-quick-paths .columns-quick-paths-col + .columns-quick-paths-col::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -26px;
+    border-right: 1px solid var(--rule-color);
+    border-left: 1px solid var(--rule-color);
+  }
+
+  .columns-quick-paths .columns-quick-paths-head .icon,
+  .columns-quick-paths .columns-quick-paths-head picture {
+    margin-top: 4px;
+  }
+
+  .columns-quick-paths .columns-quick-paths-col h1,
+  .columns-quick-paths .columns-quick-paths-col h2,
+  .columns-quick-paths .columns-quick-paths-col h3,
+  .columns-quick-paths .columns-quick-paths-col h4,
+  .columns-quick-paths .columns-quick-paths-col h5,
+  .columns-quick-paths .columns-quick-paths-col h6 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  /* key terms: equal columns, 1px rule on the left, 24px inset */
+  .columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-row {
+    gap: 24px;
+  }
+
+  .columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col {
+    padding-left: 24px;
+  }
+
+  .columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col + .columns-quick-paths-col {
+    padding-top: 0;
+    border-top: 0;
+    border-left: 1px solid rgb(188 197 201);
+  }
+
+  .columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col + .columns-quick-paths-col::before {
+    content: none;
+  }
+
+  .columns-quick-paths:is(.key-terms, .light) .columns-quick-paths-col :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .columns-quick-paths.light {
+    padding: 24px 24px 16px 0;
+  }
+
+  main > .section:is(.dark, .blue) .columns-quick-paths.light {
+    padding: 0;
+  }
+}

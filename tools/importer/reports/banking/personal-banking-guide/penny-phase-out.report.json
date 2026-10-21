@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/penny-phase-out",
+  "path": "banking/personal-banking-guide/penny-phase-out",
+  "timestamp": "2026-10-21T17:38:09.487Z",
+  "title": "Penny Phase Out",
+  "template": "standard-content-page",
+  "blocks": [
+    "accordion-disclosure"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

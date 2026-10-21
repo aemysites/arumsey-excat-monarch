@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/personal-loans/learning-center/calculators/personal-loan-calculator",
+  "path": "personal-loans/learning-center/calculators/personal-loan-calculator",
+  "timestamp": "2026-10-21T18:02:28.131Z",
+  "title": "Personal Loan Calculator | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/personal-loans/learning-center/calculators/personal-loan-calculator/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

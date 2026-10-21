@@ -1,0 +1,220 @@
+/*
+ * columns-icon-features: centred icon feature columns.
+ * Default (3-4 features, citi.com small-business "benefitcards"): white rounded
+ * card, 40px icons, bold 16px heading, 14px text, thin vertical dividers.
+ * Two features (citi.com /banking/cd-account "tiles-slider2"): wider card,
+ * 55px icons, 16px text and a bold "Learn More" link with a chevron.
+ * Mobile: features stack (source is a one-up carousel).
+ */
+.columns-icon-features {
+  margin-top: 24px;
+  color: var(--text-color);
+}
+
+.columns-icon-features.columns-icon-features-2-items {
+  margin-top: 40px;
+}
+
+.columns-icon-features .columns-icon-features-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* mobile: each feature is its own card (source carousel slide) */
+.columns-icon-features .columns-icon-features-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.columns-icon-features .columns-icon-features-icon {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 12px;
+}
+
+.columns-icon-features .columns-icon-features-icon p {
+  margin: 0;
+  line-height: 0;
+}
+
+.columns-icon-features .columns-icon-features-icon img,
+.columns-icon-features .columns-icon-features-icon .icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.columns-icon-features .columns-icon-features-body {
+  width: 100%;
+  max-width: 347px;
+  margin-bottom: 8px;
+}
+
+.columns-icon-features .columns-icon-features-body h3 {
+  margin: 0 0 4px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.columns-icon-features .columns-icon-features-body p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.columns-icon-features .columns-icon-features-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* CTA link: bold blue text link with a small right chevron */
+.columns-icon-features .columns-icon-features-body .button-container {
+  display: block;
+}
+
+main .columns-icon-features a.button:any-link,
+.columns-icon-features .columns-icon-features-body p > a:only-child:any-link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+main .columns-icon-features a.button:any-link::after,
+.columns-icon-features .columns-icon-features-body p > a:only-child:any-link::after {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-left: 5px;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) center / 11px 11px no-repeat;
+}
+
+main .columns-icon-features a.button:hover,
+.columns-icon-features .columns-icon-features-body p > a:only-child:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* two features (cd-account cross-sell tiles) */
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-list {
+  gap: 20px;
+  padding: 0 5px;
+}
+
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-item {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-icon {
+  margin: 20px 0;
+}
+
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-icon img,
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-icon .icon {
+  width: 55px;
+  height: 55px;
+}
+
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-body {
+  margin-bottom: 0;
+}
+
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-body h3 {
+  margin-bottom: 10px;
+}
+
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-body p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.columns-icon-features.columns-icon-features-2-items .columns-icon-features-body > :last-child {
+  margin-bottom: 0;
+}
+
+@media (width >= 900px) {
+  /* default: one white card, equal columns split by thin dividers */
+  .columns-icon-features .columns-icon-features-list {
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    gap: 0;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+    background-color: var(--background-color);
+  }
+
+  .columns-icon-features .columns-icon-features-item {
+    margin-right: 24px;
+    padding: 0 24px 0 0;
+    border-right: 1px solid var(--rule-color);
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+  }
+
+  .columns-icon-features .columns-icon-features-item:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  /* two features: tiles spaced around inside a soft-shadow card */
+  .columns-icon-features.columns-icon-features-2-items .columns-icon-features-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+    padding: 30px 30px 50px;
+    border-radius: 24px;
+    box-shadow: 0 0 50px 3px rgb(230 230 230);
+  }
+
+  .columns-icon-features.columns-icon-features-2-items .columns-icon-features-item {
+    /* source: 25% of its 1242px row (310.5px); the EDS content box is narrower */
+    flex: 0 1 310px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  /* five or six features: two rows of three */
+  .columns-icon-features.columns-icon-features-5-items .columns-icon-features-list,
+  .columns-icon-features.columns-icon-features-6-items .columns-icon-features-list {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+
+  .columns-icon-features.columns-icon-features-5-items .columns-icon-features-item:nth-child(3n),
+  .columns-icon-features.columns-icon-features-6-items .columns-icon-features-item:nth-child(3n) {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+}

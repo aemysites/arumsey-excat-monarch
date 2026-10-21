@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/are-debit-cards-secure",
+  "path": "banking/personal-banking-guide/basic-finance/are-debit-cards-secure",
+  "timestamp": "2026-10-21T18:50:12.491Z",
+  "title": "Are Debit Cards Secure? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

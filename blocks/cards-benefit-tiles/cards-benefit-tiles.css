@@ -1,0 +1,162 @@
+/* citi.com tds-primary-benefits: column of tiles on mobile, row of 3 from 900px */
+.cards-benefit-tiles > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* tile: .primaryBenefits-container */
+.cards-benefit-tiles .cards-benefit-tiles-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: 336px;
+  padding: 32px 24px;
+  border-radius: 24px;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #000;
+  color: #fff;
+}
+
+/* background photo: source uses background-size 160% 100%, centred, under a 54% black wash */
+.cards-benefit-tiles .cards-benefit-tiles-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-image img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 160%;
+  max-width: none;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 54%);
+}
+
+/* title: h3.item-heading */
+.cards-benefit-tiles .cards-benefit-tiles-title > * {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33.6px;
+  color: inherit;
+  text-align: left;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-title a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* detail: p.benefit-description, shown when the tile is open */
+.cards-benefit-tiles .cards-benefit-tiles-detail {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.06px;
+  color: #5e676b;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-detail p {
+  margin: 0;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-detail p + p {
+  margin-top: 8px;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-detail a:any-link {
+  color: var(--citi-brand-blue);
+  text-decoration: underline;
+}
+
+/* "+" toggle: 44px white circle with a 20px brand-blue plus, bottom right */
+.cards-benefit-tiles .cards-benefit-tiles-toggle {
+  flex-shrink: 0;
+  align-self: flex-end;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: auto 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--citi-brand-blue);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-toggle::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.8 1.8a.8.8 0 0 0-1.6 0v9.4H1.8a.8.8 0 0 0 0 1.6h9.4v9.4a.8.8 0 0 0 1.6 0v-9.4h9.4a.8.8 0 0 0 0-1.6h-9.4z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-toggle:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* open state (.pb-active): light panel, dark text, "+" turns into "x" */
+.cards-benefit-tiles .cards-benefit-tiles-toggle[aria-expanded='true'] {
+  transform: rotate(45deg);
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-tile.is-open {
+  background-color: var(--citi-light-blue);
+  color: var(--text-color);
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-tile.is-open .cards-benefit-tiles-image {
+  display: none;
+}
+
+.cards-benefit-tiles .cards-benefit-tiles-tile.is-open .cards-benefit-tiles-title > * {
+  font-size: 24px;
+  line-height: 28.8px;
+  color: #111;
+}
+
+/* blue: tiles without a photo get a solid steel-blue fill */
+.cards-benefit-tiles.blue .cards-benefit-tiles-tile:not(.has-image, .is-open) {
+  background-color: #4b7ba1;
+}
+
+@media (width >= 900px) {
+  .cards-benefit-tiles > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-benefit-tiles .cards-benefit-tiles-tile {
+    padding: 32px 40px;
+  }
+}

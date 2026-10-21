@@ -1,0 +1,29 @@
+{
+  "variantName": "location-selector",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + heading + link",
+    "purpose": "Location context bar (\"Products & pricing based on your address | Change\") with an inline ZIP code form; lead-form option renders a \"have us call you\" lead capture form"
+  },
+  "contentPattern": {
+    "structure": "Default: row 1 = message | change trigger (text or link) | optional help; optional key/value rows ZIP label, Update label, Cancel label, Storage key. lead-form: intro row (headings/text), field rows Label | type (text, tel, email, number, zip, textarea, select) | name | placeholder [| select options], consent/disclosure text rows, submit row Label | submit, optional key/value rows Action (endpoint URL), Success, Error"
+  },
+  "options": [
+    {
+      "class": "lead-form",
+      "label": "Lead Form"
+    }
+  ],
+  "memberVariantIds": [
+    "v_82f0bf988460",
+    "v_04b035cc7077",
+    "v_316d08e8ca4d"
+  ],
+  "usage": "Top-of-page pricing location bar on banking and small-business pages; lead form on mortgage / home equity pages",
+  "reuseGuidance": "Use lead-form for any short contact-request form; set an Action row to post submissions, otherwise the form only validates and shows the success message."
+}

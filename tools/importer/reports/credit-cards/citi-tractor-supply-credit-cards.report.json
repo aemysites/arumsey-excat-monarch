@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-tractor-supply-credit-cards",
+  "path": "credit-cards/citi-tractor-supply-credit-cards",
+  "timestamp": "2026-10-21T19:25:21.033Z",
+  "title": "TSC Credit Cards | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-product",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "tabs-feature",
+    "hero-card"
+  ],
+  "fragments": [],
+  "importScript": "089f57e4feb6"
+}

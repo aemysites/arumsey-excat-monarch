@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-strata-all-cards",
+  "path": "credit-cards/citi-strata-all-cards",
+  "timestamp": "2026-10-21T19:25:07.344Z",
+  "title": "Strata Credit Cards | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "hero-photo",
+    "table-rates",
+    "cards-icon-links"
+  ],
+  "fragments": [],
+  "importScript": "089f57e4feb6"
+}

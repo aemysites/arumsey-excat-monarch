@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/debt-management/debt-snowball",
+  "path": "credit-cards/debt-management/debt-snowball",
+  "timestamp": "2026-10-21T17:46:39.235Z",
+  "title": "What Is the Debt Snowball Method? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/credit-cards/debt-management/debt-snowball/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/savings/unexpected-expenses",
+  "path": "banking/personal-banking-guide/savings/unexpected-expenses",
+  "timestamp": "2026-10-21T18:56:30.574Z",
+  "title": "A Guide to Saving for Unexpected Expenses | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

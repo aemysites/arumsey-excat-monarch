@@ -1,0 +1,35 @@
+{
+  "variantName": "columns-icon-strip",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link",
+    "purpose": "horizontal strip: a title on the left and a row of icon + eyebrow + link items"
+  },
+  "contentPattern": {
+    "structure": "one row; first cell is the strip title (heading or text), each further cell an item: icon, eyebrow text, link title, optional body text. with-body-text: items carry a heading and paragraph"
+  },
+  "options": [
+    {
+      "class": "light",
+      "label": "Light"
+    },
+    {
+      "class": "with-body-text",
+      "label": "With Body Text"
+    }
+  ],
+  "memberVariantIds": [
+    "v_b698fc7a1f88-1",
+    "v_601a53b8d474",
+    "v_9fa7bc4d7c9c",
+    "v_1b566646e87b",
+    "v_ebc10ffc317d"
+  ],
+  "usage": "Explore-more / get-started link strips, PDF download strips",
+  "reuseGuidance": "Use for a titled strip of icon links. Not for full feature columns (columns-icon-features)."
+}

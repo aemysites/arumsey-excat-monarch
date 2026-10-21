@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips/how-to-get-last-minute-flight-deals",
+  "path": "travel/travel-guide/flying-tips/how-to-get-last-minute-flight-deals",
+  "timestamp": "2026-10-21T19:11:39.063Z",
+  "title": "How to Get Last-Minute Flight Deals | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

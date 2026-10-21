@@ -1,0 +1,29 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/citigold-private-client",
+  "path": "banking/citigold-private-client",
+  "timestamp": "2026-10-21T18:20:03.773Z",
+  "title": "Premier Private Banking | Citigold Private Client | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "notice-box",
+    "notice-box",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "location-selector",
+    "hero-photo",
+    "benefits-showcase",
+    "columns-divided",
+    "columns-divided",
+    "cta-banner"
+  ],
+  "fragments": [
+    "fragments/banking/citigold-private-client/accordion-feature-1"
+  ],
+  "importScript": "53dc5a5b589e"
+}

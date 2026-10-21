@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips/credit-card-points-for-flights",
+  "path": "travel/travel-guide/flying-tips/credit-card-points-for-flights",
+  "timestamp": "2026-10-21T19:11:22.062Z",
+  "title": "How to Book Flights With Points and Miles | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

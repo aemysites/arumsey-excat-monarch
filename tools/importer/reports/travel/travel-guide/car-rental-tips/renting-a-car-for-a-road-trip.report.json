@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/renting-a-car-for-a-road-trip",
+  "path": "travel/travel-guide/car-rental-tips/renting-a-car-for-a-road-trip",
+  "timestamp": "2026-10-21T16:37:38.104Z",
+  "title": "Renting a Car for a Road Trip | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav",
+    "fragments/travel/travel-guide/car-rental-tips/renting-a-car-for-a-road-trip/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

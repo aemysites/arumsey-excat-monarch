@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/how-to-check-checking-account-balance",
+  "path": "banking/personal-banking-guide/basic-finance/how-to-check-checking-account-balance",
+  "timestamp": "2026-10-21T18:51:30.140Z",
+  "title": "How to Check Your Checking Account Balance | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/loans/commercial-mortgage",
+  "path": "small-business/loans/commercial-mortgage",
+  "timestamp": "2026-10-21T16:39:35.208Z",
+  "title": "Commercial Mortgages for Businesses | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-icon",
+    "hero-chevron",
+    "section-subnav",
+    "location-selector",
+    "columns-contact",
+    "carousel-cards",
+    "accordion-disclosure",
+    "cta-banner",
+    "columns-icon-strip"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

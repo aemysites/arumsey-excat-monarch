@@ -1,0 +1,22 @@
+{
+  "variantName": "primary-nav",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "Horizontal header row of top-level section links (Credit Cards, Banking, Lending, Investing, Wealth Management, Travel & Benefits, Open an Account)"
+  },
+  "contentPattern": {
+    "structure": "a bulleted list of links in one cell, or one link per cell/row; a list item with a nested list becomes a dropdown (button + submenu)"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_587eb2cdd60e"
+  ],
+  "usage": "Header component: top-level navigation links. Standalone block; the site header is migrated separately and may embed this content.",
+  "reuseGuidance": "Use for any single-level (optionally one nested level) horizontal link row. Not a mega-menu."
+}

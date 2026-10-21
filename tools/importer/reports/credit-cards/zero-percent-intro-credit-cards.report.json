@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/zero-percent-intro-credit-cards",
+  "path": "credit-cards/zero-percent-intro-credit-cards",
+  "timestamp": "2026-10-21T17:57:59.881Z",
+  "title": "0% Intro & Low APR Credit Cards",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-hub"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/money-market-account-vs-savings-account",
+  "path": "banking/personal-banking-guide/basic-finance/money-market-account-vs-savings-account",
+  "timestamp": "2026-10-21T17:36:39.017Z",
+  "title": "Money Market vs Savings Account: What’s the Difference? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/personal-banking-guide/basic-finance/money-market-account-vs-savings-account/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

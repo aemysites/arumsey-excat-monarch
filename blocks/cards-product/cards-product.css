@@ -1,0 +1,289 @@
+/* cards-product: values from citi.com computed styles (homepage app-three-up-reskin,
+ * TSC .bubble-section stats tiles, Double Cash .accelerator-bar benefit tiles) */
+
+.cards-product > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+/* default: three-up product offer cards */
+.cards-product .cards-product-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.cards-product sup {
+  font-size: 0.75em;
+}
+
+.cards-product .cards-product-card-eyebrow > * {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  line-height: var(--body-line-height-xs);
+  text-transform: uppercase;
+}
+
+.cards-product .cards-product-card-image {
+  line-height: 0;
+}
+
+.cards-product .cards-product-card-image img {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 8px 0 4px;
+  border-radius: 4px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.cards-product .cards-product-card-body {
+  flex: 1 1 auto;
+}
+
+.cards-product .cards-product-card-body :is(h2, h3, h4) {
+  margin: 8px 0 12px;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: var(--body-line-height-m);
+}
+
+.cards-product .cards-product-card-body p {
+  margin: 0 0 16px;
+  color: var(--text-color-muted);
+  font-size: var(--body-font-size-s);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height-s);
+}
+
+/* CTAs: one full-width button per row on mobile, two half-width columns on desktop */
+.cards-product .cards-product-card-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: auto;
+}
+
+.cards-product .cards-product-card-actions p {
+  margin: 0;
+}
+
+main .cards-product a.cards-product-primary:any-link,
+main .cards-product a.cards-product-secondary:any-link {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: var(--button-padding);
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  text-align: center;
+}
+
+main .cards-product a.cards-product-primary:any-link {
+  border-color: var(--button-primary-bg);
+  background-color: var(--button-primary-bg);
+  color: #fff;
+  text-decoration: none;
+}
+
+main .cards-product a.cards-product-primary:hover {
+  border-color: var(--button-primary-hover-bg);
+  background-color: var(--button-primary-hover-bg);
+}
+
+main .cards-product a.cards-product-primary:active {
+  border-color: var(--button-primary-active-bg);
+  background-color: var(--button-primary-active-bg);
+}
+
+main .cards-product a.cards-product-secondary:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+main .cards-product a.cards-product-secondary:hover {
+  color: var(--link-hover-color);
+}
+
+/* stats: white figure tiles with a soft shadow */
+.cards-product.stats > ul {
+  gap: 16px;
+  padding: 8px;
+}
+
+.cards-product.stats .cards-product-card {
+  display: block;
+  min-height: 227px;
+  padding: 18px 22px 22px 25px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 50%);
+}
+
+.cards-product.stats .cards-product-card-eyebrow > *,
+.cards-product.stats .cards-product-card-body p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height-m);
+  text-transform: none;
+}
+
+.cards-product.stats .cards-product-card-body p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.cards-product.stats .cards-product-card-body p strong {
+  font-weight: 700;
+}
+
+.cards-product.stats .cards-product-card-body :is(h2, h3, h4) {
+  margin: 0;
+  color: #043567;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+}
+
+.cards-product.stats .cards-product-figure {
+  font-size: 48px;
+  letter-spacing: -3.22px;
+}
+
+.cards-product.stats .cards-product-figure sup {
+  margin-left: 3px;
+  color: #4a4a4a;
+  font-size: 18px;
+  letter-spacing: normal;
+  vertical-align: 0.9em;
+}
+
+.cards-product.stats .cards-product-label {
+  margin-left: 10px;
+  line-height: 32px;
+}
+
+.cards-product.stats .cards-product-label sup,
+.cards-product.stats .cards-product-card-body p sup {
+  padding: 0 3px;
+  color: var(--link-color);
+  font-size: 0.873em;
+  vertical-align: 0.4em;
+}
+
+.cards-product.stats .cards-product-card-body p sup {
+  font-size: 12px;
+}
+
+/* benefit-tiles: bright blue + navy headline tiles; on mobile they stack and overlap */
+.cards-product.benefit-tiles > ul {
+  gap: 0;
+}
+
+.cards-product.benefit-tiles .cards-product-card {
+  position: relative;
+  gap: 4px;
+  padding: 24px;
+  border: 0;
+  border-radius: 16px;
+  background-color: var(--citi-bright-blue);
+  color: #fff;
+}
+
+.cards-product.benefit-tiles .cards-product-card:nth-child(even) {
+  background-color: var(--citi-navy);
+}
+
+.cards-product.benefit-tiles .cards-product-card:not(:last-child) {
+  padding-bottom: 56px;
+}
+
+.cards-product.benefit-tiles .cards-product-card + .cards-product-card {
+  margin-top: -32px;
+}
+
+.cards-product.benefit-tiles .cards-product-card-body {
+  flex: 0 0 auto;
+}
+
+.cards-product.benefit-tiles .cards-product-card-body :is(h2, h3, h4) {
+  margin: 0 0 4px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.2px;
+}
+
+.cards-product.benefit-tiles .cards-product-card-body p {
+  margin: 0;
+  color: #fff;
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: var(--body-line-height-m);
+}
+
+.cards-product.benefit-tiles .cards-product-card-body a:any-link {
+  color: #fff;
+  font-size: var(--body-font-size-xs);
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-product .cards-product-card-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+
+  .cards-product.stats .cards-product-card-body :is(h2, h3, h4) {
+    font-size: 22px;
+  }
+
+  .cards-product.stats .cards-product-figure {
+    font-size: 66px;
+  }
+
+  .cards-product.stats .cards-product-label {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  .cards-product.benefit-tiles > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .cards-product.benefit-tiles .cards-product-card:not(:last-child) {
+    padding-bottom: 24px;
+  }
+
+  .cards-product.benefit-tiles .cards-product-card + .cards-product-card {
+    margin-top: 0;
+  }
+}

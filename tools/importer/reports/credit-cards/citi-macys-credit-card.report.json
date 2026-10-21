@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-macys-credit-card",
+  "path": "credit-cards/citi-macys-credit-card",
+  "timestamp": "2026-10-21T19:24:55.940Z",
+  "title": "Macy’s Credit Cards | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "tabs-feature",
+    "hero-card",
+    "cards-highlight"
+  ],
+  "fragments": [
+    "fragments/credit-cards/citi-macys-credit-card/convenience",
+    "fragments/credit-cards/citi-macys-credit-card/american-express"
+  ],
+  "importScript": "089f57e4feb6"
+}

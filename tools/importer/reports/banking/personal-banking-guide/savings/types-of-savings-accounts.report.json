@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/savings/types-of-savings-accounts",
+  "path": "banking/personal-banking-guide/savings/types-of-savings-accounts",
+  "timestamp": "2026-10-21T17:39:21.524Z",
+  "title": "Types of Savings Accounts | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/personal-banking-guide/savings/types-of-savings-accounts/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

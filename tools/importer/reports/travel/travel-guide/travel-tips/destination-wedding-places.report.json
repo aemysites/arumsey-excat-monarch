@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/destination-wedding-places",
+  "path": "travel/travel-guide/travel-tips/destination-wedding-places",
+  "timestamp": "2026-10-21T19:16:09.638Z",
+  "title": "A Guide to the Best Wedding Destinations | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

@@ -1,0 +1,529 @@
+/*
+ * hero-chevron: values from citi.com computed styles
+ * (div.hero__background on small-business / mortgage, section.hero-mod on
+ * enhanced-direct-deposit / purchase-rates, row-banner on simplifiedbanking,
+ * banner__wrapper on personal-loans, heroCard on atm-network).
+ * The chevron / rounded crop is baked into the source photos (636x382 PNGs
+ * with a transparent chevron edge), so the photo is shown at its own aspect.
+ */
+
+/* variant overrides follow their base rules on purpose */
+/* stylelint-disable no-descending-specificity */
+
+/* the band is full bleed; the block centres its own content */
+main > .section > .hero-chevron-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.hero-chevron {
+  --hero-chevron-band: var(--citi-dark-blue);
+  --hero-chevron-text: #fff;
+
+  position: relative;
+  padding: 42px 0;
+  background-color: var(--hero-chevron-band);
+  color: var(--hero-chevron-text);
+}
+
+.hero-chevron.dark {
+  --hero-chevron-band: var(--citi-dark-blue);
+}
+
+.hero-chevron.rounded-image {
+  --hero-chevron-band: var(--citi-bright-blue);
+
+  padding: 16px 0 24px;
+}
+
+.hero-chevron.image {
+  padding: 60px 0 76px;
+}
+
+.hero-chevron .hero-chevron-inner {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.hero-chevron .hero-chevron-content {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 0 22px;
+  text-align: center;
+}
+
+.hero-chevron.rounded-image .hero-chevron-content {
+  padding: 0;
+  text-align: start;
+}
+
+.hero-chevron .hero-chevron-content > :first-child {
+  margin-top: 0;
+}
+
+.hero-chevron .hero-chevron-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* eyebrow */
+.hero-chevron .hero-chevron-content .hero-chevron-eyebrow {
+  margin: 0 0 12px;
+  color: inherit;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  line-height: var(--body-line-height-xs);
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.hero-chevron.rounded-image-chevron-photo .hero-chevron-eyebrow,
+.hero-chevron.rounded-image .hero-chevron-eyebrow,
+.hero-chevron.image .hero-chevron-eyebrow {
+  letter-spacing: 1.5px;
+}
+
+.hero-chevron .hero-chevron-eyebrow sup {
+  font-size: 9px;
+  line-height: 0;
+}
+
+/* headline */
+.hero-chevron .hero-chevron-content :is(h1, h2, h3):not(.hero-chevron-eyebrow) {
+  margin: 0;
+  color: inherit;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
+  line-height: var(--heading-line-height-xl);
+}
+
+/* description and follow-on copy */
+.hero-chevron .hero-chevron-content p {
+  margin: 8px 0 0;
+}
+
+.hero-chevron .hero-chevron-content a:any-link:not(.button) {
+  color: inherit;
+}
+
+.hero-chevron .hero-chevron-content ul {
+  margin: 24px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* rounded-image: check-mark list */
+.hero-chevron.rounded-image .hero-chevron-content li {
+  position: relative;
+  padding-left: 32px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.hero-chevron.rounded-image .hero-chevron-content li + li {
+  margin-top: 8px;
+}
+
+.hero-chevron.rounded-image .hero-chevron-content li picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-chevron.rounded-image .hero-chevron-content li img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.hero-chevron.rounded-image .hero-chevron-actions ~ p {
+  margin-top: 12px;
+  font-size: var(--body-font-size-s);
+  line-height: 17px;
+}
+
+/* actions: first link is the white button, the rest are white text links */
+.hero-chevron .hero-chevron-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0 0;
+}
+
+.hero-chevron.rounded-image .hero-chevron-actions {
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+
+.hero-chevron .hero-chevron-actions > p {
+  display: contents;
+}
+
+.hero-chevron .hero-chevron-actions a:any-link {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
+  padding: 7px 12px;
+  color: #fff;
+  font-size: var(--button-font-size);
+  font-weight: 700;
+  line-height: var(--button-line-height);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hero-chevron .hero-chevron-actions a:hover {
+  color: #fff;
+  text-decoration-thickness: 2px;
+}
+
+.hero-chevron .hero-chevron-actions > p:first-child > a:first-child {
+  min-width: 200px;
+  border-color: #fff;
+  background-color: #fff;
+  color: var(--citi-blue);
+  text-decoration: none;
+}
+
+.hero-chevron .hero-chevron-actions > p:first-child > a:first-child:hover {
+  color: var(--citi-blue-hover);
+}
+
+.hero-chevron.image .hero-chevron-actions {
+  margin-top: 24px;
+}
+
+.hero-chevron.image .hero-chevron-actions > p:first-child > a:first-child {
+  min-width: 220px;
+  border-radius: 6px;
+}
+
+.hero-chevron.image .hero-chevron-actions a:any-link {
+  padding-inline: 0;
+}
+
+.hero-chevron.rounded-image-chevron-photo .hero-chevron-actions {
+  gap: 0;
+}
+
+.hero-chevron.rounded-image-chevron-photo .hero-chevron-actions a:any-link {
+  min-width: 200px;
+}
+
+/* rounded-image: filled + outlined white buttons */
+.hero-chevron.rounded-image .hero-chevron-actions a:any-link {
+  padding: 11.5px 12px;
+  border-color: #fff;
+  font-size: var(--body-font-size-s);
+  font-weight: 400;
+  line-height: 17px;
+  text-decoration: none;
+}
+
+.hero-chevron.rounded-image .hero-chevron-actions > p:first-child > a:first-child {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--citi-bright-blue);
+}
+
+/* photo: hidden on small screens like citi.com */
+.hero-chevron .hero-chevron-media {
+  display: none;
+}
+
+.hero-chevron .hero-chevron-media picture,
+.hero-chevron .hero-chevron-media img {
+  display: block;
+}
+
+/* product details strip (extra rows) */
+.hero-chevron .hero-chevron-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.hero-chevron .hero-chevron-details-item > :first-child {
+  margin-top: 0;
+}
+
+.hero-chevron .hero-chevron-details-item > :last-child {
+  margin-bottom: 0;
+}
+
+/* rounded-image-product-details: white bordered card, divided columns */
+.hero-chevron.rounded-image-product-details {
+  --hero-chevron-text: var(--text-color);
+
+  margin: 0 12px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.hero-chevron.rounded-image-product-details .hero-chevron-details {
+  gap: 48px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.hero-chevron.rounded-image-product-details .hero-chevron-details-item h2 {
+  margin: 0 0 10px;
+  color: var(--text-color);
+  font-size: 26px;
+  font-weight: var(--body-font-weight);
+  line-height: 36px;
+}
+
+.hero-chevron.rounded-image-product-details .hero-chevron-details-item ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.hero-chevron.rounded-image-product-details .hero-chevron-details-item li {
+  margin-bottom: 9px;
+}
+
+.hero-chevron.rounded-image-product-details .hero-chevron-details-item p {
+  margin: 0 0 8px;
+}
+
+.hero-chevron.rounded-image-product-details .hero-chevron-details-item a:any-link {
+  color: var(--link-color);
+  line-height: 26px;
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .hero-chevron {
+    padding: 0;
+  }
+
+  .hero-chevron .hero-chevron-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-chevron .hero-chevron-content {
+    flex: 0 0 50%;
+    padding: 0 12px;
+    text-align: start;
+  }
+
+  .hero-chevron .hero-chevron-content :is(h1, h2, h3):not(.hero-chevron-eyebrow) {
+    font-size: var(--heading-font-size-xxl);
+    line-height: var(--heading-line-height-xxl);
+  }
+
+  .hero-chevron .hero-chevron-actions {
+    justify-content: flex-start;
+  }
+
+  .hero-chevron .hero-chevron-media {
+    display: block;
+    flex: 0 0 41.667%;
+    box-sizing: border-box;
+    min-width: 0;
+    align-self: stretch;
+    padding: 0 12px;
+    overflow: hidden;
+  }
+
+  /* photo keeps its own 636x382 size; the column clips its right edge */
+  .hero-chevron .hero-chevron-media img {
+    width: auto;
+    max-width: none;
+    height: 382px;
+  }
+
+  /* rounded-image-chevron-photo: wider row, photo flush right */
+  .hero-chevron.rounded-image-chevron-photo .hero-chevron-inner {
+    justify-content: space-between;
+  }
+
+  .hero-chevron.rounded-image-chevron-photo .hero-chevron-content :is(h1, h2, h3):not(.hero-chevron-eyebrow) {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+  }
+
+  /* rounded-image: text beside a rounded 636x477 photo, top aligned */
+  .hero-chevron.rounded-image .hero-chevron-inner {
+    align-items: flex-start;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-content {
+    flex: 0 1 635px;
+    margin: 48px 25px 48px 0;
+    padding: 0;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-content :is(h1, h2, h3):not(.hero-chevron-eyebrow) {
+    margin: 0 0 8px;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-content p {
+    margin-top: 0;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-content p + ul {
+    margin-top: 24px;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-content li {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-content li + li {
+    margin-top: 12px;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-actions a:any-link {
+    padding: 12px 16px;
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-media {
+    flex: 0 0 min(636px, 50%);
+    align-self: flex-start;
+    margin-left: auto;
+    padding: 0;
+    border-radius: 20px;
+  }
+
+  /* Scene7 pads wide renditions; crop back to the 636x477 photo */
+  .hero-chevron.rounded-image .hero-chevron-media img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 636 / 477;
+    object-fit: cover;
+  }
+
+  /* image: photo pinned to the viewport's right edge */
+  .hero-chevron.image {
+    min-height: 398px;
+    padding: 0 0 24px;
+    box-sizing: border-box;
+  }
+
+  .hero-chevron.image .hero-chevron-inner {
+    max-width: 1296px;
+    min-height: 374px;
+    padding: 0 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .hero-chevron.image .hero-chevron-content {
+    flex: 0 0 41.667%;
+    padding: 67px 25px 75px 0;
+  }
+
+  .hero-chevron.image .hero-chevron-content :is(h1, h2, h3):not(.hero-chevron-eyebrow) {
+    margin-bottom: 8px;
+  }
+
+  .hero-chevron.image .hero-chevron-content p:not(.hero-chevron-eyebrow) {
+    margin-top: 0;
+    font-weight: 400;
+  }
+
+  .hero-chevron.image .hero-chevron-media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: min(636px, 50%);
+    padding: 0;
+  }
+
+  .hero-chevron.image .hero-chevron-media img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-chevron.image .hero-chevron-actions {
+    margin-top: 32px;
+  }
+
+  /* product details: three divided columns */
+  .hero-chevron.rounded-image-product-details .hero-chevron-details {
+    grid-template-columns: repeat(var(--hero-chevron-columns, 1), minmax(0, 1fr));
+    gap: 0;
+    padding: 40px 0;
+  }
+
+  .hero-chevron.rounded-image-product-details .hero-chevron-details-item {
+    padding: 0 40px;
+  }
+
+  .hero-chevron.rounded-image-product-details .hero-chevron-details-item + .hero-chevron-details-item {
+    border-left: 1px solid #ccc;
+  }
+
+  .hero-chevron .hero-chevron-details {
+    grid-template-columns: repeat(var(--hero-chevron-columns, 1), minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-chevron .hero-chevron-inner {
+    padding: 0 60px;
+  }
+
+  .hero-chevron .hero-chevron-content {
+    flex-basis: 41.667%;
+  }
+
+  .hero-chevron .hero-chevron-media {
+    flex-basis: 50%;
+    margin-left: 8.333%;
+  }
+
+  .hero-chevron.rounded-image-chevron-photo .hero-chevron-inner,
+  .hero-chevron.rounded-image .hero-chevron-inner {
+    max-width: 1440px;
+    padding: 0 72px;
+  }
+
+  .hero-chevron.rounded-image-chevron-photo .hero-chevron-content {
+    padding: 0;
+  }
+
+  .hero-chevron.rounded-image-chevron-photo .hero-chevron-media {
+    margin-left: 0;
+    padding: 0 0 0 12px;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-content {
+    flex-basis: 635px;
+  }
+
+  .hero-chevron.rounded-image .hero-chevron-media {
+    flex-basis: min(636px, 50%);
+    margin-left: auto;
+  }
+
+  .hero-chevron.image .hero-chevron-inner {
+    padding: 0 20px;
+  }
+
+  .hero-chevron.image .hero-chevron-media {
+    margin-left: 0;
+  }
+}

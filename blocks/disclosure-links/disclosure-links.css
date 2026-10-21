@@ -1,0 +1,81 @@
+/* citi.com .pricing-links-container > ul.section-footer */
+.disclosure-links {
+  padding: 8px 0;
+  color: #26292b;
+  font-size: var(--body-font-size-s);
+  font-weight: var(--body-font-weight);
+  line-height: 18px;
+  letter-spacing: 0.144px;
+}
+
+.disclosure-links .disclosure-links-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.disclosure-links .disclosure-links-list > li {
+  margin: 0;
+}
+
+.disclosure-links .disclosure-links-list > li > p {
+  display: inline;
+  margin: 0;
+}
+
+.disclosure-links .disclosure-links-list sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.disclosure-links a:any-link,
+.disclosure-links .disclosure-links-toggle {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* text-only rows ("Additional Information +") are styled like the source links */
+.disclosure-links .disclosure-links-list > li:not(.disclosure-links-item) > p,
+.disclosure-links .disclosure-links-list > li:not(.disclosure-links-item, :has(> p)) {
+  text-decoration: underline;
+}
+
+.disclosure-links .disclosure-links-toggle {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.disclosure-links .disclosure-links-toggle::after {
+  content: ' +';
+}
+
+.disclosure-links .disclosure-links-toggle[aria-expanded='true']::after {
+  content: ' \2212';
+}
+
+.disclosure-links .disclosure-links-panel {
+  flex-basis: 100%;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.disclosure-links .disclosure-links-item:has(.disclosure-links-panel:not([hidden])) {
+  flex-basis: 100%;
+}
+
+/* dark: white text over a dark hero / band */
+.disclosure-links.dark,
+main > .section:is(.dark, .blue) .disclosure-links {
+  color: #fff;
+}

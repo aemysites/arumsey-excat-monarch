@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/best-countries-to-visit-for-first-time-travelers",
+  "path": "travel/travel-guide/travel-tips/best-countries-to-visit-for-first-time-travelers",
+  "timestamp": "2026-10-21T19:14:48.041Z",
+  "title": "Best Countries for First-Time Travelers | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

@@ -1,0 +1,518 @@
+/*
+ * Article Body
+ * citi.com guide / learning-center article (tkc-container-article-banner +
+ * tkc-container-article): full-bleed photo banner with a white title card,
+ * then a white 1076px article card on the light-blue page background.
+ * Article copy is Citi Sans Text on citi.com (Overpass stands in here).
+ */
+
+/* the article bands are full-bleed: lift the section content width */
+main > .section > .article-body-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.article-body {
+  --article-body-text: #26292b;
+  --article-body-link: #009;
+
+  background-color: var(--citi-light-blue);
+  color: var(--article-body-text);
+}
+
+/* hero banner */
+.article-body .article-body-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 48px 12px;
+  overflow: hidden;
+}
+
+.article-body .article-body-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.article-body .article-body-hero-image picture,
+.article-body .article-body-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-body .article-body-hero-card {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 746px;
+  min-height: 218px;
+  padding: 24px;
+  border-radius: 24px;
+  background-color: var(--background-color);
+  box-shadow: 4px 4px 25px 4px rgb(0 0 0 / 25%);
+}
+
+.article-body .article-body-hero-card > * {
+  margin: 0;
+}
+
+.article-body .article-body-eyebrow {
+  margin-bottom: 8px;
+  color: var(--article-body-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+
+.article-body .article-body-hero-card .article-body-title {
+  margin: 0 0 16px;
+  color: var(--citi-bright-blue);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.32px;
+}
+
+.article-body .article-body-meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 48px;
+}
+
+.article-body .article-body-meta {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: var(--article-body-text);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+}
+
+/* clock icon (citi.com tkc-article-time-icon, 24px, 8px side margins) */
+.article-body .article-body-read-time::before {
+  content: "";
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23255be3' stroke-width='1.5' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9.25'/%3E%3Cpath d='M12 6.5V12l3.5 2.5'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+}
+
+/* CTA link (Book Travel): citi-button primary */
+main .article-body .article-body-hero-card .article-body-cta:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 263px;
+  max-width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--citi-brand-blue);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+main .article-body .article-body-hero-card .article-body-cta:hover {
+  background-color: var(--citi-navy);
+  text-decoration: underline;
+}
+
+/* article card */
+.article-body .article-body-content {
+  box-sizing: border-box;
+  margin: 0 12px;
+  padding: 24px;
+  border-radius: 32px;
+  background-color: var(--background-color);
+  color: var(--article-body-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+
+/* the body card sits 48px (72px desktop) inside the light-blue band */
+.article-body .article-body-hero + .article-body-content {
+  margin-top: 48px;
+}
+
+.article-body .article-body-content:last-child {
+  margin-bottom: 48px;
+}
+
+/* fragments (/fragments/...) load as nested sections inside the card */
+.article-body .article-body-content .section,
+.article-body .article-body-content .section > div {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+.article-body .article-body-content :is(p, ul, ol, h2, h3, h4, h5, h6) {
+  color: var(--article-body-text);
+}
+
+.article-body .article-body-content p {
+  margin: 0 0 36px;
+}
+
+.article-body .article-body-content :is(h2, h3, h4, h5, h6) {
+  margin: 0 0 36px;
+  font-weight: 400;
+}
+
+.article-body .article-body-content h2 {
+  font-size: 28px;
+  line-height: 33.6px;
+}
+
+.article-body .article-body-content h3 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.article-body .article-body-content h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.article-body .article-body-content :is(ul, ol) {
+  margin: 0 0 30px 30px;
+  padding-left: 32px;
+}
+
+.article-body .article-body-content li {
+  font-size: 16px;
+  line-height: 19.2px;
+}
+
+.article-body .article-body-content li > :is(ul, ol) {
+  margin: 0;
+}
+
+.article-body .article-body-content :is(strong, b) {
+  font-weight: 700;
+}
+
+/* links (standalone ones too) stay underlined text links in the article */
+.article-body .article-body-content a:any-link {
+  color: var(--article-body-link);
+  text-decoration: underline;
+}
+
+.article-body .article-body-content a:hover {
+  color: var(--link-hover-color);
+}
+
+.article-body .article-body-content p.button-container {
+  display: block;
+}
+
+/* inline images / infographics: centred 8 of 12 columns */
+.article-body .article-body-content picture {
+  display: block;
+}
+
+.article-body .article-body-content p > picture:only-child img {
+  display: block;
+  width: auto;
+  max-width: 66.6667%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* tables: citi-rte content table, #999 grid, 16px light text */
+.article-body .article-body-content :is(.article-body-table, .table-rates-wrapper, .table-rates) {
+  margin: 0;
+}
+
+.article-body .article-body-content table,
+.article-body .table-rates table {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--border-color);
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: transparent;
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.article-body .article-body-content table tr,
+.article-body .table-rates thead tr {
+  border: 0;
+}
+
+.article-body .article-body-content :is(th, td),
+.article-body .table-rates :is(th, td),
+.article-body .table-rates :is(th, td):last-child {
+  padding: 16px 8px;
+  border: 1px solid var(--border-color);
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: baseline;
+  overflow-wrap: normal;
+}
+
+.article-body .article-body-content th,
+.article-body .table-rates th,
+.article-body .table-rates th:last-child {
+  font-weight: 400;
+}
+
+.article-body .article-body-content :is(th, td) p,
+.article-body .table-rates :is(th, td) p {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.article-body .article-body-content :is(th, td) :is(strong, b) {
+  color: var(--article-body-text);
+  line-height: 19.2px;
+}
+
+/* in-article promo strip, default: ckcbanner (mortgage-squared), indented 48px */
+.article-body .article-body-promo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 60px 24px 0;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: #e6eaf1;
+}
+
+.article-body .article-body-promo + * {
+  margin-top: 0;
+}
+
+.article-body .article-body-promo .article-body-promo-content:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+  color: var(--citi-blue);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.article-body .article-body-promo .article-body-promo-content > * {
+  margin: 0;
+  color: var(--citi-blue);
+}
+
+.article-body .article-body-promo .article-body-promo-content:first-child > p {
+  font-size: 14px;
+  line-height: var(--article-body-promo-lh, 22px);
+}
+
+.article-body .article-body-promo .article-body-promo-content:first-child > p:only-child {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.article-body .article-body-promo .article-body-promo-content:first-child > p:has(> strong:only-child, > b:only-child) {
+  font-size: 28px;
+}
+
+.article-body .article-body-promo .article-body-promo-content:not(:first-child) {
+  align-self: stretch;
+}
+
+.article-body .article-body-promo .button-container {
+  display: block;
+}
+
+.article-body .article-body-content .article-body-promo a:any-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 28px;
+  background-color: var(--citi-dark-blue);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.article-body .article-body-content .article-body-promo a:hover {
+  background-color: var(--citi-navy);
+  color: #fff;
+  text-decoration: underline;
+}
+
+.article-body .article-body-promo .article-body-promo-logo {
+  align-self: flex-end;
+}
+
+.article-body .article-body-promo .article-body-promo-logo :is(picture, img) {
+  display: block;
+  width: 45px;
+  height: auto;
+  margin: 0;
+}
+
+/* alt-2: bordered ckcbanner placed straight in the card (no 48px indent) */
+.article-body.alt-2 .article-body-promo {
+  margin: 0 0 36px;
+  border: 1px solid #d3dadd;
+}
+
+/* alt / image: tkc "article" banner, light-blue, full card width */
+.article-body:is(.alt, .image) .article-body-promo {
+  --article-body-promo-lh: 26px;
+
+  margin: 0 0 36px;
+  border-radius: 12px;
+  background-color: var(--citi-light-blue);
+}
+
+.article-body:is(.alt, .image) .article-body-content .article-body-promo a:any-link {
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.article-body.image .article-body-content .article-body-promo a:any-link {
+  background-color: var(--citi-brand-blue);
+}
+
+.article-body:is(.alt, .image) .article-body-promo .article-body-promo-logo :is(picture, img) {
+  width: 48px;
+  height: 32px;
+}
+
+@media (width >= 900px) {
+  .article-body .article-body-hero {
+    padding: 48px;
+  }
+
+  .article-body .article-body-hero-card .article-body-title {
+    line-height: 38.4px;
+  }
+
+  .article-body .article-body-content {
+    width: calc(100% - 64px);
+    max-width: 1076px;
+    margin-inline: auto;
+    padding: 48px;
+  }
+
+  .article-body .article-body-hero + .article-body-content {
+    margin-top: 72px;
+  }
+
+  .article-body .article-body-content:last-child {
+    margin-bottom: 72px;
+  }
+
+  .article-body .article-body-content :is(th, td),
+  .article-body .table-rates :is(th, td),
+  .article-body .table-rates :is(th, td):last-child {
+    padding: 16px 24px;
+  }
+
+  .article-body.alt-2 .article-body-content table,
+  .article-body.alt-2 .table-rates table {
+    width: 80%;
+  }
+
+  /* promo strip: one row, text | CTA | logo */
+  .article-body .article-body-promo {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+    min-height: 99px;
+    margin: 84px 48px 0;
+    padding: 0 32px;
+    border-radius: 15px;
+  }
+
+  .article-body .article-body-promo .article-body-promo-content:first-child {
+    flex: 0 1 auto;
+    align-self: center;
+    gap: 8px;
+  }
+
+  .article-body .article-body-promo .article-body-promo-content:not(:first-child) {
+    flex: none;
+    align-self: center;
+    margin-left: auto;
+  }
+
+  .article-body .article-body-content .article-body-promo a:any-link {
+    width: auto;
+    border-radius: 20px;
+  }
+
+  .article-body .article-body-promo .article-body-promo-logo {
+    align-self: center;
+  }
+
+  .article-body .article-body-promo .article-body-promo-logo :is(picture, img) {
+    width: 78px;
+    height: 78px;
+  }
+
+  .article-body.alt-2 .article-body-promo {
+    max-width: 967px;
+    margin: 0 auto 36px;
+  }
+
+  .article-body:is(.alt, .image) .article-body-promo {
+    align-items: center;
+    gap: 0;
+    margin: 0 0 36px;
+    padding: 0;
+    border-radius: 12px;
+  }
+
+  .article-body:is(.alt, .image) .article-body-promo .article-body-promo-content:first-child {
+    gap: 0;
+    padding: 56px 24px 56px 48px;
+  }
+
+  .article-body:is(.alt, .image) .article-body-promo .article-body-promo-content:not(:first-child) {
+    padding: 48px 14px 48px 0;
+  }
+
+  .article-body:is(.alt, .image) .article-body-content .article-body-promo a:any-link {
+    min-width: 156px;
+    border-radius: 8px;
+  }
+
+  .article-body:is(.alt, .image) .article-body-promo .article-body-promo-logo {
+    padding-right: 48px;
+  }
+}

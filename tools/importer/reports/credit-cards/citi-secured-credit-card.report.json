@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-secured-credit-card",
+  "path": "credit-cards/citi-secured-credit-card",
+  "timestamp": "2026-10-21T19:24:59.937Z",
+  "title": "Citi® Secured Mastercard® - Secured Credit Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "hero-card",
+    "cards-highlight",
+    "disclosure-links",
+    "cards-icon-links",
+    "cards-icon-links",
+    "cards-benefit-tiles"
+  ],
+  "fragments": [
+    "fragments/credit-card-categories"
+  ],
+  "importScript": "089f57e4feb6"
+}

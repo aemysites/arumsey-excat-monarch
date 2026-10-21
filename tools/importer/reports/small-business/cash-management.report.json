@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/cash-management",
+  "path": "small-business/cash-management",
+  "timestamp": "2026-10-21T18:04:08.617Z",
+  "title": "Cash Management Services for Businesses | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "hero-chevron",
+    "location-selector",
+    "columns-contact",
+    "accordion-disclosure",
+    "cta-banner",
+    "columns-icon-strip",
+    "cards-highlight",
+    "cards-highlight",
+    "cards-highlight",
+    "cards-highlight",
+    "cards-teaser"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

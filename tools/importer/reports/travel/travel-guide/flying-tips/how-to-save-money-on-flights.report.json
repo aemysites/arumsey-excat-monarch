@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips/how-to-save-money-on-flights",
+  "path": "travel/travel-guide/flying-tips/how-to-save-money-on-flights",
+  "timestamp": "2026-10-21T19:11:41.922Z",
+  "title": "How to Save Money on Flights | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

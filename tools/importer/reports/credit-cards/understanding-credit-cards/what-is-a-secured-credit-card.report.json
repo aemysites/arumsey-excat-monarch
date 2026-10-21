@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/understanding-credit-cards/what-is-a-secured-credit-card",
+  "path": "credit-cards/understanding-credit-cards/what-is-a-secured-credit-card",
+  "timestamp": "2026-10-21T17:57:08.344Z",
+  "title": "What Is a Secured Credit Card and How Does it Work? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/credit-cards/understanding-credit-cards/what-is-a-secured-credit-card/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,104 @@
+/*
+ * Alert Banner
+ * Values from citi.com computed styles (div.alertContainer > cds-banner-alert.marketing-alert).
+ * citi.com runs the banner edge to edge with a 12px gutter (container-fluid) at every width,
+ * so the wrapper drops the 1076px section width.
+ */
+main > .section > .alert-banner-wrapper {
+  max-width: none;
+  padding: 0 12px;
+}
+
+.alert-banner {
+  --alert-banner-icon-info: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.2 20V8h1.6v12zM12 5.6a.9.9 0 1 0 0-1.8.9.9 0 0 0 0 1.8'/%3E%3Cpath fill-rule='evenodd' d='M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12m0-1.6c5.744 0 10.4-4.656 10.4-10.4S17.744 1.6 12 1.6 1.6 6.256 1.6 12 6.256 22.4 12 22.4'/%3E%3C/svg%3E");
+  --alert-banner-icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2.366 1.234a.8.8 0 0 0-1.132 1.132L10.87 12l-9.635 9.634a.8.8 0 0 0 1.132 1.132L12 13.13l9.634 9.635a.8.8 0 0 0 1.132-1.132L13.13 12l9.635-9.634a.8.8 0 0 0-1.132-1.132L12 10.87z'/%3E%3C/svg%3E");
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 13.28px 13.28px 8.48px 8.48px;
+  border-left: 6px solid var(--text-color);
+  border-radius: 4px;
+  background-color: var(--citi-grey);
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 12%);
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+  line-height: var(--body-line-height-xs);
+}
+
+/* info icon: 24px, Citi blue */
+.alert-banner .alert-banner-icon {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.alert-banner .alert-banner-icon:not(.alert-banner-icon-custom) {
+  background-color: var(--citi-blue);
+  mask: var(--alert-banner-icon-info) center / 24px 24px no-repeat;
+}
+
+.alert-banner .alert-banner-icon-custom img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.alert-banner .alert-banner-message {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.alert-banner .alert-banner-message > * {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.alert-banner .alert-banner-message > * + * {
+  margin-top: 4px;
+}
+
+.alert-banner .alert-banner-message a:any-link {
+  color: var(--citi-blue);
+  text-decoration: underline;
+}
+
+.alert-banner .alert-banner-message a:hover {
+  color: var(--citi-blue-hover);
+}
+
+/* close button: 24 x 26 hit area, 16px X glyph in Citi blue */
+.alert-banner .alert-banner-close {
+  position: relative;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.alert-banner .alert-banner-close::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--citi-blue);
+  mask: var(--alert-banner-icon-close) center / 16px 16px no-repeat;
+}
+
+.alert-banner .alert-banner-close:hover::before {
+  background-color: var(--citi-blue-hover);
+}
+
+.alert-banner .alert-banner-close:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}

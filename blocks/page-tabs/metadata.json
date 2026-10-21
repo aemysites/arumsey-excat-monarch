@@ -1,0 +1,22 @@
+{
+  "variantName": "page-tabs",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "link",
+    "purpose": "Tabs that switch between sibling pages (link tabs) or between in-page panels"
+  },
+  "contentPattern": {
+    "structure": "One row per tab: Label | optional panel. A label that is a link with no panel navigates to that page and is active on the matching path. A panel cell that holds only a same-site link (e.g. /fragments/...) is loaded as a fragment so it can contain other blocks; any other panel content renders inline"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_5a240dd31da6"
+  ],
+  "usage": "Purchase Rates / Refinance Rates switch on mortgage rate pages",
+  "reuseGuidance": "Put complex panel content in a fragment and link it from the panel cell."
+}

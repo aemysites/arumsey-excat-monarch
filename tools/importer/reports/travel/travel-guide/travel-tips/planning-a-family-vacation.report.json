@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/planning-a-family-vacation",
+  "path": "travel/travel-guide/travel-tips/planning-a-family-vacation",
+  "timestamp": "2026-10-21T19:17:40.466Z",
+  "title": "How To Plan Your Next Family Vacation | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

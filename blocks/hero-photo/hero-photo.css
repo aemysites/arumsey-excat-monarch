@@ -1,0 +1,382 @@
+/*
+ * hero-photo: values from citi.com computed styles
+ * (default: div.top-banner on /credit-cards/digital-wallet/apple-pay;
+ * centred-heading-only: div.banner-wrapper on /banking/special-offers;
+ * gradient-overlay: section#heroMod on /small-business-banking/trade-services;
+ * text-on-photo: #cpcBnr on /banking/citigold-private-client).
+ * Source breakpoints 768/992 are mapped to 600/900.
+ */
+
+/* variant overrides follow their base rules on purpose */
+/* stylelint-disable no-descending-specificity */
+
+/* the photo band is full bleed; the block places its own copy */
+main > .section > .hero-photo-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* default: white box on the photo; below 900px the photo is dropped for a pale band */
+.hero-photo {
+  --hero-photo-band: #eff3f8;
+  --hero-photo-overlay: none;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 50px 20px;
+  background-color: var(--hero-photo-band);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.hero-photo .hero-photo-background {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-photo .hero-photo-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-photo-overlay);
+}
+
+.hero-photo .hero-photo-background picture,
+.hero-photo .hero-photo-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
+.hero-photo .hero-photo-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 510px;
+  padding: 30px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.hero-photo .hero-photo-content > * {
+  max-width: 100%;
+}
+
+.hero-photo h1 {
+  margin: 10px 0;
+  color: inherit;
+  font-size: 27.625px;
+  font-weight: var(--body-font-weight);
+  line-height: 41.4375px;
+}
+
+.hero-photo .hero-photo-content > p {
+  margin: 0 0 15px;
+  font-size: var(--body-font-size-m);
+  line-height: 19.2px;
+}
+
+.hero-photo .hero-photo-eyebrow {
+  text-transform: uppercase;
+}
+
+.hero-photo .hero-photo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 24px;
+  margin: 16px 0;
+}
+
+.hero-photo .hero-photo-content > .hero-photo-actions > p {
+  margin: 0;
+}
+
+/* centred-heading-only: white heading and line of text straight on the photo */
+.hero-photo.centred-heading-only {
+  --hero-photo-band: transparent;
+
+  padding: 50px 25px;
+  color: #fff;
+}
+
+.hero-photo.centred-heading-only .hero-photo-background {
+  display: block;
+}
+
+.hero-photo.centred-heading-only .hero-photo-background img {
+  object-position: 50% 50%;
+}
+
+.hero-photo.centred-heading-only .hero-photo-content {
+  max-width: none;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+.hero-photo.centred-heading-only h1 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: var(--heading-font-weight);
+  line-height: 32px;
+}
+
+.hero-photo.centred-heading-only .hero-photo-content > p {
+  margin: 0 0 12px;
+  line-height: var(--body-line-height-m);
+}
+
+/* gradient-overlay: boxed heading on a photo washed with a blue gradient */
+.hero-photo.gradient-overlay {
+  --hero-photo-band: transparent;
+  --hero-photo-overlay: linear-gradient(-32deg, rgb(5 108 173 / 0%) 33%, rgb(5 109 174) 90%, rgb(0 94 189));
+
+  padding: 0;
+}
+
+.hero-photo.gradient-overlay .hero-photo-background {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.hero-photo.gradient-overlay .hero-photo-background img {
+  object-position: 50% 50%;
+}
+
+/* the box starts halfway down the 180px photo */
+.hero-photo.gradient-overlay .hero-photo-content {
+  width: 280px;
+  margin-top: -90px;
+  padding: 10px;
+}
+
+.hero-photo.gradient-overlay .hero-photo-eyebrow {
+  margin: 10px 0;
+  font-size: var(--body-font-size-xs);
+  line-height: var(--body-line-height-xs);
+  letter-spacing: 2px;
+}
+
+.hero-photo.gradient-overlay h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+/* text-on-photo: left-aligned copy and CTAs on a light photo; a dark band on mobile */
+.hero-photo.text-on-photo {
+  --hero-photo-band: #281814;
+  --hero-photo-cta: #281814;
+
+  min-height: 310px;
+  justify-content: center;
+  padding: 32px 36px 56px;
+  color: #fff;
+}
+
+.hero-photo.text-on-photo .hero-photo-background img {
+  object-position: 0 0;
+}
+
+.hero-photo.text-on-photo .hero-photo-content {
+  max-width: none;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+.hero-photo.text-on-photo .hero-photo-eyebrow {
+  margin: 0 0 12px;
+  padding: 0 10px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  line-height: var(--body-line-height-xs);
+  letter-spacing: 1.5px;
+}
+
+.hero-photo.text-on-photo h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  font-weight: var(--heading-font-weight);
+  line-height: 31.2px;
+}
+
+.hero-photo.text-on-photo .hero-photo-content > p:not(.hero-photo-eyebrow) {
+  margin: 0 0 24px;
+  line-height: var(--body-line-height-m);
+}
+
+.hero-photo.text-on-photo .hero-photo-actions {
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+}
+
+main .hero-photo.text-on-photo a.button:any-link {
+  box-sizing: border-box;
+  width: 200px;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 20px;
+  background-color: #fff;
+  color: var(--hero-photo-cta);
+}
+
+main .hero-photo.text-on-photo a.button:hover,
+main .hero-photo.text-on-photo a.button:active {
+  background-color: #fff;
+  color: var(--hero-photo-cta);
+}
+
+main .hero-photo.text-on-photo .hero-photo-actions a:any-link:not(.button) {
+  color: #fff;
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  line-height: var(--body-line-height-s);
+  text-decoration: underline 2px;
+}
+
+@media (width >= 600px) {
+  .hero-photo.text-on-photo {
+    padding: 60px 20px;
+  }
+
+  .hero-photo.text-on-photo .hero-photo-content {
+    max-width: 696px;
+  }
+}
+
+@media (width >= 900px) {
+  .hero-photo {
+    align-items: flex-start;
+    min-height: 500px;
+    padding: 30px 100px;
+  }
+
+  .hero-photo .hero-photo-background {
+    display: block;
+  }
+
+  .hero-photo h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  /* centred-heading-only */
+  .hero-photo.centred-heading-only {
+    align-items: center;
+    min-height: 0;
+    padding: 80px 25px;
+  }
+
+  .hero-photo.centred-heading-only h1 {
+    margin: 0 0 20px;
+    font-size: 52px;
+    line-height: 68px;
+  }
+
+  /* gradient-overlay: box 6% from the left, centred on a 382px photo */
+  .hero-photo.gradient-overlay {
+    --hero-photo-overlay: linear-gradient(269deg, rgb(238 238 238 / 0%) 6%, rgb(63 133 177 / 47%) 51%, rgb(0 66 107) 85%);
+
+    justify-content: center;
+    min-height: 382px;
+    padding: 0 0 0 6%;
+  }
+
+  .hero-photo.gradient-overlay .hero-photo-background {
+    position: absolute;
+    height: auto;
+  }
+
+  .hero-photo.gradient-overlay .hero-photo-background img {
+    object-position: 0 50%;
+  }
+
+  .hero-photo.gradient-overlay .hero-photo-content {
+    width: 465px;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .hero-photo.gradient-overlay .hero-photo-eyebrow {
+    margin: 20px 0;
+  }
+
+  .hero-photo.gradient-overlay h1 {
+    margin: 0 0 20px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  /* text-on-photo: copy in the 1076px container over the photo */
+  .hero-photo.text-on-photo {
+    justify-content: flex-start;
+    min-height: 373px;
+    padding: 46px max(var(--content-gutter), calc((100% - var(--content-max-width)) / 2)) 190px;
+    color: #000;
+  }
+
+  .hero-photo.text-on-photo .hero-photo-content {
+    align-items: flex-start;
+    max-width: 527px;
+    text-align: start;
+  }
+
+  .hero-photo.text-on-photo .hero-photo-eyebrow {
+    padding: 0;
+    font-size: var(--body-font-size-m);
+    line-height: var(--body-line-height-m);
+  }
+
+  .hero-photo.text-on-photo h1 {
+    font-size: 42px;
+    line-height: 50.4px;
+  }
+
+  .hero-photo.text-on-photo .hero-photo-content > p:not(.hero-photo-eyebrow) {
+    font-size: 18px;
+  }
+
+  .hero-photo.text-on-photo .hero-photo-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  main .hero-photo.text-on-photo a.button:any-link,
+  main .hero-photo.text-on-photo a.button:hover,
+  main .hero-photo.text-on-photo a.button:active {
+    background-color: var(--hero-photo-cta);
+    color: #fff;
+  }
+
+  main .hero-photo.text-on-photo .hero-photo-actions a:any-link:not(.button) {
+    margin: 0 24px;
+    color: var(--hero-photo-cta);
+    font-size: var(--body-font-size-m);
+    line-height: var(--body-line-height-m);
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-photo.centred-heading-only .hero-photo-background img {
+    object-fit: fill;
+  }
+}

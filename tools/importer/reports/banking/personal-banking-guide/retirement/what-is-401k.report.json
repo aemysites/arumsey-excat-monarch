@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/retirement/what-is-401k",
+  "path": "banking/personal-banking-guide/retirement/what-is-401k",
+  "timestamp": "2026-10-21T18:55:19.123Z",
+  "title": "What Is a 401(k)? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

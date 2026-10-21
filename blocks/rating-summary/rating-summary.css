@@ -1,0 +1,172 @@
+/*
+ * rating-summary: Zillow lender rating (citi.com .zillow-banner-container).
+ * Values from citi.com/mortgage/home-mortgage computed styles.
+ * Full state:  value | stars + meta  | logo + copyright
+ *                    | "How this rating is calculated"
+ * Feed missing / loading: the score is hidden, logo + copyright sit above the link.
+ */
+
+.rating-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "value"
+    "details"
+    "attribution"
+    "links";
+  gap: 16px 24px;
+  align-items: start;
+  margin: 24px 0;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height-m);
+}
+
+/* flatten the JS wrappers so score parts, link and attribution share one grid */
+.rating-summary .rating-summary-rating,
+.rating-summary .rating-summary-score {
+  display: contents;
+}
+
+.rating-summary p {
+  margin: 0;
+}
+
+/* score: "4.85" over "out of 5" */
+.rating-summary .rating-summary-value {
+  grid-area: value;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-summary .rating-summary-number {
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.rating-summary .rating-summary-scale {
+  max-width: 66px;
+}
+
+/* stars + "Average rating as of ... based on N reviews" */
+.rating-summary .rating-summary-details {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* five 46x43 stars, 8px apart; green fill clipped to the rating, grey for the rest */
+.rating-summary .rating-summary-stars {
+  display: block;
+  width: 262px;
+  max-width: 100%;
+  height: 43px;
+  background: linear-gradient(to right, #74c005 var(--rating-percent, 0%), rgb(128 128 128 / 20%) 0);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='43' viewBox='0 0 54 43'%3E%3Cpath d='M23 0l5.43 16.43H46l-14.22 10.14L37.22 43 23 32.85 8.78 43l5.44-16.43L0 16.43h17.57z'/%3E%3C/svg%3E") left top / 54px 43px repeat-x;
+}
+
+.rating-summary .rating-summary-meta a:any-link,
+.rating-summary .rating-summary-attribution a:any-link {
+  text-decoration: underline;
+}
+
+/* Zillow logo + copyright line */
+.rating-summary .rating-summary-attribution {
+  grid-area: attribution;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.rating-summary .rating-summary-attribution picture,
+.rating-summary .rating-summary-attribution img {
+  display: block;
+}
+
+.rating-summary .rating-summary-attribution img {
+  width: auto;
+  height: 30px;
+}
+
+/* "How this rating is calculated" text CTA with the Citi chevron */
+.rating-summary .rating-summary-links {
+  grid-area: links;
+}
+
+.rating-summary .rating-summary-links a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.rating-summary .rating-summary-links a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.rating-summary .rating-summary-links a:any-link::after {
+  content: "";
+  flex: none;
+  width: 16px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) right center / 32px 32px no-repeat;
+}
+
+/* no score yet / feed unavailable: static parts only, logo + copyright above the link */
+.rating-summary.rating-summary-loading,
+.rating-summary.rating-summary-unavailable {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "attribution"
+    "links";
+}
+
+.rating-summary.rating-summary-loading .rating-summary-score,
+.rating-summary.rating-summary-unavailable .rating-summary-score {
+  display: none;
+}
+
+.rating-summary.rating-summary-loading .rating-summary-attribution,
+.rating-summary.rating-summary-unavailable .rating-summary-attribution {
+  margin-top: 0;
+}
+
+/* tablet: score column beside a stacked description */
+@media (width >= 600px) {
+  .rating-summary {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "value details"
+      "value attribution"
+      "value links";
+  }
+
+  .rating-summary .rating-summary-details {
+    margin-top: 0;
+  }
+}
+
+/* desktop: stars and attribution side by side, link under the stars */
+@media (width >= 900px) {
+  .rating-summary {
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "value details attribution"
+      "value links .";
+  }
+
+  .rating-summary .rating-summary-attribution {
+    margin-top: 0;
+  }
+}

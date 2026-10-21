@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/checking-vs-savings-account",
+  "path": "banking/personal-banking-guide/basic-finance/checking-vs-savings-account",
+  "timestamp": "2026-10-21T16:37:56.383Z",
+  "title": "Checking vs Savings: Key Differences You Need to Know | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/personal-banking-guide/basic-finance/checking-vs-savings-account/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

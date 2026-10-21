@@ -1,0 +1,132 @@
+/*
+ * Citi brand tokens, taken from citi.com computed styles
+ * (homepage, small-business, mortgage, travel and article pages; see migration-work/brand.json).
+ * Typeface: Citi self-hosts the licensed Interstate family. It is not on Typekit or
+ * Google Fonts, so Overpass (free, also drawn from the US Highway Gothic that
+ * Interstate is based on) stands in. Interstate stays first in the stack for
+ * anyone who has it installed.
+ */
+
+:root {
+  /* colors: neutrals */
+  --background-color: #fff;
+  --text-color: #333; /* rgb(51 51 51), main text */
+  --heading-color: #333;
+  --text-color-muted: #666; /* rgb(102 102 102) */
+  --border-color: #999; /* rgb(153 153 153), content table rules */
+  --rule-color: #eee; /* rgb(238 238 238) */
+
+  /* colors: brand */
+  --citi-blue: #056dae; /* CDS primary: buttons, links */
+  --citi-blue-hover: #034c81; /* CDS hover */
+  --citi-navy: #002a54; /* CDS active / focus outline, dark bands */
+  --citi-dark-blue: #002d72; /* hero bands */
+  --citi-brand-blue: #04208f; /* homepage / nav blue */
+  --citi-bright-blue: #255be3; /* blue bands (travel, card disclosures) */
+  --citi-light-blue: #f0f5f7; /* rgb(240 245 247), light-blue bands, nav bar */
+  --citi-grey: #eee; /* grey bands */
+
+  /* colors: semantic */
+  --link-color: var(--citi-blue);
+  --link-hover-color: var(--citi-blue-hover);
+  --link-active-color: var(--citi-navy);
+  --focus-color: var(--citi-navy);
+  --light-color: var(--citi-light-blue);
+  --dark-color: var(--citi-navy);
+
+  /* buttons (Citi Design System .cds-button-df) */
+  --button-font-weight: 700;
+  --button-font-size: 16px;
+  --button-line-height: 24px;
+  --button-padding: 11px 16px;
+  --button-radius: 8px;
+  --button-primary-bg: var(--citi-blue);
+  --button-primary-hover-bg: var(--citi-blue-hover);
+  --button-primary-active-bg: var(--citi-navy);
+  --button-disabled-bg: #eee;
+  --button-disabled-color: #ccc;
+  --button-inverse-hover-bg: rgb(255 255 255 / 10%);
+  --button-inverse-active-bg: rgb(255 255 255 / 16%);
+
+  /* chevron used by Citi text CTAs; tint it with mask + background-color */
+  --icon-chevron-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath d='M6.158 1.853 16.76 11.7c.21.195.209.512-.002.707L6.16 22.146a.48.48 0 0 0-.002.707c.211.196.553.196.765.002l10.598-9.74a1.52 1.52 0 0 0 .007-2.122L6.925 1.148a.56.56 0 0 0-.765-.002.48.48 0 0 0-.002.707'/%3E%3C/svg%3E");
+
+  /* fonts */
+  --body-font-family: interstate, overpass, overpass-fallback, arial, sans-serif;
+  --heading-font-family: interstate, overpass, overpass-fallback, arial, sans-serif;
+  --body-font-weight: 300; /* Interstate Light */
+  --heading-font-weight: 700; /* Interstate Bold */
+
+  /* body sizes (mobile = desktop on citi.com) */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+  --body-line-height-m: 24px;
+  --body-line-height-s: 21px;
+  --body-line-height-xs: 18px;
+
+  /* heading sizes, mobile */
+  --heading-font-size-xxl: 32px;
+  --heading-font-size-xl: 26px;
+  --heading-font-size-l: 20px;
+  --heading-font-size-m: 18px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
+  --heading-line-height-xxl: 40px;
+  --heading-line-height-xl: 32px;
+  --heading-line-height-l: 28px;
+  --heading-line-height-m: 26px;
+  --heading-line-height-s: 24px;
+  --heading-line-height-xs: 21px;
+
+  /* centred section intro heading before a block (citi.com cds-heading / headline-copy) */
+  --heading-font-size-section: 26px;
+  --heading-line-height-section: 32px;
+
+  /* spacing */
+  --content-max-width: 1076px; /* citi-container / banner__container */
+  --content-gutter: 12px; /* mobile side gutter */
+  --section-spacing: 40px;
+  --section-band-padding: 40px; /* dark lead-form band */
+  --section-band-padding-l: 72px; /* blue resort-tips band (desktop) */
+  --block-spacing: 32px; /* between consecutive blocks in a section (mobile) */
+
+  /* nav height (Citi header: 72px banner + 50px nav bar on mobile) */
+  --nav-height: 122px;
+}
+
+@media (width >= 900px) {
+  :root {
+    /* heading sizes, desktop */
+    --heading-font-size-xxl: 42px;
+    --heading-font-size-xl: 32px;
+    --heading-font-size-l: 24px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 18px;
+    --heading-font-size-xs: 16px;
+    --heading-line-height-xxl: 50px;
+    --heading-line-height-xl: 42px;
+    --heading-line-height-l: 35px;
+    --heading-line-height-m: 28px;
+    --heading-line-height-s: 26px;
+    --heading-line-height-xs: 24px;
+    --heading-font-size-section: 36px;
+    --heading-line-height-section: 44px;
+    --content-gutter: 32px;
+    --block-spacing: 48px; /* citi.com component spacing, desktop */
+  }
+}
+
+@media (width >= 1200px) {
+  :root {
+    /* Citi header: 88px banner + 46px nav bar on desktop */
+    --nav-height: 134px;
+  }
+}
+
+/* metric-matched local fallback while Overpass loads (Overpass Light ~ 98.6% of Arial) */
+@font-face {
+  font-family: overpass-fallback;
+  size-adjust: 98.6%;
+  src: local('Arial'), local('Liberation Sans');
+}

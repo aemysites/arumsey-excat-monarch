@@ -1,0 +1,571 @@
+/*
+ * cards-highlight
+ * Values from citi.com computed styles:
+ *  default (plain tiles)  /small-business-banking/cash-management, /mortgage/purchase-rates
+ *  default (offer tiles)  /credit-cards/bloomingdales-credit-cards (eyebrow + big stat word)
+ *  rate-strip             /credit-cards/citi-att-pointsplus-credit-card, citi-strata-*, home-depot-*
+ *  with-image             /personal-loans
+ *  icon-links             /small-business-banking/cash-management
+ *  colour tiles           /credit-cards/costco-anywhere-visa-business-card and the AAdvantage cards
+ */
+
+/* variant rules intentionally follow the base rules they override */
+/* stylelint-disable no-descending-specificity */
+
+.cards-highlight > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.cards-highlight > ul > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--text-color);
+  box-shadow: rgb(0 0 0 / 10%) 0 1px 10px 0;
+}
+
+.cards-highlight .cards-highlight-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-highlight .cards-highlight-body > :last-child {
+  margin-bottom: 0;
+}
+
+.cards-highlight .cards-highlight-image {
+  line-height: 0;
+}
+
+.cards-highlight .cards-highlight-image img {
+  width: 100%;
+  height: auto;
+}
+
+.cards-highlight > ul > li.is-link a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/* ---------- default: white tiles (cash management, mortgage programs) ---------- */
+.cards-highlight .cards-highlight-stat {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.cards-highlight .cards-highlight-body > p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* the rule between the description and the bullet list */
+.cards-highlight .cards-highlight-body > p:has(+ ul) {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgb(204 204 204);
+}
+
+.cards-highlight .cards-highlight-body ul {
+  margin: 0 0 16px;
+  padding-left: 24px;
+  list-style: disc;
+}
+
+.cards-highlight .cards-highlight-body li {
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cards-highlight .cards-highlight-body li + li {
+  margin-top: 8px;
+}
+
+/*
+ * default: offer tiles (Bloomingdale's). An italic eyebrow precedes the stat word,
+ * which runs inline with the paragraph that follows it ("Get 20% off today...").
+ */
+.cards-highlight > ul > li:has(> .cards-highlight-body > .cards-highlight-stat:not(:first-child)) {
+  padding: 18px 22px 22px 25px;
+  border-radius: 16px;
+  color: rgb(51 51 51);
+  box-shadow: rgb(0 0 0 / 50%) 0 2px 8px 0;
+}
+
+.cards-highlight .cards-highlight-body > p:first-child:has(> em:only-child) {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.cards-highlight .cards-highlight-body > .cards-highlight-stat:not(:first-child) {
+  display: inline;
+  margin: 0;
+  color: rgb(4 53 103);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: -3.22px;
+}
+
+.cards-highlight .cards-highlight-body > .cards-highlight-stat:not(:first-child) ~ p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.cards-highlight .cards-highlight-body > .cards-highlight-stat:not(:first-child) + p {
+  display: inline;
+  margin: 0 0 0 10px;
+  color: rgb(4 53 103);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.cards-highlight .cards-highlight-body > .cards-highlight-stat:not(:first-child) + p + p {
+  margin-top: 12px;
+}
+
+.cards-highlight .cards-highlight-body > .cards-highlight-stat:not(:first-child) + p ~ p {
+  margin-bottom: 0;
+}
+
+.cards-highlight .cards-highlight-body > .cards-highlight-stat:not(:first-child) + p + p ~ p {
+  margin-top: 10px;
+}
+
+/* ---------- rate-strip: one panel of earn rates split by rules ---------- */
+.cards-highlight.rate-strip > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 16px;
+  border-radius: 16px;
+  background-color: rgb(242 250 253);
+  color: rgb(38 41 43);
+  box-shadow: rgb(0 0 0 / 10%) 0 1px 10px 0;
+}
+
+.cards-highlight.rate-strip > ul > li {
+  flex: 1 1 0;
+  padding: 24px;
+  border-radius: 0;
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+.cards-highlight.rate-strip > ul > li:not(:last-child) {
+  border-bottom: 1px solid rgb(188 197 201);
+}
+
+.cards-highlight.rate-strip .cards-highlight-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cards-highlight.rate-strip .cards-highlight-body > * {
+  margin: 0;
+}
+
+.cards-highlight.rate-strip .cards-highlight-body p {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.144px;
+}
+
+/* category label ("Gas & EV charging stations") */
+.cards-highlight.rate-strip p.cards-highlight-stat {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.208px;
+}
+
+.cards-highlight.rate-strip p.cards-highlight-stat strong {
+  font-weight: inherit;
+}
+
+/* benefit heading ("1-Year Hassle-Free Returns") */
+.cards-highlight.rate-strip h3.cards-highlight-stat {
+  color: inherit;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+/* earn-rate figures ("10x", "3x"): the strips with four or more rates */
+.cards-highlight.rate-strip > ul:has(> li:nth-child(4)) h3.cards-highlight-stat {
+  margin-bottom: 4px;
+  font-family: georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-style: italic;
+  line-height: 54px;
+}
+
+/* ---------- with-image: outlined tiles, link title above the photo ---------- */
+.cards-highlight.with-image > ul > li {
+  padding: 0 16px;
+  border: 1px solid rgb(211 218 221);
+  border-radius: 8px;
+  color: rgb(18 19 20);
+  box-shadow: none;
+}
+
+.cards-highlight.with-image .cards-highlight-body {
+  display: contents;
+}
+
+.cards-highlight.with-image .cards-highlight-stat {
+  order: -1;
+  margin: 16px 0;
+  color: inherit;
+  font-size: 12px;
+  font-weight: var(--body-font-weight);
+  line-height: 12px;
+  letter-spacing: 2px;
+}
+
+.cards-highlight.with-image .cards-highlight-image {
+  margin: 5px 0 0;
+}
+
+.cards-highlight.with-image .cards-highlight-image img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cards-highlight.with-image .cards-highlight-body > p {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.cards-highlight.with-image .cards-highlight-body > p:has(> strong:only-child) {
+  margin: 16px 0 8px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.cards-highlight.with-image .cards-highlight-stat + p {
+  margin-top: 16px;
+}
+
+/* ---------- icon-links: centred anchor tiles ---------- */
+.cards-highlight.icon-links > ul > li {
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: transparent;
+  box-shadow: none;
+  text-align: center;
+}
+
+.cards-highlight.icon-links .cards-highlight-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cards-highlight.icon-links .cards-highlight-image {
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 48px;
+  background-color: rgb(239 243 248);
+}
+
+.cards-highlight.icon-links .cards-highlight-image img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.cards-highlight.icon-links .cards-highlight-body p {
+  margin: 0;
+}
+
+.cards-highlight.icon-links .cards-highlight-body a:any-link {
+  color: var(--citi-blue);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.cards-highlight.icon-links .cards-highlight-body a:hover {
+  color: var(--citi-blue-hover);
+  text-decoration: underline;
+}
+
+/* ---------- colour tiles: rate-strip tiles filled with a colour sequence ---------- */
+.cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) > ul > li {
+  gap: 4px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: var(--cards-highlight-tile-bg, rgb(0 98 151));
+  color: #fff;
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.144px;
+}
+
+/* stacked deck on mobile: each tile overlaps the one above it */
+.cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) > ul > li:not(:last-child) {
+  padding-bottom: 56px;
+}
+
+.cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) > ul > li + li {
+  margin-top: -32px;
+}
+
+.cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) .cards-highlight-body > * {
+  margin: 0;
+}
+
+.cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) .cards-highlight-body > p {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) .cards-highlight-body > p + p {
+  margin-top: 12px;
+}
+
+.cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) .cards-highlight-stat {
+  margin-bottom: 4px;
+  color: inherit;
+}
+
+/* Costco: the tile above the explainer row keeps its normal padding */
+.cards-highlight.coloured-tiles-with-icons > ul > li:has(+ li:not(:has(.cards-highlight-stat))) {
+  padding-bottom: 24px;
+}
+
+/* Costco: big percentage, 20px category label, explainer row under the tiles */
+.cards-highlight.coloured-tiles-with-icons .cards-highlight-stat {
+  margin-bottom: 12px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: normal;
+}
+
+.cards-highlight.coloured-tiles-with-icons .cards-highlight-body > p {
+  margin-bottom: 4px;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.208px;
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:not(:has(.cards-highlight-stat)) {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 0;
+  padding: 16px 0 4px;
+  border-radius: 0;
+  background-color: transparent;
+  color: rgb(102 102 102);
+  font-size: 14px;
+  line-height: 18.06px;
+  letter-spacing: 0.14px;
+  text-align: center;
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:not(:has(.cards-highlight-stat))::before,
+.cards-highlight.coloured-tiles-with-icons > ul > li:not(:has(.cards-highlight-stat))::after {
+  content: '';
+  flex: 1 1 0;
+  min-width: 24px;
+  border-bottom: 1px solid rgb(204 204 204);
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:not(:has(.cards-highlight-stat))::before {
+  border-left: 1px solid rgb(204 204 204);
+  border-bottom-left-radius: 12px;
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:not(:has(.cards-highlight-stat))::after {
+  border-right: 1px solid rgb(204 204 204);
+  border-bottom-right-radius: 12px;
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:not(:has(.cards-highlight-stat)) .cards-highlight-body {
+  flex: 0 1 284px;
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:not(:has(.cards-highlight-stat)) .cards-highlight-body > p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+/* tile colours (citi.com computed backgrounds) */
+.cards-highlight.coloured-tiles-with-icons > ul > li:nth-child(1) {
+  --cards-highlight-tile-bg: rgb(3 73 153);
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:nth-child(2) {
+  --cards-highlight-tile-bg: rgb(53 134 64);
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:nth-child(3) {
+  --cards-highlight-tile-bg: rgb(31 122 184);
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:nth-child(4) {
+  --cards-highlight-tile-bg: rgb(200 16 46);
+}
+
+.cards-highlight.coloured-tiles-with-icons > ul > li:nth-child(5) {
+  --cards-highlight-tile-bg: rgb(88 89 91);
+}
+
+.cards-highlight.blue-cyan-dark > ul > li:nth-child(3n + 1) {
+  --cards-highlight-tile-bg: rgb(0 98 151);
+}
+
+.cards-highlight:is(.blue-cyan-dark, .blue-dark-red) > ul > li:nth-child(3n + 2) {
+  --cards-highlight-tile-bg: rgb(80 101 124);
+}
+
+.cards-highlight:is(.blue-cyan-dark, .blue-dark-red) > ul > li:nth-child(3n) {
+  --cards-highlight-tile-bg: rgb(38 41 43);
+}
+
+.cards-highlight.blue-dark-red > ul > li:nth-child(3n + 1) {
+  --cards-highlight-tile-bg: rgb(230 30 39);
+}
+
+.cards-highlight.blue-dark > ul > li:nth-child(odd) {
+  --cards-highlight-tile-bg: rgb(48 61 75);
+}
+
+.cards-highlight.blue-dark > ul > li:nth-child(even) {
+  --cards-highlight-tile-bg: rgb(52 52 52);
+}
+
+.cards-highlight.blue-dark .cards-highlight-body {
+  color: rgb(230 235 237);
+}
+
+.cards-highlight.cyan-grey > ul > li:nth-child(odd) {
+  --cards-highlight-tile-bg: rgb(77 77 79);
+}
+
+.cards-highlight.cyan-grey > ul > li:nth-child(even) {
+  --cards-highlight-tile-bg: rgb(0 108 104);
+}
+
+@media (width >= 600px) {
+  .cards-highlight > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-highlight > ul {
+    grid-template-columns: none;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+  }
+
+  .cards-highlight > ul:has(> li:has(> .cards-highlight-body > .cards-highlight-stat:not(:first-child))) {
+    gap: 16px;
+  }
+
+  .cards-highlight .cards-highlight-body > .cards-highlight-stat:not(:first-child) {
+    font-size: 66px;
+  }
+
+  .cards-highlight .cards-highlight-body > .cards-highlight-stat:not(:first-child) + p {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  /* rate-strip: one row, vertical rules */
+  .cards-highlight.rate-strip > ul {
+    flex-direction: row;
+    padding: 24px 0;
+  }
+
+  .cards-highlight.rate-strip > ul > li {
+    padding: 0 24px;
+  }
+
+  .cards-highlight.rate-strip > ul > li:not(:last-child) {
+    border-bottom: 0;
+    border-right: 1px solid rgb(188 197 201);
+  }
+
+  /* colour tiles: one row, 24px apart */
+  .cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) > ul {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) > ul > li {
+    flex: 1 1 0;
+  }
+
+  .cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) > ul > li:not(:last-child) {
+    padding-bottom: 24px;
+  }
+
+  .cards-highlight:is(.coloured-tiles-with-icons, .blue-cyan-dark, .blue-dark, .blue-dark-red, .cyan-grey) > ul > li + li {
+    margin-top: 0;
+  }
+
+  .cards-highlight.cyan-grey > ul > li,
+  .cards-highlight.cyan-grey > ul > li:not(:last-child) {
+    padding: 24px 40px 56px;
+  }
+
+  /* Costco: five tiles; the explainer sits under the first two, the others span both rows */
+  .cards-highlight.coloured-tiles-with-icons > ul {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-auto-flow: row;
+    gap: 0 24px;
+  }
+
+  .cards-highlight.coloured-tiles-with-icons > ul > li:has(.cards-highlight-stat) {
+    grid-row: 1 / span 2;
+  }
+
+  .cards-highlight.coloured-tiles-with-icons > ul > li:has(.cards-highlight-stat):nth-child(-n + 2) {
+    grid-row: 1;
+  }
+
+  .cards-highlight.coloured-tiles-with-icons > ul > li:not(:has(.cards-highlight-stat)) {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+}

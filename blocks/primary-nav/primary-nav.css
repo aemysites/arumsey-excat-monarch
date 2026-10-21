@@ -1,0 +1,50 @@
+/* primary-nav: structural styles only; brand styling comes from the design pass */
+
+.primary-nav .primary-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.primary-nav .primary-nav-item {
+  position: relative;
+}
+
+.primary-nav .primary-nav-item a,
+.primary-nav .primary-nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+.primary-nav .primary-nav-toggle {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary-nav .primary-nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 200px;
+  margin: 0;
+  padding: 8px 16px;
+  list-style: none;
+  background-color: var(--background-color, #fff);
+}
+
+.primary-nav .primary-nav-toggle[aria-expanded='false'] + .primary-nav-submenu {
+  display: none;
+}

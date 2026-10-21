@@ -1,0 +1,33 @@
+{
+  "variantName": "cards-benefit-tiles",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + link",
+    "purpose": "Row of tall rounded benefit tiles with a background photo, a title and a + button that reveals the benefit detail"
+  },
+  "contentPattern": {
+    "structure": "one row per tile: optional image cell (tile background), then a cell with the tile title (heading) followed by optional detail content revealed by the + button; detail may be a single link to a /fragments/ page, which is loaded as a fragment"
+  },
+  "options": [
+    {
+      "class": "blue",
+      "label": "Blue"
+    }
+  ],
+  "memberVariantIds": [
+    "v_ab6cdd0b880b",
+    "v_ab6cdd0b880b-1"
+  ],
+  "usage": {
+    "pages": [
+      "https://www.citi.com/credit-cards/citi-aadvantage-executive-world-legend-mastercard",
+      "https://www.citi.com/credit-cards/citi-double-cash-credit-card"
+    ]
+  },
+  "reuseGuidance": "Use for product-page benefit highlights where each tile expands to detail. Use the blue option when some tiles have no photo and need a solid fill."
+}

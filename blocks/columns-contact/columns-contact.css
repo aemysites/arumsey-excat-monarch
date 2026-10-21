@@ -1,0 +1,376 @@
+/*
+ * columns-contact: citi.com contact panel (.contactus__rtb-wrapper .rtb-tiles)
+ * Values from source computed styles (home-equity/relationship-pricing,
+ * small-business/banking, mortgage/home-mortgage, banking/cd-account).
+ */
+
+/* white card with soft shadow */
+.columns-contact {
+  box-sizing: border-box;
+  margin: 0 12px;
+  padding: 24px;
+  border-radius: 9px;
+  background-color: #fff;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+  color: var(--text-color);
+}
+
+.columns-contact .columns-contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-contact .columns-contact-row + .columns-contact-row {
+  margin-top: 24px;
+}
+
+.columns-contact .columns-contact-col {
+  min-width: 0;
+}
+
+.columns-contact .columns-contact-col > :last-child {
+  margin-bottom: 0;
+}
+
+/* tile headline: Interstate Light 28/34, sits 8px into the tile */
+.columns-contact .columns-contact-col > :is(h2, h3) {
+  margin: 8px 0;
+  color: var(--heading-color);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+/* tile copy */
+.columns-contact p {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.columns-contact a:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.columns-contact a:hover {
+  color: var(--link-hover-color);
+}
+
+/* phone number line: 18/26 underlined link */
+.columns-contact p.columns-contact-phone {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.columns-contact p.columns-contact-phone a:any-link {
+  font-weight: 400;
+}
+
+/* text CTA with chevron (cds-button-chevron-right) */
+.columns-contact p.columns-contact-cta {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.columns-contact p.columns-contact-cta a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.columns-contact p.columns-contact-cta a:hover {
+  text-decoration: underline;
+}
+
+.columns-contact p.columns-contact-cta a::after {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) left center / 22px 22px no-repeat;
+}
+
+.columns-contact img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* icon on its own line: 40px icon above a bold sub-heading (mortgage rates/calculators) */
+.columns-contact .columns-contact-icon {
+  margin: 0 0 12px;
+}
+
+.columns-contact .columns-contact-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* icon + text lines (e.g. phone, document, branch icons) */
+.columns-contact .columns-contact-icon-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.columns-contact .columns-contact-icon-item > picture,
+.columns-contact .columns-contact-icon-item > img,
+.columns-contact .columns-contact-icon-item > .icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+}
+
+.columns-contact .columns-contact-icon-item > picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* icon + sub-heading on one line, copy indented under the heading (small-business) */
+.columns-contact .columns-contact-col.columns-contact-has-icon {
+  display: grid;
+  grid-template-columns: 35px minmax(0, 321px);
+  align-content: start;
+}
+
+.columns-contact .columns-contact-has-icon > * {
+  grid-column: 2;
+}
+
+.columns-contact .columns-contact-has-icon > h2 {
+  grid-column: 1 / -1;
+}
+
+.columns-contact .columns-contact-has-icon > .columns-contact-icon {
+  grid-column: 1;
+  margin: 0;
+}
+
+.columns-contact .columns-contact-has-icon > .columns-contact-icon img {
+  width: 24px;
+  height: auto;
+}
+
+.columns-contact .columns-contact-has-icon > .columns-contact-icon + h3 {
+  margin: 0 0 4px 3px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.columns-contact .columns-contact-has-icon > p:not(.columns-contact-icon) {
+  color: var(--text-color-muted);
+}
+
+.columns-contact .columns-contact-has-icon > p.columns-contact-phone {
+  margin-top: 0;
+}
+
+.columns-contact .columns-contact-has-icon > p.columns-contact-phone a:any-link {
+  font-weight: 400;
+}
+
+.columns-contact .columns-contact-has-icon > p.columns-contact-cta {
+  margin-left: 1px;
+}
+
+/* icon above a short bold h2 (mortgage rates / calculators fragment) */
+.columns-contact.columns-contact-icon-tiles {
+  border-radius: 16px;
+}
+
+.columns-contact .columns-contact-col > .columns-contact-icon + h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* with-select: product dropdown */
+.columns-contact .columns-contact-select-wrapper {
+  position: relative;
+  margin: 27px 0 0;
+}
+
+.columns-contact .columns-contact-select-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.columns-contact .columns-contact-select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 12px 64px 12px 20px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' transform='rotate(90 12 12)' d='M6.158 1.853 16.76 11.7c.21.195.209.512-.002.707L6.16 22.146a.48.48 0 0 0-.002.707c.211.196.553.196.765.002l10.598-9.74a1.52 1.52 0 0 0 .007-2.122L6.925 1.148a.56.56 0 0 0-.765-.002.48.48 0 0 0-.002.707'/%3E%3C/svg%3E") right 29px center / 24px 24px no-repeat;
+  color: var(--link-color);
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.columns-contact .columns-contact-select:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.columns-contact .columns-contact-select-wrapper + .button-wrapper .button {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+
+.columns-contact .button[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+/* with-select: open, centred columns split by a #eee rule (cd-account "Give us a call | Apply online") */
+.columns-contact.with-select {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  text-align: center;
+}
+
+.columns-contact.with-select .columns-contact-row {
+  gap: 0;
+}
+
+.columns-contact.with-select .columns-contact-col + .columns-contact-col {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule-color);
+}
+
+.columns-contact.with-select .columns-contact-col > * {
+  max-width: 250px;
+  margin-inline: auto;
+}
+
+.columns-contact.with-select .columns-contact-icon {
+  margin-bottom: 35px;
+}
+
+.columns-contact.with-select .columns-contact-icon img {
+  width: 40px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.columns-contact.with-select .columns-contact-col > h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
+.columns-contact.with-select .columns-contact-col > p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.columns-contact.with-select .columns-contact-select-wrapper {
+  margin-top: 43px;
+}
+
+.columns-contact.columns-contact-icon-tiles .columns-contact-col > h2 + p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media (width >= 900px) {
+  .columns-contact {
+    margin: 0;
+  }
+
+  .columns-contact .columns-contact-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .columns-contact .columns-contact-col {
+    flex: 1 1 0;
+  }
+
+  /* mortgage rates / calculators card: two columns, no gutter, 930px wide */
+  .columns-contact.columns-contact-icon-tiles {
+    max-width: 930px;
+    margin-inline: auto;
+  }
+
+  .columns-contact.columns-contact-icon-tiles .columns-contact-row {
+    gap: 0;
+  }
+
+  /* grouped (small-business "How to open an account | Still have questions?") */
+  .columns-contact.columns-contact-grouped {
+    max-width: 930px;
+    margin-inline: auto;
+  }
+
+  .columns-contact.columns-contact-grouped .columns-contact-row {
+    display: grid;
+    grid-template-columns: repeat(var(--columns-contact-groups, 2), minmax(0, 1fr));
+    grid-auto-flow: row dense;
+    gap: 16px;
+  }
+
+  .columns-contact.columns-contact-grouped .columns-contact-col {
+    grid-column: var(--columns-contact-group, auto);
+  }
+
+  /* with-select: two halves split by a vertical rule, 267px content columns */
+  .columns-contact.with-select .columns-contact-row {
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .columns-contact.with-select .columns-contact-col + .columns-contact-col {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+    border-left: 1px solid var(--rule-color);
+  }
+
+  .columns-contact.with-select .columns-contact-col > * {
+    max-width: 267px;
+  }
+
+  .columns-contact.with-select .columns-contact-icon {
+    margin-bottom: 27px;
+  }
+
+  .columns-contact.with-select .columns-contact-select-wrapper {
+    margin-top: 39px;
+  }
+
+  .columns-contact.with-select .columns-contact-icon img {
+    width: 60px;
+  }
+
+  .columns-contact.with-select .columns-contact-col > h3 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}

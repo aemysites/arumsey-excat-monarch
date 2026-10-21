@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/how-to-rent-a-luxury-car",
+  "path": "travel/travel-guide/car-rental-tips/how-to-rent-a-luxury-car",
+  "timestamp": "2026-10-21T19:10:51.049Z",
+  "title": "How to Rent a Luxury Car | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

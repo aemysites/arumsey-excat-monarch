@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/trips-for-seniors-over-60",
+  "path": "travel/travel-guide/travel-tips/trips-for-seniors-over-60",
+  "timestamp": "2026-10-21T19:18:33.231Z",
+  "title": "Trips for Seniors Over 60 | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

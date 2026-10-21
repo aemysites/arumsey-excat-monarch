@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/last-minute-hotel-booking",
+  "path": "travel/travel-guide/hotels-and-resorts/last-minute-hotel-booking",
+  "timestamp": "2026-10-21T19:13:00.434Z",
+  "title": "Is Last-Minute Hotel Booking the Best Option? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

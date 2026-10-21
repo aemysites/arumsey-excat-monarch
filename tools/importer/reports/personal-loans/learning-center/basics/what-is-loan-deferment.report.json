@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/personal-loans/learning-center/basics/what-is-loan-deferment",
+  "path": "personal-loans/learning-center/basics/what-is-loan-deferment",
+  "timestamp": "2026-10-21T18:02:11.417Z",
+  "title": "What Does Loan Deferment Mean? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/personal-loans/learning-center/basics/what-is-loan-deferment/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

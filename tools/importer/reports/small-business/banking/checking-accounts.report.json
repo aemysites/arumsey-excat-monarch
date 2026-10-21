@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/banking/checking-accounts",
+  "path": "small-business/banking/checking-accounts",
+  "timestamp": "2026-10-21T16:36:08.072Z",
+  "title": "Business Checking Accounts | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-media",
+    "hero-chevron",
+    "accordion-feature",
+    "location-selector",
+    "columns-contact",
+    "carousel-cards",
+    "carousel-cards",
+    "accordion-disclosure",
+    "cta-banner",
+    "columns-icon-strip",
+    "tabs-feature"
+  ],
+  "fragments": [
+    "fragments/small-business/banking/checking-accounts/checking-accounts",
+    "fragments/small-business/banking/checking-accounts/fiduciary-accounts"
+  ],
+  "importScript": "20a7308ac938"
+}

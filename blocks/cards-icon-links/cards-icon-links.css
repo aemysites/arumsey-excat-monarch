@@ -1,0 +1,186 @@
+/* citi.com ul.category_nav_v2 (credit card category bar), computed styles */
+.cards-icon-links > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.cards-icon-links > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 0;
+}
+
+.cards-icon-links .cards-icon-links-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #26292b;
+  text-decoration: none;
+}
+
+.cards-icon-links a.cards-icon-links-item:hover,
+.cards-icon-links a.cards-icon-links-item:active {
+  color: var(--citi-bright-blue);
+  text-decoration: none;
+}
+
+.cards-icon-links .cards-icon-links-label {
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight); /* Interstate Light */
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.cards-icon-links .cards-icon-links-icon {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  line-height: 0;
+}
+
+.cards-icon-links .cards-icon-links-icon .icon,
+.cards-icon-links .cards-icon-links-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* rows authored with title + description (feature grid content) */
+.cards-icon-links .cards-icon-links-rich .cards-icon-links-item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 18.06px;
+  letter-spacing: 0.14px;
+  text-align: left;
+  color: #5e676b;
+}
+
+.cards-icon-links .cards-icon-links-body p {
+  margin: 0;
+}
+
+.cards-icon-links .cards-icon-links-body > * + * {
+  margin-top: 8px;
+}
+
+.cards-icon-links > ul > li.cards-icon-links-rich {
+  align-items: stretch;
+  padding: 0;
+}
+
+.cards-icon-links .cards-icon-links-rich .cards-icon-links-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cards-icon-links .cards-icon-links-body h3 {
+  margin: 0;
+  color: #26292b;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: normal;
+}
+
+.cards-icon-links .cards-icon-links-body a:any-link {
+  color: #04208f;
+}
+
+/* benefit drawer (card PDPs: tds-drawer benefits): tinted panel, 40px icons, 24px titles */
+.cards-icon-links > ul:has(> .cards-icon-links-rich) {
+  gap: 24px;
+  padding: 40px 24px;
+  border-radius: 24px;
+  background-color: #f0f5f7;
+}
+
+/* light: light foreground, no white plate, for a dark section (legend card page) */
+.cards-icon-links.light > ul,
+main .section.dark .cards-icon-links > ul,
+main .section.blue .cards-icon-links > ul {
+  background-color: transparent;
+}
+
+.cards-icon-links.light .cards-icon-links-item,
+.cards-icon-links.light a.cards-icon-links-item:hover,
+main .section.dark .cards-icon-links .cards-icon-links-item,
+main .section.blue .cards-icon-links .cards-icon-links-item {
+  color: #fff;
+}
+
+.cards-icon-links.light .cards-icon-links-icon img,
+main .section.dark .cards-icon-links .cards-icon-links-icon img,
+main .section.blue .cards-icon-links .cards-icon-links-icon img {
+  filter: brightness(0) invert(1);
+}
+
+@media (width >= 900px) {
+  .cards-icon-links > ul {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 8px;
+  }
+
+  .cards-icon-links > ul > li {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .cards-icon-links .cards-icon-links-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* icon (36px) + gap + two label lines */
+  .cards-icon-links .cards-icon-links-item:has(> .cards-icon-links-icon) {
+    min-height: 85px;
+  }
+
+  .cards-icon-links .cards-icon-links-label {
+    max-width: 155px;
+    text-align: center;
+  }
+
+  .cards-icon-links > ul:has(> .cards-icon-links-rich) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 48px;
+    padding: 40px 64px;
+  }
+
+  .cards-icon-links > ul > li.cards-icon-links-rich {
+    padding: 0;
+  }
+
+  .cards-icon-links .cards-icon-links-rich .cards-icon-links-item {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

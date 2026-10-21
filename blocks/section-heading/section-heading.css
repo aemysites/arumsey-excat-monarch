@@ -1,0 +1,88 @@
+/* section-heading: structural layout only; brand colour and type come in the design pass */
+.section-heading {
+  --section-heading-text: inherit;
+  --section-heading-panel-surface: transparent;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid currentcolor;
+  color: var(--section-heading-text);
+}
+
+.section.dark .section-heading,
+.section.blue .section-heading {
+  --section-heading-text: var(--background-color);
+}
+
+.section-heading .section-heading-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.section-heading .section-heading-content > :first-child {
+  margin-top: 0;
+}
+
+.section-heading .section-heading-content > :last-child {
+  margin-bottom: 0;
+}
+
+.section-heading .section-heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.section-heading .section-heading-actions > p {
+  margin: 0;
+}
+
+.section-heading .section-heading-media picture,
+.section-heading .section-heading-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* promo-panel: coloured text panel beside a photo */
+.section-heading.promo-panel {
+  flex-direction: column;
+  align-items: stretch;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.section-heading.promo-panel .section-heading-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(--section-heading-panel-surface);
+  text-align: center;
+}
+
+.section-heading.promo-panel .section-heading-media {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+@media (width >= 900px) {
+  .section-heading.promo-panel {
+    flex-direction: row;
+  }
+
+  .section-heading.promo-panel .section-heading-content {
+    flex: 0 0 40%;
+  }
+
+  .section-heading.promo-panel .section-heading-media {
+    flex: 1 1 0;
+  }
+}

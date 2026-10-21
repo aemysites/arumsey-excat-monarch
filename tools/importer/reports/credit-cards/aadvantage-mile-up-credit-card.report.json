@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/aadvantage-mile-up-credit-card",
+  "path": "credit-cards/aadvantage-mile-up-credit-card",
+  "timestamp": "2026-10-21T19:24:11.824Z",
+  "title": "American Airlines AAdvantage® MileUp℠ Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-icon",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "benefits-showcase",
+    "benefits-showcase",
+    "hero-card",
+    "hero-card",
+    "cards-highlight",
+    "columns-key-terms",
+    "columns-key-terms",
+    "disclosure-links"
+  ],
+  "fragments": [
+    "fragments/credit-card-categories"
+  ],
+  "importScript": "089f57e4feb6"
+}

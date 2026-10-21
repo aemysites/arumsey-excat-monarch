@@ -1,20 +1,442 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+/* footer block — Citi global footer, mobile first (desktop layout from 900px) */
+.footer {
+  /* Citi brand faces; the font files are not migrated, so the body font renders */
+  --footer-font-light: "Interstate_Light", interstate, var(--body-font-family);
+  --footer-font-regular: "Interstate_Regular", interstate, var(--body-font-family);
+  --footer-font-bold: "Interstate_Bold", interstate, var(--body-font-family);
+  --footer-bg: rgb(51 51 51);
+  --footer-text: rgb(255 255 255);
+  --footer-muted-text: rgb(244 244 244);
+  --footer-rule: rgb(102 102 102);
+  --footer-inset: 5%;
+
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: var(--footer-font-light);
+  font-size: 16px;
+  line-height: 24px;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+.footer *,
+.footer *::before,
+.footer *::after {
+  box-sizing: border-box;
 }
 
-footer .footer p {
+.footer .footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer p {
   margin: 0;
 }
 
+.footer a:any-link {
+  color: var(--footer-text);
+  text-decoration: none;
+}
+
+.footer img {
+  display: block;
+}
+
+.footer sup {
+  font-size: 9px;
+  line-height: 0;
+}
+
+.footer .footer-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* link columns: accordions on mobile */
+.footer .footer-links .footer-inner {
+  padding: 7px var(--footer-inset) 0;
+}
+
+.footer .footer-column {
+  padding-right: 20px;
+  border-bottom: 1px solid var(--footer-rule);
+}
+
+.footer .footer-column h2 {
+  margin: 0;
+  font-family: var(--footer-font-regular);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--footer-text);
+  scroll-margin: 0;
+}
+
+.footer .footer-column-toggle {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer .footer-column-list {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: max-height 0.18s ease-in-out, visibility 0.18s;
+}
+
+.footer .footer-column-list.is-open {
+  max-height: 600px;
+  visibility: visible;
+}
+
+.footer .footer-column li {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer .footer-column a {
+  display: inline-block;
+  padding: 5px 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.footer .footer-badge {
+  padding: 7px 0 0 20px;
+}
+
+.footer .footer-badge img {
+  width: 29px;
+  height: 30px;
+  margin-top: 12px;
+  transform: scale(1.75);
+}
+
+/* app badges + social icons: stacked rows on mobile */
+.footer .footer-apps .footer-inner {
+  padding: 20px var(--footer-inset) 12px;
+}
+
+.footer .footer-apps ul {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.footer .footer-apps li {
+  display: flex;
+}
+
+.footer .footer-apps a {
+  display: flex;
+}
+
+.footer .footer-app-badges img {
+  height: 40px;
+  width: auto;
+}
+
+.footer .footer-social a {
+  align-items: center;
+  height: 24px;
+}
+
+.footer .footer-social img {
+  height: 16px;
+  width: auto;
+}
+
+/* copyright + legal links: one link per row on mobile */
+.footer .footer-legal {
+  margin-bottom: 24px;
+  padding: 0 var(--footer-inset);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer .footer-legal .footer-inner {
+  padding: 20px 0;
+  border-top: 1px solid var(--footer-rule);
+  border-bottom: 1px solid var(--footer-rule);
+}
+
+.footer .footer-copyright {
+  margin-bottom: 10px;
+  font-family: var(--footer-font-bold);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer .footer-legal ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.footer .footer-legal a {
+  display: inline-block;
+  padding: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* important legal disclosures */
+.footer .footer-disclosures {
+  padding-bottom: 12px;
+}
+
+.footer .footer-disclosures .footer-inner {
+  padding: 0 var(--footer-inset);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer .footer-disclosures h4 {
+  margin: 0 0 8px;
+  font-family: var(--footer-font-bold);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--footer-text);
+}
+
+.footer .footer-disclosures p {
+  margin: 0 0 16px;
+  color: var(--footer-muted-text);
+}
+
+/* Citi logo: mobile and desktop variants */
+.footer .footer-brand .footer-inner {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.footer .footer-brand .footer-logo {
+  width: 88px;
+  height: 57px;
+}
+
+.footer .footer-brand .footer-logo-mobile {
+  margin-left: 8px;
+}
+
+.footer .footer-brand .footer-logo-desktop {
+  display: none;
+}
+
+/* text-link hover: underline only (icons and badges have no hover effect) */
+.footer .footer-links a:hover,
+.footer .footer-legal a:hover {
+  color: var(--footer-text);
+  text-decoration: underline;
+}
+
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  .footer {
+    --footer-inset: 6.6667%;
   }
+
+  .footer .footer-links {
+    padding-bottom: 20px;
+  }
+
+  .footer .footer-links .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px var(--footer-inset) 0;
+  }
+
+  .footer .footer-column {
+    flex: 0 1 240px;
+    border-bottom: 0;
+  }
+
+  .footer .footer-column h2 {
+    margin: 0 0 16px;
+  }
+
+  .footer .footer-column-list,
+  .footer .footer-column-list.is-open {
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+    transition: none;
+  }
+
+  .footer .footer-column a {
+    padding: 6px 20px 6px 0;
+  }
+
+  .footer .footer-badge {
+    flex: 0 0 49px;
+  }
+
+  .footer .footer-apps .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px var(--footer-inset);
+  }
+
+  .footer .footer-apps ul {
+    gap: 24px;
+  }
+
+  .footer .footer-legal {
+    padding: 0 var(--footer-inset) 24px;
+  }
+
+  .footer .footer-legal .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 20px 0 14px;
+  }
+
+  .footer .footer-copyright {
+    margin-bottom: 0;
+  }
+
+  .footer .footer-legal ul {
+    flex-flow: row wrap;
+    gap: 0;
+  }
+
+  .footer .footer-legal a {
+    padding: 6px 20px;
+  }
+
+  .footer .footer-brand .footer-logo-mobile {
+    display: none;
+  }
+
+  .footer .footer-brand .footer-logo-desktop {
+    display: block;
+    margin: 0 0 0 35px;
+  }
+}
+
+/* speed-bump dialog (appended to body, scoped by its own class) */
+.footer-speedbump {
+  box-sizing: border-box;
+  width: min(792px, calc(100% - 32px));
+  max-height: calc(100% - 60px);
+  margin: 30px auto auto;
+  padding: 0;
+  border: 1px solid rgb(0 0 0 / 20%);
+  border-radius: 6px;
+  background: rgb(255 255 255);
+  color: rgb(51 51 51);
+  font-family: "Interstate_Light", interstate, var(--body-font-family);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer-speedbump::backdrop {
+  background: rgb(0 0 0 / 50%);
+}
+
+.footer-speedbump .footer-speedbump-close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(68 68 68);
+  cursor: pointer;
+}
+
+.footer-speedbump .footer-speedbump-close::before,
+.footer-speedbump .footer-speedbump-close::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 6px;
+  width: 13px;
+  height: 2px;
+  background: rgb(255 255 255);
+  transform: rotate(45deg);
+}
+
+.footer-speedbump .footer-speedbump-close::after {
+  transform: rotate(-45deg);
+}
+
+.footer-speedbump .footer-speedbump-title {
+  margin: 70px 40px 20px;
+  font-family: "Interstate_Light", interstate, var(--body-font-family);
+  font-size: 42px;
+  font-weight: 200;
+  line-height: 50px;
+}
+
+.footer-speedbump .footer-speedbump-body {
+  padding: 0 40px;
+}
+
+.footer-speedbump .footer-speedbump-body p {
+  margin: 0 0 15px;
+}
+
+.footer-speedbump .footer-speedbump-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 40px 31px;
+}
+
+.footer-speedbump .footer-speedbump-cta {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 220px;
+  margin: 20px 20px 20px 0;
+  padding: 0 24px;
+  border: 2px solid rgb(5 109 174);
+  border-radius: 6px;
+  background: rgb(5 109 174);
+  color: rgb(255 255 255);
+  font-family: "Interstate_Bold", interstate, var(--body-font-family);
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer-speedbump .footer-speedbump-cta:hover {
+  border-color: rgb(0 45 114);
+  background: rgb(0 45 114);
+}
+
+.footer-speedbump .footer-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

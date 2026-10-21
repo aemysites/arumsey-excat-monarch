@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/purchase-rates",
+  "path": "mortgage/purchase-rates",
+  "timestamp": "2026-10-21T16:34:53.900Z",
+  "title": "Current Mortgage Rates | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-choice",
+    "columns-media",
+    "columns-media",
+    "columns-media",
+    "hero-chevron",
+    "section-subnav",
+    "location-selector",
+    "columns-contact",
+    "accordion-disclosure",
+    "table-rates",
+    "cards-highlight",
+    "page-tabs"
+  ],
+  "fragments": [
+    "fragments/mortgage/purchase-rates/accordion-disclosure-1"
+  ],
+  "importScript": "20a7308ac938"
+}

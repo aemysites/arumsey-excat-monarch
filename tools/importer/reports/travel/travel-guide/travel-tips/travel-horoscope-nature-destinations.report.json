@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/travel-horoscope-nature-destinations",
+  "path": "travel/travel-guide/travel-tips/travel-horoscope-nature-destinations",
+  "timestamp": "2026-10-21T18:08:53.271Z",
+  "title": "A travel horoscope to immerse yourself in nature | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav",
+    "fragments/travel/travel-guide/travel-tips/travel-horoscope-nature-destinations/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

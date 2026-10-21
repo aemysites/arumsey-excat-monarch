@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/relationship-benefits",
+  "path": "mortgage/relationship-benefits",
+  "timestamp": "2026-10-21T16:38:49.141Z",
+  "title": "Mortgage Relationship Pricing | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "hero-chevron",
+    "section-subnav",
+    "location-selector",
+    "columns-contact",
+    "accordion-disclosure",
+    "columns-divided",
+    "columns-divided",
+    "table-rates"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

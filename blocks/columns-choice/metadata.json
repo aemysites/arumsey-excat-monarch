@@ -1,0 +1,43 @@
+{
+  "variantName": "columns-choice",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link",
+    "purpose": "side-by-side columns, by default two alternatives separated by an \"or\" divider"
+  },
+  "contentPattern": {
+    "structure": "one row with one cell per column (usually two). An optional short middle cell such as \"or\" sets the divider text. Columns can hold heading, text, links, an image, or a table"
+  },
+  "options": [
+    {
+      "class": "media-promo",
+      "label": "Media Promo"
+    },
+    {
+      "class": "promo-banner",
+      "label": "Promo Banner"
+    },
+    {
+      "class": "with-tables",
+      "label": "With Tables"
+    },
+    {
+      "class": "with-icons",
+      "label": "With Icons"
+    }
+  ],
+  "memberVariantIds": [
+    "v_26f9fcda73b2",
+    "v_7b819b669f6c",
+    "v_223fc4059d16",
+    "v_bcbd4774253e",
+    "v_eadd58c8a855"
+  ],
+  "usage": "Offer comparisons on mortgage and home-equity pages; image + text promos on home and banking pages.",
+  "reuseGuidance": "media-promo: image column + text column; promo-banner: text with image to the right; with-tables: columns hold tables; with-icons: centred icon cards. Promo options have no divider."
+}

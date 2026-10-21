@@ -1,0 +1,22 @@
+{
+  "variantName": "rating-summary",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link + image",
+    "purpose": "Zillow lender rating summary: live score, star fill, review count and \"as of\" date from a server-side proxy, next to authored Zillow attribution"
+  },
+  "contentPattern": {
+    "structure": "optional config row \"endpoint\" | proxy URL (link or text); optional config row \"reviews\" | link to the Zillow reviews page; one content row: cell 1 = \"How this rating is calculated\" link, cell 2 = Zillow logo + copyright line with Terms of Use link. Do NOT author the score, review count or date: they come from the feed. Config rows are removed from the rendered DOM"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_316d08e8ca4d-1"
+  ],
+  "usage": "Live Zillow rating on mortgage pages. Endpoint resolution order: authored \"endpoint\" (or \"feed\"/\"feed-url\"/\"source\") row, then page metadata \"zillow-rating-endpoint\", then /placeholders.json key \"Zillow Rating Endpoint\" (zillowRatingEndpoint). The proxy must hold the Zillow partner key server-side and return JSON { \"rating\": 4.85, \"reviewCount\": 4474, \"asOf\": \"2026-10-20\", \"scale\": 5 (optional), \"reviewsUrl\": \"https://...\" (optional) }. rating must be 0..scale, reviewCount a non-negative integer, asOf an ISO date. If no endpoint is configured, the request fails or times out (8s), or the data is malformed, the score row is hidden (class rating-summary-unavailable) and the static parts stay. Stars expose role=img with aria-label \"Rated X out of 5 stars\". Open items: proxy host, Zillow credentials, response caching.",
+  "reuseGuidance": "Use only for feed-driven rating widgets. Never put an API key in the block or page content."
+}

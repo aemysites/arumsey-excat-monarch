@@ -1,0 +1,70 @@
+{
+  "variantName": "cards-highlight",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + link + text + list",
+    "purpose": "Highlight tiles led by a large stat or key word (3x, 5%, Earn) with a label and supporting text; also used for rewards-rate strips, image cards and icon link rows"
+  },
+  "contentPattern": {
+    "structure": "one row per tile: optional image/icon cell, then a body cell whose first heading (or fully bold first paragraph) is the stat, followed by label and text paragraphs or lists; a body holding only one link makes the whole tile clickable"
+  },
+  "options": [
+    {
+      "class": "rate-strip",
+      "label": "Rate Strip"
+    },
+    {
+      "class": "with-image",
+      "label": "With Image"
+    },
+    {
+      "class": "icon-links",
+      "label": "Icon Links"
+    },
+    {
+      "class": "coloured-tiles-with-icons",
+      "label": "Coloured Tiles With Icons"
+    },
+    {
+      "class": "blue-cyan-dark",
+      "label": "Blue Cyan Dark"
+    },
+    {
+      "class": "blue-dark",
+      "label": "Blue Dark"
+    },
+    {
+      "class": "blue-dark-red",
+      "label": "Blue Dark Red"
+    },
+    {
+      "class": "cyan-grey",
+      "label": "Cyan Grey"
+    }
+  ],
+  "memberVariantIds": [
+    "v_fd05eb3a71bc",
+    "v_159599800119",
+    "v_d5aacbbc17e6",
+    "v_0b888a3b71c2",
+    "v_82f0bf988460-7",
+    "v_82f0bf988460-1",
+    "v_82f0bf988460-2",
+    "v_82f0bf988460-3",
+    "v_82f0bf988460-4",
+    "v_82f0bf988460-5"
+  ],
+  "usage": {
+    "pages": [
+      "https://www.citi.com/mortgage/purchase-rates",
+      "https://www.citi.com/credit-cards/bloomingdales-credit-cards",
+      "https://www.citi.com/small-business-banking/cash-management"
+    ]
+  },
+  "reuseGuidance": "Default: outlined stat tiles. rate-strip for a single panel of earn rates split by rules; with-image for photo-topped cards; icon-links for centred icon + link rows; coloured-tiles-with-icons and the colour-sequence options (blue-cyan-dark, blue-dark, blue-dark-red, cyan-grey) for filled earn-rate tiles."
+}

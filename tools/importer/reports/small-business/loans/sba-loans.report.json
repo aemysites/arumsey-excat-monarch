@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/loans/sba-loans",
+  "path": "small-business/loans/sba-loans",
+  "timestamp": "2026-10-21T16:39:32.351Z",
+  "title": "SBA Loans | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "hero-chevron",
+    "accordion-feature",
+    "location-selector",
+    "columns-contact",
+    "columns-icon-features",
+    "carousel-cards",
+    "accordion-disclosure",
+    "cta-banner",
+    "cards-compare",
+    "columns-icon-strip"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

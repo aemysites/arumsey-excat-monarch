@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/what-is-a-luxury-hotel",
+  "path": "travel/travel-guide/hotels-and-resorts/what-is-a-luxury-hotel",
+  "timestamp": "2026-10-21T19:13:30.632Z",
+  "title": "What Defines a Luxury Hotel? Unforgettable Experiences and Exclusive Services | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

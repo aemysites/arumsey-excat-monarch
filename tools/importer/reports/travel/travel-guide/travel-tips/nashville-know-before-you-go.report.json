@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/nashville-know-before-you-go",
+  "path": "travel/travel-guide/travel-tips/nashville-know-before-you-go",
+  "timestamp": "2026-10-21T19:17:26.640Z",
+  "title": "An Essential Guide to Nashville | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

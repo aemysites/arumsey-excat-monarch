@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/beginner-paragliding-tips",
+  "path": "travel/travel-guide/travel-tips/beginner-paragliding-tips",
+  "timestamp": "2026-10-21T18:47:28.684Z",
+  "title": "Paragliding Tips for Beginners | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "350ab78a9631"
+}

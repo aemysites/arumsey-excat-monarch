@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips/what-to-do-if-you-miss-your-flight",
+  "path": "travel/travel-guide/flying-tips/what-to-do-if-you-miss-your-flight",
+  "timestamp": "2026-10-21T19:12:03.059Z",
+  "title": "What Happens If You Miss Your Flight | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

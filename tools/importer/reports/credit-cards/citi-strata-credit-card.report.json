@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+  "path": "credit-cards/citi-strata-credit-card",
+  "timestamp": "2026-10-21T19:25:11.150Z",
+  "title": "Citi Strata® Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-icon",
+    "accordion-feature",
+    "accordion-feature",
+    "benefits-showcase",
+    "hero-card",
+    "cards-highlight",
+    "columns-key-terms",
+    "disclosure-links",
+    "cards-icon-links",
+    "cards-icon-links",
+    "cards-benefit-tiles"
+  ],
+  "fragments": [
+    "fragments/credit-card-categories"
+  ],
+  "importScript": "089f57e4feb6"
+}

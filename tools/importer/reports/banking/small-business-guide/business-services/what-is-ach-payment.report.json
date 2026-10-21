@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/small-business-guide/business-services/what-is-ach-payment",
+  "path": "banking/small-business-guide/business-services/what-is-ach-payment",
+  "timestamp": "2026-10-21T18:58:12.037Z",
+  "title": "What Is an ACH payment? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

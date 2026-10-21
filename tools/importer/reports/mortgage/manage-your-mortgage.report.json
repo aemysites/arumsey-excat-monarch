@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/manage-your-mortgage",
+  "path": "mortgage/manage-your-mortgage",
+  "timestamp": "2026-10-21T16:37:31.135Z",
+  "title": "Manage Your Mortgage - Sign In | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "hero-chevron",
+    "columns-contact"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

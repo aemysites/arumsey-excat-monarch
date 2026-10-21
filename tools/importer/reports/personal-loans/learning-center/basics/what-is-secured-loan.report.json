@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/personal-loans/learning-center/basics/what-is-secured-loan",
+  "path": "personal-loans/learning-center/basics/what-is-secured-loan",
+  "timestamp": "2026-10-21T18:02:14.358Z",
+  "title": "What Is a Secured Loan? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/personal-loans/learning-center/basics/what-is-secured-loan/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/summer-travel-guide",
+  "path": "travel/travel-guide/travel-tips/summer-travel-guide",
+  "timestamp": "2026-10-21T19:18:00.042Z",
+  "title": "Essential Tips for Stress-Free Summer Travel | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

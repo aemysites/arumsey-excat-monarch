@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/what-to-know-about-car-rental-insurance",
+  "path": "travel/travel-guide/car-rental-tips/what-to-know-about-car-rental-insurance",
+  "timestamp": "2026-10-21T19:11:11.466Z",
+  "title": "What to Know About Rental Car Insurance | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

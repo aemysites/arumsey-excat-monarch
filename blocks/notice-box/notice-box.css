@@ -1,0 +1,391 @@
+/*
+ * Notice Box: values from citi.com computed styles.
+ * default      .miranda-box investment disclosure (citigold-private-client, bank-accounts)
+ * contact      .banner-tile-wrapper (citigold-private-client) / .rtb-tiles call box (home-equity-employee)
+ * note         .relationship-line > h2 eyebrow (citigold-private-client);
+ *              text-only note = .calcuator-footer (debt-consolidation-loan-calculator)
+ * icon-callout .info-module (home-equity/line-of-credit)
+ * blue         .atm-container (banking/atm-network)
+ * with-image   PDF reader note (credit-cards/compare-credit-cards/CMA-PIT)
+ * with-icon    .alert-bar (home-equity/line-of-credit)
+ */
+
+.notice-box {
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height-m);
+}
+
+.notice-box .notice-box-body > :first-child {
+  margin-top: 0;
+}
+
+.notice-box .notice-box-body > :last-child {
+  margin-bottom: 0;
+}
+
+.notice-box .notice-box-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* generic media + body layout (variants below refine it) */
+.notice-box.notice-box-has-media {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (width >= 600px) {
+  .notice-box.notice-box-has-media {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .notice-box.notice-box-has-media .notice-box-body {
+    flex: 1 1 auto;
+  }
+}
+
+/* default: boxed investment / insurance disclosure */
+.notice-box:not(.contact, .note, .icon-callout, .blue, .with-image, .with-icon) {
+  border: 1px solid #000;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.notice-box:not(.contact, .note, .icon-callout, .blue, .with-image, .with-icon) p {
+  margin: 0;
+}
+
+.notice-box:not(.contact, .note, .icon-callout, .blue, .with-image, .with-icon) :is(strong, b) {
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* contact: white tile with heading + text (+ phone / link) */
+.notice-box.contact {
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 10%) 0 0 50px 3px;
+  text-align: center;
+}
+
+.notice-box.contact h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.notice-box.contact p {
+  margin: 0;
+  line-height: 22px;
+}
+
+@media (width >= 900px) {
+  .notice-box.contact p {
+    line-height: 24px;
+  }
+}
+
+/* contact with a sub-heading: left-aligned "Give us a call" box */
+.notice-box.contact:has(.notice-box-body > :is(h3, h4, h5, h6)) {
+  padding-bottom: 40px;
+  border-radius: 9px;
+  box-shadow: rgb(0 0 0 / 10%) 0 1px 10px 0;
+  text-align: start;
+}
+
+.notice-box.contact :is(h3, h4, h5, h6) {
+  margin: 8px 0 20px;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.notice-box.contact:where(:has(.notice-box-body > :is(h3, h4, h5, h6))) p {
+  margin: 0 0 16px;
+  font-size: var(--body-font-size-s);
+  line-height: 20px;
+}
+
+.notice-box.contact a:any-link,
+main .notice-box.contact a.button:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* phone number line right under the sub-heading */
+.notice-box.contact :where(:is(h3, h4, h5, h6) + p) a:any-link {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* banner tile straight after a photo hero overlaps its bottom edge (citigold banner) */
+.hero-photo-wrapper + .notice-box-wrapper > .notice-box.contact {
+  position: relative;
+  margin-top: -30px;
+}
+
+@media (width >= 900px) {
+  .hero-photo-wrapper + .notice-box-wrapper > .notice-box.contact {
+    margin-top: -24px;
+  }
+}
+
+/* note: eyebrow heading framed by rules */
+.notice-box.note:has(.notice-box-body > :is(h1, h2, h3, h4, h5, h6)) {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 8px;
+  padding: 18px;
+}
+
+.notice-box.note:has(.notice-box-body > :is(h1, h2, h3, h4, h5, h6))::before,
+.notice-box.note:has(.notice-box-body > :is(h1, h2, h3, h4, h5, h6))::after {
+  content: '';
+  border-top: 1px solid #ccc;
+}
+
+.notice-box.note :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  color: var(--text-color-muted);
+  font-size: var(--body-font-size-xs);
+  font-weight: 300;
+  line-height: var(--body-line-height-xs);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@media (width >= 900px) {
+  .notice-box.note:has(.notice-box-body > :is(h1, h2, h3, h4, h5, h6)) {
+    padding: 16px 40px;
+  }
+}
+
+/* note without a heading: shaded disclaimer strip */
+.notice-box.note:not(:has(.notice-box-body > :is(h1, h2, h3, h4, h5, h6))) {
+  padding: 24px 40px;
+  background-color: rgb(239 243 248);
+  font-size: var(--body-font-size-s);
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* icon-callout: light-blue rounded callout, icon left, heading, text, chevron link */
+.notice-box.icon-callout,
+.notice-box.icon-callout.notice-box-has-media {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: rgb(205 233 254);
+  color: rgb(38 41 43);
+  text-align: start;
+}
+
+.notice-box.icon-callout .notice-box-media {
+  flex: 0 0 auto;
+}
+
+.notice-box.icon-callout .notice-box-media img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.notice-box.icon-callout :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+.notice-box.icon-callout p {
+  margin: 16px 0 0;
+  letter-spacing: 0.16px;
+}
+
+.notice-box.icon-callout .notice-box-cta,
+.notice-box.icon-callout p.button-container {
+  display: block;
+  margin: 24px 0 0;
+}
+
+.notice-box.icon-callout :where(.notice-box-cta) a:any-link,
+main .notice-box.icon-callout :where(.notice-box-cta) a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--citi-brand-blue);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  text-decoration: none;
+}
+
+.notice-box.icon-callout :where(.notice-box-cta) a:any-link::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) center / 16px 16px no-repeat;
+}
+
+.notice-box.icon-callout :where(.notice-box-cta) a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .notice-box.icon-callout,
+  .notice-box.icon-callout.notice-box-has-media {
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 64px;
+  }
+
+  .notice-box.icon-callout .notice-box-media {
+    display: flex;
+    justify-content: center;
+    width: 144px;
+  }
+
+  .notice-box.icon-callout .notice-box-media img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .notice-box.icon-callout .notice-box-body {
+    margin-left: 24px;
+  }
+}
+
+/* blue: full-bleed Citi blue intro band, centred white heading + text */
+.notice-box.blue {
+  padding: 20px;
+  background-color: var(--citi-blue);
+  box-shadow: 0 0 0 100vmax var(--citi-blue);
+  clip-path: inset(0 -100vmax);
+  color: #fff;
+  text-align: center;
+}
+
+.notice-box.blue :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 25px;
+  color: inherit;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 50px;
+}
+
+.notice-box.blue .notice-box-body > p {
+  max-width: 675px;
+  margin: 0 auto 40px;
+}
+
+@media (width >= 900px) {
+  .notice-box.blue {
+    padding: 40px 20px;
+  }
+
+  .notice-box.blue :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 68px;
+    line-height: 76px;
+  }
+}
+
+/* with-image: PDF reader badge beside the note, no frame */
+.notice-box.with-image,
+.notice-box.with-image.notice-box-has-media {
+  display: block;
+}
+
+.notice-box.with-image .notice-box-media {
+  display: flex;
+  justify-content: center;
+}
+
+.notice-box.with-image .notice-box-body {
+  padding: 0 10px;
+}
+
+.notice-box.with-image a:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .notice-box.with-image,
+  .notice-box.with-image.notice-box-has-media {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 237px) minmax(0, 710px) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .notice-box.with-image .notice-box-media {
+    grid-column: 2;
+  }
+
+  .notice-box.with-image .notice-box-body {
+    grid-column: 3;
+  }
+}
+
+/* with-icon: slim white alert bar, icon + one line of text with a bold link */
+.notice-box.with-icon,
+.notice-box.with-icon.notice-box-has-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background-color: #fff;
+  color: rgb(38 41 43);
+  font-size: var(--body-font-size-s);
+  line-height: 20px;
+  letter-spacing: 0.14px;
+}
+
+.notice-box.with-icon .notice-box-media {
+  flex: 0 0 auto;
+}
+
+.notice-box.with-icon .notice-box-media :is(img, .icon) {
+  width: 24px;
+  height: 24px;
+}
+
+.notice-box.with-icon .notice-box-body {
+  flex: 0 1 auto;
+}
+
+.notice-box.with-icon .notice-box-body p {
+  margin: 0;
+}
+
+.notice-box.with-icon a:any-link,
+main .notice-box.with-icon a.button:any-link {
+  color: var(--citi-brand-blue);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (width >= 600px) {
+  .notice-box.with-icon.notice-box-has-media .notice-box-body {
+    flex: 0 1 auto;
+  }
+}

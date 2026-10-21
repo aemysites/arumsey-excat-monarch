@@ -1,0 +1,33 @@
+{
+  "variantName": "cards-teaser",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "image + heading + link + text",
+    "purpose": "image-topped teaser cards linking to services or articles"
+  },
+  "contentPattern": {
+    "structure": "one row per card; cells: image, body (heading, short text, final paragraph with one link as the CTA). For with-topic-tags, add a read-time line and a bulleted list of tag links"
+  },
+  "options": [
+    {
+      "class": "with-topic-tags",
+      "label": "With Topic Tags"
+    },
+    {
+      "class": "light-blue",
+      "label": "Light Blue"
+    }
+  ],
+  "memberVariantIds": [
+    "v_24e3199ccf4d",
+    "v_1c40f560228a",
+    "v_555a0ff186d8"
+  ],
+  "usage": "Service teasers on small-business pages, article teasers on home-equity and travel pages.",
+  "reuseGuidance": "Use with-topic-tags for article cards with tags; light-blue when cards sit on a light-blue section."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/how-to-get-hotel-discounts",
+  "path": "travel/travel-guide/hotels-and-resorts/how-to-get-hotel-discounts",
+  "timestamp": "2026-10-21T19:12:53.324Z",
+  "title": "How to Get Hotel Discounts | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

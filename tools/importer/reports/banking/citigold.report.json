@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/citigold",
+  "path": "banking/citigold",
+  "timestamp": "2026-10-21T19:23:44.159Z",
+  "title": "Citigold - Premium Banking & Wealth Management Service | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "notice-box",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "location-selector",
+    "tabs-feature"
+  ],
+  "fragments": [
+    "fragments/banking/citigold/premium-banking",
+    "fragments/banking/citigold/lifestyle-travel",
+    "fragments/banking/citigold/preferred-pricing",
+    "fragments/banking/citigold/accordion-feature-1"
+  ],
+  "importScript": "089f57e4feb6"
+}

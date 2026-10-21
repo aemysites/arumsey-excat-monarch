@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/personal-loans/learning-center/basics/personal-loan-vs-auto-loan",
+  "path": "personal-loans/learning-center/basics/personal-loan-vs-auto-loan",
+  "timestamp": "2026-10-21T18:01:18.787Z",
+  "title": "Auto Loan vs. Personal Loan: Which Should You Use to Buy a Car? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/personal-loans/learning-center/basics/personal-loan-vs-auto-loan/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/small-business-guide/lending/guide-to-sba-loans",
+  "path": "banking/small-business-guide/lending/guide-to-sba-loans",
+  "timestamp": "2026-10-21T17:41:22.848Z",
+  "title": "What Are SBA Loans and How Do They Work? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/small-business-guide/lending/guide-to-sba-loans/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

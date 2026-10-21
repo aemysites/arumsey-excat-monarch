@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/small-town-holidays",
+  "path": "travel/travel-guide/travel-tips/small-town-holidays",
+  "timestamp": "2026-10-21T19:17:51.333Z",
+  "title": "2026 Holiday Travel: 5 Festive U.S. Destinations | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

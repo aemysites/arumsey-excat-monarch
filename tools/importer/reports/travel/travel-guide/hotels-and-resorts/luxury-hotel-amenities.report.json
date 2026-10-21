@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/luxury-hotel-amenities",
+  "path": "travel/travel-guide/hotels-and-resorts/luxury-hotel-amenities",
+  "timestamp": "2026-10-21T19:13:06.045Z",
+  "title": "Luxury Hotel Amenities You Should Know | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

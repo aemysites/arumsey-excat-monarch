@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/what-is-mobile-check-deposit",
+  "path": "banking/personal-banking-guide/basic-finance/what-is-mobile-check-deposit",
+  "timestamp": "2026-10-21T18:55:02.620Z",
+  "title": "What Is Mobile Check Deposit? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

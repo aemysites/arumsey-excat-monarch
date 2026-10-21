@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/special-offers",
+  "path": "banking/special-offers",
+  "timestamp": "2026-10-21T16:37:28.110Z",
+  "title": "Bank Account Bonus Offers | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "accordion-feature",
+    "accordion-feature",
+    "location-selector",
+    "hero-photo"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

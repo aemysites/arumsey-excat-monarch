@@ -1,0 +1,61 @@
+{
+  "variantName": "cards-credit-card",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + link + image + text + list",
+    "purpose": "Credit card product tiles: optional offer badge strip, card art with annual fee caption, card name and description, icon feature list or offer box, Card details / Apply now CTAs and footnote links"
+  },
+  "contentPattern": {
+    "structure": "one row per product: optional first cell with a short badge text (e.g. Bonus Offer), a cell with the card art image and optional caption (annual fee), then a content cell with the card name heading, description paragraph, feature lists, link-only paragraphs for CTAs (Card details, Apply now) and footnote links"
+  },
+  "options": [
+    {
+      "class": "compact-four-columns",
+      "label": "Compact Four Columns"
+    },
+    {
+      "class": "compact-four-columns-2",
+      "label": "Compact Four Columns 2"
+    },
+    {
+      "class": "compact-four-columns-3",
+      "label": "Compact Four Columns 3"
+    },
+    {
+      "class": "alt",
+      "label": "Alt"
+    },
+    {
+      "class": "compact-four-columns-4",
+      "label": "Compact Four Columns 4"
+    },
+    {
+      "class": "compact-three-columns",
+      "label": "Compact Three Columns"
+    }
+  ],
+  "memberVariantIds": [
+    "v_ea515b290077",
+    "v_afc5c66c7e3f",
+    "v_c970582107ed",
+    "v_d78253a72593",
+    "v_ea515b290077-1",
+    "v_ea515b290077-2",
+    "v_ea515b290077-3",
+    "v_ea515b290077-4",
+    "v_ea515b290077-5",
+    "v_ea515b290077-6",
+    "v_ea515b290077-7"
+  ],
+  "usage": {
+    "pages": [
+      "https://www.citi.com/credit-cards/rewards-credit-cards"
+    ]
+  },
+  "reuseGuidance": "Default is a two-column detailed product listing. Use compact-four-columns(-2/-3/-4) for 4-up summary rows with small card art beside the name, compact-three-columns for 3-up, alt for stacked art-over-name tiles."
+}

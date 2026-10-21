@@ -1,0 +1,29 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/savings-account",
+  "path": "banking/savings-account",
+  "timestamp": "2026-10-21T16:35:17.748Z",
+  "title": "Savings Account | Open a Savings Account Online | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "location-selector",
+    "columns-contact",
+    "tabs-feature"
+  ],
+  "fragments": [
+    "fragments/banking/savings-account/benefits-of-savings-accounts",
+    "fragments/banking/savings-account/ways-to-save",
+    "fragments/banking/savings-account/accordion-feature-1"
+  ],
+  "importScript": "20a7308ac938"
+}

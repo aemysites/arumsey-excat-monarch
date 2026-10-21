@@ -1,0 +1,22 @@
+{
+  "variantName": "legal-links",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link + list + image",
+    "purpose": "single row of uppercase legal/corporate links (Terms & Conditions, Privacy, Security, Careers, About us, Contact us) with a brand/home link (CITI.COM) on the left"
+  },
+  "contentPattern": {
+    "structure": "one row: first cell holds the brand or home link (text, logo or heading); further cells (or a list) hold the legal links. Any non-link copy, such as a copyright line, is kept below the links"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_49769f166c25"
+  ],
+  "usage": "Use at the very bottom of product pages for the corporate legal link row.",
+  "reuseGuidance": "Reuse for any horizontal row of legal/utility links. Long disclosure copy belongs in legal-disclosures; the site footer is built by the footer block."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/plan-your-next-trip-around-a-summer-soundtrack",
+  "path": "travel/travel-guide/travel-tips/plan-your-next-trip-around-a-summer-soundtrack",
+  "timestamp": "2026-10-21T19:17:36.945Z",
+  "title": "Plan Your Next Trip Around a Summer Soundtrack | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

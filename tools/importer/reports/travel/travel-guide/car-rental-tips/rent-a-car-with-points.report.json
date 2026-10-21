@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/rent-a-car-with-points",
+  "path": "travel/travel-guide/car-rental-tips/rent-a-car-with-points",
+  "timestamp": "2026-10-21T19:10:54.660Z",
+  "title": "Can You Use Points or Miles to Book a Rental Car? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

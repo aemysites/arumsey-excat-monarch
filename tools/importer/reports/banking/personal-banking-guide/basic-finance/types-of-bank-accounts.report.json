@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/types-of-bank-accounts",
+  "path": "banking/personal-banking-guide/basic-finance/types-of-bank-accounts",
+  "timestamp": "2026-10-21T18:54:01.617Z",
+  "title": "Types of Bank Accounts | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

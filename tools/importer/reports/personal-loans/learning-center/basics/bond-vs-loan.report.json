@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/personal-loans/learning-center/basics/bond-vs-loan",
+  "path": "personal-loans/learning-center/basics/bond-vs-loan",
+  "timestamp": "2026-10-21T17:59:37.527Z",
+  "title": "Bond vs. Loan: What’s the Difference? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/personal-loans/learning-center/basics/bond-vs-loan/article-body-1",
+    "fragments/personal-loans/learning-center/basics/bond-vs-loan/article-body-2"
+  ],
+  "importScript": "20a7308ac938"
+}

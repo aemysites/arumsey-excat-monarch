@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/loans",
+  "path": "small-business/loans",
+  "timestamp": "2026-10-21T16:36:01.832Z",
+  "title": "Business Lending | Small Business Loans | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-media",
+    "hero-chevron",
+    "location-selector",
+    "columns-contact",
+    "columns-icon-features",
+    "carousel-cards",
+    "carousel-cards",
+    "accordion-disclosure",
+    "cta-banner",
+    "cards-compare",
+    "columns-icon-strip",
+    "tabs-feature"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

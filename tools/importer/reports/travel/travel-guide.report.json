@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide",
+  "path": "travel/travel-guide",
+  "timestamp": "2026-10-21T18:04:19.589Z",
+  "title": "Tips and Inspiration | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-hub"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "20a7308ac938"
+}

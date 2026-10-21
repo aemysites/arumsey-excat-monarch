@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips/why-is-my-flight-delayed",
+  "path": "travel/travel-guide/flying-tips/why-is-my-flight-delayed",
+  "timestamp": "2026-10-21T19:12:10.354Z",
+  "title": "Why Flights Get Delayed | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

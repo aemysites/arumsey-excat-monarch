@@ -1,0 +1,33 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link + image + heading + button",
+    "purpose": "product/offer cards with eyebrow, image, heading, text and Apply/Learn More CTAs"
+  },
+  "contentPattern": {
+    "structure": "one row per card; one cell per part, in display order: eyebrow/heading, image, text, list, a final cell of links (first link is the primary CTA, the rest secondary). A cell holding only a /fragments/ link is replaced by the fragment"
+  },
+  "options": [
+    {
+      "class": "stats",
+      "label": "Stats"
+    },
+    {
+      "class": "benefit-tiles",
+      "label": "Benefit Tiles"
+    }
+  ],
+  "memberVariantIds": [
+    "v_db83cb217e29",
+    "v_1eabf6fe2734",
+    "v_82f0bf988460-6"
+  ],
+  "usage": "Featured product offers (home page, banking pages); stats tiles on card pages; benefit tiles.",
+  "reuseGuidance": "Use stats for big-number reward tiles, benefit-tiles for two wide heading + text tiles."
+}

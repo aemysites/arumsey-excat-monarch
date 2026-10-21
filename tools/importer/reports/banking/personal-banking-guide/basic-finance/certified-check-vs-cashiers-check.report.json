@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/certified-check-vs-cashiers-check",
+  "path": "banking/personal-banking-guide/basic-finance/certified-check-vs-cashiers-check",
+  "timestamp": "2026-10-21T16:37:52.385Z",
+  "title": "Certified Check vs. Cashier’s Check: Key Differences Explained | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/personal-banking-guide/basic-finance/certified-check-vs-cashiers-check/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

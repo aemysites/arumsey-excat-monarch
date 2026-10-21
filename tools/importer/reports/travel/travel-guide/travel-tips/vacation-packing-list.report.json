@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/vacation-packing-list",
+  "path": "travel/travel-guide/travel-tips/vacation-packing-list",
+  "timestamp": "2026-10-21T19:18:43.440Z",
+  "title": "Packing for the Ultimate Vacation Experience | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

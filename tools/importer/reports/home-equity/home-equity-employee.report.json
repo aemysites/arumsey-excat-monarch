@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/home-equity/home-equity-employee",
+  "path": "home-equity/home-equity-employee",
+  "timestamp": "2026-10-21T16:35:58.902Z",
+  "title": "Citi Employee Home Equity Offers | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-choice",
+    "notice-box",
+    "hero-chevron",
+    "accordion-disclosure",
+    "cta-banner"
+  ],
+  "fragments": [
+    "fragments/home-equity/home-equity-employee/columns-choice-1",
+    "fragments/home-equity/home-equity-employee/columns-choice-2",
+    "fragments/home-equity/home-equity-employee/accordion-disclosure-1"
+  ],
+  "importScript": "20a7308ac938"
+}

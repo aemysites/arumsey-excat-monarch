@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/best-time-to-book-a-hotel",
+  "path": "travel/travel-guide/hotels-and-resorts/best-time-to-book-a-hotel",
+  "timestamp": "2026-10-21T19:12:19.007Z",
+  "title": "Best Time to Book a Hotel | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

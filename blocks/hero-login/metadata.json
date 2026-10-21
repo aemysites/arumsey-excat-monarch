@@ -1,0 +1,25 @@
+{
+  "variantName": "hero-login",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "large",
+    "structure": "heading + text + button + link + image",
+    "purpose": "home / landing hero with an offer (eyebrow, heading, copy, CTA), an optional product image and a sign-on panel (User ID, Password, Remember me, Sign On, register and forgot links, passwordless sign-on)"
+  },
+  "contentPattern": {
+    "structure": "optional picture-only rows (with two, the first is the background and the second the product image; with one, it is the product image, or the background for text-box-and-sign-on-panel); one copy cell (eyebrow, heading, text, CTA); one sign-on cell whose plain paragraphs are field labels (User ID, Password, Remember User ID), an optional heading, an optional plain list for an account-type select, a 'Sign On' link (becomes the submit button) and helper links (Register / Activate, Forgot, Passwordless Sign On). A cell holding only a link to a /fragments/ page is replaced by that fragment"
+  },
+  "options": [
+    { "class": "text-box-and-sign-on-panel", "label": "Text Box And Sign On Panel" }
+  ],
+  "memberVariantIds": [
+    "v_1f90aa0a9bc9",
+    "v_63f2346ac741"
+  ],
+  "usage": "Use on the home or a landing page where returning customers need to sign on from the hero. Default shows copy, product image and sign-on panel in three columns over an optional background; text-box-and-sign-on-panel puts the copy in a boxed panel over a full-bleed photo with the sign-on panel to the right.",
+  "reuseGuidance": "Reuse wherever a sign-on form sits in the hero. The form is presentational: submit navigates to the authored Sign On link and never posts credentials. Use hero-card or hero-chevron when no sign-on is needed."
+}

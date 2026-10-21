@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips/flight-tips-flying-with-infants",
+  "path": "travel/travel-guide/flying-tips/flight-tips-flying-with-infants",
+  "timestamp": "2026-10-21T18:05:23.999Z",
+  "title": "Essential Tips for Flying with Infants | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav",
+    "fragments/travel/travel-guide/flying-tips/flight-tips-flying-with-infants/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

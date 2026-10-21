@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/travel-with-pet",
+  "path": "travel/travel-guide/travel-tips/travel-with-pet",
+  "timestamp": "2026-10-21T19:18:25.957Z",
+  "title": "The Ultimate Guide to Traveling with Pets | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

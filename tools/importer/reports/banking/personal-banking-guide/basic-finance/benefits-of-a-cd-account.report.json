@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/benefits-of-a-cd-account",
+  "path": "banking/personal-banking-guide/basic-finance/benefits-of-a-cd-account",
+  "timestamp": "2026-10-21T16:37:49.684Z",
+  "title": "Benefits of Certificate of Deposit (CDs) | Advantages of CDs | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/personal-banking-guide/basic-finance/benefits-of-a-cd-account/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

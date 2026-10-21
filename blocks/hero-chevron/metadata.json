@@ -1,0 +1,35 @@
+{
+  "variantName": "hero-chevron",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + button + image",
+    "purpose": "banking / mortgage page hero: eyebrow, heading, short copy and one or two CTAs on the left, a photo cropped to a chevron (or rounded) shape on the right"
+  },
+  "contentPattern": {
+    "structure": "optional picture-only row(s) for the photo, then the copy cell (eyebrow paragraph, heading, text, optional list, CTA links); the photo may instead share the copy's row (cell order sets the photo side). Further rows become a product-details strip, one column per cell. A cell holding only a link to a /fragments/ page is replaced by that fragment. Background colour comes from the section style (dark, blue) or the dark option"
+  },
+  "options": [
+    { "class": "dark", "label": "Dark" },
+    { "class": "rounded-image", "label": "Rounded Image" },
+    { "class": "rounded-image-chevron-photo", "label": "Rounded Image Chevron Photo" },
+    { "class": "rounded-image-product-details", "label": "Rounded Image Product Details" },
+    { "class": "image", "label": "Image" }
+  ],
+  "memberVariantIds": [
+    "v_9d560b6cfd67",
+    "v_4f864c5fec1f",
+    "v_f3b365b580cc",
+    "v_f3b365b580cc-1",
+    "v_903a6d626c2d",
+    "v_5648004d41fb-1",
+    "v_c3bfa82c2f14",
+    "v_f09d1f52ea6f"
+  ],
+  "usage": "Use at the top of banking, mortgage, home-equity and small-business pages. Default crops the photo to a chevron; rounded-image uses a rounded rectangle photo; rounded-image-chevron-photo rounds the chevron tip; image shows the photo uncropped; rounded-image-product-details adds a bordered, divided product-details strip from extra rows. Set the section style to dark or blue (or add dark) for light text.",
+  "reuseGuidance": "Reuse for any non-card product hero with a lifestyle photo. Use hero-card for credit-card offers with a card image and hero-photo for text laid over a full-bleed photo."
+}

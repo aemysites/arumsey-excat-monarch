@@ -1,0 +1,34 @@
+/* utility-bar: structural styles only; brand styling comes from the design pass */
+
+.utility-bar .utility-bar-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.utility-bar .utility-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 24px;
+}
+
+.utility-bar .utility-bar-item + .utility-bar-item {
+  border-left: 1px solid currentcolor;
+}
+
+.utility-bar .utility-bar-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.utility-bar .utility-bar-item .icon {
+  width: 20px;
+  height: 20px;
+}

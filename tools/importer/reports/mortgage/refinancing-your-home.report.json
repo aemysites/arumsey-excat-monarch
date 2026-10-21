@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/refinancing-your-home",
+  "path": "mortgage/refinancing-your-home",
+  "timestamp": "2026-10-21T17:59:18.664Z",
+  "title": "Refinancing Your Home | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-choice",
+    "hero-chevron",
+    "section-subnav",
+    "section-subnav",
+    "columns-contact",
+    "accordion-disclosure",
+    "cta-banner",
+    "cta-banner",
+    "columns-quick-paths"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

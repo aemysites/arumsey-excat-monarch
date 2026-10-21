@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/understanding-credit-cards/apr-vs-interest-rate",
+  "path": "credit-cards/understanding-credit-cards/apr-vs-interest-rate",
+  "timestamp": "2026-10-21T17:50:19.722Z",
+  "title": "APR vs. Interest Rate on Credit Cards | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/credit-cards/understanding-credit-cards/apr-vs-interest-rate/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

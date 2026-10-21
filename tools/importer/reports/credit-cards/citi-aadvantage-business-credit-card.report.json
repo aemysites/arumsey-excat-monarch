@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-aadvantage-business-credit-card",
+  "path": "credit-cards/citi-aadvantage-business-credit-card",
+  "timestamp": "2026-10-21T19:24:18.258Z",
+  "title": "Citi® / AAdvantage Business™ World Elite Mastercard® | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "section-subnav",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "benefits-showcase",
+    "hero-card",
+    "hero-card",
+    "cards-highlight",
+    "columns-key-terms",
+    "columns-key-terms",
+    "disclosure-links"
+  ],
+  "fragments": [
+    "fragments/credit-card-categories"
+  ],
+  "importScript": "089f57e4feb6"
+}

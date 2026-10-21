@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/balance-transfer",
+  "path": "credit-cards/balance-transfer",
+  "timestamp": "2026-10-21T17:41:43.115Z",
+  "title": "Balance Transfers",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-hub"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

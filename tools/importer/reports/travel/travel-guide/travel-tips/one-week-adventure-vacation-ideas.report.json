@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/one-week-adventure-vacation-ideas",
+  "path": "travel/travel-guide/travel-tips/one-week-adventure-vacation-ideas",
+  "timestamp": "2026-10-21T19:17:33.219Z",
+  "title": "5 Unforgettable One-Week Adventure Vacations | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

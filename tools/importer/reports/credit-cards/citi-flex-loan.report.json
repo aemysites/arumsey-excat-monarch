@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-flex-loan",
+  "path": "credit-cards/citi-flex-loan",
+  "timestamp": "2026-10-21T17:42:31.784Z",
+  "title": "Citi® Flex Loan: Check for Offers | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-icon",
+    "hero-chevron",
+    "accordion-disclosure",
+    "columns-icon-strip",
+    "cards-highlight"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

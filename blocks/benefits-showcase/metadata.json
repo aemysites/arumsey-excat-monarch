@@ -1,0 +1,43 @@
+{
+  "variantName": "benefits-showcase",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "large",
+    "structure": "heading + text + link",
+    "purpose": "lifestyle image with an overlaid panel listing card benefits (heading plus benefit titles and descriptions)"
+  },
+  "contentPattern": {
+    "structure": "image rows (picture only): first is the background, second is the side or decorative photo; first text row: panel heading; further rows: one benefit each (optional icon cell | title and description)"
+  },
+  "options": [
+    {
+      "class": "dark",
+      "label": "Dark"
+    },
+    {
+      "class": "benefit-columns",
+      "label": "Benefit Columns"
+    },
+    {
+      "class": "single-benefit",
+      "label": "Single Benefit"
+    },
+    {
+      "class": "with-side-photo",
+      "label": "With Side Photo"
+    }
+  ],
+  "memberVariantIds": [
+    "v_287c758fd00f",
+    "v_287c758fd00f-1",
+    "v_244279bf3932",
+    "v_287c758fd00f-2",
+    "v_ae2ae8346d54"
+  ],
+  "usage": "Credit card and banking product pages, benefit highlights.",
+  "reuseGuidance": "Use dark for a dark translucent panel, benefit-columns for icon benefits in columns on a wide panel, single-benefit for one heading and text, with-side-photo to place a separate photo beside the panel."
+}

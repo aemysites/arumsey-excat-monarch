@@ -1,0 +1,22 @@
+{
+  "variantName": "legal-disclosures",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + button + link + list",
+    "purpose": "page-bottom legal and trademark disclosures in small print, with an optional brand logo on the left and social icon links on the right"
+  },
+  "contentPattern": {
+    "structure": "one row; cells for an optional logo (image only), the disclosure copy (paragraphs with inline links), and an optional set of icon links (social media). A cell holding only a /fragments/ link is replaced by that fragment, so shared disclosures can be authored once"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_7b453e633190"
+  ],
+  "usage": "Use at the foot of product pages (e.g. Apple Pay / Google Pay / Samsung Pay) for eligibility notes, trademark statements and copyright.",
+  "reuseGuidance": "Reuse for any small-print disclosure area. Short footnote toggles belong in disclosure-links; site-wide legal link rows in legal-links."
+}

@@ -1,0 +1,28 @@
+{
+  "variantName": "card-filter",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "field",
+    "purpose": "Dropdown select (e.g. \"All Cards\") that filters the card groups or comparison tables that follow it on the page"
+  },
+  "contentPattern": {
+    "structure": "one row per dropdown option: cell 1 = option label (the first row is the \"show all\" option, e.g. All Cards), optional cell 2 = filter value. Filtered groups are the blocks after the filter in the same section, matched by their caption or heading text, or sections with a Filter section-metadata value"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_49188b8ef5d5"
+  ],
+  "usage": {
+    "pages": [
+      "https://www.citi.com/credit-cards/compare-credit-cards/CMA-PIT",
+      "https://www.citi.com/credit-cards/compare-credit-cards/CMA-PIT-ES"
+    ],
+    "reuseCount": 2
+  },
+  "reuseGuidance": "Use above a run of grouped content (tables or card lists) that each carry a category heading/caption matching an option label."
+}

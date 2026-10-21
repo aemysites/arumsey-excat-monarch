@@ -1,0 +1,152 @@
+/*
+ * columns-divided: equal columns split by rules (citi.com aem-plan-investment-selector).
+ * default: heading + bulleted list, 1px #ccc rule with 24px either side
+ * four-columns: 4-track grid, heading + text, 2px #eee rule after each column
+ */
+.columns-divided {
+  --columns-divided-rule-color: #ccc;
+}
+
+.columns-divided .columns-divided-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.columns-divided .columns-divided-row + .columns-divided-row {
+  margin-top: 24px;
+}
+
+.columns-divided .columns-divided-col {
+  min-width: 0;
+  padding-top: 12px;
+}
+
+.columns-divided .columns-divided-col > :first-child {
+  margin-top: 0;
+}
+
+.columns-divided .columns-divided-col > :last-child:not(ul, ol) {
+  margin-bottom: 0;
+}
+
+.columns-divided .columns-divided-col-empty {
+  display: none;
+}
+
+.columns-divided img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* default: heading + list */
+.columns-divided h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: var(--body-font-weight);
+  line-height: 26px;
+}
+
+.columns-divided ul,
+.columns-divided ol {
+  margin: 12px 0 16px;
+  padding-left: 32px;
+  font-size: var(--body-font-size-s);
+  font-weight: var(--body-font-weight);
+  line-height: 20px;
+}
+
+.columns-divided li + li {
+  margin-top: 8px;
+}
+
+.columns-divided p {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  line-height: 20px;
+}
+
+/* mobile: horizontal rule between stacked columns */
+.columns-divided .columns-divided-col + .columns-divided-col {
+  padding-top: 36px;
+  border-top: 1px solid var(--columns-divided-rule-color);
+}
+
+/* four-columns: heading + text tiles, no rules when stacked */
+.columns-divided.four-columns {
+  --columns-divided-rule-color: var(--rule-color);
+}
+
+.columns-divided.four-columns .columns-divided-col,
+.columns-divided.four-columns .columns-divided-col + .columns-divided-col {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.columns-divided.four-columns h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: var(--heading-font-weight);
+  line-height: 24px;
+}
+
+.columns-divided.four-columns p {
+  line-height: var(--body-line-height-m);
+}
+
+@media (width >= 900px) {
+  .columns-divided .columns-divided-row {
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    gap: 0;
+  }
+
+  .columns-divided .columns-divided-col {
+    padding: 12px 24px 0;
+  }
+
+  .columns-divided .columns-divided-col:first-child {
+    padding-left: 0;
+  }
+
+  .columns-divided .columns-divided-col:last-child {
+    padding-right: 0;
+  }
+
+  .columns-divided .columns-divided-col-empty {
+    display: block;
+  }
+
+  .columns-divided .columns-divided-col + .columns-divided-col {
+    padding-top: 12px;
+    border-top: 0;
+    border-left: 1px solid var(--columns-divided-rule-color);
+  }
+
+  /* four-columns: content | 2px rule | 24px gap, on a fixed 4-track grid */
+  .columns-divided.four-columns .columns-divided-row {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding-left: 24px;
+  }
+
+  .columns-divided.four-columns .columns-divided-col,
+  .columns-divided.four-columns .columns-divided-col + .columns-divided-col {
+    padding: 0 24px 0 0;
+    border-left: 0;
+    border-right: 2px solid var(--columns-divided-rule-color);
+  }
+
+  .columns-divided.four-columns .columns-divided-col:last-child,
+  .columns-divided.four-columns .columns-divided-col:nth-child(4n) {
+    border-right: 0;
+  }
+}
+
+/* rules stay visible on dark / blue section backgrounds */
+.section.dark .columns-divided,
+.section.blue .columns-divided {
+  --columns-divided-rule-color: rgb(255 255 255 / 30%);
+}

@@ -1,0 +1,29 @@
+{
+  "variantName": "hero-photo",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "heading + text + link",
+    "purpose": "page-top banner with a full-bleed photo and the heading, short copy and CTA either in a white box on the photo or laid directly over it"
+  },
+  "contentPattern": {
+    "structure": "one picture-only cell or row for the background photo; one copy cell (optional eyebrow, heading, text, CTA links). Further text cells are appended to the copy. Text colour on the photo follows the section style (dark, blue)"
+  },
+  "options": [
+    { "class": "centred-heading-only", "label": "Centred Heading Only" },
+    { "class": "gradient-overlay", "label": "Gradient Overlay" },
+    { "class": "text-on-photo", "label": "Text On Photo" }
+  ],
+  "memberVariantIds": [
+    "v_b333fef55eea",
+    "v_39dfc6380754",
+    "v_a8c109558372",
+    "v_b50a8d9af11f"
+  ],
+  "usage": "Use as the top banner of feature, campaign and small-business pages. Default boxes centred copy in a white panel on the left of the photo; centred-heading-only centres a heading and line of text straight on the image (put it in a dark or blue section for light text); gradient-overlay fades the photo behind the box; text-on-photo lays left-aligned copy and CTAs directly on a light photo.",
+  "reuseGuidance": "Reuse for any photo banner without a product image. Use hero-chevron when the photo sits beside the copy and hero-card for credit-card offers."
+}

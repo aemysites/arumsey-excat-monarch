@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/balance-transfer/calculate-balance-transfer",
+  "path": "credit-cards/balance-transfer/calculate-balance-transfer",
+  "timestamp": "2026-10-21T18:58:44.119Z",
+  "title": "Calculate Balance Transfer Savings | How Much Could You Save? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [],
+  "importScript": "31253dfc122f"
+}

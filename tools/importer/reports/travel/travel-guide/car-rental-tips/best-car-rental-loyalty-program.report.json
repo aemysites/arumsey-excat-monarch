@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/best-car-rental-loyalty-program",
+  "path": "travel/travel-guide/car-rental-tips/best-car-rental-loyalty-program",
+  "timestamp": "2026-10-21T19:10:30.921Z",
+  "title": "How to Determine the Best Car Rental Loyalty Programs | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

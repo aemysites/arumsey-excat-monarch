@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-aadvantage-executive-world-legend-mastercard",
+  "path": "credit-cards/citi-aadvantage-executive-world-legend-mastercard",
+  "timestamp": "2026-10-21T19:24:21.832Z",
+  "title": "Citi® / AAdvantage® Executive World Legend Mastercard® | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "section-subnav",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "benefits-showcase",
+    "hero-card",
+    "hero-card",
+    "cards-highlight",
+    "columns-key-terms",
+    "disclosure-links",
+    "cards-icon-links",
+    "columns-quick-paths",
+    "cards-benefit-tiles"
+  ],
+  "fragments": [],
+  "importScript": "089f57e4feb6"
+}

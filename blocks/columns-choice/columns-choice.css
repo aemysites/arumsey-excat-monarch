@@ -1,0 +1,483 @@
+/* variant rules are scoped by variant class, so source order is not a specificity cascade */
+/* stylelint-disable no-descending-specificity */
+
+/*
+ * columns-choice (citi.com computed styles)
+ * default:      twocolumnteaser "Promotional offers" white card, columns split by an "OR" rule
+ * with-tables:  home-equity-employee table__container, two rate tables split by an "OR" rule
+ * with-icons:   purchase-rates dualcard-mod, two floating cards split by a large "or"
+ * media-promo:  homepage promo module, rounded image + copy (matches columns-media)
+ * promo-banner: cititravel login banner, copy + floating image on a band
+ */
+
+/* layout */
+.columns-choice .columns-choice-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-choice .columns-choice-row + .columns-choice-row {
+  margin-top: 32px;
+}
+
+.columns-choice .columns-choice-col {
+  min-width: 0;
+
+  /* default: the empty eyebrow slot above each column leaves 24px; last copy keeps 16px */
+  padding: 24px 0 16px;
+}
+
+.columns-choice .columns-choice-col > :first-child {
+  margin-top: 0;
+}
+
+.columns-choice .columns-choice-col > :last-child {
+  margin-bottom: 0;
+}
+
+.columns-choice .columns-choice-img-col {
+  line-height: 0;
+}
+
+.columns-choice .columns-choice-img-col p {
+  margin: 0;
+}
+
+.columns-choice .columns-choice-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* copy */
+.columns-choice .columns-choice-col :is(h1, h2, h3, h4) {
+  margin-top: 0;
+}
+
+.columns-choice .columns-choice-col p {
+  margin: 0 0 16px;
+  font-weight: 300;
+}
+
+.columns-choice .columns-choice-col p.columns-choice-eyebrow {
+  margin: 0 0 8px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  line-height: var(--body-line-height-xs);
+  text-transform: uppercase;
+}
+
+.columns-choice .columns-choice-col p.columns-choice-cta {
+  margin: 24px 0 16px;
+}
+
+/* fine print after the CTA (column-legal-text) */
+.columns-choice .columns-choice-col p.columns-choice-note {
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  line-height: var(--body-line-height-xs);
+}
+
+.columns-choice .columns-choice-note a:any-link {
+  text-decoration: underline;
+}
+
+/* default: white card (twocolumnteaser__content-body) */
+.columns-choice {
+  box-sizing: border-box;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.columns-choice .columns-choice-col h3 {
+  margin-bottom: 12px;
+  color: var(--text-color);
+  font-size: 23.14px;
+  font-weight: 500;
+  line-height: 27.77px;
+}
+
+.columns-choice .columns-choice-col p:not(.columns-choice-note) strong {
+  font-weight: 400;
+}
+
+/* light CTA button (cds-button-primary-inverse) */
+main .columns-choice:not(.media-promo, .promo-banner) a.button.primary:any-link {
+  border-color: #eff3f8;
+  background-color: #eff3f8;
+  color: var(--link-color);
+}
+
+main .columns-choice:not(.media-promo, .promo-banner) a.button.primary:hover {
+  border-color: #eff3f8;
+  background-color: #eff3f8;
+  color: var(--link-hover-color);
+}
+
+main .columns-choice:not(.media-promo, .promo-banner) a.button.primary:active {
+  color: var(--link-active-color);
+}
+
+/* chevron text link (cds-button-inline-link) */
+main .columns-choice a.button.accent:any-link {
+  padding: 0;
+  font-size: var(--body-font-size-s);
+  line-height: 20px;
+}
+
+main .columns-choice a.button.accent::after {
+  margin-left: 6px;
+}
+
+/* "OR" divider: horizontal rules on mobile, vertical on desktop */
+.columns-choice .columns-choice-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  line-height: var(--body-line-height-m);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.columns-choice .columns-choice-divider span {
+  margin: 16px 8px;
+}
+
+.columns-choice .columns-choice-divider::before,
+.columns-choice .columns-choice-divider::after {
+  content: "";
+  flex: 1 1 0;
+  height: 1px;
+  background-color: #ccc;
+}
+
+/* with-tables: same card, rate tables in place of copy */
+.columns-choice.with-tables .columns-choice-row {
+  gap: 16px;
+}
+
+.columns-choice.with-tables .columns-choice-col {
+  padding: 0;
+}
+
+.columns-choice.with-tables .columns-choice-divider span {
+  margin: 0;
+}
+
+.columns-choice.with-tables .table-rates table {
+  min-width: 0;
+  border: 1px solid #ccc;
+}
+
+.columns-choice.with-tables .table-rates td {
+  padding: 8px 16px;
+  border-right: 0;
+  border-bottom: 1px solid #ccc;
+  font-size: var(--body-font-size-s);
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* option caption row: blue band, white title */
+.columns-choice.with-tables .table-rates tr:first-child > td {
+  height: 48px;
+  background-color: var(--citi-blue);
+  color: #fff;
+  text-align: left;
+}
+
+.columns-choice.with-tables .table-rates tr:first-child > td :is(h2, h3, h4, p) {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+}
+
+.columns-choice.with-tables .table-rates td p {
+  margin: 0 0 16px;
+  font-weight: 300;
+}
+
+/* rate: big figure over its description */
+.columns-choice.with-tables .table-rates td p strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.columns-choice.with-tables .table-rates td p strong + br {
+  display: none;
+}
+
+/* with-icons: floating cards (card-container) split by a large "or" */
+.columns-choice.with-icons {
+  padding: 24px 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: inherit;
+  text-align: center;
+}
+
+.columns-choice.with-icons .columns-choice-row {
+  gap: 24px;
+}
+
+.columns-choice.with-icons .columns-choice-col {
+  box-sizing: border-box;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: rgb(255 255 255 / 80%);
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 12%);
+  color: var(--text-color);
+}
+
+.columns-choice.with-icons .columns-choice-col > :last-child {
+  margin-bottom: 16px;
+}
+
+.columns-choice.with-icons .columns-choice-col :is(picture, img) {
+  display: inline-block;
+}
+
+.columns-choice.with-icons .columns-choice-col img {
+  width: auto;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.columns-choice.with-icons .columns-choice-col h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.columns-choice.with-icons .columns-choice-col p {
+  font-weight: 300;
+}
+
+.columns-choice.with-icons .columns-choice-divider {
+  color: inherit;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 42px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.columns-choice.with-icons .columns-choice-divider span {
+  margin: 0;
+}
+
+.columns-choice.with-icons .columns-choice-divider::before,
+.columns-choice.with-icons .columns-choice-divider::after {
+  display: none;
+}
+
+/* promo layouts: no card */
+.columns-choice:is(.media-promo, .promo-banner) {
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+.columns-choice:is(.media-promo, .promo-banner) .columns-choice-row {
+  gap: 24px;
+}
+
+.columns-choice:is(.media-promo, .promo-banner) .columns-choice-col {
+  padding: 0;
+}
+
+.columns-choice:is(.media-promo, .promo-banner) .columns-choice-col :is(h1, h2, h3) {
+  margin-bottom: 16px;
+  color: inherit;
+}
+
+.columns-choice:is(.media-promo, .promo-banner) .columns-choice-col p {
+  margin-bottom: 24px;
+}
+
+.columns-choice:is(.media-promo, .promo-banner) .columns-choice-col p.columns-choice-eyebrow {
+  margin-bottom: 8px;
+}
+
+.columns-choice:is(.media-promo, .promo-banner) .columns-choice-col p.columns-choice-cta {
+  margin: 0;
+}
+
+.columns-choice:is(.media-promo, .promo-banner) .columns-choice-col p.columns-choice-cta + p {
+  margin-top: 16px;
+}
+
+/* media-promo: homepage promo module (app-module-one-reskin) */
+.columns-choice.media-promo .columns-choice-img-col img {
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.columns-choice.media-promo .columns-choice-col:not(.columns-choice-img-col) {
+  text-align: center;
+}
+
+.columns-choice.media-promo .columns-choice-col h2 {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  line-height: 42px;
+}
+
+main .columns-choice.media-promo .columns-choice-cta a.button:any-link {
+  width: calc(50% - 12px);
+}
+
+/* promo-banner: cititravel login banner, image above the copy on mobile */
+.columns-choice.promo-banner .columns-choice-img-col {
+  display: flex;
+  order: -1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.columns-choice.promo-banner .columns-choice-img-col img {
+  width: auto;
+  max-width: 100%;
+}
+
+.columns-choice.promo-banner .columns-choice-col:not(.columns-choice-img-col) {
+  padding: 24px;
+}
+
+.columns-choice.promo-banner .columns-choice-col :is(h1, h2) {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 43.2px;
+}
+
+.columns-choice.promo-banner .columns-choice-col :is(h1, h2) sup {
+  font-size: 0.3em;
+}
+
+/* on dark / blue section bands: white copy outside the cards */
+.section:is(.dark, .blue) .columns-choice:is(.media-promo, .promo-banner, .with-icons) {
+  color: var(--section-text-color);
+}
+
+@media (width >= 900px) {
+  .columns-choice {
+    padding: 64px;
+  }
+
+  .columns-choice .columns-choice-row {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .columns-choice .columns-choice-col {
+    flex: 1 1 0;
+  }
+
+  .columns-choice .columns-choice-col h3 {
+    font-size: 28px;
+    line-height: 33.6px;
+  }
+
+  .columns-choice .columns-choice-divider {
+    flex: 0 0 auto;
+    flex-direction: column;
+  }
+
+  .columns-choice .columns-choice-divider span {
+    margin: 8px 32px;
+  }
+
+  .columns-choice .columns-choice-divider::before,
+  .columns-choice .columns-choice-divider::after {
+    width: 1px;
+    height: auto;
+  }
+
+  /* with-tables */
+  .columns-choice.with-tables .columns-choice-row {
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .columns-choice.with-tables .columns-choice-divider {
+    align-self: stretch;
+  }
+
+  .columns-choice.with-tables .columns-choice-divider span {
+    margin: 0;
+  }
+
+  /* with-icons: 340px cards centred around the "or" */
+  .columns-choice.with-icons {
+    padding: 24px 0;
+  }
+
+  .columns-choice.with-icons .columns-choice-row {
+    justify-content: center;
+  }
+
+  .columns-choice.with-icons .columns-choice-col {
+    max-width: 340px;
+  }
+
+  .columns-choice.with-icons .columns-choice-col h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .columns-choice.with-icons .columns-choice-divider {
+    flex-direction: row;
+  }
+
+  .columns-choice.with-icons .columns-choice-divider span {
+    margin: 0;
+  }
+
+  /* promo layouts: two equal columns */
+  .columns-choice:is(.media-promo, .promo-banner) {
+    padding: 0;
+  }
+
+  .columns-choice.media-promo .columns-choice-row {
+    align-items: flex-start;
+  }
+
+  .columns-choice.media-promo .columns-choice-col:not(.columns-choice-img-col) {
+    text-align: start;
+  }
+
+  .columns-choice.media-promo .columns-choice-col h2 {
+    line-height: var(--heading-line-height-xxl);
+  }
+
+  .columns-choice.promo-banner .columns-choice-row {
+    gap: 0;
+  }
+
+  .columns-choice.promo-banner .columns-choice-img-col {
+    order: unset;
+  }
+
+  .columns-choice.promo-banner .columns-choice-col:not(.columns-choice-img-col) {
+    padding: 40px 72px;
+  }
+
+  .columns-choice.promo-banner .columns-choice-col :is(h1, h2) {
+    font-size: 48px;
+    line-height: 57.6px;
+  }
+}

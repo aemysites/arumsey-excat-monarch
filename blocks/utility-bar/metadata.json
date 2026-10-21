@@ -1,0 +1,22 @@
+{
+  "variantName": "utility-bar",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button + link",
+    "purpose": "Compact header utility actions such as a \"How can we help?\" search entry and \"Sign On\""
+  },
+  "contentPattern": {
+    "structure": "utility links (optionally with a leading :icon:) as a list, one per paragraph, one per cell or one per row; all are flattened into a single divided row"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_ee11e91a2c11"
+  ],
+  "usage": "Header component: utility actions row (search entry, sign on). Standalone block; the site header is migrated separately.",
+  "reuseGuidance": "Use for 1-4 short utility links/actions. Use primary-nav for main section navigation."
+}

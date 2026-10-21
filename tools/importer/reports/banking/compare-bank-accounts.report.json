@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/compare-bank-accounts",
+  "path": "banking/compare-bank-accounts",
+  "timestamp": "2026-10-21T17:33:27.097Z",
+  "title": "Explore Citi Relationship Tiers | Open Checking & Savings Accounts | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "accordion-feature",
+    "accordion-feature",
+    "location-selector",
+    "table-rates"
+  ],
+  "fragments": [
+    "fragments/banking/compare-bank-accounts/accordion-feature-1"
+  ],
+  "importScript": "20a7308ac938"
+}

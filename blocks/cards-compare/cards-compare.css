@@ -1,0 +1,488 @@
+/*
+ * cards-compare: values from citi.com computed styles
+ * (/small-business/loans, /small-business, /banking/enhanced-direct-deposit,
+ * /banking/bank-accounts).
+ */
+
+.cards-compare > ul {
+  --cards-compare-rule: 1px solid var(--rule-color);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+/* card */
+.cards-compare > ul > li {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: var(--background-color);
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+  color: var(--text-color);
+}
+
+/* title band: 72px, artwork background, white title */
+.cards-compare .cards-compare-header {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 72px;
+  padding: 10px 24px;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  background: var(--citi-blue) url("header-bg-1.png") center / cover no-repeat;
+}
+
+.cards-compare > ul > li:nth-child(4n + 2) .cards-compare-header {
+  background-image: url("header-bg-2.png");
+}
+
+.cards-compare > ul > li:nth-child(4n + 3) .cards-compare-header {
+  background-image: url("header-bg-3.png");
+}
+
+.cards-compare > ul > li:nth-child(4n + 4) .cards-compare-header {
+  background-image: url("header-bg-4.png");
+}
+
+.cards-compare .cards-compare-header.is-empty,
+.cards-compare .cards-compare-footer.is-empty {
+  display: none;
+}
+
+.cards-compare .cards-compare-header > :is(h1, h2, h3, h4, h5, h6) {
+  position: relative;
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.5px;
+}
+
+/* small icon to the right of the title */
+.cards-compare .cards-compare-icon {
+  position: relative;
+  order: 2;
+  flex: 0 0 auto;
+  margin: 0;
+  line-height: 0;
+}
+
+.cards-compare .cards-compare-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* wide authored artwork: fills the title band */
+.cards-compare .cards-compare-header-image {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  line-height: 0;
+}
+
+.cards-compare .cards-compare-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* body sections */
+.cards-compare .cards-compare-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 0;
+}
+
+.cards-compare .cards-compare-section {
+  padding: 0 0 16px;
+}
+
+.cards-compare .cards-compare-section + .cards-compare-section {
+  border-top: var(--cards-compare-rule);
+  padding-top: 8px;
+}
+
+.cards-compare .cards-compare-section:last-child {
+  padding-bottom: 24px;
+}
+
+.cards-compare .cards-compare-section p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.cards-compare .cards-compare-section p + p {
+  margin-top: 8px;
+}
+
+/* eyebrow labels ("Best for", "Loan details") */
+.cards-compare .cards-compare-section p.cards-compare-label {
+  margin: 0 0 8px;
+  color: var(--text-color-muted);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.cards-compare .cards-compare-section + .cards-compare-section p.cards-compare-label {
+  margin-bottom: 16px;
+  padding: 3px 0;
+}
+
+.cards-compare .cards-compare-section p.cards-compare-label strong {
+  font-weight: inherit;
+}
+
+/* check-mark lists */
+.cards-compare .cards-compare-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-compare .cards-compare-section * + ul {
+  margin-top: 0;
+}
+
+.cards-compare .cards-compare-section ul li {
+  position: relative;
+  padding: 0 0 2px 29px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.cards-compare .cards-compare-section ul li p {
+  margin: 0;
+  font: inherit;
+}
+
+.cards-compare .cards-compare-section ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--citi-blue);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22.735 4.335a.8.8 0 0 1 0 1.13l-13.72 13.72a1.8 1.8 0 0 1-2.55-.008l-5.198-5.263a.8.8 0 0 1 1.138-1.124l5.198 5.264a.2.2 0 0 0 .283 0L21.605 4.337a.8.8 0 0 1 1.13 0'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.cards-compare .cards-compare-section sup {
+  line-height: 0;
+}
+
+/* footer CTAs */
+.cards-compare .cards-compare-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: auto;
+  padding: 0 24px 24px;
+}
+
+.cards-compare .cards-compare-footer > * {
+  margin: 0;
+}
+
+/* plain link: Citi chevron text CTA ("Learn More >") */
+main .cards-compare .cards-compare-footer > p > a:only-child:not(.button) {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 2px;
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+main .cards-compare .cards-compare-footer > p > a:only-child:not(.button)::after {
+  content: "";
+  flex: none;
+  width: 26px;
+  height: 24px;
+  margin-left: 2px;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) right center / 32px 32px no-repeat;
+}
+
+main .cards-compare .cards-compare-footer > p > a:only-child:not(.button):hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* full-width primary CTA (bold link, or a bold label whose link was not imported) */
+.cards-compare .cards-compare-footer > p.button-wrapper:has(a.primary),
+.cards-compare .cards-compare-footer > p.cards-compare-cta {
+  flex: 1 1 100%;
+}
+
+main .cards-compare .cards-compare-footer a.button.primary:any-link {
+  width: 100%;
+}
+
+.cards-compare .cards-compare-footer > p.cards-compare-cta {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--button-primary-bg);
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
+  background-color: var(--button-primary-bg);
+  color: #fff;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  text-align: center;
+}
+
+/* shadow-blue: no rule between description and list */
+.cards-compare.shadow-blue .cards-compare-section + .cards-compare-section {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* with-icon-header: solid blue bands, uppercase title, icon on the right */
+.cards-compare.with-icon-header > ul > li:nth-child(n) .cards-compare-header {
+  padding: 0 24px;
+  background: var(--citi-blue);
+}
+
+.cards-compare.with-icon-header > ul > li:nth-child(3n + 2) .cards-compare-header {
+  background: #008fc9;
+}
+
+.cards-compare.with-icon-header > ul > li:nth-child(3n + 3) .cards-compare-header {
+  background: #25a6da;
+}
+
+.cards-compare.with-icon-header .cards-compare-header > :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.cards-compare.with-icon-header .cards-compare-section p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cards-compare.with-icon-header .cards-compare-section + .cards-compare-section {
+  padding-top: 16px;
+}
+
+.cards-compare.with-icon-header .cards-compare-section p.cards-compare-label,
+.cards-compare.with-icon-header .cards-compare-section + .cards-compare-section p.cards-compare-label {
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 21px;
+}
+
+.cards-compare.with-icon-header .cards-compare-section ul li {
+  padding: 0 0 9px 25px;
+  line-height: 21px;
+}
+
+.cards-compare.with-icon-header .cards-compare-section ul li::before {
+  width: 20px;
+  height: 20px;
+}
+
+.cards-compare.with-icon-header .cards-compare-footer {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cards-compare.with-icon-header .cards-compare-footer > p {
+  width: 100%;
+  text-align: center;
+}
+
+main .cards-compare.with-icon-header .cards-compare-footer a.button.primary:any-link,
+.cards-compare.with-icon-header .cards-compare-footer > p.cards-compare-cta {
+  border-width: 2px;
+  border-radius: 4px;
+  padding: 7px 20px;
+}
+
+main .cards-compare.with-icon-header .cards-compare-footer > p > a:only-child:not(.button) {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+main .cards-compare.with-icon-header .cards-compare-footer > p > a:only-child:not(.button)::after {
+  width: 16px;
+  height: 16px;
+  mask-size: 16px 16px;
+}
+
+/* coloured-top-bar: tier cards with an 8px bar over a dark title */
+.cards-compare.coloured-top-bar > ul > li:nth-child(n) {
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.cards-compare.coloured-top-bar > ul > li:nth-child(n) .cards-compare-header {
+  --cards-compare-bar: var(--citi-blue);
+
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+  min-height: 0;
+  padding: 24px 24px 0;
+  border-radius: 8px 8px 0 0;
+  background: none;
+}
+
+.cards-compare.coloured-top-bar > ul > li:nth-child(4n + 2) .cards-compare-header {
+  --cards-compare-bar: #0e2a48;
+}
+
+.cards-compare.coloured-top-bar > ul > li:nth-child(4n + 3) .cards-compare-header {
+  --cards-compare-bar: #8e6f32;
+}
+
+.cards-compare.coloured-top-bar > ul > li:nth-child(4n + 4) .cards-compare-header {
+  --cards-compare-bar: #281814;
+}
+
+.cards-compare.coloured-top-bar .cards-compare-header::before {
+  content: "";
+  display: block;
+  height: 8px;
+  background-color: var(--cards-compare-bar);
+}
+
+.cards-compare.coloured-top-bar .cards-compare-header > :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  padding-top: 12px;
+  color: var(--text-color);
+  font-size: 21px;
+  line-height: 27px;
+  letter-spacing: normal;
+}
+
+/* rules run the full card width */
+.cards-compare.coloured-top-bar .cards-compare-body {
+  padding: 0;
+}
+
+.cards-compare.coloured-top-bar .cards-compare-body > .cards-compare-section {
+  padding: 12px 24px;
+}
+
+.cards-compare.coloured-top-bar .cards-compare-body > .cards-compare-section:first-child {
+  padding: 8px 24px 24px;
+}
+
+.cards-compare.coloured-top-bar .cards-compare-body > .cards-compare-section + .cards-compare-section:last-child {
+  padding: 24px;
+}
+
+.cards-compare.coloured-top-bar .cards-compare-section p {
+  font-weight: 300;
+  line-height: 21px;
+}
+
+/* balance figure: "$30,000" */
+.cards-compare.coloured-top-bar .cards-compare-section p:not(.cards-compare-label) strong {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.cards-compare.coloured-top-bar .cards-compare-body > .cards-compare-section p.cards-compare-label {
+  margin: 0 0 8px;
+  padding: 0;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.cards-compare.coloured-top-bar .cards-compare-section ul li {
+  padding: 0 0 9px 37px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.cards-compare.coloured-top-bar .cards-compare-section ul li::before {
+  top: -1px;
+  left: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+/* tablet and up: cards on a subgrid so sections line up across the row */
+@media (width >= 600px) {
+  .cards-compare > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-compare > ul > li {
+    display: grid;
+    grid-row: span calc(var(--cards-compare-sections, 1) + 2);
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+
+  .cards-compare .cards-compare-header {
+    grid-row: 1;
+  }
+
+  .cards-compare .cards-compare-body {
+    display: grid;
+    grid-row: 2 / -2;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+
+  .cards-compare .cards-compare-footer {
+    grid-row: -2 / -1;
+    align-self: end;
+  }
+
+  /* two-up: an odd last card is centred, as on citi.com */
+  .cards-compare > ul > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 12px);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-compare > ul {
+    grid-template-columns: repeat(var(--cards-compare-cols, 3), minmax(0, 1fr));
+  }
+
+  .cards-compare > ul > li:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: auto;
+  }
+}

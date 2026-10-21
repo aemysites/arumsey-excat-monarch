@@ -1,0 +1,47 @@
+{
+  "variantName": "hero-card",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "link + button + heading",
+    "purpose": "credit-card product hero: eyebrow, offer heading, short copy, Apply now button and legal links beside a card image, optionally inside a coloured panel or over a full-bleed photo"
+  },
+  "contentPattern": {
+    "structure": "optional picture-only rows (with two, the first is the background and the second the card image; with one, it is the card image, or the background for photo / photo-centred); then the copy cell (eyebrow paragraph, optional italic badge, heading, text, bold Apply link, optional highlights list), which may share its row with the image cell (cell order sets the image side); any further rows are extras (one cell: legal copy or APR box; several cells: an earn-rate grid). A cell holding only a link to a /fragments/ page is replaced by that fragment. Colour comes from the section style (dark, blue, grey, light, light-blue) or the background image, not from block classes"
+  },
+  "options": [
+    { "class": "panel", "label": "Panel" },
+    { "class": "photo", "label": "Photo" },
+    { "class": "photo-centred", "label": "Photo Centred" }
+  ],
+  "memberVariantIds": [
+    "v_3c3b91fcdb1d",
+    "v_9c3827a7cef5-3",
+    "v_27ad4cc345bc",
+    "v_35247bcf3f1d",
+    "v_0bfbb8b4b8e6",
+    "v_3c3b91fcdb1d-1",
+    "v_d86fdcf401fd",
+    "v_d86fdcf401fd-2",
+    "v_27ad4cc345bc-1",
+    "v_27ad4cc345bc-2",
+    "v_27ad4cc345bc-3",
+    "v_27ad4cc345bc-4",
+    "v_27ad4cc345bc-5",
+    "v_34e2641a6c79-1",
+    "v_34e2641a6c79-2",
+    "v_9c3827a7cef5",
+    "v_9c3827a7cef5-1",
+    "v_9c3827a7cef5-2",
+    "v_9f66a4a65f49-2",
+    "v_d86fdcf401fd-1",
+    "v_d86fdcf401fd-3",
+    "v_d86fdcf401fd-4"
+  ],
+  "usage": "Use at the top of a credit-card product page. Default is a plain two-column hero (card image and copy, image side from cell order). panel puts copy and card image in a rounded panel whose colour comes from the section style (dark, blue, grey, light-blue) with an optional texture background row. photo places the copy panel over a full-bleed lifestyle photo with a small card image; photo-centred stacks card image, copy and earn-rate grid centred over a dark or textured background.",
+  "reuseGuidance": "Reuse for any single-product offer hero with a card image and Apply CTA. Use hero-chevron for banking/mortgage heroes with a chevron-cropped photo, hero-photo for text over a photo with no product image, and hero-login when a sign-on panel is needed."
+}

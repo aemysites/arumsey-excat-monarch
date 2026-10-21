@@ -1,0 +1,60 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "Row of small icon + label items: feature strips, product quick links, category tab navigation and cross-sell link lists"
+  },
+  "contentPattern": {
+    "structure": "one row per item: optional icon/image cell, then a cell with the label (often a link) and optional supporting text; an item with a single link is fully clickable"
+  },
+  "options": [
+    {
+      "class": "icon-beside-label",
+      "label": "Icon Beside Label"
+    },
+    {
+      "class": "quick-nav",
+      "label": "Quick Nav"
+    },
+    {
+      "class": "alt",
+      "label": "Alt"
+    },
+    {
+      "class": "grid",
+      "label": "Grid"
+    },
+    {
+      "class": "blue",
+      "label": "Blue"
+    },
+    {
+      "class": "card-cross-sell",
+      "label": "Card Cross Sell"
+    }
+  ],
+  "memberVariantIds": [
+    "v_33c7d707594e",
+    "v_ed567aec7d92",
+    "v_24540683e60b",
+    "v_3493857385bb",
+    "v_3493857385bb-1",
+    "v_7260c22f6de0",
+    "v_863a1ac7e3aa",
+    "v_9f66a4a65f49-1"
+  ],
+  "usage": {
+    "pages": [
+      "https://www.citi.com/credit-cards/balance-transfer-credit-cards",
+      "https://www.citi.com/mortgage/surestart-preapproval",
+      "https://www.citi.com/small-business-banking/business-credit"
+    ]
+  },
+  "reuseGuidance": "Default: centred icon over label. quick-nav for category tabs (current page highlighted); icon-beside-label for inline feature strips; alt for left-aligned icon + title + text; grid for fixed 4-up icon tiles; blue for a filled panel strip; card-cross-sell for a vertical list of card thumbnails linking to products."
+}

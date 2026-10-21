@@ -1,0 +1,33 @@
+{
+  "variantName": "cta-banner",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "large",
+    "structure": "heading + link",
+    "purpose": "horizontal call-to-action panel: short heading or copy on the left, one or two CTAs on the right, optionally with a product image and/or a full-bleed background image"
+  },
+  "contentPattern": {
+    "structure": "optional first row with only a background image; then one row with cells for an optional image, the copy (heading and/or text) and the CTA links. A cell holding only a link to a /fragments/ page is replaced by that fragment. Background colour comes from the section style (dark, blue, grey, light-blue), not from the block"
+  },
+  "options": [
+    { "class": "filled", "label": "Filled" },
+    { "class": "light", "label": "Light" }
+  ],
+  "memberVariantIds": [
+    "v_b698fc7a1f88",
+    "v_bd00b4ca04f5",
+    "v_bd00b4ca04f5-1",
+    "v_e19262858873",
+    "v_386d3e4d5d27",
+    "v_fe9d3383e617",
+    "v_32e7365a9eca",
+    "v_9f8c60b0d4fb",
+    "v_ace2cf7d2f90"
+  ],
+  "usage": "Use for 'Ready to get started?' style prompts with a primary button and optional secondary link. Default renders a white card; filled lets the panel take the section colour (set the section style to dark, blue, grey or light-blue); light gives a tinted, shadowless panel. Add a picture-only first row for a background photo.",
+  "reuseGuidance": "Reuse for any single-message CTA strip. Use hero for page-top banners and columns-quick-paths for multiple parallel CTAs."
+}

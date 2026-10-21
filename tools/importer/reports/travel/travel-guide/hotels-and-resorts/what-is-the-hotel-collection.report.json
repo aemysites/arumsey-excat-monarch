@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/what-is-the-hotel-collection",
+  "path": "travel/travel-guide/hotels-and-resorts/what-is-the-hotel-collection",
+  "timestamp": "2026-10-21T19:13:39.368Z",
+  "title": "What Is the Hotel Collection? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

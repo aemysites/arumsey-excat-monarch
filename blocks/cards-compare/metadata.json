@@ -1,0 +1,49 @@
+{
+  "variantName": "cards-compare",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + list + button",
+    "purpose": "Side-by-side product comparison cards with a title header band, labelled detail sections with check-mark lists, and CTAs pinned to the bottom"
+  },
+  "contentPattern": {
+    "structure": "one row per card: title heading (optionally with an icon image beside it), then description, label + check-list sections separated by horizontal rules or separate cells, and closing link-only paragraphs that become the bottom CTAs"
+  },
+  "options": [
+    {
+      "class": "shadow",
+      "label": "Shadow"
+    },
+    {
+      "class": "shadow-blue",
+      "label": "Shadow Blue"
+    },
+    {
+      "class": "coloured-top-bar",
+      "label": "Coloured Top Bar"
+    },
+    {
+      "class": "with-icon-header",
+      "label": "With Icon Header"
+    }
+  ],
+  "memberVariantIds": [
+    "v_387392bbcf17",
+    "v_387392bbcf17-1",
+    "v_5e18967227c4",
+    "v_b1a6adf64d9e",
+    "v_bc8f35e24209",
+    "v_eb01cdd3a40a",
+    "v_f01778cf65f7"
+  ],
+  "usage": {
+    "pages": [
+      "https://www.citi.com/small-business"
+    ]
+  },
+  "reuseGuidance": "Use for 3-4 product or plan comparisons. with-icon-header when the header band carries an icon; coloured-top-bar for tier cards with a coloured bar over the title; shadow/shadow-blue for elevated cards."
+}

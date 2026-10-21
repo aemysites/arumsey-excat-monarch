@@ -1,0 +1,50 @@
+{
+  "variantName": "columns-media",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "link + image + text + heading + button",
+    "purpose": "image column beside a text column (eyebrow, heading, text, checklist, buttons)"
+  },
+  "contentPattern": {
+    "structure": "one row per media pair: image cell + text cell (either order). Text cell: eyebrow, heading, text, optional list with leading icons, buttons. A cell holding only a /fragments/ link is replaced by the fragment. faq: text-only columns split by rules. icon-feature-list: icon + heading + text items. centred-image: text | image | text. dark on text-only: heading | copy split by a rule"
+  },
+  "options": [
+    {
+      "class": "faq",
+      "label": "Faq"
+    },
+    {
+      "class": "light",
+      "label": "Light"
+    },
+    {
+      "class": "dark",
+      "label": "Dark"
+    },
+    {
+      "class": "icon-feature-list",
+      "label": "Icon Feature List"
+    },
+    {
+      "class": "centred-image",
+      "label": "Centred Image"
+    }
+  ],
+  "memberVariantIds": [
+    "v_fb7b29670b4e",
+    "v_7da02a35f616",
+    "v_9929e1e64ff0",
+    "v_36d786e3d6c3",
+    "v_8e5289db322b",
+    "v_9359e96af72f",
+    "v_4891266d568e",
+    "v_cc460ff28123"
+  ],
+  "usage": "Promotional image + text sections, checklists beside photos, CD basics icon lists, app feature callouts",
+  "reuseGuidance": "Use for image + text pairs and text-column splits. Not for contact panels (columns-contact)."
+}

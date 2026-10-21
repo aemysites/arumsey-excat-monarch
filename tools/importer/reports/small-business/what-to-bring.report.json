@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/small-business/what-to-bring",
+  "path": "small-business/what-to-bring",
+  "timestamp": "2026-10-21T16:36:27.996Z",
+  "title": "Opening a Business Bank Account: What to Bring | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "hero-chevron",
+    "columns-contact",
+    "accordion-disclosure",
+    "columns-icon-strip",
+    "tabs-feature"
+  ],
+  "fragments": [
+    "fragments/small-business/what-to-bring/bank-accounts",
+    "fragments/small-business/what-to-bring/loans-lines-of-credit"
+  ],
+  "importScript": "20a7308ac938"
+}

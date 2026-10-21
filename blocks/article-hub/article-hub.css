@@ -1,0 +1,617 @@
+/*
+ * Article Hub
+ * citi.com tkc learning-center / travel-guide hub (tkc-container-article-banner
+ * + category-all / tkc-category-list + tkc-additional-resource): full-bleed
+ * photo banner with a white title card and search, light-blue bands of white
+ * article cards, link list box, blue resource band, centred closing note.
+ * Card typography follows article-body (Citi Sans Text; Overpass stands in).
+ */
+
+/* the hub bands are full-bleed: lift the section content width */
+main > .section > .article-hub-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.article-hub {
+  --article-hub-text: #26292b;
+  --article-hub-body: #3a3e40;
+  --article-hub-rule: #d8d8d8;
+  --article-hub-gutter: 12px;
+
+  color: var(--text-color);
+}
+
+/* hero banner (same banner + title card as article-body) */
+.article-hub .article-hub-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 12px;
+  overflow: hidden;
+}
+
+.article-hub .article-hub-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.article-hub .article-hub-hero-image picture,
+.article-hub .article-hub-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-hub .article-hub-hero-card {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 746px;
+  min-height: 218px;
+  padding: 24px;
+  border-radius: 24px;
+  background-color: var(--background-color);
+  box-shadow: 4px 4px 25px 4px rgb(0 0 0 / 25%);
+  color: #000;
+}
+
+.article-hub .article-hub-hero-card > * {
+  margin: 0;
+}
+
+.article-hub .article-hub-hero-card :is(.article-hub-eyebrow, .article-hub-caption) {
+  margin-bottom: 8px;
+  color: var(--article-hub-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+
+.article-hub .article-hub-hero-card .article-hub-title {
+  margin-bottom: 16px;
+  color: var(--citi-bright-blue);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.32px;
+}
+
+.article-hub .article-hub-hero-card .article-hub-description {
+  margin-bottom: 24px;
+  color: var(--article-hub-body);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.24px;
+}
+
+/* search */
+.article-hub .article-hub-search {
+  margin: 0;
+}
+
+.article-hub .article-hub-search label {
+  display: flex;
+  max-width: 400px;
+  color: var(--article-hub-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.article-hub .article-hub-search-field {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.article-hub .article-hub-search input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 1px 56px 1px 15px;
+  border: 1px solid #747f83;
+  border-radius: 7px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  appearance: none;
+}
+
+.article-hub .article-hub-search input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.article-hub .article-hub-search input:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 0;
+}
+
+/* magnifier (citi.com search-magnifying-glass-icon, 24px, #056dae) */
+.article-hub .article-hub-search-button {
+  position: absolute;
+  top: 11px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23056dae' stroke-width='1.5' stroke-linecap='round'%3E%3Ccircle cx='14' cy='10' r='6.25'/%3E%3Cpath d='M9.6 14.4 4 20'/%3E%3C/svg%3E") center / contain no-repeat;
+  cursor: pointer;
+}
+
+/* article bands */
+.article-hub .article-hub-groups {
+  background-color: var(--citi-light-blue);
+}
+
+.article-hub .article-hub-results,
+.article-hub .article-hub-group,
+.article-hub .article-hub-more {
+  box-sizing: content-box;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 48px var(--article-hub-gutter);
+}
+
+.article-hub .article-hub-results {
+  padding-bottom: 0;
+  color: var(--article-hub-text);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+/* group header: heading + "View all" link */
+.article-hub .article-hub-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 10px;
+}
+
+.article-hub .article-hub-group-header > * {
+  margin: 0;
+}
+
+.article-hub .article-hub-group-header :is(h2, h3, h4) {
+  margin: 0 0 16px;
+  color: var(--article-hub-text);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+/* category groups (with View all): heading never gets the band size */
+.article-hub .article-hub-group-category .article-hub-group-header :is(h2, h3, h4) {
+  max-width: 90%;
+  margin: 0;
+}
+
+.article-hub .article-hub-group-header a.article-hub-view-all:any-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--citi-brand-blue);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.article-hub .article-hub-group-header a.article-hub-view-all:hover {
+  text-decoration: underline;
+}
+
+/* chevron (citi.com articleicon.png: 10x16 + 5px padding) */
+.article-hub .article-hub-group-header a.article-hub-view-all::after {
+  content: "";
+  flex: none;
+  width: 10px;
+  height: 16px;
+  margin: 5px;
+  background-color: currentcolor;
+  mask: var(--icon-chevron-right) center / contain no-repeat;
+}
+
+/* cards */
+.article-hub .article-hub-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-hub .article-hub-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--background-color);
+  color: var(--link-color);
+}
+
+.article-hub .article-hub-card-linked {
+  cursor: pointer;
+}
+
+.article-hub .article-hub-card-image {
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+.article-hub .article-hub-card-image picture,
+.article-hub .article-hub-card-image img,
+.article-hub .article-hub-card-image-empty {
+  display: block;
+  width: 100%;
+  height: 148px;
+  object-fit: cover;
+}
+
+.article-hub .article-hub-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.article-hub .article-hub-card-body > * {
+  margin: 0;
+}
+
+.article-hub .article-hub-card-body :is(h3, h4) {
+  padding-bottom: 8px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.article-hub .article-hub-card-body :is(h3, h4) a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-hub .article-hub-card-linked:hover :is(h3, h4) a {
+  text-decoration: underline;
+}
+
+.article-hub .article-hub-card-body p {
+  color: var(--article-hub-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* consecutive category groups share one band */
+.article-hub .article-hub-group-category + .article-hub-group-category {
+  padding-top: 0;
+}
+
+/* View All Categories */
+.article-hub .article-hub-more {
+  padding-top: 0;
+  text-align: center;
+}
+
+.article-hub .article-hub-more-button {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 57.5px;
+  background-color: var(--citi-brand-blue);
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+  color: #fff;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 27px;
+  cursor: pointer;
+}
+
+.article-hub .article-hub-more-button:hover {
+  background-color: var(--citi-navy);
+  text-decoration: underline;
+}
+
+.article-hub .article-hub-more-button:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* link list box ("Other categories") */
+.article-hub .article-hub-group-links .article-hub-group-header {
+  justify-content: center;
+}
+
+.article-hub .article-hub-group-links .article-hub-group-header :is(h2, h3, h4) {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 23.14px;
+  font-weight: 700;
+  line-height: 27.768px;
+  text-align: center;
+}
+
+.article-hub .article-hub-group-content :is(ul, ol) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 48px;
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid var(--article-hub-rule);
+  border-radius: 15px;
+  background-color: var(--background-color);
+  list-style: none;
+}
+
+.article-hub .article-hub-group-content li {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--article-hub-rule);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.article-hub .article-hub-group-content li:last-child {
+  border-bottom: 0;
+}
+
+.article-hub .article-hub-group-content li a:any-link {
+  color: var(--link-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.article-hub .article-hub-group-content li a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* resource tiles band ("Additional Resources") */
+.article-hub .article-hub-group-resources {
+  max-width: none;
+  padding-inline: var(--article-hub-gutter);
+  background-color: var(--citi-bright-blue);
+}
+
+.article-hub .article-hub-group-resources > * {
+  max-width: 954px;
+  margin-inline: auto;
+}
+
+.article-hub .article-hub-group-resources .article-hub-group-header {
+  justify-content: center;
+}
+
+.article-hub .article-hub-group-resources .article-hub-group-header :is(h2, h3, h4) {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.article-hub .article-hub-group-resources .article-hub-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 16px;
+  border-radius: 12px;
+  background-color: var(--background-color);
+}
+
+.article-hub .article-hub-group-resources .article-hub-card {
+  display: block;
+  padding: 24px;
+  border-radius: 0;
+  background: none;
+  color: var(--text-color);
+}
+
+.article-hub .article-hub-group-resources .article-hub-card + .article-hub-card {
+  border-top: 1px solid #e6ebed;
+}
+
+.article-hub .article-hub-group-resources .article-hub-card-body {
+  display: block;
+  padding: 0;
+}
+
+.article-hub .article-hub-group-resources .article-hub-card-body :is(h3, h4) {
+  margin: 0 0 4px;
+  padding: 0;
+  color: var(--article-hub-body);
+  font-weight: 700;
+}
+
+.article-hub .article-hub-group-resources .article-hub-card-body :is(h3, h4) a:any-link {
+  color: var(--link-color);
+}
+
+.article-hub .article-hub-group-resources .article-hub-card-body :is(h3, h4) a::after {
+  content: " >";
+}
+
+.article-hub .article-hub-group-resources .article-hub-card-body + .article-hub-card-body {
+  padding: 2px 0;
+  color: var(--article-hub-body);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.article-hub .article-hub-group-resources .article-hub-card-body p {
+  font-weight: 300;
+}
+
+/* closing note (Rocket Travel line) */
+.article-hub .article-hub-footer {
+  padding: 20px var(--article-hub-gutter) 24px;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+}
+
+.article-hub .article-hub-footer > * {
+  margin: 0 0 24px;
+}
+
+.article-hub .article-hub-footer > :last-child {
+  margin-bottom: 0;
+}
+
+@media (width >= 600px) {
+  .article-hub .article-hub-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .article-hub .article-hub-card-image picture,
+  .article-hub .article-hub-card-image img,
+  .article-hub .article-hub-card-image-empty {
+    height: auto;
+    aspect-ratio: 2 / 1;
+  }
+
+  .article-hub .article-hub-hero-card {
+    max-width: 551px;
+  }
+}
+
+@media (width >= 900px) {
+  .article-hub {
+    --article-hub-gutter: 32px;
+  }
+
+  .article-hub .article-hub-hero {
+    justify-content: flex-start;
+    padding: 48px;
+  }
+
+  .article-hub .article-hub-hero-card {
+    max-width: 746px;
+  }
+
+  .article-hub .article-hub-hero-card .article-hub-title {
+    line-height: 38.4px;
+  }
+
+  .article-hub .article-hub-search-field {
+    width: 296px;
+  }
+
+  .article-hub .article-hub-results,
+  .article-hub .article-hub-group,
+  .article-hub .article-hub-more {
+    padding-block: 72px;
+  }
+
+  .article-hub .article-hub-results {
+    padding-bottom: 0;
+  }
+
+  .article-hub .article-hub-more,
+  .article-hub .article-hub-group-category + .article-hub-group-category {
+    padding-top: 0;
+  }
+
+  .article-hub .article-hub-group-header :is(h2, h3, h4) {
+    margin-bottom: 8px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .article-hub .article-hub-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 48px;
+  }
+
+  /* category groups sit 16px further in (citi.com category__v) */
+  .article-hub .article-hub-groups .article-hub-group-category {
+    max-width: 1264px;
+    padding-inline: calc(var(--article-hub-gutter) + 16px);
+  }
+
+  .article-hub .article-hub-group-category .article-hub-group-header :is(h2, h3, h4) {
+    margin: 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .article-hub .article-hub-group-links .article-hub-group-header :is(h2, h3, h4) {
+    margin: 0;
+    font-size: 28px;
+    line-height: 33.6px;
+  }
+
+  .article-hub .article-hub-group-content :is(ul, ol) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 40px 0;
+    padding: 16px 24px;
+  }
+
+  .article-hub .article-hub-group-content li:nth-last-child(2):nth-child(odd) {
+    border-bottom: 0;
+  }
+
+  .article-hub .article-hub-group-resources .article-hub-group-header {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+  }
+
+  .article-hub .article-hub-group-resources .article-hub-group-header :is(h2, h3, h4) {
+    margin: 0;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .article-hub .article-hub-group-resources .article-hub-cards {
+    flex-direction: row;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .article-hub .article-hub-group-resources .article-hub-card {
+    flex: 1 1 0;
+    margin: 24px 0 24px 24px;
+    padding: 0 24px 0 0;
+    border-right: 1px solid var(--article-hub-rule);
+    text-align: center;
+  }
+
+  .article-hub .article-hub-group-resources .article-hub-card:last-child {
+    border-right: 0;
+  }
+
+  .article-hub .article-hub-group-resources .article-hub-card + .article-hub-card {
+    border-top: 0;
+  }
+}
+
+@media (width >= 1200px) {
+  .article-hub .article-hub-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* search / collapse state */
+.article-hub .article-hub-results[hidden],
+.article-hub .article-hub-card-hidden,
+.article-hub .article-hub-group-hidden,
+.article-hub:not(.article-hub-searching) .article-hub-card-more,
+.article-hub:not(.article-hub-expanded, .article-hub-searching) .article-hub-group-more,
+.article-hub.article-hub-searching .article-hub-more {
+  display: none;
+}

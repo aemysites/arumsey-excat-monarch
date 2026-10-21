@@ -1,0 +1,383 @@
+/*
+ * cards-icon: values from citi.com computed styles
+ * (see migration-work/cards-icon-extracted.css for the per-variant sources).
+ */
+
+.cards-icon ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-icon li {
+  position: relative;
+}
+
+.cards-icon .cards-icon-icon {
+  line-height: 0;
+}
+
+.cards-icon .cards-icon-icon > *,
+.cards-icon .cards-icon-body > * {
+  margin: 0;
+}
+
+.cards-icon .cards-icon-icon img,
+.cards-icon .cards-icon-icon .icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cards-icon li.is-link a {
+  text-decoration: none;
+}
+
+.cards-icon li.is-link a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/*
+ * default: white benefit card (small-business / mortgage .benefitcards__contentbox).
+ * Mobile: one card per item (source shows them as carousel slides);
+ * desktop: one card, equal columns split by #eee rules.
+ */
+.cards-icon:not(.quick-nav, .icon-beside-label, .alt, .grid, .blue, .card-cross-sell) ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cards-icon:not(.quick-nav, .icon-beside-label, .alt, .grid, .blue, .card-cross-sell) li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.cards-icon:not(.quick-nav, .icon-beside-label, .alt, .grid, .blue, .card-cross-sell) h3 {
+  margin: 0 0 4px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.cards-icon:not(.quick-nav, .icon-beside-label, .alt, .grid, .blue, .card-cross-sell) p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* quick-nav: homepage line-of-business links (.lob-menu-wrapper) */
+.cards-icon.quick-nav ul {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding: 16px 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 16px;
+  background-color: var(--background-color);
+  scrollbar-width: none;
+}
+
+.cards-icon.quick-nav li {
+  display: flex;
+  flex: 0 0 25%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cards-icon.quick-nav .cards-icon-icon {
+  margin-bottom: 8px;
+}
+
+.cards-icon.quick-nav .cards-icon-label,
+.cards-icon.quick-nav .cards-icon-label a {
+  color: var(--link-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* icon-beside-label: value-proposition strip; the band (#142063) is part of the source component */
+.cards-icon.icon-beside-label {
+  padding: 36px 0;
+  background-color: #142063;
+  box-shadow: 0 0 0 100vmax #142063;
+  clip-path: inset(0 -100vmax);
+  color: #fff;
+}
+
+main .section:is(.dark, .blue) .cards-icon.icon-beside-label {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  clip-path: none;
+}
+
+.cards-icon.icon-beside-label ul {
+  display: flex;
+  flex-direction: column;
+  max-width: 234px;
+  margin: 0 auto;
+}
+
+.cards-icon.icon-beside-label li {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.cards-icon.icon-beside-label .cards-icon-icon {
+  flex: 0 0 auto;
+  margin-right: 12px;
+}
+
+.cards-icon.icon-beside-label .cards-icon-body {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  text-align: left;
+}
+
+.cards-icon.icon-beside-label .cards-icon-body strong {
+  font-weight: 700;
+}
+
+/* blue: filled #255be3 panel of icon tiles (cititravel .benefits-tile-column) */
+.cards-icon.blue ul {
+  display: flex;
+  flex-direction: column;
+  max-width: 856px;
+  margin: 0 auto;
+  padding: 0 16px;
+  border-radius: 16px;
+  background-color: var(--citi-bright-blue);
+}
+
+.cards-icon.blue li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 12px;
+  color: #fff;
+  text-align: left;
+}
+
+.cards-icon.blue li:where(:not(:last-child)) {
+  border-bottom: 1px solid #e6ebed;
+}
+
+.cards-icon.blue .cards-icon-body,
+.cards-icon.blue .cards-icon-body a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* alt / grid: left-aligned icon, large title and supporting text (card PDP benefits drawer) */
+.cards-icon:is(.alt, .grid) ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 48px;
+}
+
+.cards-icon:is(.alt, .grid) li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  color: #5e676b;
+  text-align: left;
+}
+
+.cards-icon:is(.alt, .grid) .cards-icon-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cards-icon.grid .cards-icon-body {
+  gap: 16px;
+}
+
+.cards-icon:is(.alt, .grid) h3 {
+  color: #26292b;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+
+.cards-icon.grid h3 {
+  font-weight: 500;
+}
+
+.cards-icon:is(.alt, .grid) p {
+  color: #5e676b;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  line-height: 18.06px;
+}
+
+/* keep titles aligned when an item's icon is missing but its siblings have one */
+.cards-icon:is(.alt, .grid) ul:has(.cards-icon-icon) > :where(li:not(:has(.cards-icon-icon))) {
+  padding-top: 48px;
+}
+
+/* the AAdvantage drawer icons are one sprite; the source crops it per item */
+.cards-icon.alt .cards-icon-icon img[src*="sprite-aa-mileup-icons-drawer"] {
+  object-fit: none;
+}
+
+.cards-icon.alt li:nth-child(1) img[src*="sprite-aa-mileup-icons-drawer"] {
+  object-position: -468px -190px;
+}
+
+.cards-icon.alt li:nth-child(2) img[src*="sprite-aa-mileup-icons-drawer"] {
+  object-position: -329px -190px;
+}
+
+/* card-cross-sell: card-art thumbnail + product name + chevron rows (.bt-card-list) */
+.cards-icon.card-cross-sell ul {
+  display: flex;
+  flex-direction: column;
+  padding-right: 25px;
+}
+
+.cards-icon.card-cross-sell li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 19px 0;
+  color: #26292b;
+  text-align: left;
+}
+
+.cards-icon.card-cross-sell .cards-icon-icon img {
+  width: 64px;
+  height: 40px;
+  margin-left: 5px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.cards-icon.card-cross-sell .cards-icon-body {
+  flex: 1 1 auto;
+}
+
+.cards-icon.card-cross-sell .cards-icon-label,
+.cards-icon.card-cross-sell .cards-icon-label a {
+  color: #26292b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.cards-icon.card-cross-sell li.is-link::after {
+  content: '';
+  flex: 0 0 18px;
+  height: 18px;
+  margin-left: 8px;
+  background-color: var(--citi-brand-blue);
+  mask: var(--icon-chevron-right) center / 18px 18px no-repeat;
+}
+
+/* footnote links inside alt / grid copy */
+.cards-icon:is(.alt, .grid) .cards-icon-body :is(sup a, a:has(> sup)) {
+  color: var(--citi-dark-blue);
+  letter-spacing: 0.2px;
+  text-decoration: underline;
+}
+
+.cards-icon:is(.alt, .grid) .cards-icon-body sup a {
+  font-size: 12px;
+}
+
+main .section:is(.dark, .blue) .cards-icon:is(.alt, .grid) :is(li, h3, p, sup a, a:has(> sup)) {
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .cards-icon:not(.quick-nav, .icon-beside-label, .alt, .grid, .blue, .card-cross-sell) ul {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 0;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+    background-color: var(--background-color);
+  }
+
+  .cards-icon:not(.quick-nav, .icon-beside-label, .alt, .grid, .blue, .card-cross-sell) li {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .cards-icon:not(.quick-nav, .icon-beside-label, .alt, .grid, .blue, .card-cross-sell) li:where(:not(:last-child)) {
+    border-right: 1px solid var(--rule-color);
+  }
+
+  .cards-icon.quick-nav ul {
+    justify-content: space-evenly;
+    overflow-x: visible;
+  }
+
+  .cards-icon.quick-nav li {
+    flex: 1 1 0;
+  }
+
+  .cards-icon.quick-nav .cards-icon-label,
+  .cards-icon.quick-nav .cards-icon-label a {
+    font-weight: 700;
+  }
+
+  .cards-icon.icon-beside-label ul {
+    flex-direction: row;
+    max-width: 856px;
+  }
+
+  .cards-icon.icon-beside-label li {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+
+  .cards-icon.icon-beside-label li:where(:not(:last-child)) {
+    border-right: 1px solid #fff;
+  }
+
+  .cards-icon.blue ul {
+    flex-direction: row;
+    padding: 24px 0;
+  }
+
+  .cards-icon.blue li {
+    flex: 1 1 0;
+    align-items: center;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  .cards-icon.blue li:where(:not(:last-child)) {
+    border-right: 1px solid #e6ebed;
+    border-bottom: 0;
+  }
+
+  .cards-icon:is(.alt, .grid) ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

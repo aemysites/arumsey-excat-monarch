@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+  "path": "credit-cards/citi-best-buy-credit-cards",
+  "timestamp": "2026-10-21T19:24:36.801Z",
+  "title": "My Best Buy® Credit Cards | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "tabs-feature",
+    "hero-card",
+    "cards-highlight"
+  ],
+  "fragments": [
+    "fragments/credit-cards/citi-best-buy-credit-cards/cardmember-benefits",
+    "fragments/credit-cards/citi-best-buy-credit-cards/my-best-buy-visa-card"
+  ],
+  "importScript": "089f57e4feb6"
+}

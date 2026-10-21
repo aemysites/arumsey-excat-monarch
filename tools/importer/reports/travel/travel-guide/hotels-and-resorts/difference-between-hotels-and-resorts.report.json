@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/difference-between-hotels-and-resorts",
+  "path": "travel/travel-guide/hotels-and-resorts/difference-between-hotels-and-resorts",
+  "timestamp": "2026-10-21T19:12:26.962Z",
+  "title": "Understanding the Difference Between Hotels and Resorts | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

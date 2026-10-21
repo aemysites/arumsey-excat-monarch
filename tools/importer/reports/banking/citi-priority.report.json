@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/citi-priority",
+  "path": "banking/citi-priority",
+  "timestamp": "2026-10-21T19:23:39.459Z",
+  "title": "Citi Priority – Preferred Banking & No Monthly Service Fees | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "notice-box",
+    "notice-box",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "location-selector",
+    "hero-photo",
+    "tabs-feature"
+  ],
+  "fragments": [
+    "fragments/banking/citi-priority/preferred-banking",
+    "fragments/banking/citi-priority/investing",
+    "fragments/banking/citi-priority/lifestyle-travel",
+    "fragments/banking/citi-priority/preferred-pricing",
+    "fragments/banking/citi-priority/accordion-feature-1"
+  ],
+  "importScript": "089f57e4feb6"
+}

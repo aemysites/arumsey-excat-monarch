@@ -1,0 +1,485 @@
+/*
+ * tabs-feature: values from citi.com computed styles.
+ * default = mkt-tab-list icon tiles (credit-cards/bloomingdales-credit-cards)
+ * text-tabs-on-band, icon-tiles, icon-tiles-2 = cds-tab-bar-group text/icon tabs
+ *   (small-business-banking/business-credit, small-business/what-to-bring,
+ *   small-business/banking/checking-accounts)
+ * underlined-text-tabs, -3 = mkt-tab-list text strip (digital-wallet/google-pay, apple-pay)
+ * underlined-text-tabs-2 = aem-tab-group (banking/savings-account)
+ * Colour on a band comes from the section style (dark, blue).
+ */
+
+.tabs-feature {
+  --tabs-feature-text: var(--text-color);
+  --tabs-feature-accent: var(--citi-blue);
+  --tabs-feature-tile-active: #005aa1; /* rgb(0 90 161), selected icon tile */
+}
+
+.section.dark .tabs-feature,
+.section.blue .tabs-feature {
+  --tabs-feature-text: #fff;
+  --tabs-feature-accent: #fff;
+}
+
+/* shared structure */
+.tabs-feature .tabs-feature-list {
+  display: flex;
+  max-width: 100%;
+}
+
+.tabs-feature .tabs-feature-tab {
+  display: flex;
+  position: relative;
+  flex: 0 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+  color: var(--tabs-feature-text);
+  font: inherit;
+  font-weight: var(--body-font-weight);
+  text-align: center;
+  white-space: normal;
+  cursor: pointer;
+}
+
+.tabs-feature .tabs-feature-tab[aria-selected='true'] {
+  cursor: default;
+}
+
+.tabs-feature .tabs-feature-tab:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.tabs-feature .tabs-feature-tab-icon {
+  display: block;
+  line-height: 0;
+}
+
+.tabs-feature .tabs-feature-tab-icon img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.tabs-feature .tabs-feature-tab-label {
+  display: block;
+}
+
+.tabs-feature .tabs-feature-panel {
+  position: relative;
+}
+
+.tabs-feature .tabs-feature-panel[aria-hidden='true'],
+.tabs-feature .tabs-feature-panel:empty {
+  display: none;
+}
+
+.tabs-feature .tabs-feature-panel > .section > div > :first-child {
+  margin-top: 0;
+}
+
+/*
+ * default: icon tiles above a panel (mkt-tab-list .benefit-icons)
+ */
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-list {
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+/* soft halo behind the tiles (citi .spacer) */
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-list::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 1px;
+  box-shadow: rgb(0 0 0 / 7%) 0 -6px 17px 4px;
+}
+
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab {
+  z-index: 1;
+  flex: 1 1 0;
+  max-width: 250px;
+  min-height: 70px;
+  border: 1px solid rgb(0 0 0 / 25%);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  color: var(--citi-blue);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  opacity: 0.92;
+}
+
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab[aria-selected='true'] {
+  z-index: 2;
+  background-color: var(--tabs-feature-tile-active);
+  box-shadow: rgb(51 51 51 / 25%) 0 0 5px 1px;
+  color: #fff;
+}
+
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+}
+
+/* icons render at their intrinsic size (48x40 to 56x56) */
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab-icon img {
+  max-height: 55px;
+}
+
+/* blue band (hr) under the tiles, rounded edge facing the panel on mobile */
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel {
+  border-radius: 15px 15px 0 0;
+  padding: 0 0 60px;
+  background-color: #fff;
+}
+
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel::before {
+  content: '';
+  display: block;
+  height: 10px;
+  margin: 10px 0 30px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 20px 20px;
+  background-color: var(--tabs-feature-tile-active);
+  opacity: 0.25;
+}
+
+/* mobile: centred pointer below the band */
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: calc(50% - 15px);
+  width: 0;
+  height: 0;
+  border-top: 15px solid var(--tabs-feature-tile-active);
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+}
+
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel :is(h2, h3, h4) {
+  margin: 0 0 10px;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel p {
+  margin: 0 0 30px;
+  line-height: 21px;
+}
+
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel .section-subnav-item > :last-child {
+  margin-bottom: 0;
+}
+
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel .section-subnav-row {
+  row-gap: 30px;
+}
+
+/*
+ * text-tabs-on-band, icon-tiles, icon-tiles-2: CDS tab bar (label + 4px pill underline)
+ */
+.tabs-feature:is(.text-tabs-on-band, .icon-tiles, .icon-tiles-2) .tabs-feature-list {
+  justify-content: center;
+  padding: 0 24px;
+  overflow-x: auto;
+}
+
+.tabs-feature:is(.text-tabs-on-band, .icon-tiles, .icon-tiles-2) .tabs-feature-tab {
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 0 2px 8px;
+  line-height: 24px;
+}
+
+.tabs-feature:is(.text-tabs-on-band, .icon-tiles, .icon-tiles-2) .tabs-feature-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 999px;
+  background-color: transparent;
+}
+
+.tabs-feature:is(.text-tabs-on-band, .icon-tiles, .icon-tiles-2) .tabs-feature-tab[aria-selected='true'] {
+  font-weight: 700;
+}
+
+.tabs-feature:is(.text-tabs-on-band, .icon-tiles, .icon-tiles-2) .tabs-feature-tab[aria-selected='true']::after {
+  background-color: var(--tabs-feature-accent);
+}
+
+.tabs-feature:is(.text-tabs-on-band, .icon-tiles, .icon-tiles-2) .tabs-feature-tab-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* citi swaps in a white icon on the selected tile (default variant) */
+.tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab[aria-selected='true'] .tabs-feature-tab-icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* text tabs on a band: 21px labels, 8px apart */
+.tabs-feature.text-tabs-on-band .tabs-feature-list {
+  margin: 0 0 24px;
+}
+
+.tabs-feature.text-tabs-on-band .tabs-feature-tab {
+  margin: 4px 8px;
+  font-size: 21px;
+  line-height: normal;
+}
+
+/* icon tiles: inline icon + label, 16px apart */
+.tabs-feature:is(.icon-tiles, .icon-tiles-2) .tabs-feature-list {
+  gap: 16px;
+}
+
+.tabs-feature:is(.icon-tiles, .icon-tiles-2) .tabs-feature-tab-label {
+  text-align: left;
+}
+
+.tabs-feature.icon-tiles-2 .tabs-feature-tab {
+  padding: 4px 8px 12px;
+}
+
+.tabs-feature:is(.icon-tiles, .icon-tiles-2) .tabs-feature-panel {
+  padding: 22px 0 48px;
+}
+
+/*
+ * underlined-text-tabs, -3: equal-width grey strip, white selected tab with blue underline
+ */
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-list {
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 0;
+}
+
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-tab {
+  flex: 1 1 0;
+  min-height: 70px;
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  padding: 10px;
+  background-color: var(--citi-grey);
+  color: var(--citi-blue);
+  line-height: 16px;
+  letter-spacing: 0.67px;
+}
+
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-tab::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 1px;
+  background-color: #767676;
+}
+
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-tab:first-child::before,
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-tab[aria-selected='true']::before,
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-tab[aria-selected='true'] + .tabs-feature-tab::before {
+  display: none;
+}
+
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-tab[aria-selected='true'] {
+  border-top-color: transparent;
+  border-bottom-color: var(--citi-blue);
+  background-color: #fff;
+  box-shadow: rgb(51 51 51 / 25%) 0 0 5px 1px;
+  color: var(--text-color);
+}
+
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-panel {
+  padding: 40px 0 0;
+}
+
+.tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-panel h2 {
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+/*
+ * underlined-text-tabs-2: centred upper-case tabs on top of a white card
+ */
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-list {
+  position: relative;
+  z-index: 1;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-tab {
+  border-bottom: 1px solid var(--citi-blue);
+  border-radius: 6px 6px 0 0;
+  padding: 10px;
+  background-color: #fff;
+  color: var(--citi-blue);
+  line-height: 22px;
+  letter-spacing: 1.5px;
+}
+
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-tab[aria-selected='true'] {
+  border-bottom: 0;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-panel {
+  border-radius: 20px;
+  background-color: rgb(255 255 255 / 80%);
+  box-shadow: rgb(0 0 0 / 12%) 0 1px 10px 0;
+}
+
+/* panel tiles (aem-flexible-grid): centred title + copy, 24px padding */
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-panel .section-subnav-row {
+  gap: 0;
+}
+
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-panel .section-subnav-item {
+  position: relative;
+  padding: 12px 24px;
+  text-align: center;
+}
+
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-panel .section-subnav-item :is(h2, h3, h4) {
+  margin: 0;
+  padding: 12px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-panel .section-subnav-item :is(p, ul) {
+  margin: 0;
+  padding: 4px 0 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.tabs-feature.underlined-text-tabs-2 .tabs-feature-panel .section-subnav-item ul {
+  list-style: none;
+}
+
+@media (width >= 900px) {
+  /* default */
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 35px;
+    padding: 10px 0 0;
+  }
+
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-list::after {
+    bottom: -35px;
+  }
+
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab {
+    flex: 0 0 250px;
+    height: 160px;
+    min-height: 90px;
+    border: 0;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: var(--body-font-weight);
+    line-height: 27px;
+    opacity: 1;
+  }
+
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab[aria-selected='true'] {
+    border-top-color: transparent;
+    border-bottom-color: var(--citi-blue);
+  }
+
+  /* pointer under the selected tile */
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab[aria-selected='true']::after {
+    content: '';
+    position: absolute;
+    bottom: -45px;
+    left: calc(50% - 24px);
+    width: 0;
+    height: 0;
+    border-right: 24px solid transparent;
+    border-bottom: 24px solid var(--tabs-feature-tile-active);
+    border-left: 24px solid transparent;
+  }
+
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-tab-icon {
+    margin: 0 0 20px;
+  }
+
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel {
+    padding: 0 60px 80px;
+  }
+
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel::before {
+    margin: 35px -60px 60px;
+    border-top: 1px solid #ccc;
+    border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel::after {
+    display: none;
+  }
+
+  .tabs-feature:not(.text-tabs-on-band, .underlined-text-tabs, .underlined-text-tabs-2, .underlined-text-tabs-3, .icon-tiles, .icon-tiles-2) .tabs-feature-panel .section-subnav-row {
+    gap: 60px;
+  }
+
+  /* CDS tab bar */
+  .tabs-feature:is(.icon-tiles, .icon-tiles-2) .tabs-feature-tab {
+    font-size: 21px;
+    line-height: 27px;
+  }
+
+  /* underlined text strip */
+  .tabs-feature:is(.underlined-text-tabs, .underlined-text-tabs-3) .tabs-feature-tab {
+    min-height: 90px;
+  }
+
+  /* underlined-text-tabs-2 */
+  .tabs-feature.underlined-text-tabs-2 .tabs-feature-tab {
+    min-width: 258px;
+    padding: 20px;
+  }
+
+  .tabs-feature.underlined-text-tabs-2 .tabs-feature-panel .section-subnav-item {
+    padding: 24px;
+  }
+
+  /* short vertical rule between tiles (93px of a 213px row) */
+  .tabs-feature.underlined-text-tabs-2 .tabs-feature-panel .section-subnav-item + .section-subnav-item::before {
+    content: '';
+    position: absolute;
+    top: 28%;
+    bottom: 28%;
+    left: 0;
+    width: 1px;
+    background-color: var(--rule-color);
+  }
+}

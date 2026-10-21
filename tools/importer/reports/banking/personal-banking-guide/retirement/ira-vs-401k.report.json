@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/retirement/ira-vs-401k",
+  "path": "banking/personal-banking-guide/retirement/ira-vs-401k",
+  "timestamp": "2026-10-21T16:37:59.075Z",
+  "title": "IRA vs. 401(k): What Are the Differences? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/personal-banking-guide/retirement/ira-vs-401k/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/coastal-road-trips-that-turn-the-journey-into-the-destination",
+  "path": "travel/travel-guide/car-rental-tips/coastal-road-trips-that-turn-the-journey-into-the-destination",
+  "timestamp": "2026-10-21T19:10:40.655Z",
+  "title": "Coastal road trips that act as the destination | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

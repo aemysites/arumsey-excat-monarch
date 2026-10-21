@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/correspondent-lending",
+  "path": "mortgage/correspondent-lending",
+  "timestamp": "2026-10-21T17:58:24.304Z",
+  "title": "Correspondent Lending",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "hero-chevron",
+    "section-subnav",
+    "columns-icon-strip"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

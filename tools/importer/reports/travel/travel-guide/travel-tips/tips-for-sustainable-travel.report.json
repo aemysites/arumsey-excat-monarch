@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/tips-for-sustainable-travel",
+  "path": "travel/travel-guide/travel-tips/tips-for-sustainable-travel",
+  "timestamp": "2026-10-21T19:18:15.430Z",
+  "title": "Tips for Sustainable Travel | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

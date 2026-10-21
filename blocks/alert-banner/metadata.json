@@ -1,0 +1,22 @@
+{
+  "variantName": "alert-banner",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link + button",
+    "purpose": "dismissible site notice (e.g. unsupported browser warning) with info icon, message, link and close button"
+  },
+  "contentPattern": {
+    "structure": "one row, one cell: message text with optional link; optional second cell with a custom icon image"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_5b84d1189632"
+  ],
+  "usage": "Site-wide notices at the top of the home page and banking landing pages.",
+  "reuseGuidance": "Use for short dismissible notices. Dismissal is remembered for the browser session. Not for promotional banners."
+}

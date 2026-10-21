@@ -1,0 +1,22 @@
+{
+  "variantName": "columns-icon-features",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link",
+    "purpose": "centred feature columns: icon, heading, short description and a link"
+  },
+  "contentPattern": {
+    "structure": "one row with one cell per feature (or one feature per row). Each cell: icon or image, heading, text, link"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_7cbfc5bc855e"
+  ],
+  "usage": "Product cross-sell features (e.g. savings / investing) with centred icons",
+  "reuseGuidance": "Use for 2-4 centred icon features. Not for contact panels (columns-contact)."
+}

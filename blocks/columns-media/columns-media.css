@@ -1,0 +1,536 @@
+/* variant rules are scoped by variant class, so source order is not a specificity cascade */
+/* stylelint-disable no-descending-specificity */
+
+/*
+ * columns-media: image + text columns (citi.com computed styles)
+ * default:            homepage promo module (app-module-one-reskin), 1:1 columns, centred copy on mobile
+ * default + list:     small-business banner__container (422px image, checklist)
+ * faq / light / dark / icon-feature-list / centred-image: see variant sections
+ */
+
+/* layout */
+.columns-media .columns-media-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-media .columns-media-row + .columns-media-row {
+  margin-top: 32px;
+}
+
+.columns-media .columns-media-col {
+  min-width: 0;
+}
+
+.columns-media .columns-media-col-empty {
+  display: none;
+}
+
+.columns-media .columns-media-text-col > :first-child {
+  margin-top: 0;
+}
+
+.columns-media .columns-media-text-col > :last-child {
+  margin-bottom: 0;
+}
+
+.columns-media .columns-media-img-col {
+  order: -1;
+}
+
+.columns-media .columns-media-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.columns-media .columns-media-img-col p {
+  margin: 0;
+}
+
+/* typography */
+.columns-media .columns-media-text-col > .columns-media-eyebrow {
+  margin: 0 0 8px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 300;
+  line-height: var(--body-line-height-xs);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.columns-media .columns-media-eyebrow + :is(h1, h2, h3, h4) {
+  margin-top: 0;
+}
+
+.columns-media .columns-media-text-col :is(h2, h3) {
+  margin-top: 0;
+}
+
+.columns-media .columns-media-text-col > p {
+  margin-bottom: 16px;
+}
+
+/* module CTA */
+.columns-media .columns-media-text-col > p.columns-media-cta {
+  margin: 24px 0 0;
+}
+
+/* checklist (plain lists): Citi check icon as the list marker */
+.columns-media .columns-media-checklist {
+  margin: 24px 0 16px;
+  padding-left: 32px;
+  list-style: none;
+}
+
+.columns-media .columns-media-checklist > li {
+  position: relative;
+  padding-left: 12px;
+}
+
+.columns-media .columns-media-checklist > li::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -32px;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.735 4.335a.8.8 0 0 1 0 1.13l-13.72 13.72a1.8 1.8 0 0 1-2.55-.008l-5.198-5.263a.8.8 0 0 1 1.138-1.124l5.198 5.264a.2.2 0 0 0 .283 0L21.605 4.337a.8.8 0 0 1 1.13 0' fill='%23056DAE'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* checklist banner / faq photos are cropped to a fixed frame */
+.columns-media.columns-media-has-list .columns-media-img-col img {
+  height: 219px;
+  object-fit: cover;
+}
+
+.columns-media .columns-media-checklist > li + li {
+  margin-top: 16px;
+}
+
+.columns-media .columns-media-checklist > li > :is(h3, h4) {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.columns-media .columns-media-checklist > li > p {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* icon / checkmark items */
+.columns-media .columns-media-icon-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns-media .columns-media-icon-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.columns-media .columns-media-icon-list .columns-media-icon-item + .columns-media-icon-item,
+.columns-media p.columns-media-icon-item + p.columns-media-icon-item {
+  margin-top: 16px;
+}
+
+.columns-media .columns-media-icon-item > picture,
+.columns-media .columns-media-icon-item > img,
+.columns-media .columns-media-icon-item > .icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+}
+
+.columns-media .columns-media-icon-item > picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.columns-media .columns-media-icon-item-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.columns-media .columns-media-icon-item-body > :first-child {
+  margin-top: 0;
+}
+
+.columns-media .columns-media-icon-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* default promo module (no list): rounded image, centred copy on mobile */
+.columns-media:not(.columns-media-has-list, .faq, .light, .dark, .icon-feature-list, .centred-image) .columns-media-img-col img {
+  border-radius: 16px;
+}
+
+.columns-media:not(.columns-media-has-list, .faq, .light, .dark, .icon-feature-list, .centred-image) .columns-media-text-col {
+  text-align: center;
+}
+
+.columns-media:not(.columns-media-has-list, .faq, .light, .dark, .icon-feature-list, .centred-image) .columns-media-eyebrow {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.columns-media:not(.columns-media-has-list, .faq, .light, .dark, .icon-feature-list, .centred-image) .columns-media-text-col h2 {
+  margin-bottom: 16px;
+  font-size: var(--heading-font-size-xxl);
+  line-height: 42px;
+}
+
+.columns-media:not(.columns-media-has-list, .faq, .light, .dark, .icon-feature-list, .centred-image) .columns-media-text-col > p:not(.columns-media-eyebrow, .columns-media-cta) {
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+.columns-media:not(.columns-media-has-list, .faq, .light, .dark, .icon-feature-list, .centred-image) .columns-media-text-col > p + p.columns-media-cta {
+  margin-top: 0;
+}
+
+main .columns-media .columns-media-cta a.button.primary:any-link {
+  width: calc(50% - 12px);
+}
+
+/* default + checklist (small-business banner): muted eyebrow */
+.columns-media.columns-media-has-list:not(.faq) .columns-media-eyebrow {
+  color: var(--text-color-muted);
+}
+
+/* faq */
+.columns-media.faq .columns-media-checklist > li + li {
+  margin-top: 9px;
+}
+
+.columns-media.faq .columns-media-checklist > li > :is(h3, h4) {
+  margin-bottom: 0;
+}
+
+.columns-media.faq .columns-media-checklist > li > p {
+  line-height: var(--body-line-height-s);
+}
+
+.columns-media.faq.columns-media-text-only .columns-media-text-col h3 {
+  margin-bottom: 4px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.columns-media.faq.columns-media-text-only .columns-media-text-col p {
+  font-weight: 300;
+}
+
+main .columns-media.faq .columns-media-cta a.button.accent:any-link {
+  line-height: 22px;
+}
+
+/* light: HomeStory (rounded image, alternate button) */
+.columns-media.light .columns-media-img-col img {
+  border-radius: 8px;
+}
+
+.columns-media.light .columns-media-text-col h2 {
+  line-height: 44px;
+}
+
+.columns-media.light .columns-media-text-col > p {
+  font-weight: 400;
+}
+
+main .columns-media.light a.button:any-link {
+  border-color: #eff3f8;
+  background-color: #eff3f8;
+  color: var(--link-color);
+}
+
+main .columns-media.light a.button:hover {
+  color: var(--link-hover-color);
+}
+
+/* dark: heading | copy split by a rule ("Compare more product and rate options") */
+.columns-media.dark.columns-media-text-only .columns-media-text-col {
+  text-align: center;
+}
+
+.columns-media.dark.columns-media-text-only .columns-media-text-col h2 {
+  margin-bottom: 0;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.columns-media.dark.columns-media-text-only .columns-media-text-col > p {
+  font-weight: 400;
+}
+
+main .columns-media.dark a.button:any-link {
+  padding: 7px 12px;
+}
+
+/* icon-feature-list: CD Basics (round icon badges) */
+.columns-media.icon-feature-list .columns-media-img-col img {
+  border-radius: 16px;
+}
+
+.columns-media.icon-feature-list .columns-media-text-col h2 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.columns-media.icon-feature-list .columns-media-text-col > h2 + p {
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.columns-media.icon-feature-list .columns-media-icon-item {
+  gap: 15px;
+}
+
+.columns-media.icon-feature-list .columns-media-icon-list .columns-media-icon-item + .columns-media-icon-item,
+.columns-media.icon-feature-list p.columns-media-icon-item + p.columns-media-icon-item {
+  margin-top: 20px;
+}
+
+.columns-media.icon-feature-list .columns-media-icon-item > picture,
+.columns-media.icon-feature-list .columns-media-icon-item > img,
+.columns-media.icon-feature-list .columns-media-icon-item > .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: rgb(76 108 156);
+}
+
+.columns-media.icon-feature-list .columns-media-icon-item > picture img,
+.columns-media.icon-feature-list .columns-media-icon-item > .icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.columns-media.icon-feature-list .columns-media-icon-item > img {
+  padding: 11px;
+}
+
+.columns-media.icon-feature-list .columns-media-icon-item-body :is(h3, h4) {
+  margin: 0;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 27px;
+}
+
+.columns-media.icon-feature-list .columns-media-icon-item-body p {
+  margin: 0 0 12px;
+  font-weight: 300;
+}
+
+.columns-media.icon-feature-list .columns-media-icon-item-body > p:last-child {
+  margin-bottom: 0;
+}
+
+/* centred-image: feature tiles either side of a phone on a light-blue disc */
+.columns-media.centred-image .columns-media-img-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.columns-media.centred-image .columns-media-img-col::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(416px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgb(155 213 239);
+  transform: translate(-50%, -50%);
+}
+
+.columns-media.centred-image .columns-media-img-col :is(picture, img) {
+  position: relative;
+}
+
+.columns-media.centred-image .columns-media-img-col img {
+  width: auto;
+  max-width: 100%;
+}
+
+.columns-media.centred-image .columns-media-text-col :is(h3, h4) {
+  margin: 0 0 8px;
+  color: var(--link-color);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.columns-media.centred-image .columns-media-text-col p {
+  margin: 0 0 12px;
+  font-size: var(--body-font-size-s);
+  line-height: 24px;
+}
+
+@media (width >= 900px) {
+  .columns-media .columns-media-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .columns-media .columns-media-col {
+    flex: 1 1 0;
+  }
+
+  .columns-media .columns-media-col-empty {
+    display: block;
+  }
+
+  .columns-media .columns-media-img-col {
+    order: unset;
+  }
+
+  /* default promo module: 1:1 columns, left-aligned copy */
+  .columns-media:not(.columns-media-has-list, .faq, .light, .dark, .icon-feature-list, .centred-image) .columns-media-text-col {
+    text-align: start;
+  }
+
+  .columns-media:not(.columns-media-has-list, .faq, .light, .dark, .icon-feature-list, .centred-image) .columns-media-text-col h2 {
+    line-height: var(--heading-line-height-xxl);
+  }
+
+  /* fixed 422px image beside the copy: checklist banner, faq, light */
+  .columns-media:is(.columns-media-has-list, .faq, .light) .columns-media-img-col {
+    flex: 0 0 422px;
+  }
+
+  .columns-media:is(.columns-media-has-list, .light) .columns-media-img-col img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .columns-media:is(.faq, .light) .columns-media-row {
+    align-items: flex-start;
+  }
+
+  .columns-media.faq.columns-media-has-list .columns-media-text-col {
+    max-width: 490px;
+  }
+
+  .columns-media.light .columns-media-row {
+    gap: 44px;
+  }
+
+  .columns-media.light .columns-media-text-col {
+    padding-top: 74px;
+  }
+
+  /* faq: text-only columns split by rules */
+  .columns-media.faq.columns-media-text-only .columns-media-row {
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .columns-media.faq.columns-media-text-only .columns-media-col {
+    padding: 0 44px;
+  }
+
+  .columns-media.faq.columns-media-text-only .columns-media-col:first-child {
+    padding-left: 0;
+  }
+
+  .columns-media.faq.columns-media-text-only .columns-media-col:last-child {
+    padding-right: 0;
+  }
+
+  .columns-media.faq .columns-media-text-col + .columns-media-text-col {
+    border-left: 1px solid var(--columns-media-rule-color, var(--rule-color));
+  }
+
+  /* dark on a text-only block: heading | copy split by a rule */
+  .columns-media.dark.columns-media-text-only .columns-media-row {
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .columns-media.dark.columns-media-text-only .columns-media-text-col {
+    text-align: start;
+  }
+
+  .columns-media.dark.columns-media-text-only .columns-media-col:first-child {
+    flex: 0 0 310px;
+    box-sizing: border-box;
+    padding-right: 32px;
+    border-right: 1px solid var(--columns-media-rule-color, var(--rule-color));
+    text-align: end;
+  }
+
+  .columns-media.dark.columns-media-text-only .columns-media-col:first-child h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .columns-media.dark.columns-media-text-only .columns-media-col + .columns-media-col {
+    padding-left: 32px;
+  }
+
+  .columns-media.dark.columns-media-text-only .columns-media-col + .columns-media-col > p:last-child {
+    margin-top: 40px;
+  }
+
+  /* icon-feature-list: top-aligned halves, image inset 30px */
+  .columns-media.icon-feature-list .columns-media-row {
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .columns-media.icon-feature-list .columns-media-col {
+    padding: 30px 0 0 30px;
+  }
+
+  .columns-media.icon-feature-list .columns-media-img-col img {
+    max-width: 500px;
+  }
+
+  /* centred-image: wider middle column */
+  .columns-media.centred-image .columns-media-row {
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .columns-media.centred-image .columns-media-text-col {
+    display: flex;
+    flex: 0 1 338px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 32px;
+    padding-left: 25px;
+  }
+
+  .columns-media.centred-image .columns-media-img-col {
+    flex: 0 1 499px;
+    align-items: center;
+  }
+}
+
+/* on dark / blue section bands: white copy and rules */
+.section:is(.dark, .blue) .columns-media {
+  --columns-media-rule-color: rgb(255 255 255 / 30%);
+
+  color: var(--section-text-color);
+}
+
+.section:is(.dark, .blue) .columns-media :is(h1, h2, h3, h4, h5, h6) {
+  color: inherit;
+}

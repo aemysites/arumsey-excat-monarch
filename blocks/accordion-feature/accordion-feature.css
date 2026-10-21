@@ -1,0 +1,391 @@
+/*
+ * Accordion Feature
+ * Values are citi.com computed styles:
+ * - default: credit-card FAQ / "Security and protection" drawers (cds-accordion2 .set-bg)
+ * - .is-footnote (set by JS): legal footnote toggles (.accordian-footnote)
+ * - .faq: light-blue question rows (cds-accordion2 .accordion2-icon-left)
+ * - .no-icons: banking FAQ list (citi-accordion ul.mainnav)
+ * - .cta-button: CDS primary button (.cds-button-df); .red / .orange: tier card buttons
+ */
+.accordion-feature {
+  /* CDS 2021 chevron-down */
+  --accordion-feature-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M1.44 6.13a.806.806 0 0 0-.011 1.136L12 18.1 22.572 7.267a.807.807 0 0 0-.012-1.137.797.797 0 0 0-1.131.011L12 15.804 2.571 6.14a.797.797 0 0 0-1.13-.011'/%3E%3C/svg%3E");
+
+  /* citi-accordion b2-02-down chevron */
+  --accordion-feature-chevron-thin: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M1.14551 6.92293C0.950768 6.71101 0.951604 6.36832 1.14738 6.15751C1.34316 5.94671 1.65974 5.94761 1.85449 6.15954L11.594 16.758C11.7887 16.9699 12.1053 16.9708 12.3011 16.76L22.1474 6.15752C22.3431 5.94671 22.6597 5.94761 22.8545 6.15953C23.0492 6.37145 23.0484 6.71414 22.8526 6.92495L13.0063 17.5275C12.419 18.1599 11.4692 18.1572 10.885 17.5214L1.14551 6.92293Z'/%3E%3C/svg%3E");
+  --accordion-feature-chevron-color: #5e676b;
+  --accordion-feature-button-bg: var(--button-primary-bg);
+}
+
+/* ---------- shared item structure ---------- */
+.accordion-feature details summary {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 112px;
+  padding: 12px 0 12px 8px;
+  color: #121314;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-feature details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-feature details summary > * {
+  flex: 1 1 auto;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  text-decoration: inherit;
+}
+
+.accordion-feature details summary::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  background-color: var(--accordion-feature-chevron-color);
+  mask: var(--accordion-feature-chevron) center / 100% 100% no-repeat;
+  margin: 0 16px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.accordion-feature .accordion-feature-item-body {
+  padding: 0 24px 8px;
+  color: #5e676b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.accordion-feature .accordion-feature-item-body > :last-child,
+.accordion-feature .accordion-feature-item-body .default-content-wrapper > :last-child {
+  margin-bottom: 0;
+}
+
+/* fragment panels arrive as .section > .default-content-wrapper */
+.accordion-feature .accordion-feature-item-body .section,
+.accordion-feature .accordion-feature-item-body .section > div {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-feature .accordion-feature-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+main .accordion-feature .accordion-feature-table table {
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 16px;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+main .accordion-feature .accordion-feature-table :is(th, td) {
+  padding: 10px;
+  border: 1px solid #333;
+  color: #000;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* ---------- default: credit-card FAQ drawers ---------- */
+.accordion-feature details {
+  border-bottom: 1px solid #bcc5c9;
+}
+
+.accordion-feature .accordion-feature-item-body :is(p, ul, ol) {
+  margin: 0 0 16px;
+}
+
+.accordion-feature .accordion-feature-item-body :is(ul, ol) {
+  padding-left: 32px;
+}
+
+.accordion-feature .accordion-feature-item-body :is(h2, h3, h4, h5, h6) {
+  margin: 0;
+  padding-bottom: 4px;
+  color: #121314;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-decoration: none;
+}
+
+.accordion-feature .accordion-feature-item-body a:any-link {
+  color: var(--citi-brand-blue);
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .accordion-feature details summary {
+    gap: 24px;
+    padding-left: 24px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+/* ---------- footnote toggles (labels start with a <sup> marker) ---------- */
+.accordion-feature.is-footnote details {
+  border-bottom: 0;
+}
+
+.accordion-feature.is-footnote details summary {
+  align-items: flex-start;
+  gap: 13px;
+  width: fit-content;
+  min-height: 0;
+  margin: 0 20px 15px 0;
+  padding: 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+}
+
+.accordion-feature.is-footnote details summary sup {
+  position: relative;
+  font-size: 12px;
+}
+
+.accordion-feature.is-footnote details summary::after {
+  order: -1;
+  width: 18.33px;
+  height: 18.33px;
+  margin: 0;
+  background-color: var(--link-color);
+  transition: none;
+}
+
+.accordion-feature.is-footnote .accordion-feature-item-body {
+  padding: 0;
+  color: #333;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.accordion-feature.is-footnote .accordion-feature-item-body :is(p, ul, ol, table) {
+  margin: 0 0 20px;
+}
+
+.accordion-feature.is-footnote .accordion-feature-item-body :is(ul, ol) {
+  padding-left: 25px;
+}
+
+.accordion-feature.is-footnote .accordion-feature-item-body li {
+  margin-bottom: 9px;
+}
+
+.accordion-feature.is-footnote .accordion-feature-item-body :is(h2, h3, h4, h5, h6) {
+  margin: 0 0 20px;
+  padding: 0;
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.accordion-feature.is-footnote .accordion-feature-item-body :is(h4, h5, h6) {
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.accordion-feature.is-footnote .accordion-feature-item-body a:any-link {
+  color: var(--link-color);
+  font-weight: 300;
+}
+
+/* ---------- faq: light-blue question rows ---------- */
+.accordion-feature.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.accordion-feature.faq details {
+  border-bottom: 0;
+  background-color: #eff3f8;
+}
+
+.accordion-feature.faq details summary {
+  align-items: flex-start;
+  gap: 0;
+  min-height: 48px;
+  padding: 12px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.accordion-feature.faq details summary::after {
+  order: -1;
+  margin: 1px 16px 0;
+  background-color: var(--link-color);
+}
+
+.accordion-feature.faq .accordion-feature-item-body {
+  padding: 16px 16px 20px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.accordion-feature.faq .accordion-feature-item-body a:any-link {
+  color: var(--link-color);
+}
+
+/* ---------- no-icons: banking FAQ list (ruled rows, thin chevron) ---------- */
+.accordion-feature.no-icons {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-feature.no-icons details {
+  border-bottom: 0;
+}
+
+.accordion-feature.no-icons details summary {
+  position: relative;
+  display: block;
+  min-height: 62px;
+  padding: 19px 20px 19px 60px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: left;
+}
+
+.accordion-feature.no-icons details summary::after {
+  position: absolute;
+  top: 19px;
+  left: 25px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-color: var(--link-color);
+  mask-image: var(--accordion-feature-chevron-thin);
+}
+
+.accordion-feature.no-icons .accordion-feature-item-body {
+  padding: 0 30px 10px 70px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.accordion-feature.no-icons .accordion-feature-item-body :is(p, ul, ol) {
+  margin: 0 0 12px;
+}
+
+.accordion-feature.no-icons .accordion-feature-item-body > :last-child {
+  margin-bottom: 12px;
+}
+
+.accordion-feature.no-icons .accordion-feature-item-body a:any-link {
+  color: var(--link-color);
+}
+
+@media (width >= 900px) {
+  .accordion-feature.no-icons details summary {
+    font-size: 20px;
+  }
+}
+
+/* ---------- buttons: cta-button, red, orange ---------- */
+.accordion-feature:is(.cta-button, .red, .orange) details {
+  border-bottom: 0;
+}
+
+.accordion-feature:is(.cta-button, .red, .orange) details summary {
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 0;
+  width: fit-content;
+  min-height: 0;
+  border: 1px solid var(--accordion-feature-button-bg);
+  background-color: var(--accordion-feature-button-bg);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.accordion-feature:is(.cta-button, .red, .orange) details summary::after {
+  display: none;
+}
+
+.accordion-feature.cta-button details summary {
+  min-width: 220px;
+  margin: 0 auto;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* relationship-tier card buttons (Citigold Private Client / Citigold) */
+.accordion-feature.red {
+  --accordion-feature-button-bg: #281814;
+}
+
+.accordion-feature.orange {
+  --accordion-feature-button-bg: #8e6f32;
+}
+
+.accordion-feature:is(.red, .orange) details summary {
+  min-width: 200px;
+  margin-top: 24px;
+  padding: 9px 20px;
+  border-width: 2px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* ---------- states ---------- */
+.accordion-feature details summary:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.accordion-feature details[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.accordion-feature .accordion-feature-item-body:empty {
+  display: none;
+}
+
+.accordion-feature.no-icons details + details {
+  border-top: 1px solid #ccc;
+}
+
+.accordion-feature.no-icons details[open] > summary {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.accordion-feature.cta-button details summary:hover {
+  border-color: var(--button-primary-hover-bg);
+  background-color: var(--button-primary-hover-bg);
+}
+
+.accordion-feature.cta-button details summary:active {
+  border-color: var(--button-primary-active-bg);
+  background-color: var(--button-primary-active-bg);
+}

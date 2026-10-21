@@ -1,0 +1,25 @@
+{
+  "variantName": "section-heading",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + link",
+    "purpose": "section title bar: a large heading on the left with a 'View all' style link or button on the right, underlined by a rule; or a coloured text panel beside a photo"
+  },
+  "contentPattern": {
+    "structure": "one row: a heading cell (heading and optional text) and an optional link cell; a single cell whose trailing paragraphs are only links also works. promo-panel: a text cell (heading, text, optional CTA) and a picture-only cell; cell order sets the image side. A cell holding only a link to a /fragments/ page is replaced by that fragment. Panel colour comes from the section style, not from the block"
+  },
+  "options": [
+    { "class": "promo-panel", "label": "Promo Panel" }
+  ],
+  "memberVariantIds": [
+    "v_9a4e03fb6b22",
+    "v_1e5b6de61b96"
+  ],
+  "usage": "Use above a card grid or listing to title the section with a 'View all' link. promo-panel shows a short announcement in a coloured panel next to a photo.",
+  "reuseGuidance": "Reuse for any heading-plus-link section title. Use plain default content for a heading with no link, and cta-banner for a full call-to-action strip."
+}

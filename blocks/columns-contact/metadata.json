@@ -1,0 +1,34 @@
+{
+  "variantName": "columns-contact",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link",
+    "purpose": "contact / how-to-apply panel: columns of heading, icon-led help lines, phone numbers and links"
+  },
+  "contentPattern": {
+    "structure": "one row; one cell per column. Each cell: heading, then icon-led lines (icon + subheading), text, phone link and arrow links. A cell holding only a /fragments/ link is replaced by the fragment. with-select: a list of links in a cell becomes a dropdown (a list item without a link is the placeholder); a button straight after the list opens the chosen link"
+  },
+  "options": [
+    {
+      "class": "with-select",
+      "label": "With Select"
+    }
+  ],
+  "memberVariantIds": [
+    "v_f4da1c4ff1f6",
+    "v_453b829e4cce",
+    "v_6b18949177fb",
+    "v_601a53b8d474-2",
+    "v_9818ae7026a9",
+    "v_3abdf619f7e9",
+    "v_72d244d228f6",
+    "v_d0a550fcd254"
+  ],
+  "usage": "Contact, call-us, apply-now and still-have-questions panels with 2-3 columns",
+  "reuseGuidance": "Use for contact/help panels. Not for icon feature rows (columns-icon-features) or link strips (columns-icon-strip)."
+}

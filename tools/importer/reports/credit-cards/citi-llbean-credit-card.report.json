@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-llbean-credit-card",
+  "path": "credit-cards/citi-llbean-credit-card",
+  "timestamp": "2026-10-21T19:24:52.263Z",
+  "title": "L.L.Bean® Mastercard® | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "section-subnav",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "tabs-feature",
+    "hero-card",
+    "cards-highlight"
+  ],
+  "fragments": [
+    "fragments/credit-cards/citi-llbean-credit-card/cardmember-benefits"
+  ],
+  "importScript": "089f57e4feb6"
+}

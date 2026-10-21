@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/small-business-guide/banking/business-checking-vs-savings-account",
+  "path": "banking/small-business-guide/banking/business-checking-vs-savings-account",
+  "timestamp": "2026-10-21T16:38:02.058Z",
+  "title": "Business Checking vs. Savings Account | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/small-business-guide/banking/business-checking-vs-savings-account/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/simplifiedbanking",
+  "path": "banking/simplifiedbanking",
+  "timestamp": "2026-10-21T18:20:12.779Z",
+  "title": "How Simplified Banking Works | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "columns-media",
+    "notice-box",
+    "hero-chevron",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "accordion-feature",
+    "columns-icon-strip",
+    "category-tile",
+    "category-tile",
+    "category-tile"
+  ],
+  "fragments": [
+    "fragments/banking/simplifiedbanking/accordion-feature-1"
+  ],
+  "importScript": "53dc5a5b589e"
+}

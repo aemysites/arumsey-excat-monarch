@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+  "path": "credit-cards/citi-strata-elite-credit-card",
+  "timestamp": "2026-10-21T19:25:14.897Z",
+  "title": "Citi Strata Elite® - Travel Credit Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-icon",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "benefits-showcase",
+    "hero-card",
+    "hero-card",
+    "disclosure-links",
+    "cards-icon-links",
+    "cards-icon-links",
+    "columns-quick-paths",
+    "cards-benefit-tiles"
+  ],
+  "fragments": [],
+  "importScript": "089f57e4feb6"
+}

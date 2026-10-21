@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/personal-banking-guide/basic-finance/what-is-compound-interest",
+  "path": "banking/personal-banking-guide/basic-finance/what-is-compound-interest",
+  "timestamp": "2026-10-21T17:37:46.935Z",
+  "title": "What is Compound Interest? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/banking/personal-banking-guide/basic-finance/what-is-compound-interest/article-body-1"
+  ],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips/flying-with-a-dog",
+  "path": "travel/travel-guide/flying-tips/flying-with-a-dog",
+  "timestamp": "2026-10-21T19:11:31.251Z",
+  "title": "Tips for Flying with Your Dog | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

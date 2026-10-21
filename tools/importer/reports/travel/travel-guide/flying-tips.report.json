@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/flying-tips",
+  "path": "travel/travel-guide/flying-tips",
+  "timestamp": "2026-10-21T19:23:02.149Z",
+  "title": "Flying Tips | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "089f57e4feb6"
+}

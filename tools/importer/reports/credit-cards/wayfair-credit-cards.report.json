@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/wayfair-credit-cards",
+  "path": "credit-cards/wayfair-credit-cards",
+  "timestamp": "2026-10-21T19:25:40.646Z",
+  "title": "Wayfair Credit Cards | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "notice-box",
+    "accordion-feature",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "tabs-feature",
+    "hero-card",
+    "cards-highlight"
+  ],
+  "fragments": [
+    "fragments/credit-cards/wayfair-credit-cards/wayfair-credit-card",
+    "fragments/credit-cards/wayfair-credit-cards/wayfair-mastercard"
+  ],
+  "importScript": "089f57e4feb6"
+}

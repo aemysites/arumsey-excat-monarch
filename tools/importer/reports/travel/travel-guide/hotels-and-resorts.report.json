@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts",
+  "path": "travel/travel-guide/hotels-and-resorts",
+  "timestamp": "2026-10-21T19:22:58.267Z",
+  "title": "Hotels and Resorts | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "089f57e4feb6"
+}

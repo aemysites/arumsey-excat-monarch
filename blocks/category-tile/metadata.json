@@ -1,0 +1,22 @@
+{
+  "variantName": "category-tile",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "large",
+    "structure": "heading",
+    "purpose": "banner-like link tiles with an uppercase label and an icon"
+  },
+  "contentPattern": {
+    "structure": "one row per tile; cells: label (heading or link) and icon image. An optional extra first image is used as the tile background"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_daf3c0392838"
+  ],
+  "usage": "Product category tiles on the simplified banking page.",
+  "reuseGuidance": "Use for a small grid of category links with icons."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
+  "path": "credit-cards/citi-double-cash-credit-card",
+  "timestamp": "2026-10-21T19:24:44.480Z",
+  "title": "Citi Double Cash® Credit Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-product",
+    "section-subnav",
+    "accordion-feature",
+    "accordion-feature",
+    "benefits-showcase",
+    "columns-key-terms",
+    "columns-key-terms",
+    "disclosure-links",
+    "cards-icon-links",
+    "cards-icon-links",
+    "cards-benefit-tiles"
+  ],
+  "fragments": [
+    "fragments/credit-card-categories"
+  ],
+  "importScript": "089f57e4feb6"
+}

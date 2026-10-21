@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/banking/current-interest-rates/cd",
+  "path": "banking/current-interest-rates/cd",
+  "timestamp": "2026-10-21T17:33:31.161Z",
+  "title": "CD Rates | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "location-selector"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/island-vacations-in-the-us",
+  "path": "travel/travel-guide/travel-tips/island-vacations-in-the-us",
+  "timestamp": "2026-10-21T19:17:18.345Z",
+  "title": "Island Vacations in the U.S. | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/credit-cards/dillards-credit-cards",
+  "path": "credit-cards/dillards-credit-cards",
+  "timestamp": "2026-10-21T19:25:31.893Z",
+  "title": "Apply for a Dillard’s Credit Card | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "accordion-feature",
+    "accordion-feature",
+    "table-rates",
+    "table-rates",
+    "table-rates",
+    "tabs-feature",
+    "hero-card",
+    "cards-highlight"
+  ],
+  "fragments": [
+    "fragments/credit-cards/dillards-credit-cards/dillards-credit-card",
+    "fragments/credit-cards/dillards-credit-cards/dillards-mastercard"
+  ],
+  "importScript": "089f57e4feb6"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/domestic-wine-regions-worth-visiting",
+  "path": "travel/travel-guide/travel-tips/domestic-wine-regions-worth-visiting",
+  "timestamp": "2026-10-21T19:16:18.952Z",
+  "title": "Hidden Gem Wine Destinations in the United States | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

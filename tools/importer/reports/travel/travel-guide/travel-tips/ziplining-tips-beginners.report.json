@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/ziplining-tips-beginners",
+  "path": "travel/travel-guide/travel-tips/ziplining-tips-beginners",
+  "timestamp": "2026-10-21T19:19:02.050Z",
+  "title": "Zip Lining Tips Beginners Need to Know | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

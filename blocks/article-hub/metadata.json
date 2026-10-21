@@ -1,0 +1,23 @@
+{
+  "variantName": "article-hub",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "image + heading + text + field + link + list",
+    "purpose": "article hub landing page: hero with background image, title card and article search, then groups of article cards with View all links"
+  },
+  "contentPattern": {
+    "structure": "row 1: hero image cell | text cell (eyebrow, H1, description, optional Search ... label paragraph); heading row (one cell with heading + optional View all link) starts a card group; card rows: image cell | text cell (title, description, link); other one-cell rows: closing CTA or note"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_a7060a1b788d",
+    "v_a7060a1b788d-1"
+  ],
+  "usage": "Credit card learning-center and travel-guide hub pages.",
+  "reuseGuidance": "Use for category / hub pages listing articles in groups. The search filters the cards on the page. For a single article use article-body."
+}

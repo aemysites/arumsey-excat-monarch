@@ -1,0 +1,364 @@
+/*
+ * cta-banner: citi.com "callout-shadow" banner (.banner__content).
+ * Default: white rounded card. Band colours come from the section style.
+ */
+.cta-banner {
+  position: relative;
+}
+
+.cta-banner:empty {
+  display: none;
+}
+
+/* citi.com banners keep 32px from neighbouring content in the same section */
+main > .section > .cta-banner-wrapper:not(:first-child) > .cta-banner {
+  margin-top: 32px;
+}
+
+main > .section > .cta-banner-wrapper:not(:last-child) > .cta-banner {
+  margin-bottom: 32px;
+}
+
+.cta-banner .cta-banner-panel {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+  color: var(--text-color);
+}
+
+.cta-banner .cta-banner-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cta-banner .cta-banner-content {
+  align-self: stretch;
+  min-width: 0;
+  text-align: center;
+}
+
+.cta-banner .cta-banner-content :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 8px;
+  padding: 0 5px;
+  color: #111;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.cta-banner .cta-banner-content p {
+  margin: 0;
+  padding: 0 5px;
+  color: #111;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.cta-banner .cta-banner-content :is(strong, b) {
+  font-weight: 400;
+}
+
+.cta-banner .cta-banner-content a:any-link:not(.button) {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* actions: stacked and centred on mobile, equal widths */
+.cta-banner .cta-banner-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.cta-banner .cta-banner-actions > p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+main .cta-banner .cta-banner-actions a.button.primary:any-link {
+  flex: 1 1 auto;
+  min-height: 48px;
+}
+
+/* inline chevron link (CDS inline-link) */
+main .cta-banner .cta-banner-actions a.button.accent:any-link {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* tertiary: bold underlined text link */
+main .cta-banner a.cta-banner-link:any-link {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+main .cta-banner a.cta-banner-link:hover {
+  color: var(--link-hover-color);
+}
+
+main .cta-banner a.cta-banner-link:active {
+  color: var(--link-active-color);
+}
+
+/* photo backdrop: authored picture-only first row */
+.cta-banner.cta-banner-has-background {
+  padding: 24px 12px;
+}
+
+.cta-banner .cta-banner-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cta-banner .cta-banner-background picture,
+.cta-banner .cta-banner-background img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/*
+ * On a band section the photo is the backdrop: it bleeds edge to edge and
+ * covers the band padding so no band colour shows around it.
+ */
+main > .section:is(.dark, .blue, .grey, .light-blue, .light, .highlight) > .cta-banner-wrapper:only-child > .cta-banner.cta-banner-has-background {
+  margin-block: calc(-1 * var(--section-band-padding));
+  margin-inline: calc(50% - 50vw + var(--cta-banner-scrollbar, 0px) / 2);
+}
+
+/* filled: colour-filled card with light text */
+.cta-banner.filled .cta-banner-panel {
+  align-items: stretch;
+  gap: 24px;
+  border-radius: 16px;
+  background-color: var(--citi-bright-blue);
+  box-shadow: none;
+  color: #fff;
+}
+
+.cta-banner.filled .cta-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: start;
+}
+
+.cta-banner.filled .cta-banner-content :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.28px;
+}
+
+.cta-banner.filled .cta-banner-content p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
+.cta-banner.filled .cta-banner-content a:any-link:not(.button) {
+  color: #fff;
+}
+
+.cta-banner.filled .cta-banner-actions {
+  align-items: flex-start;
+}
+
+.cta-banner.filled .cta-banner-actions > p {
+  justify-content: flex-start;
+}
+
+main .cta-banner.filled .cta-banner-actions a.button:any-link,
+main .cta-banner.filled .cta-banner-actions a.cta-banner-link:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--citi-brand-blue);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+main .cta-banner.filled .cta-banner-actions a.button.accent::after {
+  content: none;
+}
+
+main .cta-banner.filled .cta-banner-actions a.button:hover,
+main .cta-banner.filled .cta-banner-actions a.cta-banner-link:hover {
+  color: var(--citi-navy);
+  text-decoration: underline;
+}
+
+/* light: gradient strip with centred white heading and copy (CDS gradient-blue) */
+.cta-banner.light .cta-banner-panel {
+  gap: 8px;
+  padding: 16px;
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(180deg, #003360 -60%, #0269a8 140%);
+  box-shadow: none;
+  color: #fff;
+}
+
+.cta-banner.light .cta-banner-content :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.cta-banner.light .cta-banner-content p {
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.cta-banner.light .cta-banner-content a:any-link:not(.button) {
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .cta-banner .cta-banner-panel {
+    flex-direction: row;
+    gap: 24px;
+    padding: 38px;
+  }
+
+  .cta-banner .cta-banner-media {
+    flex: 0 0 auto;
+    max-width: 25%;
+  }
+
+  .cta-banner .cta-banner-content {
+    flex: 1 1 0;
+    align-self: auto;
+    text-align: left;
+  }
+
+  .cta-banner .cta-banner-content :is(h1, h2, h3, h4, h5, h6) {
+    padding: 0;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .cta-banner .cta-banner-content p {
+    padding: 0;
+  }
+
+  .cta-banner .cta-banner-actions {
+    flex: 0 1 auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* two CTAs share the right half of the card */
+  .cta-banner .cta-banner-actions:has(> :nth-child(2)) {
+    flex: 1 1 0;
+  }
+
+  .cta-banner .cta-banner-actions:has(> :nth-child(2)) > p {
+    flex: 1 1 0;
+  }
+
+  .cta-banner .cta-banner-actions > p:has(> .cta-banner-link) {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* CDS desktop button is 40px tall */
+  main .cta-banner .cta-banner-actions a.button.primary:any-link {
+    min-height: 0;
+    padding-block: 7px;
+  }
+
+  main .cta-banner .cta-banner-actions a.button.accent:any-link {
+    margin: 5px 0;
+  }
+
+  main .cta-banner a.cta-banner-link:any-link {
+    flex: 1 1 auto;
+    text-align: start;
+  }
+
+  .cta-banner.cta-banner-has-background {
+    margin-inline: calc(50% - 50vw + var(--cta-banner-scrollbar, 0px) / 2);
+    padding: 64px var(--content-gutter);
+  }
+
+  .cta-banner.filled .cta-banner-panel {
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 64px;
+    border-radius: 24px;
+  }
+
+  .cta-banner.filled .cta-banner-content {
+    flex: 0 1 auto;
+  }
+
+  .cta-banner.filled .cta-banner-actions {
+    flex: 0 0 auto;
+  }
+
+  .cta-banner.light .cta-banner-panel {
+    padding: 16px 16px 16px 24px;
+  }
+
+  .cta-banner.light .cta-banner-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* a filled banner on a dark or blue band takes the band colour itself */
+main > .section:is(.dark, .blue) .cta-banner.filled .cta-banner-panel {
+  padding-inline: 0;
+  background-color: transparent;
+}

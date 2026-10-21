@@ -1,0 +1,54 @@
+{
+  "variantName": "tabs-feature",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button + text + link + heading",
+    "purpose": "Tabbed feature panels: icon tiles or text tabs, each revealing a content panel; complex panels load from a fragment"
+  },
+  "contentPattern": {
+    "structure": "one row per tab: cell 1 = tab label (optional icon/picture + text), cell 2 = panel content, or a single link to a fragment (/fragments/...) when the panel contains other blocks"
+  },
+  "options": [
+    {
+      "class": "text-tabs-on-band",
+      "label": "Text Tabs On Band"
+    },
+    {
+      "class": "underlined-text-tabs",
+      "label": "Underlined Text Tabs"
+    },
+    {
+      "class": "icon-tiles",
+      "label": "Icon Tiles"
+    },
+    {
+      "class": "icon-tiles-2",
+      "label": "Icon Tiles 2"
+    },
+    {
+      "class": "underlined-text-tabs-2",
+      "label": "Underlined Text Tabs 2"
+    },
+    {
+      "class": "underlined-text-tabs-3",
+      "label": "Underlined Text Tabs 3"
+    }
+  ],
+  "memberVariantIds": [
+    "v_47b3dd5a1cb9",
+    "v_3b48b4151c52",
+    "v_47b3dd5a1cb9-1",
+    "v_ea5804fe64b6",
+    "v_0230c74d27f1",
+    "v_0230c74d27f1-1",
+    "v_3fa6ecd511c5",
+    "v_ea5804fe64b6-1"
+  ],
+  "usage": "Feature/benefit tabs on product pages. Panels that contain other blocks (cards, columns) are authored as fragments and loaded with loadFragment; simple panels render inline. Accessible tablist: role=tab/tabpanel, aria-selected, roving tabindex, Arrow/Home/End keys. Default (no option) = icon tiles above a two-column panel.",
+  "reuseGuidance": "Use for 2-6 mutually exclusive panels. Pick an option for the tab look; unknown option classes are ignored."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/car-rental-tips/car-rental-savings",
+  "path": "travel/travel-guide/car-rental-tips/car-rental-savings",
+  "timestamp": "2026-10-21T19:10:34.163Z",
+  "title": "Ways to Save on Rental Cars | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}

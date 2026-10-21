@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/travel-tips/2026-travel-trends",
+  "path": "travel/travel-guide/travel-tips/2026-travel-trends",
+  "timestamp": "2026-10-21T18:47:25.079Z",
+  "title": "2026 Travel Trends to Get You Thinking About Your Next Adventure | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "350ab78a9631"
+}

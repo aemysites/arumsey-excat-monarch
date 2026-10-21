@@ -1,0 +1,262 @@
+/*
+ * Accordion Disclosure
+ * Values from citi.com computed styles: tds-terms-and-conditions / section.accordion.legal
+ * (/banking/citi-mobile-app-download/landing), with-table (/mortgage/purchase-rates),
+ * with-table-borderless-table (/home-equity/home-equity-employee).
+ */
+.accordion-disclosure {
+  /* Citi CDS icons: 2021 chevron-down (expand), 009-arrow-left (Go back), 255-chevron-left (Back to top) */
+  --accordion-disclosure-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M1.44 6.13a.806.806 0 0 0-.011 1.136L12 18.1 22.572 7.267a.807.807 0 0 0-.012-1.137.797.797 0 0 0-1.131.011L12 15.804 2.571 6.14a.797.797 0 0 0-1.13-.011'/%3E%3C/svg%3E");
+  --accordion-disclosure-arrow-left: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M12.463 4.868a.8.8 0 0 0-1.126-1.136L3 12l8.337 8.268a.8.8 0 0 0 1.126-1.136L6.08 12.8H20.2a.8.8 0 0 0 0-1.6H6.08z'/%3E%3C/svg%3E");
+  --accordion-disclosure-chevron-left: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M17.87 22.56a.807.807 0 0 1-1.137.011L5.9 12 16.733 1.429a.807.807 0 0 1 1.137.011.797.797 0 0 1-.011 1.131L8.196 12l9.663 9.429c.317.31.322.816.011 1.131'/%3E%3C/svg%3E");
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* ---------- label row ---------- */
+.accordion-disclosure details summary {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-height: 24px;
+  padding: 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.accordion-disclosure details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* chevron on the left: points down when closed, up when open */
+.accordion-disclosure details summary::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin: 1px;
+  background-color: var(--link-color);
+  mask: var(--accordion-disclosure-chevron) center / contain no-repeat;
+  transition: transform 0.2s;
+}
+
+.accordion-disclosure details[open] summary::before {
+  transform: rotate(180deg);
+}
+
+.accordion-disclosure details summary:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.accordion-disclosure details summary > * {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* ---------- body ---------- */
+.accordion-disclosure .accordion-disclosure-item-body {
+  padding: 16px 0 0;
+  font-size: 12px;
+  font-weight: var(--body-font-weight);
+  line-height: 18px;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body p {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body li > :last-child {
+  margin-bottom: 0;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body :is(h2, h3, h4, h5, h6) {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body :is(strong, b) {
+  font-weight: 700;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body a:any-link {
+  color: var(--link-color);
+  font-size: 12px;
+  font-weight: var(--body-font-weight);
+  text-decoration: none;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body a:any-link:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* numbered footnotes: blue counter hanging in the 20px gutter */
+.accordion-disclosure .accordion-disclosure-item-body ol {
+  margin: 0 0 12px;
+  padding: 0 0 0 20px;
+  list-style: none;
+  counter-reset: item 0;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body ol > li {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 18px;
+  counter-increment: item;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body ol > li:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body ol > li::before {
+  content: counter(item) ' ';
+  display: inline-block;
+  width: 20px;
+  margin: 0 0 0 -20px;
+  color: var(--link-color);
+}
+
+.accordion-disclosure .accordion-disclosure-item-body ol > li.accordion-disclosure-nav-item {
+  counter-increment: none;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body ol > li.accordion-disclosure-nav-item::before {
+  content: none;
+}
+
+/* ---------- Go back / Back to top ---------- */
+.accordion-disclosure .accordion-disclosure-item-body a.accordion-disclosure-back:any-link,
+.accordion-disclosure .accordion-disclosure-item-body a.accordion-disclosure-top:any-link {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: fit-content;
+}
+
+.accordion-disclosure a.accordion-disclosure-back::before,
+.accordion-disclosure a.accordion-disclosure-top::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  mask: var(--accordion-disclosure-arrow-left) center / contain no-repeat;
+}
+
+.accordion-disclosure a.accordion-disclosure-top::before {
+  mask-image: var(--accordion-disclosure-chevron-left);
+}
+
+.accordion-disclosure .accordion-disclosure-item-body a.accordion-disclosure-back + a.accordion-disclosure-top:any-link {
+  margin-top: 12px;
+}
+
+/* ---------- tables ---------- */
+.accordion-disclosure .accordion-disclosure-table {
+  max-width: 100%;
+  margin: 0 0 21px;
+  overflow-x: auto;
+}
+
+.accordion-disclosure .accordion-disclosure-table table {
+  width: auto;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.accordion-disclosure .accordion-disclosure-table th,
+.accordion-disclosure .accordion-disclosure-table td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.accordion-disclosure .accordion-disclosure-table th {
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.accordion-disclosure .accordion-disclosure-table td {
+  font-weight: var(--body-font-weight);
+  line-height: 21px;
+}
+
+.accordion-disclosure .accordion-disclosure-item-body .accordion-disclosure-table :is(th, td) > * {
+  margin: 0;
+}
+
+/* with-table: bordered rate table, footnotes indented under the label */
+.accordion-disclosure.with-table details summary {
+  gap: 30px;
+  padding: 12px 0;
+  font-size: 16px;
+}
+
+.accordion-disclosure.with-table .accordion-disclosure-item-body > p {
+  padding-left: 54px;
+}
+
+.accordion-disclosure.with-table .accordion-disclosure-item-body ol {
+  margin: 0 0 16px 41px;
+}
+
+.accordion-disclosure.with-table .accordion-disclosure-item-body ol > li {
+  position: relative;
+}
+
+.accordion-disclosure.with-table .accordion-disclosure-item-body ol > li::before {
+  position: absolute;
+  left: -42px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.accordion-disclosure.with-table .accordion-disclosure-item-body ol > li.accordion-disclosure-nav-item {
+  padding-bottom: 5px;
+}
+
+.accordion-disclosure.with-table .accordion-disclosure-table {
+  width: fit-content;
+  border: 1px solid var(--text-color);
+}
+
+.accordion-disclosure.with-table .accordion-disclosure-table th,
+.accordion-disclosure.with-table .accordion-disclosure-table td {
+  border: 1px solid var(--text-color);
+}
+
+/* with-table-borderless-table: plain two-column rate list */
+.accordion-disclosure.with-table-borderless-table .accordion-disclosure-table :is(table, thead, tbody, tr) {
+  border: 0;
+}
+
+.accordion-disclosure.with-table-borderless-table .accordion-disclosure-table th,
+.accordion-disclosure.with-table-borderless-table .accordion-disclosure-table td {
+  padding: 8px 24px 8px 0;
+  border: 0;
+  line-height: 18px;
+}
+
+.accordion-disclosure.with-table-borderless-table a.accordion-disclosure-back::before {
+  width: 24px;
+  height: 24px;
+}
+
+.accordion-disclosure.with-table-borderless-table .accordion-disclosure-item-body a.accordion-disclosure-back:any-link {
+  gap: 8px;
+}

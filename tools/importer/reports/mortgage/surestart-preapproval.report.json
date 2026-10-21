@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/mortgage/surestart-preapproval",
+  "path": "mortgage/surestart-preapproval",
+  "timestamp": "2026-10-21T16:38:51.953Z",
+  "title": "SureStart® Mortgage Pre-approval | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "cards-icon",
+    "hero-chevron",
+    "section-subnav",
+    "location-selector",
+    "columns-contact",
+    "accordion-disclosure"
+  ],
+  "fragments": [],
+  "importScript": "20a7308ac938"
+}

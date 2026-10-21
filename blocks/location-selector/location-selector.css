@@ -1,0 +1,343 @@
+/*
+ * location-selector
+ * Values from citi.com computed styles:
+ *   default   = app-zipcode-selector .informationPanel (small-business-banking/business-credit)
+ *   lead-form = app-lead-form section.lead-form (mortgage/relationship-benefits, home-equity/relationship-pricing)
+ */
+
+/* ---------- default: grey pricing-location bar ---------- */
+
+/* the bar runs edge to edge under the header; extend its background past the content column */
+.location-selector:not(.lead-form) {
+  background-color: var(--citi-grey);
+  box-shadow: 0 0 0 100vmax var(--citi-grey);
+  clip-path: inset(0 -100vmax);
+  color: var(--text-color);
+}
+
+.location-selector .location-selector-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.location-selector .location-selector-message {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.location-selector .location-selector-trigger {
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: none;
+  color: var(--link-color);
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.location-selector .location-selector-trigger:hover {
+  color: var(--link-hover-color);
+}
+
+.location-selector .location-selector-trigger:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* inline ZIP form opened by "Change" */
+.location-selector:not(.lead-form) .location-selector-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 24px;
+  padding: 0 0 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.location-selector:not(.lead-form) .location-selector-form[hidden] {
+  display: none;
+}
+
+.location-selector:not(.lead-form) .location-selector-form label {
+  font-weight: 400;
+}
+
+.location-selector:not(.lead-form) .location-selector-form input {
+  box-sizing: border-box;
+  width: 204px;
+  height: 52px;
+  padding: 13px 16px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.location-selector:not(.lead-form) .location-selector-form button {
+  box-sizing: border-box;
+  min-width: 120px;
+  padding: var(--button-padding);
+  border: 1px solid var(--button-primary-bg);
+  border-radius: var(--button-radius);
+  background-color: var(--button-primary-bg);
+  color: #fff;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  cursor: pointer;
+}
+
+.location-selector:not(.lead-form) .location-selector-form button:hover {
+  border-color: var(--button-primary-hover-bg);
+  background-color: var(--button-primary-hover-bg);
+}
+
+.location-selector:not(.lead-form) .location-selector-form .location-selector-cancel {
+  background-color: #fff;
+  color: var(--button-primary-bg);
+}
+
+.location-selector:not(.lead-form) .location-selector-form .location-selector-cancel:hover {
+  background-color: #fff;
+  color: var(--button-primary-hover-bg);
+}
+
+@media (width >= 900px) {
+  .location-selector .location-selector-bar {
+    flex-direction: row;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .location-selector .location-selector-trigger {
+    font-size: 16px;
+  }
+}
+
+/* ---------- lead-form: navy "have us call you" band ---------- */
+
+.location-selector.lead-form {
+  margin: 32px 0;
+  padding: 40px 12px;
+  background-color: var(--citi-navy);
+  color: #fff;
+  text-align: center;
+}
+
+.location-selector.lead-form .location-selector-intro,
+.location-selector.lead-form .location-selector-form {
+  max-width: 1005px;
+  margin: 0 auto;
+}
+
+.location-selector.lead-form .location-selector-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  /* source: 24px column gap + empty radio step + 24px gap before the fields */
+  margin-bottom: 48px;
+}
+
+.location-selector.lead-form .location-selector-intro > * {
+  margin: 0;
+  color: #fff;
+}
+
+.location-selector.lead-form .location-selector-intro h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.location-selector.lead-form .location-selector-intro h3 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.location-selector.lead-form .location-selector-intro p {
+  padding-top: 4px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.location-selector.lead-form .location-selector-form {
+  text-align: left;
+}
+
+.location-selector.lead-form .location-selector-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.location-selector.lead-form .location-selector-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.location-selector.lead-form .location-selector-field label {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.location-selector.lead-form .location-selector-field input,
+.location-selector.lead-form .location-selector-field select,
+.location-selector.lead-form .location-selector-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 52px;
+  margin: 0;
+  padding: 13px 16px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.location-selector.lead-form .location-selector-field input::placeholder,
+.location-selector.lead-form .location-selector-field textarea::placeholder {
+  color: var(--text-color-muted);
+  font-style: italic;
+  font-weight: 300;
+  opacity: 1;
+}
+
+.location-selector.lead-form .location-selector-field :is(input, select, textarea):focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.location-selector.lead-form .location-selector-legal {
+  margin-top: 24px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+}
+
+.location-selector.lead-form .location-selector-legal p {
+  margin: 0 0 16px;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.location-selector.lead-form .location-selector-legal p:last-child {
+  margin-bottom: 0;
+}
+
+.location-selector.lead-form .location-selector-legal a:any-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.location-selector.lead-form .location-selector-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.location-selector.lead-form .location-selector-actions .button {
+  box-sizing: border-box;
+  width: 200px;
+  max-width: 100%;
+  margin: 0;
+  padding: var(--button-padding);
+  border: 1px solid #fff;
+  border-radius: var(--button-radius);
+  background-color: #fff;
+  color: var(--citi-blue);
+  font-family: var(--body-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  text-align: center;
+  cursor: pointer;
+}
+
+.location-selector.lead-form .location-selector-actions .button:hover {
+  color: var(--citi-blue-hover);
+  text-decoration: underline;
+}
+
+.location-selector.lead-form .location-selector-actions .button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.location-selector.lead-form .location-selector-actions .button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.location-selector.lead-form .location-selector-status {
+  margin: 24px 0 0;
+  color: #fff;
+  text-align: center;
+}
+
+.location-selector.lead-form .location-selector-status:empty {
+  display: none;
+}
+
+.location-selector.lead-form .location-selector-submitted .location-selector-fields,
+.location-selector.lead-form .location-selector-submitted .location-selector-legal,
+.location-selector.lead-form .location-selector-submitted .location-selector-actions {
+  display: none;
+}
+
+@media (width >= 900px) {
+  /* edge-to-edge navy band on desktop, as on citi.com */
+  .location-selector.lead-form {
+    padding: 40px 0;
+    box-shadow: 0 0 0 100vmax var(--citi-navy);
+    clip-path: inset(0 -100vmax);
+  }
+
+  .location-selector.lead-form .location-selector-intro h2 {
+    font-size: 46px;
+    line-height: 60px;
+  }
+
+  .location-selector.lead-form .location-selector-intro h3 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .location-selector.lead-form .location-selector-fields {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+  }
+
+  .location-selector.lead-form .location-selector-field-textarea {
+    grid-column: 1 / -1;
+  }
+}

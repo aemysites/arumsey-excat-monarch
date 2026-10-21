@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.citi.com/travel/travel-guide/hotels-and-resorts/hotel-star-rating-system",
+  "path": "travel/travel-guide/hotels-and-resorts/hotel-star-rating-system",
+  "timestamp": "2026-10-21T19:12:29.934Z",
+  "title": "What Do Hotel Star Ratings Mean? | Citi.com",
+  "template": "standard-content-page",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/travel-subnav"
+  ],
+  "importScript": "31253dfc122f"
+}
