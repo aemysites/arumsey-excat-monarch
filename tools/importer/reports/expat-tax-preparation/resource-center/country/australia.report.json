@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/australia/",
+  "path": "expat-tax-preparation/resource-center/country/australia",
+  "timestamp": "2026-10-22T18:28:29.611Z",
+  "title": "Taxes for U.S. Expats in Australia | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "breadcrumb",
+    "hero-resource",
+    "cards-feature",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/expat-steps-to-prep",
+    "fragments/expat-testimonials"
+  ],
+  "importScript": "d4c454421d77"
+}

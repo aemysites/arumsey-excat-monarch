@@ -1,0 +1,22 @@
+{
+  "variantName": "software-finder",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + list + field",
+    "purpose": "Intro copy with rating plus tax-situation checkboxes that filter software recommendations"
+  },
+  "contentPattern": {
+    "structure": "One row: intro (optional rating line \"4.3 (495170)\", heading, text) | list of situations (one per item). Selections update ?situations= and fire software-finder:change; elements with data-situations get .software-finder-match"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_07dda71a5f40"
+  ],
+  "usage": "Tax software landing page.",
+  "reuseGuidance": "Reuse for the same content pattern; background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black)."
+}

@@ -1,0 +1,556 @@
+/*
+ * cards-article
+ * Values measured from source computed styles (hrblock.com, 1440px and 390px viewports):
+ *   default       expat related posts (.ba-single--related-post)
+ *   image         tax-center recommended articles (.tic-rec-articles--post-row)
+ *   with-button   / with-button-2  stacked overflow cards (.card-stacked.card-overflow)
+ *   green-light   stacked content cards, light + dark (.stackedContent)
+ *   country-grid  expat country flag grid (.expat-hp-countries--grid)
+ */
+.cards-article {
+  --cards-article-eyebrow-color: var(--color-bright-green);
+  --cards-article-title-color: var(--color-black);
+  --cards-article-title-hover-color: var(--color-bright-green);
+}
+
+/* unboxed variants on light-on-dark sections */
+.section.green .cards-article,
+.section.bright-green .cards-article,
+.section.forest .cards-article,
+.section.charcoal .cards-article,
+.section.black .cards-article {
+  --cards-article-eyebrow-color: var(--on-dark-text-color);
+  --cards-article-title-color: var(--on-dark-heading-color);
+  --cards-article-title-hover-color: var(--on-dark-link-hover-color);
+}
+
+.cards-article > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-article > ul > li {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* image */
+.cards-article .cards-article-card-image {
+  line-height: 0;
+}
+
+.cards-article .cards-article-card-image picture,
+.cards-article .cards-article-card-image img {
+  display: block;
+  width: 100%;
+}
+
+.cards-article .cards-article-card-image img {
+  aspect-ratio: 100 / 46;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  background-color: var(--color-bright-green);
+}
+
+/* body */
+.cards-article .cards-article-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 25px 0 40px;
+}
+
+.cards-article .cards-article-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-article .cards-article-card-body > :last-child {
+  margin-bottom: 0;
+}
+
+.cards-article .cards-article-card-eyebrow {
+  margin: 0;
+  padding: 5px 0;
+  color: var(--cards-article-eyebrow-color);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  text-transform: capitalize;
+}
+
+.cards-article .cards-article-card-title {
+  margin: 0;
+  padding: 5px 0;
+  color: var(--cards-article-title-color);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+}
+
+.cards-article .cards-article-card-title a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cards-article .cards-article-card-title a:hover {
+  color: var(--cards-article-title-hover-color);
+  text-decoration: none;
+}
+
+.cards-article .cards-article-card-cta {
+  margin-top: auto;
+}
+
+.cards-article .cards-article-card-cta .button-wrapper {
+  margin: 0;
+}
+
+/* ---------- image: tax-center recommended articles ---------- */
+.cards-article.image .cards-article-card-image img {
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.cards-article.image .cards-article-card-body {
+  padding: 20px 0 0;
+}
+
+.cards-article.image .cards-article-card-eyebrow {
+  margin: 0 0 10px;
+  padding: 0;
+  color: var(--color-green);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+}
+
+.cards-article.image .cards-article-card-title {
+  padding: 0;
+  color: var(--color-forest);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+
+.cards-article.image .cards-article-card-title a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* ---------- with-button / with-button-2: boxed eggshell cards, CTA pinned to the bottom ---------- */
+.cards-article.with-button > ul,
+.cards-article.with-button-2 > ul {
+  gap: 30px;
+}
+
+.cards-article.with-button > ul > li,
+.cards-article.with-button-2 > ul > li {
+  /* light card surface keeps the dark green CTA even inside dark sections */
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-forest);
+  --button-primary-text-color: var(--color-white);
+
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  background-color: var(--color-eggshell);
+  color: var(--color-forest);
+}
+
+.cards-article.with-button .cards-article-card-image img,
+.cards-article.with-button-2 .cards-article-card-image img {
+  aspect-ratio: auto;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.cards-article.with-button .cards-article-card-body,
+.cards-article.with-button-2 .cards-article-card-body {
+  padding: 40px 40px 20px;
+}
+
+.cards-article.with-button .cards-article-card-title,
+.cards-article.with-button-2 .cards-article-card-title {
+  margin: 0 0 20px;
+  padding: 0;
+  color: var(--color-green);
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.cards-article.with-button .cards-article-card-title a:hover,
+.cards-article.with-button-2 .cards-article-card-title a:hover {
+  color: inherit;
+}
+
+.cards-article.with-button .cards-article-card-body > p:not(.cards-article-card-eyebrow),
+.cards-article.with-button-2 .cards-article-card-body > p:not(.cards-article-card-eyebrow) {
+  margin: 0 0 5px;
+  color: var(--color-forest);
+}
+
+.cards-article.with-button .cards-article-card-body > p:not(.cards-article-card-eyebrow) {
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+}
+
+.cards-article.with-button-2 .cards-article-card-body > p:not(.cards-article-card-eyebrow) {
+  font-size: 19px;
+  line-height: 28.5px;
+}
+
+.cards-article.with-button .cards-article-card-cta,
+.cards-article.with-button-2 .cards-article-card-cta {
+  padding: 20px 0;
+}
+
+main .cards-article.with-button .cards-article-card-cta a.button:any-link,
+main .cards-article.with-button-2 .cards-article-card-cta a.button:any-link {
+  width: 100%;
+}
+
+/* ---------- country-grid: round flag above a centred link with chevron ---------- */
+.cards-article.country-grid > ul {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 0;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.cards-article.country-grid > ul > li {
+  align-items: center;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.cards-article.country-grid .cards-article-card-image {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  margin: 0 0 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.cards-article.country-grid .cards-article-card-image picture,
+.cards-article.country-grid .cards-article-card-image img {
+  width: 48px;
+  height: 48px;
+}
+
+.cards-article.country-grid .cards-article-card-image img {
+  aspect-ratio: 1;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.cards-article.country-grid .cards-article-card-body {
+  padding: 0;
+}
+
+.cards-article.country-grid .cards-article-card-body > p:not(.cards-article-card-eyebrow) {
+  margin: 0;
+  color: var(--color-black);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.cards-article.country-grid .cards-article-card-body a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cards-article.country-grid .cards-article-card-body a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.cards-article.country-grid .cards-article-card-body a::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 12.5px;
+  transform: translateX(10px);
+  background: url("data:image/svg+xml,%3Csvg width='9' height='15' viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6.70396 6.7652C7.13292 7.16116 7.13292 7.83884 6.70396 8.2348L1 13.5' stroke='%23262626' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* ---------- default list: text-only search results (.ba--pgitem) in a 760px column ---------- */
+.cards-article > ul.cards-article-list {
+  max-width: var(--narrow-width);
+  margin: 0 auto;
+  gap: 0;
+}
+
+.cards-article > ul.cards-article-list > li {
+  position: relative;
+  padding: 20px 0;
+}
+
+.cards-article .cards-article-list .cards-article-card-body {
+  padding: 0;
+}
+
+.cards-article .cards-article-list .cards-article-card-eyebrow {
+  padding: 0;
+}
+
+.cards-article .cards-article-list .cards-article-card-date {
+  color: var(--color-black);
+}
+
+.cards-article .cards-article-list .cards-article-card-title {
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: -0.1px;
+}
+
+.cards-article .cards-article-list .cards-article-card-body > p:not(.cards-article-card-eyebrow) {
+  margin: 0;
+  padding: 5px 0;
+  color: var(--color-black);
+  font-size: var(--body-font-size-m);
+  line-height: 24.96px;
+  letter-spacing: -0.1px;
+}
+
+/* ---------- default row: related posts (.featured-card-no-back), whole card is the link ---------- */
+.cards-article > ul.cards-article-row {
+  grid-template-columns: 1fr;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.cards-article > ul.cards-article-row > li {
+  position: relative;
+  transition: 0.3s;
+}
+
+/* source rounds the .featured-image wrapper (overflow hidden), the img itself is square */
+.cards-article .cards-article-row .cards-article-card-image {
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  background-color: var(--color-bright-green);
+}
+
+.cards-article .cards-article-row .cards-article-card-image img {
+  border-radius: 0;
+}
+
+.cards-article :is(.cards-article-row, .cards-article-list) .cards-article-card-title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/* ---------- green-light: centred stacked cards, light then dark ---------- */
+.cards-article.green-light > ul {
+  gap: 30px;
+}
+
+.cards-article.green-light > ul > li {
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-forest);
+  --button-primary-text-color: var(--color-white);
+
+  overflow: hidden;
+  align-items: center;
+  border-radius: var(--radius-m);
+  background-color: var(--color-eggshell);
+  color: var(--color-forest);
+  text-align: center;
+}
+
+.cards-article.green-light > ul > li:nth-child(even) {
+  --button-primary-background-color: var(--on-dark-button-background-color);
+  --button-primary-hover-background-color: var(--on-dark-button-hover-background-color);
+  --button-primary-text-color: var(--on-dark-button-text-color);
+
+  background-color: var(--color-green);
+  color: var(--color-eggshell);
+}
+
+.cards-article.green-light .cards-article-card-image {
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+.cards-article.green-light .cards-article-card-image img {
+  aspect-ratio: auto;
+  border-radius: var(--radius-m) var(--radius-m) 0 0;
+  background-color: transparent;
+}
+
+.cards-article.green-light .cards-article-card-body {
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 40px 20px;
+}
+
+.cards-article.green-light .cards-article-card-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 20px;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: var(--color-forest);
+  color: var(--color-eggshell);
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  line-height: var(--eyebrow-line-height);
+  letter-spacing: var(--eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+
+.cards-article.green-light > ul > li:nth-child(even) .cards-article-card-eyebrow {
+  background-color: var(--color-eggshell);
+  color: var(--color-forest);
+}
+
+.cards-article.green-light .cards-article-card-title {
+  max-width: 460px;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: var(--heading-font-size-l);
+  font-weight: 600;
+  line-height: var(--heading-line-height-l);
+  letter-spacing: var(--heading-letter-spacing-l);
+}
+
+.cards-article.green-light .cards-article-card-title a:hover {
+  color: inherit;
+}
+
+.cards-article.green-light .cards-article-card-body > p:not(.cards-article-card-eyebrow) {
+  max-width: 475px;
+  margin: 0 0 20px;
+  color: inherit;
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+}
+
+.cards-article.green-light .cards-article-card-body > .cards-article-card-title + p {
+  margin-top: 20px;
+}
+
+.cards-article.green-light .cards-article-card-body > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.cards-article.green-light .cards-article-card-body > p a:any-link {
+  color: inherit;
+}
+
+.cards-article.green-light .cards-article-card-cta {
+  margin-top: auto;
+  padding: 40px 0 0;
+}
+
+main .cards-article.green-light .cards-article-card-cta a.button:any-link {
+  min-width: 0;
+}
+
+/* default row / list hover: card lifts, title underlines (source .featured-card:hover, .ba--pgitem:hover) */
+.cards-article > ul.cards-article-row > li:hover {
+  transform: scale(1.02);
+}
+
+.cards-article :is(.cards-article-row, .cards-article-list) > li:hover .cards-article-card-title a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (width >= 768px) {
+  .cards-article.country-grid > ul {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-article > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-article .cards-article-card-body {
+    padding: 30px 0 40px;
+  }
+
+  .cards-article > ul.cards-article-list {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-article .cards-article-list .cards-article-card-body {
+    padding: 0;
+  }
+
+  .cards-article .cards-article-list .cards-article-card-title {
+    font-size: 24px;
+    line-height: 28.08px;
+    letter-spacing: -0.25px;
+  }
+
+  .cards-article .cards-article-list .cards-article-card-body > p:not(.cards-article-card-eyebrow) {
+    font-size: 18px;
+    line-height: 28.08px;
+  }
+
+  .cards-article.image .cards-article-card-body {
+    padding: 30px 0 0;
+  }
+
+  .cards-article.image .cards-article-card-eyebrow,
+  .cards-article.image .cards-article-card-title {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .cards-article.with-button > ul,
+  .cards-article.with-button-2 > ul {
+    gap: 26px;
+  }
+
+  .cards-article.green-light > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  main .cards-article.green-light .cards-article-card-cta a.button:any-link {
+    min-width: 325px;
+  }
+
+  .cards-article.country-grid > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* source .row--desktop-small stacks below 990px, then all cards share one row (5-up 208px, 3-up 373px) */
+@media (width >= 990px) {
+  .cards-article > ul.cards-article-row {
+    grid-template-columns: none;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    max-width: none;
+  }
+}
+
+@media (width >= 1200px) {
+  .cards-article.country-grid > ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

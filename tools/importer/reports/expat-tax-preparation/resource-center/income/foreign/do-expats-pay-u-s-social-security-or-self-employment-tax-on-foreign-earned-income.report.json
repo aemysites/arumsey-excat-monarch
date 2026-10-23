@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/income/foreign/do-expats-pay-u-s-social-security-or-self-employment-tax-on-foreign-earned-income/",
+  "path": "expat-tax-preparation/resource-center/income/foreign/do-expats-pay-u-s-social-security-or-self-employment-tax-on-foreign-earned-income",
+  "timestamp": "2026-10-22T20:54:56.945Z",
+  "title": "Do expats pay U.S. Social Security or self-employment tax on foreign earned income? | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file",
+    "fragments/expat-recommended-income"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/business/foreign-partnership/",
+  "path": "expat-tax-preparation/resource-center/filing/business/foreign-partnership",
+  "timestamp": "2026-10-22T20:42:22.389Z",
+  "title": "Foreign Partnership | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file",
+    "fragments/expat-recommended-state-taxes"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

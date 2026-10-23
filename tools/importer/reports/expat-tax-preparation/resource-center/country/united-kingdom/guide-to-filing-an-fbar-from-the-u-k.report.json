@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/united-kingdom/guide-to-filing-an-fbar-from-the-u-k/",
+  "path": "expat-tax-preparation/resource-center/country/united-kingdom/guide-to-filing-an-fbar-from-the-u-k",
+  "timestamp": "2026-10-22T21:02:34.910Z",
+  "title": "Filing an FBAR from the U.K. | H&R Block®",
+  "template": "resource-guide-article",
+  "blocks": [
+    "article-body",
+    "cards-article"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file"
+  ],
+  "importScript": "eaad99ed23bd"
+}

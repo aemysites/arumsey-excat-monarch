@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/expat-tax-preparation-and-services/audit-support/",
+  "path": "expat-tax-preparation/expat-tax-preparation-and-services/audit-support",
+  "timestamp": "2026-10-23T02:22:34.518Z",
+  "title": "Expat Tax Audit Support | H&R Block®",
+  "template": "product-cta-hero",
+  "blocks": [
+    "accordion-faq",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "6d9ba0805122"
+}

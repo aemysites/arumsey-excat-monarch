@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/online-tax-filing/guarantees/free-in-person-audit-support-terms/",
+  "path": "online-tax-filing/guarantees/free-in-person-audit-support-terms",
+  "timestamp": "2026-10-22T21:08:21.431Z",
+  "title": "Worry-Free Audit Support® for Your Taxes | H&R Block®",
+  "template": "heading-content-page",
+  "blocks": [
+    "accordion-faq",
+    "columns-banner"
+  ],
+  "importScript": "fad055f65bcc"
+}

@@ -1,0 +1,575 @@
+/*
+ * table-data
+ * Source: hrblock.com .table_comparison / table.shtablecomparison (default)
+ * and table.table-grid (matrix). The table is a white card on any section
+ * background, so it keeps dark-on-light text and light-surface CTAs.
+ */
+.table-data {
+  --table-data-text: var(--text-color);
+  --table-data-surface: var(--color-white);
+  --table-data-rule: rgb(0 0 0 / 10%);
+  --table-data-current: var(--color-neon);
+  --table-data-label-width: 50%;
+
+  /* light-surface CTAs, also inside dark sections (source .btn--medium-dark-green) */
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-forest);
+  --button-primary-text-color: var(--color-white);
+
+  color: var(--table-data-text);
+}
+
+.table-data.table-data-cols-4 {
+  --table-data-label-width: 40%;
+}
+
+.table-data.table-data-cols-5 {
+  --table-data-label-width: 32%;
+}
+
+.table-data .table-data-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+  background-color: var(--table-data-surface);
+}
+
+.table-data .table-data-scroll:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.table-data table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 19px;
+  line-height: 28.5px;
+}
+
+.table-data th,
+.table-data td {
+  box-sizing: border-box;
+  padding: 30px 15px;
+  border-right: 1px solid var(--table-data-rule);
+  border-bottom: 1px solid var(--table-data-rule);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-data tr > :last-child {
+  border-right: 0;
+}
+
+.table-data tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.table-data th > :first-child,
+.table-data td > :first-child {
+  margin-top: 0;
+}
+
+.table-data th > :last-child,
+.table-data td > :last-child {
+  margin-bottom: 0;
+}
+
+.table-data th p,
+.table-data td p {
+  margin: 0;
+}
+
+.table-data th p + p,
+.table-data td p + p {
+  margin-top: 0.25em;
+}
+
+/* column headings (source th h4/h5.text-small: 24px/28.8px desktop, 18px/21.6px mobile) */
+.table-data thead th {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.table-data thead :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  font-size: var(--heading-font-size-m);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.table-data thead :is(h1, h2, h3, h4, h5, h6) a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* linked product name: chevron after the label (source a.right-arrow) */
+.table-data thead :is(h1, h2, h3, h4, h5, h6) a:any-link::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 12px;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.table-data thead :is(h1, h2, h3, h4, h5, h6) a:hover {
+  text-decoration: underline;
+}
+
+/* price + CTA under the product name (source .price-cta-wrap, min-height 65px) */
+.table-data thead p:not(.button-wrapper) {
+  font-weight: 400;
+}
+
+.table-data thead .button-wrapper {
+  margin: 12px 0 0;
+}
+
+.table-data thead :is(h1, h2, h3, h4, h5, h6) + p:not(.button-wrapper) {
+  margin-top: 19px;
+}
+
+.table-data thead p:not(.button-wrapper) + .button-wrapper {
+  margin-top: 19px;
+}
+
+main .table-data a.button:any-link {
+  width: 100%;
+  min-width: 0;
+  padding: 0 19px;
+  white-space: normal;
+}
+
+/* label column sets the grid; value columns share the rest equally */
+.table-data thead :where(th:first-child) {
+  width: var(--table-data-label-width);
+  text-align: left;
+}
+
+.table-data thead ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* row labels (source th.td_col1: 18px/27px, padding 40px) */
+.table-data tbody th[scope='row'] {
+  padding: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+}
+
+.table-data.table-data-marks tbody th[scope='row'] {
+  font-weight: 400;
+}
+
+.table-data.table-data-cols-5 tbody th[scope='row'] {
+  padding: 40px 15px 40px 25px;
+}
+
+.table-data .table-data-group th {
+  padding: 30px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+}
+
+/* highlighted current product column (source .highlighted.hrb-neon-green) */
+.table-data .table-data-current {
+  background-color: var(--table-data-current);
+}
+
+main .table-data .table-data-current a.button:any-link {
+  background-color: var(--color-forest);
+}
+
+main .table-data .table-data-current a.button:hover,
+main .table-data .table-data-current a.button:focus-visible {
+  background-color: var(--color-black);
+}
+
+/* availability marks (source inline svg check / cross) */
+.table-data .table-data-mark-cell {
+  line-height: 0;
+}
+
+.table-data .table-data-mark {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.table-data .table-data-mark.included {
+  border-radius: 8px;
+  background-color: var(--color-forest);
+}
+
+.table-data .table-data-mark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+.table-data .table-data-mark.included::after {
+  background-color: var(--table-data-surface);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0.16 0.04 48 48'%3E%3Cpath d='M30.8878 20.7124C31.2662 20.3103 31.2471 19.6775 30.845 19.2988C30.4427 18.9204 29.8098 18.9395 29.4314 19.3418L22.1807 27.0457L18.907 23.3628C18.54 22.95 17.908 22.9128 17.4952 23.2798C17.0824 23.6467 17.0453 24.2786 17.4121 24.6914L20.6858 28.3743C21.4663 29.2524 22.8319 29.2717 23.6371 28.4163L30.8878 20.7124Z'/%3E%3C/svg%3E");
+}
+
+.table-data .table-data-current .table-data-mark.included::after {
+  background-color: var(--table-data-current);
+}
+
+.table-data .table-data-mark.excluded::after {
+  background-color: var(--color-black);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M19.0032 19.0041C19.4371 18.5702 20.1406 18.5702 20.5745 19.0041L28.9956 27.4252C29.4295 27.8591 29.4295 28.5626 28.9956 28.9965C28.5617 29.4305 27.8581 29.4305 27.4242 28.9965L19.0032 20.5755C18.5693 20.1416 18.5693 19.4381 19.0032 19.0041Z'/%3E%3Cpath d='M28.9949 19.0041C28.561 18.5702 27.8574 18.5702 27.4235 19.0041L19.0025 27.4252C18.5686 27.8591 18.5686 28.5626 19.0025 28.9965C19.4364 29.4305 20.1399 29.4305 20.5738 28.9965L28.9949 20.5755C29.4288 20.1416 29.4288 19.4381 28.9949 19.0041Z'/%3E%3C/svg%3E");
+}
+
+.table-data td img {
+  width: 49px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.table-data .icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+/*
+ * Small screens, two value columns (source .mobile): the row label column
+ * hides and each value cell repeats its label above the value.
+ */
+@media (width < 900px) {
+  .table-data.table-data-cols-3:not(.matrix, .table-data-legal) thead th:first-child,
+  .table-data.table-data-cols-3:not(.matrix, .table-data-legal) tbody th[scope='row'] {
+    display: none;
+  }
+
+  .table-data.table-data-cols-3:not(.matrix, .table-data-legal) td {
+    width: 50%;
+  }
+
+  .table-data.table-data-cols-3:not(.matrix, .table-data-legal) td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin: 5px 0 10px;
+    font-weight: 500;
+    line-height: 28.5px;
+  }
+
+  /* three or more value columns: scroll sideways with the labels pinned */
+  .table-data.table-data-cols-4:not(.matrix, .table-data-legal),
+  .table-data.table-data-cols-5:not(.matrix, .table-data-legal) {
+    --table-data-label-width: 140px;
+  }
+
+  .table-data.table-data-cols-4:not(.matrix, .table-data-legal) table,
+  .table-data.table-data-cols-5:not(.matrix, .table-data-legal) table {
+    min-width: calc(140px + (var(--table-data-columns) - 1) * 180px);
+  }
+
+  main .table-data.table-data-cols-4:not(.matrix, .table-data-legal) a.button:any-link,
+  main .table-data.table-data-cols-5:not(.matrix, .table-data-legal) a.button:any-link {
+    padding: 0 10px;
+  }
+
+  .table-data.table-data-cols-4:not(.matrix, .table-data-legal) tr > :first-child,
+  .table-data.table-data-cols-5:not(.matrix, .table-data-legal) tr > :first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: var(--table-data-surface);
+  }
+
+  .table-data.table-data-cols-4:not(.matrix, .table-data-legal) tbody th[scope='row'],
+  .table-data.table-data-cols-5:not(.matrix, .table-data-legal) tbody th[scope='row'] {
+    padding: 30px 15px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/*
+ * matrix: long item-by-platform availability grid (source table.table-grid)
+ */
+.table-data.matrix .table-data-scroll {
+  box-shadow: inset 0 0 0 1px #e6e6e6;
+}
+
+.table-data.matrix {
+  --table-data-label-width: 44%;
+}
+
+.table-data.matrix table {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.table-data.matrix th,
+.table-data.matrix td {
+  border-right: 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.table-data.matrix tr > :not(:first-child) {
+  border-left: 1px solid #d6d6d6;
+}
+
+.table-data.matrix tbody tr:nth-child(odd) {
+  background-color: var(--color-light-grey);
+}
+
+.table-data.matrix thead th {
+  padding: 1px;
+  font-size: var(--heading-font-size-m);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.table-data.matrix thead th:first-child {
+  padding: 40px 25px;
+}
+
+.table-data.matrix tbody th[scope='row'] {
+  padding: 25px 9.5px;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+.table-data.matrix tbody .table-data-group > th {
+  padding: 25px 9.5px;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+}
+
+.table-data.matrix td {
+  padding: 5px 0;
+}
+
+.table-data.matrix td:not(.table-data-mark-cell) {
+  line-height: 14.4px;
+}
+
+.table-data.matrix .table-data-mark {
+  width: 49px;
+  height: 49px;
+}
+
+@media (width >= 900px) {
+  .table-data.matrix {
+    --table-data-label-width: 60%;
+  }
+
+  .table-data.matrix table {
+    font-size: 18px;
+  }
+
+  .table-data.matrix thead th:first-child {
+    padding: 40px 0 40px 40px;
+    text-align: left;
+  }
+
+  .table-data.matrix tbody th[scope='row'],
+  .table-data.matrix tbody .table-data-group > th {
+    padding: 25px 9.5px 25px 40px;
+  }
+
+  .table-data.matrix td:not(.table-data-mark-cell) {
+    line-height: 54px;
+  }
+
+  /* worksheet rows under their form (source tr.child-form: 18px/28px, 60px inset) */
+  .table-data.matrix tbody .table-data-child > th[scope='row'] {
+    padding: 26px 20px 25px 60px;
+    line-height: 28px;
+  }
+
+  /* source table.table-grid runs edge to edge with 40px page gutters */
+  main .table-data-wrapper:has(> .table-data.matrix) {
+    max-width: none;
+    padding: 0 40px;
+  }
+}
+
+.table-data.matrix tbody .table-data-parent > th[scope='row'],
+.table-data.matrix tbody .table-data-parent > th[scope='row'] strong {
+  font-weight: 700;
+}
+
+@media (width < 900px) {
+  .table-data.matrix tbody .table-data-child > th[scope='row'] {
+    padding-left: 29.5px;
+  }
+}
+
+/* variant rules below intentionally override the base table rules above */
+/* stylelint-disable no-descending-specificity */
+
+/*
+ * legal / data tables (text-only tables; source table.table-16): left / top
+ * aligned, columns sized to content, rounded 16px frame, 2px rules
+ */
+.table-data.table-data-legal {
+  --table-data-rule: rgb(241 242 242);
+  --table-data-cell-padding: 16px;
+}
+
+.table-data.table-data-legal .table-data-scroll {
+  box-sizing: border-box;
+  border: 1px solid var(--table-data-rule);
+}
+
+.table-data.table-data-legal table {
+  table-layout: auto;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.table-data.table-data-legal tr > :is(th, td) {
+  width: auto;
+  padding: var(--table-data-cell-padding);
+  border-right: 2px solid var(--table-data-rule);
+  border-bottom: 2px solid var(--table-data-rule);
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table-data.table-data-legal:not(.table-data-banded) tr > :last-child {
+  border-right: 0;
+}
+
+.table-data.table-data-legal:not(.table-data-banded) tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+/* column headings: bold, centred (a single-row first heading stays left) */
+.table-data.table-data-legal thead tr > th {
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-data.table-data-legal thead tr:first-child > th:first-child:not([rowspan]) {
+  text-align: left;
+}
+
+.table-data.table-data-legal thead p:not(.button-wrapper) {
+  font-weight: inherit;
+}
+
+.table-data.table-data-legal .table-data-group > th {
+  font-weight: 700;
+}
+
+.table-data.table-data-legal :is(th, td) p {
+  margin: 0 0 10px;
+}
+
+.table-data.table-data-legal :is(th, td) :is(ul, ol) {
+  margin: 0 0 10px;
+  padding-left: 40px;
+}
+
+.table-data.table-data-legal :is(th, td) ul {
+  list-style-type: circle;
+}
+
+.table-data.table-data-legal :is(th, td) li {
+  margin: 0;
+}
+
+.table-data.table-data-legal :is(th, td) > :last-child {
+  margin-bottom: 0;
+}
+
+/* blank cells (span leftovers, form lines) keep one line of height */
+.table-data.table-data-legal td:empty::before {
+  content: '\00a0';
+}
+
+.table-data.table-data-legal td a:any-link {
+  color: inherit;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+/*
+ * header bands (GLBA privacy notice tables, source .first-col-th / .top-row-th):
+ * green label cells with eggshell text, 10px cells on a full grey grid
+ */
+.table-data.table-data-banded {
+  --table-data-rule: rgb(204 204 204);
+  --table-data-cell-padding: 10px;
+}
+
+.table-data.table-data-banded .table-data-scroll {
+  border: 0;
+  border-radius: 0;
+}
+
+.table-data.table-data-banded table {
+  border-collapse: collapse;
+}
+
+.table-data.table-data-banded tr > :is(th, td) {
+  border: 1px solid var(--table-data-rule);
+}
+
+.table-data.table-data-banded tr > th,
+.table-data.table-data-banded thead tr > th {
+  border-color: var(--color-eggshell);
+  background-color: var(--color-green);
+  color: var(--color-eggshell);
+  font-weight: 700;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* tables with row labels (Why? / To limit our sharing / Name) use the larger label size */
+.table-data.table-data-banded.table-data-row-headers tr > th {
+  font-size: 21.6px;
+  line-height: 32.4px;
+}
+
+.table-data.table-data-banded th a:any-link {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* FACTS title row */
+.table-data.table-data-banded.table-data-row-headers .table-data-title > th {
+  background-color: var(--color-forest);
+  font-size: 36px;
+  line-height: 54px;
+}
+
+.table-data.table-data-banded .table-data-title > td {
+  font-size: 25.2px;
+  line-height: 37.8px;
+}
+
+/* consecutive notice tables sit 25px apart (source table margin-bottom) */
+main .table-data-wrapper:has(> .table-data-banded) + .table-data-wrapper:has(> .table-data-banded) {
+  margin-top: 25px;
+}

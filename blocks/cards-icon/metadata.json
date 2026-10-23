@@ -1,0 +1,42 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "Icon-led feature list: bare centred icons with optional heading, text and link, plus split media|text panels"
+  },
+  "contentPattern": {
+    "structure": "icon or image cell | body cell with optional heading, text and links/buttons. Icon-only rows (no body) are allowed. In the split options (featured-offer, light-2, light-3, dark) the first cell is a photo and the second the text panel",
+    "rows": "one row per item",
+    "cells": ["icon / image", "body (optional)"]
+  },
+  "options": [
+    { "class": "light", "label": "Light" },
+    { "class": "featured-offer", "label": "Featured Offer" },
+    { "class": "light-2", "label": "Light 2" },
+    { "class": "dark", "label": "Dark" },
+    { "class": "icon-left", "label": "Icon Left" },
+    { "class": "light-3", "label": "Light 3" },
+    { "class": "dividers", "label": "Dividers" }
+  ],
+  "memberVariantIds": [
+    "v_ffbd17ad1926",
+    "v_3bdad2f1bab2",
+    "v_faa8c5b6252d",
+    "v_9f2caa496a73",
+    "v_74d60179239e",
+    "v_796b80f02393",
+    "v_7f69e727b907",
+    "v_426183644759",
+    "v_7f1059f58867",
+    "v_f4b2ff9fe37a",
+    "v_ff4203708064"
+  ],
+  "usage": "Default: bare centred icons (no card surface) with optional heading, text and link, text colour following the section Style. light: icon-only row with larger icons. icon-left: icon in its own column beside heading/text/link. dividers: items share one light surface separated by vertical rules. featured-offer: a single wide card, photo left and text right on a light surface. light-2 / light-3: photo left, text on a dark panel right. dark: whole split card on a dark surface. Section background comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class.",
+  "reuseGuidance": "Reuse for benefit/feature icon rows and single promotional media|text panels. Use cards-feature when each card needs its own boxed surface."
+}

@@ -1,0 +1,22 @@
+{
+  "variantName": "savings-calculator",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button",
+    "purpose": "S Corp self-employment tax savings calculator with result panel and CTA panel"
+  },
+  "contentPattern": {
+    "structure": "Rows keyed in the first cell: Intro | heading + description; Field | label | help text (optional) | key (optional: net-income, salary, w2-income, w2-ss-withheld, other-se-income; defaults by order); Button | Calculate; Result | result heading | disclaimer; CTA | heading, text, link; Wage base | 184500 (optional, default 184500). Unkeyed rows fall back to intro, field, then CTA"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_a380adf3fc18"
+  ],
+  "usage": "Business formation services page.",
+  "reuseGuidance": "Reuse for the same content pattern; background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black)."
+}

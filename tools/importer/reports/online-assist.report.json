@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/online-assist/",
+  "path": "online-assist",
+  "timestamp": "2026-10-22T22:22:19.014121Z",
+  "title": "",
+  "template": "product-split-hero",
+  "blocks": [
+    "hero-split",
+    "table-data",
+    "promo-strip",
+    "cards-icon",
+    "cards-feature",
+    "cards-icon",
+    "columns-banner",
+    "accordion-faq",
+    "product-reviews"
+  ],
+  "note": "report rebuilt from saved content after the Bright Data retry deleted it"
+}

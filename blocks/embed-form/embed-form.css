@@ -1,0 +1,77 @@
+/* embed-form: centred intro, embedded form iframe, footnote.
+   Source: hrblock.com column-control.container-width-600 > iframe.mbsy-iframe
+   (600px column, transparent borderless iframe; 723px tall on mobile, 623px on desktop) */
+
+.embed-form {
+  --embed-form-max-width: 600px;
+  --embed-form-height: 723px;
+  --embed-form-text-color: var(--text-color);
+  --embed-form-link-color: var(--link-color);
+
+  color: var(--embed-form-text-color);
+  text-align: center;
+}
+
+/* light-on-dark section styles (section metadata Style) */
+.section.forest .embed-form,
+.section.green .embed-form,
+.section.bright-green .embed-form,
+.section.charcoal .embed-form,
+.section.black .embed-form {
+  --embed-form-text-color: var(--on-dark-text-color, var(--background-color));
+  --embed-form-link-color: var(--on-dark-link-color, var(--background-color));
+}
+
+/* dark-on-light section styles keep the page defaults */
+.section.eggshell .embed-form,
+.section.white .embed-form,
+.section.light-grey .embed-form,
+.section.neon .embed-form {
+  --embed-form-text-color: var(--text-color);
+  --embed-form-link-color: var(--link-color);
+}
+
+.embed-form a:any-link {
+  color: var(--embed-form-link-color);
+}
+
+.embed-form .embed-form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.embed-form .embed-form-intro,
+.embed-form .embed-form-footnote {
+  max-width: var(--embed-form-max-width);
+}
+
+/* mobile: the source iframe runs edge to edge (the embedded form has its own 16px inset) */
+.embed-form .embed-form-frame {
+  box-sizing: border-box;
+  width: calc(100% + (2 * var(--content-gutter, 0px)));
+  max-width: var(--embed-form-max-width);
+  min-height: var(--embed-form-height);
+  margin-inline: calc(-1 * var(--content-gutter, 0px));
+}
+
+.embed-form .embed-form-frame iframe {
+  display: block;
+  width: 100%;
+  height: var(--embed-form-height);
+  border: 0;
+  background: transparent;
+  transition: height 0.2s;
+}
+
+@media (width >= 900px) {
+  .embed-form {
+    --embed-form-height: 623px;
+  }
+
+  .embed-form .embed-form-frame {
+    width: 100%;
+    margin-inline: 0;
+  }
+}

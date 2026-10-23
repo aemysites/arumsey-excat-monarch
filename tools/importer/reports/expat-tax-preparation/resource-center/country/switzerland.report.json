@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/switzerland/",
+  "path": "expat-tax-preparation/resource-center/country/switzerland",
+  "timestamp": "2026-10-22T18:33:58.447Z",
+  "title": "Taxes for U.S. Expats in Switzerland | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "breadcrumb",
+    "hero-resource",
+    "cards-feature",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-steps-to-prep",
+    "fragments/expat-testimonials"
+  ],
+  "importScript": "d4c454421d77"
+}

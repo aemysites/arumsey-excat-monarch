@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/myblock-benefits/",
+  "path": "myblock-benefits",
+  "timestamp": "2026-10-22T18:45:13.217Z",
+  "title": "MyBlock Benefits | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "tabs-pill",
+    "cards-icon",
+    "hero-split",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/myblock-benefits-tab-1",
+    "fragments/myblock-benefits-tab-2",
+    "fragments/myblock-benefits-tab-3",
+    "fragments/myblock-benefits-tab-4"
+  ],
+  "importScript": "d4c454421d77"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/forms/form-8854/",
+  "path": "expat-tax-preparation/resource-center/forms/form-8854",
+  "timestamp": "2026-10-22T20:52:26.396Z",
+  "title": "Form 8854 | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file",
+    "fragments/expat-recommended-forms"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

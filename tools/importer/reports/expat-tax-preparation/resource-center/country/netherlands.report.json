@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/netherlands/",
+  "path": "expat-tax-preparation/resource-center/country/netherlands",
+  "timestamp": "2026-10-22T18:32:49.290Z",
+  "title": "U.S. Taxes for Expats in the Netherlands | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "breadcrumb",
+    "hero-resource",
+    "cards-feature",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-steps-to-prep",
+    "fragments/expat-testimonials"
+  ],
+  "importScript": "d4c454421d77"
+}

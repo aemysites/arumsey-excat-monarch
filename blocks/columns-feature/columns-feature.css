@@ -1,0 +1,454 @@
+/* columns-feature: text column (heading, icon list / numbered steps, price, CTAs) beside an image.
+   Values from source computed styles (hrblock.com column-control + iconlist), see
+   migration-work/columns-feature-extracted.css. Section background/padding come from section styles. */
+
+.columns-feature {
+  --columns-feature-gap: 120px;
+  --columns-feature-text-color: var(--text-color);
+  --columns-feature-link-color: var(--link-color);
+  --columns-feature-badge-background: var(--color-neon);
+  --columns-feature-badge-color: var(--color-forest);
+  --columns-feature-divider-color: currentcolor;
+  --columns-feature-chevron-color: var(--color-black);
+  --columns-feature-icon-size: 24px;
+  --columns-feature-icon-gap: 15px;
+
+  color: var(--columns-feature-text-color);
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+}
+
+/* light-on-dark section styles (section metadata Style) */
+.section.forest .columns-feature,
+.section.green .columns-feature,
+.section.bright-green .columns-feature,
+.section.black .columns-feature {
+  --columns-feature-text-color: var(--on-dark-text-color, var(--background-color));
+  --columns-feature-link-color: var(--on-dark-link-color, var(--background-color));
+  --columns-feature-chevron-color: var(--on-dark-text-color);
+  --text-color: var(--on-dark-text-color, white);
+  --background-color: var(--on-dark-background-color, var(--dark-color));
+}
+
+/* dark-on-light section styles keep the page defaults */
+.section.eggshell .columns-feature,
+.section.white .columns-feature,
+.section.neon .columns-feature {
+  --columns-feature-text-color: var(--text-color);
+  --columns-feature-link-color: var(--link-color);
+}
+
+.columns-feature a:any-link:not(.button) {
+  color: var(--columns-feature-link-color);
+}
+
+/* layout: stacked on mobile (image first), side by side from 900px */
+.columns-feature > .columns-feature-row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.columns-feature .columns-feature-text-col {
+  order: 1;
+  min-width: 0;
+  counter-reset: columns-feature-step;
+}
+
+.columns-feature .columns-feature-img-col {
+  order: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.columns-feature img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* source photos fill their column (cq-dd-image at column width) */
+.columns-feature .columns-feature-img-col img {
+  width: 100%;
+}
+
+.columns-feature .columns-feature-text-col > :last-child,
+.columns-feature .columns-feature-text-col > .columns-feature-actions:last-child > :last-child {
+  margin-bottom: 0;
+}
+
+/* typography (source: modal-headline text-large / text-small, body 18px/27px) */
+.columns-feature h1,
+.columns-feature h2 {
+  margin: 0 0 20px;
+  font-size: var(--heading-font-size-xl);
+  line-height: var(--heading-line-height-xl);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+.columns-feature h3 {
+  margin: 0 0 20px;
+  font-size: var(--heading-font-size-m);
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.columns-feature p {
+  margin: 0 0 20px;
+}
+
+.columns-feature .columns-feature-img-col p {
+  margin: 0;
+}
+
+/* CTAs (source .btn-container: 40px above, 20px below) */
+.columns-feature .columns-feature-text-col > .button-wrapper,
+.columns-feature .columns-feature-actions {
+  margin-top: 40px;
+}
+
+.columns-feature .columns-feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 25px;
+  margin-bottom: 20px;
+}
+
+.columns-feature .columns-feature-actions > p {
+  margin: 0;
+}
+
+.columns-feature .columns-feature-actions > p:not(.button-wrapper) a:any-link {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* price (source .product-price: 40px/44px bold green, struck-through list price below) */
+.columns-feature .columns-feature-text-col > p > strong:has(> del) {
+  display: inline-flex;
+  flex-direction: column-reverse;
+  color: var(--color-green);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+.columns-feature .columns-feature-text-col > p > strong > del {
+  color: var(--color-forest);
+  font-size: var(--heading-font-size-m);
+  font-weight: 500;
+}
+
+/* lists (source .iconlist ul.list-unstyled; li 10px 0, icon 24px + 15px) */
+.columns-feature .columns-feature-text-col ul,
+.columns-feature .columns-feature-text-col ol {
+  display: flow-root;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns-feature .columns-feature-text-col li {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.columns-feature .columns-feature-icon-item {
+  display: flex;
+  align-items: center;
+  gap: var(--columns-feature-icon-gap);
+}
+
+.columns-feature .columns-feature-icon-item > picture,
+.columns-feature .columns-feature-icon-item > img,
+.columns-feature .columns-feature-icon-item > .icon {
+  flex: 0 0 var(--columns-feature-icon-size);
+  width: var(--columns-feature-icon-size);
+  height: var(--columns-feature-icon-size);
+}
+
+.columns-feature .columns-feature-icon-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.columns-feature .columns-feature-icon-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* image paragraph above a card heading (multi-column feature cards) */
+.columns-feature .columns-feature-text-col > p:has(> picture:only-child) img {
+  width: 100%;
+}
+
+/* consecutive icon lists flow side by side (source two-column iconlist) */
+.columns-feature .columns-feature-list-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 60px;
+  margin-bottom: 20px;
+}
+
+.columns-feature.light .columns-feature-list-group > ul {
+  display: flow-root;
+}
+
+/* light: a single icon list flows in two columns */
+.columns-feature.light .columns-feature-text-col > ul:not(:first-child) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 60px;
+}
+
+/* steps: numbered badges (source 32px neon square, 4px radius, forest numeral) */
+.columns-feature .columns-feature-steps > li {
+  counter-increment: columns-feature-step;
+  display: flex;
+  align-items: center;
+  gap: var(--columns-feature-icon-gap);
+}
+
+.columns-feature .columns-feature-steps > li:not(.columns-feature-icon-item)::before {
+  content: counter(columns-feature-step);
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: var(--columns-feature-badge-background);
+  color: var(--columns-feature-badge-color);
+  font-size: var(--heading-font-size-m);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: normal;
+}
+
+/* steps: h3-sized step titles, top-aligned (source tax-software "How our software works") */
+.columns-feature.steps .columns-feature-steps > li,
+.columns-feature.steps .columns-feature-text-col li.columns-feature-icon-item {
+  align-items: flex-start;
+  margin: 0 0 20px;
+  font-size: var(--heading-font-size-m);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.columns-feature.steps .columns-feature-icon-item {
+  --columns-feature-icon-size: 32px;
+}
+
+.columns-feature.steps .columns-feature-text-col > ul + p,
+.columns-feature.steps .columns-feature-text-col > ol + p {
+  padding-bottom: 20px;
+}
+
+/* steps-2: 24px/36px step titles, 50px between a description and the next step */
+.columns-feature.steps-2 .columns-feature-steps > li {
+  font-size: var(--heading-font-size-m);
+  font-weight: var(--heading-font-weight);
+  line-height: 36px;
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.columns-feature.steps-2 .columns-feature-steps ~ .columns-feature-steps {
+  margin-top: 20px;
+}
+
+/* steps-3: smaller 30x31 badges, bold body-size titles, dividers between steps */
+.columns-feature.steps-3 .columns-feature-steps > li {
+  font-weight: var(--heading-font-weight);
+}
+
+.columns-feature.steps-3 .columns-feature-steps > li:not(.columns-feature-icon-item)::before {
+  width: 30px;
+  height: 31px;
+  border-radius: 3.4px;
+  font-size: 13px;
+}
+
+.columns-feature.steps-3 .columns-feature-steps ~ .columns-feature-steps {
+  margin-top: 10px;
+}
+
+/* source hides the photo on small/medium screens */
+.columns-feature.steps-3 .columns-feature-img-col {
+  display: none;
+}
+
+/* accordion: icon list with 32px badges, top-aligned (source tax-pro-review) */
+.columns-feature.accordion .columns-feature-icon-item {
+  --columns-feature-icon-size: 32px;
+
+  align-items: flex-start;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.columns-feature.accordion .columns-feature-icon-item:last-child {
+  padding-bottom: 0;
+}
+
+/* a lone icon item leading the column is a product label (source span.text-small 24px/28px) */
+.columns-feature .columns-feature-text-col > ul:first-child > .columns-feature-icon-item:only-child {
+  font-size: var(--heading-font-size-m);
+  font-weight: var(--heading-font-weight);
+  line-height: 28px;
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+/* accordion: exclusive panels under the column title (source small-business bookkeeping) */
+.columns-feature .columns-feature-text-col > :is(h1, h2):has(+ .columns-feature-accordion-item) {
+  margin-bottom: 30px;
+}
+
+.columns-feature .columns-feature-accordion-item {
+  padding: 30px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--columns-feature-divider-color) 50%, transparent);
+}
+
+.columns-feature .columns-feature-accordion-item:not(:has(+ .columns-feature-accordion-item)) {
+  border-bottom: 0;
+}
+
+.columns-feature .columns-feature-text-col > :is(h1, h2) + .columns-feature-accordion-item {
+  padding-top: 2px;
+}
+
+.columns-feature .columns-feature-accordion-item > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 35px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.columns-feature .columns-feature-accordion-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.columns-feature .columns-feature-accordion-title {
+  font-size: var(--heading-font-size-m);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+/* chevron (source 12x7 svg, 2px #262626 stroke, rotated when open) */
+.columns-feature .columns-feature-accordion-item > summary::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  margin: 0 12px 4px 0;
+  border-right: 2px solid var(--columns-feature-chevron-color);
+  border-bottom: 2px solid var(--columns-feature-chevron-color);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.columns-feature .columns-feature-accordion-item[open] > summary::after {
+  margin-bottom: -4px;
+  transform: rotate(-135deg);
+}
+
+.columns-feature .columns-feature-accordion-item > summary:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.columns-feature .columns-feature-accordion-body {
+  padding: 30px 0 10px;
+}
+
+@media (width >= 900px) {
+  .columns-feature > .columns-feature-row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .columns-feature > .columns-feature-row:has(> .columns-feature-img-col) {
+    align-items: center;
+  }
+
+  .columns-feature > .columns-feature-row > div {
+    flex: 1 1 0;
+    order: unset;
+  }
+
+  /* steps-3: full-bleed photo filling the section height, text inset 110px */
+  .columns-feature.steps-3 {
+    margin-block: calc(-1 * var(--section-padding));
+  }
+
+  .columns-feature.steps-3 > .columns-feature-row {
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .columns-feature.steps-3 .columns-feature-img-col {
+    display: block;
+  }
+
+  /* photo column runs from the viewport edge to the block centre (source 50/50 split) */
+  .columns-feature.steps-3 > .columns-feature-row > .columns-feature-img-col:first-child {
+    flex: 0 0 50vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  .columns-feature.steps-3 .columns-feature-img-col picture {
+    display: contents;
+  }
+
+  .columns-feature.steps-3 .columns-feature-img-col img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  .columns-feature.steps-3 .columns-feature-text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0 40px;
+  }
+
+  .columns-feature.steps-3 .columns-feature-img-col + .columns-feature-text-col {
+    margin-right: min(0px, calc(50% - 50vw + 70px));
+    padding-left: 110px;
+  }
+
+  .columns-feature.steps-3 .columns-feature-steps ~ .columns-feature-steps {
+    margin-top: 0;
+  }
+
+  .columns-feature.steps-3 .columns-feature-steps ~ .columns-feature-steps::before {
+    content: '';
+    display: block;
+    width: 500px;
+    max-width: calc(100% - 10px);
+    height: 1px;
+    margin: 20px 0 50px 10px;
+    background: var(--columns-feature-divider-color);
+  }
+}
+
+@media (width >= 1200px) {
+  .columns-feature > .columns-feature-row {
+    gap: var(--columns-feature-gap);
+  }
+
+  /* four feature cards keep the source 240px card width */
+  .columns-feature.columns-feature-4-cols > .columns-feature-row {
+    gap: 80px;
+  }
+}

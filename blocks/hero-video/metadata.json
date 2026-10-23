@@ -1,0 +1,34 @@
+{
+  "variantName": "hero-video",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "full-bleed muted looping background video with overlaid eyebrow, title (text or image) and CTAs"
+  },
+  "contentPattern": {
+    "structure": "cell 1 = link to an .mp4/.webm video plus optional poster picture; cell 2 = eyebrow, heading or title image, CTA links"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_d68e1f04d826"
+  ],
+  "usage": {
+    "pagesFound": 1,
+    "examplePages": [
+      "https://www.hrblock.com/responsibilityisland/"
+    ]
+  },
+  "reuseGuidance": "Use only where the source has a background video. Video does not autoplay with prefers-reduced-motion; a play/pause toggle is always rendered.",
+  "variants": {
+    "v_d68e1f04d826": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1
+    }
+  }
+}

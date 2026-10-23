@@ -1,0 +1,24 @@
+{
+  "variantName": "brand-bar",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "link + icon",
+    "purpose": "Thin family-of-brands strip with right-aligned logo links (H&R Block, Block Advisors, Spruce), the current brand highlighted"
+  },
+  "contentPattern": {
+    "structure": "one row with one cell per brand (or one cell with a paragraph per brand); each brand is a link wrapping a logo image/icon (or plain link text). Mark the current brand with `(active)` in its text or by bolding it; a same-origin link to `/` is also treated as current",
+    "rows": "one row of brands",
+    "cells": ["brand link + logo", "..."]
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_b076a266e988"
+  ],
+  "usage": "Use at the very top of expat resource pages for the cross-brand strip. Logos are kept as authored (SVG logos are never re-optimized). Only one item is highlighted as current. The bar keeps its own dark strip on light sections and turns transparent on dark section Styles (forest, green, bright-green, black).",
+  "reuseGuidance": "Reuse for any small row of sister-brand or partner logo links. Not a replacement for the site header navigation."
+}

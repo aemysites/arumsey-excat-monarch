@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/status/married-to-a-nonresident-alien-spouse-these-are-your-u-s-tax-filing-options/",
+  "path": "expat-tax-preparation/resource-center/filing/status/married-to-a-nonresident-alien-spouse-these-are-your-u-s-tax-filing-options",
+  "timestamp": "2026-10-22T20:46:43.572Z",
+  "title": "U.S. Taxes When Married to a Nonresident Alien Spouse | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body",
+    "cards-article"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

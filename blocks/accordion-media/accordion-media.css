@@ -1,0 +1,552 @@
+/*
+ * accordion-media
+ * Values from source computed styles (hrblock.com section.two-column-control > .accordian-section,
+ * ul.accordion > li, header > a > h3/h5.drawer-header, .detail-div).
+ * Mobile is the base; the two-column layout applies from 900px.
+ * Background comes from the section style (.section.<style>); this block only sets foregrounds.
+ */
+.accordion-media {
+  --accordion-media-text: var(--text-color);
+  --accordion-media-rule: color-mix(in srgb, var(--accordion-media-text) 50%, transparent); /* source rgba(text / 0.5) */
+  --accordion-media-cta: var(--color-neon);
+  --accordion-media-body-size: 18px;
+  --accordion-media-body-line: 27px;
+  --accordion-media-icon-size: 32px;
+  --accordion-media-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 7'%3E%3Cpath d='M11 1L6 6L1 1' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --accordion-media-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 12'%3E%3Cpath d='M1 1L6 6L1 11' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --accordion-media-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpath d='M1.5 6L6 10.5L14.5 1.5' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+  display: grid;
+  gap: 40px;
+  color: var(--accordion-media-text);
+  font-size: var(--accordion-media-body-size);
+  line-height: var(--accordion-media-body-line);
+}
+
+/* light-on-dark sections: source green-dark-theme body copy is 19px / 28.5px */
+.section.green .accordion-media,
+.section.bright-green .accordion-media,
+.section.forest .accordion-media,
+.section.charcoal .accordion-media,
+.section.black .accordion-media {
+  --accordion-media-text: var(--on-dark-text-color);
+  --accordion-media-body-size: 19px;
+  --accordion-media-body-line: 28.5px;
+}
+
+.accordion-media .accordion-media-content {
+  min-width: 0;
+}
+
+/*
+ * split row (intro | link list): source "Additional resources" two-column-control.
+ * Left: h2 40/44 + body (540px column), right: iconlist li 18/27 500, 32px icon + 15px gap,
+ * 26x12 trailing chevron, 10px vertical margins. Icons map to known destinations; an
+ * authored leading icon (picture / span.icon) replaces the mapped one.
+ */
+.accordion-media.accordion-media-split {
+  --accordion-media-icon-support: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill-rule='evenodd' d='M7 13C7 8.05228 11.0523 4 16 4C20.9477 4 25 8.05228 25 13V13.9972C25 13.9981 25 13.9991 25 14V18C25 19.4299 24.643 20.7844 24.0959 21.9725C23.0017 24.2231 20.9747 25.9566 18.4839 26.6591C18.118 26.2543 17.5887 26 17 26C15.8954 26 15 26.8954 15 28L15 28.0032C15.0018 29.1063 15.8965 30 17 30C17.8886 30 18.6419 29.4204 18.9025 28.6187C22.0063 27.7827 24.5416 25.6376 25.8998 22.8363C25.9034 22.829 25.9068 22.8217 25.9101 22.8143C26.5596 21.4056 27 19.7647 27 18V17.0028C27 17.0019 27 17.0009 27 17V13C27 6.94772 22.0523 2 16 2C9.94772 2 5 6.94772 5 13V17C5 17.5523 5.44772 18 6 18C6.55228 18 7 17.5523 7 17V13Z'/%3E%3Cpath fill-rule='evenodd' d='M10 12C7.2 12 5 14.2 5 17C5 19.8 7.2 22 10 22C10.6 22 11 21.6 11 21V13C11 12.4 10.6 12 10 12ZM22 12C21.4 12 21 12.4 21 13V21C21 21.6 21.4 22 22 22C24.8 22 27 19.8 27 17C27 14.2 24.8 12 22 12Z'/%3E%3C/svg%3E");
+  --accordion-media-icon-login: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill-rule='evenodd' d='M13 14C13 13.4477 12.5523 13 12 13C11.4477 13 11 13.4477 11 14V15.1718C9.83678 15.5852 9 16.6981 9 18C9 19.6523 10.3477 21 12 21C12.5477 21 13 21.4523 13 22C13 22.5477 12.5477 23 12 23C11.653 23 11.4241 22.8793 11.1809 22.5753C10.8359 22.144 10.2066 22.0741 9.77531 22.4191C9.34404 22.7641 9.27412 23.3934 9.61913 23.8247C9.98209 24.2784 10.4362 24.64 11 24.8368V26C11 26.5523 11.4477 27 12 27C12.5523 27 13 26.5523 13 26V24.8282C14.1632 24.4148 15 23.3019 15 22C15 20.3477 13.6523 19 12 19C11.4523 19 11 18.5477 11 18C11 17.4523 11.4523 17 12 17C12.347 17 12.5759 17.1207 12.8191 17.4247C13.1641 17.856 13.7934 17.9259 14.2247 17.5809C14.656 17.2359 14.7259 16.6066 14.3809 16.1753C14.0179 15.7216 13.5638 15.36 13 15.1632V14Z'/%3E%3Cpath fill-rule='evenodd' d='M12 2C12.5523 2 13 2.44772 13 3V7C13 7.55228 12.5523 8 12 8C11.4477 8 11 7.55228 11 7V3C11 2.44772 11.4477 2 12 2ZM2 20C2 14.4477 6.44772 10 12 10H28C28.5523 10 29 10.4477 29 11V17C29 17.361 28.8054 17.694 28.4908 17.8712L21.8227 21.6279C21.044 26.3728 16.9417 30 12 30C6.44772 30 2 25.5523 2 20ZM12 12C7.55228 12 4 15.5523 4 20C4 24.4477 7.55228 28 12 28C16.0801 28 19.4612 24.8935 19.9061 20.8896C19.9416 20.5698 20.1289 20.2867 20.4092 20.1288L27 16.4156V12H20V13.6C20 14.1523 19.5523 14.6 19 14.6C18.4477 14.6 18 14.1523 18 13.6V12H12ZM17.4472 4.10555C17.9412 4.35254 18.1414 4.95321 17.8944 5.44719L16.8944 7.44719C16.6474 7.94117 16.0468 8.14139 15.5528 7.8944C15.0588 7.64741 14.8586 7.04674 15.1056 6.55276L16.1056 4.55276C16.3526 4.05878 16.9532 3.85856 17.4472 4.10555ZM7.89443 4.55276C7.64744 4.05878 7.04677 3.85856 6.55279 4.10555C6.05881 4.35254 5.85859 4.95321 6.10558 5.44719L7.10558 7.44719C7.35257 7.94117 7.95324 8.14139 8.44722 7.8944C8.9412 7.64741 9.14142 7.04674 8.89443 6.55276L7.89443 4.55276Z'/%3E%3C/svg%3E");
+  --accordion-media-icon-comms: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill-rule='evenodd' d='M8.85581 19.1348L8.37165 19.3284C7.85887 19.5336 7.2769 19.2841 7.07179 18.7714C6.86668 18.2586 7.11609 17.6766 7.62888 17.4715L8.12888 17.2715C8.1387 17.2676 8.14858 17.2638 8.15852 17.2602C9.52512 16.7632 11.1101 16.8869 12.3475 17.5055C12.3581 17.5109 12.3687 17.5164 12.3791 17.5221C13.2337 17.9882 14.3693 18.0323 15.1214 17.6221C15.1319 17.6164 15.1424 17.6109 15.1531 17.6055L15.553 17.4055C16.047 17.1585 16.6477 17.3588 16.8947 17.8527C17.1417 18.3467 16.9415 18.9474 16.4475 19.1944L16.0623 19.387C14.6232 20.163 12.778 20.0103 11.4392 19.2875C10.6824 18.9142 9.68155 18.8394 8.85581 19.1348Z'/%3E%3Cpath fill-rule='evenodd' d='M2 5C2 4.44772 2.44772 4 3 4H29C29.5523 4 30 4.44772 30 5V23C30 23.5523 29.5523 24 29 24H20V26H22C22.5523 26 23 26.4477 23 27C23 27.5523 22.5523 28 22 28H19H13H10C9.44772 28 9 27.5523 9 27C9 26.4477 9.44772 26 10 26H12V24H3C2.44772 24 2 23.5523 2 23V5ZM28 22H19H13H4V6H28V22ZM18 26V24H14V26H18ZM8 12C7.44772 12 7 12.4477 7 13C7 13.5523 7.44772 14 8 14H14C14.5523 14 15 13.5523 15 13C15 12.4477 14.5523 12 14 12H8ZM7 9C7 8.44772 7.44772 8 8 8H18C18.5523 8 19 8.44772 19 9C19 9.55228 18.5523 10 18 10H8C7.44772 10 7 9.55228 7 9ZM24.7071 12.7071C25.0976 12.3166 25.0976 11.6834 24.7071 11.2929C24.3166 10.9024 23.6834 10.9024 23.2929 11.2929L18.2929 16.2929C17.9024 16.6834 17.9024 17.3166 18.2929 17.7071C18.6834 18.0976 19.3166 18.0976 19.7071 17.7071L24.7071 12.7071Z'/%3E%3C/svg%3E");
+  --accordion-media-icon-faq: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 33 32'%3E%3Cpath fill-rule='evenodd' d='M2.53613 8C2.53613 4.64772 5.18385 2 8.53613 2H24.5361C27.8884 2 30.5361 4.64772 30.5361 8V18C30.5361 21.3523 27.8884 24 24.5361 24H19.5797L12.1508 29.7888C11.8494 30.0237 11.4405 30.0662 11.0972 29.8985C10.7539 29.7308 10.5361 29.3821 10.5361 29V24H8.53613C5.18385 24 2.53613 21.3523 2.53613 18V8ZM8.53613 4C6.28842 4 4.53613 5.75228 4.53613 8V18C4.53613 20.2477 6.28842 22 8.53613 22H11.5361C12.0884 22 12.5361 22.4477 12.5361 23V26.953L18.6215 22.2112C18.7971 22.0743 19.0135 22 19.2361 22H24.5361C26.7838 22 28.5361 20.2477 28.5361 18V8C28.5361 5.75228 26.7838 4 24.5361 4H8.53613Z'/%3E%3Cpath fill-rule='evenodd' d='M14.0361 10.5C14.0361 9.05228 15.0884 8 16.5361 8C17.8838 8 19.0361 9.15228 19.0361 10.5C19.0361 11.4629 18.5056 12.2416 17.7017 12.6974C16.3695 13.258 15.5361 14.5016 15.5361 15.9V16C15.5361 16.5523 15.9838 17 16.5361 17C17.0884 17 17.5361 16.5523 17.5361 16V15.9C17.5361 15.3203 17.8764 14.7809 18.5075 14.5285C18.5443 14.5138 18.5802 14.4969 18.615 14.4779C19.9863 13.7299 21.0361 12.3195 21.0361 10.5C21.0361 8.04772 18.9884 6 16.5361 6C13.9838 6 12.0361 7.94772 12.0361 10.5C12.0361 11.0523 12.4838 11.5 13.0361 11.5C13.5884 11.5 14.0361 11.0523 14.0361 10.5ZM17.9361 19.4C17.9361 20.1732 17.3093 20.8 16.5361 20.8C15.7629 20.8 15.1361 20.1732 15.1361 19.4C15.1361 18.6268 15.7629 18 16.5361 18C17.3093 18 17.9361 18.6268 17.9361 19.4Z'/%3E%3C/svg%3E");
+  --accordion-media-icon-chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.7 16.7C10.3 17.1 9.7 17.1 9.3 16.7 8.9 16.3 8.9 15.8 9.2 15.4L12.6 12 9.3 8.7C8.9 8.3 8.9 7.8 9.2 7.4C9.7 6.9 10.2 6.9 10.6 7.2L14.7 11.3C15.1 11.7 15.1 12.2 14.8 12.6L10.7 16.7Z'/%3E%3C/svg%3E");
+}
+
+.accordion-media.accordion-media-split .accordion-media-content {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.accordion-media.accordion-media-split .accordion-media-intro :is(h2, h3, h4) {
+  margin-bottom: 20px;
+}
+
+.accordion-media .accordion-media-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accordion-media .accordion-media-links > li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding-top: 2px;
+  font-weight: 500;
+}
+
+.accordion-media .accordion-media-links > li::before,
+.accordion-media .accordion-media-link-icon {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+}
+
+.accordion-media .accordion-media-links > li:where(:not(.accordion-media-link-has-icon))::before {
+  content: '';
+  background-color: currentcolor;
+  mask: var(--accordion-media-link-icon, none) center / contain no-repeat;
+}
+
+.accordion-media .accordion-media-links > li:where(:not(:has(a[href*='/support'], a[href*='account.'], a[href*='login'], a[href*='optout'], a[href*='faq']), .accordion-media-link-has-icon))::before {
+  display: none;
+}
+
+.accordion-media .accordion-media-links > li:where(:has(a[href*='/support'])) {
+  --accordion-media-link-icon: var(--accordion-media-icon-support);
+}
+
+.accordion-media .accordion-media-links > li:where(:has(a[href*='account.'], a[href*='login'])) {
+  --accordion-media-link-icon: var(--accordion-media-icon-login);
+}
+
+.accordion-media .accordion-media-links > li:where(:has(a[href*='optout'])) {
+  --accordion-media-link-icon: var(--accordion-media-icon-comms);
+}
+
+.accordion-media .accordion-media-links > li:where(:has(a[href*='faq'])) {
+  --accordion-media-link-icon: var(--accordion-media-icon-faq);
+}
+
+.accordion-media .accordion-media-link-icon {
+  display: inline-flex;
+}
+
+.accordion-media .accordion-media-link-icon :is(picture, img, svg) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.accordion-media .accordion-media-links a:any-link {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-decoration: none;
+}
+
+.accordion-media .accordion-media-links a:any-link::after {
+  content: '';
+  flex: 0 0 26px;
+  width: 26px;
+  height: 12px;
+  background-color: currentcolor;
+  mask: var(--accordion-media-icon-chev) center / 24px 24px no-repeat;
+}
+
+.accordion-media .accordion-media-links a:hover {
+  text-decoration: underline;
+}
+
+/* intro heading (source .accordionhead h2/h4: text-large 40/44, 32/36 on mobile) */
+.accordion-media .accordion-media-intro > :first-child {
+  margin-top: 0;
+}
+
+.accordion-media .accordion-media-intro :is(h2, h3, h4),
+.accordion-media .accordion-media-group :is(h2, h3, h4) {
+  margin: 0 0 30px;
+  color: inherit;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 600;
+  line-height: var(--heading-line-height-xl);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+.accordion-media .accordion-media-intro p {
+  margin: 0 0 20px;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* items: source li padding 30px 0 (2px top on the first), rule below all but the last */
+.accordion-media .accordion-media-item {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--accordion-media-rule);
+}
+
+.accordion-media .accordion-media-list > .accordion-media-item:last-child {
+  border-bottom: 0;
+}
+
+.accordion-media .accordion-media-list > .accordion-media-item:first-child {
+  padding-top: 2px;
+}
+
+/* summary: source header > a.flex-center.jc-space-between, 35px tall (chevron box) */
+.accordion-media .accordion-media-item-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 35px;
+  color: inherit;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-media .accordion-media-item-label::-webkit-details-marker {
+  display: none;
+}
+
+/* chevron: source svg 12x7 (stroke 2) inside a 35x35 box with 12px padding */
+.accordion-media .accordion-media-item-label::after {
+  content: '';
+  flex: 0 0 35px;
+  width: 35px;
+  height: 35px;
+  margin-left: auto;
+  background-color: currentcolor;
+  mask: var(--accordion-media-chevron) center / 12px 7px no-repeat;
+  transition: transform 0.3s;
+}
+
+.accordion-media .accordion-media-item[open] > .accordion-media-item-label::after {
+  transform: rotate(180deg);
+}
+
+.accordion-media .accordion-media-item-label:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.accordion-media .accordion-media-item-icon {
+  display: inline-flex;
+  flex: 0 0 var(--accordion-media-icon-size);
+  width: var(--accordion-media-icon-size);
+  height: var(--accordion-media-icon-size);
+}
+
+.accordion-media .accordion-media-item-icon picture {
+  display: contents;
+}
+
+.accordion-media .accordion-media-item-icon img,
+.accordion-media .accordion-media-item-icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* title: default (and dark / light-2) source h3.drawer-header 18px / 500 / 21.6px */
+.accordion-media .accordion-media-item-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+}
+
+.accordion-media .accordion-media-item-title > * {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+/* bold titles: source h3/h5 Graphik-Bold 24px / 28.8px, 18px on mobile */
+.accordion-media.light .accordion-media-item-title,
+.accordion-media.link-list .accordion-media-item-title,
+.accordion-media.image-light .accordion-media-item-title,
+.accordion-media.checklist .accordion-media-item-title {
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+/* panel: source .detail-div padding-top 20px + .m-y-10 inner margins */
+.accordion-media .accordion-media-item-body {
+  padding: 30px 0 10px;
+}
+
+.accordion-media .accordion-media-item-body p,
+.accordion-media .accordion-media-item-body ul,
+.accordion-media .accordion-media-item-body ol {
+  margin: 0 0 20px;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.accordion-media .accordion-media-item-body > :last-child:not(p, ul, ol) {
+  margin-bottom: 0;
+}
+
+.accordion-media .accordion-media-item-body a:any-link:not(.button) {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.accordion-media .accordion-media-item-body a:hover:not(.button) {
+  text-decoration: none;
+}
+
+.accordion-media .accordion-media-item-body .button-wrapper {
+  margin: 0 0 20px;
+}
+
+/* check / icon list items (source .hrb-icon-link--check, 35px text indent) */
+.accordion-media p.accordion-media-check {
+  position: relative;
+  padding-left: 35px;
+}
+
+.accordion-media p.accordion-media-check:not(:has(.accordion-media-check-icon))::before {
+  content: '';
+  position: absolute;
+  top: calc((1lh - 12px) / 2);
+  left: 2px;
+  width: 16px;
+  height: 12px;
+  background-color: currentcolor;
+  mask: var(--accordion-media-check) center / contain no-repeat;
+}
+
+.accordion-media .accordion-media-check-icon {
+  position: absolute;
+  top: calc((1lh - 20px) / 2);
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.accordion-media .accordion-media-check-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.accordion-media .accordion-media-intro p.accordion-media-check {
+  font-weight: 500;
+}
+
+/* footer link (source "See all our guarantees" 18px / 500 with a trailing chevron) */
+.accordion-media .accordion-media-footer {
+  margin-top: 40px;
+}
+
+.accordion-media .accordion-media-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accordion-media .accordion-media-footer p,
+.accordion-media .accordion-media-footer li {
+  margin: 0 0 20px;
+}
+
+.accordion-media .accordion-media-footer a:any-link:not(.button) {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-decoration: none;
+}
+
+.accordion-media .accordion-media-footer a:any-link:not(.button)::after {
+  content: '';
+  width: 7px;
+  height: 12px;
+  background-color: currentcolor;
+  mask: var(--accordion-media-arrow) center / contain no-repeat;
+}
+
+.accordion-media .accordion-media-footer a:hover:not(.button) {
+  text-decoration: underline;
+}
+
+/* default variant: standalone panel links render as outline CTAs (source btn--transparent) */
+.accordion-media:not(.light, .light-2, .dark, .link-list, .image-light, .checklist)
+  .accordion-media-item-body .accordion-media-cta a:any-link {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: min(var(--button-min-width), 100%);
+  max-width: 100%;
+  min-height: var(--button-height);
+  border: var(--button-border-width) solid var(--button-secondary-color);
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
+  color: var(--button-secondary-color);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  letter-spacing: var(--button-letter-spacing);
+  text-decoration: none;
+  transition: var(--button-transition);
+}
+
+.accordion-media:not(.light, .light-2, .dark, .link-list, .image-light, .checklist)
+  .accordion-media-item-body .accordion-media-cta a:is(:hover, :focus-visible) {
+  border-color: transparent;
+  background-color: var(--button-secondary-hover-background-color);
+  color: var(--button-secondary-hover-text-color);
+}
+
+/* light-2: standalone panel links are neon text links (source 18px / 500, no underline) */
+.accordion-media.light-2 .accordion-media-item-body .accordion-media-cta a:any-link {
+  color: var(--accordion-media-cta);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-decoration: none;
+}
+
+.accordion-media.light-2 .accordion-media-item-body .accordion-media-cta a:hover {
+  text-decoration: underline;
+}
+
+/* group headings between items (e.g. a second list heading); each group ends without a rule */
+.accordion-media .accordion-media-group {
+  padding-top: 40px;
+}
+
+.accordion-media .accordion-media-list > .accordion-media-item:has(+ .accordion-media-group) {
+  border-bottom: 0;
+}
+
+.accordion-media .accordion-media-list > .accordion-media-group + .accordion-media-item {
+  padding-top: 2px;
+}
+
+.accordion-media .accordion-media-group > :last-child {
+  margin-bottom: 30px;
+}
+
+/* checklist: lists in item bodies show check markers */
+.accordion-media.checklist .accordion-media-item-body ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.accordion-media.checklist .accordion-media-item-body li {
+  position: relative;
+  padding-left: 35px;
+}
+
+.accordion-media.checklist .accordion-media-item-body li + li {
+  margin-top: 20px;
+}
+
+.accordion-media.checklist .accordion-media-item-body li::before {
+  content: '';
+  position: absolute;
+  top: calc((1lh - 12px) / 2);
+  left: 2px;
+  width: 16px;
+  height: 12px;
+  background-color: currentcolor;
+  mask: var(--accordion-media-check) center / contain no-repeat;
+}
+
+/* media */
+.accordion-media .accordion-media-media {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* flex child needs a width, or the max-width:100% image collapses to 0x0 */
+.accordion-media .accordion-media-media-item {
+  width: 100%;
+}
+
+.accordion-media .accordion-media-media-item[hidden] {
+  display: none;
+}
+
+.accordion-media .accordion-media-media-item :is(p, picture) {
+  margin: 0;
+}
+
+.accordion-media .accordion-media-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+/* light: intro heading 20px below (10px on mobile) */
+.accordion-media.light .accordion-media-intro :is(h2, h3, h4) {
+  margin-bottom: 10px;
+}
+
+/* image-light: smaller intro heading (source h2 32/36) with a 50px lead to the list */
+.accordion-media.image-light .accordion-media-intro :is(h2, h3, h4) {
+  margin-bottom: 50px;
+  font-size: var(--heading-font-size-l);
+  line-height: var(--heading-line-height-l);
+  letter-spacing: var(--heading-letter-spacing-l);
+}
+
+@media (width >= 900px) {
+  .accordion-media.accordion-media-has-media {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 72px;
+  }
+
+  /* default and light-2: media on the left, accordion on the right */
+  .accordion-media.accordion-media-has-media:not(.dark, .image-light, .checklist, .link-list)
+    .accordion-media-media {
+    order: -1;
+  }
+
+  .accordion-media.light .accordion-media-intro :is(h2, h3, h4) {
+    margin-bottom: 20px;
+  }
+
+  /* dark: accordion column starts 40px down (source .accordian-section > div padding-top) */
+  .accordion-media.dark .accordion-media-content {
+    padding-top: 40px;
+  }
+
+  .accordion-media.light-2 .accordion-media-content {
+    padding-top: 20px;
+  }
+
+  /* split row: intro and links side by side, links inset 110px (source 720px columns) */
+  .accordion-media.accordion-media-split .accordion-media-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .accordion-media.accordion-media-split .accordion-media-intro {
+    padding: 60px 60px 60px 0;
+  }
+
+  .accordion-media.accordion-media-split .accordion-media-links {
+    padding: 0 70px 0 110px;
+  }
+
+  /* link-list: items flow into two columns (source two accordions, 72px apart) */
+  .accordion-media.link-list .accordion-media-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 72px;
+    align-items: start;
+  }
+
+  .accordion-media.link-list .accordion-media-group {
+    grid-column: 1 / -1;
+  }
+
+  .accordion-media.link-list .accordion-media-item:nth-child(-n + 2 of .accordion-media-item),
+  .accordion-media.link-list .accordion-media-group + .accordion-media-item + .accordion-media-item {
+    padding-top: 2px;
+  }
+
+  /* the last row of each group has no rule */
+  .accordion-media.link-list .accordion-media-item:nth-last-child(2 of .accordion-media-item):nth-child(odd of .accordion-media-item),
+  .accordion-media.link-list .accordion-media-item:has(+ .accordion-media-item + .accordion-media-group):nth-child(odd of .accordion-media-item) {
+    border-bottom: 0;
+  }
+}

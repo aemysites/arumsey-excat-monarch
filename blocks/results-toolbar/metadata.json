@@ -1,0 +1,22 @@
+{
+  "variantName": "results-toolbar",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + link",
+    "purpose": "Toolbar above a listing: result count, sort select and reset-filters link"
+  },
+  "contentPattern": {
+    "structure": "One row: result count text (e.g. 29 results) | list of sort options (linked items navigate; plain items set ?sort= and fire results-toolbar:sort) | reset link (e.g. Reset Filters). Any cell may be omitted"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_e407efd17034"
+  ],
+  "usage": "Resource-center listing pages (11 pages).",
+  "reuseGuidance": "Reuse for the same content pattern; background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black)."
+}

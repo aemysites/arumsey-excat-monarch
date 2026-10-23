@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/income/retirement/can-i-transfer-my-401k-to-an-international-retirement-plan-if-i-move-abroad/",
+  "path": "expat-tax-preparation/resource-center/income/retirement/can-i-transfer-my-401k-to-an-international-retirement-plan-if-i-move-abroad",
+  "timestamp": "2026-10-22T20:57:17.911Z",
+  "title": "Can I transfer my 401(k) to an international retirement plan if I move abroad? | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body",
+    "cards-article"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

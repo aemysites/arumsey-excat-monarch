@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-offices/virtual-tax-preparation/",
+  "path": "tax-offices/virtual-tax-preparation",
+  "timestamp": "2026-10-22T20:29:39.372Z",
+  "title": "Virtual & Remote Tax Preparation Services | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "table-data",
+    "accordion-media",
+    "cards-product",
+    "cards-feature",
+    "promo-strip",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/guarantees-cards-forest"
+  ],
+  "importScript": "cc79b2fd70c8"
+}

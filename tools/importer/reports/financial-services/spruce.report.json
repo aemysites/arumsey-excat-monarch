@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/financial-services/spruce/",
+  "path": "financial-services/spruce",
+  "timestamp": "2026-10-22T18:17:52.077Z",
+  "title": "Spruce Mobile Banking - Get Better with Money | H&R Block®",
+  "template": "homepage-landing",
+  "blocks": [
+    "hero-banner",
+    "hero-split",
+    "accordion-faq",
+    "promo-strip",
+    "cards-icon",
+    "cards-icon",
+    "cards-feature",
+    "cards-feature"
+  ],
+  "importScript": "9a012240aa11"
+}

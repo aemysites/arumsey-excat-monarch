@@ -1,0 +1,50 @@
+{
+  "variantName": "promo-strip",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link",
+    "purpose": "Horizontal promotional strip: icon or image, heading, short text and a link or button"
+  },
+  "contentPattern": {
+    "structure": "One row; cells in order: icon/image (optional) | heading (or bold text) | text (optional) | link or button (optional). Cells are classified by content so any may be omitted"
+  },
+  "options": [
+    {
+      "class": "alt",
+      "label": "Alt"
+    },
+    {
+      "class": "dark",
+      "label": "Dark"
+    },
+    {
+      "class": "yellow",
+      "label": "Yellow"
+    },
+    {
+      "class": "light",
+      "label": "Light"
+    }
+  ],
+  "memberVariantIds": [
+    "v_9bb910e3643f",
+    "v_a0f4a8aac72f",
+    "v_7a535d3f6e12",
+    "v_014e22fcf5e5",
+    "v_c4cda0002808",
+    "v_04dbc6272222",
+    "v_227abc3427fc",
+    "v_61d43b02c70a",
+    "v_83ec3554664e",
+    "v_a117e10eb808",
+    "v_d6cf428df319",
+    "v_f2ab48e46ae3"
+  ],
+  "usage": "Cross-sell and support strips between sections (40+ pages). Background colour comes from section metadata Style, not the block.",
+  "reuseGuidance": "Reuse for the same content pattern; background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black)."
+}

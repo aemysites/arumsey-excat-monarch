@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/status/thinking-about-renouncing-your-u-s-citizenship-or-green-card-beware-of-the-exit-tax/",
+  "path": "expat-tax-preparation/resource-center/filing/status/thinking-about-renouncing-your-u-s-citizenship-or-green-card-beware-of-the-exit-tax",
+  "timestamp": "2026-10-22T20:47:23.420Z",
+  "title": "Thinking about renouncing your U.S. citizenship or Green Card? Beware of the exit tax. | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file",
+    "fragments/expat-recommended-state-taxes"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

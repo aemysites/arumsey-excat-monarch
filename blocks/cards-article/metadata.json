@@ -1,0 +1,35 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "link + image + heading",
+    "purpose": "Article/resource teaser grid: image, category eyebrow and linked title, with optional summary and button"
+  },
+  "contentPattern": {
+    "structure": "image cell (optional) | body cell with optional category paragraph before the heading (eyebrow), the article title as a heading (usually linked), optional summary text and an optional final button paragraph (pinned to the card bottom). A card without a heading uses its link as the title (country-grid)",
+    "rows": "one row per article card",
+    "cells": ["image (optional)", "body"]
+  },
+  "options": [
+    { "class": "country-grid", "label": "Country Grid" },
+    { "class": "with-button", "label": "With Button" },
+    { "class": "image", "label": "Image" },
+    { "class": "with-button-2", "label": "With Button 2" },
+    { "class": "green-light", "label": "Green Light" }
+  ],
+  "memberVariantIds": [
+    "v_7b405275c780",
+    "v_b183ecee1a7b",
+    "v_68174d94f7df",
+    "v_3e491d1814bc",
+    "v_6f837b9c1e03",
+    "v_99a3c3b21a00"
+  ],
+  "usage": "Default: unboxed article teasers (rounded image, category eyebrow, linked title) in a 3-column grid. country-grid: small round flag icon above a centred country link, 5 columns. with-button / with-button-2: boxed cards with image, title, summary and a full-width 'Read more' button pinned to the bottom (with-button-2 tolerates cards without an image). image: image-led teaser with a wider image. green-light: centred boxed cards alternating light and dark surfaces, with a tag-style eyebrow. Section background comes from section metadata Style, not a block class.",
+  "reuseGuidance": "Reuse for related-article, resource and blog listings. Use cards-feature for product/feature promos and cards-icon for icon-led feature lists."
+}

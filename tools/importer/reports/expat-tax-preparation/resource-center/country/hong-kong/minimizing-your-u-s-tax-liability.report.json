@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/hong-kong/minimizing-your-u-s-tax-liability/",
+  "path": "expat-tax-preparation/resource-center/country/hong-kong/minimizing-your-u-s-tax-liability",
+  "timestamp": "2026-10-22T20:36:15.707Z",
+  "title": "Minimizing Your U.S. Tax Liability | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file",
+    "fragments/expat-recommended-feie"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/taxes/products/software/updates/23mac-state/",
+  "path": "taxes/products/software/updates/23mac-state",
+  "timestamp": "2026-10-22T22:03:43.356Z",
+  "title": "Download 2023 State Updates for Mac | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "software-download"
+  ],
+  "importScript": "d4c454421d77"
+}

@@ -1,0 +1,173 @@
+/*
+ * columns-callout
+ * Values from source computed styles (hrblock.com past-taxes, section.two-column-control
+ * > article.card-stacked). Text outside the panel inherits the section foreground; the
+ * panel is always a light (eggshell) surface with dark text.
+ */
+.columns-callout > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-block-spacing);
+}
+
+.columns-callout > div > div {
+  min-width: 0;
+}
+
+.columns-callout > div > div > :last-child {
+  margin-bottom: 0;
+}
+
+.columns-callout img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* icon items (source span.hrb-icon-link--check-green: 35px text indent, 600 weight,
+   30x30 icon drawn at -5px -3px so the glyph sits ~20px wide beside the text) */
+.columns-callout p.columns-callout-icon-item {
+  position: relative;
+  padding-left: 35px;
+  font-weight: 600;
+}
+
+.columns-callout .columns-callout-icon {
+  position: absolute;
+  top: -3px;
+  left: -5px;
+  width: 30px;
+  height: 30px;
+}
+
+.columns-callout .columns-callout-icon img,
+.columns-callout img.columns-callout-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* option: with-image - source hides the photo column below desktop (hide-medium hide-small) */
+.columns-callout.with-image .columns-callout-img-col {
+  display: none;
+}
+
+/* callout panel (source article.card-stacked) */
+.columns-callout .columns-callout-panel {
+  /* the panel is a light surface: restore light-surface CTA colours inside dark sections */
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-forest);
+  --button-primary-text-color: var(--color-white);
+  --button-secondary-color: var(--color-green);
+  --button-secondary-hover-background-color: var(--color-forest);
+  --button-secondary-hover-text-color: var(--color-white);
+
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: var(--radius-m);
+  background-color: var(--light-color);
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+.columns-callout .columns-callout-panel a:any-link:not(.button) {
+  color: var(--link-color);
+}
+
+.columns-callout .columns-callout-panel > :first-child {
+  margin-top: 0;
+}
+
+.columns-callout .columns-callout-panel > :last-child {
+  margin-bottom: 0;
+}
+
+/* panel heading: source text-medium, 24/28 mobile, 32/36 desktop (heading-l scale) */
+.columns-callout .columns-callout-panel :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 var(--content-block-spacing);
+  color: inherit;
+  font-size: var(--heading-font-size-l);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-l);
+  letter-spacing: var(--heading-letter-spacing-l);
+}
+
+.columns-callout .columns-callout-panel p {
+  margin: 0 0 var(--content-block-spacing);
+}
+
+.columns-callout .columns-callout-panel strong {
+  font-weight: 600;
+}
+
+/* divider before the footnote (source hr: 1px inset grey, 0.5em vertical margin) */
+.columns-callout .columns-callout-panel hr {
+  height: 0;
+  margin: 0.5em 0;
+  border: 1px inset rgb(128 128 128);
+}
+
+/* check list (source ul.custom_li_rte > span.hrb-icon-link--check): 45px item pitch */
+.columns-callout .columns-callout-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  margin: 0 0 21px;
+  padding: 0;
+  list-style: none;
+}
+
+.columns-callout .columns-callout-checklist:last-child {
+  margin-bottom: 0;
+}
+
+.columns-callout .columns-callout-checklist > li {
+  position: relative;
+  padding-left: 35px;
+  font-weight: 600;
+}
+
+.columns-callout .columns-callout-checklist > li::before {
+  content: '';
+  position: absolute;
+  top: calc(0.75em - 15px);
+  left: -5px;
+  width: 30px;
+  height: 30px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpolygon points='12.98 17.73 8.73 13.49 7.32 14.9 12.98 20.56 22.68 10.85 21.27 9.44 12.98 17.73'/%3E%3C/svg%3E") center / 30px 30px no-repeat;
+}
+
+@media (width >= 768px) {
+  /* body copy steps to 18/27 here, so 18px keeps the 45px item pitch */
+  .columns-callout .columns-callout-checklist {
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (width >= 900px) {
+  /* source: equal columns, vertically centred, panel inset 36px from the text column */
+  .columns-callout > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .columns-callout > div > div {
+    flex: 1 1 50%;
+  }
+
+  /* option: with-image - the photo asset carries its own white gutter, so no column gap */
+  .columns-callout.with-image > div {
+    gap: 0;
+  }
+
+  .columns-callout.with-image .columns-callout-img-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+}

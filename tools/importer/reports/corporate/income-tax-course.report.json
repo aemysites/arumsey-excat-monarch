@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/corporate/income-tax-course/",
+  "path": "corporate/income-tax-course",
+  "timestamp": "2026-10-22T18:21:52.330Z",
+  "title": "Online Income Tax Preparation Course | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "cards-icon",
+    "hero-split",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "d4c454421d77"
+}

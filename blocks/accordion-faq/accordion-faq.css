@@ -1,0 +1,207 @@
+/*
+ * accordion-faq
+ * Values from source computed styles (hrblock.com section.faq, .accordion, .accordion__btn).
+ * Mobile is the base; desktop sizes apply from the source breakpoint (768px).
+ * Background comes from the section style; this block only sets foreground colours.
+ */
+.accordion-faq {
+  --accordion-faq-text: var(--text-color);
+  --accordion-faq-heading: var(--text-color);
+  --accordion-faq-active: var(--color-green); /* rgb(0 93 31) button hover/expanded */
+  --accordion-faq-link: var(--link-color); /* rgb(0 93 31) answer links, no underline */
+  --accordion-faq-rule: #9fa4aa; /* rgb(159 164 170) item top border */
+  --accordion-faq-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.3 9.3C7.7 8.9 8.2 8.9 8.6 9.2L8.7 9.3 12 12.6 15.3 9.3C15.7 8.9 16.2 8.9 16.6 9.2L16.7 9.3C17.1 9.7 17.1 10.2 16.8 10.6L16.7 10.7 12.7 14.7C12.3 15.1 11.8 15.1 11.4 14.8L11.3 14.7 7.3 10.7C6.9 10.3 6.9 9.7 7.3 9.3Z'/%3E%3C/svg%3E");
+
+  max-width: 760px;
+  margin-inline: auto;
+  color: var(--accordion-faq-text);
+}
+
+/* light-on-dark sections: section sets the background, block switches to on-dark tokens */
+main > .section.green .accordion-faq,
+main > .section.bright-green .accordion-faq,
+main > .section.forest .accordion-faq,
+main > .section.charcoal .accordion-faq,
+main > .section.black .accordion-faq {
+  --accordion-faq-text: var(--on-dark-text-color);
+  --accordion-faq-heading: var(--on-dark-heading-color);
+  --accordion-faq-active: var(--on-dark-link-hover-color);
+  --accordion-faq-link: var(--on-dark-link-color);
+  --accordion-faq-rule: color-mix(in srgb, var(--on-dark-text-color) 50%, transparent);
+}
+
+/* intro (heading row): source .content-wrap padding 60px 0, h2 padding-top 10px (mobile);
+   desktop .content-wrap padding 60px keeps the title inside a 640px measure */
+.accordion-faq .accordion-faq-intro {
+  padding: 30px 0 60px;
+  text-align: center;
+}
+
+.accordion-faq .accordion-faq-intro h2 {
+  margin: 0 0 15px;
+  color: var(--accordion-faq-heading);
+  font-size: var(--heading-font-size-xxl);
+  line-height: var(--heading-line-height-xxl);
+  letter-spacing: var(--heading-letter-spacing-xxl);
+}
+
+.accordion-faq .accordion-faq-intro p {
+  margin: 0 0 20px;
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+}
+
+/* source follows the h2 (margin-bottom 15px) with an empty p whose 20px margin
+   collapses through it; reproduce the 20px gap when the h2 is the last child */
+.accordion-faq .accordion-faq-intro:has(> h2:last-child) {
+  padding-bottom: 65px;
+}
+
+/* light-2: no visible heading; source keeps a 140px lead-in above the first rule */
+.accordion-faq.light-2 .accordion-faq-list:first-child {
+  padding-top: 100px;
+}
+
+/* items */
+.accordion-faq .accordion-faq-item {
+  border-top: 1px solid var(--accordion-faq-rule);
+}
+
+.accordion-faq .accordion-faq-item-label {
+  position: relative;
+  display: block;
+  padding: 22px 50px 22px 0;
+  color: var(--accordion-faq-text);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.5s;
+}
+
+.accordion-faq .accordion-faq-item-label:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* question heading (source h3 > button.accordion__btn): the h3 adds no styling of its own */
+.accordion-faq .accordion-faq-item-title {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.accordion-faq .accordion-faq-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-faq .accordion-faq-item-label:hover,
+.accordion-faq .accordion-faq-item[open] > .accordion-faq-item-label {
+  color: var(--accordion-faq-active);
+}
+
+/* chevron: source span.icon-svg 32x32 (mobile) holding a 24x24 svg, absolute right 15px */
+.accordion-faq .accordion-faq-item-label::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  background-color: var(--accordion-faq-text);
+  mask: var(--accordion-faq-chevron) center / 24px 24px no-repeat;
+  transition: transform 0.5s;
+}
+
+.accordion-faq .accordion-faq-item[open] > .accordion-faq-item-label::after {
+  transform: rotate(180deg);
+}
+
+/* answer panel */
+.accordion-faq .accordion-faq-item-body {
+  padding: 0 40px 40px 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.accordion-faq .accordion-faq-item-body p {
+  margin: 2.5px 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* source separates answer paragraphs with a blank line (<br>) */
+.accordion-faq .accordion-faq-item-body p + p {
+  margin-top: 1.5em;
+}
+
+.accordion-faq .accordion-faq-item-body ul,
+.accordion-faq .accordion-faq-item-body ol {
+  margin: 1em 0 0;
+  padding: 0 0 0 40px;
+}
+
+.accordion-faq .accordion-faq-item-body li {
+  line-height: inherit;
+}
+
+.accordion-faq .accordion-faq-item-body a:any-link {
+  color: var(--accordion-faq-link);
+  text-decoration: none;
+}
+
+.accordion-faq .accordion-faq-item-body a:hover {
+  color: var(--accordion-faq-active);
+  text-decoration: underline;
+}
+
+.accordion-faq .accordion-faq-item-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* inline link icon (source span.hrb-icon-link--check-green: 30px icon at -5px -3px, text at 35px) */
+.accordion-faq .accordion-faq-item-body a img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: -3px 10px 0 -5px;
+  vertical-align: top;
+}
+
+@media (width >= 768px) {
+  .accordion-faq {
+    padding-bottom: 50px;
+  }
+
+  .accordion-faq .accordion-faq-intro {
+    padding: 60px;
+  }
+
+  .accordion-faq .accordion-faq-intro:has(> h2:last-child) {
+    padding-bottom: 65px;
+  }
+
+  .accordion-faq.light-2 .accordion-faq-list:first-child {
+    padding-top: 80px;
+  }
+
+  .accordion-faq .accordion-faq-item-label {
+    padding: 35px 50px 35px 0;
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  .accordion-faq .accordion-faq-item-label::after {
+    top: 30px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .accordion-faq .accordion-faq-item-body {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

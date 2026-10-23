@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/universal/faqs/",
+  "path": "universal/faqs",
+  "timestamp": "2026-10-22T19:49:32.664Z",
+  "title": "Filing Taxes FAQs | H&R Block®",
+  "template": "info-photo-hero",
+  "blocks": [
+    "accordion-faq"
+  ],
+  "importScript": "c48ce518734c"
+}

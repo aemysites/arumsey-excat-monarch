@@ -1,0 +1,22 @@
+{
+  "variantName": "columns-stats",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "stats layout: a feature panel (photo + large figure such as \"20 million+\" and caption) beside a column of illustrated stat items"
+  },
+  "contentPattern": {
+    "structure": "one row, two cells: cell 1 = one photo plus figure text (heading or bold paragraph starting with a number) and caption; cell 2 = items each starting with an icon/illustration followed by figure and caption text"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_cf1ee5bfe8db"
+  ],
+  "usage": "Trust/stat strips on office location and service pages.",
+  "reuseGuidance": "Use for numeric proof points with imagery. Plain text stats can use columns."
+}

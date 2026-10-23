@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/state-taxes-for-expats/",
+  "path": "expat-tax-preparation/state-taxes-for-expats",
+  "timestamp": "2026-10-23T02:31:24.129Z",
+  "title": "State Taxes for Expats | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "accordion-faq",
+    "columns-callout",
+    "cards-product",
+    "columns-banner"
+  ],
+  "importScript": "5f7b656097fe"
+}

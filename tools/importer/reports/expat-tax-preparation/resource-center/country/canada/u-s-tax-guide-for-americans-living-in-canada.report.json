@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/canada/u-s-tax-guide-for-americans-living-in-canada/",
+  "path": "expat-tax-preparation/resource-center/country/canada/u-s-tax-guide-for-americans-living-in-canada",
+  "timestamp": "2026-10-22T20:35:45.664Z",
+  "title": "U.S. Taxes for Americans Living in Canada | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body",
+    "cards-article"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

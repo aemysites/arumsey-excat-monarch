@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/reviews/",
+  "path": "reviews",
+  "timestamp": "2026-10-22T21:20:48.342Z",
+  "title": "H&R Block Reviews and Ratings | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "product-reviews",
+    "review-filter"
+  ],
+  "importScript": "d4c454421d77"
+}

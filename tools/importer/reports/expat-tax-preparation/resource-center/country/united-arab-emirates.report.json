@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/united-arab-emirates/",
+  "path": "expat-tax-preparation/resource-center/country/united-arab-emirates",
+  "timestamp": "2026-10-22T18:34:17.794Z",
+  "title": "Taxes for U.S. Expats in UAE | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "breadcrumb",
+    "hero-resource",
+    "cards-feature",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-steps-to-prep",
+    "fragments/expat-testimonials"
+  ],
+  "importScript": "d4c454421d77"
+}

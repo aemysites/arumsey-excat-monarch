@@ -1,0 +1,22 @@
+{
+  "variantName": "search-articles",
+  "baseBlock": "search",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "field + link + text",
+    "purpose": "Search field for resource-center articles"
+  },
+  "contentPattern": {
+    "structure": "Rows (all optional): a text row with the field label/placeholder; a link to the results page (the form submits there with ?q=); a link to a .json query index (default /query-index.json). Without a results-page link, or on the results page itself, matching articles render inline"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_f7d3a3ab4d42"
+  ],
+  "usage": "Expat resource-center landing, category and search results pages.",
+  "reuseGuidance": "Place on the results page with no results link (or a link to itself) to show inline results; elsewhere link to the results page."
+}

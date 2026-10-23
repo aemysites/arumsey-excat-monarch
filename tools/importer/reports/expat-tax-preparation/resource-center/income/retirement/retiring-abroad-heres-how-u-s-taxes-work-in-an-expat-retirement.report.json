@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/income/retirement/retiring-abroad-heres-how-u-s-taxes-work-in-an-expat-retirement/",
+  "path": "expat-tax-preparation/resource-center/income/retirement/retiring-abroad-heres-how-u-s-taxes-work-in-an-expat-retirement",
+  "timestamp": "2026-10-22T20:58:39.794Z",
+  "title": "Retiring abroad? Here’s how U.S. taxes work in an expat retirement | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body",
+    "cards-article"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

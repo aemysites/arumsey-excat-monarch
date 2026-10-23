@@ -1,0 +1,578 @@
+/* hero-banner: full-width photo or illustration with overlaid content
+   (source: figure.hero-wrapper / section.teaser / .fb-image-wrapper) */
+.hero-banner-wrapper:has(.hero-banner) {
+  max-width: unset;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* background and content share one grid cell: the block is as tall as the
+   larger of the photo (natural aspect) and the content */
+.hero-banner {
+  --hero-banner-scrim: transparent;
+  --hero-banner-pad-block: 100px 40px;
+  --hero-banner-pad-inline: 20px;
+  --hero-banner-text-width: 620px;
+
+  position: relative;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-banner > .hero-banner-background,
+.hero-banner > .hero-banner-content {
+  grid-area: 1 / 1;
+}
+
+/* photo variants: light text and neon CTAs on the image whatever the section
+   (source .spruce-forest-theme / .color-eggshell / .btn--hrb--neon) */
+.hero-banner:not(.alt, .image-only, .no-background, .is-light) {
+  --button-primary-background-color: var(--on-dark-button-background-color);
+  --button-primary-hover-background-color: var(--on-dark-button-hover-background-color);
+  --button-primary-text-color: var(--on-dark-button-text-color);
+  --button-secondary-color: var(--on-dark-button-background-color);
+  --button-secondary-hover-background-color: var(--on-dark-button-hover-background-color);
+  --button-secondary-hover-text-color: var(--on-dark-button-text-color);
+
+  color: var(--on-dark-text-color);
+}
+
+.hero-banner:not(.alt, .image-only, .no-background, .is-light) a:any-link:not(.button) {
+  color: var(--on-dark-link-color);
+}
+
+.hero-banner:not(.alt, .image-only, .no-background, .is-light) a:hover:not(.button) {
+  color: var(--on-dark-link-hover-color);
+}
+
+/* light photo (set by JS from the image): dark text and the default dark-green
+   CTAs whatever the section (source W-4 marquee: rgb(0 53 18) text, .btn--medium-dark-green) */
+.hero-banner.is-light {
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-black);
+  --button-primary-text-color: var(--color-white);
+  --button-secondary-color: var(--color-green);
+  --button-secondary-hover-background-color: var(--color-forest);
+  --button-secondary-hover-text-color: var(--color-white);
+
+  color: var(--dark-color);
+}
+
+.hero-banner.is-light a:any-link:not(.button) {
+  color: inherit;
+}
+
+.hero-banner h1,
+.hero-banner h2,
+.hero-banner h3,
+.hero-banner h4,
+.hero-banner h5,
+.hero-banner h6,
+.hero-banner p {
+  color: inherit;
+}
+
+/* background */
+.hero-banner .hero-banner-background {
+  position: relative;
+  z-index: -1;
+}
+
+.hero-banner .hero-banner-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--hero-banner-scrim);
+}
+
+.hero-banner .hero-banner-background picture {
+  display: block;
+  height: 100%;
+}
+
+.hero-banner .hero-banner-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* content */
+.hero-banner .hero-banner-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding-block: var(--hero-banner-pad-block);
+  padding-inline: var(--hero-banner-pad-inline);
+}
+
+.hero-banner .hero-banner-content > * {
+  max-width: var(--hero-banner-text-width);
+  margin: 0 0 20px;
+}
+
+.hero-banner .hero-banner-content > :last-child {
+  margin-bottom: 0;
+}
+
+.hero-banner .hero-banner-content :is(h1, h2, h3) {
+  font-size: var(--heading-font-size-xl);
+  line-height: var(--heading-line-height-xl);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+.hero-banner .hero-banner-content > p {
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+/* eyebrow chip (source h3.eyebrow-label.spruce-forest-theme) */
+.hero-banner .hero-banner-content > .hero-banner-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px 0 20px;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: var(--dark-color);
+  color: var(--on-dark-text-color);
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  line-height: var(--eyebrow-line-height);
+  letter-spacing: var(--eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+
+/* CTAs (source .btn-container: margin 40px 0 20px, buttons 20px apart) */
+.hero-banner .hero-banner-content > .hero-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: stretch;
+  align-items: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.hero-banner .hero-banner-content > :has(+ .hero-banner-actions) {
+  margin-bottom: 0;
+}
+
+.hero-banner .hero-banner-actions .button-wrapper {
+  margin: 0;
+}
+
+/* foreground cut-out (desktop only) */
+.hero-banner .hero-banner-foreground {
+  display: none;
+}
+
+.hero-banner .hero-banner-foreground picture,
+.hero-banner .hero-banner-foreground img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* no background: content sits on the section colour */
+.hero-banner.no-background .hero-banner-content {
+  padding-block: 40px;
+}
+
+/* dark: quote over a dark photo (source .hero-wrapper testimonial) */
+.hero-banner.dark {
+  --hero-banner-pad-block: 40px;
+  --hero-banner-pad-inline: 44.5px;
+  --hero-banner-text-width: 540px;
+}
+
+/* alt-2: marquee photo, content top-left (source introDefaultvariant over the
+   homepage / W-4 marquee). Dark photo: eggshell chip, 56/60 heading, neon CTA.
+   Light photo (.is-light): neon chip, 40/44 heading, dark-green CTA. */
+.hero-banner.alt-2 {
+  --hero-banner-pad-block: 40px 30px;
+  --hero-banner-pad-inline: 25px;
+  --hero-banner-text-width: 540px;
+}
+
+.hero-banner.alt-2.is-light {
+  --hero-banner-text-width: 650px;
+}
+
+.hero-banner.alt-2 .hero-banner-content {
+  align-self: start;
+}
+
+/* chip (source h2.eyebrow-label.spruce-eggshell-theme); its bottom margin
+   collapses into the heading's 0.67em in the source block flow */
+.hero-banner.alt-2 .hero-banner-content > .hero-banner-eyebrow {
+  margin: 10px 0 0;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+/* source h2.eyebrow-label.hrb-neon-green */
+.hero-banner.alt-2.is-light .hero-banner-content > .hero-banner-eyebrow {
+  background-color: var(--color-neon);
+  color: var(--color-forest);
+}
+
+/* source h1.text-jumbo 56/60 (UA 0.67em margins) */
+.hero-banner.alt-2 .hero-banner-content :is(h1, h2, h3) {
+  margin: 0.67em 0;
+  font-size: var(--heading-font-size-xxl);
+  line-height: var(--heading-line-height-xxl);
+  letter-spacing: var(--heading-letter-spacing-xxl);
+}
+
+/* source h1.text-large 40/44, 600px wide */
+.hero-banner.alt-2.is-light .hero-banner-content :is(h1, h2, h3) {
+  max-width: 600px;
+  font-size: var(--heading-font-size-xl);
+  line-height: var(--heading-line-height-xl);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+.hero-banner.alt-2 .hero-banner-actions .button-wrapper,
+.hero-banner.alt-2 .hero-banner-actions a.button {
+  width: 100%;
+}
+
+/* alt: centred content on the section colour between two illustrations
+   (source section.teaser) */
+.hero-banner.alt {
+  overflow: visible;
+}
+
+.hero-banner.alt .hero-banner-content {
+  align-items: center;
+  max-width: 734px;
+  margin: 0 auto;
+  padding: 160px 25px;
+  text-align: center;
+}
+
+.hero-banner.alt .hero-banner-content > * {
+  max-width: 100%;
+}
+
+.hero-banner.alt .hero-banner-content :is(h1, h2, h3) {
+  margin: 20px 5px;
+  font-size: var(--heading-font-size-xxl);
+  line-height: var(--heading-line-height-xxl);
+  letter-spacing: var(--heading-letter-spacing-xxl);
+}
+
+.hero-banner.alt .hero-banner-content > p:not(.hero-banner-eyebrow) {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.hero-banner.alt .hero-banner-actions {
+  justify-content: center;
+}
+
+.hero-banner.alt a:any-link:not(.button) {
+  color: inherit;
+}
+
+.hero-banner.alt .hero-banner-background,
+.hero-banner.alt .hero-banner-foreground {
+  position: static;
+  display: block;
+}
+
+.hero-banner.alt .hero-banner-background::after {
+  content: none;
+}
+
+.hero-banner.alt .hero-banner-background picture,
+.hero-banner.alt .hero-banner-foreground picture {
+  position: absolute;
+  z-index: -1;
+  width: 185px;
+  height: auto;
+}
+
+.hero-banner.alt .hero-banner-background img,
+.hero-banner.alt .hero-banner-foreground img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* mobile: first illustration overlaps the top edge, second the bottom-right */
+.hero-banner.alt .hero-banner-background picture {
+  top: -81px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-banner.alt .hero-banner-foreground picture {
+  right: 0;
+  bottom: -60px;
+}
+
+/* dark: a quote without a heading is set as the headline, the next line as attribution */
+.hero-banner.dark .hero-banner-content:not(:has(h1, h2, h3)) > p:first-child {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-xl);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+.hero-banner.dark .hero-banner-content:not(:has(h1, h2, h3)) > p:first-child + p {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: var(--heading-font-weight);
+  line-height: 28px;
+  letter-spacing: -0.34px;
+}
+
+/* image-only: image(s) in flow at natural aspect, side by side */
+.hero-banner.image-only {
+  display: block;
+}
+
+.hero-banner.image-only .hero-banner-background {
+  z-index: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner.image-only .hero-banner-background picture {
+  flex: 1 1 0;
+  min-width: 0;
+  height: auto;
+}
+
+.hero-banner.image-only .hero-banner-background img {
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-banner.image-only .hero-banner-content {
+  position: absolute;
+  inset: 0;
+  justify-content: center;
+}
+
+/* alt backdrop (set by JS): centred text over one full-width image
+   (source report hero figure.hero-wrapper: 1440x590 collage, 700px text column) */
+.hero-banner.alt.backdrop {
+  overflow: hidden;
+}
+
+.hero-banner.alt.backdrop .hero-banner-background {
+  position: relative;
+  z-index: -1;
+}
+
+.hero-banner.alt.backdrop .hero-banner-background picture {
+  position: static;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  transform: none;
+}
+
+.hero-banner.alt.backdrop .hero-banner-background img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-banner.alt.backdrop .hero-banner-content {
+  align-self: center;
+  max-width: 750px;
+  padding: 40px 25px;
+}
+
+/* source h2.eyebrow-label.spruce-eggshell-theme; the 20px bottom margin
+   collapses into the heading's 20px in the source block flow */
+.hero-banner.alt.backdrop .hero-banner-content > .hero-banner-eyebrow {
+  margin-bottom: 0;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.hero-banner.alt.backdrop .hero-banner-content > p:not(.hero-banner-eyebrow) {
+  max-width: 580px;
+}
+
+/* image-only promo with a CTA: centred 650px column in the clear middle of the
+   photo (source introImageVariant text-center) */
+.hero-banner.image-only .hero-banner-content:has(> .hero-banner-actions) {
+  --hero-banner-text-width: 650px;
+
+  align-items: center;
+  text-align: center;
+}
+
+.hero-banner.image-only .hero-banner-content:has(> .hero-banner-actions) > :is(h1, h2, h3) {
+  margin: 20px 0;
+}
+
+.hero-banner.image-only .hero-banner-content:has(> .hero-banner-actions) > .hero-banner-actions {
+  align-self: center;
+  justify-content: center;
+}
+
+/* arrow link beside the CTAs (source a.right-arrow: 18px 500, chevron) */
+.hero-banner .hero-banner-actions .hero-banner-link {
+  margin: 0;
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+/* stylelint-disable-next-line no-descending-specificity -- weight/decoration only; colour comes from the variant rules */
+main .hero-banner .hero-banner-link a:any-link {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+main .hero-banner .hero-banner-link a:any-link:hover {
+  text-decoration: underline;
+}
+
+.hero-banner .hero-banner-link a::after {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 12px;
+  vertical-align: middle;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M10.7 16.7c-.4.4-1 .4-1.4 0-.4-.4-.4-.9-.1-1.3l3.4-3.4-3.3-3.3c-.4-.4-.4-.9-.1-1.3.5-.5 1-.5 1.4-.2l4.1 4.1c.4.4.4.9.1 1.3l-4.1 4.1Z'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+}
+
+@media (width >= 900px) {
+  .hero-banner,
+  .hero-banner.dark,
+  .hero-banner.alt-2 {
+    --hero-banner-pad-inline: max(32px, calc((100% - 1200px) / 2));
+  }
+
+  .hero-banner {
+    --hero-banner-pad-block: 60px 0;
+  }
+
+  .hero-banner .hero-banner-actions .button-wrapper {
+    min-width: min(var(--button-min-width), 100%);
+  }
+
+  .hero-banner .hero-banner-foreground {
+    position: absolute;
+    top: 10%;
+    right: max(32px, calc((100% - 1200px) / 2));
+    bottom: 0;
+    display: block;
+    width: 30%;
+    max-width: 360px;
+  }
+
+  .hero-banner.dark {
+    --hero-banner-pad-block: 0;
+  }
+
+  .hero-banner.dark .hero-banner-content {
+    padding-left: calc(var(--hero-banner-pad-inline) + 120px);
+  }
+
+  /* source band padding 80/60 + content-wrap padding 60 */
+  .hero-banner.alt-2 {
+    --hero-banner-pad-block: 140px 120px;
+  }
+
+  /* source W-4 band padding 60/60, content at x=80 */
+  .hero-banner.alt-2.is-light {
+    --hero-banner-pad-block: 60px;
+    --hero-banner-pad-inline: 80px;
+  }
+
+  .hero-banner.alt-2 .hero-banner-content > .hero-banner-actions {
+    margin-bottom: 20px;
+  }
+
+  .hero-banner.alt-2 .hero-banner-actions .button-wrapper,
+  .hero-banner.alt-2 .hero-banner-actions a.button {
+    width: auto;
+  }
+
+  /* alt-2: foreground cut-out anchored bottom-right */
+  .hero-banner.alt-2 .hero-banner-foreground {
+    top: auto;
+    right: 20%;
+    width: 25%;
+  }
+
+  .hero-banner.alt .hero-banner-content {
+    padding: 120px 25px;
+  }
+
+  .hero-banner.alt .hero-banner-content :is(h1, h2, h3) {
+    margin: 20px 0;
+  }
+
+  .hero-banner.alt .hero-banner-content > p:not(.hero-banner-eyebrow) {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .hero-banner.alt .hero-banner-content > .hero-banner-actions:last-child {
+    margin-bottom: 0;
+  }
+
+  .hero-banner.alt .hero-banner-foreground {
+    position: static;
+    width: auto;
+    max-width: none;
+  }
+
+  .hero-banner.alt .hero-banner-background picture,
+  .hero-banner.alt .hero-banner-foreground picture {
+    top: 50%;
+    bottom: auto;
+    width: 240px;
+    max-width: 250px;
+    transform: translateY(-50%);
+  }
+
+  .hero-banner.alt .hero-banner-background picture {
+    left: 0;
+  }
+
+  .hero-banner.alt .hero-banner-foreground picture {
+    right: 0;
+  }
+
+  /* source .btn-wide report CTA */
+  main .hero-banner.alt.backdrop .hero-banner-actions a.button:any-link {
+    min-width: 260px;
+  }
+
+  /* source figcaption centring: content box 101px from the top, 121px from the bottom */
+  .hero-banner.alt.backdrop .hero-banner-content {
+    padding: 20px 25px 60px;
+  }
+
+  /* source h3 margin 20px 60px (530px heading in the 650px column) */
+  .hero-banner.image-only .hero-banner-content:has(> .hero-banner-actions) > :is(h1, h2, h3) {
+    margin: 20px 60px;
+  }
+
+  /* several images: a centred collage */
+  .hero-banner.image-only .hero-banner-background:has(picture + picture) {
+    gap: 0 1%;
+    padding: 0 16%;
+  }
+
+  /* source .btn-x-wide homepage CTA */
+  main .hero-banner.alt-2:not(.is-light) .hero-banner-actions a.button:any-link {
+    min-width: 325px;
+  }
+}

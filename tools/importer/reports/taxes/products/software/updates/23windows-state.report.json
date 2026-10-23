@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/taxes/products/software/updates/23windows-state/",
+  "path": "taxes/products/software/updates/23windows-state",
+  "timestamp": "2026-10-22T22:06:34.952Z",
+  "title": "Download 2023 State Updates for Windows | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "software-download"
+  ],
+  "importScript": "d4c454421d77"
+}

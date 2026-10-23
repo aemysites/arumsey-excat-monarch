@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-offices/business-services/business-formation-incorporation-services/",
+  "path": "tax-offices/business-services/business-formation-incorporation-services",
+  "timestamp": "2026-10-22T21:15:34.877Z",
+  "title": "Business Formation & Incorporation: Selecting the Right Structure | H&R Block®",
+  "template": "tool-guide-page",
+  "blocks": [
+    "tabs-pill",
+    "lottie-animation",
+    "cards-feature",
+    "cards-feature",
+    "columns-banner",
+    "accordion-faq"
+  ],
+  "fragments": [
+    "fragments/business-formation-incorporation-services-tab-1",
+    "fragments/business-formation-incorporation-services-tab-2",
+    "fragments/business-formation-incorporation-services-tab-3",
+    "fragments/business-formation-incorporation-services-tab-4"
+  ],
+  "importScript": "3639cdd725c1"
+}

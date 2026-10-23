@@ -1,0 +1,270 @@
+/* hero-video: full-bleed background video with overlaid content
+   (source figure.hero-wrapper .full-width-dynamicmedia, Scene7 video viewer) */
+
+/* full-bleed: the block escapes the section content width */
+.hero-video-wrapper:has(.hero-video) {
+  max-width: unset;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hero-video {
+  /* the video is always dark: light text and neon CTAs (source .btn--hrb--neon) */
+  --button-primary-background-color: var(--on-dark-button-background-color);
+  --button-primary-hover-background-color: var(--on-dark-button-hover-background-color);
+  --button-primary-text-color: var(--on-dark-button-text-color);
+  --button-secondary-color: var(--on-dark-button-background-color);
+  --button-secondary-hover-background-color: var(--on-dark-button-hover-background-color);
+  --button-secondary-hover-text-color: var(--on-dark-button-text-color);
+  --hero-video-fg: var(--on-dark-text-color);
+  --hero-video-link: var(--on-dark-link-color);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  /* source video viewer frames the 16:9 rendition at the full viewport width */
+  aspect-ratio: 16 / 9;
+
+  /* clip (not hidden) keeps content-based min height when the overlay outgrows 16:9 */
+  overflow: clip;
+  isolation: isolate;
+  background-color: var(--color-forest);
+  color: var(--hero-video-fg);
+  font-size: var(--body-font-size-l);
+  line-height: 27px;
+}
+
+/* without a video the block falls back to the section colours */
+.hero-video.no-video {
+  aspect-ratio: auto;
+  background-color: transparent;
+}
+
+.section.eggshell .hero-video.no-video,
+.section.white .hero-video.no-video,
+.section.neon .hero-video.no-video {
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-forest);
+  --button-primary-text-color: var(--color-white);
+  --button-secondary-color: var(--color-green);
+  --button-secondary-hover-background-color: var(--color-forest);
+  --button-secondary-hover-text-color: var(--color-white);
+  --hero-video-fg: var(--text-color);
+  --hero-video-link: var(--link-color);
+}
+
+.hero-video .hero-video-media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero-video .hero-video-media picture,
+.hero-video .hero-video-media img,
+.hero-video .hero-video-media video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video .hero-video-media video {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hero-video.is-playing .hero-video-media video {
+  opacity: 1;
+}
+
+/* overlay (source figcaption: p-y-40 below md, centred flex) */
+.hero-video .hero-video-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 761px;
+  padding: 40px var(--content-gutter);
+  text-align: center;
+}
+
+.hero-video .hero-video-content > * {
+  margin: 0;
+}
+
+.hero-video h1,
+.hero-video h2,
+.hero-video h3,
+.hero-video p {
+  color: inherit;
+}
+
+.hero-video a:any-link:not(.button) {
+  color: var(--hero-video-link);
+}
+
+/* title lockup: 761x329 image; the source inline image leaves a 7px line gap
+   below it (336px .cmp-column--image wrapper) */
+.hero-video .hero-video-title {
+  width: 100%;
+  padding-bottom: 7px;
+}
+
+.hero-video .hero-video-content picture {
+  display: block;
+}
+
+.hero-video .hero-video-content img {
+  display: block;
+  width: 761px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero-video .hero-video-eyebrow {
+  text-transform: uppercase;
+}
+
+/* CTA row (source .btn-container: margin 40px 0 20px; .btn: margin 0 20px 20px 0) */
+.hero-video .hero-video-content > .hero-video-actions {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0 20px;
+}
+
+.hero-video .hero-video-actions .button-wrapper {
+  max-width: 100%;
+  margin: 0 0 20px;
+}
+
+/* source .btn-medium.btn-x-wide: 325px wide pill */
+main .hero-video a.button.primary:any-link,
+main .hero-video a.button.secondary:any-link,
+main .hero-video a.button.accent:any-link {
+  min-width: min(325px, calc(100vw - 2 * var(--content-gutter)));
+}
+
+/* leading CTA icons (source .ctaIconLeft: 20px svg + 10px gap) */
+main .hero-video a.button.primary:any-link::before,
+main .hero-video a.button.secondary:any-link::before {
+  content: '';
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-color: currentcolor;
+  mask: var(--hero-video-icon) center / 20px 20px no-repeat;
+}
+
+/* play: "Watch" CTA, forest glyph on neon */
+main .hero-video a.button.primary:any-link::before {
+  --hero-video-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M16.4901 9.10956C17.1717 9.50735 17.1717 10.4927 16.4901 10.8904L4.55095 17.858C3.86402 18.2589 3.00134 17.7632 3.00134 16.9676L3.00134 3.03242C3.00134 2.23681 3.86402 1.74109 4.55095 2.14198L16.4901 9.10956Z'/%3E%3C/svg%3E");
+
+  background-color: var(--color-forest);
+}
+
+/* calculator: "Start my taxes" CTA, follows the outline colour */
+main .hero-video a.button.secondary:any-link::before {
+  --hero-video-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M3 4C3 2.89543 3.89543 2 5 2H15C16.1046 2 17 2.89543 17 4V16C17 17.1046 16.1046 18 15 18H5C3.89543 18 3 17.1046 3 16V4ZM15 4L5 4V16L15 16V4Z'/%3E%3Cpath d='M7 7C7 6.44772 7.44772 6 8 6L12 6C12.5523 6 13 6.44772 13 7C13 7.55228 12.5523 8 12 8L8 8C7.44772 8 7 7.55228 7 7Z'/%3E%3Ccircle cx='8' cy='10' r='1'/%3E%3Ccircle cx='12' cy='10' r='1'/%3E%3Ccircle cx='12' cy='13' r='1'/%3E%3Ccircle cx='8' cy='13' r='1'/%3E%3C/svg%3E");
+}
+
+.hero-video.no-video a.button.primary:any-link::before,
+.hero-video.no-video a.button.secondary:any-link::before {
+  content: none;
+}
+
+/* pause/play: the source viewer hides its controls; kept small for WCAG 2.2.2 */
+.hero-video .hero-video-toggle {
+  position: absolute;
+  z-index: 1;
+  right: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid currentcolor;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--hero-video-fg);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.hero-video .hero-video-toggle:hover,
+.hero-video .hero-video-toggle:focus-visible {
+  opacity: 1;
+}
+
+.hero-video .hero-video-toggle::before {
+  content: '';
+  box-sizing: border-box;
+  width: 10px;
+  height: 12px;
+  border-left: 3px solid currentcolor;
+  border-right: 3px solid currentcolor;
+}
+
+.hero-video .hero-video-toggle[data-state='paused']::before {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid currentcolor;
+  border-right: 0;
+}
+
+.hero-video .hero-video-toggle:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.hero-video.video-failed .hero-video-media video,
+.hero-video.video-failed .hero-video-toggle {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video .hero-video-media video,
+  .hero-video .hero-video-toggle {
+    transition: none;
+  }
+}
+
+@media (width >= 900px) {
+  /* source .hero-content (0 120px) + .manual-model (0 120px 0 60px): the 761px
+     column sits 30px left of centre */
+  .hero-video .hero-video-content {
+    box-sizing: content-box;
+    width: 761px;
+    max-width: calc(100% - 180px);
+    padding: 0 120px 0 60px;
+  }
+
+  .hero-video .hero-video-content > .hero-video-actions {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 4px;
+  }
+
+  .hero-video .hero-video-actions .button-wrapper {
+    margin: 0 20px 20px 0;
+  }
+}

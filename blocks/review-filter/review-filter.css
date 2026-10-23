@@ -1,0 +1,171 @@
+/*
+ * review-filter
+ * Values from source #review-form-selector (hrblock.com/reviews/*):
+ * 80px white fields (16px radius, 2px border), 16px/40px text, 15x9 chevron,
+ * 225px pill submit (16px/500), 40px gaps, form max-width 1200px with 25px padding.
+ * Source breakpoints: column below 850px, compact row 850-1099px, full-width submit below 768px.
+ */
+.review-filter {
+  --review-filter-chevron: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.99756 1.83862L7.26276 7.54259C7.65872 7.97155 8.3364 7.97155 8.73236 7.54259L13.9976 1.83862' stroke='%23003512' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  --review-filter-chevron-disabled: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.99756 1.83862L7.26276 7.54259C7.65872 7.97155 8.3364 7.97155 8.73236 7.54259L13.9976 1.83862' stroke='%23003512' stroke-opacity='0.15' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+
+  /* source form spans the viewport (max 1200px) with its own 25px inset, not the section gutter */
+  margin-inline: calc(-1 * var(--content-gutter));
+}
+
+.review-filter .review-filter-form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+.review-filter .review-filter-field {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.review-filter .review-filter-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.review-filter select {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 18px 60px 18px 20px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-m);
+  outline: 0;
+  appearance: none;
+  background-color: var(--color-white);
+  background-image: var(--review-filter-chevron);
+  background-repeat: no-repeat;
+  background-position: right 22.5px center;
+  background-size: 15px 9px;
+  color: var(--color-forest);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.review-filter select option {
+  color: var(--color-forest);
+}
+
+.review-filter select:hover,
+.review-filter select:focus {
+  border-color: var(--color-green);
+}
+
+.review-filter select:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* source .placeholder-button: text and chevron at opacity .15 on a solid white field */
+.review-filter select:disabled,
+.review-filter select:disabled:hover {
+  border-color: transparent;
+  background-color: var(--color-white);
+  background-image: var(--review-filter-chevron-disabled);
+  color: rgb(0 53 18 / 15%);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+/* placeholder option showing: source ::after "Select review type" at opacity .5 on black */
+.review-filter select:enabled:has(option[value=""]:checked) {
+  color: rgb(0 0 0 / 50%);
+}
+
+.review-filter button.review-filter-submit {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 20px 0;
+  border: 0;
+  border-radius: var(--button-radius);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+
+/* source submit never greys out; keep the primary colours and block the pointer */
+.review-filter button.review-filter-submit:disabled,
+.review-filter button.review-filter-submit:disabled:hover {
+  background-color: var(--button-primary-background-color);
+  color: var(--button-primary-text-color);
+  cursor: not-allowed;
+}
+
+/*
+ * dark: dark-green submit and white fields regardless of section
+ * (source /reviews/ hub); ignores the neon CTA swap of dark sections.
+ */
+.review-filter.dark {
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-forest);
+  --button-primary-text-color: var(--color-white);
+}
+
+@media (width >= 768px) {
+  .review-filter .review-filter-field {
+    max-width: 630px;
+  }
+
+  .review-filter button.review-filter-submit {
+    width: auto;
+    min-width: var(--button-min-width);
+    padding: 28px 0;
+  }
+}
+
+@media (width >= 850px) {
+  .review-filter .review-filter-form {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .review-filter .review-filter-field {
+    flex: 1 1 0;
+    max-width: none;
+  }
+
+  .review-filter button.review-filter-submit {
+    min-width: 220px;
+  }
+}
+
+@media (width >= 1100px) {
+  .review-filter .review-filter-form {
+    gap: 40px;
+  }
+
+  .review-filter button.review-filter-submit {
+    min-width: var(--button-min-width);
+  }
+}

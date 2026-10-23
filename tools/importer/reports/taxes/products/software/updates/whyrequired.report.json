@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/taxes/products/software/updates/whyrequired/",
+  "path": "taxes/products/software/updates/whyrequired",
+  "timestamp": "2026-10-22T20:31:23.504Z",
+  "title": "Why Perform Tax Software Updates? | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "promo-strip",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/software-guarantees"
+  ],
+  "importScript": "cc79b2fd70c8"
+}

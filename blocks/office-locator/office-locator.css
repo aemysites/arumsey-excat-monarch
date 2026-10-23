@@ -1,0 +1,360 @@
+/* office-locator: office details beside a map (source: hrblock.com oppofficeinfo) */
+.office-locator {
+  --office-locator-fg: var(--text-color);
+  --office-locator-link: var(--link-color);
+  --office-locator-link-hover: var(--link-hover-color);
+  --office-locator-border: var(--color-forest);
+  --office-locator-radius: var(--radius-m);
+  --office-locator-star: #fcb81c;
+  --office-locator-star-empty: #e4e5e5;
+  --office-locator-icon-pin: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M4.72468 9.525C4.72468 5.51079 7.98547 2.25 11.9997 2.25C16.0139 2.25 19.2747 5.51079 19.2747 9.525C19.2747 9.53893 19.2747 9.55306 19.2747 9.56739C19.275 9.81053 19.2754 10.11 19.1891 10.4206C18.8866 13.448 17.1924 16.4193 15.6372 18.5872C14.8446 19.692 14.0697 20.6132 13.4928 21.2585C13.204 21.5815 12.964 21.8363 12.7951 22.0114C12.7107 22.099 12.6439 22.1667 12.5977 22.2131C12.5746 22.2363 12.5566 22.2542 12.544 22.2666L12.5294 22.281L12.5252 22.2851L12.5239 22.2864C12.5238 22.2865 12.5232 22.2871 11.9997 21.75C11.4762 22.2871 11.4761 22.2869 11.4759 22.2868L11.4742 22.2851L11.47 22.281L11.4553 22.2666C11.4428 22.2542 11.4248 22.2363 11.4017 22.2131C11.3554 22.1667 11.2887 22.099 11.2042 22.0114C11.0353 21.8363 10.7954 21.5815 10.5066 21.2585C9.92962 20.6132 9.15477 19.692 8.36215 18.5872C6.80693 16.4193 5.11277 13.448 4.81022 10.4206C4.72396 10.11 4.72434 9.81054 4.72465 9.5674C4.72467 9.55307 4.72468 9.53893 4.72468 9.525ZM11.9997 20.6698C12.1107 20.5505 12.2366 20.413 12.3745 20.2587C12.9249 19.6431 13.6641 18.7642 14.4184 17.7128C15.9438 15.5865 17.4591 12.8523 17.7028 10.2062C17.7081 10.1489 17.72 10.0924 17.7382 10.0378C17.7677 9.9491 17.7747 9.85155 17.7747 9.525C17.7747 6.33921 15.1855 3.75 11.9997 3.75C8.8139 3.75 6.22468 6.33921 6.22468 9.525C6.22468 9.85156 6.23162 9.94911 6.2612 10.0378C6.27939 10.0924 6.29124 10.1489 6.29652 10.2062C6.54024 12.8523 8.05558 15.5865 9.58096 17.7128C10.3352 18.7642 11.0744 19.6431 11.6248 20.2587C11.7628 20.413 11.8886 20.5505 11.9997 20.6698Z'/%3E%3Cpath d='M12 12.75C13.6569 12.75 15 11.4069 15 9.75C15 8.09315 13.6569 6.75 12 6.75C10.3431 6.75 9 8.09315 9 9.75C9 11.4069 10.3431 12.75 12 12.75Z'/%3E%3C/svg%3E");
+  --office-locator-icon-phone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 21'%3E%3Cpath fill-rule='evenodd' d='M2 3.48438C2 2.93209 2.44772 2.48438 3 2.48438H7.5C7.72707 2.48438 7.94738 2.56166 8.12469 2.70351L10.6247 4.70351C10.9518 4.96523 11.0812 5.40314 10.9487 5.8006C10.8714 6.03231 10.7924 6.25259 10.7161 6.46549C10.5077 7.04651 10.319 7.57254 10.2399 8.1258C10.1441 8.79642 10.2465 9.31666 10.7071 9.77727C11.174 10.2441 11.697 10.3365 12.2854 10.246C12.9211 10.1482 13.5383 9.8472 14.0528 9.58995C14.4017 9.41551 14.8201 9.45984 15.1247 9.70351L17.6247 11.7035C17.8619 11.8933 18 12.1806 18 12.4844V17.4844C18 17.7726 17.8756 18.0469 17.6587 18.2368C17.4418 18.4266 17.1536 18.5137 16.8678 18.4756C16.8017 18.4668 16.7335 18.4577 16.6634 18.4485C15.4648 18.2896 13.7097 18.0569 11.898 17.5567C9.98788 17.0292 7.92034 16.1803 6.32535 14.7225C4.65084 13.192 3.57831 11.0741 2.9232 9.04109C2.26599 7.00163 2 4.95859 2 3.48438ZM4.04191 4.48438C4.13254 5.63102 4.37586 7.0283 4.8268 8.42766C5.42169 10.2737 6.34916 12.0348 7.67465 13.2462C8.93698 14.4 10.6598 15.1398 12.4304 15.6288C13.7002 15.9795 14.946 16.1889 16 16.3394V12.965L14.3677 11.6591C13.885 11.8788 13.2619 12.1193 12.5896 12.2227C11.553 12.3822 10.326 12.2246 9.29289 11.1915C8.25351 10.1521 8.10585 8.92233 8.26005 7.84295C8.36044 7.14023 8.6084 6.4121 8.82001 5.82101L7.14922 4.48438H4.04191Z'/%3E%3C/svg%3E");
+  --office-locator-icon-clock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath fill-rule='evenodd' d='M9 2C5.27207 2 2 5.27207 2 9C2 12.7279 5.27207 16 9 16C12.7279 16 16 12.7279 16 9C16 5.27207 12.7279 2 9 2ZM0 9C0 4.02943 4.02943 0 9 0C13.9706 0 18 4.02943 18 9C18 13.9706 13.9706 18 9 18C4.02943 18 0 13.9706 0 9Z'/%3E%3Cpath d='M8 10C8 9.44772 8.55964 9 9.25 9H11.75C12.4404 9 13 9.44772 13 10C13 10.5523 12.4404 11 11.75 11H9.25C8.55964 11 8 10.5523 8 10Z'/%3E%3Cpath d='M9 5C9.55228 5 10 5.53726 10 6.2V9.8C10 10.4627 9.55228 11 9 11C8.44772 11 8 10.4627 8 9.8V6.2C8 5.53726 8.44772 5 9 5Z'/%3E%3C/svg%3E");
+  --office-locator-icon-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath d='M24.8676481,9.0008973 C24.7082329,8.54565507 24.2825324,8.23189792 23.7931772,8.20897226 L16.1009423,8.20897226 L13.658963,0.793674161 C13.4850788,0.296529881 12.9965414,-0.0267985214 12.4623931,0.00174912135 L12.4623931,0.00174912135 C11.9394964,-0.00194214302 11.4747239,0.328465149 11.3146628,0.81767189 L8.87268352,8.23296999 L1.20486846,8.23296999 C0.689809989,8.22949161 0.230279943,8.55030885 0.0640800798,9.0294023 C-0.102119784,9.50849575 0.0623083246,10.0383495 0.472274662,10.3447701 L6.69932193,14.9763317 L4.25734261,22.4396253 C4.08483744,22.9295881 4.25922828,23.4727606 4.68662933,23.7767181 C5.11403038,24.0806756 5.69357086,24.0736812 6.11324689,23.7595003 L12.6333317,18.9599546 L19.1778362,23.7595003 C19.381674,23.9119158 19.6299003,23.9960316 19.8860103,23.9994776 C20.2758842,24.0048539 20.6439728,23.8232161 20.8724402,23.5127115 C21.1009077,23.202207 21.1610972,22.8017824 21.0337405,22.4396253 L18.5917612,14.9763317 L24.6967095,10.3207724 C25.0258477,9.95783882 25.0937839,9.43328063 24.8676481,9.0008973 Z'/%3E%3C/svg%3E");
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 64px;
+  align-items: center;
+  color: var(--office-locator-fg);
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.12px;
+}
+
+/* light-on-dark sections (section metadata style) */
+main > .section.green .office-locator,
+main > .section.bright-green .office-locator,
+main > .section.forest .office-locator,
+main > .section.charcoal .office-locator,
+main > .section.black .office-locator {
+  --office-locator-fg: var(--on-dark-text-color);
+  --office-locator-link: var(--on-dark-link-color);
+  --office-locator-link-hover: var(--on-dark-link-hover-color);
+  --office-locator-border: var(--on-dark-text-color);
+}
+
+.office-locator h1,
+.office-locator h2,
+.office-locator h3,
+.office-locator h4,
+.office-locator h5,
+.office-locator h6,
+.office-locator p {
+  color: inherit;
+}
+
+.office-locator a:any-link {
+  color: var(--office-locator-link);
+}
+
+.office-locator a:any-link:hover {
+  color: var(--office-locator-link-hover);
+}
+
+/* details column */
+.office-locator .office-locator-details {
+  min-width: 0;
+}
+
+.office-locator .office-locator-details > * {
+  margin-top: 0;
+}
+
+.office-locator .office-locator-eyebrow {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.office-locator .office-locator-details :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 30px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.12px;
+}
+
+.office-locator .office-locator-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.office-locator .office-locator-info > * {
+  margin: 0;
+}
+
+.office-locator .office-locator-info a:any-link:not(.button),
+.office-locator .office-locator-actions a:any-link:not(.button) {
+  text-decoration: underline;
+  letter-spacing: -0.1px;
+}
+
+.office-locator .office-locator-info a:hover:not(.button),
+.office-locator .office-locator-actions a:hover:not(.button) {
+  text-decoration: none;
+}
+
+.office-locator .office-locator-address,
+.office-locator .office-locator-phone {
+  display: flex;
+  gap: 8px;
+}
+
+.office-locator .office-locator-address {
+  align-items: flex-start;
+}
+
+.office-locator .office-locator-phone {
+  align-items: center;
+}
+
+.office-locator .office-locator-address:not(:has(.icon))::before,
+.office-locator .office-locator-phone:not(:has(.icon))::before,
+.office-locator .office-locator-hours summary::before {
+  content: '';
+  flex: 0 1 auto;
+  background-color: currentcolor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.office-locator .office-locator-address:not(:has(.icon))::before {
+  width: 24px;
+  height: 24px;
+  mask-image: var(--office-locator-icon-pin);
+}
+
+.office-locator .office-locator-phone:not(:has(.icon))::before {
+  width: 20px;
+  height: 21px;
+  mask-image: var(--office-locator-icon-phone);
+}
+
+.office-locator .office-locator-address .icon,
+.office-locator .office-locator-phone .icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+}
+
+/* opening hours: today's label toggles the weekly list */
+.office-locator .office-locator-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  order: 1;
+}
+
+.office-locator .office-locator-hours summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.office-locator .office-locator-hours summary::-webkit-details-marker {
+  display: none;
+}
+
+.office-locator .office-locator-hours summary::before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px -2px 0;
+  mask-image: var(--office-locator-icon-clock);
+}
+
+.office-locator .office-locator-hours-status {
+  font-weight: 500;
+}
+
+.office-locator .office-locator-hours summary::after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  width: 9px;
+  height: 9px;
+  margin: 0 3px 3px 9px;
+  padding: 3px;
+  border: solid var(--office-locator-fg);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.office-locator .office-locator-hours[open] summary::after {
+  margin-bottom: 0;
+  transform: rotate(-135deg);
+}
+
+.office-locator .office-locator-hours ul,
+.office-locator .office-locator-hours ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* calls to action */
+.office-locator .office-locator-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 45px 0 0;
+}
+
+main .office-locator .office-locator-actions a.button:any-link {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 60px;
+  padding: 0 35px;
+  overflow: visible;
+  white-space: normal;
+}
+
+/* map column */
+.office-locator .office-locator-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.office-locator .office-locator-map > * {
+  margin: 0;
+}
+
+.office-locator .office-locator-frame,
+.office-locator.has-map-image .office-locator-map picture {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid var(--office-locator-border);
+  border-radius: var(--office-locator-radius);
+}
+
+.office-locator .office-locator-frame iframe {
+  display: block;
+  width: 100%;
+  height: 191px;
+  border: 0;
+}
+
+.office-locator .office-locator-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* image: static map image instead of an embedded map */
+.office-locator.image .office-locator-map img,
+.office-locator.has-map-image .office-locator-map picture img {
+  height: 191px;
+  object-fit: cover;
+}
+
+/* rating: five stars filled to the score, then "4.7(60)" */
+.office-locator .office-locator-rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  line-height: 28px;
+}
+
+.office-locator .office-locator-stars {
+  flex: 0 0 auto;
+  width: 114px;
+  height: 22px;
+  background: linear-gradient(90deg, var(--office-locator-star) var(--office-locator-rating, 0%), var(--office-locator-star-empty) var(--office-locator-rating, 0%));
+  mask-image: var(--office-locator-icon-star);
+  mask-repeat: space no-repeat;
+  mask-size: 22px 22px;
+}
+
+.office-locator .office-locator-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (width >= 768px) {
+  .office-locator .office-locator-eyebrow {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .office-locator .office-locator-details :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .office-locator .office-locator-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto 1fr;
+    justify-content: start;
+    gap: 20px 50px;
+    align-items: start;
+  }
+
+  .office-locator .office-locator-address,
+  .office-locator .office-locator-phone {
+    grid-column: 1;
+  }
+
+  .office-locator .office-locator-hours {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    gap: 10px;
+  }
+
+  .office-locator .office-locator-info:not(:has(.office-locator-hours)) {
+    grid-template-columns: auto;
+    grid-template-rows: none;
+  }
+
+  .office-locator .office-locator-actions {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .office-locator .office-locator-actions > * {
+    flex: 0 1 auto;
+  }
+
+  main .office-locator .office-locator-actions a.button:any-link {
+    width: auto;
+    min-width: 225px;
+    min-height: 80px;
+  }
+}
+
+@media (width >= 900px) {
+  .office-locator {
+    grid-template-columns: minmax(0, 456px) minmax(0, 584px);
+    justify-content: space-between;
+    column-gap: 48px;
+  }
+
+  .office-locator.no-map {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .office-locator .office-locator-frame iframe,
+  .office-locator.image .office-locator-map img,
+  .office-locator.has-map-image .office-locator-map picture img {
+    height: 284px;
+  }
+}

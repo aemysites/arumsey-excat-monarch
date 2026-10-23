@@ -1,0 +1,28 @@
+{
+  "variantName": "cards-office-services",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "Office location services list: intro heading, grid of icon + service title + description, and a closing CTA button"
+  },
+  "contentPattern": {
+    "structure": "optional first row: intro heading (single cell). Service rows: icon cell | body cell with the service title (heading or bold paragraph) and description. Optional last row: CTA link/button only. A heading-only row after service rows starts a new group",
+    "rows": "intro heading, one row per service, optional CTA row",
+    "cells": ["icon", "title + description"]
+  },
+  "options": [
+    { "class": "alt", "label": "Alt" }
+  ],
+  "memberVariantIds": [
+    "v_b12a01f83289",
+    "v_b12a01f83289-1",
+    "v_b12a01f83289-2"
+  ],
+  "usage": "Use on tax office location pages for the 'H&R Block tax pros know taxes' services list. Default lays services out in an auto-fill grid; alt forces two columns (used where the office lists extra services that wrap onto a second line). Section background comes from section metadata Style, not a block class.",
+  "reuseGuidance": "Reuse for any short list of offered services with small icons and a single closing CTA. Use cards-icon for centred icon rows."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/expat-tax-preparation-and-services/streamlined/",
+  "path": "expat-tax-preparation/expat-tax-preparation-and-services/streamlined",
+  "timestamp": "2026-10-23T02:29:38.921Z",
+  "title": "Streamlined Filing Compliance Procedures | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "accordion-faq",
+    "cards-product",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "5f7b656097fe"
+}

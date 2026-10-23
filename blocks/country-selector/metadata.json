@@ -1,0 +1,31 @@
+{
+  "variantName": "country-selector",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text + button"
+  },
+  "contentPattern": {
+    "structure": "intro cell (heading + text) and a list of country links; optional short paragraph after the list for the button label (default \"Select\")",
+    "rows": "1-2"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_87884ab608bd"
+  ],
+  "usage": "Intro text beside a country dropdown and Select button that navigates to the chosen country page.",
+  "reuseGuidance": "Author each country as a link in a bulleted list; the link text is the option label and its URL the destination.",
+  "sectionStyles": [
+    "forest",
+    "green",
+    "bright-green",
+    "eggshell",
+    "neon",
+    "white",
+    "black"
+  ]
+}

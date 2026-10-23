@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/corporate/",
+  "path": "corporate",
+  "timestamp": "2026-10-22T19:33:30.568Z",
+  "title": "About H&R Block Tax Professionals | H&R Block®",
+  "template": "info-photo-hero",
+  "blocks": [
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/guarantees-cards"
+  ],
+  "importScript": "c48ce518734c"
+}

@@ -1,0 +1,170 @@
+/*
+ * H&R Block brand tokens.
+ * Values measured from computed styles on https://www.hrblock.com/ and
+ * https://www.hrblock.com/online-tax-filing/free-online-tax-filing/ (source breakpoint 768px).
+ * Raw extraction: migration-work/brand.json
+ */
+
+:root {
+  /* palette */
+  --color-forest: #003512; /* rgb(0 53 18) spruce-forest-theme, primary text */
+  --color-green: #005d1f; /* rgb(0 93 31) green-dark-theme, primary button */
+  --color-bright-green: #008427; /* rgb(0 132 39) expat green sections */
+  --color-neon: #00e95c; /* rgb(0 233 92) btn--hrb--neon */
+  --color-neon-hover: #00ba4a; /* rgb(0 186 74) btn--hrb--neon:hover */
+  --color-lime: #d2fa52; /* rgb(210 250 82) spruce-neon-theme */
+  --color-eggshell: #f6f4e9; /* rgb(246 244 233) spruce-eggshell-theme, on-dark text */
+  --color-light-grey: #f1f5f7; /* rgb(241 245 247) grey-theme */
+  --color-grey-rule: #d6dae0; /* header rule */
+  --color-charcoal: #414042; /* rgb(65 64 66) */
+  --color-black: #262626; /* rgb(38 38 38) black-theme */
+  --color-white: #fff;
+  --color-focus: #0095ff; /* rgb(0 149 255) focus outline */
+
+  /* semantic colors */
+  --background-color: var(--color-white);
+  --text-color: var(--color-forest);
+  --text-color-inverse: var(--color-eggshell);
+  --link-color: var(--color-green);
+  --link-hover-color: var(--color-green);
+
+  /* default-content links: source inline links use the text colour, no underline */
+  --default-link-color: var(--color-forest);
+  --default-link-standalone-weight: 500;
+  --light-color: var(--color-eggshell);
+  --dark-color: var(--color-forest);
+
+  /* light-on-dark (green, bright-green, forest, charcoal, black sections and dark panels) */
+  --on-dark-background-color: var(--color-forest);
+  --on-dark-text-color: var(--color-eggshell);
+  --on-dark-heading-color: var(--color-eggshell);
+  --on-dark-link-color: var(--color-eggshell);
+  --on-dark-link-hover-color: var(--color-eggshell);
+  --on-dark-button-background-color: var(--color-neon);
+  --on-dark-button-hover-background-color: var(--color-neon-hover);
+  --on-dark-button-text-color: var(--color-black);
+
+  /* fonts: Graphik (GraphikHRBlock) is licensed and self-hosted by H&R Block; not shipped here */
+  --body-font-family: graphik, graphik-fallback, 'Helvetica Neue', helvetica, sans-serif;
+  --heading-font-family: graphik, graphik-fallback, 'Helvetica Neue', helvetica, sans-serif;
+  --heading-font-weight: 600;
+
+  /* body sizes (mobile) */
+  --body-font-size-l: 18px;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+  --body-line-height: 1.5;
+
+  /* heading sizes (mobile) */
+  --heading-font-size-xxl: 44px;
+  --heading-font-size-xl: 32px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 18px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
+  --heading-line-height-xxl: 48px;
+  --heading-line-height-xl: 36px;
+  --heading-line-height-l: 28px;
+  --heading-line-height-m: 21.6px;
+  --heading-line-height-s: 20px;
+  --heading-line-height-xs: 16.8px;
+  --heading-letter-spacing-xxl: -1.04px;
+  --heading-letter-spacing-xl: -0.46px;
+  --heading-letter-spacing-l: -0.34px;
+  --heading-letter-spacing-m: -0.1px;
+  --heading-letter-spacing-s: normal;
+  --heading-letter-spacing-xs: normal;
+
+  /* eyebrow label (source .eyebrow-label) */
+  --eyebrow-font-size: 14px;
+  --eyebrow-line-height: 24px;
+  --eyebrow-font-weight: 500;
+  --eyebrow-letter-spacing: 1px;
+
+  /* buttons (source .btn-medium) */
+  --button-font-size: 19px;
+  --button-line-height: 22px;
+  --button-font-weight: 600;
+  --button-letter-spacing: -0.3px;
+  --button-height: 60px;
+  --button-min-width: 225px;
+  --button-padding: 0 20px;
+  --button-radius: 80px;
+  --button-border-width: 2px;
+  --button-transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-black); /* source .btn--medium-dark-green:hover rgb(38 38 38) */
+  --button-primary-text-color: var(--color-white);
+  --button-secondary-color: var(--color-green);
+  --button-secondary-hover-background-color: var(--color-forest);
+  --button-secondary-hover-text-color: var(--color-white);
+  --button-accent-background-color: var(--color-neon);
+  --button-accent-hover-background-color: var(--color-neon-hover);
+  --button-accent-text-color: var(--color-black);
+  --button-disabled-background-color: var(--color-light-grey);
+  --button-disabled-text-color: #6d7075;
+  --focus-ring: 2px solid var(--color-focus);
+  --focus-ring-offset: 2px;
+
+  /* spacing */
+  --section-padding: 40px;
+
+  /* section spacing scale (Section Metadata pad-top-N / pad-bottom-N and per-style
+     defaults; source padding-top-N / padding-bottom-N utility classes, desktop px) */
+  --space-20: 20px;
+  --space-40: 32px;
+  --space-60: 40px;
+  --space-80: 48px;
+  --space-100: 56px;
+  --space-120: 64px;
+
+  /* section layout widths (Section Metadata center / narrow / medium) */
+  --center-heading-width: 860px; /* source intro h1 750-975px */
+  --center-text-width: 700px; /* source intro p 540-780px */
+  --narrow-width: 760px; /* source legal / disclosure reading column 740-760px */
+  --medium-width: 960px; /* source legal body / guarantee column 860-960px */
+  --expat-article-width: 800px; /* source expat article column */
+  --content-max-width: 1200px;
+  --content-gutter: 24px;
+  --content-block-spacing: 20px;
+  --section-block-gap: 40px;
+  --radius-m: 16px;
+
+  /* nav height (brand bar 40px + main nav 64px) */
+  --nav-height: 104px;
+}
+
+@media (width >= 768px) {
+  :root {
+    /* body sizes (desktop) */
+    --body-font-size-l: 19px;
+    --body-font-size-m: 18px;
+
+    /* heading sizes (desktop) */
+    --heading-font-size-xxl: 56px;
+    --heading-font-size-xl: 40px;
+    --heading-font-size-l: 32px;
+    --heading-font-size-m: 24px;
+    --heading-font-size-s: 18px;
+    --heading-line-height-xxl: 60px;
+    --heading-line-height-xl: 44px;
+    --heading-line-height-l: 36px;
+    --heading-line-height-m: 28.8px;
+    --heading-line-height-s: 21.6px;
+    --heading-letter-spacing-xxl: -0.8px;
+    --heading-letter-spacing-xl: -0.57px;
+    --heading-letter-spacing-l: -0.46px;
+    --heading-letter-spacing-m: -0.34px;
+    --heading-letter-spacing-s: -0.1px;
+
+    /* spacing */
+    --section-padding: 60px;
+    --content-gutter: 32px;
+    --space-40: 40px;
+    --space-60: 60px;
+    --space-80: 80px;
+    --space-100: 100px;
+    --space-120: 120px;
+  }
+}

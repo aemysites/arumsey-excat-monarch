@@ -1,0 +1,205 @@
+.lottie-animation {
+  --lottie-animation-fg: var(--text-color);
+  --lottie-animation-control-bg: var(--background-color);
+
+  position: relative;
+  color: var(--lottie-animation-fg);
+}
+
+.section.forest .lottie-animation,
+.section.green .lottie-animation,
+.section.bright-green .lottie-animation,
+.section.black .lottie-animation {
+  --lottie-animation-fg: var(--background-color);
+  --lottie-animation-control-bg: var(--text-color);
+}
+
+.section.eggshell .lottie-animation,
+.section.white .lottie-animation,
+.section.neon .lottie-animation {
+  --lottie-animation-fg: var(--text-color);
+  --lottie-animation-control-bg: var(--background-color);
+}
+
+.lottie-animation .lottie-animation-stage {
+  position: relative;
+  width: 100%;
+}
+
+.lottie-animation .lottie-player {
+  width: 100%;
+  line-height: 0;
+}
+
+.lottie-animation .lottie-player svg {
+  display: block;
+  width: 100%;
+
+  /* lottie-web writes an inline height: 100%, which collapses to the viewport
+     height inside an auto-height player; keep the viewBox aspect ratio instead */
+  height: auto !important;
+}
+
+/* while loading, keep the fallback out of the layout once the player exists */
+.lottie-animation .lottie-animation-stage.lottie-loading .lottie-animation-fallback:has(~ .lottie-player) {
+  display: none;
+}
+
+.lottie-animation .lottie-animation-fallback picture,
+.lottie-animation .lottie-animation-fallback img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lottie-animation .lottie-animation-fallback a {
+  color: inherit;
+}
+
+.lottie-animation .lottie-animation-source {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.lottie-animation .lottie-toggle {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--lottie-animation-fg);
+  cursor: pointer;
+
+  /* the source hides its pause control (visibility: hidden); ours stays in the tab order and
+     the accessibility tree but only shows on pointer hover or keyboard focus */
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.lottie-animation .lottie-toggle::before {
+  content: '';
+  width: 10px;
+  height: 12px;
+  border-left: 3px solid currentcolor;
+  border-right: 3px solid currentcolor;
+  box-sizing: border-box;
+}
+
+.lottie-animation .lottie-toggle[data-state='paused']::before {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid currentcolor;
+  border-right: 0;
+}
+
+.lottie-animation .lottie-toggle:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+  background: var(--lottie-animation-control-bg);
+}
+
+/* full-bleed: the source player is 100vw wide in every variant
+   (outlook-on-american-life, business-formation: .lottie-container width 100%) */
+main > .section > .lottie-animation-wrapper {
+  max-width: unset;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.lottie-animation.ribbon {
+  /* padding (not margin) so the source spacing adds to the section block gap
+     instead of collapsing into it */
+  box-sizing: border-box;
+  width: 100%;
+  padding: 41px 0 20px;
+  overflow: hidden;
+}
+
+/* source .lottie-btn: 40x36 hit area, 24px glyph, sits on the dark ribbon */
+.lottie-animation.ribbon .lottie-toggle {
+  left: 6px;
+  bottom: 10px;
+  width: 40px;
+  height: 36px;
+  border-radius: 0;
+  color: var(--color-eggshell);
+}
+
+.lottie-animation.ribbon .lottie-toggle::before {
+  width: 12px;
+  height: 14px;
+  border-left-width: 4px;
+  border-right-width: 4px;
+}
+
+.lottie-animation.ribbon .lottie-toggle[data-state='paused']::before {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border-left-width: 11px;
+  border-right-width: 0;
+}
+
+.lottie-animation.ribbon .lottie-toggle:focus-visible {
+  background: var(--color-forest);
+}
+
+/* no narrow composition authored: the wide strip is too short for the source
+   40x36 control, so give it a solid backing that reads on any backdrop */
+@media (width < 900px) {
+  .lottie-animation.ribbon .lottie-animation-stage[data-composition='wide'] .lottie-toggle {
+    left: 6px;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-forest);
+  }
+
+  .lottie-animation.ribbon .lottie-animation-stage[data-composition='wide'] .lottie-toggle::before {
+    width: 8px;
+    height: 10px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+  }
+
+  .lottie-animation.ribbon .lottie-animation-stage[data-composition='wide'] .lottie-toggle[data-state='paused']::before {
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    border-width: 5px 0 5px 8px;
+  }
+}
+
+@media (width >= 900px) {
+  .lottie-animation.ribbon {
+    padding: 32px 0 60px;
+  }
+}
+
+/* reveal the pause / play control (see .lottie-toggle) */
+.lottie-animation .lottie-animation-stage:hover .lottie-toggle,
+.lottie-animation .lottie-animation-stage .lottie-toggle:focus-visible,
+.lottie-animation .lottie-animation-stage .lottie-toggle[data-state='paused'] {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .lottie-animation .lottie-toggle:not([data-state='paused']) {
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-software/basic-tax-software/",
+  "path": "tax-software/basic-tax-software",
+  "timestamp": "2026-10-22T19:19:40.299Z",
+  "title": "Basic Tax Software for Simple, Affordable Tax Returns | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "product-reviews",
+    "cards-pricing",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "columns-feature",
+    "columns-banner",
+    "columns-banner",
+    "table-data"
+  ],
+  "importScript": "d4c454421d77"
+}

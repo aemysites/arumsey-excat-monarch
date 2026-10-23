@@ -1,0 +1,209 @@
+/*
+ * columns-stats: photo + figure feature panel beside a column of illustrated stats.
+ * Values from https://www.hrblock.com/international-tax-offices/japan/tokyo/63240/
+ * (migration-work/columns-stats-extracted.css). Source shows the feature card layout
+ * from 1024px; below that every stat (feature included) is an icon + text row.
+ * Text colour inherits from the section; the feature card carries its own dark surface.
+ */
+.columns-stats {
+  --columns-stats-icon-size: 113px;
+}
+
+.columns-stats > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-stats > div > div {
+  min-width: 0;
+}
+
+.columns-stats img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* mobile: icon + text rows (source .two-column-control.sm-2-column, 50% / 50%) */
+.columns-stats .columns-stats-feature,
+.columns-stats .columns-stats-item {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  padding-top: 10px;
+}
+
+.columns-stats .columns-stats-media,
+.columns-stats .columns-stats-icon {
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+}
+
+.columns-stats .columns-stats-media img {
+  width: var(--columns-stats-icon-size);
+}
+
+.columns-stats .columns-stats-icon img,
+.columns-stats .columns-stats-icon svg,
+.columns-stats .columns-stats-icon .icon {
+  width: var(--columns-stats-icon-size);
+  height: var(--columns-stats-icon-size);
+  object-fit: contain;
+}
+
+.columns-stats .columns-stats-content,
+.columns-stats .columns-stats-text {
+  padding: 20px 25px 20px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.columns-stats .columns-stats-content > *,
+.columns-stats .columns-stats-text > * {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+}
+
+.columns-stats .columns-stats-content > .columns-stats-figure,
+.columns-stats .columns-stats-text > .columns-stats-figure {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.columns-stats .columns-stats-figure strong {
+  font-weight: inherit;
+}
+
+.columns-stats .columns-stats-items {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width >= 768px) {
+  .columns-stats .columns-stats-feature,
+  .columns-stats .columns-stats-item {
+    padding-top: 15px;
+  }
+
+  .columns-stats .columns-stats-content,
+  .columns-stats .columns-stats-text {
+    padding-right: 40px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .columns-stats .columns-stats-content > .columns-stats-figure,
+  .columns-stats .columns-stats-text > .columns-stats-figure {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.34px;
+  }
+}
+
+/* desktop: feature card (2/3) beside the stat list (1/3), source large breakpoint */
+@media (width >= 1024px) {
+  .columns-stats > div {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  /* source .featurecard.spruce-forest-theme.short */
+  .columns-stats .columns-stats-feature {
+    display: flex;
+    align-items: stretch;
+    min-height: 380px;
+    margin: 15px 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--color-forest);
+    box-shadow: rgb(0 0 0 / 10%) 0 10px 20px 0;
+    color: var(--color-eggshell);
+  }
+
+  .columns-stats .columns-stats-media {
+    position: relative;
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .columns-stats .columns-stats-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+  }
+
+  /* source .card-content.p-40: padding 30px, centred; header margin 20px + footer spacer 30px */
+  .columns-stats .columns-stats-content {
+    display: flex;
+    box-sizing: border-box;
+    flex: 1 1 50%;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  .columns-stats .columns-stats-content > * {
+    letter-spacing: -0.46px;
+  }
+
+  .columns-stats .columns-stats-content > :last-child {
+    margin-bottom: 50px;
+  }
+
+  /* source span.text-color-neon-green.text-jumbo */
+  .columns-stats .columns-stats-content > .columns-stats-figure {
+    color: var(--color-neon);
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -0.8px;
+  }
+
+  /* stat list (source .introImageVariant .alignIconLeft) */
+  .columns-stats .columns-stats-item {
+    display: flex;
+    align-items: flex-start;
+    max-width: 400px;
+    padding: 0 0 27px;
+  }
+
+  /* source hr.spruce-forest-theme: 400px, 2px inset rule, margin 9px 0 */
+  .columns-stats .columns-stats-item + .columns-stats-item {
+    margin-top: 9px;
+    padding-top: 30px;
+    border-top: 1px solid rgb(154 154 154);
+    box-shadow: inset 0 1px 0 rgb(238 238 238);
+  }
+
+  .columns-stats .columns-stats-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .columns-stats .columns-stats-icon {
+    flex: 0 0 var(--columns-stats-icon-size);
+  }
+
+  .columns-stats .columns-stats-text {
+    box-sizing: border-box;
+    flex: 0 1 230px;
+    max-width: 230px;
+    margin-top: 20px;
+    padding: 0 0 0 30px;
+  }
+}

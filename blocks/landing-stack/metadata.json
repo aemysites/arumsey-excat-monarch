@@ -1,0 +1,31 @@
+{
+  "variantName": "landing-stack",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": ""
+  },
+  "contentPattern": {
+    "structure": "many rows, each a landing panel: cells are columns (text, image, or an image gallery); image-only rows become image strips",
+    "rows": "n"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_3ad39daea42d"
+  ],
+  "usage": "A full landing-page stack (hero, offers, info panels, image strip, service cards) captured as one block on the self-employed taxes page.",
+  "reuseGuidance": "Prefer splitting into dedicated blocks (columns-banner, columns-promo-card, cards) when re-authoring; this block keeps the composed stack renderable as imported.",
+  "sectionStyles": [
+    "forest",
+    "green",
+    "bright-green",
+    "eggshell",
+    "neon",
+    "white",
+    "black"
+  ]
+}

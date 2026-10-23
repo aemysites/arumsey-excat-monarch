@@ -1,0 +1,35 @@
+{
+  "variantName": "newsletter-signup",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "e-mail newsletter sign-up form: one e-mail field and a submit button"
+  },
+  "contentPattern": {
+    "structure": "one cell (or rows): optional heading/intro text; paragraph with the field placeholder (trailing * = required); link whose text is the button label and href the POST endpoint; optional paragraph after the link = success message, next = error message"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_f2e0c1b5464a"
+  ],
+  "usage": {
+    "pagesFound": 2,
+    "examplePages": [
+      "https://www.hrblock.com/tax-offices/business-services/small-business-bookkeeping-services/",
+      "https://www.hrblock.com/tax-offices/business-services/small-business-payroll-services/"
+    ]
+  },
+  "reuseGuidance": "Use for inline e-mail capture. The endpoint must accept a POST with form field \"email\"; until one is configured authors can use # to show the success message only.",
+  "variants": {
+    "v_f2e0c1b5464a": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 2
+    }
+  }
+}

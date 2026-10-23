@@ -1,0 +1,33 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text + button",
+    "purpose": "Expandable FAQ list of questions and answers"
+  },
+  "contentPattern": {
+    "structure": "One row per question: cell 1 = question text, cell 2 = answer (text, lists, links, buttons). An optional single-cell row before the first question is kept as an intro"
+  },
+  "options": [
+    {
+      "class": "light",
+      "label": "Light"
+    },
+    {
+      "class": "light-2",
+      "label": "Light 2"
+    }
+  ],
+  "memberVariantIds": [
+    "v_ae31224f5efa",
+    "v_fe746cec8e3f",
+    "v_557a637f72a2"
+  ],
+  "usage": "FAQ sections on product, service and info pages.",
+  "reuseGuidance": "Use for plain question/answer lists. For items with icons, side imagery or checklists use accordion-media. Background colour is set by section metadata Style, not by a block option."
+}

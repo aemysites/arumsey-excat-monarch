@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/financial-services/emerald-card-services/",
+  "path": "financial-services/emerald-card-services",
+  "timestamp": "2026-10-22T18:40:43.046Z",
+  "title": "Emerald Prepaid Mastercard Services & Features | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "columns-promo-card",
+    "software-download",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "d4c454421d77"
+}

@@ -1,0 +1,147 @@
+/*
+ * tabs-pill
+ * Values from https://www.hrblock.com/online-tax-filing/deluxe-online-tax-filing/
+ * (.reframe-tabs .outer-tab-section / .tab-holder / .t-btn).
+ * Source tiers: < 768px full-bleed band with compact tabs, 768-1199px full-bleed band,
+ * >= 1200px centred pill track.
+ * Track colour follows the section: white on styled (cream, green, grey...) sections,
+ * cream on white / unstyled sections. Tab labels stay forest because the track is always light.
+ */
+.tabs-pill {
+  --tabs-pill-track: var(--color-eggshell);
+  --tabs-pill-tab-color: var(--color-forest);
+  --tabs-pill-active-background: var(--color-white);
+  --tabs-pill-active-border: var(--color-black);
+  --tabs-pill-focus: #0060c6;
+}
+
+main > .section:is(.eggshell, .light, .highlight, .light-grey, .neon) .tabs-pill {
+  --tabs-pill-track: var(--color-white);
+}
+
+/* light-on-dark sections: white track; panel copy that is not a fragment block uses on-dark text */
+main > .section:is(.green, .bright-green, .forest, .charcoal, .black) .tabs-pill {
+  --tabs-pill-track: var(--color-white);
+  --tabs-pill-panel-color: var(--on-dark-text-color);
+}
+
+/* tab track: full-bleed band on mobile/tablet */
+.tabs-pill .tabs-pill-list {
+  display: flex;
+  justify-content: safe center;
+  align-items: center;
+  margin: 0 calc(-1 * var(--content-gutter)) 30px;
+  padding: 5px 30px;
+  background-color: var(--tabs-pill-track);
+  overflow: auto hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.tabs-pill .tabs-pill-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-pill .tabs-pill-tab {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  height: 50px;
+  margin: 15px 10px;
+  padding: 10px 15px;
+  border: var(--button-border-width) solid transparent;
+  border-radius: var(--button-radius);
+  background-color: transparent;
+  color: var(--tabs-pill-tab-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  letter-spacing: var(--button-letter-spacing);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tabs-pill .tabs-pill-tab:hover,
+.tabs-pill .tabs-pill-tab[aria-selected='true'] {
+  border-color: var(--tabs-pill-active-border);
+  background-color: var(--tabs-pill-active-background);
+  color: var(--tabs-pill-tab-color);
+}
+
+.tabs-pill .tabs-pill-tab:focus {
+  outline: 0;
+}
+
+.tabs-pill .tabs-pill-tab:focus-visible {
+  outline: 2px solid var(--tabs-pill-focus);
+  outline-offset: 2px;
+}
+
+/* panels */
+.tabs-pill .tabs-pill-panel {
+  color: var(--tabs-pill-panel-color, currentcolor);
+  text-align: start;
+}
+
+.tabs-pill .tabs-pill-panel[hidden] {
+  display: none;
+}
+
+.tabs-pill .tabs-pill-panel:focus {
+  outline: 0;
+}
+
+.tabs-pill .tabs-pill-panel:focus-visible {
+  outline: 2px solid var(--tabs-pill-focus);
+  outline-offset: 4px;
+}
+
+.tabs-pill .tabs-pill-panel > :first-child {
+  margin-top: 0;
+}
+
+/* fragment sections loaded into a panel sit inside the block, not main */
+.tabs-pill .tabs-pill-panel > .section.tabs-pill-fragment {
+  padding: 0;
+}
+
+.tabs-pill .tabs-pill-panel > .section.tabs-pill-fragment > div {
+  max-width: none;
+  padding: 0;
+}
+
+@media (width >= 768px) {
+  .tabs-pill .tabs-pill-list {
+    margin-bottom: 45px;
+    padding-block: 0;
+  }
+
+  .tabs-pill .tabs-pill-tab {
+    height: var(--button-height);
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+  }
+}
+
+@media (width >= 992px) {
+  .tabs-pill .tabs-pill-list {
+    margin-bottom: 60px;
+  }
+}
+
+/* desktop: centred pill track */
+@media (width >= 1200px) {
+  .tabs-pill .tabs-pill-list {
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto 60px;
+    padding: 0;
+    border-radius: 88px;
+  }
+
+  .tabs-pill .tabs-pill-tab {
+    margin: 12px;
+  }
+}

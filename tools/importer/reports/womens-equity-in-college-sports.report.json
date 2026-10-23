@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/womens-equity-in-college-sports/",
+  "path": "womens-equity-in-college-sports",
+  "timestamp": "2026-10-22T19:50:26.967Z",
+  "title": "NCAA Women’s Equity: Gender Equity in College Sports | H&R Block®",
+  "template": "info-photo-hero",
+  "blocks": [
+    "tabs-pill",
+    "cards-product",
+    "cards-feature",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/womens-equity-in-college-sports-tab-1",
+    "fragments/womens-equity-in-college-sports-tab-2"
+  ],
+  "importScript": "c48ce518734c"
+}

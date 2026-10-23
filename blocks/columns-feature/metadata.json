@@ -1,0 +1,57 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list"
+  },
+  "contentPattern": {
+    "structure": "one row, two cells: feature text (heading, icon or numbered list, price, CTAs) beside a product/people image",
+    "rows": "1"
+  },
+  "options": [
+    {
+      "class": "steps-2",
+      "label": "Steps 2"
+    },
+    {
+      "class": "accordion",
+      "label": "Accordion"
+    },
+    {
+      "class": "light",
+      "label": "Light"
+    },
+    {
+      "class": "steps",
+      "label": "Steps"
+    },
+    {
+      "class": "steps-3",
+      "label": "Steps 3"
+    }
+  ],
+  "memberVariantIds": [
+    "v_84bf42e3cdb5",
+    "v_6671353785e5",
+    "v_85f46a821b62",
+    "v_d8ca648792ed",
+    "v_00565a92e5e4",
+    "v_5a29f4fbb9db"
+  ],
+  "usage": "Product/feature split section with an icon list or numbered steps beside an image.",
+  "reuseGuidance": "steps/steps-2/steps-3 number the list in the text cell (steps-2 wider spacing, steps-3 with dividers); light flows an icon list in two columns; accordion turns headings in the text cell into expandable panels.",
+  "sectionStyles": [
+    "forest",
+    "green",
+    "bright-green",
+    "eggshell",
+    "neon",
+    "white",
+    "black"
+  ]
+}

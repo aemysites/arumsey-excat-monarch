@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/corporate/tax-franchise/",
+  "path": "corporate/tax-franchise",
+  "timestamp": "2026-10-22T19:52:16.653Z",
+  "title": "Selling Your Tax Business | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "accordion-faq",
+    "search-articles",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "cc79b2fd70c8"
+}

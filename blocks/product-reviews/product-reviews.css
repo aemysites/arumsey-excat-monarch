@@ -1,0 +1,503 @@
+/* product-reviews: values from source computed styles (Bazaarvoice review list on hrblock.com) */
+.product-reviews {
+  --product-reviews-text: var(--text-color);
+  --product-reviews-heading: var(--color-black);
+  --product-reviews-muted: #545454;
+  --product-reviews-control-text: #333;
+  --product-reviews-control-border: rgb(17 17 17 / 60%);
+  --product-reviews-panel-bg: #e4e5e5;
+  --product-reviews-panel-rule: #eaeaea;
+  --product-reviews-panel-text: #545454;
+  --product-reviews-bar-fill: var(--color-bright-green);
+  --product-reviews-bar-track: #d6d6d6;
+  --product-reviews-star: #fcb81c;
+  --product-reviews-star-empty: #d6d6d6;
+  --product-reviews-rule: #545454;
+  --product-reviews-response-head-bg: #f1f1f1;
+  --product-reviews-more-bg: #11a63d;
+  --product-reviews-more-text: var(--color-white);
+
+  color: var(--product-reviews-text);
+  font-size: 15px;
+  line-height: 18px;
+}
+
+/* light-on-dark sections: text outside the light panels switches to the on-dark tokens */
+.section:is(.green, .bright-green, .forest, .charcoal, .black) .product-reviews {
+  --product-reviews-text: var(--on-dark-text-color);
+  --product-reviews-heading: var(--on-dark-heading-color);
+  --product-reviews-muted: var(--on-dark-text-color);
+  --product-reviews-rule: var(--on-dark-text-color);
+}
+
+/* config-only block (reviews come from a third-party widget on the source): render nothing */
+.product-reviews:has(> .product-reviews-inner:empty) {
+  display: none;
+}
+
+.product-reviews .product-reviews-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* heading row (source h2 "Reviews") */
+.product-reviews .product-reviews-header {
+  padding: 0 10px;
+}
+
+.product-reviews .product-reviews-header :is(h1, h2, h3, h4, h5, h6) {
+  margin: 22px 0 0;
+  color: var(--product-reviews-heading);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: normal;
+}
+
+.product-reviews .product-reviews-header p {
+  margin: 0;
+}
+
+/* panel labels: Rating Snapshot / Overall Rating / Average Customer Ratings */
+.product-reviews .product-reviews-label {
+  margin: 0;
+  padding: 10px;
+  color: var(--product-reviews-muted);
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+/* rating snapshot */
+.product-reviews .product-reviews-snapshot {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  border-bottom: 1px solid var(--product-reviews-rule);
+}
+
+.product-reviews .product-reviews-snapshot > * {
+  padding: 0 10px;
+}
+
+.product-reviews .product-reviews-distribution {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+
+.product-reviews .product-reviews-distribution .product-reviews-label {
+  padding: 10px 0;
+}
+
+.product-reviews .product-reviews-overall-col .product-reviews-label {
+  padding: 10px 0 14px;
+}
+
+.product-reviews .product-reviews-overall {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 11px;
+  padding-bottom: 5px;
+}
+
+.product-reviews .product-reviews-overall-value {
+  grid-row: span 2;
+  padding: 5px 5px 5px 0;
+  color: var(--product-reviews-muted);
+  font-size: 45px;
+  line-height: 40px;
+}
+
+.product-reviews .product-reviews-stars {
+  --product-reviews-pct: calc(var(--product-reviews-rating, 0) / 5 * 100%);
+
+  display: inline-block;
+  width: max-content;
+  background: linear-gradient(90deg, var(--product-reviews-star) var(--product-reviews-pct), var(--product-reviews-star-empty) var(--product-reviews-pct));
+  background-clip: text;
+  color: transparent;
+  font-size: 18px;
+  line-height: 19px;
+}
+
+.product-reviews .product-reviews-overall .product-reviews-stars {
+  align-self: end;
+}
+
+.product-reviews .product-reviews-overall-count {
+  align-self: start;
+  color: var(--product-reviews-muted);
+  font-size: 13px;
+  line-height: 15.6px;
+}
+
+/* bars (distribution rows, average ratings, sub-ratings) */
+.product-reviews .product-reviews-bar {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 45px;
+  align-items: center;
+  min-height: 23px;
+  color: var(--product-reviews-muted);
+  font-size: 13px;
+  line-height: 15.6px;
+}
+
+.product-reviews .product-reviews-bar-label {
+  white-space: nowrap;
+}
+
+.product-reviews .product-reviews-bar-track {
+  position: relative;
+  display: block;
+  height: 13px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background-color: var(--product-reviews-bar-track);
+  overflow: hidden;
+}
+
+.product-reviews .product-reviews-bar-fill {
+  display: block;
+  height: 100%;
+  background-color: var(--product-reviews-bar-fill);
+}
+
+/* segmented bars in the grey panels (5 segments with gaps) */
+.product-reviews :is(.product-reviews-averages, .product-reviews-subratings) .product-reviews-bar {
+  grid-template-columns: minmax(0, 1fr) 30px;
+  min-height: 0;
+  color: var(--product-reviews-panel-text);
+}
+
+.product-reviews :is(.product-reviews-averages, .product-reviews-subratings) .product-reviews-bar-label {
+  grid-column: 1 / -1;
+  padding: 0 5px;
+}
+
+.product-reviews :is(.product-reviews-averages, .product-reviews-subratings) .product-reviews-bar-track {
+  margin: 10px 5px;
+  border-radius: 0;
+}
+
+.product-reviews :is(.product-reviews-averages, .product-reviews-subratings) .product-reviews-bar-track::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(20% - 2px), var(--product-reviews-panel-bg) calc(20% - 2px) 20%);
+}
+
+.product-reviews :is(.product-reviews-averages, .product-reviews-subratings) .product-reviews-bar-value {
+  padding: 5px;
+}
+
+/* average customer ratings panel */
+.product-reviews .product-reviews-averages {
+  margin: 0 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--product-reviews-panel-rule);
+  background-color: var(--product-reviews-panel-bg);
+  color: var(--product-reviews-panel-text);
+}
+
+.product-reviews .product-reviews-averages > .product-reviews-label {
+  color: var(--product-reviews-panel-text);
+  text-align: center;
+}
+
+.product-reviews .product-reviews-averages-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 9px 10px 0;
+}
+
+/* filter / status / sort toolbar */
+.product-reviews .product-reviews-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px 26px;
+  border-bottom: 1px solid var(--product-reviews-rule);
+}
+
+.product-reviews .product-reviews-filter {
+  flex: 1 0 100%;
+  margin-bottom: 25px;
+}
+
+.product-reviews .product-reviews-filter label {
+  display: block;
+  padding: 10px 0;
+  color: var(--product-reviews-muted);
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+.product-reviews .product-reviews-toolbar select {
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  background-image: linear-gradient(45deg, transparent 50%, currentcolor 50%), linear-gradient(135deg, currentcolor 50%, transparent 50%);
+  background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+  color: var(--product-reviews-control-text);
+  font: inherit;
+  font-size: 13px;
+  line-height: 15.6px;
+  cursor: pointer;
+}
+
+.product-reviews .product-reviews-filter select {
+  min-width: 125px;
+  margin-top: 5px;
+  padding: 12px 34px 12px 16px;
+  border: 1px solid var(--product-reviews-control-border);
+  border-radius: 3.9px;
+  background-color: var(--color-white);
+}
+
+.product-reviews .product-reviews-status {
+  order: 1;
+  flex: 1 1 100%;
+  margin: 0;
+  padding: 10px 0;
+  color: var(--product-reviews-muted);
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+.product-reviews .product-reviews-sort {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  min-height: 40px;
+  border: 1px solid var(--product-reviews-control-border);
+  border-radius: 3.9px;
+  background-color: var(--color-white);
+}
+
+.product-reviews .product-reviews-sort label {
+  flex: none;
+  padding: 0 6.5px;
+  color: var(--product-reviews-control-text);
+  font-size: 13px;
+}
+
+.product-reviews .product-reviews-sort select {
+  flex: 1 1 auto;
+  align-self: stretch;
+  padding: 0 34px 0 2px;
+}
+
+.product-reviews .product-reviews-response strong {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+/* review list */
+.product-reviews .product-reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.product-reviews .product-reviews-review {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0 10px;
+}
+
+.product-reviews .product-reviews-review-main {
+  padding: 10px 10px 15px;
+}
+
+.product-reviews .product-reviews-content {
+  color: var(--product-reviews-muted);
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+.product-reviews .product-reviews-content p {
+  margin: 0 0 5px;
+}
+
+.product-reviews .product-reviews-content .product-reviews-title {
+  margin: 0 0 10px;
+  color: var(--product-reviews-muted);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+.product-reviews .product-reviews-content .product-reviews-author {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.product-reviews .product-reviews-content .product-reviews-date {
+  margin: 8px 0 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.product-reviews .product-reviews-content :is(.product-reviews-pros, .product-reviews-cons) {
+  margin: 0;
+  line-height: 23.5px;
+}
+
+.product-reviews .product-reviews-content .product-reviews-pros + .product-reviews-cons {
+  margin-top: 0;
+}
+
+.product-reviews .product-reviews-content :is(.product-reviews-pros, .product-reviews-cons) strong {
+  margin-right: 5px;
+}
+
+.product-reviews .product-reviews-content :is(.product-reviews-pros, .product-reviews-cons)::before {
+  display: inline-block;
+  width: 16px;
+  padding-right: 6px;
+  font-size: 15px;
+}
+
+.product-reviews .product-reviews-content .product-reviews-pros::before {
+  content: '\2295';
+}
+
+.product-reviews .product-reviews-content .product-reviews-cons::before {
+  content: '\2296';
+}
+
+.product-reviews .product-reviews-content .product-reviews-recommend {
+  margin: 10px 0 0;
+  line-height: 19px;
+}
+
+.product-reviews .product-reviews-content .product-reviews-recommend::before {
+  content: '\2714';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  margin-right: 11px;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 8px;
+  line-height: 1;
+  vertical-align: -2px;
+}
+
+/* sub-ratings panel (grey, right column on desktop) */
+.product-reviews .product-reviews-subratings {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 30px;
+  background-color: var(--product-reviews-panel-bg);
+  color: var(--product-reviews-panel-text);
+}
+
+/* company response */
+.product-reviews .product-reviews-response {
+  margin: 15px 0;
+  border: 1px solid var(--product-reviews-rule);
+  border-radius: 4px;
+  overflow: hidden;
+  color: var(--product-reviews-muted);
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+.product-reviews .product-reviews-response > * {
+  margin: 0;
+  padding: 0 15px 5px;
+}
+
+.product-reviews .product-reviews-response > :first-child {
+  margin-bottom: 10px;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--product-reviews-rule);
+  background-color: var(--product-reviews-response-head-bg);
+}
+
+.product-reviews .product-reviews-response > :last-child {
+  padding-bottom: 15px;
+}
+
+/* load more (source Bazaarvoice button, not the site pill button) */
+.product-reviews button.product-reviews-more {
+  align-self: center;
+  min-width: 210px;
+  min-height: 48px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 0;
+  background-color: var(--product-reviews-more-bg);
+  color: var(--product-reviews-more-text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+
+.product-reviews button.product-reviews-more[hidden] {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .product-reviews .product-reviews-snapshot {
+    flex-direction: row;
+  }
+
+  .product-reviews .product-reviews-snapshot > * {
+    flex: 0 0 420px;
+    max-width: 33.333%;
+  }
+
+  .product-reviews .product-reviews-distribution {
+    padding-bottom: 5px;
+  }
+
+  .product-reviews .product-reviews-averages-items {
+    grid-template-columns: repeat(auto-fit, 205px);
+    justify-content: center;
+    padding: 9px 10px 0;
+  }
+
+  .product-reviews .product-reviews-averages .product-reviews-bar-track {
+    width: 150px;
+  }
+
+  .product-reviews .product-reviews-filter select {
+    min-width: 125px;
+  }
+
+  .product-reviews .product-reviews-status {
+    order: 0;
+    flex: 0 1 auto;
+  }
+
+  .product-reviews .product-reviews-sort {
+    flex: 0 0 auto;
+    min-width: 248px;
+  }
+
+  .product-reviews .product-reviews-review {
+    grid-template-columns: minmax(0, 1fr) 441px;
+  }
+
+  .product-reviews .product-reviews-response {
+    grid-column: 1 / -1;
+    margin: 15px 10px;
+  }
+}

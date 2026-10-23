@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/financial-services/tax-refund-payment/",
+  "path": "financial-services/tax-refund-payment",
+  "timestamp": "2026-10-22T18:43:25.061Z",
+  "title": "Refund Transfer - Tax Refund Payment | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "cards-icon",
+    "cards-icon",
+    "hero-split",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/testimonials-forest"
+  ],
+  "importScript": "d4c454421d77"
+}

@@ -1,0 +1,188 @@
+{
+  "variantName": "hero-split",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "product / service hero: text column (eyebrow, heading, text, optional price block or link selector, CTAs) beside a framed photo or Lottie animation"
+  },
+  "contentPattern": {
+    "structure": "one row: cell 1 = eyebrow/heading, text, optional list of links (rendered as a select + go button; a following CTA labels the button), CTA links; cell 2 = picture, or a link to a Lottie .json file. pricing: price paragraphs (or a list for side-by-side prices) between heading and CTAs; struck-through text = old price"
+  },
+  "options": [
+    {
+      "class": "bleed",
+      "label": "Bleed"
+    },
+    {
+      "class": "pricing",
+      "label": "Pricing"
+    }
+  ],
+  "memberVariantIds": [
+    "v_d9f1559ec23d",
+    "v_070af8d1462e",
+    "v_2f0114cf5c4a",
+    "v_46cacff0c91b",
+    "v_483b997d28f5",
+    "v_cf3cbce076ee",
+    "v_5f71179ebc39",
+    "v_0e120bec2be0",
+    "v_2255b24b21fe",
+    "v_2e56fcdb2264",
+    "v_3c1f1ff296dc",
+    "v_5521cc1a50eb",
+    "v_6a24cec1f072",
+    "v_74c9c580c6b1",
+    "v_780aea081e79",
+    "v_88b94edf43ea",
+    "v_ac862f922186",
+    "v_c8d9469b4988",
+    "v_d2d7a77047c2",
+    "v_dcc0cacff4a9",
+    "v_f4ceadf08646"
+  ],
+  "usage": {
+    "pagesFound": 52,
+    "examplePages": [
+      "https://www.hrblock.com/tax-software/updates-back-editions/",
+      "https://www.hrblock.com/tax-software/updates-back-editions/2021-back-editions/",
+      "https://www.hrblock.com/tax-software/updates-back-editions/2022-back-editions/",
+      "https://www.hrblock.com/tax-software/updates-back-editions/2023-back-editions/",
+      "https://www.hrblock.com/tax-software/updates-back-editions/2024-back-editions/"
+    ]
+  },
+  "reuseGuidance": "Default for text-beside-media heroes. Background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class.",
+  "variants": {
+    "v_d9f1559ec23d": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 21,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_070af8d1462e": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 3,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_2f0114cf5c4a": {
+      "option": "bleed",
+      "description": "list",
+      "pagesFound": 3,
+      "confidenceReason": "Merged into hero-split (.bleed): media fills the right half to the page edge. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_46cacff0c91b": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 3,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_483b997d28f5": {
+      "option": "pricing",
+      "description": "list",
+      "pagesFound": 3,
+      "confidenceReason": "Merged into hero-split (.pricing): price block (rating, price, or two-price split) above the CTAs. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_cf3cbce076ee": {
+      "option": "bleed",
+      "description": "list",
+      "pagesFound": 3,
+      "confidenceReason": "Merged into hero-split (.bleed): media fills the right half to the page edge. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_5f71179ebc39": {
+      "option": "pricing",
+      "description": "list",
+      "pagesFound": 2,
+      "confidenceReason": "Merged into hero-split (.pricing): price block (rating, price, or two-price split) above the CTAs. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_0e120bec2be0": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_2255b24b21fe": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_2e56fcdb2264": {
+      "option": "pricing",
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split (.pricing): price block (rating, price, or two-price split) above the CTAs. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_3c1f1ff296dc": {
+      "option": "pricing",
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split (.pricing): price block (rating, price, or two-price split) above the CTAs. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_5521cc1a50eb": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_6a24cec1f072": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_74c9c580c6b1": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_780aea081e79": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_88b94edf43ea": {
+      "option": "bleed",
+      "description": "heading + text + image",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split (.bleed): media fills the right half to the page edge. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_ac862f922186": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_c8d9469b4988": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_d2d7a77047c2": {
+      "option": "bleed",
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split (.bleed): media fills the right half to the page edge. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_dcc0cacff4a9": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_f4ceadf08646": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1,
+      "confidenceReason": "Merged into hero-split default: text column beside a framed photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    }
+  }
+}

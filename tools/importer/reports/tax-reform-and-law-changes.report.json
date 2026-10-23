@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-reform-and-law-changes/",
+  "path": "tax-reform-and-law-changes",
+  "timestamp": "2026-10-22T19:17:38.265Z",
+  "title": "Current Tax Reform & How It Impacts You | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "tabs-pill",
+    "accordion-media",
+    "cards-tip",
+    "cards-product",
+    "cards-article",
+    "promo-strip",
+    "hero-split",
+    "columns-banner",
+    "hero-banner"
+  ],
+  "fragments": [
+    "fragments/tax-reform-and-law-changes-tab-1",
+    "fragments/tax-reform-and-law-changes-tab-2",
+    "fragments/tax-reform-and-law-changes-tab-3",
+    "fragments/tax-reform-and-law-changes-tab-4",
+    "fragments/tax-reform-and-law-changes-tab-5",
+    "fragments/tax-reform-and-law-changes-tab-6",
+    "fragments/tax-reform-and-law-changes-tab-7"
+  ],
+  "importScript": "d4c454421d77"
+}

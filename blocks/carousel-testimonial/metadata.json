@@ -1,0 +1,29 @@
+{
+  "variantName": "carousel-testimonial",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + button + text + list",
+    "purpose": "testimonial slider: optional intro heading beside a carousel of quote cards (author name/role, optional photo, quote) with prev/next arrows and dot indicators"
+  },
+  "contentPattern": {
+    "structure": "optional first row with a single cell containing the intro heading/text; then one row per testimonial: cell 1 = author (optional photo, name, role), cell 2 = quote. A single-cell row is a quote only. One testimonial renders without controls"
+  },
+  "options": [
+    {
+      "class": "photo",
+      "label": "Photo"
+    }
+  ],
+  "memberVariantIds": [
+    "v_72964d82c31a",
+    "v_01dc7ce3cb6c",
+    "v_a224352de784"
+  ],
+  "usage": "Customer or employee testimonials on resource, landing and corporate pages. Use `photo` when author photos are present.",
+  "reuseGuidance": "Use for quote/testimonial rotators. For image hero slideshows use a plain carousel."
+}

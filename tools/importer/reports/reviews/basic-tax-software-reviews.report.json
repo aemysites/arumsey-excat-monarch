@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/reviews/basic-tax-software-reviews/",
+  "path": "reviews/basic-tax-software-reviews",
+  "timestamp": "2026-10-22T21:21:41.483Z",
+  "title": "Basic Tax Software Reviews | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "product-reviews",
+    "review-filter"
+  ],
+  "importScript": "d4c454421d77"
+}

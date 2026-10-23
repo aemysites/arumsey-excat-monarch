@@ -1,0 +1,56 @@
+{
+  "variantName": "accordion-media",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "Accordion of feature items with optional leading icons, beside an image that follows the open item"
+  },
+  "contentPattern": {
+    "structure": "Item rows: cell 1 = title (optional leading icon), cell 2 = body, optional cell 3 = image shown while that item is open. Single-cell rows before the items are an intro (heading/text), after the items a footer (e.g. \"See all\" link); a single-cell image-only row is a shared side image"
+  },
+  "options": [
+    {
+      "class": "light",
+      "label": "Light"
+    },
+    {
+      "class": "link-list",
+      "label": "Link List"
+    },
+    {
+      "class": "dark",
+      "label": "Dark"
+    },
+    {
+      "class": "image-light",
+      "label": "Image Light"
+    },
+    {
+      "class": "checklist",
+      "label": "Checklist"
+    },
+    {
+      "class": "light-2",
+      "label": "Light 2"
+    }
+  ],
+  "memberVariantIds": [
+    "v_da97b489444e",
+    "v_04186d3656c4",
+    "v_1d64e272a0f8",
+    "v_3279d7fd6b8b",
+    "v_73a9c9637674",
+    "v_8b3e05dcd044",
+    "v_90b42b758777",
+    "v_a9488426bbac",
+    "v_cb5c070d1267",
+    "v_d3de014286ec"
+  ],
+  "usage": "Feature and benefit lists with icons and imagery on product and office pages.",
+  "reuseGuidance": "Use link-list for two columns of items without imagery, checklist when item bodies are check-marked lists. Plain FAQs belong in accordion-faq. Background colour is set by section metadata Style."
+}

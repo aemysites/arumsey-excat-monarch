@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/income/foreign/foreign-earned-income-exclusion-for-u-s-expats/",
+  "path": "expat-tax-preparation/resource-center/income/foreign/foreign-earned-income-exclusion-for-u-s-expats",
+  "timestamp": "2026-10-22T20:55:19.071Z",
+  "title": "What U.S. Expats Need to Know About The Foreign Earned Income Exclusion (FEIE) | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body",
+    "cards-article"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

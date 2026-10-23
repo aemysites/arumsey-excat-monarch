@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-software/deluxe-tax-software/",
+  "path": "tax-software/deluxe-tax-software",
+  "timestamp": "2026-10-22T19:20:41.409Z",
+  "title": "H&R Block Deluxe + State Tax Software | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "product-reviews",
+    "cards-pricing",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "columns-feature",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "table-data"
+  ],
+  "importScript": "d4c454421d77"
+}

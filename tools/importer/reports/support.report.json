@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/support/",
+  "path": "support",
+  "timestamp": "2026-10-22T19:43:21.430Z",
+  "title": "Tax Support - Online & Tax Software Product Support | H&R Block®",
+  "template": "info-photo-hero",
+  "blocks": [
+    "tabs-pill",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/guarantees-cards",
+    "fragments/support-tab-1",
+    "fragments/support-tab-2",
+    "fragments/support-tab-3",
+    "fragments/support-tab-4"
+  ],
+  "importScript": "c48ce518734c"
+}

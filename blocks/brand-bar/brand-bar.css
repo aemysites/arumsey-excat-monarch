@@ -1,0 +1,104 @@
+/* brand-bar: family-of-brands strip (source: header > .family-brands-nav) */
+
+/* the strip is full bleed; its own padding replaces the section gutter */
+main > .section > .brand-bar-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
+.brand-bar {
+  --brand-bar-bg: var(--color-black);
+  --brand-bar-hover-bg: #6e6e6e;
+  --brand-bar-active-bg: var(--color-white);
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 0 43px;
+  background-color: var(--brand-bar-bg);
+  transition: 0.2s;
+}
+
+/* on dark section styles the strip blends into the section */
+.section.forest .brand-bar,
+.section.green .brand-bar,
+.section.bright-green .brand-bar,
+.section.charcoal .brand-bar,
+.section.black .brand-bar {
+  --brand-bar-bg: transparent;
+}
+
+.brand-bar nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.brand-bar .brand-bar-item {
+  display: flex;
+  flex: 0 1 120px;
+  min-width: 0;
+  margin: 0;
+}
+
+.brand-bar .brand-bar-link {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 5px 0;
+  background-color: transparent;
+  color: var(--color-eggshell);
+  font-size: 16px;
+  line-height: 0;
+  text-decoration: none;
+  transition: 0.45s;
+}
+
+.brand-bar a.brand-bar-link:any-link {
+  color: var(--color-eggshell);
+  text-decoration: none;
+}
+
+.brand-bar .brand-bar-link picture {
+  display: contents;
+}
+
+.brand-bar .brand-bar-link img,
+.brand-bar .brand-bar-link .icon {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  transition: 0.45s;
+}
+
+.brand-bar .brand-bar-item.active .brand-bar-link {
+  background-color: var(--brand-bar-active-bg);
+  color: var(--color-black);
+}
+
+.brand-bar .brand-bar-item:not(.active) a.brand-bar-link:hover,
+.brand-bar .brand-bar-item:not(.active) a.brand-bar-link:focus-visible {
+  background-color: var(--brand-bar-hover-bg);
+  cursor: pointer;
+}
+
+.brand-bar .brand-bar-item:not(.active) a.brand-bar-link:hover img,
+.brand-bar .brand-bar-item:not(.active) a.brand-bar-link:focus-visible img {
+  filter: brightness(0) invert(1);
+}
+
+/* breakpoint-exception: source right-aligns the brands from 760px */
+@media (width >= 760px) {
+  .brand-bar nav > ul {
+    justify-content: flex-end;
+  }
+}

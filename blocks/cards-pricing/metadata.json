@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-pricing",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "",
+    "purpose": "pricing plan cards: optional tab label, tier heading, short description, feature list (bullet or icon items), price group pinned to the bottom, and primary button plus secondary link"
+  },
+  "contentPattern": {
+    "structure": "one row per plan card; optional first cell = short tab label shown above the card; main cell = optional eyebrow link, heading, description, list of features, \"Starting at\" label, price (e.g. $0), fee notes, button(s) and links"
+  },
+  "options": [
+    {
+      "class": "centered",
+      "label": "Centered"
+    }
+  ],
+  "memberVariantIds": [
+    "v_063b4b4002e8",
+    "v_439cd3eb9911",
+    "v_1c390d7c625b",
+    "v_785fac4d1907",
+    "v_c4491f4c957e",
+    "v_0da51bed9c10",
+    "v_638249b8529d",
+    "v_9c77581c1398",
+    "v_ac00ab43e902",
+    "v_bbc493c43e5a",
+    "v_df6b8e0369b9",
+    "v_e153afdd7e97"
+  ],
+  "usage": "Plan comparison grids (2-4 plans) on product, offer and home pages. Use `centered` when tier label, heading and price are centred.",
+  "reuseGuidance": "Use for any priced plan/tier comparison. For product cards with a photo use cards-product; for generic cards use cards."
+}

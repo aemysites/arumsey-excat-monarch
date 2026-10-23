@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/taxes/products/software/updates/22macintosh-federal/",
+  "path": "taxes/products/software/updates/22macintosh-federal",
+  "timestamp": "2026-10-22T22:00:48.284Z",
+  "title": "Download 2022 Federal Updates for Mac | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "software-download"
+  ],
+  "importScript": "d4c454421d77"
+}

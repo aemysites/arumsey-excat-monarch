@@ -1,0 +1,613 @@
+/* article-body: values from source computed styles (hrblock.com tax-center article .c1, 1440px + 390px) */
+.article-body {
+  --article-body-text: var(--text-color);
+  --article-body-link: var(--link-color);
+  --article-body-link-hover: var(--text-color);
+  --article-body-rule: var(--color-eggshell);
+  --article-body-prose-font: roboto, var(--body-font-family);
+
+  color: var(--article-body-text);
+}
+
+/* light-on-dark sections */
+.section.forest .article-body,
+.section.green .article-body,
+.section.bright-green .article-body,
+.section.charcoal .article-body,
+.section.black .article-body {
+  --article-body-text: var(--on-dark-text-color);
+  --article-body-link: var(--on-dark-link-color);
+  --article-body-link-hover: var(--on-dark-link-hover-color);
+  --article-body-rule: color-mix(in srgb, currentcolor 20%, transparent);
+}
+
+.article-body a:any-link {
+  color: var(--article-body-link);
+}
+
+.article-body a:hover {
+  color: var(--article-body-link-hover);
+}
+
+.article-body :where(p, li):not(:where(.article-body-content .section *)) a:any-link,
+.article-body :where(p, li):not(:where(.article-body-content .section *)) a:hover {
+  text-decoration: underline;
+}
+
+/* header: title */
+.article-body .article-body-header h1 {
+  margin: 0 0 20px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -1.04px;
+  color: inherit;
+}
+
+/* sidebar meta (source .tic-article-detail-bar--mobile: two columns, filled top to bottom) */
+.article-body .article-body-meta {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  margin: 30px 0 10px;
+}
+
+.article-body .article-body-meta-item {
+  box-sizing: border-box;
+  margin: 0 0 15px;
+  padding-right: 15px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.article-body .article-body-meta a:any-link {
+  font-family: var(--article-body-prose-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+
+.article-body .article-body-share {
+  display: flex;
+  grid-area: 3 / 1 / auto / span 2;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.article-body .article-body-share-label {
+  margin: 0 30px 0 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+/* social links render as the source icons; link text stays as the accessible name */
+.article-body a.article-body-social:any-link {
+  display: inline-block;
+  flex: none;
+  width: 18px;
+  height: 19px;
+  margin-right: 30px;
+  overflow: hidden;
+  background: url('linkedin.svg') center / contain no-repeat;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.article-body a.article-body-social-facebook:any-link {
+  width: 8px;
+  background-image: url('facebook.svg');
+}
+
+.article-body a.article-body-social-twitter:any-link {
+  width: 20px;
+  background-image: url('twitter.svg');
+}
+
+/* prose (source .article-main-content) */
+.article-body .article-body-content {
+  min-width: 0;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--article-body-rule);
+}
+
+.article-body .article-body-content:last-child {
+  margin-bottom: 0;
+}
+
+/* source places a <br> (one 21px line box) between the title/meta and the prose */
+.article-body .article-body-header ~ .article-body-content {
+  padding-top: 21px;
+}
+
+.article-body .article-body-content > :first-child {
+  margin-top: 0;
+}
+
+.article-body .article-body-content p:not(:where(.article-body-content .section *)) {
+  margin: 0 0 20px;
+  font-family: var(--article-body-prose-font);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.article-body .article-body-content h2:not(:where(.article-body-content .section *)) {
+  margin: 30px 0 10px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.57px;
+  color: inherit;
+}
+
+.article-body .article-body-content h3:not(:where(.article-body-content .section *)) {
+  margin: 30px 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.57px;
+  color: inherit;
+}
+
+.article-body .article-body-content ul:not(:where(.article-body-content .section *)),
+.article-body .article-body-content ol:not(:where(.article-body-content .section *)) {
+  margin: 14px 0;
+  padding: 0 0 0 40px;
+}
+
+.article-body .article-body-content li:not(:where(.article-body-content .section *)) {
+  margin: 0;
+  font-family: var(--article-body-prose-font);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.article-body .article-body-content strong:not(:where(.article-body-content .section *)) {
+  font-weight: 700;
+}
+
+.article-body .article-body-content img:not(:where(.article-body-content .section *)) {
+  max-width: 100%;
+  height: auto;
+}
+
+.article-body .article-body-table {
+  overflow-x: auto;
+}
+
+.article-body .article-body-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.article-body .article-body-table th,
+.article-body .article-body-table td {
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid var(--article-body-rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+/* author feature (source .tic-article-author-feature) */
+.article-body .article-body-author-intro {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  /* intro 20px + empty author description paragraph 20px */
+  margin-bottom: 40px;
+}
+
+.article-body .article-body-author-image {
+  flex: 0 0 80px;
+  margin: 0;
+}
+
+.article-body .article-body-author-image img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+}
+
+.article-body .article-body-author-name {
+  margin: 0;
+  font-family: var(--article-body-prose-font);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: var(--article-body-link);
+}
+
+.article-body .article-body-author-follow {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.article-body .article-body-author-follow a.article-body-social:any-link {
+  margin-right: 0;
+}
+
+@media (width >= 768px) {
+  .article-body .article-body-header h1 {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.8px;
+  }
+
+  .article-body .article-body-content p:not(:where(.article-body-content .section *)),
+  .article-body .article-body-content li:not(:where(.article-body-content .section *)) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .article-body .article-body-content h2:not(:where(.article-body-content .section *)) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .article-body .article-body-author-name {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .article-body .article-body-author-follow {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+@media (width >= 900px) {
+  /* 760px article column centred in the section, meta sidebar 150px wide in the left gutter
+     (tax-center articles; expat articles use their own layout below) */
+  .article-body:not(.expat) {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(0, 760px) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .article-body:not(.expat) > * {
+    grid-column: 2;
+  }
+
+  .article-body:not(.expat) .article-body-meta {
+    display: block;
+    grid-area: 1 / 1 / span 3;
+    width: 150px;
+    margin: 0;
+  }
+
+  .article-body:not(.expat) .article-body-meta-item {
+    margin: 0 0 40px;
+    padding: 0;
+  }
+
+  .article-body:not(.expat) .article-body-meta a:any-link {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+
+  .article-body:not(.expat) .article-body-share {
+    display: block;
+    margin: 0;
+  }
+
+  .article-body:not(.expat) .article-body-share-label {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .article-body:not(.expat) .article-body-content {
+    margin-bottom: 80px;
+    padding-bottom: 60px;
+  }
+
+  .article-body .article-body-author {
+    margin-bottom: 40px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   expat resource-center article (block class "expat", set for body.expat-article)
+   values from source computed styles (hrblock.com/expat-tax-preparation/resource-center
+   section.ba-article, 390 / 768 / 1024 / 1440px): charcoal text, 600-weight links without
+   underline, meta bar under the title below 992px, 200px sidebar + 800px column from 992px
+   --------------------------------------------------------------------------- */
+.article-body.expat {
+  --article-body-text: var(--color-black);
+  --article-body-link: var(--color-black);
+  --article-body-link-hover: var(--color-black);
+  --article-body-rule: #e5ebef;
+  --article-body-prose-font: var(--body-font-family);
+}
+
+.article-body.expat a:any-link:not(:where(.article-body-content .section *)),
+.article-body.expat :where(p, li):not(:where(.article-body-content .section *)) a:any-link,
+.article-body.expat :where(p, li):not(:where(.article-body-content .section *)) a:hover {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.article-body.expat .article-body-header h1 {
+  margin: 0;
+  padding: 5px 0 20px;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.57px;
+}
+
+/* meta bar: two columns filled top to bottom, 24px icon left of each item */
+.article-body.expat .article-body-meta {
+  align-items: center;
+  margin: 20px 0 40px;
+}
+
+.article-body.expat .article-body-meta-item {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.article-body.expat .article-body-meta-item:is(
+  .article-body-meta-read-time,
+  .article-body-meta-date,
+  .article-body-meta-author,
+  .article-body-meta-reviewer
+) {
+  min-height: 24px;
+  padding-left: 39px;
+  background: url('icon-read-time.svg') left center / 24px 24px no-repeat;
+}
+
+.article-body.expat .article-body-meta-item.article-body-meta-date {
+  background-image: url('icon-date.svg');
+}
+
+.article-body.expat .article-body-meta-item.article-body-meta-author {
+  background-image: url('icon-author.svg');
+}
+
+.article-body.expat .article-body-meta-item.article-body-meta-reviewer {
+  background-image: url('icon-reviewer.svg');
+}
+
+.article-body.expat .article-body-meta a:any-link {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.article-body.expat .article-body-share {
+  margin-top: 0;
+}
+
+.article-body.expat .article-body-share-label {
+  font-size: 16px;
+  line-height: 24.96px;
+}
+
+/* prose */
+.article-body.expat .article-body-content {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.article-body.expat .article-body-content p:not(:where(.article-body-content .section *)) {
+  margin: 0;
+  padding: 0 0 30px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 24.96px;
+  letter-spacing: -0.1px;
+}
+
+.article-body.expat .article-body-content strong:not(:where(.article-body-content .section *)) {
+  font-weight: 600;
+}
+
+.article-body.expat .article-body-content h2:not(:where(.article-body-content .section *)) {
+  margin: 0;
+  padding: 30px 0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.46px;
+}
+
+.article-body.expat .article-body-content h3:not(:where(.article-body-content .section *)) {
+  margin: 0;
+  padding: 5px 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.5px;
+  letter-spacing: -0.1px;
+}
+
+.article-body.expat .article-body-content ul:not(:where(.article-body-content .section *)),
+.article-body.expat .article-body-content ol:not(:where(.article-body-content .section *)) {
+  margin: 0 0 30px;
+  padding: 0 0 0 40px;
+}
+
+.article-body.expat .article-body-content ul:not(:where(.article-body-content .section *)) {
+  list-style-type: disc;
+}
+
+.article-body.expat .article-body-content li ul:not(:where(.article-body-content .section *)) {
+  list-style-type: circle;
+}
+
+.article-body.expat .article-body-content li:not(:where(.article-body-content .section *)) {
+  font-size: 18px;
+  line-height: 28.08px;
+}
+
+/* Key Takeaways (source .at-a-glance) */
+.article-body.expat .article-body-content .article-body-takeaways-label {
+  padding-bottom: 20px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.57px;
+}
+
+.article-body.expat .article-body-content .article-body-takeaways > :last-child {
+  padding-bottom: 40px;
+}
+
+/* featured image fills the article column (source img.post-featured-image) */
+.article-body.expat .article-body-content .article-body-featured-image {
+  padding-bottom: 40px;
+  line-height: 0;
+}
+
+.article-body.expat .article-body-featured-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* inline fragment (ways-to-file panel) */
+.article-body.expat .article-body-content > .section {
+  margin: 60px 0;
+}
+
+/* plain data tables (source figure.wp-block-table: inner grid lines, left aligned) */
+.article-body.expat .article-body-table {
+  margin: 0 0 16px;
+}
+
+.article-body.expat .article-body-table th,
+.article-body.expat .article-body-table td {
+  padding: 30px 20px;
+  border: 1px solid var(--article-body-rule);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.article-body.expat .article-body-table tr:first-child > * {
+  border-top: 0;
+}
+
+.article-body.expat .article-body-table tr > :first-child {
+  border-left: 0;
+}
+
+.article-body.expat .article-body-table tr > :last-child {
+  border-right: 0;
+}
+
+.article-body.expat .article-body-table tr:last-child > * {
+  border-bottom: 0;
+}
+
+@media (width >= 768px) {
+  .article-body.expat .article-body-header h1 {
+    padding-bottom: 40px;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.8px;
+  }
+
+  .article-body.expat .article-body-content p:not(:where(.article-body-content .section *)) {
+    font-size: 18px;
+    line-height: 28.08px;
+  }
+
+  .article-body.expat .article-body-content h2:not(:where(.article-body-content .section *)) {
+    padding: 40px 0 30px;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.57px;
+  }
+
+  .article-body.expat .article-body-content h3:not(:where(.article-body-content .section *)) {
+    font-size: 24px;
+    line-height: 28.08px;
+    letter-spacing: -0.25px;
+  }
+
+  .article-body.expat .article-body-content .article-body-takeaways-label {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .article-body.expat .article-body-content .article-body-takeaways > :last-child,
+  .article-body.expat .article-body-content .article-body-featured-image {
+    padding-bottom: 60px;
+  }
+}
+
+/* source desktop-small breakpoint: sidebar (1/6) + 40px gap + article column (2/3) */
+@media (width >= 992px) {
+  .article-body.expat {
+    display: grid;
+    grid-template-columns: calc(100% / 6) calc(200% / 3);
+    column-gap: 40px;
+    align-items: start;
+  }
+
+  .article-body.expat > * {
+    grid-column: 2;
+  }
+
+  .article-body.expat .article-body-meta {
+    display: block;
+    grid-area: 1 / 1 / span 3;
+    width: 150px;
+    margin: 0;
+  }
+
+  .article-body.expat .article-body-meta-item {
+    margin: 0 0 40px;
+    padding: 0;
+  }
+
+  /* icon stacked above the text */
+  .article-body.expat .article-body-meta-item:is(
+    .article-body-meta-read-time,
+    .article-body-meta-date,
+    .article-body-meta-author,
+    .article-body-meta-reviewer
+  ) {
+    padding: 42px 0 0;
+    background-position: left top;
+    background-size: 32px 32px;
+  }
+
+  .article-body.expat .article-body-share {
+    display: block;
+    margin: 0;
+  }
+
+  .article-body.expat .article-body-share-label {
+    margin: 0 0 10px;
+  }
+}

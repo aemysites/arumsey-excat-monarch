@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-offices/tax-prep/w-2-early-access/",
+  "path": "tax-offices/tax-prep/w-2-early-access",
+  "timestamp": "2026-10-22T19:15:35.761Z",
+  "title": "Understanding IRS Form W-2 | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "article-body",
+    "cards-article",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "d4c454421d77"
+}

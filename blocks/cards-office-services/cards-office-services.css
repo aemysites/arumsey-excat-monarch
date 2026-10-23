@@ -1,0 +1,168 @@
+/*
+ * cards-office-services
+ * Values from source .opp-services-container (hrblock.com office pages, breakpoint 768px).
+ * Colours come from the section (Section Metadata "Style"): text and links inherit the
+ * section foreground, the CTA uses the section's --button-primary-* tokens.
+ */
+.cards-office-services {
+  box-sizing: border-box;
+  padding: 60px 0 20px;
+  color: inherit;
+}
+
+/* intro heading (source h2.opp-services-title) */
+.cards-office-services .cards-office-services-intro {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.cards-office-services .cards-office-services-intro > * {
+  margin: 0;
+  color: inherit;
+}
+
+.cards-office-services .cards-office-services-intro h2 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  line-height: var(--heading-line-height-l);
+  letter-spacing: 0.12px;
+}
+
+/* a heading row between service rows starts a new group */
+.cards-office-services .cards-office-services-group-heading {
+  margin: 45px 0;
+  text-align: center;
+}
+
+.cards-office-services .cards-office-services-group-heading > * {
+  margin: 0;
+  color: inherit;
+}
+
+/* services list (source ul.opp-services) */
+.cards-office-services > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-office-services > ul + ul {
+  margin-top: 45px;
+}
+
+.cards-office-services > ul > li {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  gap: 20px;
+  letter-spacing: 0.12px;
+}
+
+.cards-office-services .cards-office-services-card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cards-office-services .cards-office-services-card-icon {
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.cards-office-services .cards-office-services-card-icon p {
+  margin: 0;
+}
+
+.cards-office-services .cards-office-services-card-icon picture,
+.cards-office-services .cards-office-services-card-icon img,
+.cards-office-services .cards-office-services-card-icon .icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+/* source img.opp-service-icon: neon tile behind the line icon */
+.cards-office-services .cards-office-services-card-icon img {
+  border-radius: 4px;
+  background-color: var(--color-neon);
+}
+
+/* service title (source strong.opp-service-title) */
+.cards-office-services .cards-office-services-card-title {
+  margin: 0;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+}
+
+.cards-office-services .cards-office-services-card-title strong {
+  font-weight: 900;
+}
+
+/* description (source span.opp-service-desc) */
+.cards-office-services .cards-office-services-card-body {
+  padding-right: 35px;
+}
+
+.cards-office-services .cards-office-services-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-office-services .cards-office-services-card-body p {
+  margin: 0 0 20px;
+}
+
+.cards-office-services a:any-link:not(.button) {
+  color: currentcolor;
+}
+
+/* closing CTA (source .btn-container .btn.btn-auto) */
+.cards-office-services .cards-office-services-cta {
+  margin-top: 100px;
+}
+
+.cards-office-services .cards-office-services-cta p {
+  margin: 0 0 20px;
+}
+
+main .cards-office-services .cards-office-services-cta a.button:any-link {
+  width: 100%;
+  min-height: 60px;
+  padding: 0 35px;
+}
+
+@media (width >= 768px) {
+  .cards-office-services {
+    max-width: 480px;
+    margin-inline: auto;
+    padding-top: 80px;
+  }
+
+  .cards-office-services > ul {
+    row-gap: 40px;
+  }
+
+  .cards-office-services > ul > li {
+    flex-basis: 33.33%;
+  }
+
+  .cards-office-services .cards-office-services-card-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .cards-office-services .cards-office-services-cta {
+    margin-top: 120px;
+  }
+
+  main .cards-office-services .cards-office-services-cta a.button:any-link {
+    width: auto;
+    min-height: 80px;
+  }
+}

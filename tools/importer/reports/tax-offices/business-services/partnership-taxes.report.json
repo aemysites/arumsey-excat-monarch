@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-offices/business-services/partnership-taxes/",
+  "path": "tax-offices/business-services/partnership-taxes",
+  "timestamp": "2026-10-22T19:08:09.878Z",
+  "title": "Filing a Partnership Tax Return | H&R Block",
+  "template": "product-split-hero",
+  "blocks": [
+    "tabs-pill",
+    "cards-feature",
+    "hero-split",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/partnership-taxes-tab-1",
+    "fragments/partnership-taxes-tab-2"
+  ],
+  "importScript": "d4c454421d77"
+}

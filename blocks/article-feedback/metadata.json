@@ -1,0 +1,24 @@
+{
+  "variantName": "article-feedback",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "text + link",
+    "purpose": "'Was this article helpful?' prompt with two feedback buttons (thumbs up / thumbs down) at the end of resource articles"
+  },
+  "contentPattern": {
+    "structure": "row 1: the question (text or heading); row 2: one cell per answer option, each with its label and an optional icon (e.g. :thumbs-up: / :thumbs-down: icons or images). The question and options may also share one row (question in the first cell). Optional row 3: thank-you message shown after answering (defaults to 'Thanks for your feedback!')",
+    "rows": "question, options, optional thank-you message",
+    "cells": ["question", "option 1", "option 2"]
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_f2682a7c45da"
+  ],
+  "usage": "Place at the end of resource/article pages. Options render as buttons; the first is reported as 'positive', the second as 'negative'. Clicking one disables the group, shows the thank-you message, remembers the answer for the session (per path) and dispatches a bubbling 'article-feedback' CustomEvent with { value, label } for analytics wiring. Section background comes from section metadata Style, not a block class.",
+  "reuseGuidance": "Reuse for any single-question, few-choice page feedback prompt. It does not submit to a backend; hook the 'article-feedback' event for collection."
+}

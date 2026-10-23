@@ -1,0 +1,276 @@
+/*
+ * promo-strip (source: hrblock.com skinnybanner .alignBanner)
+ * Background colour comes from the section style (.section.<style>); the block only
+ * sets foreground colours, typography and layout. Values from source computed styles.
+ */
+.promo-strip {
+  --promo-strip-text: var(--text-color);
+  --promo-strip-link: var(--link-color);
+  --promo-strip-inline-link: var(--link-color);
+
+  color: var(--promo-strip-text);
+}
+
+/* light-on-dark sections (source spruce-forest-theme / green-dark-theme) */
+.section:is(.forest, .green, .bright-green, .charcoal, .black) .promo-strip {
+  --promo-strip-text: var(--on-dark-text-color);
+
+  /* source .ba-neon-link; no brand token has this value */
+  --promo-strip-link: rgb(0 233 233);
+  --promo-strip-inline-link: var(--color-neon);
+}
+
+.promo-strip .promo-strip-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 25px;
+  text-align: center;
+}
+
+.promo-strip .promo-strip-media {
+  max-width: 100%;
+  line-height: 0;
+}
+
+.promo-strip .promo-strip-media picture {
+  display: block;
+}
+
+.promo-strip .promo-strip-media img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.promo-strip .promo-strip-heading,
+.promo-strip .promo-strip-text,
+.promo-strip .promo-strip-cta {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.promo-strip .promo-strip-heading {
+  margin: 20px 0;
+}
+
+.promo-strip .promo-strip-heading :is(h1, h2, h3, h4, h5, h6, p) {
+  margin: 0;
+  color: inherit;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  font-weight: var(--heading-font-weight);
+  line-height: 24px;
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.promo-strip .promo-strip-text p,
+.promo-strip .promo-strip-cta p {
+  margin: 0;
+  color: inherit;
+}
+
+.promo-strip .promo-strip-text p {
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+.promo-strip .promo-strip-text p + p {
+  margin-top: 8px;
+}
+
+.promo-strip .promo-strip-text a:any-link {
+  color: var(--promo-strip-inline-link);
+}
+
+.promo-strip .promo-strip-cta {
+  margin-top: 20px;
+}
+
+/* text CTA with chevron (source a.right-arrow) */
+.promo-strip .promo-strip-cta a:any-link:not(.primary, .secondary, .accent) {
+  display: block;
+  margin: 0 0 20px;
+  color: var(--promo-strip-link);
+  font-size: var(--body-font-size-m);
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.promo-strip .promo-strip-cta a:any-link:not(.primary, .secondary, .accent)::after {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 12px;
+  margin-right: -26px;
+  background-color: currentcolor;
+  vertical-align: middle;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M10.7 16.7C10.3 17.1 9.7 17.1 9.3 16.7 8.9 16.3 8.9 15.8 9.2 15.4L9.3 15.3 12.6 12 9.3 8.7C8.9 8.3 8.9 7.8 9.2 7.4L9.3 7.3C9.7 6.9 10.2 6.9 10.6 7.2L10.7 7.3 14.7 11.3C15.1 11.7 15.1 12.2 14.8 12.6L14.7 12.7 10.7 16.7Z'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+}
+
+/* pill CTA (source .btn-medium; colours come from the section's button tokens) */
+main .promo-strip .promo-strip-cta a.button:any-link:is(.primary, .secondary, .accent) {
+  min-width: 0;
+  margin: 0 0 20px;
+  padding: 0 30px;
+}
+
+.promo-strip .promo-strip-cta p + p {
+  margin-top: 0;
+}
+
+/* light: inset rounded green panel on a light section (source green-dark-theme rounded-border) */
+.promo-strip.light {
+  --promo-strip-text: var(--on-dark-text-color);
+  --promo-strip-link: var(--on-dark-link-color);
+  --promo-strip-inline-link: var(--color-neon);
+}
+
+.promo-strip.light .promo-strip-inner {
+  border-radius: var(--radius-m);
+  background-color: var(--color-green);
+}
+
+.promo-strip.light .promo-strip-text p {
+  font-size: 19px;
+  line-height: 28.5px;
+}
+
+/* alt: sand text CTA (source a.color-global-sand) */
+.section:is(.forest, .green, .bright-green, .charcoal, .black) .promo-strip.alt {
+  --promo-strip-link: var(--on-dark-link-color);
+}
+
+/* dark: dark foreground and large heading on a bright section (source hrb-neon-green banner) */
+.promo-strip.dark,
+.section:is(.forest, .green, .bright-green, .charcoal, .black) .promo-strip.dark {
+  --promo-strip-text: var(--text-color);
+  --promo-strip-link: var(--text-color);
+  --promo-strip-inline-link: var(--text-color);
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-forest);
+  --button-primary-text-color: var(--color-white);
+}
+
+.promo-strip.dark .promo-strip-heading :is(h1, h2, h3, h4, h5, h6, p) {
+  font-size: var(--heading-font-size-l);
+  line-height: var(--heading-line-height-l);
+  letter-spacing: var(--heading-letter-spacing-l);
+}
+
+.promo-strip.dark .promo-strip-text p {
+  font-weight: 500;
+}
+
+/* yellow: dark foreground and compact filled CTA on the neon (lime) section (source spruce-neon-theme) */
+.promo-strip.yellow,
+.section:is(.forest, .green, .bright-green, .charcoal, .black) .promo-strip.yellow {
+  --promo-strip-text: var(--text-color);
+  --promo-strip-link: var(--text-color);
+  --promo-strip-inline-link: var(--text-color);
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-forest);
+  --button-primary-text-color: var(--color-white);
+}
+
+/* source .btn-little */
+main .promo-strip.yellow .promo-strip-cta a.button:any-link:is(.primary, .secondary, .accent) {
+  min-height: 48px;
+  padding: 0 20px;
+  letter-spacing: -0.09px;
+}
+
+@media (width >= 768px) {
+  .promo-strip .promo-strip-heading :is(h1, h2, h3, h4, h5, h6, p) {
+    line-height: 28px;
+  }
+
+  .promo-strip.yellow .promo-strip-heading :is(h1, h2, h3, h4, h5, h6, p) {
+    line-height: var(--heading-line-height-m);
+  }
+
+  .promo-strip.dark .promo-strip-heading :is(h1, h2, h3, h4, h5, h6, p) {
+    line-height: var(--heading-line-height-l);
+  }
+}
+
+@media (width >= 900px) {
+  .promo-strip .promo-strip-inner {
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    text-align: start;
+  }
+
+  .promo-strip .promo-strip-media {
+    flex: 0 0 auto;
+  }
+
+  .promo-strip .promo-strip-heading,
+  .promo-strip .promo-strip-text,
+  .promo-strip .promo-strip-cta {
+    flex: 0 1 auto;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .promo-strip .promo-strip-cta {
+    flex-shrink: 0;
+    padding-right: 20px;
+  }
+
+  .promo-strip .promo-strip-cta a:any-link:not(.primary, .secondary, .accent),
+  main .promo-strip .promo-strip-cta a.button:any-link:is(.primary, .secondary, .accent) {
+    margin: 0;
+  }
+
+  main .promo-strip .promo-strip-cta a.button:any-link:is(.primary, .secondary, .accent) {
+    min-width: var(--button-min-width);
+    padding: var(--button-padding);
+  }
+
+  main .promo-strip.yellow .promo-strip-cta a.button:any-link:is(.primary, .secondary, .accent) {
+    min-width: 0;
+  }
+
+  .promo-strip .promo-strip-cta p + p {
+    margin-top: 10px;
+  }
+
+  /* light: panel shrinks to its content and centres (source heading/body max-widths 420/560) */
+  .promo-strip.light .promo-strip-inner {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 40px 20px 20px;
+  }
+
+  .promo-strip.light .promo-strip-heading {
+    max-width: 420px;
+  }
+
+  .promo-strip.light .promo-strip-text {
+    max-width: 560px;
+  }
+
+  /* alt: two-line heading beside wide body copy (source max-widths 240/800) */
+  .promo-strip.alt .promo-strip-heading {
+    max-width: 240px;
+  }
+
+  .promo-strip.alt .promo-strip-text {
+    max-width: 800px;
+  }
+
+  /* dark: source max-widths 280/380 */
+  .promo-strip.dark .promo-strip-heading {
+    max-width: 280px;
+  }
+
+  .promo-strip.dark .promo-strip-text {
+    max-width: 380px;
+  }
+}

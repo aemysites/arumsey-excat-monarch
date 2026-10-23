@@ -1,0 +1,22 @@
+{
+  "variantName": "product-reviews",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "",
+    "purpose": "Customer review summary with rating snapshot, average category ratings, filter/sort and a paged review list with company responses"
+  },
+  "contentPattern": {
+    "structure": "Optional heading row (one cell with a heading). Keyed rows: Summary | overall rating | count text | list of \"5 stars: N\"; Ratings | list of \"Category: 4.5\"; Page size | 8; Load more | button label. Review rows: rating number | review content (title, author, date, body, Pros:/Cons: lines, recommend line) | list of \"Category: 5.0\" sub-ratings | company response (optional)"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_a1fc2020d589"
+  ],
+  "usage": "Product and reviews pages (22 pages) showing customer reviews.",
+  "reuseGuidance": "Reuse for the same content pattern; background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black)."
+}

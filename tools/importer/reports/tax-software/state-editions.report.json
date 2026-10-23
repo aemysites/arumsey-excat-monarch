@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-software/state-editions/",
+  "path": "tax-software/state-editions",
+  "timestamp": "2026-10-22T21:26:15.519Z",
+  "title": "H&R Block State Tax Filing Software | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "cards-feature",
+    "hero-split",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "d4c454421d77"
+}

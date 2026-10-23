@@ -1,0 +1,188 @@
+/* cards-tip: values from source .card-stacked.spruce-eggshell-theme tip callouts
+   (hrblock.com/tax-reform-and-law-changes, source breakpoint 768px) */
+.cards-tip {
+  --cards-tip-card-bg: var(--light-color);
+  --cards-tip-card-text: var(--text-color);
+  --cards-tip-link: var(--text-color);
+  --cards-tip-icon-size: 32px;
+
+  /* source lightbulb icon (inline svg in the tip headline), drawn as a mask */
+  --cards-tip-bulb: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M18.0098 24.02H14.0098C13.4575 24.02 13.0098 24.4677 13.0098 25.02C13.0098 25.5723 13.4575 26.02 14.0098 26.02H18.0098C18.5621 26.02 19.0098 25.5723 19.0098 25.02C19.0098 24.4677 18.5621 24.02 18.0098 24.02ZM20.4297 9.57005C19.6059 8.9064 18.6436 8.4361 17.6138 8.1938C16.5841 7.9515 15.513 7.94338 14.4797 8.17005C13.1254 8.43855 11.8858 9.11529 10.9276 10.1093C9.96934 11.1033 9.33845 12.3668 9.11972 13.73C8.84322 15.156 9.03334 16.633 9.66194 17.9424C10.2905 19.2519 11.3242 20.324 12.6097 21L12.8197 21.12L13.0097 21.24V22C13.0097 22.2653 13.1151 22.5196 13.3026 22.7072C13.4901 22.8947 13.7445 23 14.0097 23H18.0097C18.2749 23 18.5293 22.8947 18.7168 22.7072C18.9044 22.5196 19.0097 22.2653 19.0097 22V21.2C19.1095 21.1258 19.2168 21.0622 19.3297 21.01C20.448 20.4589 21.3866 19.6013 22.0364 18.5373C22.6861 17.4733 23.0202 16.2466 22.9997 15C23.0012 13.9609 22.7714 12.9345 22.3268 11.9953C21.8823 11.0561 21.2343 10.2276 20.4297 9.57005ZM17.0098 27.02H15.0098C14.4575 27.02 14.0098 27.4677 14.0098 28.02C14.0098 28.5723 14.4575 29.02 15.0098 29.02H17.0098C17.5621 29.02 18.0098 28.5723 18.0098 28.02C18.0098 27.4677 17.5621 27.02 17.0098 27.02ZM6 15.0098H4C3.44772 15.0098 3 15.4575 3 16.0098C3 16.5621 3.44772 17.0098 4 17.0098H6C6.55228 17.0098 7 16.5621 7 16.0098C7 15.4575 6.55228 15.0098 6 15.0098ZM28.0195 15.0098H26.0195C25.4672 15.0098 25.0195 15.4575 25.0195 16.0098C25.0195 16.5621 25.4672 17.0098 26.0195 17.0098H28.0195C28.5718 17.0098 29.0195 16.5621 29.0195 16.0098C29.0195 15.4575 28.5718 15.0098 28.0195 15.0098ZM24.3157 5.88503L22.9014 7.29924C22.5109 7.68977 22.5109 8.32293 22.9014 8.71345C23.292 9.10398 23.9251 9.10398 24.3157 8.71345L25.7299 7.29924C26.1204 6.90872 26.1204 6.27555 25.7299 5.88503C25.3393 5.4945 24.7062 5.4945 24.3157 5.88503ZM6.30251 7.29177L7.71672 8.70598C8.10725 9.0965 8.74041 9.0965 9.13093 8.70598C9.52146 8.31545 9.52146 7.68229 9.13093 7.29177L7.71672 5.87755C7.3262 5.48703 6.69303 5.48703 6.30251 5.87755C5.91198 6.26808 5.91198 6.90124 6.30251 7.29177ZM25.7317 22.7195L24.3175 21.3053C23.9269 20.9147 23.2938 20.9147 22.9032 21.3053C22.5127 21.6958 22.5127 22.3289 22.9032 22.7195L24.3175 24.1337C24.708 24.5242 25.3411 24.5242 25.7317 24.1337C26.1222 23.7432 26.1222 23.11 25.7317 22.7195ZM7.71852 24.1433L9.13274 22.7291C9.52326 22.3386 9.52326 21.7054 9.13274 21.3149C8.74221 20.9243 8.10905 20.9243 7.71852 21.3149L6.30431 22.7291C5.91378 23.1196 5.91378 23.7528 6.30431 24.1433C6.69483 24.5338 7.328 24.5338 7.71852 24.1433ZM17.0098 5V3C17.0098 2.44772 16.5621 2 16.0098 2C15.4575 2 15.0098 2.44772 15.0098 3V5C15.0098 5.55228 15.4575 6 16.0098 6C16.5621 6 17.0098 5.55228 17.0098 5Z'/%3E%3C/svg%3E");
+
+  /* source a.right-arrow::after chevron */
+  --cards-tip-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M10.7 16.7c-.4.4-1 .4-1.4 0-.4-.4-.4-.9-.1-1.3l3.4-3.4-3.3-3.3c-.4-.4-.4-.9-.1-1.3.5-.5 1-.5 1.4-.2l4.1 4.1c.4.4.4.9.1 1.3l-4.1 4.1Z'/%3E%3C/svg%3E");
+}
+
+/* light-on-dark sections: tip boxes keep their light surface; the
+   trailing link outside the boxes flips to light text */
+.section.forest .cards-tip,
+.section.green .cards-tip,
+.section.bright-green .cards-tip,
+.section.black .cards-tip {
+  --cards-tip-link: var(--on-dark-link-color);
+}
+
+.cards-tip > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 30px;
+  align-items: start;
+}
+
+.cards-tip > ul > li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 20px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: var(--radius-m);
+  background-color: var(--cards-tip-card-bg);
+  color: var(--cards-tip-card-text);
+}
+
+/* the imported tips carry an empty icon cell: draw the source lightbulb */
+.cards-tip > ul > li.no-icon::before {
+  content: "";
+  grid-column: 1;
+  display: block;
+  width: var(--cards-tip-icon-size);
+  height: var(--cards-tip-icon-size);
+  background-color: currentcolor;
+  mask: var(--cards-tip-bulb) center / contain no-repeat;
+}
+
+.cards-tip .cards-tip-card-icon {
+  grid-column: 1;
+  line-height: 0;
+}
+
+.cards-tip .cards-tip-card-icon p {
+  margin: 0;
+}
+
+.cards-tip .cards-tip-card-icon picture,
+.cards-tip .cards-tip-card-icon img,
+.cards-tip .cards-tip-card-icon .icon {
+  display: block;
+  width: var(--cards-tip-icon-size);
+  height: var(--cards-tip-icon-size);
+  object-fit: contain;
+}
+
+/* tip text: source h4.text-little */
+.cards-tip .cards-tip-card-body {
+  grid-column: 2;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+
+.cards-tip .cards-tip-card-body > * {
+  margin: 0;
+}
+
+.cards-tip .cards-tip-card-body > * + * {
+  margin-top: 16.8px;
+}
+
+/* nested links: source .p-t-20 body + .btn-container padding-top 40px, gap 20px */
+.cards-tip .cards-tip-card-links {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 60px;
+}
+
+.cards-tip .cards-tip-card-links ul {
+  display: contents;
+  list-style: none;
+}
+
+.cards-tip .cards-tip-card-links p,
+.cards-tip .cards-tip-card-links li {
+  margin: 0;
+}
+
+/* trailing link: source .btn-container margin-top 40px below the 15px column padding */
+.cards-tip .cards-tip-footer {
+  margin-top: 55px;
+}
+
+.cards-tip .cards-tip-footer > * {
+  margin: 0;
+}
+
+/* arrow links (source a.right-arrow) */
+main .cards-tip .cards-tip-card-links a:any-link,
+main .cards-tip .cards-tip-footer a:any-link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--cards-tip-card-text);
+  font-size: var(--body-font-size-m);
+  font-weight: 500;
+  line-height: var(--body-line-height);
+  text-decoration: none;
+  white-space: normal;
+}
+
+main .cards-tip .cards-tip-footer a:any-link {
+  color: var(--cards-tip-link);
+}
+
+main .cards-tip .cards-tip-card-links a:hover,
+main .cards-tip .cards-tip-footer a:hover {
+  text-decoration: none;
+}
+
+.cards-tip .cards-tip-card-links a::after,
+.cards-tip .cards-tip-footer a::after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 12px;
+  vertical-align: middle;
+  background-color: currentcolor;
+  mask: var(--cards-tip-arrow) center / 24px 24px no-repeat;
+  transition: transform 150ms ease-in-out;
+}
+
+.cards-tip .cards-tip-card-links a:hover::after,
+.cards-tip .cards-tip-card-links a:focus-visible::after,
+.cards-tip .cards-tip-footer a:hover::after,
+.cards-tip .cards-tip-footer a:focus-visible::after {
+  transform: translateX(5px);
+}
+
+@media (width >= 768px) {
+  .cards-tip .cards-tip-card-body {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+
+  .cards-tip .cards-tip-card-body > * + * {
+    margin-top: 21.6px;
+  }
+}
+
+@media (width >= 900px) {
+  /* source two-column-control: 588px tips, 132px column gutter */
+  .cards-tip > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 132px;
+  }
+
+  .cards-tip > ul > li:only-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 588px;
+  }
+}

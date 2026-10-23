@@ -1,0 +1,47 @@
+{
+  "variantName": "lottie-animation",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "standalone Lottie animation (e.g. animated card strip or scrolling ribbon) lazily rendered from a Lottie JSON file"
+  },
+  "contentPattern": {
+    "structure": "one cell: link to the Lottie .json file (link text or title = accessible label); optional fallback picture shown until/if the animation fails to load"
+  },
+  "options": [
+    {
+      "class": "ribbon",
+      "label": "Ribbon"
+    }
+  ],
+  "memberVariantIds": [
+    "v_723ff15550aa",
+    "v_41f1464deeda"
+  ],
+  "usage": {
+    "pagesFound": 3,
+    "examplePages": [
+      "https://www.hrblock.com/outlook-on-american-life/",
+      "https://www.hrblock.com/tax-offices/business-services/business-formation-incorporation-services/",
+      "https://www.hrblock.com/lp/creator-taxes/"
+    ]
+  },
+  "reuseGuidance": "Use for decorative or illustrative Lottie animations. The loader lives in /scripts/lottie.js (shared with hero-split). Does not autoplay with prefers-reduced-motion; a play/pause toggle is rendered.",
+  "variants": {
+    "v_723ff15550aa": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 2
+    },
+    "v_41f1464deeda": {
+      "option": "ribbon",
+      "description": "list",
+      "pagesFound": 1
+    }
+  }
+}

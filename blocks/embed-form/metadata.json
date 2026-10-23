@@ -1,0 +1,31 @@
+{
+  "variantName": "embed-form",
+  "baseBlock": "embed",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "list"
+  },
+  "contentPattern": {
+    "structure": "optional heading and intro text, a standalone link to the form URL (rendered as a lazy iframe), optional footnote text after the link",
+    "rows": "1"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_cb793a120731"
+  ],
+  "usage": "Embedded third-party form (e.g. referral sign-up) centred in a coloured section.",
+  "reuseGuidance": "Use for iframe forms; for video/social embeds use the embed block.",
+  "sectionStyles": [
+    "forest",
+    "green",
+    "bright-green",
+    "eggshell",
+    "neon",
+    "white",
+    "black"
+  ]
+}

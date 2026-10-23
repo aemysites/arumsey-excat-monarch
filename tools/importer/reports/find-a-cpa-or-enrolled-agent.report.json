@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/find-a-cpa-or-enrolled-agent/",
+  "path": "find-a-cpa-or-enrolled-agent",
+  "timestamp": "2026-10-22T20:00:13.930Z",
+  "title": "Find a CPA or Enrolled Agent Near You | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "cards-product",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/guarantees-cards"
+  ],
+  "importScript": "cc79b2fd70c8"
+}

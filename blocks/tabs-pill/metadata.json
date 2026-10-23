@@ -1,0 +1,32 @@
+{
+  "variantName": "tabs-pill",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button",
+    "purpose": "Pill-style tab switcher whose panels hold rich content"
+  },
+  "contentPattern": {
+    "structure": "One row per tab: cell 1 = tab label, cell 2 = panel content. Because blocks cannot nest, a panel whose only content is a link to a fragment (/fragments/...) is replaced with that fragment (cards, columns, pricing, other blocks)"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_e8030dc82cc5",
+    "v_9b76ffc9f304",
+    "v_d54b88f790b9",
+    "v_06dc9792f45f",
+    "v_0799fdf9df3b",
+    "v_2a7398799cc1",
+    "v_305ff387cbb6",
+    "v_87ef7713f124",
+    "v_a5930a2a6640",
+    "v_b897e0b745c5",
+    "v_c41cce7f7565"
+  ],
+  "usage": "Switching between product/service groups, feature vs guarantee sets, pricing tiers.",
+  "reuseGuidance": "Author complex panel content as a fragment and link it in the panel cell. Background colour is set by section metadata Style."
+}

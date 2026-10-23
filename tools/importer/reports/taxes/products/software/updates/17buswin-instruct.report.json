@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/taxes/products/software/updates/17buswin-instruct/",
+  "path": "taxes/products/software/updates/17buswin-instruct",
+  "timestamp": "2026-10-22T22:22:19.035742Z",
+  "title": "",
+  "template": "product-split-hero",
+  "blocks": [
+    "fragment",
+    "fragment",
+    "fragment",
+    "fragment"
+  ],
+  "note": "report rebuilt from saved content after the Bright Data retry deleted it"
+}

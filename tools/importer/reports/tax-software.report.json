@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-software/",
+  "path": "tax-software",
+  "timestamp": "2026-10-22T19:18:39.840Z",
+  "title": "Tax Preparation Software: Easy, at Home Filing | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "product-reviews",
+    "software-finder",
+    "cards-pricing",
+    "cards-pricing",
+    "cards-icon",
+    "cards-icon",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "columns-feature",
+    "columns-banner",
+    "table-data"
+  ],
+  "importScript": "d4c454421d77"
+}

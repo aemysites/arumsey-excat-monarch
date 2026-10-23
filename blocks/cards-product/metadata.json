@@ -1,0 +1,54 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "product/offer cards with a photo (cut-out, side, full-bleed, small, or video still), linked heading, price line, description, check list and bottom-pinned button"
+  },
+  "contentPattern": {
+    "structure": "one row per card; cell 1 = image (optional), cell 2 = heading (may be a link), optional price line, text, list, button(s). For `video`, include a link to the video in the body cell"
+  },
+  "options": [
+    {
+      "class": "photo-side",
+      "label": "Photo Side"
+    },
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "video",
+      "label": "Video"
+    },
+    {
+      "class": "article",
+      "label": "Article"
+    },
+    {
+      "class": "checklist",
+      "label": "Checklist"
+    },
+    {
+      "class": "checklist-green-image",
+      "label": "Checklist Green Image"
+    }
+  ],
+  "memberVariantIds": [
+    "v_63cc7e992e37",
+    "v_305b63734308",
+    "v_e4ce9c3fca10",
+    "v_2fc5f625a38e",
+    "v_393abccc33af",
+    "v_51597d97e51e",
+    "v_b7abaebf8da6",
+    "v_c8b232c1ba1a"
+  ],
+  "usage": "Two/three-up product or service cards. Default and `image`: cut-out photo bleeding above the card. `photo-side`: cut-out photo anchored bottom-right. `video`: video still with play overlay and caption. `article`: article teaser with photo on top. `checklist`: small rounded photo, heading and check list. `checklist-green-image`: dark card with photo and check list.",
+  "reuseGuidance": "Use for photo-led product/service/article cards. Price-only plan comparisons belong in cards-pricing."
+}

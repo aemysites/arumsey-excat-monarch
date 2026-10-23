@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/expat-tax-preparation-and-services/fbar-filing/",
+  "path": "expat-tax-preparation/expat-tax-preparation-and-services/fbar-filing",
+  "timestamp": "2026-10-23T02:28:46.359Z",
+  "title": "FBAR Filing | FinCEN Form 114 Starting at $49 | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "accordion-faq",
+    "cards-product",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "5f7b656097fe"
+}

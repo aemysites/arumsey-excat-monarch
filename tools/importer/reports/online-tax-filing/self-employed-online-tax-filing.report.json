@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/online-tax-filing/self-employed-online-tax-filing/",
+  "path": "online-tax-filing/self-employed-online-tax-filing",
+  "timestamp": "2026-10-22T18:54:39.319Z",
+  "title": "Best Tax Software for Self Employed | H&R Block® Online",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "tabs-pill",
+    "product-reviews",
+    "columns-promo-card",
+    "cards-icon",
+    "promo-strip",
+    "hero-split",
+    "columns-banner",
+    "table-data"
+  ],
+  "fragments": [
+    "fragments/self-employed-online-tax-filing-tab-1",
+    "fragments/self-employed-online-tax-filing-tab-2"
+  ],
+  "importScript": "d4c454421d77"
+}

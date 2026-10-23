@@ -1,0 +1,67 @@
+{
+  "variantName": "office-locator",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "tax office details (eyebrow, address heading, map-linked address, opening hours, phone) beside a map and rating"
+  },
+  "contentPattern": {
+    "structure": "one row: cell 1 = eyebrow paragraph, heading, address paragraph linking to Google Maps, optional hours label paragraph + list of daily hours, phone paragraph with tel: link; cell 2 = Google Maps link (rendered as lazy embedded map) or a static map picture (image option), then rating text"
+  },
+  "options": [
+    {
+      "class": "image",
+      "label": "Image"
+    }
+  ],
+  "memberVariantIds": [
+    "v_e50f3197bd33",
+    "v_e50f3197bd33-1",
+    "v_e50f3197bd33-2",
+    "v_e50f3197bd33-3",
+    "v_e50f3197bd33-4"
+  ],
+  "usage": {
+    "pagesFound": 24,
+    "examplePages": [
+      "https://www.hrblock.com/international-tax-offices/germany/baumholder/62961/",
+      "https://www.hrblock.com/international-tax-offices/germany/grafenwoehr/62950/",
+      "https://www.hrblock.com/international-tax-offices/germany/idar-oberstein/62900/",
+      "https://www.hrblock.com/international-tax-offices/germany/kaiserslautern/62854/",
+      "https://www.hrblock.com/international-tax-offices/germany/stuttgart/18054/"
+    ]
+  },
+  "reuseGuidance": "Use on international tax office pages.",
+  "variants": {
+    "v_e50f3197bd33": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 15
+    },
+    "v_e50f3197bd33-1": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 4
+    },
+    "v_e50f3197bd33-2": {
+      "option": "image",
+      "description": "list",
+      "pagesFound": 2
+    },
+    "v_e50f3197bd33-3": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 2
+    },
+    "v_e50f3197bd33-4": {
+      "option": null,
+      "description": "list",
+      "pagesFound": 1
+    }
+  }
+}

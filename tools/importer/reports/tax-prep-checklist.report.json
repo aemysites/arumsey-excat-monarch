@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-prep-checklist/",
+  "path": "tax-prep-checklist",
+  "timestamp": "2026-10-22T21:16:27.819Z",
+  "title": "Your Comprehensive Tax Prep Checklist | H&R Block®",
+  "template": "tool-guide-page",
+  "blocks": [
+    "columns-banner",
+    "promo-strip",
+    "cards-pricing",
+    "columns-promo-card"
+  ],
+  "fragments": [
+    "fragments/guarantees-cards-forest",
+    "fragments/testimonials-forest"
+  ],
+  "importScript": "3639cdd725c1"
+}

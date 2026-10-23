@@ -1,0 +1,380 @@
+/* cards-pricing: H&R Block plan cards (source .category-card_container-v2 > .card-v2) */
+.cards-pricing {
+  --cards-pricing-card-bg: var(--color-white);
+  --cards-pricing-card-text: var(--color-forest);
+  --cards-pricing-accent: var(--color-green);
+  --cards-pricing-radius: 20px;
+  --cards-pricing-shadow: rgb(0 0 0 / 10%) 0 10px 20px 0;
+  --cards-pricing-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10' fill='none'%3E%3Cpath d='M1 1L5 5L1 9' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* source cards sit flat (no shadow) on dark green / forest sections */
+.section.green .cards-pricing,
+.section.forest .cards-pricing,
+.section.bright-green .cards-pricing,
+.section.charcoal .cards-pricing,
+.section.black .cards-pricing {
+  --cards-pricing-shadow: none;
+}
+
+.cards-pricing > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 30px;
+}
+
+.cards-pricing > ul > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* tab label: forest ribbon tucked behind the top of the card (source .card-ribbon-v2) */
+.cards-pricing li:has(> .cards-pricing-card-tab) {
+  padding-top: 40px;
+}
+
+.cards-pricing .cards-pricing-card-tab {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  min-height: 64px;
+  padding: 16px 16px 36px;
+  border-radius: var(--cards-pricing-radius) var(--cards-pricing-radius) 0 0;
+  background-color: var(--color-forest);
+  color: var(--color-eggshell);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  text-align: center;
+}
+
+/* eyebrow label: source h4.m-0 (12px / 600 / 12px, eggshell) */
+.cards-pricing .cards-pricing-card-tab :is(p, h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+}
+
+/* "+ TAX PRO REVIEW" add-on (source span.text-color-neon-green) */
+.cards-pricing .cards-pricing-card-tab .cards-pricing-tab-accent {
+  color: var(--color-neon);
+  font-style: normal;
+  font-weight: inherit;
+}
+
+.cards-pricing .cards-pricing-card-image {
+  line-height: 0;
+}
+
+.cards-pricing .cards-pricing-card-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* card surface (source .card-v2.white-theme > .cardv2-contents) */
+.cards-pricing .cards-pricing-card-body {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: var(--cards-pricing-radius);
+  background-color: var(--cards-pricing-card-bg);
+  box-shadow: var(--cards-pricing-shadow);
+  color: var(--cards-pricing-card-text);
+  font-size: var(--body-font-size-m);
+
+  /* white card surface: CTAs stay dark green / white even on dark sections
+     (source .btn--medium-dark-green; the section neon override does not apply) */
+  --button-primary-background-color: var(--color-green);
+  --button-primary-hover-background-color: var(--color-black);
+  --button-primary-text-color: var(--color-white);
+  --button-secondary-color: var(--color-green);
+  --button-secondary-hover-background-color: var(--color-forest);
+  --button-secondary-hover-text-color: var(--color-white);
+}
+
+.cards-pricing .cards-pricing-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-pricing .cards-pricing-card-body a:any-link {
+  color: var(--cards-pricing-accent);
+}
+
+/* card head: eyebrow, plan heading, short description */
+.cards-pricing .cards-pricing-eyebrow {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.cards-pricing .cards-pricing-card-body :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 20px;
+  color: var(--cards-pricing-card-text);
+  font-size: var(--heading-font-size-l);
+  font-weight: 600;
+  line-height: var(--heading-line-height-l);
+  letter-spacing: var(--heading-letter-spacing-l);
+}
+
+.cards-pricing .cards-pricing-card-body :is(h1, h2, h3, h4, h5, h6) a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cards-pricing .cards-pricing-card-body :is(h1, h2, h3, h4, h5, h6) a:any-link::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 10px;
+  margin: 0 -5px 1px 5px;
+  background-color: currentcolor;
+  mask: var(--cards-pricing-chevron) center / contain no-repeat;
+}
+
+.cards-pricing .cards-pricing-card-body :is(h1, h2, h3, h4, h5, h6) a:hover {
+  text-decoration: underline;
+}
+
+/* source p (19px / 28.5px line box) wrapping 14px span.hrb-body-support-copy */
+.cards-pricing .cards-pricing-desc {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 28.5px;
+}
+
+.cards-pricing .cards-pricing-desc :is(strong, b) {
+  font-weight: 700;
+}
+
+/* source a > span.text-underline.color-dark-green inside the bold copy */
+.cards-pricing .cards-pricing-card-body .cards-pricing-desc a:any-link {
+  color: var(--cards-pricing-accent);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* feature list: 12px green square bullets (source .list-unstyled.font-medium) */
+.cards-pricing .cards-pricing-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: start;
+}
+
+.cards-pricing .cards-pricing-features > li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+  padding-left: 36px;
+}
+
+.cards-pricing .cards-pricing-features > li:not(.cards-pricing-feature-icon)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  background-color: var(--cards-pricing-accent);
+}
+
+.cards-pricing .cards-pricing-features > li.cards-pricing-feature-icon {
+  gap: 20px;
+  padding-left: 0;
+}
+
+.cards-pricing .cards-pricing-features > li picture,
+.cards-pricing .cards-pricing-features > li img,
+.cards-pricing .cards-pricing-features > li .icon {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+}
+
+.cards-pricing .cards-pricing-card-body .cards-pricing-features a:any-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* price group + actions pinned to the bottom (source .card-footer) */
+.cards-pricing .cards-pricing-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.cards-pricing .cards-pricing-price-label {
+  margin: 0 0 2px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.cards-pricing .cards-pricing-price {
+  margin: 0;
+  color: var(--cards-pricing-accent);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
+  line-height: var(--heading-line-height-xl);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+.cards-pricing .cards-pricing-price-note {
+  margin: 0;
+  font-size: 11px;
+  line-height: 21.6px;
+}
+
+.cards-pricing .cards-pricing-price + .cards-pricing-price-note {
+  margin-top: 6px;
+}
+
+.cards-pricing .cards-pricing-action {
+  margin: 20px 0 0;
+}
+
+.cards-pricing .cards-pricing-action.button-wrapper {
+  margin-top: 40px;
+}
+
+.cards-pricing .cards-pricing-action:last-child {
+  margin-bottom: 20px;
+}
+
+main .cards-pricing .cards-pricing-action a.button:any-link {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+/* secondary text link with chevron (source a.right-arrow) */
+.cards-pricing .cards-pricing-card-body .cards-pricing-action a:any-link:not(.button) {
+  color: var(--cards-pricing-accent);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-decoration: none;
+}
+
+.cards-pricing .cards-pricing-card-body .cards-pricing-action a:any-link:not(.button)::after {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 12px;
+  vertical-align: middle;
+  background-color: currentcolor;
+  mask: var(--cards-pricing-chevron) center / 6px 10px no-repeat;
+}
+
+.cards-pricing .cards-pricing-card-body .cards-pricing-action a:hover:not(.button) {
+  text-decoration: underline;
+}
+
+/* option: centered (source .category-card-center) */
+.cards-pricing.centered .cards-pricing-card-body {
+  text-align: center;
+}
+
+.cards-pricing.centered .cards-pricing-head {
+  min-height: 66px;
+}
+
+.cards-pricing.centered .cards-pricing-card-body :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 10px;
+  font-size: var(--heading-font-size-m);
+  line-height: 24px;
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.cards-pricing.centered .cards-pricing-features {
+  margin-bottom: 10px;
+}
+
+.cards-pricing.centered .cards-pricing-features > li {
+  margin-bottom: 12px;
+}
+
+.cards-pricing.centered .cards-pricing-footer {
+  padding-top: 30px;
+}
+
+.cards-pricing.centered .cards-pricing-price-note {
+  margin-top: 0;
+}
+
+.cards-pricing.centered .cards-pricing-action.button-wrapper {
+  margin-top: 30px;
+}
+
+.cards-pricing.centered .cards-pricing-action:last-child {
+  margin-bottom: 0;
+}
+
+@media (width >= 600px) {
+  .cards-pricing > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+}
+
+@media (width >= 768px) {
+  .cards-pricing.centered .cards-pricing-head {
+    min-height: 96px;
+  }
+
+  .cards-pricing.centered .cards-pricing-card-body :is(h1, h2, h3, h4, h5, h6) {
+    line-height: 28px;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-pricing > ul {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    column-gap: 24px;
+  }
+
+  /* source two-card layout: 881px centred container (.card-container-881) */
+  .cards-pricing > ul:has(> li:nth-child(2):last-child) {
+    max-width: 881px;
+    margin: 0 auto;
+    column-gap: 29px;
+  }
+
+  /* every card reserves the tab space so card tops align */
+  .cards-pricing > ul > li {
+    padding-top: 40px;
+  }
+
+  .cards-pricing .cards-pricing-footer {
+    padding-top: 50px;
+  }
+
+  .cards-pricing.centered .cards-pricing-footer {
+    padding-top: 30px;
+  }
+}

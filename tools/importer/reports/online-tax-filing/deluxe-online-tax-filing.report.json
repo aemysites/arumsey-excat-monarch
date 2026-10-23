@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/online-tax-filing/deluxe-online-tax-filing/",
+  "path": "online-tax-filing/deluxe-online-tax-filing",
+  "timestamp": "2026-10-22T18:51:29.707Z",
+  "title": "Deluxe Online Tax Filing | Itemized Deductions with H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "tabs-pill",
+    "product-reviews",
+    "columns-promo-card",
+    "cards-icon",
+    "promo-strip",
+    "hero-split",
+    "columns-banner",
+    "table-data"
+  ],
+  "fragments": [
+    "fragments/deluxe-online-tax-filing-tab-1",
+    "fragments/deluxe-online-tax-filing-tab-2"
+  ],
+  "importScript": "d4c454421d77"
+}

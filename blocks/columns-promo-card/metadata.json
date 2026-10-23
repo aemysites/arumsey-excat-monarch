@@ -1,0 +1,59 @@
+{
+  "variantName": "columns-promo-card",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list"
+  },
+  "contentPattern": {
+    "structure": "one row, two cells inside a contained rounded card: image cell and text cell (optional eyebrow paragraph, heading, copy, price and CTA buttons, footnote)",
+    "rows": "1"
+  },
+  "options": [
+    {
+      "class": "checklist",
+      "label": "Checklist"
+    },
+    {
+      "class": "alt",
+      "label": "Alt"
+    },
+    {
+      "class": "alt-2",
+      "label": "Alt 2"
+    },
+    {
+      "class": "alt-3",
+      "label": "Alt 3"
+    },
+    {
+      "class": "app",
+      "label": "App"
+    }
+  ],
+  "memberVariantIds": [
+    "v_dcae423c5c4a",
+    "v_30ccf518c654",
+    "v_14fb9dcd9d03",
+    "v_e22868c7ea02",
+    "v_299474364a16",
+    "v_3f0967b16711",
+    "v_5e0c9c314d8d",
+    "v_b17f8c3ea9c1"
+  ],
+  "usage": "Contained promo card on a section background; default is a dark card surface.",
+  "reuseGuidance": "alt = light card with image edge to edge; alt-2 = muted (eggshell) card; alt-3 = dark card (image order is authored); app = split card, light media half and dark text half; checklist = light card with check-marked list items.",
+  "sectionStyles": [
+    "forest",
+    "green",
+    "bright-green",
+    "eggshell",
+    "neon",
+    "white",
+    "black"
+  ]
+}

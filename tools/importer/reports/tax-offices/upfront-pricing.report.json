@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-offices/upfront-pricing/",
+  "path": "tax-offices/upfront-pricing",
+  "timestamp": "2026-10-22T19:29:02.882Z",
+  "title": "Upfront and Transparent H&R Block® Prices",
+  "template": "product-cta-hero",
+  "blocks": [
+    "cards-icon",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "972af0d1766c"
+}

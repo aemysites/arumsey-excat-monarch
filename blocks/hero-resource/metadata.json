@@ -1,0 +1,79 @@
+{
+  "variantName": "hero-resource",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link + list",
+    "purpose": "resource-centre page hero: intro column (breadcrumb, heading, text, CTAs, share links) beside an aside of section links, a featured article card, a featured article list or an illustration"
+  },
+  "contentPattern": {
+    "structure": "row 1: cell 1 = breadcrumb links paragraph, heading, text, CTA links, \"Share:\" paragraph with social icon links; cell 2 = aside (default: heading + list of icon links; featured-article: picture + icon + linked title; illustration: picture). featured-list: one extra row per article (picture | category + linked title) or a list in cell 2"
+  },
+  "options": [
+    {
+      "class": "featured-article",
+      "label": "Featured Article"
+    },
+    {
+      "class": "featured-list",
+      "label": "Featured List"
+    },
+    {
+      "class": "illustration",
+      "label": "Illustration"
+    },
+    {
+      "class": "featured-article-2",
+      "label": "Featured Article 2"
+    }
+  ],
+  "memberVariantIds": [
+    "v_8db580b70953",
+    "v_b896407bfb5b",
+    "v_6522494d5147",
+    "v_6ec90145160b",
+    "v_b896407bfb5b-1"
+  ],
+  "usage": {
+    "pagesFound": 27,
+    "examplePages": [
+      "https://www.hrblock.com/expat-tax-preparation/resource-center/country/australia/",
+      "https://www.hrblock.com/expat-tax-preparation/resource-center/country/canada/",
+      "https://www.hrblock.com/expat-tax-preparation/resource-center/country/china/",
+      "https://www.hrblock.com/expat-tax-preparation/resource-center/country/france/",
+      "https://www.hrblock.com/expat-tax-preparation/resource-center/country/germany/"
+    ]
+  },
+  "reuseGuidance": "Use for expat resource-centre landing, topic and country pages. Use hero-split for product heroes.",
+  "variants": {
+    "v_8db580b70953": {
+      "option": null,
+      "description": "heading + text + link + list",
+      "pagesFound": 15
+    },
+    "v_b896407bfb5b": {
+      "option": "featured-article",
+      "description": "link + heading + text + image",
+      "pagesFound": 9
+    },
+    "v_6522494d5147": {
+      "option": "featured-list",
+      "description": "heading + text + link + image",
+      "pagesFound": 1
+    },
+    "v_6ec90145160b": {
+      "option": "illustration",
+      "description": "link + heading + text + image",
+      "pagesFound": 1
+    },
+    "v_b896407bfb5b-1": {
+      "option": "featured-article-2",
+      "description": "link + heading + text + image",
+      "pagesFound": 1
+    }
+  }
+}

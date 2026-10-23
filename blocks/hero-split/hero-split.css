@@ -1,0 +1,557 @@
+/* hero-split: text column beside a media column */
+.hero-split {
+  --hero-split-fg: var(--dark-color); /* source hero text rgb(0 53 18), also on expat pages */
+  --hero-split-link: var(--dark-color); /* source inline body link rgb(0 53 18) */
+  --hero-split-link-hover: var(--dark-color);
+  --hero-split-arrow-link: var(--hero-split-fg);
+  --hero-split-tag-bg: var(--color-neon); /* source h2.eyebrow-label.hrb-neon-green */
+  --hero-split-tag-fg: var(--color-forest);
+  --hero-split-rule: currentcolor;
+  --hero-split-gap: 32px;
+  --hero-split-radius: 8px;
+
+  /* source a.right-arrow::after chevron */
+  --hero-split-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M10.7 16.7c-.4.4-1 .4-1.4 0-.4-.4-.4-.9-.1-1.3l3.4-3.4-3.3-3.3c-.4-.4-.4-.9-.1-1.3.5-.5 1-.5 1.4-.2l4.1 4.1c.4.4.4.9.1 1.3l-4.1 4.1Z'/%3E%3C/svg%3E");
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--hero-split-gap);
+  align-items: center;
+  padding: 40px 0;
+  color: var(--hero-split-fg);
+}
+
+/* light-on-dark section styles (source spruce-forest / green-dark themes: eggshell text) */
+.section.forest .hero-split,
+.section.green .hero-split,
+.section.bright-green .hero-split,
+.section.charcoal .hero-split,
+.section.black .hero-split {
+  --hero-split-fg: var(--on-dark-text-color);
+  --hero-split-link: var(--on-dark-link-color);
+  --hero-split-link-hover: var(--on-dark-link-hover-color);
+}
+
+/* green (Block Advisors) band: forest tag chip, white CTA, white arrow link
+   (source h2.eyebrow-label.spruce-forest-theme, a.btn--white, a.right-arrow.white) */
+.section.green .hero-split {
+  --hero-split-tag-bg: var(--color-forest);
+  --hero-split-tag-fg: var(--color-eggshell);
+  --hero-split-arrow-link: var(--color-white);
+  --button-primary-background-color: var(--color-white);
+  --button-primary-hover-background-color: #e8eef1; /* source .btn--white:hover rgb(232 238 241) */
+  --button-primary-text-color: var(--color-black);
+}
+
+/* dark-on-light section styles */
+.section.eggshell .hero-split,
+.section.white .hero-split,
+.section.neon .hero-split {
+  --hero-split-fg: var(--dark-color);
+  --hero-split-link: var(--dark-color);
+  --hero-split-link-hover: var(--dark-color);
+}
+
+.hero-split .hero-split-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+}
+
+.hero-split .hero-split-content > * {
+  margin: 0;
+}
+
+.hero-split h1,
+.hero-split h2,
+.hero-split h3,
+.hero-split h4,
+.hero-split h5,
+.hero-split h6,
+.hero-split p {
+  color: inherit;
+}
+
+.hero-split a:any-link:not(.button) {
+  color: var(--hero-split-link);
+}
+
+.hero-split a:any-link:not(.button):hover {
+  color: var(--hero-split-link-hover);
+}
+
+.hero-split .hero-split-eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+/* arrow link: a paragraph holding only a plain link (source a.right-arrow) */
+main .hero-split .hero-split-link a:any-link:not(.button) {
+  color: var(--hero-split-arrow-link);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+main .hero-split .hero-split-link a:any-link:not(.button):hover {
+  text-decoration: underline;
+}
+
+.hero-split .hero-split-link a::after {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 12px;
+  vertical-align: middle;
+  background-color: currentcolor;
+  mask: var(--hero-split-chevron) center / 24px 24px no-repeat;
+}
+
+.hero-split .hero-split-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-split .hero-split-actions .button-wrapper {
+  margin: 0;
+}
+
+/* link list rendered as a select + go button */
+.hero-split .hero-split-select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero-split .hero-split-select-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.hero-split .hero-split-select select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  font: inherit;
+}
+
+.hero-split .hero-split-select .button {
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+/* media */
+.hero-split .hero-split-media {
+  position: relative;
+  min-width: 0;
+}
+
+.hero-split .hero-split-media > p {
+  margin: 0;
+}
+
+.hero-split .hero-split-media picture,
+.hero-split .hero-split-media img,
+.hero-split .hero-split-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--hero-split-radius);
+}
+
+.hero-split .hero-split-media .lottie-player {
+  width: 100%;
+  line-height: 0;
+}
+
+.hero-split .hero-split-media .lottie-player svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-split .hero-split-media.is-lottie:not(.lottie-failed) > p:has(a[href$='.json']) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.hero-split .lottie-toggle {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--hero-split-fg);
+  cursor: pointer;
+}
+
+.hero-split .lottie-toggle::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 12px;
+  border-left: 3px solid currentcolor;
+  border-right: 3px solid currentcolor;
+  box-sizing: border-box;
+}
+
+.hero-split .lottie-toggle[data-state='paused']::before {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid currentcolor;
+  border-right: 0;
+}
+
+.hero-split .lottie-toggle:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+/* pricing: price block above the CTAs */
+.hero-split.pricing .hero-split-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-split.pricing .hero-split-pricing > * {
+  margin: 0;
+}
+
+.hero-split.pricing .hero-split-price {
+  font-weight: 700;
+}
+
+.hero-split.pricing .hero-split-pricing del,
+.hero-split.pricing .hero-split-pricing s {
+  opacity: 0.6;
+}
+
+.hero-split.pricing .hero-split-price-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-split.pricing .hero-split-price-columns > li + li {
+  padding-left: 20px;
+  border-left: 1px solid var(--hero-split-rule);
+}
+
+/* default + bleed (source .introDefaultvariant two-column band): the band
+   spans the page; the text column lines up with the 1200px container */
+.hero-split-wrapper:has(> .hero-split:not(.pricing)) {
+  max-width: unset;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* bleed: media fills its half to the page edge */
+
+/* the bleed hero runs edge to edge: cancel the default section padding on the
+   side(s) it touches (a pad-top-N / pad-bottom-N section style sets its own) */
+.section:not([class*="pad-top-"]) > .hero-split-wrapper:has(> .hero-split.bleed):first-child {
+  margin-top: calc(-1 * var(--section-padding));
+}
+
+.section:not([class*="pad-bottom-"]) > .hero-split-wrapper:has(> .hero-split.bleed):last-child {
+  margin-bottom: calc(-1 * var(--section-padding));
+}
+
+.hero-split.bleed {
+  gap: 0;
+  padding: 0;
+}
+
+/* source .introDefaultvariant: spacing comes from element margins, not a gap.
+   mobile: li.column padding 30px 0 20px + content-wrap padding 0 25px + 20px CTA margin */
+.hero-split.bleed .hero-split-content {
+  gap: 0;
+  padding: 30px 25px 40px;
+}
+
+/* tag eyebrow (source h2.eyebrow-label.hrb-neon-green) */
+.hero-split.bleed .hero-split-tag {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: var(--color-neon);
+  color: var(--color-forest);
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  line-height: var(--eyebrow-line-height);
+  letter-spacing: var(--eyebrow-letter-spacing);
+}
+
+/* source h1.modal-headline.text-large (UA 0.67em block margins) */
+.hero-split.bleed :is(h1, h2) {
+  max-width: 330px;
+  margin: 0.67em 0;
+  font-size: var(--heading-font-size-xl);
+  line-height: var(--heading-line-height-xl);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+/* stylelint-disable-next-line no-descending-specificity -- unrelated to the lottie link paragraph */
+.hero-split.bleed .hero-split-content > p:not(.hero-split-eyebrow, .hero-split-link) {
+  max-width: 330px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity -- body copy stack (source p margin-bottom 20px) */
+.hero-split.bleed .hero-split-content > p:not(.hero-split-eyebrow) + p {
+  margin-top: 20px;
+}
+
+.hero-split.bleed .hero-split-actions {
+  align-self: stretch;
+  margin-top: 40px;
+}
+
+/* mobile: the CTA spans the text column (source .btn-container) */
+.hero-split.bleed .hero-split-actions .button-wrapper {
+  flex: 1 1 100%;
+}
+
+main .hero-split.bleed .hero-split-actions a.button:any-link {
+  width: 100%;
+}
+
+.hero-split.bleed .hero-split-actions + *,
+.hero-split.bleed .hero-split-link + * {
+  margin-top: 20px;
+}
+
+.hero-split.bleed .hero-split-media,
+.hero-split.bleed .hero-split-media picture {
+  height: 100%;
+}
+
+.hero-split.bleed .hero-split-media img,
+.hero-split.bleed .hero-split-media video {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* default variant: source element margins (block flow, collapsing), no gaps */
+/* stylelint-disable-next-line no-descending-specificity -- section colour rules only set custom properties */
+.hero-split:not(.pricing, .bleed) {
+  --hero-split-radius: 0;
+
+  gap: 0;
+  padding: 0;
+}
+
+/* the first band keeps the source top padding (60px) that the global
+   first-section rule removes; sections with a pad-top-N style set their own */
+main > .section:first-of-type:not(.green, .bright-green, .forest, .eggshell, .light-grey, .charcoal, .neon, .black, [class*="pad-top-"]) .hero-split:not(.pricing, .bleed) {
+  padding-top: var(--section-padding);
+}
+
+/* source content-wrap padding 0 25px (mobile) */
+.hero-split:not(.pricing, .bleed) .hero-split-content {
+  display: block;
+  padding: 0 25px;
+}
+
+/* flush band (source column-control with no band padding): content-wrap padding-top 60px */
+.section.pad-top-0.pad-bottom-0 .hero-split:not(.pricing, .bleed) .hero-split-content {
+  padding-top: 60px;
+}
+
+.hero-split:not(.pricing, .bleed) .hero-split-content > * {
+  margin: 0 0 20px;
+}
+
+/* tag eyebrow chip (source h2.eyebrow-label: 14/24 500, 1px tracking) */
+.hero-split:not(.pricing, .bleed) .hero-split-content > .hero-split-tag {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 10px 0 20px;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: var(--hero-split-tag-bg);
+  color: var(--hero-split-tag-fg);
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  line-height: var(--eyebrow-line-height);
+  letter-spacing: var(--eyebrow-letter-spacing);
+}
+
+/* source h1.modal-headline.text-large: 32/36 mobile, 40/44 desktop, 0.67em block margins */
+.hero-split:not(.pricing, .bleed) .hero-split-content > :is(h1, h2) {
+  margin: 0.67em 0;
+  font-size: var(--heading-font-size-xl);
+  line-height: var(--heading-line-height-xl);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+/* Block Advisors body copy 19/28.5 (source green-dark-theme modal-body) */
+.section.green .hero-split:not(.pricing, .bleed) .hero-split-content > p:not(.hero-split-eyebrow) {
+  font-size: var(--body-font-size-l);
+  line-height: var(--body-line-height);
+}
+
+/* source .btn-container: margin 40px 0 20px, CTAs 20px + inline gap apart */
+.hero-split:not(.pricing, .bleed) .hero-split-content > .hero-split-actions {
+  gap: 0 25px;
+  margin: 40px 0 20px;
+}
+
+.hero-split:not(.pricing, .bleed) .hero-split-actions > * {
+  margin: 0 0 20px;
+}
+
+/* mobile: CTAs span the text column */
+.hero-split:not(.pricing, .bleed) .hero-split-actions > .button-wrapper {
+  flex: 1 1 100%;
+}
+
+main .hero-split:not(.pricing, .bleed) .hero-split-actions a.button:any-link {
+  width: 100%;
+}
+
+.hero-split:not(.pricing, .bleed) .hero-split-content .hero-split-link {
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+/* mobile: media runs edge to edge under the text */
+.hero-split:not(.pricing, .bleed) .hero-split-media img,
+.hero-split:not(.pricing, .bleed) .hero-split-media video {
+  object-fit: cover;
+}
+
+@media (width >= 768px) {
+  .hero-split.bleed :is(h1, h2),
+  .hero-split.bleed .hero-split-content > p:not(.hero-split-eyebrow, .hero-split-link) {
+    max-width: none;
+  }
+}
+
+@media (width >= 900px) {
+  .hero-split {
+    --hero-split-gap: 64px;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-split.no-media {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-split.bleed {
+    align-items: stretch;
+    min-height: 480px;
+  }
+
+  /* source li.column padding 60/40 + content-wrap padding 0 60px 0 120px */
+  .hero-split.bleed .hero-split-content {
+    justify-content: center;
+    padding: 60px 60px 60px max(32px, calc((100vw - 1200px) / 2));
+  }
+
+  .hero-split.bleed :is(h1, h2) {
+    max-width: 580px;
+  }
+
+  .hero-split.bleed .hero-split-actions {
+    align-self: flex-start;
+  }
+
+  .hero-split.bleed .hero-split-actions .button-wrapper {
+    flex: 0 1 auto;
+  }
+
+  main .hero-split.bleed .hero-split-actions a.button:any-link {
+    width: auto;
+  }
+
+  .hero-split.bleed .hero-split-content > p:not(.hero-split-eyebrow, .hero-split-link) {
+    max-width: 500px;
+  }
+
+  /* default: two equal halves (source li.column col-2, 720px each at 1440) */
+  .hero-split:not(.pricing, .bleed) {
+    --hero-split-gap: 0;
+  }
+
+  /* contained band (source expat hero): content-wrap padding 0 35px 0 120px, text
+     starts at the 1200px container edge; CTAs side by side in a 565px column */
+  .hero-split:not(.pricing, .bleed) .hero-split-content {
+    padding: 0 35px 0 max(32px, calc((100vw - 1200px) / 2));
+  }
+
+  /* flush band (source payroll hero): content-wrap padding 60px 60px 0 120px */
+  .section.pad-top-0.pad-bottom-0 .hero-split:not(.pricing, .bleed) .hero-split-content {
+    padding-top: 60px;
+    padding-right: 60px;
+  }
+
+  .hero-split:not(.pricing, .bleed) .hero-split-content > :is(h1, h2) {
+    max-width: 540px;
+  }
+
+  .hero-split:not(.pricing, .bleed) .hero-split-content > p:not(.hero-split-eyebrow, .hero-split-link) {
+    max-width: 500px;
+  }
+
+  .section.pad-top-0.pad-bottom-0 .hero-split:not(.pricing, .bleed) .hero-split-content > p:not(.hero-split-eyebrow, .hero-split-link) {
+    max-width: none;
+  }
+
+  .hero-split:not(.pricing, .bleed) .hero-split-actions > .button-wrapper {
+    flex: 0 1 auto;
+  }
+
+  /* source .btn-wide CTA width */
+  main .hero-split:not(.pricing, .bleed) .hero-split-actions a.button:any-link {
+    width: auto;
+    min-width: 260px;
+  }
+
+  /* contained media: image centred in its half (source li.column align-center, 25px inset) */
+  .hero-split:not(.pricing, .bleed) .hero-split-media {
+    padding: 0 25px;
+  }
+
+  /* flush band: the image fills its half edge to edge, top to bottom */
+  .section.pad-top-0.pad-bottom-0 .hero-split:not(.pricing, .bleed) .hero-split-media {
+    align-self: stretch;
+    padding: 0;
+  }
+
+  .section.pad-top-0.pad-bottom-0 .hero-split:not(.pricing, .bleed) .hero-split-media picture,
+  .section.pad-top-0.pad-bottom-0 .hero-split:not(.pricing, .bleed) .hero-split-media img,
+  .section.pad-top-0.pad-bottom-0 .hero-split:not(.pricing, .bleed) .hero-split-media video {
+    height: 100%;
+  }
+}

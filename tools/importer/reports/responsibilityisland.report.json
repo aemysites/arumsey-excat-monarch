@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/responsibilityisland/",
+  "path": "responsibilityisland",
+  "timestamp": "2026-10-22T21:11:57.138Z",
+  "title": "Responsibility Island | H&R Block®",
+  "template": "campaign-full-bleed-hero",
+  "blocks": [
+    "hero-video",
+    "software-download",
+    "cards-product",
+    "cards-product",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "cards-icon",
+    "cards-pricing"
+  ],
+  "importScript": "7f0f877f1c55"
+}

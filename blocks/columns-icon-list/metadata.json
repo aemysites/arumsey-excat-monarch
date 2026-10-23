@@ -1,0 +1,22 @@
+{
+  "variantName": "columns-icon-list",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "intro text column beside a vertical list of icon items (icon followed by short text)"
+  },
+  "contentPattern": {
+    "structure": "one row, two cells: cell 1 = intro heading/text, cell 2 = icon items, either a bullet list whose items start with an icon, or paragraphs each starting with an icon followed by text"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_383272f59ac1"
+  ],
+  "usage": "Feature/benefit lists with icons on corporate and service pages.",
+  "reuseGuidance": "Use when a short icon list sits beside intro copy. For icon grids in cards use cards."
+}

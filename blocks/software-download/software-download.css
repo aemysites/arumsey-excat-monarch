@@ -1,0 +1,334 @@
+/*
+ * software-download
+ * Values from source computed styles (hrblock.com column-control + standalone form),
+ * see migration-work/software-download-extracted.css. Section background and text
+ * colour come from the section style (.section.<style>); the block only sets the
+ * eyebrow chip, picker and layout.
+ */
+.software-download {
+  --software-download-eyebrow-bg: var(--color-forest);
+  --software-download-eyebrow-text: var(--color-eggshell);
+}
+
+/* eyebrow chip on dark sections (source .text-color-neon-green on green-dark-theme) */
+.section:is(.green, .bright-green, .charcoal, .black) .software-download {
+  --software-download-eyebrow-text: var(--color-neon);
+}
+
+/* forest section: neon chip, forest text (source .hrb-neon-green eyebrow) */
+.section.forest .software-download {
+  --software-download-eyebrow-bg: var(--color-neon);
+  --software-download-eyebrow-text: var(--color-forest);
+}
+
+/* layout (mobile: stacked) */
+.software-download .software-download-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.software-download .software-download-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* copy: headings and paragraphs keep their 20px bottom margin (source .modal-headline, .modal-body p) */
+.software-download .software-download-content :is(h1, h2, h3, h4, h5, h6) {
+  color: inherit;
+}
+
+.software-download .software-download-eyebrow {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 260px;
+  margin: 10px 0 9.38px;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: var(--software-download-eyebrow-bg);
+  color: var(--software-download-eyebrow-text);
+  font-size: var(--eyebrow-font-size);
+  font-weight: var(--eyebrow-font-weight);
+  line-height: var(--eyebrow-line-height);
+  letter-spacing: var(--eyebrow-letter-spacing);
+}
+
+/* jumbo headline (source .modal-headline.text-jumbo) on default, with-image, product */
+.software-download:not(.with-image-2, .green) .software-download-content :is(h1, h2) {
+  max-width: 330px;
+  margin: 0 0 20px;
+  font-size: var(--heading-font-size-xxl);
+  line-height: var(--heading-line-height-xxl);
+  letter-spacing: var(--heading-letter-spacing-xxl);
+}
+
+.software-download .software-download-content p:not(.software-download-eyebrow) {
+  margin: 0 0 20px;
+}
+
+/* picker: select + price + download button */
+.software-download .software-download-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.software-download .software-download-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.software-download .software-download-field {
+  position: relative;
+  color: var(--color-forest);
+}
+
+.software-download .software-download-field::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 34px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: translateY(-75%) rotate(45deg);
+  pointer-events: none;
+}
+
+.software-download select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80px;
+  margin: 0;
+  padding: 20px 45px 20px 16px;
+  border: 2px solid #d5d5d4;
+  border-radius: var(--radius-m);
+  background-color: var(--color-white);
+  color: var(--color-forest);
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.software-download select:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.software-download select:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.software-download .software-download-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.software-download .software-download-price {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+/* pill CTA; the button drops its href while unavailable, so it cannot rely on
+   the global a.button:any-link rules (source .btn-medium.btn-wide) */
+main .software-download a.button.software-download-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--button-height);
+  margin: 0;
+  padding: var(--button-padding);
+  border: var(--button-border-width) solid transparent;
+  border-radius: var(--button-radius);
+  background-color: var(--button-primary-background-color);
+  color: var(--button-primary-text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  letter-spacing: var(--button-letter-spacing);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--button-transition);
+}
+
+/* price row: price left, button right (source .standaloneButtons.jc-space-between) */
+main .software-download .software-download-price + a.button.software-download-button {
+  flex: 0 1 auto;
+}
+
+main .software-download a.button.software-download-button:is(:hover, :focus-visible, :active) {
+  background-color: var(--button-primary-hover-background-color);
+  color: var(--button-primary-text-color);
+}
+
+/* source keeps the brand fill and dims the unavailable download (opacity 0.5) */
+main .software-download a.button.software-download-button[aria-disabled="true"] {
+  border-color: transparent;
+  background-color: var(--button-primary-background-color);
+  color: var(--button-primary-text-color);
+  opacity: 0.5;
+}
+
+.software-download .software-download-actions:has(.software-download-price) {
+  justify-content: space-between;
+}
+
+/* media */
+.software-download .software-download-media {
+  line-height: 0;
+}
+
+.software-download .software-download-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* with-image-2 and green: media above the copy on mobile (source sm-md-column-reverse) */
+.software-download.with-image-2 .software-download-media,
+.software-download.green .software-download-media {
+  order: -1;
+}
+
+.software-download.with-image-2 .software-download-media {
+  padding: 20px 0;
+}
+
+/* product: larger body copy and CTA (source .modal-body 19px, .btn-wide) */
+.software-download.product .software-download-content h1 {
+  margin: 29.48px 0;
+}
+
+.software-download.product .software-download-content p:not(.software-download-eyebrow, .button-wrapper) {
+  font-size: 19px;
+  line-height: 28.5px;
+}
+
+.software-download.product .software-download-content .button-wrapper {
+  margin: 40px 0 20px;
+}
+
+main .software-download.product .software-download-content a.button:any-link {
+  width: 100%;
+  padding: 0 35px;
+}
+
+/* green: neon chip, rounded media (source .video .poster-image 10px) */
+.software-download.green {
+  --software-download-eyebrow-bg: var(--color-neon);
+  --software-download-eyebrow-text: var(--color-forest);
+}
+
+.software-download.product {
+  --software-download-eyebrow-bg: var(--color-forest);
+  --software-download-eyebrow-text: var(--color-neon);
+}
+
+.software-download.green .software-download-eyebrow,
+.software-download.product .software-download-eyebrow {
+  max-width: none;
+  margin-bottom: 20px;
+}
+
+.software-download.green .software-download-media img {
+  border-radius: 10px;
+}
+
+.software-download.product .software-download-main {
+  padding-bottom: 60px;
+}
+
+@media (width >= 900px) {
+  .software-download .software-download-eyebrow {
+    max-width: none;
+  }
+
+  .software-download:not(.with-image-2, .green) .software-download-content :is(h1, h2) {
+    max-width: 580px;
+  }
+
+  .software-download .software-download-picker {
+    max-width: 486px;
+  }
+
+  main .software-download a.button.software-download-button {
+    flex: 0 0 auto;
+    min-width: 260px;
+    margin-right: 20px;
+  }
+
+  .software-download .software-download-price {
+    margin-left: 10px;
+  }
+
+  /* default (no media): copy left, picker right, top aligned */
+  .software-download:not(.software-download-has-media) .software-download-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .software-download:not(.software-download-has-media) .software-download-content {
+    padding-right: 60px;
+  }
+
+  .software-download:not(.software-download-has-media) .software-download-picker {
+    justify-self: end;
+  }
+
+  /* media variants: two equal columns, vertically centred */
+  .software-download.software-download-has-media .software-download-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+  }
+
+  .software-download.software-download-has-media .software-download-main {
+    padding-right: 60px;
+  }
+
+  .software-download.product .software-download-main {
+    padding-bottom: 0;
+  }
+
+  .software-download.with-image-2 .software-download-media {
+    order: 0;
+    padding: 40px 0;
+  }
+
+  .software-download.product .software-download-content h1 {
+    margin: 37.52px 0;
+  }
+
+  main .software-download.product .software-download-content a.button:any-link {
+    width: auto;
+    min-width: 260px;
+    min-height: 80px;
+  }
+
+  /* green: media left, copy right */
+  .software-download.green .software-download-main {
+    padding: 0 0 0 110px;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "variantName": "breadcrumb",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "link",
+    "purpose": "Breadcrumb trail of ancestor pages"
+  },
+  "contentPattern": {
+    "structure": "One cell (or one row per crumb) with the trail in order: a list of links, or links in a paragraph. Plain text without a link is the current page; the last item is marked as current"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_c8f8917c144b"
+  ],
+  "usage": "Top of resource-center article and listing pages.",
+  "reuseGuidance": "Author only the ancestor links plus the current page title; separators are drawn by CSS."
+}

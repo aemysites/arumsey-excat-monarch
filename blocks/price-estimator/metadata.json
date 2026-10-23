@@ -1,0 +1,22 @@
+{
+  "variantName": "price-estimator",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "",
+    "purpose": "Toggle the tax situations that apply and see an estimated starting price"
+  },
+  "contentPattern": {
+    "structure": "Config rows keyed in the first cell: Prompt | question text; Result | result heading; Price | base price (e.g. $99); Note | price note (e.g. + additional state fee). Every other row is one situation: label | starting price when selected (optional) | CTA link (optional). Displayed price = highest of base and selected prices"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_800278847b83"
+  ],
+  "usage": "Product pricing pages where visitors pick their tax situations (tax-offices).",
+  "reuseGuidance": "Reuse for the same content pattern; background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black)."
+}

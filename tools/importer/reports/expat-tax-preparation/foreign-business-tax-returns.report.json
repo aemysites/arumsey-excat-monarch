@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/foreign-business-tax-returns/",
+  "path": "expat-tax-preparation/foreign-business-tax-returns",
+  "timestamp": "2026-10-23T02:30:31.027Z",
+  "title": "Foreign Business Tax Returns | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "accordion-faq",
+    "columns-callout",
+    "columns-banner"
+  ],
+  "importScript": "5f7b656097fe"
+}

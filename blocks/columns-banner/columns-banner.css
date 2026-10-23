@@ -1,0 +1,1064 @@
+/* columns-banner: H&R Block split banner (source section.column-control two-column layouts).
+   Values measured from computed styles on hrblock.com (income-tax-course, corporate, founders,
+   tax-offices, tax-reform-and-law-changes, expat country pages). Section background and
+   padding come from section metadata styles. */
+
+/* stylelint-disable no-descending-specificity -- option rules (pair, bleed, strip, ...) are
+   grouped per variant; each targets a different block class, so source order does not matter */
+
+.columns-banner {
+  --columns-banner-gap: 24px;
+  --columns-banner-text-color: var(--text-color);
+  --columns-banner-link-color: var(--link-color);
+  --columns-banner-link-hover-color: var(--link-hover-color);
+  --columns-banner-arrow-link-color: var(--columns-banner-text-color);
+  --columns-banner-dark-panel-background: var(--dark-color);
+  --columns-banner-scrim: rgb(0 0 0 / 45%);
+
+  /* source .right-arrow::after chevron (24px glyph in a 26x12 box) */
+  --columns-banner-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.7 16.7C10.3 17.1 9.7 17.1 9.3 16.7 8.9 16.3 8.9 15.8 9.2 15.4L12.6 12 9.3 8.7C8.9 8.3 8.9 7.8 9.2 7.4 9.7 6.9 10.2 6.9 10.6 7.2L14.7 11.3C15.1 11.7 15.1 12.2 14.8 12.6Z'/%3E%3C/svg%3E");
+
+  color: var(--columns-banner-text-color);
+}
+
+/* light-on-dark section styles (section metadata Style) */
+.section.forest .columns-banner,
+.section.green .columns-banner,
+.section.bright-green .columns-banner,
+.section.charcoal .columns-banner,
+.section.black .columns-banner,
+.columns-banner .columns-banner-dark-panel {
+  --columns-banner-text-color: var(--on-dark-text-color, var(--background-color));
+  --columns-banner-link-color: var(--on-dark-link-color, var(--background-color));
+  --columns-banner-link-hover-color: var(--on-dark-link-hover-color, var(--light-color));
+  --text-color: var(--on-dark-text-color, white);
+  --background-color: var(--on-dark-background-color, var(--dark-color));
+}
+
+/* dark-on-light section styles keep the page defaults */
+.section.eggshell .columns-banner,
+.section.white .columns-banner,
+.section.light-grey .columns-banner,
+.section.neon .columns-banner {
+  --columns-banner-text-color: var(--text-color);
+  --columns-banner-link-color: var(--link-color);
+  --columns-banner-link-hover-color: var(--link-hover-color);
+}
+
+/* green-dark-theme secondary links are neon (source a.hrb-neon-link) */
+.section.green .columns-banner {
+  --columns-banner-arrow-link-color: var(--color-neon);
+}
+
+.columns-banner a:any-link:not(.button) {
+  color: var(--columns-banner-link-color);
+}
+
+.columns-banner a:any-link:not(.button):hover {
+  color: var(--columns-banner-link-hover-color);
+}
+
+.columns-banner > .columns-banner-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--columns-banner-gap);
+}
+
+.columns-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* mobile: copy first, media below it (source sm-md stacking) */
+.columns-banner .columns-banner-text-col {
+  order: 0;
+  min-width: 0;
+}
+
+.columns-banner .columns-banner-img-col {
+  order: 1;
+}
+
+.columns-banner .columns-banner-img-col p {
+  margin: 0;
+}
+
+.columns-banner .columns-banner-text-col > :last-child {
+  margin-bottom: 0;
+}
+
+/* standalone text link: medium weight + chevron (source a.right-arrow, 18px/27px 500) */
+.columns-banner .columns-banner-link a:any-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--columns-banner-arrow-link-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.columns-banner .columns-banner-link a:any-link::after {
+  content: "";
+  display: inline-block;
+  flex: none;
+  width: 26px;
+  height: 12px;
+  background-color: currentcolor;
+  mask: var(--columns-banner-chevron) center / 24px 24px no-repeat;
+}
+
+.columns-banner .columns-banner-link a:any-link:hover {
+  color: var(--columns-banner-arrow-link-color);
+  text-decoration: underline;
+}
+
+/* CTA group (source .btn-container: margin 40px 0 20px, buttons 20px apart) */
+.columns-banner .columns-banner-text-col > :is(.button-wrapper, .columns-banner-link):not(:first-child) {
+  margin-top: 40px;
+}
+
+.columns-banner .columns-banner-text-col > :is(.button-wrapper, .columns-banner-link) + :is(.button-wrapper, .columns-banner-link) {
+  margin-top: 0;
+}
+
+/* mobile: the CTA spans the text column, a trailing link sits centered below it */
+main .columns-banner .button-wrapper a.button:any-link {
+  width: 100%;
+}
+
+.columns-banner .button-wrapper + .columns-banner-link {
+  text-align: center;
+}
+
+/* icon list item: 20px icon + 15px gap before the text (source span.hrb-icon-link--check) */
+.columns-banner .columns-banner-icon-item {
+  position: relative;
+  padding-left: 35px;
+}
+
+.columns-banner li.columns-banner-icon-item {
+  list-style: none;
+}
+
+.columns-banner ul:has(> .columns-banner-icon-item) {
+  padding-left: 0;
+}
+
+.columns-banner .columns-banner-icon-item > picture {
+  position: absolute;
+  top: 3.5px;
+  left: 0;
+}
+
+.columns-banner .columns-banner-icon-item > picture img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* default + bleed (mobile): the photo runs to the screen edges */
+.columns-banner:not(.pair, .no-panel, .strip, .deadline, .dark-3, .dark-4, .no-panel-image-background) .columns-banner-img-col {
+  margin-inline: calc(-1 * var(--content-gutter));
+}
+
+/* multi-column rows: card-sized headings (source h3.modal-headline.text-small 18px / 24px) */
+.columns-banner:is(.no-panel, .pair, .columns-banner-3-cols, .columns-banner-4-cols, .columns-banner-5-cols) h3 {
+  font-size: var(--heading-font-size-m);
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+/* pair: icon/photo stacked above heading, copy and link; source order kept */
+.columns-banner.pair .columns-banner-text-col,
+.columns-banner.pair .columns-banner-img-col {
+  order: unset;
+}
+
+.columns-banner.pair h2 {
+  margin-bottom: 20px;
+}
+
+/* icon / photo above the heading at its natural size */
+.columns-banner.pair .columns-banner-text-col img,
+.columns-banner.no-panel .columns-banner-row img {
+  width: auto;
+  max-width: 100%;
+}
+
+.columns-banner.no-panel .columns-banner-row img {
+  margin: 0 auto;
+}
+
+/* source .cmp-column--image: inline icon line box (+7px) then the heading's 20px margin */
+.columns-banner:is(.pair, .no-panel) p:has(> picture:only-child):not(.columns-banner-icon-item) {
+  margin-bottom: 27px;
+}
+
+.columns-banner.pair .columns-banner-icon-item > picture img,
+.columns-banner.no-panel .columns-banner-icon-item > picture img {
+  display: block;
+  width: 20px;
+}
+
+/* pair with three or more cells: centered steps */
+.columns-banner.pair:not(.columns-banner-2-cols) .columns-banner-text-col {
+  text-align: center;
+}
+
+.columns-banner.pair:not(.columns-banner-2-cols) p:has(> picture:only-child) img {
+  margin-inline: auto;
+}
+
+/* no-panel: a bare row of icons or short items (source li.column.align-center, text-center) */
+.columns-banner.no-panel > .columns-banner-row {
+  align-items: center;
+  gap: 60px;
+  text-align: center;
+}
+
+.columns-banner.no-panel .columns-banner-text-col,
+.columns-banner.no-panel .columns-banner-img-col {
+  order: unset;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 25px;
+}
+
+.columns-banner.no-panel h3 {
+  max-width: 220px;
+  margin: 0 auto 20px;
+}
+
+.columns-banner.no-panel .columns-banner-icon-item {
+  text-align: start;
+}
+
+/* bleed: the image fills its half edge to edge */
+.columns-banner-wrapper:has(> .columns-banner.bleed) {
+  max-width: unset;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.columns-banner.bleed .columns-banner-text-col {
+  padding: 0 var(--content-gutter);
+}
+
+.columns-banner.bleed .columns-banner-img-col {
+  align-self: stretch;
+  margin-inline: 0;
+}
+
+.columns-banner.bleed .columns-banner-img-col picture,
+.columns-banner.bleed .columns-banner-img-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* deadline: expat due-date illustration (source .featured-due-date), text on top of it */
+.columns-banner.deadline > .columns-banner-row {
+  align-items: center;
+  gap: 85px;
+}
+
+.columns-banner.deadline .columns-banner-overlay-col {
+  order: 0;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: min(316px, 100%);
+  aspect-ratio: 451 / 462;
+  margin-left: 23px;
+  border-radius: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='303' height='303' viewBox='0 0 303 303' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='151.5' cy='151.5' r='149.5' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='3 10'/%3E%3C/svg%3E") center / contain no-repeat;
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* light green disc behind the flag (source ::before 300px at -35px / -23px) */
+.columns-banner.deadline .columns-banner-overlay-col::before {
+  content: "";
+  position: absolute;
+  top: -7.6%;
+  left: -5.1%;
+  width: 66.5%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #11a63d;
+}
+
+/* date-only deadline (no flag; source country listing .featured-due-date): the disc fills
+   the circle and the dashed ring sits top-left */
+.columns-banner.deadline .columns-banner-overlay-col-plain {
+  background: #11a63d;
+}
+
+.columns-banner.deadline .columns-banner-overlay-col-plain::before {
+  background: url("data:image/svg+xml,%3Csvg width='303' height='303' viewBox='0 0 303 303' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='151.5' cy='151.5' r='149.5' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='3 10'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.columns-banner.deadline .columns-banner-overlay-media,
+.columns-banner.deadline .columns-banner-overlay-text {
+  position: relative;
+  z-index: 1;
+  width: auto;
+  padding: 0;
+}
+
+.columns-banner.deadline .columns-banner-overlay-media img {
+  width: 98px;
+  height: 98px;
+  margin: 0 auto 20px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.columns-banner.deadline .columns-banner-overlay-text p {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 27.84px;
+  letter-spacing: -0.2px;
+}
+
+.columns-banner.deadline .columns-banner-overlay-text p + p {
+  margin-bottom: 47px;
+  font-size: 44px;
+  line-height: 44px;
+}
+
+.columns-banner.deadline .columns-banner-text-col :is(h2, h3) {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.46px;
+}
+
+.columns-banner.deadline .columns-banner-text-col:not(.columns-banner-overlay-col) p:not(.button-wrapper) {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  line-height: 24.96px;
+  letter-spacing: -0.1px;
+}
+
+.columns-banner.deadline .columns-banner-text-col > .button-wrapper + .button-wrapper {
+  margin-top: 20px;
+}
+
+main .columns-banner.deadline a.button:any-link {
+  font-weight: 500;
+}
+
+/* the second expat CTA is the outline style (source .ba-button--outline) */
+main .columns-banner.deadline .button-wrapper + .button-wrapper a.button.primary:any-link {
+  border-color: var(--button-secondary-color);
+  background-color: transparent;
+  color: var(--button-secondary-color);
+}
+
+main .columns-banner.deadline .button-wrapper + .button-wrapper a.button.primary:hover {
+  border-color: transparent;
+  background-color: var(--button-secondary-hover-background-color);
+  color: var(--button-secondary-hover-text-color);
+}
+
+/* no-panel-image-background: image is a full-row background, text on a scrim */
+.columns-banner > .columns-banner-row.columns-banner-has-bg {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.columns-banner > .columns-banner-has-bg > div {
+  grid-area: 1 / 1;
+}
+
+.columns-banner > .columns-banner-has-bg > .columns-banner-img-col {
+  z-index: 0;
+}
+
+.columns-banner > .columns-banner-has-bg > .columns-banner-img-col picture,
+.columns-banner > .columns-banner-has-bg > .columns-banner-img-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.columns-banner > .columns-banner-has-bg > .columns-banner-text-col {
+  --columns-banner-text-color: var(--on-dark-text-color, var(--background-color));
+  --columns-banner-link-color: var(--on-dark-link-color, var(--background-color));
+
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  padding: var(--columns-banner-gap);
+  background: var(--columns-banner-scrim);
+}
+
+/* strip: slim one-row CTA strip (source .alignBanner: centered, 20px padding) */
+.columns-banner.strip > .columns-banner-row {
+  gap: calc(var(--columns-banner-gap) / 2);
+}
+
+.columns-banner.strip .columns-banner-text-col {
+  text-align: center;
+}
+
+.columns-banner.strip h2 {
+  margin-bottom: 20px;
+  font-size: var(--heading-font-size-m);
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.columns-banner.strip p {
+  margin: 0;
+}
+
+.columns-banner.strip .columns-banner-text-col > .button-wrapper:not(:first-child) {
+  margin-top: 20px;
+}
+
+/* source .btn-little: 48px tall, sized to its label */
+main .columns-banner.strip a.button:any-link {
+  width: auto;
+  min-width: 0;
+  min-height: 48px;
+  letter-spacing: -0.09px;
+}
+
+/* dark-3 / dark-4: equal-width cells; dark-4 puts its last cell on a dark panel */
+.columns-banner.dark-3 .columns-banner-text-col,
+.columns-banner.dark-3 .columns-banner-img-col,
+.columns-banner.dark-4 .columns-banner-text-col,
+.columns-banner.dark-4 .columns-banner-img-col {
+  order: unset;
+}
+
+.columns-banner.dark-3 .columns-banner-row img,
+.columns-banner.dark-4 .columns-banner-row img {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.columns-banner.dark-4 > .columns-banner-row > div:last-child {
+  --columns-banner-text-color: var(--on-dark-text-color, var(--background-color));
+  --columns-banner-link-color: var(--on-dark-link-color, var(--background-color));
+
+  background: var(--columns-banner-dark-panel-background);
+  color: var(--columns-banner-text-color);
+}
+
+/* dark-3 stats (homepage "What makes Block different"): icon, neon-marked figure, caption
+   (source cmp-column--image 50px icon, p.text-small 24/28 + span.hrb-neon::after 8px bar,
+   p.text-little 18/27 500) */
+.columns-banner.dark-3 .columns-banner-text-col p:has(> picture:only-child) {
+  margin: 0 0 27px;
+}
+
+.columns-banner.dark-3 .columns-banner-text-col p:has(> picture:only-child) + p {
+  position: relative;
+  z-index: 0;
+  display: table;
+  margin: 0 auto 20px;
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.columns-banner.dark-3 .columns-banner-text-col p:has(> picture:only-child) + p::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-neon);
+}
+
+.columns-banner.dark-3 .columns-banner-text-col p:has(> picture:only-child) + p + p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* stats: one centred figure per cell (source expat-tax-preparation "70+ years" band:
+   h3.text-color-neon-green 40/44 with a 18/27 600 caption, 250px wide, 15px row margins) */
+.columns-banner.stats > .columns-banner-row {
+  gap: 0;
+}
+
+.columns-banner.stats .columns-banner-text-col {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.columns-banner.stats .columns-banner-text-col > :is(h1, h2, h3, h4, h5, h6, p) {
+  max-width: 250px;
+  margin: 0 auto;
+  color: var(--color-neon);
+  letter-spacing: var(--heading-letter-spacing-xl);
+}
+
+.columns-banner.stats .columns-banner-text-col > :is(h1, h2, h3, h4, h5, h6) {
+  font-size: var(--heading-font-size-xl);
+  line-height: var(--heading-line-height-xl);
+}
+
+.columns-banner.stats .columns-banner-text-col > p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
+/* strip with a logo cell (homepage Spruce strip): one sentence with an inline link
+   (source p.skinnyHeader 18/27, span.text-underline link) */
+.columns-banner.strip .columns-banner-img-col img {
+  width: auto;
+  margin: 0 auto;
+}
+
+.columns-banner.strip.columns-banner-3-cols .columns-banner-text-col > p:not(.button-wrapper) {
+  display: inline;
+}
+
+.columns-banner.strip.columns-banner-3-cols .columns-banner-link a:any-link {
+  display: inline;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+.columns-banner.strip.columns-banner-3-cols .columns-banner-link a:any-link:hover {
+  text-decoration: none;
+}
+
+.columns-banner.strip.columns-banner-3-cols .columns-banner-link a:any-link::after {
+  content: none;
+}
+
+/* photo pair (founders bios): photo 350px wide above a centred 32px name and bio
+   (source cmp-column--image img 350x225, h3.text-medium 32/36, 510px copy) */
+.columns-banner.columns-banner-photos .columns-banner-text-col {
+  text-align: center;
+}
+
+.columns-banner.columns-banner-photos .columns-banner-photo img {
+  width: 350px;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.columns-banner.columns-banner-photos h3 {
+  font-size: var(--heading-font-size-l);
+  line-height: var(--heading-line-height-l);
+  letter-spacing: var(--heading-letter-spacing-l);
+}
+
+/* link panel: expat ways-to-file (source .wp-block-create-block-hrb-expat-ways-to-file:
+   green 16px-radius panel, 65px 40px padding, 75px icon badge + white 19/28 600 link) */
+.columns-banner.columns-banner-link-panel {
+  margin: 60px 0;
+  border-radius: var(--radius-m);
+  padding: 65px 20px;
+  background-color: var(--color-bright-green);
+}
+
+.columns-banner.columns-banner-link-panel > .columns-banner-row {
+  gap: 0;
+}
+
+.columns-banner.columns-banner-link-panel .columns-banner-text-col {
+  --columns-banner-link-icon: url("data:image/svg+xml;charset=utf-8,%3Csvg width='75' height='75' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='37.5' cy='37.5' r='37.5' fill='%23E5EBEF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M46.75 27a1.25 1.25 0 1 0-2.5 0v1.465A3.76 3.76 0 0 0 41.75 32a3.757 3.757 0 0 0 3.75 3.75c.685 0 1.25.565 1.25 1.25s-.565 1.25-1.25 1.25c-.434 0-.72-.15-1.024-.53a1.25 1.25 0 0 0-1.952 1.56c.454.568 1.021 1.02 1.726 1.266V42a1.25 1.25 0 1 0 2.5 0v-1.465A3.76 3.76 0 0 0 49.25 37a3.757 3.757 0 0 0-3.75-3.75c-.685 0-1.25-.565-1.25-1.25s.565-1.25 1.25-1.25c.434 0 .72.15 1.024.53a1.25 1.25 0 0 0 1.952-1.56c-.454-.568-1.021-1.02-1.726-1.266V27Z' fill='%23008427'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 22c-.69 0-1.25.56-1.25 1.25v22.5c0 .69.56 1.25 1.25 1.25h10v2.5h-2.5a1.25 1.25 0 1 0 0 2.5h15a1.25 1.25 0 1 0 0-2.5H43V47h10c.69 0 1.25-.56 1.25-1.25v-22.5c0-.69-.56-1.25-1.25-1.25H23Zm18.75 22.5h10v-20h-27.5v20h17.5ZM40.5 47v2.5h-5V47h5Zm-8.75-17.5c0-.69.56-1.25 1.25-1.25h5a1.25 1.25 0 1 1 0 2.5h-5c-.69 0-1.25-.56-1.25-1.25ZM33 33.25a1.25 1.25 0 1 0 0 2.5h5a1.25 1.25 0 1 0 0-2.5h-5Zm-1.25 6.25c0-.69.56-1.25 1.25-1.25h5a1.25 1.25 0 1 1 0 2.5h-5c-.69 0-1.25-.56-1.25-1.25Zm-2.5-10a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM28 35.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Zm1.25 3.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z' fill='%23262626'/%3E%3C/svg%3E");
+}
+
+.columns-banner.columns-banner-link-panel .columns-banner-text-col + .columns-banner-text-col {
+  --columns-banner-link-icon: url("data:image/svg+xml;charset=utf-8,%3Csvg width='75' height='75' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='37.5' cy='37.5' r='37.5' fill='%23E5EBEF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M34.25 27a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM38 20.75a6.25 6.25 0 1 0 0 12.5 6.25 6.25 0 0 0 0-12.5ZM28 42c0-2.81 2.19-5 5-5h10c2.81 0 5 2.19 5 5v1.25a1.25 1.25 0 1 0 2.5 0V42c0-4.19-3.31-7.5-7.5-7.5H33c-4.19 0-7.5 3.31-7.5 7.5v1.25a1.25 1.25 0 1 0 2.5 0V42Z' fill='%23262626'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M39.17 42.811a1.25 1.25 0 0 0-2.34 0l-1.102 2.939H33a1.25 1.25 0 0 0-.727 2.267l2.054 1.467-1.247 3.327a1.25 1.25 0 0 0 1.897 1.456L38 52.107l3.023 2.16a1.25 1.25 0 0 0 1.897-1.456l-1.247-3.327 2.054-1.467A1.25 1.25 0 0 0 43 45.75h-2.727l-1.103-2.939ZM28.5 54.5c-.25 0-.5-.125-.75-.25l-1.625-1.125L24.5 54.25c-.5.375-1 .25-1.5 0-.375-.375-.625-.875-.375-1.375l.625-1.75-1-.75c-.375-.375-.625-.875-.5-1.375s.625-.875 1.25-.875h1.375l.625-1.5c.125-.5.625-.875 1.125-.875s1 .375 1.125.75l.625 1.5h1.375c.5 0 1 .375 1.25.875.125.5 0 1.125-.5 1.375L29 51l.625 1.75c.25.5 0 1.125-.375 1.375-.25.25-.5.375-.75.375Zm23-.25c.25.125.5.25.75.25s.5-.125.75-.25c.375-.25.625-.875.375-1.375l-.625-1.75 1-.75c.5-.25.625-.875.5-1.375-.25-.5-.75-.875-1.25-.875h-1.375l-.625-1.5c-.125-.375-.625-.75-1.125-.75s-1 .25-1.125.75l-.625 1.5H46.75c-.625 0-1.125.375-1.25.875s0 1 .5 1.375l1 .75-.625 1.75c-.25.5 0 1 .375 1.375.5.25 1 .375 1.5 0l1.625-1.125L51.5 54.25Z' fill='%23008427'/%3E%3C/svg%3E");
+
+  margin-top: 90px;
+}
+
+.columns-banner.columns-banner-link-panel .columns-banner-link {
+  position: relative;
+  margin: 0;
+}
+
+.columns-banner.columns-banner-link-panel .columns-banner-link a:any-link {
+  display: inline;
+  margin-left: 95px;
+  padding: 5px 0;
+  color: var(--color-white);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.columns-banner.columns-banner-link-panel .columns-banner-link a:any-link:hover {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.columns-banner.columns-banner-link-panel .columns-banner-link a:any-link::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 37.5px);
+  left: 0;
+  width: 75px;
+  height: 75px;
+  background: var(--columns-banner-link-icon) center / contain no-repeat;
+}
+
+.columns-banner.columns-banner-link-panel .columns-banner-link a:any-link::after {
+  width: 12px;
+  height: 12px;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='7' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.326 10.786a1.111 1.111 0 0 1 0-1.572l3.658-3.658-3.658-3.66a1.111 1.111 0 1 1 1.57-1.57L6.342 4.77a1.111 1.111 0 0 1 0 1.571l-4.444 4.445a1.111 1.111 0 0 1-1.571 0Z' fill='%23fff'/%3E%3C/svg%3E") center no-repeat;
+  vertical-align: middle;
+  mask: none;
+  transform: translateX(8px);
+  transition: transform 0.15s ease-in;
+}
+
+.columns-banner.columns-banner-link-panel .columns-banner-link a:any-link:hover::after {
+  transform: translateX(15px);
+}
+
+/* tax-help CTA band (expat fragment, bright-green section; source section.ba-cta): photo
+   bleeds to the viewport edge, copy 560px wide, white reverse pill CTA */
+.columns-banner-wrapper:has(> .columns-banner.columns-banner-cta) {
+  max-width: unset;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.columns-banner.columns-banner-cta > .columns-banner-row {
+  gap: 0;
+}
+
+.columns-banner.columns-banner-cta.columns-banner-2-cols > .columns-banner-row > div.columns-banner-text-col {
+  padding: 40px 5% 35px;
+}
+
+.columns-banner.columns-banner-cta .columns-banner-text-col > * {
+  max-width: 560px;
+}
+
+.columns-banner.columns-banner-cta .columns-banner-img-col {
+  position: relative;
+  order: -1;
+  margin-inline: 0;
+  padding-bottom: 55%;
+  overflow: hidden;
+}
+
+.columns-banner.columns-banner-cta .columns-banner-img-col img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.columns-banner.columns-banner-cta h3 {
+  margin: 0;
+  padding-bottom: 30px;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.25px;
+}
+
+.columns-banner.columns-banner-cta .columns-banner-text-col > p:not(.button-wrapper) {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+/* the CTA's padded inline box overflows its 34px line by 18px above and 5px below */
+.columns-banner.columns-banner-cta .columns-banner-text-col > .button-wrapper:not(:first-child) {
+  margin-top: 12px;
+}
+
+main .columns-banner.columns-banner-cta a.button:any-link {
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  border-width: 0;
+  padding: 19px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+@media (width >= 768px) {
+  .columns-banner.columns-banner-link-panel {
+    padding: 65px 40px;
+  }
+
+  /* specific enough to beat the later (width >= 900px) pair rules */
+  .columns-banner.pair.columns-banner-link-panel > .columns-banner-row {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .columns-banner.pair.columns-banner-link-panel.columns-banner-2-cols > .columns-banner-row > div.columns-banner-text-col {
+    flex: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .columns-banner.columns-banner-cta.columns-banner-2-cols > .columns-banner-row > div.columns-banner-text-col {
+    padding: 80px 5% 75px;
+  }
+
+  .columns-banner.columns-banner-cta h3 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .columns-banner.columns-banner-cta .columns-banner-text-col > p:not(.button-wrapper) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+@media (width >= 900px) {
+  .columns-banner > .columns-banner-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+
+  .columns-banner > .columns-banner-row > div {
+    flex: 1 1 0;
+    order: unset;
+  }
+
+  /* two cells split the row in equal halves, insets included */
+  .columns-banner-2-cols:not(.strip, .deadline) > .columns-banner-row > div {
+    box-sizing: border-box;
+    flex: 0 1 50%;
+  }
+
+  .columns-banner .columns-banner-img-col,
+  .columns-banner:not(.pair, .no-panel, .strip, .deadline, .dark-3, .dark-4, .no-panel-image-background) .columns-banner-img-col {
+    margin-inline: 0;
+  }
+
+  /* default two-cell split: copy column insets (source content-wrap 0 60px 0 120px | 0 70px 0 110px) */
+  .columns-banner-2-cols:not(.pair, .no-panel, .strip, .deadline, .bleed) > .columns-banner-row > .columns-banner-text-col:first-child {
+    padding-right: 60px;
+  }
+
+  .columns-banner-2-cols:not(.pair, .no-panel, .strip, .deadline, .bleed) > .columns-banner-row > div + .columns-banner-text-col {
+    padding-left: 110px;
+  }
+
+  /* CTAs sit side by side on one line (source .btn-container: margin-top 40px, buttons
+     20px apart); inline boxes do not collapse margins, so 20px + the copy's 20px = 40px */
+  .columns-banner .columns-banner-text-col > .button-wrapper,
+  .columns-banner .columns-banner-text-col > .button-wrapper + .columns-banner-link {
+    display: inline-flex;
+    margin: 20px 0 0;
+    vertical-align: middle;
+  }
+
+  .columns-banner .columns-banner-text-col > .button-wrapper:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .columns-banner .columns-banner-text-col > .button-wrapper + :is(.button-wrapper, .columns-banner-link) {
+    margin: 20px 0 0 20px;
+  }
+
+  .columns-banner .columns-banner-text-col > .button-wrapper:first-child {
+    margin-top: 0;
+  }
+
+  .columns-banner .columns-banner-text-col > :is(.button-wrapper, .columns-banner-link) + :not(.button-wrapper, .columns-banner-link) {
+    margin-top: 20px;
+  }
+
+  .columns-banner.deadline .columns-banner-text-col > .button-wrapper,
+  .columns-banner.deadline .columns-banner-text-col > .button-wrapper + .button-wrapper {
+    margin-top: 40px;
+  }
+
+  main .columns-banner .button-wrapper a.button:any-link {
+    width: auto;
+  }
+
+  /* pair: two cells inset like the source columns (60px 60px 60px 0 | 60px 70px 60px 110px) */
+  .columns-banner.pair > .columns-banner-row {
+    align-items: flex-start;
+  }
+
+  .columns-banner.pair.columns-banner-2-cols .columns-banner-text-col {
+    padding: 60px 60px 60px 0;
+  }
+
+  .columns-banner.pair.columns-banner-2-cols .columns-banner-row > div + .columns-banner-text-col {
+    padding: 60px 70px 60px 110px;
+  }
+
+  .columns-banner.pair:not(.columns-banner-2-cols) > .columns-banner-row {
+    gap: var(--columns-banner-gap);
+  }
+
+  /* no-panel: icon row in the 1200px content container (source data-security: 3 x 400px
+     columns, copy 350px wide, single-line headings 20px below the icon) */
+  .columns-banner.no-panel > .columns-banner-row {
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .columns-banner.no-panel .columns-banner-text-col,
+  .columns-banner.no-panel .columns-banner-img-col {
+    width: auto;
+    padding: 0 25px;
+  }
+
+  .columns-banner.no-panel h3 {
+    max-width: none;
+    margin: 0 0 20px;
+  }
+
+  /* bleed: copy aligns with the page content, the photo runs to the viewport edge
+     (and to the section edge it touches) */
+  .columns-banner-wrapper:has(> .columns-banner.bleed):first-child {
+    margin-top: calc(-1 * var(--section-padding));
+  }
+
+  .columns-banner-wrapper:has(> .columns-banner.bleed):last-child {
+    margin-bottom: calc(-1 * var(--section-padding));
+  }
+
+  .columns-banner.bleed > .columns-banner-row {
+    align-items: stretch;
+  }
+
+  .columns-banner.bleed .columns-banner-text-col {
+    align-self: center;
+    padding: 60px 60px 40px max(var(--content-gutter), calc((100vw - var(--content-max-width)) / 2));
+  }
+
+  .columns-banner.bleed .columns-banner-row > div + .columns-banner-text-col {
+    padding: 60px max(var(--content-gutter), calc((100vw - var(--content-max-width)) / 2)) 40px 110px;
+  }
+
+  /* deadline: illustration left, copy right (source .container gap 200px) */
+  .columns-banner.deadline > .columns-banner-row {
+    justify-content: space-between;
+    gap: 200px;
+  }
+
+  .columns-banner.deadline .columns-banner-overlay-col {
+    flex: 0 0 auto;
+    width: 451px;
+  }
+
+  .columns-banner.deadline .columns-banner-overlay-media img {
+    width: 147px;
+    height: 147px;
+    margin-bottom: 40px;
+  }
+
+  .columns-banner.deadline .columns-banner-overlay-text p {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.3px;
+  }
+
+  .columns-banner.deadline .columns-banner-overlay-text p + p {
+    margin-bottom: 70px;
+    font-size: 66px;
+    line-height: 66px;
+  }
+
+  .columns-banner.deadline .columns-banner-text-col :is(h2, h3) {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.57px;
+  }
+
+  .columns-banner.deadline .columns-banner-text-col:not(.columns-banner-overlay-col) p:not(.button-wrapper) {
+    font-size: 18px;
+    line-height: 28.08px;
+  }
+
+
+  .columns-banner > .columns-banner-has-bg > .columns-banner-text-col {
+    justify-self: center;
+    max-width: 50%;
+    background: transparent;
+  }
+
+  .columns-banner > .columns-banner-row.columns-banner-has-bg::before {
+    content: "";
+    grid-area: 1 / 1;
+    z-index: 1;
+    background: var(--columns-banner-scrim);
+    pointer-events: none;
+  }
+
+  /* strip: heading | copy | button in one centered row */
+  .columns-banner.strip > .columns-banner-row > .columns-banner-text-col:last-child {
+    flex: 0 0 auto;
+  }
+
+  .columns-banner.strip.columns-banner-1-cols .columns-banner-text-col {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: start;
+  }
+
+  .columns-banner.strip.columns-banner-1-cols .columns-banner-text-col > * {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .columns-banner.strip.columns-banner-1-cols h2 {
+    flex: 0 1 400px;
+    line-height: 28px;
+  }
+
+  .columns-banner.strip.columns-banner-1-cols p:not(.button-wrapper) {
+    flex: 0 1 500px;
+  }
+
+  .columns-banner.strip.columns-banner-1-cols .columns-banner-text-col > .button-wrapper {
+    flex: none;
+    margin: 0;
+  }
+
+  .columns-banner.dark-3 > .columns-banner-row,
+  .columns-banner.dark-4 > .columns-banner-row {
+    align-items: stretch;
+  }
+
+  .columns-banner.dark-3 > .columns-banner-row > div,
+  .columns-banner.dark-4 > .columns-banner-row > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* dark-3 with a heading cell + three stats, top aligned (source two-column-control:
+     300px heading | three stat columns with ~285px one-line captions, 20px top inset) */
+  .columns-banner.dark-3.columns-banner-4-cols > .columns-banner-row {
+    align-items: flex-start;
+  }
+
+  .columns-banner.dark-3.columns-banner-4-cols > .columns-banner-row > div {
+    flex: 7 1 0;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+  .columns-banner.dark-3.columns-banner-4-cols > .columns-banner-row > div:first-child {
+    flex-grow: 9;
+    align-items: flex-start;
+    padding-top: 0;
+    text-align: start;
+  }
+
+  .columns-banner.dark-3 h2 {
+    max-width: 300px;
+  }
+
+  /* stats: row of 1320px max, 5% side margins (source ul.column-container margin 0 72px) */
+  .columns-banner-wrapper:has(> .columns-banner.stats) {
+    max-width: unset;
+    padding: 0 5%;
+  }
+
+  .columns-banner.stats {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .columns-banner.stats > .columns-banner-row {
+    align-items: flex-start;
+  }
+
+  /* strip with a logo cell: the logo is mobile-only; sentence + CTA centred in one row */
+  .columns-banner.strip.columns-banner-3-cols > .columns-banner-row {
+    justify-content: center;
+  }
+
+  .columns-banner.strip.columns-banner-3-cols > .columns-banner-row > .columns-banner-img-col {
+    display: none;
+  }
+
+  .columns-banner.strip.columns-banner-3-cols > .columns-banner-row > .columns-banner-text-col {
+    flex: 0 1 auto;
+    padding-left: 20px;
+    text-align: start;
+  }
+
+  .columns-banner.strip.columns-banner-3-cols > .columns-banner-row > .columns-banner-text-col:last-child {
+    flex: none;
+    margin: 0 20px;
+    padding-left: 0;
+  }
+
+  /* photo pair: two equal 720px halves of the 1440px band, copy 510px centred */
+  .columns-banner-wrapper:has(> .columns-banner.columns-banner-photos) {
+    max-width: 1560px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .columns-banner.pair.columns-banner-photos.columns-banner-2-cols .columns-banner-row > div.columns-banner-text-col {
+    padding: 0 60px;
+  }
+
+  .columns-banner.columns-banner-photos .columns-banner-text-col > * {
+    max-width: 510px;
+    margin-inline: auto;
+  }
+
+  /* CTA band: copy left from a 60px inset, photo right filling the band height */
+  .columns-banner.columns-banner-cta > .columns-banner-row {
+    align-items: stretch;
+  }
+
+  .columns-banner.columns-banner-cta.columns-banner-2-cols > .columns-banner-row > div {
+    flex: 0 0 50%;
+  }
+
+  .columns-banner.columns-banner-cta.columns-banner-2-cols > .columns-banner-row > div.columns-banner-text-col {
+    align-self: center;
+    padding: 150px 40px 145px 60px;
+  }
+
+  .columns-banner.columns-banner-cta .columns-banner-img-col {
+    order: unset;
+    padding-bottom: 0;
+  }
+}
+
+@media (width >= 1500px) {
+  .columns-banner.columns-banner-cta.columns-banner-2-cols > .columns-banner-row > div.columns-banner-text-col {
+    padding-left: 120px;
+  }
+}

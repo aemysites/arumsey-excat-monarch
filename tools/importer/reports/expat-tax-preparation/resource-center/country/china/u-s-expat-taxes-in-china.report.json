@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/china/u-s-expat-taxes-in-china/",
+  "path": "expat-tax-preparation/resource-center/country/china/u-s-expat-taxes-in-china",
+  "timestamp": "2026-10-22T21:01:50.845Z",
+  "title": "U.S. Expat Taxes in China | H&R Block®",
+  "template": "resource-guide-article",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file",
+    "fragments/expat-recommended-feie"
+  ],
+  "importScript": "eaad99ed23bd"
+}

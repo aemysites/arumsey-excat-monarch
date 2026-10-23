@@ -1,0 +1,23 @@
+{
+  "variantName": "article-body",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link + heading + list",
+    "purpose": "Article layout with an optional sidebar of article meta beside the article content"
+  },
+  "contentPattern": {
+    "structure": "Two-cell rows: cell 1 = sidebar meta (read time, date, written by, reviewed by, share links), cell 2 = article content (headings, text, lists, links, images, tables). One-cell rows: article content only. Without sidebar content the article is a single column"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_c6eda56da7d9",
+    "v_5eb092596221"
+  ],
+  "usage": "Resource-center and tax information articles.",
+  "reuseGuidance": "Keep promo bands, feedback and CTAs as separate blocks/sections; article-body only lays out meta and prose."
+}

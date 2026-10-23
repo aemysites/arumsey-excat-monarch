@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/canada/file-fbar-canada/",
+  "path": "expat-tax-preparation/resource-center/country/canada/file-fbar-canada",
+  "timestamp": "2026-10-22T22:22:19.085115Z",
+  "title": "",
+  "template": "resource-article-steps-alt",
+  "blocks": [
+    "breadcrumb",
+    "article-body",
+    "article-feedback",
+    "fragment",
+    "fragment",
+    "fragment"
+  ],
+  "note": "report rebuilt from saved content after the Bright Data retry deleted it"
+}

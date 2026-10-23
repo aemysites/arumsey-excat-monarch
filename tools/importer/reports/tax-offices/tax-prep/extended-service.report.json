@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-offices/tax-prep/extended-service/",
+  "path": "tax-offices/tax-prep/extended-service",
+  "timestamp": "2026-10-22T19:48:40.164Z",
+  "title": "Return & Tax Audit Protection with Peace of Mind® | H&R Block®",
+  "template": "info-photo-hero",
+  "blocks": [
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/guarantees-cards"
+  ],
+  "importScript": "c48ce518734c"
+}

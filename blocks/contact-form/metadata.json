@@ -1,0 +1,22 @@
+{
+  "variantName": "contact-form",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "contact/lead form built from authored field rows or a linked spreadsheet, with native validation and JSON POST submission"
+  },
+  "contentPattern": {
+    "structure": "either a link to a form spreadsheet (.json with Label, Name, Type, Required/Mandatory, Options, Placeholder columns) or one row per field: cell 1 = label (trailing * = required), cell 2 = type (text, email, tel, number, url, date, textarea, select, checkbox, radio, hidden, submit; inferred from label when omitted), cell 3 = placeholder or comma-separated options. Config rows: Action | submit URL, Success | message, Error | message"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_8b9daf114a53"
+  ],
+  "usage": "Partner enquiry, privacy contact and opt-out forms.",
+  "reuseGuidance": "Use for simple single-step forms. reCAPTCHA is not rendered; add a spam-protection integration separately."
+}

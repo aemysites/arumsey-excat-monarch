@@ -1,0 +1,336 @@
+/*
+ * contact-form: H&R Block reimagine form (source .hrb-custom-form / .form-input-textbox).
+ * Values from computed styles on https://www.hrblock.com/partners/tax-import-partners/
+ * (source breakpoint 768px).
+ */
+.contact-form {
+  --contact-form-text: var(--text-color);
+  --contact-form-field-bg: var(--color-white);
+  --contact-form-field-text: var(--color-black); /* rgb(38 38 38) */
+  --contact-form-label: #6e6e6e; /* rgb(110 110 110) */
+  --contact-form-border: #d5d5d4; /* rgb(213 213 212) */
+  --contact-form-focus: #0073c5; /* rgb(0 115 197) */
+  --contact-form-error: #dc1f00; /* rgb(220 31 0) */
+  --contact-form-radius: var(--radius-m); /* 16px */
+  --contact-form-max-width: 600px;
+
+  color: var(--contact-form-text);
+}
+
+/* light-on-dark section styles: messages adapt; fields keep their white surface */
+.section.green .contact-form,
+.section.bright-green .contact-form,
+.section.forest .contact-form,
+.section.charcoal .contact-form,
+.section.black .contact-form {
+  --contact-form-text: var(--on-dark-text-color);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--contact-form-max-width);
+  margin: 0 auto;
+}
+
+/* field row: 10px top/bottom (source .form-input-textbox.form-text) */
+.contact-form .contact-form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.contact-form .contact-form-required {
+  margin-left: 0;
+}
+
+/* text-like controls (source input.cmp-form-text__text) */
+.contact-form input:not([type='checkbox'], [type='radio']),
+.contact-form select,
+.contact-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 20px 45px 12px 16px;
+  border: 1px solid var(--contact-form-border);
+  border-radius: var(--contact-form-radius);
+  background-color: var(--contact-form-field-bg);
+  color: var(--contact-form-field-text);
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  outline: 0 none;
+  appearance: none;
+}
+
+/* source textarea.cmp-form-text__text: 307px tall, 23px 45px 12px 16px */
+.contact-form textarea {
+  height: 307px;
+  padding-top: 23px;
+  resize: vertical;
+}
+
+/* select (source select.cmp-form-options__field--drop-down): label text as the in-field
+   placeholder option, grey until chosen, 400 weight, centred text, 14x8 chevron at 95% */
+.contact-form select {
+  padding: 20px 45px 20px 16px;
+  background: var(--contact-form-field-bg) url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.18875 0.657983C1.67087 0.175854 2.45256 0.175854 2.93469 0.657983L6.99999 4.72328L11.0653 0.657983C11.5474 0.175854 12.3291 0.175854 12.8112 0.657983C13.2934 1.14011 13.2934 1.9218 12.8112 2.40393L7.87296 7.3422C7.39083 7.82433 6.60915 7.82433 6.12702 7.3422L1.18875 2.40393C0.706616 1.9218 0.706616 1.14011 1.18875 0.657983Z' fill='%23262626'/%3E%3C/svg%3E") 95% 50% no-repeat;
+  font-weight: 400;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+/* source select fieldsets sit 10px lower than text rows (115px pitch between selects) */
+.contact-form .contact-form-select {
+  padding-top: 20px;
+}
+
+/* the placeholder option carries the label text; keep the label for assistive tech only */
+.contact-form .contact-form-select > label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--color-grey-rule); /* rgb(214 218 224) */
+  opacity: 1;
+}
+
+.contact-form input:not([type='checkbox'], [type='radio']):hover,
+.contact-form input:not([type='checkbox'], [type='radio']):focus,
+.contact-form select:hover,
+.contact-form select:focus,
+.contact-form textarea:hover,
+.contact-form textarea:focus {
+  outline: 1px solid var(--contact-form-focus);
+  outline-offset: 2px;
+}
+
+/* floating label: sits inside the field, shrinks above the value on focus / when filled */
+.contact-form .contact-form-field > label {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--contact-form-label);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.contact-form .contact-form-checkbox > label {
+  position: static;
+  flex: 1 1 0;
+  min-width: 0;
+  margin-right: 20px;
+  padding-left: 0;
+  color: inherit;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.contact-form .contact-form-field > :is(
+  input:not([type='checkbox']):focus,
+  input:not([type='checkbox'], :placeholder-shown),
+  textarea:focus,
+  textarea:not(:placeholder-shown),
+  select
+) + label {
+  top: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  transition: 0.15s ease-out;
+}
+
+/* invalid state (source .form-input-textbox.error) */
+.contact-form .contact-form-invalid input:not([type='checkbox'], [type='radio']),
+.contact-form .contact-form-invalid select,
+.contact-form .contact-form-invalid textarea,
+.contact-form input:not([type='checkbox'], [type='radio']):user-invalid,
+.contact-form select:user-invalid,
+.contact-form textarea:user-invalid {
+  border: 2px solid var(--contact-form-error);
+}
+
+/* empty select shows its placeholder option in label grey */
+.contact-form select:has(option[value='']:checked) {
+  color: var(--contact-form-label);
+}
+
+/* inline error message (source .tool-error.tool-error-icon) */
+.contact-form .contact-form-error {
+  display: flex;
+  margin: 5px 0 0 15px;
+  padding-left: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath fill='%23DC1F00' d='M7.111 5.185c0-.409.398-.74.889-.74s.889.331.889.74v2.963c0 .41-.398.74-.889.74s-.889-.33-.889-.74V5.185ZM7.111 10.666a.889.889 0 1 1 1.778 0 .889.889 0 0 1-1.778 0Z'/%3E%3Cpath fill='%23DC1F00' fill-rule='evenodd' d='M8 13.333A5.333 5.333 0 1 0 8 2.667a5.333 5.333 0 0 0 0 10.666Zm0 1.778A7.111 7.111 0 1 0 8 .89a7.111 7.111 0 0 0 0 14.222Z' clip-rule='evenodd'/%3E%3C/svg%3E") 0 0 no-repeat;
+  color: var(--contact-form-error);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.22px;
+}
+
+.contact-form .contact-form-error:empty {
+  background: none;
+}
+
+/* checkbox (source fieldset.hrb-custom-input: 15px inset; label 18/28, 34px text indent,
+   10px 20px 10px 0 margin; 76px row pitch) */
+.contact-form .contact-form-checkbox {
+  flex-flow: row wrap;
+  align-items: flex-start;
+  column-gap: 10px;
+  padding: 24px 0 24px 15px;
+}
+
+.contact-form .contact-form-checkbox .contact-form-error {
+  flex-basis: 100%;
+}
+
+.contact-form .contact-form-checkbox .contact-form-error:empty {
+  display: none;
+}
+
+/* custom 24px box (source label::before: 2px solid rgb(38 38 38), 5px radius, white;
+   ::after 12x6 tick, 2px left/bottom border rotated -45deg) */
+.contact-form .contact-form-checkbox input[type='checkbox'] {
+  position: relative;
+  flex: 0 0 24px;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin: 2px 0 0;
+  border: 2px solid var(--color-black);
+  border-radius: 5px;
+  background-color: var(--color-white);
+  cursor: pointer;
+  appearance: none;
+}
+
+.contact-form .contact-form-checkbox input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  box-sizing: border-box;
+  width: 12px;
+  height: 6px;
+  border-bottom: 2px solid var(--color-black);
+  border-left: 2px solid var(--color-black);
+  transform: rotate(-45deg);
+}
+
+.contact-form .contact-form-legend {
+  margin: 0 0 8px;
+}
+
+.contact-form .contact-form-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form .contact-form-options > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-form input[type='radio'] {
+  accent-color: var(--color-green);
+}
+
+.contact-form input[type='checkbox']:focus-visible,
+.contact-form input[type='radio']:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* submit (source button.cmp-form-button.btn-large.btn-x-wide.btn--medium-dark-green) */
+.contact-form .contact-form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 46px;
+}
+
+.contact-form .contact-form-actions button.button {
+  width: 250px;
+  min-width: 0;
+  min-height: 80px;
+  margin: 0 30px;
+  padding: 0 35px;
+}
+
+/* disabled until valid (source button[disabled]: rgb(214 218 224) on rgb(38 38 38), no border) */
+.contact-form .contact-form-actions button.button:disabled,
+.contact-form .contact-form-actions button.button:disabled:hover {
+  border-color: transparent;
+  background-color: var(--color-grey-rule);
+  color: var(--color-black);
+}
+
+/* success state replaces the form (source: centred 70px illustration, h2 56/60, copy) */
+.contact-form .contact-form-success {
+  max-width: var(--contact-form-max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form .contact-form-success:focus {
+  outline: 0;
+}
+
+.contact-form .contact-form-success picture,
+.contact-form .contact-form-success img {
+  display: inline-block;
+  max-width: 70px;
+  height: auto;
+}
+
+.contact-form .contact-form-success :is(h1, h2, h3) {
+  margin: 20px 0;
+  color: inherit;
+  font-size: var(--heading-font-size-xxl);
+  line-height: var(--heading-line-height-xxl);
+  letter-spacing: var(--heading-letter-spacing-xxl);
+}
+
+.contact-form .contact-form-success p {
+  margin: 0 0 20px;
+}
+
+/* status messages (source .form-submit-error: centred, rgb(220 31 0), 500) */
+.contact-form .contact-form-status {
+  margin: 20px 0 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact-form .contact-form-status[data-state='error'] {
+  color: var(--contact-form-error);
+}
+
+@media (width >= 768px) {
+  /* source fields are 590px inside the 600px column */
+  .contact-form .contact-form-field {
+    padding-right: 10px;
+  }
+
+  .contact-form .contact-form-actions button.button {
+    width: auto;
+    min-width: 325px;
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/dsar/",
+  "path": "dsar",
+  "timestamp": "2026-10-22T19:53:10.699Z",
+  "title": "DSAR Privacy Preferences | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/guarantees-cards-forest",
+    "fragments/testimonials-forest"
+  ],
+  "importScript": "cc79b2fd70c8"
+}

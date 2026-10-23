@@ -1,0 +1,43 @@
+{
+  "variantName": "software-download",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "Software update/download panel: copy with eyebrow, a version or state picker and a download button, optional image"
+  },
+  "contentPattern": {
+    "structure": "One row; cells by content: copy (eyebrow, heading, text) | list of versions/states (linked items are downloadable, plain items disable the button; optional paragraphs after the list give the price and button label) | image (optional)"
+  },
+  "options": [
+    {
+      "class": "with-image-2",
+      "label": "With Image 2"
+    },
+    {
+      "class": "with-image",
+      "label": "With Image"
+    },
+    {
+      "class": "product",
+      "label": "Product"
+    },
+    {
+      "class": "green",
+      "label": "Green"
+    }
+  ],
+  "memberVariantIds": [
+    "v_ba8375a88236",
+    "v_a907991f131e",
+    "v_3bc3ba168beb",
+    "v_dea6f6a5b7b5",
+    "v_e6dafb4d151d"
+  ],
+  "usage": "Software update and back-edition pages (30+ pages) and product promos with imagery.",
+  "reuseGuidance": "Reuse for the same content pattern; background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black)."
+}

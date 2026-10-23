@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/",
+  "path": "expat-tax-preparation",
+  "timestamp": "2026-10-23T02:19:00.153Z",
+  "title": "Expat Tax Preparation Services | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "cards-pricing",
+    "accordion-media",
+    "hero-split",
+    "columns-banner"
+  ],
+  "importScript": "d33c66e64059"
+}

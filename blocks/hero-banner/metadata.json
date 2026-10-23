@@ -1,0 +1,92 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "image + heading + link",
+    "purpose": "full-width background photo or illustration with an overlaid eyebrow, heading, text and CTA (optionally a foreground cut-out image)"
+  },
+  "contentPattern": {
+    "structure": "cell 1 = background picture; cell 2 = eyebrow paragraph, optional heading, text, CTA links (bold = primary, italic = secondary); optional further picture-only cell = foreground image"
+  },
+  "options": [
+    {
+      "class": "alt",
+      "label": "Alt"
+    },
+    {
+      "class": "image-only",
+      "label": "Image Only"
+    },
+    {
+      "class": "dark",
+      "label": "Dark"
+    },
+    {
+      "class": "alt-2",
+      "label": "Alt 2"
+    }
+  ],
+  "memberVariantIds": [
+    "v_09ae393b2bf8",
+    "v_038b319cb86d",
+    "v_4fc8b4d759d3",
+    "v_621adf72a7a3",
+    "v_9d8a9b52e045",
+    "v_a77ec072b0dd",
+    "v_e7c3af74b49e"
+  ],
+  "usage": {
+    "pagesFound": 5,
+    "examplePages": [
+      "https://www.hrblock.com/outlook-on-american-life/",
+      "https://www.hrblock.com/tax-payment-center/",
+      "https://www.hrblock.com/financial-services/spruce/",
+      "https://www.hrblock.com/corporate/founders/",
+      "https://www.hrblock.com/offers/turbotax-price-comparison/"
+    ]
+  },
+  "reuseGuidance": "Use for campaign / story banners where text sits over a full-bleed photo. Use hero-split when text and media sit side by side; hero-video for a background video.",
+  "variants": {
+    "v_09ae393b2bf8": {
+      "option": null,
+      "description": "image + heading + link",
+      "pagesFound": 1
+    },
+    "v_038b319cb86d": {
+      "option": "alt",
+      "description": "image + link",
+      "pagesFound": 1
+    },
+    "v_4fc8b4d759d3": {
+      "option": null,
+      "description": "image",
+      "pagesFound": 1,
+      "confidenceReason": "Moved from hero-split to hero-banner default: eyebrow and form over a full-width background photo. Colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not a block class."
+    },
+    "v_621adf72a7a3": {
+      "option": "image-only",
+      "description": "image",
+      "pagesFound": 1
+    },
+    "v_9d8a9b52e045": {
+      "option": "dark",
+      "description": "list",
+      "pagesFound": 1
+    },
+    "v_a77ec072b0dd": {
+      "option": "alt-2",
+      "description": "image",
+      "pagesFound": 1
+    },
+    "v_e7c3af74b49e": {
+      "option": "image-only",
+      "description": "list",
+      "pagesFound": 1
+    }
+  }
+}

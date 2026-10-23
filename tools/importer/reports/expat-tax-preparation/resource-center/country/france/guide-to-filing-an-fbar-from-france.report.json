@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/france/guide-to-filing-an-fbar-from-france/",
+  "path": "expat-tax-preparation/resource-center/country/france/guide-to-filing-an-fbar-from-france",
+  "timestamp": "2026-10-22T20:35:52.065Z",
+  "title": "Guide to Filing an FBAR from France | H&R Block®",
+  "template": "resource-article",
+  "blocks": [
+    "article-body"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file",
+    "fragments/expat-recommended-feie"
+  ],
+  "importScript": "f58ad7bf6aa4"
+}

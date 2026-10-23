@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/lp/creator-taxes/",
+  "path": "lp/creator-taxes",
+  "timestamp": "2026-10-22T18:44:18.387Z",
+  "title": "Creator Suite | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "cards-pricing",
+    "lottie-animation",
+    "cards-article",
+    "cards-feature",
+    "promo-strip",
+    "hero-split",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "d4c454421d77"
+}

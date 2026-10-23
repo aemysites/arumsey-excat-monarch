@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/all-topics/",
+  "path": "expat-tax-preparation/resource-center/all-topics",
+  "timestamp": "2026-10-22T18:28:06.340Z",
+  "title": "Expat Tax Topics | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "hero-resource",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta"
+  ],
+  "importScript": "d4c454421d77"
+}

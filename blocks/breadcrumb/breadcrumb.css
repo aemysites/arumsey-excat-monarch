@@ -1,0 +1,156 @@
+/* breadcrumb: values from source .ba--breadcrumbs computed styles */
+.breadcrumb {
+  --breadcrumb-link: var(--color-bright-green); /* rgb(0 132 39) */
+  --breadcrumb-current: #6e6e6e; /* rgb(110 110 110) .breadcrumb-current a */
+  --breadcrumb-divider: var(--color-black); /* chevron fill #262626 */
+  --breadcrumb-chevron: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.991778 11.2301C0.557862 10.7962 0.557862 10.0927 0.991778 9.65876L4.65055 5.99999L0.991778 2.34122C0.557862 1.9073 0.557862 1.20378 0.991778 0.769869C1.42569 0.335952 2.12921 0.335952 2.56313 0.769869L7.00757 5.21431C7.44149 5.64823 7.44149 6.35174 7.00757 6.78566L2.56313 11.2301C2.12921 11.664 1.42569 11.664 0.991778 11.2301Z' fill='%23000'/%3E%3C/svg%3E");
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+}
+
+/* light-on-dark sections */
+.section.forest .breadcrumb,
+.section.green .breadcrumb,
+.section.bright-green .breadcrumb,
+.section.black .breadcrumb,
+.section.charcoal .breadcrumb {
+  --breadcrumb-link: var(--on-dark-link-color);
+  --breadcrumb-current: var(--on-dark-text-color);
+  --breadcrumb-divider: var(--on-dark-text-color);
+}
+
+.breadcrumb .breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* mobile base hides all but the parent page (see below) */
+.breadcrumb .breadcrumb-item {
+  display: none;
+  align-items: flex-start;
+  min-height: 28px;
+}
+
+/* chevron divider: 26px x 28px box with the 8x12 chevron centred (.ba--breadcrumbs--divide) */
+.breadcrumb .breadcrumb-item::before {
+  content: '';
+  flex: 0 0 26px;
+  width: 26px;
+  height: 28px;
+  background-color: var(--breadcrumb-divider);
+  mask: var(--breadcrumb-chevron) center / 8px 12px no-repeat;
+}
+
+.breadcrumb .breadcrumb-item a:any-link {
+  color: var(--breadcrumb-link);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item a:hover,
+.breadcrumb .breadcrumb-item a:focus {
+  color: var(--breadcrumb-link);
+  text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-item [aria-current='page'],
+.breadcrumb .breadcrumb-item a[aria-current='page']:any-link {
+  color: var(--breadcrumb-current);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: text;
+}
+
+/* expat article theme: 600-weight links that fade on hover (source a { transition: 0.25s }) */
+body.expat-article .breadcrumb .breadcrumb-item a:any-link:not([aria-current]) {
+  font-weight: 600;
+  transition: all 0.25s;
+}
+
+/* mobile: only the parent page, with a back-pointing chevron (.bc-reversed-mobile) */
+.breadcrumb .breadcrumb-item:nth-last-child(2),
+.breadcrumb .breadcrumb-item:only-child {
+  display: inline-flex;
+}
+
+.breadcrumb .breadcrumb-item:nth-last-child(2)::before {
+  margin-right: 4px;
+  transform: rotate(180deg);
+}
+
+.breadcrumb .breadcrumb-item:only-child::before {
+  content: none;
+}
+
+/* source shows the full trail from 768px (its mobile rules stop at 767.98px) */
+@media (width >= 768px) {
+  .breadcrumb .breadcrumb-item,
+  .breadcrumb .breadcrumb-item:nth-last-child(2) {
+    display: inline-flex;
+  }
+
+  .breadcrumb .breadcrumb-item::before {
+    content: none;
+  }
+
+  .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: '';
+    margin: 0 5px 0 4px;
+    transform: none;
+  }
+}
+
+/* ---------- placement in the page ---------- */
+
+/* source spaces the next row 20px below the trail (.ba--breadcrumbs margin-bottom) */
+main > .section > .breadcrumb-wrapper + div {
+  margin-top: 20px;
+}
+
+/* listing intro (country hub, .expat-hp-countries .breadcrumbs-container):
+   60px to the h1 from 768px, 20px below */
+@media (width >= 768px) {
+  main > .section.light-grey > .breadcrumb-wrapper + .default-content-wrapper {
+    margin-top: 60px;
+  }
+}
+
+/* trail opening a section without top padding (search, .bc-search-container):
+   source keeps its 60 / 80 / 120px top gap under the header */
+main > .section.pad-top-0 > .breadcrumb-wrapper:first-child > .breadcrumb {
+  margin-top: 60px;
+}
+
+@media (width >= 768px) {
+  main > .section.pad-top-0 > .breadcrumb-wrapper:first-child > .breadcrumb {
+    margin-top: 80px;
+  }
+}
+
+@media (width >= 992px) {
+  main > .section.pad-top-0 > .breadcrumb-wrapper:first-child > .breadcrumb {
+    margin-top: 120px;
+  }
+}
+
+/* expat articles: trail sits in the 800px article column (source .col-8.desktop-small),
+   right of the 1/6 meta sidebar + 40px gap rendered by article-body */
+@media (width >= 992px) {
+  body.expat-article .breadcrumb {
+    max-width: calc(200% / 3);
+    margin-left: calc((100% / 6) + 40px);
+  }
+
+  /* not yet converted to article-body: follow the centred 800px default content column */
+  body.expat-article main > .section > .breadcrumb-wrapper:has(+ .default-content-wrapper) > .breadcrumb {
+    max-width: var(--expat-article-width);
+    margin-inline: auto;
+  }
+}

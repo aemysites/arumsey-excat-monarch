@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/w-4-calculator/",
+  "path": "w-4-calculator",
+  "timestamp": "2026-10-22T18:19:50.611Z",
+  "title": "W-4 Calculator: IRS Tax Withholding Estimator 2025-2026 | H&R Block®",
+  "template": "homepage-landing",
+  "blocks": [
+    "cards-pricing",
+    "accordion-faq",
+    "columns-feature",
+    "cards-feature",
+    "cards-feature",
+    "hero-banner"
+  ],
+  "importScript": "9a012240aa11"
+}

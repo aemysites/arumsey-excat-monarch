@@ -1,0 +1,28 @@
+{
+  "variantName": "review-filter",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "",
+    "purpose": "Two dependent dropdowns (review type, then product) with a submit button that navigates to the chosen reviews page"
+  },
+  "contentPattern": {
+    "structure": "Optional keyed rows: Type label | placeholder; Filter label | placeholder; Submit | button label. Every other row is one review type: type name (text or link) | list of product links"
+  },
+  "options": [
+    {
+      "class": "dark",
+      "label": "Dark"
+    }
+  ],
+  "memberVariantIds": [
+    "v_24f4647eb4d0",
+    "v_3ee8c9863545"
+  ],
+  "usage": "Reviews hub and product reviews pages (10 pages).",
+  "reuseGuidance": "Reuse for the same content pattern; background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black)."
+}

@@ -1,0 +1,24 @@
+{
+  "variantName": "cards-tip",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "Tip callout boxes: small lightbulb icon beside a short tip, with optional nested links below, plus an optional trailing link"
+  },
+  "contentPattern": {
+    "structure": "icon cell | tip text cell; trailing link-only paragraphs or a link list in the text cell become the box's link list. A final row containing only a link (no icon) renders below the grid as a footer link",
+    "rows": "one row per tip, optional trailing link row",
+    "cells": ["icon", "tip text + optional links"]
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_1102b4fdc792"
+  ],
+  "usage": "Use for 'Tip' callouts in tax-law change articles: two-column grid of light boxes, each with an icon and a one-line tip, optionally followed by related service links. Section background comes from section metadata Style, not a block class.",
+  "reuseGuidance": "Reuse for short advisory callouts that pair an icon with a sentence. Use cards-icon for centred icon features."
+}

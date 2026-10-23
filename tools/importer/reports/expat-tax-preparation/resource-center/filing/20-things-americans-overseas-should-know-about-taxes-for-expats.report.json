@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/20-things-americans-overseas-should-know-about-taxes-for-expats/",
+  "path": "expat-tax-preparation/resource-center/filing/20-things-americans-overseas-should-know-about-taxes-for-expats",
+  "timestamp": "2026-10-22T21:02:48.002Z",
+  "title": "20 Things to Know About U.S. Taxes for Expats | H&R Block®",
+  "template": "resource-guide-article",
+  "blocks": [
+    "article-body",
+    "cards-article"
+  ],
+  "fragments": [
+    "fragments/expat-tax-help-cta",
+    "fragments/expat-testimonials",
+    "fragments/expat-ways-to-file"
+  ],
+  "importScript": "eaad99ed23bd"
+}

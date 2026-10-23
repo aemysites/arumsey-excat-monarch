@@ -1,0 +1,15 @@
+{
+  "type": "da",
+  "sites": {
+    "excat-monarch2": {
+      "previewOrg": "aemysites",
+      "previewSite": "excat-monarch2",
+      "contentHostUrl": "https://content.da.live/aemysites/arumsey-excat-monarch2/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json",
+      "botProtected": true
+    }
+  },
+  "features": [
+    "site-planning"
+  ]
+}

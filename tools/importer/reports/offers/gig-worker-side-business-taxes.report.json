@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/offers/gig-worker-side-business-taxes/",
+  "path": "offers/gig-worker-side-business-taxes",
+  "timestamp": "2026-10-22T18:46:13.634Z",
+  "title": "Gig Worker & Side Business Taxes | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "cards-pricing",
+    "accordion-media",
+    "cards-product",
+    "columns-promo-card",
+    "cards-icon",
+    "hero-split",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "importScript": "d4c454421d77"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/reviews/deluxe-tax-software-reviews/",
+  "path": "reviews/deluxe-tax-software-reviews",
+  "timestamp": "2026-10-22T18:58:11.246Z",
+  "title": "Deluxe Tax Software Reviews | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "product-reviews",
+    "review-filter"
+  ],
+  "importScript": "d4c454421d77"
+}

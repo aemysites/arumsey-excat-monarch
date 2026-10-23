@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/financial-services/emerald-advance-loan-vs-refund-advance/",
+  "path": "financial-services/emerald-advance-loan-vs-refund-advance",
+  "timestamp": "2026-10-22T18:37:44.361Z",
+  "title": "Emerald Advance Loan vs Refund Advance: Key Differences Explained | H&R Block®",
+  "template": "product-split-hero",
+  "blocks": [
+    "accordion-faq",
+    "table-data",
+    "cards-product",
+    "hero-split",
+    "columns-banner"
+  ],
+  "importScript": "d4c454421d77"
+}

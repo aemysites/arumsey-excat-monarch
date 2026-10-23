@@ -1,0 +1,96 @@
+{
+  "variantName": "columns-banner",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list"
+  },
+  "contentPattern": {
+    "structure": "one row, two or more cells: text (heading, copy, CTA links/buttons) beside a photo, illustration or icon; options change the split (pair, bleed, strip, no-panel, overlay)",
+    "rows": "usually 1; extra rows repeat the layout"
+  },
+  "options": [
+    {
+      "class": "pair",
+      "label": "Pair"
+    },
+    {
+      "class": "no-panel",
+      "label": "No Panel"
+    },
+    {
+      "class": "bleed",
+      "label": "Bleed"
+    },
+    {
+      "class": "deadline",
+      "label": "Deadline"
+    },
+    {
+      "class": "no-panel-image-background",
+      "label": "No Panel Image Background"
+    },
+    {
+      "class": "strip",
+      "label": "Strip"
+    },
+    {
+      "class": "dark-4",
+      "label": "Dark 4"
+    },
+    {
+      "class": "dark-3",
+      "label": "Dark 3"
+    }
+  ],
+  "memberVariantIds": [
+    "v_21d4b91fbd3d",
+    "v_f021fe2b05b9",
+    "v_0e77d41ea13d",
+    "v_fa7ac5da97e7",
+    "v_c46c030ebfa1",
+    "v_815be530136d",
+    "v_b7e070882166",
+    "v_a141ddec7a88",
+    "v_21b5f3dff73f",
+    "v_2282efac149e",
+    "v_6fe53b07dae4",
+    "v_b7e070882166-1",
+    "v_666c60bcfcc8",
+    "v_b7e070882166-2",
+    "v_82542d7ac936",
+    "v_e86dbe5ade98",
+    "v_8f0be3b39645",
+    "v_a7d116940a81",
+    "v_08984ad3b694",
+    "v_0e6edf9c602a",
+    "v_1faf271d4af6",
+    "v_2dd46ebd5fa5",
+    "v_331f9da48817",
+    "v_344562017631",
+    "v_54010e7f5c23",
+    "v_662e05c2335c",
+    "v_70ea8590ce2f",
+    "v_aca40dc8c5b8",
+    "v_b08fbd69553c",
+    "v_c78261b1a533",
+    "v_d959c1f7527f",
+    "v_de21748b1cd0",
+    "v_f4575e9cdb49"
+  ],
+  "usage": "Split promotional banner: text and CTA beside one photo or graphic. Background colour comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black).",
+  "reuseGuidance": "Use for text + image split banners and CTA strips. pair = two equal icon/photo + link columns; bleed = image fills its half edge to edge; deadline = text overlaid on the illustration in the same cell; no-panel = bare row of icons; no-panel-image-background = image cell becomes the row background with text over it; strip = slim one-row CTA strip; dark-3/dark-4 = equal-width cells (dark-4 puts the last cell on a dark panel).",
+  "sectionStyles": [
+    "forest",
+    "green",
+    "bright-green",
+    "eggshell",
+    "neon",
+    "white",
+    "black"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "Grid of feature/promo cards with optional photo or icon, heading, text and a link or button pinned to the bottom"
+  },
+  "contentPattern": {
+    "structure": "image or icon (optional, own cell) | body cell with optional eyebrow, heading, text and a final paragraph of links/buttons (rendered as the card CTA). Mark an individual card dark by starting a paragraph with `(dark)` (e.g. a `(dark)` paragraph on its own) or by adding an extra cell containing `dark`; the marker is stripped and the card gets the `.dark` card styling",
+    "rows": "one row per card",
+    "cells": ["image (optional)", "body", "dark marker (optional)"]
+  },
+  "options": [
+    { "class": "dark", "label": "Dark" }
+  ],
+  "memberVariantIds": [
+    "v_2682772f3903",
+    "v_3697401a69be",
+    "v_d9e13f20bc2f",
+    "v_859ba46926d2",
+    "v_8feaee6b3942",
+    "v_b3603f372bb2",
+    "v_57960dc0b981",
+    "v_d253dfce3f24",
+    "v_e088f1a4d010",
+    "v_0ebb22d5019f",
+    "v_372370a6d713",
+    "v_d6cfecbfd2b2"
+  ],
+  "usage": "Use for 2-4 column rows of feature cards (photo or icon, heading, copy, CTA). Default renders light cards; add the `dark` option to make every card dark. For a mixed row (one dark card among light cards) keep the default and mark the dark card with a `(dark)` paragraph or an extra `dark` cell. Section background comes from section metadata Style (forest, green, bright-green, eggshell, neon, white, black), not from a block class.",
+  "reuseGuidance": "Reuse for any card grid where each card is a self-contained promo with its own surface. Use cards-icon for bare icons without card surfaces and cards-article for article/blog teasers."
+}

@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.hrblock.com/tax-offices/office-tax-preparation/",
+  "path": "tax-offices/office-tax-preparation",
+  "timestamp": "2026-10-22T20:27:51.959Z",
+  "title": "File Taxes In-Office with a Trusted Tax Professional | H&R Block®",
+  "template": "card-grid-landing",
+  "blocks": [
+    "table-data",
+    "accordion-media",
+    "columns-promo-card",
+    "cards-icon",
+    "cards-feature",
+    "promo-strip",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner",
+    "columns-banner"
+  ],
+  "fragments": [
+    "fragments/guarantees-cards-forest"
+  ],
+  "importScript": "cc79b2fd70c8"
+}

@@ -1,0 +1,135 @@
+/* newsletter-signup: floating-label e-mail field above a centred pill submit button
+   (source .hrb-custom-form inside .column-control.container-width-600) */
+.newsletter-signup {
+  --newsletter-signup-fg: var(--text-color);
+  --newsletter-signup-field-bg: var(--color-white);
+  --newsletter-signup-field-fg: var(--color-black);
+  --newsletter-signup-field-border: rgb(213 213 212);
+  --newsletter-signup-label-color: rgb(110 110 110);
+  --newsletter-signup-focus-color: rgb(0 115 197);
+  --newsletter-signup-radius: 16px;
+  --newsletter-signup-width: 590px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--newsletter-signup-fg);
+}
+
+.section.forest .newsletter-signup,
+.section.green .newsletter-signup,
+.section.bright-green .newsletter-signup,
+.section.charcoal .newsletter-signup,
+.section.black .newsletter-signup {
+  --newsletter-signup-fg: var(--on-dark-text-color);
+}
+
+.newsletter-signup .newsletter-signup-intro {
+  width: 100%;
+  max-width: var(--newsletter-signup-width);
+  text-align: center;
+}
+
+.newsletter-signup .newsletter-signup-intro > * {
+  color: inherit;
+}
+
+.newsletter-signup .newsletter-signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  max-width: var(--newsletter-signup-width);
+}
+
+.newsletter-signup .newsletter-signup-field {
+  position: relative;
+  width: 100%;
+}
+
+.newsletter-signup input[type='email'] {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 20px 45px 12px 16px;
+  border: 1px solid var(--newsletter-signup-field-border);
+  border-radius: var(--newsletter-signup-radius);
+  background: var(--newsletter-signup-field-bg);
+  color: var(--newsletter-signup-field-fg);
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.newsletter-signup input[type='email']:focus-visible {
+  outline: 1px solid var(--newsletter-signup-focus-color);
+  outline-offset: 0;
+}
+
+/* label rests inside the field like a placeholder, then floats up while focused or filled */
+.newsletter-signup .newsletter-signup-label {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: 18px;
+  overflow: hidden;
+  color: var(--newsletter-signup-label-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.newsletter-signup input[type='email']:focus + .newsletter-signup-label,
+.newsletter-signup input[type='email']:not(:placeholder-shown) + .newsletter-signup-label {
+  top: 14px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.newsletter-signup .newsletter-signup-form button.button {
+  width: 250px;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.newsletter-signup .newsletter-signup-form button.button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.newsletter-signup .newsletter-signup-status {
+  margin: 0;
+  text-align: center;
+}
+
+.newsletter-signup .newsletter-signup-status:empty {
+  display: none;
+}
+
+@media (width >= 900px) {
+  /* source column is 600px wide; the 590px field sits left with a 10px right gutter */
+  .newsletter-signup .newsletter-signup-form {
+    gap: 35px;
+    max-width: calc(var(--newsletter-signup-width) + 10px);
+  }
+
+  .newsletter-signup .newsletter-signup-field {
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+
+  .newsletter-signup .newsletter-signup-form button.button {
+    width: 325px;
+  }
+}

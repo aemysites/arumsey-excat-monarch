@@ -1,0 +1,224 @@
+/* price-estimator: values from source .pricing-tool-section computed styles (hrblock.com/tax-offices) */
+.price-estimator {
+  --price-estimator-price-color: var(--link-color);
+  --price-estimator-pill-border: var(--color-green);
+  --price-estimator-pill-background: var(--color-white);
+  --price-estimator-pill-text: var(--color-forest);
+  --price-estimator-pill-active-background: var(--color-green);
+  --price-estimator-pill-active-text: var(--color-white);
+  --price-estimator-pill-active-icon: var(--color-eggshell);
+  --price-estimator-pill-selected-border: #000;
+  --price-estimator-icon-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M2 10a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z'/%3E%3Cpath d='M10 2a1 1 0 0 1 1 1v14a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Z'/%3E%3C/svg%3E");
+  --price-estimator-icon-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M2 10a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z'/%3E%3C/svg%3E");
+
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+/* dark sections: text inherits the section foreground; the price switches to the on-dark heading colour
+   and hover/selected pills use forest so they stay visible against the green section background */
+main > .section:is(.green, .bright-green, .forest, .charcoal, .black) .price-estimator {
+  --price-estimator-price-color: var(--on-dark-heading-color);
+  --price-estimator-pill-active-background: var(--color-forest);
+  --price-estimator-pill-selected-border: var(--on-dark-text-color);
+}
+
+.price-estimator .price-estimator-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+/* options: horizontally scrollable pill grid on small screens (source .price-pill-box overflow-x: auto) */
+.price-estimator .price-estimator-options {
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.price-estimator .price-estimator-prompt {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.price-estimator .price-estimator-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 150%;
+  max-width: 740px;
+  margin: 16px 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.price-estimator .price-estimator-list > li {
+  margin: 0;
+}
+
+.price-estimator .price-estimator-toggle {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 8px 16px;
+  border: 2px solid var(--price-estimator-pill-border);
+  border-radius: 8px;
+  background-color: var(--price-estimator-pill-background);
+  color: var(--price-estimator-pill-text);
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.price-estimator .price-estimator-toggle::after {
+  content: '';
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  background-color: currentcolor;
+  mask: var(--price-estimator-icon-plus) center / 20px 20px no-repeat;
+}
+
+.price-estimator .price-estimator-toggle:hover,
+.price-estimator .price-estimator-toggle[aria-pressed="true"] {
+  border-color: var(--price-estimator-pill-active-background);
+  background-color: var(--price-estimator-pill-active-background);
+  color: var(--price-estimator-pill-active-text);
+}
+
+.price-estimator .price-estimator-toggle:hover::after,
+.price-estimator .price-estimator-toggle[aria-pressed="true"]::after {
+  background-color: var(--price-estimator-pill-active-icon);
+}
+
+.price-estimator .price-estimator-toggle[aria-pressed="true"] {
+  border-color: var(--price-estimator-pill-selected-border);
+}
+
+.price-estimator .price-estimator-toggle[aria-pressed="true"]::after {
+  mask-image: var(--price-estimator-icon-minus);
+}
+
+.price-estimator .price-estimator-toggle:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* result (source .price-box) */
+.price-estimator .price-estimator-result {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.price-estimator .price-estimator-result-label {
+  margin: 0 0 20px;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-m);
+  letter-spacing: var(--heading-letter-spacing-m);
+}
+
+.price-estimator .price-estimator-price-row {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.price-estimator .price-estimator-price {
+  margin-right: 10px;
+  color: var(--price-estimator-price-color);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: -1.04px;
+}
+
+.price-estimator .price-estimator-price:empty {
+  display: none;
+}
+
+.price-estimator .price-estimator-note {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+.price-estimator .price-estimator-cta {
+  margin: 15px 0 20px;
+}
+
+.price-estimator .price-estimator-cta[hidden] {
+  display: none;
+}
+
+main .price-estimator .price-estimator-cta a.button:any-link {
+  margin: 0 20px 20px 0;
+}
+
+@media (width >= 768px) {
+  .price-estimator .price-estimator-prompt {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .price-estimator .price-estimator-toggle {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .price-estimator .price-estimator-result {
+    max-width: 400px;
+  }
+
+  .price-estimator .price-estimator-note {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .price-estimator .price-estimator-cta {
+    margin-top: 30px;
+  }
+
+  main .price-estimator .price-estimator-cta a.button:any-link {
+    min-width: 325px;
+  }
+}
+
+@media (width >= 900px) {
+  .price-estimator .price-estimator-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .price-estimator .price-estimator-options {
+    flex: 1 1 auto;
+    overflow-x: visible;
+  }
+
+  .price-estimator .price-estimator-list {
+    gap: 15px 16px;
+    width: auto;
+    max-width: 1075px;
+    margin: 20px 0 15px;
+  }
+
+  .price-estimator .price-estimator-result {
+    flex: 0 0 345px;
+  }
+
+  .price-estimator .price-estimator-price {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.8px;
+  }
+}
