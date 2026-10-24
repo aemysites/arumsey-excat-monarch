@@ -2,12 +2,12 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/expat-tax-preparation-and-services/",
   "path": "expat-tax-preparation/expat-tax-preparation-and-services",
-  "timestamp": "2026-10-23T02:23:29.544Z",
+  "timestamp": "2026-10-23T21:09:52.560Z",
   "title": "Ways to File Expat Taxes | H&R Block®",
   "template": "info-photo-hero",
   "blocks": [
     "cards-product",
     "columns-banner"
   ],
-  "importScript": "6c5120f0a8d1"
+  "importScript": "fc6562576d56"
 }

@@ -2,11 +2,11 @@
   "status": "success",
   "url": "https://www.hrblock.com/financial-services/privacy-statement/",
   "path": "financial-services/privacy-statement",
-  "timestamp": "2026-10-22T21:06:31.601Z",
+  "timestamp": "2026-10-23T23:04:44.191Z",
   "title": "Pathward Privacy Statement | H&R Block®",
   "template": "intro-text-landing",
   "blocks": [
     "table-data"
   ],
-  "importScript": "f0f4d42ffc16"
+  "importScript": "f6efa071bce8"
 }

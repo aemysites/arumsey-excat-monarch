@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/our-team/",
   "path": "expat-tax-preparation/our-team",
-  "timestamp": "2026-10-23T02:26:08.117Z",
+  "timestamp": "2026-10-24T00:34:46.870Z",
   "title": "Expat Tax Professionals - About Us | H&R Block®",
   "template": "info-photo-hero",
   "blocks": [
@@ -11,5 +11,5 @@
     "cards-icon",
     "columns-banner"
   ],
-  "importScript": "6c5120f0a8d1"
+  "importScript": "a355c8f6437c"
 }

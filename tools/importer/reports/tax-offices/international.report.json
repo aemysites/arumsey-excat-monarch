@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-offices/international/",
   "path": "tax-offices/international",
-  "timestamp": "2026-10-22T20:26:57.403Z",
+  "timestamp": "2026-10-24T00:23:59.252Z",
   "title": "H&R Block® International Locations & Tax Services",
   "template": "card-grid-landing",
   "blocks": [
@@ -25,5 +25,5 @@
     "columns-banner",
     "columns-banner"
   ],
-  "importScript": "cc79b2fd70c8"
+  "importScript": "b7930f0d0aeb"
 }

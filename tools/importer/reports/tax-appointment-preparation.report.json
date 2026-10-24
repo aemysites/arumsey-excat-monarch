@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-appointment-preparation/",
   "path": "tax-appointment-preparation",
-  "timestamp": "2026-10-22T20:24:16.185Z",
+  "timestamp": "2026-10-23T22:26:00.599Z",
   "title": "What to Expect at Your H&R Block Tax Appointment | H&R Block",
   "template": "card-grid-landing",
   "blocks": [
@@ -13,5 +13,5 @@
     "fragments/tax-appointment-preparation-tab-1",
     "fragments/tax-appointment-preparation-tab-2"
   ],
-  "importScript": "cc79b2fd70c8"
+  "importScript": "37292a04d2de"
 }

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/tax-responsibilities-and-penalties/how-to-avoid-u-s-tax-penalties-while-living-overseas/",
   "path": "expat-tax-preparation/resource-center/filing/tax-responsibilities-and-penalties/how-to-avoid-u-s-tax-penalties-while-living-overseas",
-  "timestamp": "2026-10-22T20:49:34.931Z",
+  "timestamp": "2026-10-23T22:46:14.166Z",
   "title": "How to Avoid U.S. Tax Penalties while Living Overseas | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

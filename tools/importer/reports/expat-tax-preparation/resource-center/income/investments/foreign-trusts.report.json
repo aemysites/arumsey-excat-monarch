@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/income/investments/foreign-trusts/",
   "path": "expat-tax-preparation/resource-center/income/investments/foreign-trusts",
-  "timestamp": "2026-10-22T20:55:33.537Z",
+  "timestamp": "2026-10-23T22:51:44.586Z",
   "title": "Foreign Trusts | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

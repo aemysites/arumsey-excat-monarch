@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/united-kingdom/u-s-expat-taxes-in-the-united-kingdom/",
   "path": "expat-tax-preparation/resource-center/country/united-kingdom/u-s-expat-taxes-in-the-united-kingdom",
-  "timestamp": "2026-10-22T21:02:40.601Z",
+  "timestamp": "2026-10-23T23:00:41.948Z",
   "title": "U.S. Expat Taxes in the U.K. | H&R Block®",
   "template": "resource-guide-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "eaad99ed23bd"
+  "importScript": "cce99561c2eb"
 }

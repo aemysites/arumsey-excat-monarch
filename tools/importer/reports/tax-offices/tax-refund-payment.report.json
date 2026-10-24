@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-offices/tax-refund-payment/",
   "path": "tax-offices/tax-refund-payment",
-  "timestamp": "2026-10-22T22:21:06.312Z",
+  "timestamp": "2026-10-24T00:25:46.269Z",
   "title": "Options for Receiving Refund & Paying Tax Prep Fees | H&R Block®",
   "template": "card-grid-landing",
   "blocks": [
@@ -15,5 +15,5 @@
     "columns-banner",
     "columns-banner"
   ],
-  "importScript": "403704a2a866"
+  "importScript": "b7930f0d0aeb"
 }

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/status/the-u-s-expats-guide-to-state-taxes-while-living-abroad/",
   "path": "expat-tax-preparation/resource-center/filing/status/the-u-s-expats-guide-to-state-taxes-while-living-abroad",
-  "timestamp": "2026-10-22T20:47:09.577Z",
+  "timestamp": "2026-10-23T22:44:54.782Z",
   "title": "Guide to State Taxes for Americans Abroad | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

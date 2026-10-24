@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/status/dual-status-alien/",
   "path": "expat-tax-preparation/resource-center/filing/status/dual-status-alien",
-  "timestamp": "2026-10-22T20:45:46.304Z",
+  "timestamp": "2026-10-23T22:43:52.345Z",
   "title": "Dual-Status Alien | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-state-taxes"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

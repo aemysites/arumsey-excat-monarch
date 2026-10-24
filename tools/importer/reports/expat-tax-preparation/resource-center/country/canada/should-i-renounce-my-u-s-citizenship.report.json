@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/canada/should-i-renounce-my-u-s-citizenship/",
   "path": "expat-tax-preparation/resource-center/country/canada/should-i-renounce-my-u-s-citizenship",
-  "timestamp": "2026-10-22T20:35:27.733Z",
+  "timestamp": "2026-10-23T22:37:38.534Z",
   "title": "Should I Renounce My U.S. Citizenship? | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-feie"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

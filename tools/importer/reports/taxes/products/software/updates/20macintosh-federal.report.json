@@ -2,11 +2,11 @@
   "status": "success",
   "url": "https://www.hrblock.com/taxes/products/software/updates/20macintosh-federal/",
   "path": "taxes/products/software/updates/20macintosh-federal",
-  "timestamp": "2026-10-22T21:53:11.154Z",
+  "timestamp": "2026-10-23T21:26:51.351Z",
   "title": "Download 2020 Federal Updates for Mac | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
     "software-download"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/can-back-taxes-cost-you-your-passport-in-some-cases-yes/",
   "path": "expat-tax-preparation/resource-center/filing/can-back-taxes-cost-you-your-passport-in-some-cases-yes",
-  "timestamp": "2026-10-22T21:02:53.397Z",
+  "timestamp": "2026-10-23T23:00:53.312Z",
   "title": "Can back taxes cost you your passport? In some cases – yes. | H&R Block®",
   "template": "resource-guide-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "eaad99ed23bd"
+  "importScript": "cce99561c2eb"
 }

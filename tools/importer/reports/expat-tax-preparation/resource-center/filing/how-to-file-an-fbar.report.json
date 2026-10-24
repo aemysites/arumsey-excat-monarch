@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/how-to-file-an-fbar/",
   "path": "expat-tax-preparation/resource-center/filing/how-to-file-an-fbar",
-  "timestamp": "2026-10-22T20:44:06.134Z",
+  "timestamp": "2026-10-23T22:41:49.157Z",
   "title": "How to File an FBAR | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

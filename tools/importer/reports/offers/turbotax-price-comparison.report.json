@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/offers/turbotax-price-comparison/",
   "path": "offers/turbotax-price-comparison",
-  "timestamp": "2026-10-22T18:48:02.758Z",
+  "timestamp": "2026-10-24T01:02:18.509Z",
   "title": "H&R Block Free Online vs. TurboTax: Price Comparison | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -18,5 +18,5 @@
     "promo-strip",
     "table-data"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "6c0bdfa47818"
 }

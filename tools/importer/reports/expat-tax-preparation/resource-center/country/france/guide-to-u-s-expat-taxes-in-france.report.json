@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/france/guide-to-u-s-expat-taxes-in-france/",
   "path": "expat-tax-preparation/resource-center/country/france/guide-to-u-s-expat-taxes-in-france",
-  "timestamp": "2026-10-22T21:01:57.903Z",
+  "timestamp": "2026-10-23T22:59:58.069Z",
   "title": "U.S. Taxes for Americans Living in France | H&R Block®",
   "template": "resource-guide-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-feie"
   ],
-  "importScript": "eaad99ed23bd"
+  "importScript": "cce99561c2eb"
 }

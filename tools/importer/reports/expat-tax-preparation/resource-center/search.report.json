@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/search/",
   "path": "expat-tax-preparation/resource-center/search",
-  "timestamp": "2026-10-22T21:03:51.224Z",
+  "timestamp": "2026-10-23T23:02:06.282Z",
   "title": "Search Expat Tax Resource Center | H&R Block®",
   "template": "intro-text-landing",
   "blocks": [
@@ -14,5 +14,5 @@
   "fragments": [
     "fragments/expat-tax-help-cta"
   ],
-  "importScript": "f0f4d42ffc16"
+  "importScript": "f6efa071bce8"
 }

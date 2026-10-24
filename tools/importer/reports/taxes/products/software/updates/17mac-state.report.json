@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/taxes/products/software/updates/17mac-state/",
   "path": "taxes/products/software/updates/17mac-state",
-  "timestamp": "2026-10-22T21:37:11.837Z",
+  "timestamp": "2026-10-23T20:47:54.565Z",
   "title": "Download Tax Software Back Editions & Updates | H&R Block®",
   "template": "product-split-hero",
   "blocks": [],
@@ -12,5 +12,5 @@
     "fragments/software-guarantees",
     "fragments/software-update-promo"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

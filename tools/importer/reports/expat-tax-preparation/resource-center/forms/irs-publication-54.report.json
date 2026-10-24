@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/forms/irs-publication-54/",
   "path": "expat-tax-preparation/resource-center/forms/irs-publication-54",
-  "timestamp": "2026-10-22T20:54:03.572Z",
+  "timestamp": "2026-10-23T22:49:47.120Z",
   "title": "IRS Publication 54 | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

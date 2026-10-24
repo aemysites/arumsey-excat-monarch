@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/forms/irs-form-8938-what-it-is-and-who-needs-to-file/",
   "path": "expat-tax-preparation/resource-center/forms/irs-form-8938-what-it-is-and-who-needs-to-file",
-  "timestamp": "2026-10-22T20:53:51.621Z",
+  "timestamp": "2026-10-23T22:49:33.847Z",
   "title": "IRS Form 8938: What Is it and Who Needs to File? | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-forms"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

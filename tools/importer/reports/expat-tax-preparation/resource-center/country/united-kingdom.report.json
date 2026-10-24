@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/united-kingdom/",
   "path": "expat-tax-preparation/resource-center/country/united-kingdom",
-  "timestamp": "2026-10-22T18:34:32.744Z",
+  "timestamp": "2026-10-24T00:57:51.348Z",
   "title": "Taxes for U.S. Expats in U.K. | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -16,5 +16,5 @@
     "fragments/expat-steps-to-prep",
     "fragments/expat-testimonials"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "6c0bdfa47818"
 }

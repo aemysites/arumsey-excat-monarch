@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-software/updates-back-editions/",
   "path": "tax-software/updates-back-editions",
-  "timestamp": "2026-10-22T21:27:08.816Z",
+  "timestamp": "2026-10-23T20:36:57.242Z",
   "title": "Download Tax Software Back Editions & Updates | H&R Block®",
   "template": "product-split-hero",
   "blocks": [],
@@ -12,5 +12,5 @@
     "fragments/software-guarantees",
     "fragments/software-update-promo"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

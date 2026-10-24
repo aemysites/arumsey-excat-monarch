@@ -386,11 +386,12 @@ function decorateButtons(main) {
 
 /**
  * Marks eyebrow labels in default content: a short all-caps paragraph without
- * links directly before a heading (source .eyebrow-label pill).
+ * links directly before a heading (source .eyebrow-label pill), or such an h1
+ * (the pill is the page title, e.g. corporate/founders) before another heading.
  * @param {HTMLElement} main The main container element
  */
 function decorateEyebrows(main) {
-  main.querySelectorAll('.default-content-wrapper > p').forEach((p) => {
+  main.querySelectorAll('.default-content-wrapper > :is(p, h1)').forEach((p) => {
     const next = p.nextElementSibling;
     if (!next || !/^H[1-6]$/.test(next.tagName) || p.querySelector('a, img, picture')) return;
     const text = p.textContent.trim();

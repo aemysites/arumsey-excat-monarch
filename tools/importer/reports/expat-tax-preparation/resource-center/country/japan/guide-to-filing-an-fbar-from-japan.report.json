@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/japan/guide-to-filing-an-fbar-from-japan/",
   "path": "expat-tax-preparation/resource-center/country/japan/guide-to-filing-an-fbar-from-japan",
-  "timestamp": "2026-10-22T21:02:03.745Z",
+  "timestamp": "2026-10-23T23:00:03.374Z",
   "title": "Guide to Filing an FBAR from Japan | H&R Block®",
   "template": "resource-guide-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-feie"
   ],
-  "importScript": "eaad99ed23bd"
+  "importScript": "cce99561c2eb"
 }

@@ -753,9 +753,16 @@ function resolveJumpLinks(document) {
 // Eyebrow labels (source .eyebrow-label / .color-eyebrow pills, 14px) marked up
 // as headings stay a short paragraph before the heading in default content
 // (scripts.js decorates it as .eyebrow, as blocks do with their eyebrows).
+// An eyebrow that is the page's only <h1> (corporate/founders "OUR FOUNDERS")
+// stays the h1: it is the page title (scripts.js styles it as the pill too).
 function eyebrowHeadingsToParagraphs(root, document) {
+  const h1s = safeQueryAll(root, 'h1').filter((h) => h.textContent.trim());
   safeQueryAll(root, 'h1.eyebrow-label, h2.eyebrow-label, h3.eyebrow-label, h4.eyebrow-label, h5.eyebrow-label, h6.eyebrow-label, h1.color-eyebrow, h2.color-eyebrow, h3.color-eyebrow, h4.color-eyebrow, h5.color-eyebrow, h6.color-eyebrow').forEach((h) => {
     if (h.closest('table') || !h.textContent.trim()) return;
+    if (h.tagName === 'H1' && h1s.length === 1) {
+      h.textContent = h.textContent.replace(/\s+/g, ' ').trim();
+      return;
+    }
     const p = document.createElement('p');
     p.textContent = h.textContent.replace(/\s+/g, ' ').trim();
     h.replaceWith(p);
@@ -824,6 +831,17 @@ function inlineFootnoteMarkers(root) {
     if (!host) return;
     host.append(sup);
   });
+  // li > "text" + <sup>*</sup> (worry-free-audit-support steps): html2md treats a
+  // bare sup in a list item as a block and splits the item into a text paragraph
+  // and a "*" paragraph. Inside a <p> it stays inline: wrap such an all-inline item.
+  const BLOCK_CHILD = 'p, div, ul, ol, table, h1, h2, h3, h4, h5, h6, blockquote, figure, picture, img';
+  safeQueryAll(root, 'li').forEach((li) => {
+    if (![...li.children].some((c) => c.tagName === 'SUP')) return;
+    if ([...li.children].some((c) => c.matches(BLOCK_CHILD))) return;
+    const p = li.ownerDocument.createElement('p');
+    p.append(...li.childNodes);
+    li.append(p);
+  });
   // disclaimer buttons inside sup: keep the marker text only
   safeQueryAll(root, 'sup button').forEach((b) => b.replaceWith(b.ownerDocument.createTextNode(b.textContent.replace(/\s+/g, ' ').trim())));
 }
@@ -837,6 +855,44 @@ function inlineFootnoteMarkers(root) {
 // text colour, so they get no template. Read by the import script's metadata step
 // (params.excatMetadata, see migration-work/gen-import.js).
 const EXPAT_ARTICLE_TEMPLATES = ['resource-article', 'resource-article-steps', 'resource-article-steps-alt', 'resource-guide-article'];
+
+// ---------------------------------------------------------------------------
+// Expat "All 200+ supported countries" (resource-center/country): the page only
+// renders the A list; an inline script holds every letter (var acA = ['...', "..."])
+// and swaps the list on select. Raw DOM (scripts still present): write all
+// letters into div.ac-filtering-results as div.countries-list--<letter> > p, so
+// the country-selector parser authors the full A-Z list.
+function captureCountryLists(document) {
+  const results = document.querySelector('.ac-filtering-results');
+  if (!results) return;
+  const script = [...document.querySelectorAll('script:not([src])')].find((s) => /var acA\s*=/.test(s.textContent));
+  if (!script) return;
+  const lists = [];
+  const listRe = /var ac([A-Z])\s*=\s*\[([\s\S]*?)\];/g;
+  let m = listRe.exec(script.textContent);
+  while (m) {
+    const items = [];
+    const itemRe = /'((?:[^'\\]|\\.)*)'|"((?:[^"\\]|\\.)*)"/g;
+    let it = itemRe.exec(m[2]);
+    while (it) {
+      items.push((it[1] !== undefined ? it[1] : it[2]).replace(/\\(.)/g, '$1'));
+      it = itemRe.exec(m[2]);
+    }
+    if (items.length) lists.push({ letter: m[1].toLowerCase(), items });
+    m = listRe.exec(script.textContent);
+  }
+  if (!lists.length) return;
+  results.replaceChildren(...lists.map(({ letter, items }) => {
+    const div = document.createElement('div');
+    div.className = `countries-list countries-list--${letter}`;
+    items.forEach((html) => {
+      const p = document.createElement('p');
+      p.innerHTML = html;
+      div.append(p);
+    });
+    return div;
+  }));
+}
 
 function pageTemplate(document, payload) {
   const urls = getPageUrl(document, payload);
@@ -910,17 +966,19 @@ export default function transform(hookName, element, payload) {
     }
     document.documentElement.setAttribute(CLEANUP_RESOLVED_ATTR, 'true');
     protectSourceRules(document);
+    captureCountryLists(document);
     captureLiveState(document);
     captureVideoEmbeds(document);
     // in-page jump links -> EDS heading ids (raw DOM: helix-importer drops the
     // empty target anchors, e.g. a#bloch, before transform)
     resolveJumpLinks(document);
-    // <span><br></span> (e.g. "Written by:<span><br></span> name"): helix-importer
-    // drops text-less bare spans with their <br>; keep the line break
+    // <span><br></span> (e.g. "Written by:<span><br></span> name") and
+    // <span><svg>…</svg></span> (w-4 / guarantees card icons in h3.stacked-title):
+    // helix-importer drops text-less bare spans with their content; unwrap them
     safeQueryAll(document.body || document, 'span').forEach((span) => {
       if (span.attributes.length || span.textContent.trim()) return;
       const kids = [...span.childNodes].filter((n) => n.nodeType === 1 || n.textContent.trim());
-      if (kids.length && kids.every((n) => n.nodeType === 1 && n.tagName === 'BR')) span.replaceWith(...kids);
+      if (kids.length && kids.every((n) => n.nodeType === 1 && /^(br|svg)$/i.test(n.tagName))) span.replaceWith(...kids);
     });
     return;
   }

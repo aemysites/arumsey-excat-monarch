@@ -300,6 +300,11 @@ main .cards-article.with-button-2 .cards-article-card-cta a.button:any-link {
   padding: 20px 0;
 }
 
+/* paged / filtered out (cards-article.js decorateListing) */
+.cards-article > ul.cards-article-list > li[hidden] {
+  display: none;
+}
+
 .cards-article .cards-article-list .cards-article-card-body {
   padding: 0;
 }

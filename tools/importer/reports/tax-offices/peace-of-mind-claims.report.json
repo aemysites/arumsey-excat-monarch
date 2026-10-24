@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-offices/peace-of-mind-claims/",
   "path": "tax-offices/peace-of-mind-claims",
-  "timestamp": "2026-10-22T21:10:08.283Z",
+  "timestamp": "2026-10-24T00:29:21.994Z",
   "title": "Peace of Mind® Claims and FAQs | H&R Block®",
   "template": "heading-content-page",
   "blocks": [
@@ -12,5 +12,5 @@
   "fragments": [
     "fragments/guarantees-cards-forest"
   ],
-  "importScript": "fad055f65bcc"
+  "importScript": "c7d156a5c886"
 }

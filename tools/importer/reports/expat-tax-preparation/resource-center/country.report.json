@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/",
   "path": "expat-tax-preparation/resource-center/country",
-  "timestamp": "2026-10-22T20:34:12.076Z",
+  "timestamp": "2026-10-24T01:15:44.639Z",
   "title": "Expats by Country | H&R Block®",
   "template": "resource-listing",
   "blocks": [
@@ -15,5 +15,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-country-grid"
   ],
-  "importScript": "89641d0d711f"
+  "importScript": "88203716d241"
 }

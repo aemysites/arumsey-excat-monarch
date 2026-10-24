@@ -181,15 +181,59 @@ function measureBand(el, view, live) {
       h2 = hit ? hit[1] : '';
     }
   }
-  return [pt === null ? '' : Math.round(pt), pb === null ? '' : Math.round(pb), align, width, h2].join('|');
+  // centred bands: measure of the first heading and the first wrapping paragraph
+  // (source per-heading heading_max_width_* / body_max_width_* classes)
+  let hw = '';
+  let pw = '';
+  if (live && align === 'c') {
+    const blockBox = (t) => t.parentElement && view.getComputedStyle(t).display === 'block';
+    if (first && /^H[1-6]$/.test(first.tagName) && blockBox(first)) hw = Math.round(first.getBoundingClientRect().width) || '';
+    const para = texts.find((t) => t.tagName === 'P' && blockBox(t) && t.textContent.trim().length > 120);
+    if (para) pw = Math.round(para.getBoundingClientRect().width) || '';
+  }
+  return [pt === null ? '' : Math.round(pt), pb === null ? '' : Math.round(pb), align, width, h2, hw, pw, linkStyle(el, view, live)].join('|');
+}
+
+// Inline text links styled green + underlined (source <a><span class="text-underline
+// color-dark-green">, or the classes on the <a>); the site default is forest, no underline.
+const UNDERLINE_LINK_SEL = '.text-underline.color-dark-green';
+function linkStyle(el, view, live) {
+  const links = safeAll(el, 'p a[href], li a[href]').filter((a) => a.textContent.trim()
+    && !a.closest(`[${BLOCK_MATCH_ATTR}], header, footer, nav`)
+    && !/\bbtn\b/.test(a.className || ''));
+  if (!links.length) return '';
+  // the classes alone are not enough (some pages override them back to forest,
+  // no underline): on the live DOM the link must also render green + underlined
+  const underlined = links.filter((a) => {
+    const marked = a.matches(UNDERLINE_LINK_SEL) ? a : a.querySelector(UNDERLINE_LINK_SEL);
+    if (!marked) return false;
+    if (!live) return true;
+    const cs = view.getComputedStyle(marked);
+    return /underline/.test(cs.textDecorationLine || '') && cs.color === 'rgb(0, 93, 31)';
+  });
+  return underlined.length * 2 >= links.length ? 'u' : '';
 }
 
 function readLayout(el) {
   const raw = el && el.getAttribute && el.getAttribute(LAYOUT_ATTR);
   if (!raw) return null;
-  const [pt, pb, align, width, h2] = raw.split('|');
+  const [pt, pb, align, width, h2, hw, pw, links] = raw.split('|');
   const num = (v) => (v === '' || v === undefined ? null : parseFloat(v));
-  return { pt: num(pt), pb: num(pb), align: align || '', width: num(width), h2: num(h2) };
+  return {
+    pt: num(pt), pb: num(pb), align: align || '', width: num(width), h2: num(h2),
+    hw: num(hw), pw: num(pw), links: links || '',
+  };
+}
+
+// Centred-band measures (keep in sync with --center-heading-width 860 /
+// --center-text-width 700 and the heading-N / text-N rules in styles/styles.css):
+// the smallest step that holds the source measure, so lines never wrap earlier.
+const HEADING_STEPS = [520, 640, 760, 860, 900, 1000];
+const TEXT_STEPS = [520, 600, 700, 800, 960];
+function measureToken(prefix, px, steps, def) {
+  if (!px || px < 300) return '';
+  const step = steps.find((s) => s >= px - 2) || steps[steps.length - 1];
+  return step === def ? '' : `${prefix}-${step}`;
 }
 
 /** h2 scale token when the source h2 differs from the section default (center 56, else 40). */
@@ -213,9 +257,13 @@ function widthToken(width) {
 function styleOf(g) {
   const tokens = [g.colour || NONE];
   if (g.disclaimer) tokens.push('disclaimer');
-  if (g.align === 'c' && !g.disclaimer) tokens.push('center');
-  else if (g.width && !g.disclaimer) tokens.push(g.width);
+  if (g.align === 'c' && !g.disclaimer) {
+    tokens.push('center');
+    tokens.push(measureToken('heading', g.hw, HEADING_STEPS, 860));
+    tokens.push(measureToken('text', g.pw, TEXT_STEPS, 700));
+  } else if (g.width && !g.disclaimer) tokens.push(g.width);
   if (!g.disclaimer) tokens.push(h2Token(g.h2, g.align === 'c'));
+  if (g.links === 'u') tokens.push('links-underline');
   const def = Object.prototype.hasOwnProperty.call(DEFAULT_PAD, g.colour || NONE) ? DEFAULT_PAD[g.colour || NONE] : DEFAULT_PAD[NONE];
   const pt = quantize(g.pt);
   const pb = quantize(g.pb);
@@ -246,6 +294,9 @@ export function bandStyle(el, colour) {
     align: (layouts.find((l) => l.align) || {}).align || '',
     width: widthToken(first.width),
     h2: (layouts.find((l) => l.h2) || {}).h2 || null,
+    hw: (layouts.find((l) => l.hw) || {}).hw || null,
+    pw: (layouts.find((l) => l.pw) || {}).pw || null,
+    links: (layouts.find((l) => l.links) || {}).links || '',
     pt: first.pt,
     pb: last.pb,
   });
@@ -271,9 +322,35 @@ function findSourceBands(document) {
   });
 }
 
+// Two-column CTA fragments (section.content-two-column) carry no theme class; their
+// colour is painted on the columns. Live DOM: give the section the theme of its
+// columns when every column shares one known background.
+const COLUMN_THEMES = { 'rgb(246, 244, 233)': 'spruce-eggshell-theme', 'rgb(0, 53, 18)': 'spruce-forest-theme', 'rgb(0, 93, 31)': 'green-dark-theme' };
+function themeColumnBands(document, view) {
+  safeAll(document.body, 'section.content-two-column').forEach((sec) => {
+    if (themeStyle(sec) !== undefined || view.getComputedStyle(sec).backgroundColor !== 'rgba(0, 0, 0, 0)') return;
+    const secW = sec.getBoundingClientRect().width;
+    if (!secW) return;
+    const painted = safeAll(sec, 'div, li').filter((c) => {
+      const r = c.getBoundingClientRect();
+      return r.width >= secW * 0.4 && r.height > 100 && view.getComputedStyle(c).backgroundColor !== 'rgba(0, 0, 0, 0)';
+    });
+    const outer = painted.filter((c) => !painted.some((o) => o !== c && o.contains(c)));
+    const colours = new Set(outer.map((c) => view.getComputedStyle(c).backgroundColor));
+    const covered = outer.reduce((w, c) => w + c.getBoundingClientRect().width, 0);
+    if (colours.size === 1 && covered >= secW * 0.95) {
+      const cls = COLUMN_THEMES[[...colours][0]];
+      if (cls) sec.classList.add(cls);
+    }
+  });
+}
+
 function annotateLayout(document, sections) {
   const view = document.defaultView;
   const live = isLive(document);
+  if (live) {
+    try { themeColumnBands(document, view); } catch (e) { /* optional */ }
+  }
   const themeRoots = findThemeRoots(document);
   const cands = new Set([...themeRoots, ...findSourceBands(document)]);
   themeRoots.forEach((r) => {
@@ -465,6 +542,9 @@ export default function transform(hookName, element, payload) {
         align: layout ? layout.align : '',
         width: layout ? widthToken(layout.width) : '',
         h2: layout ? layout.h2 : null,
+        hw: layout ? layout.hw : null,
+        pw: layout ? layout.pw : null,
+        links: layout ? layout.links : '',
         hasLayout: !!layout,
         breakReason: !!extra.breakReason,
       };
@@ -500,6 +580,9 @@ export default function transform(hookName, element, payload) {
             if (!cur.align) cur.align = layout.align;
             if (!cur.width) cur.width = widthToken(layout.width);
             if (!cur.h2) cur.h2 = layout.h2;
+            if (!cur.hw) cur.hw = layout.hw;
+            if (!cur.pw) cur.pw = layout.pw;
+            if (!cur.links) cur.links = layout.links;
             cur.hasLayout = true;
           }
           return;

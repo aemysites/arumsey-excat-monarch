@@ -2,11 +2,11 @@
   "status": "success",
   "url": "https://www.hrblock.com/guarantees/",
   "path": "guarantees",
-  "timestamp": "2026-10-22T21:07:26.562Z",
+  "timestamp": "2026-10-24T00:32:06.189Z",
   "title": "Guarantees | H&R Block®",
   "template": "hub-overview",
   "blocks": [
     "columns-banner"
   ],
-  "importScript": "d50ce932e92f"
+  "importScript": "f17a57db7a22"
 }

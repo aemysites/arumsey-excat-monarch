@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/status/what-is-an-expat/",
   "path": "expat-tax-preparation/resource-center/filing/status/what-is-an-expat",
-  "timestamp": "2026-10-22T20:48:17.152Z",
+  "timestamp": "2026-10-23T22:45:51.371Z",
   "title": "What is an expat? | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-state-taxes"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

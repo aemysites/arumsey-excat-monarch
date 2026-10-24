@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/mexico/guide-to-u-s-expat-taxes-in-mexico/",
   "path": "expat-tax-preparation/resource-center/country/mexico/guide-to-u-s-expat-taxes-in-mexico",
-  "timestamp": "2026-10-22T21:02:08.247Z",
+  "timestamp": "2026-10-23T23:00:10.620Z",
   "title": "Guide to U.S. Expat Taxes in Mexico | H&R Block®",
   "template": "resource-guide-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "eaad99ed23bd"
+  "importScript": "cce99561c2eb"
 }

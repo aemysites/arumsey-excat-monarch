@@ -39,14 +39,14 @@
   letter-spacing: -0.1px;
 }
 
-/* sort (source .custom-select .selected-item) */
-.results-toolbar .results-toolbar-sort {
+/* filter + sort (source .custom-select .selected-item) */
+.results-toolbar :is(.results-toolbar-filter, .results-toolbar-sort) {
   display: flex;
   align-items: center;
   min-width: 0;
 }
 
-.results-toolbar .results-toolbar-sort-label {
+.results-toolbar :is(.results-toolbar-filter-label, .results-toolbar-sort-label) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -55,7 +55,7 @@
   white-space: nowrap;
 }
 
-.results-toolbar .results-toolbar-sort select {
+.results-toolbar :is(.results-toolbar-filter, .results-toolbar-sort) select {
   box-sizing: border-box;
   width: 100%;
   margin: 0 0 20px;
@@ -76,7 +76,7 @@
   cursor: pointer;
 }
 
-.results-toolbar .results-toolbar-sort select:focus-visible {
+.results-toolbar :is(.results-toolbar-filter, .results-toolbar-sort) select:focus-visible {
   outline: var(--focus-ring);
   outline-offset: var(--focus-ring-offset);
 }
@@ -127,11 +127,15 @@
     letter-spacing: -0.25px;
   }
 
+  .results-toolbar .results-toolbar-filter {
+    grid-area: 1 / 3;
+  }
+
   .results-toolbar .results-toolbar-sort {
     grid-area: 1 / 5;
   }
 
-  .results-toolbar .results-toolbar-sort select {
+  .results-toolbar :is(.results-toolbar-filter, .results-toolbar-sort) select {
     margin: 0;
   }
 

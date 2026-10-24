@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/offers/saf/",
   "path": "offers/saf",
-  "timestamp": "2026-10-22T18:47:08.082Z",
+  "timestamp": "2026-10-23T19:53:49.279Z",
   "title": "Refer a Friend Referral Bonus | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -12,5 +12,5 @@
     "columns-feature",
     "hero-split"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

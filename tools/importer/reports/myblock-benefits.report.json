@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/myblock-benefits/",
   "path": "myblock-benefits",
-  "timestamp": "2026-10-22T18:45:13.217Z",
+  "timestamp": "2026-10-23T19:52:03.869Z",
   "title": "MyBlock Benefits | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -18,5 +18,5 @@
     "fragments/myblock-benefits-tab-3",
     "fragments/myblock-benefits-tab-4"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

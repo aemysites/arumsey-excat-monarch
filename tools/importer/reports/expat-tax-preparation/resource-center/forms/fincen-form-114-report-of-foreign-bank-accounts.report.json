@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/forms/fincen-form-114-report-of-foreign-bank-accounts/",
   "path": "expat-tax-preparation/resource-center/forms/fincen-form-114-report-of-foreign-bank-accounts",
-  "timestamp": "2026-10-22T20:50:24.580Z",
+  "timestamp": "2026-10-23T22:46:45.632Z",
   "title": "FinCEN Form 114 | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

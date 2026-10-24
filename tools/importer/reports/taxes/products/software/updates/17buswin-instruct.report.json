@@ -2,14 +2,15 @@
   "status": "success",
   "url": "https://www.hrblock.com/taxes/products/software/updates/17buswin-instruct/",
   "path": "taxes/products/software/updates/17buswin-instruct",
-  "timestamp": "2026-10-22T22:22:19.035742Z",
-  "title": "",
+  "timestamp": "2026-10-23T20:46:55.664Z",
+  "title": "Download Tax Software Back Editions & Updates | H&R Block®",
   "template": "product-split-hero",
-  "blocks": [
-    "fragment",
-    "fragment",
-    "fragment",
-    "fragment"
+  "blocks": [],
+  "fragments": [
+    "fragments/software-back-editions-hero",
+    "fragments/software-updates-banner",
+    "fragments/software-guarantees",
+    "fragments/software-update-promo"
   ],
-  "note": "report rebuilt from saved content after the Bright Data retry deleted it"
+  "importScript": "5a445135de87"
 }

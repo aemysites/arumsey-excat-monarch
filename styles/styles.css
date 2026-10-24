@@ -172,7 +172,7 @@ main > .section > .default-content-wrapper li > p {
 }
 
 /* eyebrow label (source .eyebrow-label pill; marked by scripts.js) */
-main > .section > .default-content-wrapper > p.eyebrow {
+main > .section > .default-content-wrapper > :is(p, h1).eyebrow {
   display: inline-block;
   margin: 0 0 var(--content-block-spacing);
   border-radius: 4px;
@@ -185,7 +185,7 @@ main > .section > .default-content-wrapper > p.eyebrow {
   letter-spacing: var(--eyebrow-letter-spacing);
 }
 
-main > .section > .default-content-wrapper > p.eyebrow + :is(h1, h2, h3, h4, h5, h6) {
+main > .section > .default-content-wrapper > :is(p, h1).eyebrow + :is(h1, h2, h3, h4, h5, h6) {
   margin-top: 0;
 }
 
@@ -258,6 +258,16 @@ main > .section > .default-content-wrapper a:hover:not(.button) {
 /* standalone text link (own paragraph, not a button; marked by scripts.js) */
 main > .section > .default-content-wrapper p.link-wrapper a:any-link {
   font-weight: var(--default-link-standalone-weight);
+}
+
+/* links-underline: green underlined inline links (source span.text-underline.color-dark-green) */
+main > .section.links-underline > .default-content-wrapper a:any-link:not(.button) {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+main > .section.links-underline > .default-content-wrapper a:hover:not(.button) {
+  text-decoration: none;
 }
 
 /* EDS button reset: an undecorated a.button renders as a plain text link */
@@ -454,6 +464,18 @@ main > .section.center > .default-content-wrapper > :is(ul, ol) {
   text-align: start;
 }
 
+/* centred heading / text measure where the source differs from 860 / 700
+   (Section Metadata heading-N / text-N, see tools/importer hrblock-sections.js) */
+main > .section.heading-520 { --center-heading-width: 520px; }
+main > .section.heading-640 { --center-heading-width: 640px; }
+main > .section.heading-760 { --center-heading-width: 760px; }
+main > .section.heading-900 { --center-heading-width: 900px; }
+main > .section.heading-1000 { --center-heading-width: 1000px; }
+main > .section.text-520 { --center-text-width: 520px; }
+main > .section.text-600 { --center-text-width: 600px; }
+main > .section.text-800 { --center-text-width: 800px; }
+main > .section.text-960 { --center-text-width: 960px; }
+
 main > .section.center > .default-content-wrapper > p.button-wrapper:has(+ p.button-wrapper),
 main > .section.center > .default-content-wrapper > p.button-wrapper + p.button-wrapper {
   margin-inline: 8px;
@@ -597,6 +619,21 @@ main > .section.black > .default-content-wrapper a:hover:not(.button) {
   color: var(--on-dark-link-hover-color);
 }
 
+/* standalone link on green / forest: neon arrow link (source a.right-arrow.hrb-neon-link) */
+main > .section:is(.green, .forest) > .default-content-wrapper > p.link-wrapper a:any-link {
+  color: var(--color-neon);
+}
+
+main > .section:is(.green, .forest) > .default-content-wrapper > p.link-wrapper a:any-link::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  margin-left: 10px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='12' viewBox='0 0 7 12' fill='none'%3E%3Cpath d='M1 1l5 5-5 5' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 main > .section.green {
   background-color: var(--color-green);
 }
@@ -707,5 +744,20 @@ body.expat-article main > .section > .default-content-wrapper ul {
     margin: 40px 0 30px;
     line-height: 40px;
   }
+}
+
+/* expat "Recommended articles" heading above the 3-card row (source h4 40/40,
+   aligned with the 1200px cards, 82px above them) */
+body.expat-article main > .section:has(.cards-article) > .default-content-wrapper {
+  max-width: calc(var(--content-max-width) + (2 * var(--content-gutter)));
+}
+
+body.expat-article main > .section:has(.cards-article) > .default-content-wrapper > h4 {
+  margin: 0 0 82px;
+  padding: 5px 0;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.57px;
 }
 

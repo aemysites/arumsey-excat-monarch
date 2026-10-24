@@ -751,17 +751,17 @@ var CustomImportScript = (() => {
       p2.textContent = text5(count).replace(/(\d)\s*([A-Za-z])/, "$1 $2").replace(/\s+(s)\b/, "$1");
       row.push(p2);
     }
-    const options = [...element.querySelectorAll("select option")].map((o) => text5(o)).filter(Boolean);
-    const fallbackOptions = options.length ? options : [...element.querySelectorAll(".all-items .item")].map((o) => text5(o)).filter(Boolean);
-    if (fallbackOptions.length) {
+    const selects = [...element.querySelectorAll("select")];
+    const groups = selects.length ? selects.map((s) => [...s.querySelectorAll("option")]) : [...element.querySelectorAll(".all-items")].map((g) => [...g.querySelectorAll(".item")]);
+    groups.map((items) => items.map((o) => text5(o)).filter(Boolean)).filter((l) => l.length).forEach((labels) => {
       const ul = document.createElement("ul");
-      fallbackOptions.forEach((t) => {
+      labels.forEach((t) => {
         const li = document.createElement("li");
         li.textContent = t;
         ul.append(li);
       });
       row.push(ul);
-    }
+    });
     const reset = [...element.querySelectorAll("a")].find((a) => /reset/i.test(text5(a)) || a.matches('[class*="reset"]'));
     if (reset) {
       const a = document.createElement("a");
@@ -5251,6 +5251,7 @@ var CustomImportScript = (() => {
     "/financial-services/emerald-savings/": [["section.column-control.spruce-eggshell-theme.padding-top-100.two-column-control", "pair"]],
     "/online-tax-filing/guarantees/free-in-person-audit-support-terms/": [["div.xf-content-height:has(section.content-two-column)", "bleed"]],
     "/online-tax-filing/guarantees/worry-free-audit-support/": [["div.xf-content-height:has(section.content-two-column)", "bleed"]],
+    "/guarantees/": [["section.content-two-column", "bleed"], ["div.xf-content-height:has(section.content-two-column)", "bleed"]],
     // campaign-full-bleed-hero (catalog variants; class selectors stable between catalog and live)
     "/outlook-on-american-life/": [["section.column-control.spruce-eggshell-theme.two-column-control:has(.image-container img)", null], ["section.column-control.spruce-eggshell-theme.two-column-control:has(.introImageVariant)", "pair"]],
     "/responsibilityisland/": [["section.column-control.white-theme:not(.two-column-control):has(li.col-3 .introImageVariant)", "no-panel"]],
@@ -6175,8 +6176,13 @@ var CustomImportScript = (() => {
     });
   }
   function eyebrowHeadingsToParagraphs(root, document) {
+    const h1s = safeQueryAll(root, "h1").filter((h) => h.textContent.trim());
     safeQueryAll(root, "h1.eyebrow-label, h2.eyebrow-label, h3.eyebrow-label, h4.eyebrow-label, h5.eyebrow-label, h6.eyebrow-label, h1.color-eyebrow, h2.color-eyebrow, h3.color-eyebrow, h4.color-eyebrow, h5.color-eyebrow, h6.color-eyebrow").forEach((h) => {
       if (h.closest("table") || !h.textContent.trim()) return;
+      if (h.tagName === "H1" && h1s.length === 1) {
+        h.textContent = h.textContent.replace(/\s+/g, " ").trim();
+        return;
+      }
       const p2 = document.createElement("p");
       p2.textContent = h.textContent.replace(/\s+/g, " ").trim();
       h.replaceWith(p2);
@@ -6226,9 +6232,48 @@ var CustomImportScript = (() => {
       if (!host) return;
       host.append(sup);
     });
+    const BLOCK_CHILD = "p, div, ul, ol, table, h1, h2, h3, h4, h5, h6, blockquote, figure, picture, img";
+    safeQueryAll(root, "li").forEach((li) => {
+      if (![...li.children].some((c) => c.tagName === "SUP")) return;
+      if ([...li.children].some((c) => c.matches(BLOCK_CHILD))) return;
+      const p2 = li.ownerDocument.createElement("p");
+      p2.append(...li.childNodes);
+      li.append(p2);
+    });
     safeQueryAll(root, "sup button").forEach((b) => b.replaceWith(b.ownerDocument.createTextNode(b.textContent.replace(/\s+/g, " ").trim())));
   }
   var EXPAT_ARTICLE_TEMPLATES = ["resource-article", "resource-article-steps", "resource-article-steps-alt", "resource-guide-article"];
+  function captureCountryLists(document) {
+    const results = document.querySelector(".ac-filtering-results");
+    if (!results) return;
+    const script = [...document.querySelectorAll("script:not([src])")].find((s) => /var acA\s*=/.test(s.textContent));
+    if (!script) return;
+    const lists = [];
+    const listRe = /var ac([A-Z])\s*=\s*\[([\s\S]*?)\];/g;
+    let m = listRe.exec(script.textContent);
+    while (m) {
+      const items = [];
+      const itemRe = /'((?:[^'\\]|\\.)*)'|"((?:[^"\\]|\\.)*)"/g;
+      let it = itemRe.exec(m[2]);
+      while (it) {
+        items.push((it[1] !== void 0 ? it[1] : it[2]).replace(/\\(.)/g, "$1"));
+        it = itemRe.exec(m[2]);
+      }
+      if (items.length) lists.push({ letter: m[1].toLowerCase(), items });
+      m = listRe.exec(script.textContent);
+    }
+    if (!lists.length) return;
+    results.replaceChildren(...lists.map(({ letter, items }) => {
+      const div = document.createElement("div");
+      div.className = `countries-list countries-list--${letter}`;
+      items.forEach((html) => {
+        const p2 = document.createElement("p");
+        p2.innerHTML = html;
+        div.append(p2);
+      });
+      return div;
+    }));
+  }
   function pageTemplate(document, payload) {
     const urls = getPageUrl(document, payload);
     let path = "";
@@ -6294,13 +6339,14 @@ var CustomImportScript = (() => {
       }
       document.documentElement.setAttribute(CLEANUP_RESOLVED_ATTR, "true");
       protectSourceRules(document);
+      captureCountryLists(document);
       captureLiveState(document);
       captureVideoEmbeds(document);
       resolveJumpLinks(document);
       safeQueryAll(document.body || document, "span").forEach((span) => {
         if (span.attributes.length || span.textContent.trim()) return;
         const kids = [...span.childNodes].filter((n) => n.nodeType === 1 || n.textContent.trim());
-        if (kids.length && kids.every((n) => n.nodeType === 1 && n.tagName === "BR")) span.replaceWith(...kids);
+        if (kids.length && kids.every((n) => n.nodeType === 1 && /^(br|svg)$/i.test(n.tagName))) span.replaceWith(...kids);
       });
       return;
     }
@@ -6532,14 +6578,51 @@ var CustomImportScript = (() => {
         h2 = hit ? hit[1] : "";
       }
     }
-    return [pt === null ? "" : Math.round(pt), pb === null ? "" : Math.round(pb), align, width, h2].join("|");
+    let hw = "";
+    let pw = "";
+    if (live && align === "c") {
+      const blockBox = (t) => t.parentElement && view.getComputedStyle(t).display === "block";
+      if (first && /^H[1-6]$/.test(first.tagName) && blockBox(first)) hw = Math.round(first.getBoundingClientRect().width) || "";
+      const para22 = texts.find((t) => t.tagName === "P" && blockBox(t) && t.textContent.trim().length > 120);
+      if (para22) pw = Math.round(para22.getBoundingClientRect().width) || "";
+    }
+    return [pt === null ? "" : Math.round(pt), pb === null ? "" : Math.round(pb), align, width, h2, hw, pw, linkStyle(el, view, live)].join("|");
+  }
+  var UNDERLINE_LINK_SEL = ".text-underline.color-dark-green";
+  function linkStyle(el, view, live) {
+    const links = safeAll(el, "p a[href], li a[href]").filter((a) => a.textContent.trim() && !a.closest(`[${BLOCK_MATCH_ATTR}], header, footer, nav`) && !/\bbtn\b/.test(a.className || ""));
+    if (!links.length) return "";
+    const underlined = links.filter((a) => {
+      const marked = a.matches(UNDERLINE_LINK_SEL) ? a : a.querySelector(UNDERLINE_LINK_SEL);
+      if (!marked) return false;
+      if (!live) return true;
+      const cs = view.getComputedStyle(marked);
+      return /underline/.test(cs.textDecorationLine || "") && cs.color === "rgb(0, 93, 31)";
+    });
+    return underlined.length * 2 >= links.length ? "u" : "";
   }
   function readLayout(el) {
     const raw = el && el.getAttribute && el.getAttribute(LAYOUT_ATTR);
     if (!raw) return null;
-    const [pt, pb, align, width, h2] = raw.split("|");
+    const [pt, pb, align, width, h2, hw, pw, links] = raw.split("|");
     const num = (v) => v === "" || v === void 0 ? null : parseFloat(v);
-    return { pt: num(pt), pb: num(pb), align: align || "", width: num(width), h2: num(h2) };
+    return {
+      pt: num(pt),
+      pb: num(pb),
+      align: align || "",
+      width: num(width),
+      h2: num(h2),
+      hw: num(hw),
+      pw: num(pw),
+      links: links || ""
+    };
+  }
+  var HEADING_STEPS = [520, 640, 760, 860, 900, 1e3];
+  var TEXT_STEPS = [520, 600, 700, 800, 960];
+  function measureToken(prefix, px, steps, def) {
+    if (!px || px < 300) return "";
+    const step = steps.find((s) => s >= px - 2) || steps[steps.length - 1];
+    return step === def ? "" : `${prefix}-${step}`;
   }
   function h2Token(size, centered) {
     if (!size) return "";
@@ -6558,9 +6641,13 @@ var CustomImportScript = (() => {
   function styleOf(g) {
     const tokens = [g.colour || NONE];
     if (g.disclaimer) tokens.push("disclaimer");
-    if (g.align === "c" && !g.disclaimer) tokens.push("center");
-    else if (g.width && !g.disclaimer) tokens.push(g.width);
+    if (g.align === "c" && !g.disclaimer) {
+      tokens.push("center");
+      tokens.push(measureToken("heading", g.hw, HEADING_STEPS, 860));
+      tokens.push(measureToken("text", g.pw, TEXT_STEPS, 700));
+    } else if (g.width && !g.disclaimer) tokens.push(g.width);
     if (!g.disclaimer) tokens.push(h2Token(g.h2, g.align === "c"));
+    if (g.links === "u") tokens.push("links-underline");
     const def = Object.prototype.hasOwnProperty.call(DEFAULT_PAD, g.colour || NONE) ? DEFAULT_PAD[g.colour || NONE] : DEFAULT_PAD[NONE];
     const pt = quantize(g.pt);
     const pb = quantize(g.pb);
@@ -6585,6 +6672,9 @@ var CustomImportScript = (() => {
       align: (layouts.find((l) => l.align) || {}).align || "",
       width: widthToken(first.width),
       h2: (layouts.find((l) => l.h2) || {}).h2 || null,
+      hw: (layouts.find((l) => l.hw) || {}).hw || null,
+      pw: (layouts.find((l) => l.pw) || {}).pw || null,
+      links: (layouts.find((l) => l.links) || {}).links || "",
       pt: first.pt,
       pb: last.pb
     });
@@ -6604,9 +6694,34 @@ var CustomImportScript = (() => {
       return hasContent4(el);
     });
   }
+  var COLUMN_THEMES = { "rgb(246, 244, 233)": "spruce-eggshell-theme", "rgb(0, 53, 18)": "spruce-forest-theme", "rgb(0, 93, 31)": "green-dark-theme" };
+  function themeColumnBands(document, view) {
+    safeAll(document.body, "section.content-two-column").forEach((sec) => {
+      if (themeStyle(sec) !== void 0 || view.getComputedStyle(sec).backgroundColor !== "rgba(0, 0, 0, 0)") return;
+      const secW = sec.getBoundingClientRect().width;
+      if (!secW) return;
+      const painted = safeAll(sec, "div, li").filter((c) => {
+        const r = c.getBoundingClientRect();
+        return r.width >= secW * 0.4 && r.height > 100 && view.getComputedStyle(c).backgroundColor !== "rgba(0, 0, 0, 0)";
+      });
+      const outer = painted.filter((c) => !painted.some((o) => o !== c && o.contains(c)));
+      const colours = new Set(outer.map((c) => view.getComputedStyle(c).backgroundColor));
+      const covered = outer.reduce((w, c) => w + c.getBoundingClientRect().width, 0);
+      if (colours.size === 1 && covered >= secW * 0.95) {
+        const cls = COLUMN_THEMES[[...colours][0]];
+        if (cls) sec.classList.add(cls);
+      }
+    });
+  }
   function annotateLayout(document, sections) {
     const view = document.defaultView;
     const live = isLive(document);
+    if (live) {
+      try {
+        themeColumnBands(document, view);
+      } catch (e) {
+      }
+    }
     const themeRoots = findThemeRoots(document);
     const cands = /* @__PURE__ */ new Set([...themeRoots, ...findSourceBands(document)]);
     themeRoots.forEach((r) => {
@@ -6775,6 +6890,9 @@ var CustomImportScript = (() => {
           align: layout ? layout.align : "",
           width: layout ? widthToken(layout.width) : "",
           h2: layout ? layout.h2 : null,
+          hw: layout ? layout.hw : null,
+          pw: layout ? layout.pw : null,
+          links: layout ? layout.links : "",
           hasLayout: !!layout,
           breakReason: !!extra.breakReason
         };
@@ -6808,6 +6926,9 @@ var CustomImportScript = (() => {
               if (!cur.align) cur.align = layout.align;
               if (!cur.width) cur.width = widthToken(layout.width);
               if (!cur.h2) cur.h2 = layout.h2;
+              if (!cur.hw) cur.hw = layout.hw;
+              if (!cur.pw) cur.pw = layout.pw;
+              if (!cur.links) cur.links = layout.links;
               cur.hasLayout = true;
             }
             return;
@@ -8536,7 +8657,8 @@ var CustomImportScript = (() => {
         "name": "cards-pricing",
         "instances": [
           "main div.cmp-container > section.column-control:has(.category-card_container-v2)",
-          "main div.cmp-container > div.xf-content-height:has(.category-card_container-v2):not(:has(section.column-control))"
+          "main div.cmp-container > div.xf-content-height:has(.category-card_container-v2):not(:has(section.column-control))",
+          'main section.column-control:not([style*="display: none"]):has(> div.container > ul.category-card_container-v2 .card-v2)'
         ],
         "pageInstances": {
           "https://www.hrblock.com/expat-tax-preparation/": [

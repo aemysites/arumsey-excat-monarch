@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/hong-kong/u-s-expat-taxes-in-hong-kong/",
   "path": "expat-tax-preparation/resource-center/country/hong-kong/u-s-expat-taxes-in-hong-kong",
-  "timestamp": "2026-10-22T20:36:22.385Z",
+  "timestamp": "2026-10-23T22:38:30.451Z",
   "title": "U.S. Expat Taxes in Hong Kong | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-feie"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

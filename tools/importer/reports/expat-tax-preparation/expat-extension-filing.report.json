@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/expat-extension-filing/",
   "path": "expat-tax-preparation/expat-extension-filing",
-  "timestamp": "2026-10-23T02:21:41.714Z",
+  "timestamp": "2026-10-23T20:56:33.647Z",
   "title": "Expat Tax Extension Filing | H&R Block®",
   "template": "product-cta-hero",
   "blocks": [
@@ -10,5 +10,5 @@
     "columns-banner",
     "columns-banner"
   ],
-  "importScript": "6d9ba0805122"
+  "importScript": "c8789735c511"
 }

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/support/",
   "path": "support",
-  "timestamp": "2026-10-22T19:43:21.430Z",
+  "timestamp": "2026-10-24T00:36:44.619Z",
   "title": "Tax Support - Online & Tax Software Product Support | H&R Block®",
   "template": "info-photo-hero",
   "blocks": [
@@ -18,5 +18,5 @@
     "fragments/support-tab-3",
     "fragments/support-tab-4"
   ],
-  "importScript": "c48ce518734c"
+  "importScript": "a355c8f6437c"
 }

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-software/deluxe-without-state/",
   "path": "tax-software/deluxe-without-state",
-  "timestamp": "2026-10-22T21:23:28.601Z",
+  "timestamp": "2026-10-23T20:32:29.251Z",
   "title": "H&R Block Deluxe Without State Tax Software | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -17,5 +17,5 @@
     "columns-banner",
     "columns-banner"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

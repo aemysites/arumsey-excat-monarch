@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/income/retirement/401k-ira-withdrawals-overseas/",
   "path": "expat-tax-preparation/resource-center/income/retirement/401k-ira-withdrawals-overseas",
-  "timestamp": "2026-10-22T20:57:06.066Z",
+  "timestamp": "2026-10-23T22:53:09.411Z",
   "title": "401(k) & IRA Withdrawals Overseas | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-income"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

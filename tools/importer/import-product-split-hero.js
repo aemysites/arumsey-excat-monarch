@@ -793,7 +793,8 @@ const PAGE_TEMPLATE = {
       "name": "cards-pricing",
       "instances": [
         "main div.cmp-container > section.column-control:has(.category-card_container-v2)",
-        "main div.cmp-container > div.xf-content-height:has(.category-card_container-v2):not(:has(section.column-control))"
+        "main div.cmp-container > div.xf-content-height:has(.category-card_container-v2):not(:has(section.column-control))",
+        "main section.column-control:not([style*=\"display: none\"]):has(> div.container > ul.category-card_container-v2 .card-v2)"
       ],
       "pageInstances": {
         "https://www.hrblock.com/expat-tax-preparation/": [

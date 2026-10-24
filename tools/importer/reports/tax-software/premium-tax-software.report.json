@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-software/premium-tax-software/",
   "path": "tax-software/premium-tax-software",
-  "timestamp": "2026-10-22T21:25:19.441Z",
+  "timestamp": "2026-10-23T20:34:54.657Z",
   "title": "Premium Tax Software: Complex & Multi-Income Returns | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -18,5 +18,5 @@
     "columns-banner",
     "table-data"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

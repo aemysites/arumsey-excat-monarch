@@ -343,6 +343,9 @@
 .article-body.expat :where(p, li):not(:where(.article-body-content .section *)) a:hover {
   font-weight: 600;
   text-decoration: none;
+
+  /* source inline links / social icons ease their hover */
+  transition: color 0.25s, opacity 0.25s;
 }
 
 .article-body.expat .article-body-header h1 {
@@ -461,8 +464,14 @@
 }
 
 .article-body.expat .article-body-content li:not(:where(.article-body-content .section *)) {
+  color: #000; /* source list items are black, prose charcoal */
   font-size: 18px;
   line-height: 28.08px;
+}
+
+/* step lists (bold label + text): no paragraph gap inside an item */
+.article-body.expat .article-body-content li > p:not(:where(.article-body-content .section *)) {
+  padding-bottom: 0;
 }
 
 /* Key Takeaways (source .at-a-glance) */
@@ -488,6 +497,8 @@
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 800 / 461; /* source featured image box (renditions are 2:1) */
+  object-fit: cover;
 }
 
 /* inline fragment (ways-to-file panel) */

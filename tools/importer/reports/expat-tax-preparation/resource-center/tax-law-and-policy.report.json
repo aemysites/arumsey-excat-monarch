@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/tax-law-and-policy/",
   "path": "expat-tax-preparation/resource-center/tax-law-and-policy",
-  "timestamp": "2026-10-22T18:36:45.847Z",
+  "timestamp": "2026-10-23T19:45:49.084Z",
   "title": "Expat Tax Law & Policy | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -13,5 +13,5 @@
   "fragments": [
     "fragments/expat-tax-help-cta"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

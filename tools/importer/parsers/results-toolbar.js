@@ -27,14 +27,16 @@ export default function parse(element, { document }) {
     row.push(p);
   }
 
-  const options = [...element.querySelectorAll('select option')].map((o) => text(o)).filter(Boolean);
-  const fallbackOptions = options.length ? options
-    : [...element.querySelectorAll('.all-items .item')].map((o) => text(o)).filter(Boolean);
-  if (fallbackOptions.length) {
+  // one list per source dropdown (topic filter, then sort), each in its own cell
+  const selects = [...element.querySelectorAll('select')];
+  const groups = selects.length
+    ? selects.map((s) => [...s.querySelectorAll('option')])
+    : [...element.querySelectorAll('.all-items')].map((g) => [...g.querySelectorAll('.item')]);
+  groups.map((items) => items.map((o) => text(o)).filter(Boolean)).filter((l) => l.length).forEach((labels) => {
     const ul = document.createElement('ul');
-    fallbackOptions.forEach((t) => { const li = document.createElement('li'); li.textContent = t; ul.append(li); });
+    labels.forEach((t) => { const li = document.createElement('li'); li.textContent = t; ul.append(li); });
     row.push(ul);
-  }
+  });
 
   const reset = [...element.querySelectorAll('a')].find((a) => /reset/i.test(text(a)) || a.matches('[class*="reset"]'));
   if (reset) {

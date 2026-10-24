@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/",
   "path": "expat-tax-preparation/resource-center/filing",
-  "timestamp": "2026-10-22T18:34:48.925Z",
+  "timestamp": "2026-10-23T19:44:54.898Z",
   "title": "Expat Tax Filing | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -13,5 +13,5 @@
   "fragments": [
     "fragments/expat-tax-help-cta"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-software/basic-tax-software/",
   "path": "tax-software/basic-tax-software",
-  "timestamp": "2026-10-22T19:19:40.299Z",
+  "timestamp": "2026-10-23T20:30:05.386Z",
   "title": "Basic Tax Software for Simple, Affordable Tax Returns | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -18,5 +18,5 @@
     "columns-banner",
     "table-data"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

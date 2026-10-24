@@ -2,21 +2,21 @@
   "status": "success",
   "url": "https://www.hrblock.com/filing-options-and-products/",
   "path": "filing-options-and-products",
-  "timestamp": "2026-10-22T19:59:20.737Z",
+  "timestamp": "2026-10-23T23:58:15.086Z",
   "title": "Options for Filing Your Taxes | H&R Block® Tax Services",
   "template": "card-grid-landing",
   "blocks": [
     "accordion-faq",
-    "cards-pricing",
     "columns-promo-card",
     "cards-feature",
     "promo-strip",
     "columns-banner",
+    "cards-pricing",
     "columns-banner"
   ],
   "fragments": [
     "fragments/guarantees-cards-forest",
     "fragments/testimonials-forest"
   ],
-  "importScript": "cc79b2fd70c8"
+  "importScript": "b7930f0d0aeb"
 }

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/income/",
   "path": "expat-tax-preparation/resource-center/income",
-  "timestamp": "2026-10-22T18:36:12.567Z",
+  "timestamp": "2026-10-23T19:45:29.699Z",
   "title": "Expat Income | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -13,5 +13,5 @@
   "fragments": [
     "fragments/expat-tax-help-cta"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

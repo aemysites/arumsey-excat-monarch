@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/international-tax-offices/germany/grafenwoehr/62950/",
   "path": "international-tax-offices/germany/grafenwoehr/62950",
-  "timestamp": "2026-10-22T20:02:54.183Z",
+  "timestamp": "2026-10-24T00:01:48.453Z",
   "title": "H&R Block Tax Preparation Office",
   "template": "card-grid-landing",
   "blocks": [
@@ -13,5 +13,5 @@
     "fragments/office-stats-banner",
     "fragments/office-more-help-cards"
   ],
-  "importScript": "cc79b2fd70c8"
+  "importScript": "b7930f0d0aeb"
 }

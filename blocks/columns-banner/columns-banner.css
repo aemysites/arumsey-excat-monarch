@@ -178,8 +178,9 @@ main .columns-banner .button-wrapper a.button:any-link {
   margin-bottom: 20px;
 }
 
-/* icon / photo above the heading at its natural size */
-.columns-banner.pair .columns-banner-text-col img,
+/* icon / logo / QR code in the copy column at its natural size (source img renders
+   its intrinsic size: 80px app logo, 100px globe, 128px QR code) */
+.columns-banner .columns-banner-text-col img,
 .columns-banner.no-panel .columns-banner-row img {
   width: auto;
   max-width: 100%;
@@ -839,12 +840,13 @@ main .columns-banner.columns-banner-cta a.button:any-link {
   }
 
   /* bleed: copy aligns with the page content, the photo runs to the viewport edge
-     (and to the section edge it touches) */
-  .columns-banner-wrapper:has(> .columns-banner.bleed):first-child {
+     (and to the section edge it touches; a pad-top-0 / pad-bottom-0 section has
+     no padding to pull through) */
+  .section:not(.pad-top-0) > .columns-banner-wrapper:has(> .columns-banner.bleed):first-child {
     margin-top: calc(-1 * var(--section-padding));
   }
 
-  .columns-banner-wrapper:has(> .columns-banner.bleed):last-child {
+  .section:not(.pad-bottom-0) > .columns-banner-wrapper:has(> .columns-banner.bleed):last-child {
     margin-bottom: calc(-1 * var(--section-padding));
   }
 
@@ -859,6 +861,16 @@ main .columns-banner.columns-banner-cta a.button:any-link {
 
   .columns-banner.bleed .columns-banner-row > div + .columns-banner-text-col {
     padding: 60px max(var(--content-gutter), calc((100vw - var(--content-max-width)) / 2)) 40px 110px;
+  }
+
+  /* bleed CTAs stack, 260px wide (source .btn-container.stackButtons .btn-wide) */
+  .columns-banner.bleed .columns-banner-text-col > .button-wrapper {
+    display: flex;
+    margin: 20px 0 0;
+  }
+
+  .columns-banner.bleed .columns-banner-text-col > .button-wrapper a.button {
+    min-width: 260px;
   }
 
   /* deadline: illustration left, copy right (source .container gap 200px) */

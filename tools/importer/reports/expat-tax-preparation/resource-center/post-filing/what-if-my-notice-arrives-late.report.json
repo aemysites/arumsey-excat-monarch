@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/post-filing/what-if-my-notice-arrives-late/",
   "path": "expat-tax-preparation/resource-center/post-filing/what-if-my-notice-arrives-late",
-  "timestamp": "2026-10-22T20:59:36.678Z",
+  "timestamp": "2026-10-23T22:57:55.968Z",
   "title": "What if my notice arrives late? | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

@@ -154,9 +154,43 @@
   }
 }
 
+/* A-Z results: the selected letter's countries (source .ac-filtering-results p) */
+.country-selector .country-selector-results {
+  width: 100%;
+}
+
+.country-selector .country-selector-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.country-selector .country-selector-list li {
+  margin: 0 0 26px; /* source row pitch 53px (27px line + 26px) */
+  break-inside: avoid;
+  font-size: var(--body-font-size-m);
+  line-height: 27px;
+}
+
+.country-selector .country-selector-list a:any-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.country-selector .country-selector-list a:hover {
+  text-decoration: none;
+}
+
+@media (width >= 768px) {
+  .country-selector .country-selector-list {
+    column-count: 3;
+    column-gap: 40px;
+  }
+}
+
 @media (width >= 990px) {
   .country-selector {
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
   }
@@ -169,7 +203,7 @@
 
 @media (width >= 1200px) {
   .country-selector {
-    gap: 200px;
+    gap: 60px 200px;
   }
 
   .country-selector .country-selector-intro,

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/expat-assisted-tax-filing/",
   "path": "expat-tax-preparation/expat-assisted-tax-filing",
-  "timestamp": "2026-10-23T02:20:46.487Z",
+  "timestamp": "2026-10-23T19:43:06.998Z",
   "title": "File with an Advisor | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -22,5 +22,5 @@
     "fragments/expat-assisted-tax-filing-tab-3",
     "fragments/expat-assisted-tax-filing-tab-4"
   ],
-  "importScript": "d33c66e64059"
+  "importScript": "5a445135de87"
 }

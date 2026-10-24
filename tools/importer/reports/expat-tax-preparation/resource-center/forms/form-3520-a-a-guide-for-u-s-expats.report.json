@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/forms/form-3520-a-a-guide-for-u-s-expats/",
   "path": "expat-tax-preparation/resource-center/forms/form-3520-a-a-guide-for-u-s-expats",
-  "timestamp": "2026-10-22T20:51:04.283Z",
+  "timestamp": "2026-10-23T22:48:02.318Z",
   "title": "Form 3520-A: A Guide for U.S. Expats | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-forms"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

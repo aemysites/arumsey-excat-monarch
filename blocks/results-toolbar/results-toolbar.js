@@ -6,7 +6,10 @@
  *     `results-toolbar:count` events: `detail: { count }`).
  *  2. Sort options as a list. A linked item navigates on select; a plain item
  *     sets the `sort` query parameter and dispatches `results-toolbar:sort`.
- *  3. Reset link, e.g. "Reset Filters".
+ *     With two lists (each in its own cell) the first is a filter: it sets the
+ *     `topic` parameter and dispatches `results-toolbar:filter` (the first
+ *     item, e.g. "Show all topics", clears it); the second is the sort.
+ *  3. Reset link, e.g. "Reset Filters": clears filter and sort.
  */
 
 function toSlug(text) {
@@ -22,28 +25,31 @@ function classifyCell(cell) {
   return text ? 'count' : 'empty';
 }
 
-function buildSort(cell, block) {
+function buildSort(cell, block, kind = 'sort') {
   const items = [...cell.querySelectorAll('li')];
   if (!items.length) return null;
-  const label = cell.querySelector(':scope > p')?.textContent.trim() || 'Sort by';
+  const isFilter = kind === 'filter';
+  const param = isFilter ? 'topic' : 'sort';
+  const label = cell.querySelector(':scope > p')?.textContent.trim() || (isFilter ? 'Filter by topic' : 'Sort by');
   const params = new URLSearchParams(window.location.search);
-  const current = params.get('sort');
+  const current = params.get(param);
 
   const wrapper = document.createElement('div');
-  wrapper.className = 'results-toolbar-sort';
-  const id = `results-toolbar-sort-${Math.random().toString(36).slice(2, 8)}`;
+  wrapper.className = `results-toolbar-${kind}`;
+  const id = `results-toolbar-${kind}-${Math.random().toString(36).slice(2, 8)}`;
   const lbl = document.createElement('label');
-  lbl.className = 'results-toolbar-sort-label';
+  lbl.className = `results-toolbar-${kind}-label`;
   lbl.htmlFor = id;
   lbl.textContent = label;
   const select = document.createElement('select');
   select.id = id;
 
-  items.forEach((li) => {
+  items.forEach((li, i) => {
     const a = li.querySelector('a');
     const option = document.createElement('option');
     option.textContent = li.textContent.trim();
-    option.value = toSlug(option.textContent);
+    // a filter's first item ("Show all topics") is the unfiltered state
+    option.value = isFilter && i === 0 ? '' : toSlug(option.textContent);
     if (a) option.dataset.href = a.href;
     const isCurrent = a
       ? new URL(a.href, window.location.href).pathname === window.location.pathname
@@ -60,9 +66,10 @@ function buildSort(cell, block) {
       return;
     }
     const url = new URL(window.location.href);
-    url.searchParams.set('sort', option.value);
+    if (option.value) url.searchParams.set(param, option.value);
+    else url.searchParams.delete(param);
     window.history.replaceState({}, '', url);
-    block.dispatchEvent(new CustomEvent('results-toolbar:sort', {
+    block.dispatchEvent(new CustomEvent(`results-toolbar:${kind}`, {
       bubbles: true,
       detail: { value: option.value, label: option.textContent },
     }));
@@ -72,13 +79,24 @@ function buildSort(cell, block) {
   return wrapper;
 }
 
+/* Reset: back to the first option of every select (dispatching their events). */
+function resetSelects(bar) {
+  bar.querySelectorAll('select').forEach((select) => {
+    if (select.selectedIndex === 0) return;
+    select.selectedIndex = 0;
+    select.dispatchEvent(new Event('change'));
+  });
+}
+
 export default function decorate(block) {
   const cells = [...block.children].flatMap((row) => [...row.children]);
   const bar = document.createElement('div');
   bar.className = 'results-toolbar-bar';
   let count;
-  let sort;
   let reset;
+  const listCells = cells.filter((cell) => classifyCell(cell) === 'sort');
+  const selects = listCells.slice(-2).map((cell, i, all) => (
+    buildSort(cell, block, all.length > 1 && i === 0 ? 'filter' : 'sort')));
 
   cells.forEach((cell) => {
     const type = classifyCell(cell);
@@ -87,17 +105,23 @@ export default function decorate(block) {
       count.className = 'results-toolbar-count';
       count.setAttribute('aria-live', 'polite');
       count.append(...cell.childNodes);
-    } else if (type === 'sort' && !sort) {
-      sort = buildSort(cell, block);
     } else if (type === 'reset' && !reset) {
       reset = document.createElement('div');
       reset.className = 'results-toolbar-reset';
       reset.append(...cell.childNodes);
-      reset.querySelectorAll('a').forEach((a) => a.classList.remove('button', 'primary', 'secondary'));
+      reset.querySelectorAll('a').forEach((a) => {
+        a.classList.remove('button', 'primary', 'secondary');
+        if (a.getAttribute('href') === '#') {
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            resetSelects(bar);
+          });
+        }
+      });
     }
   });
 
-  [count, sort, reset].filter(Boolean).forEach((el) => bar.append(el));
+  [count, ...selects, reset].filter(Boolean).forEach((el) => bar.append(el));
   block.replaceChildren(bar);
 
   if (count) {

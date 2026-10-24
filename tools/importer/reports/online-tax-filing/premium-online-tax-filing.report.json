@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/online-tax-filing/premium-online-tax-filing/",
   "path": "online-tax-filing/premium-online-tax-filing",
-  "timestamp": "2026-10-22T18:53:37.754Z",
+  "timestamp": "2026-10-23T20:00:18.870Z",
   "title": "Premium Online Tax Filing – Best Tax Software for Investors | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -20,5 +20,5 @@
     "fragments/premium-online-tax-filing-tab-1",
     "fragments/premium-online-tax-filing-tab-2"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

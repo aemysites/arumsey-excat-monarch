@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-software/updates-back-editions/2023-back-editions/",
   "path": "tax-software/updates-back-editions/2023-back-editions",
-  "timestamp": "2026-10-22T21:29:49.977Z",
+  "timestamp": "2026-10-23T20:40:00.358Z",
   "title": "Download H&R Block 2023 Back Editions Tax Software - Federal or State Edition | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -13,5 +13,5 @@
     "software-download",
     "columns-banner"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

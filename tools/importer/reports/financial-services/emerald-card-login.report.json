@@ -2,11 +2,11 @@
   "status": "success",
   "url": "https://www.hrblock.com/financial-services/emerald-card-login/",
   "path": "financial-services/emerald-card-login",
-  "timestamp": "2026-10-22T18:39:43.317Z",
+  "timestamp": "2026-10-24T00:59:37.375Z",
   "title": "Emerald Card® Login | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
     "hero-split"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "6c0bdfa47818"
 }

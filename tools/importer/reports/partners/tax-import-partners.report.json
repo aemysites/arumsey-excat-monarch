@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/partners/tax-import-partners/",
   "path": "partners/tax-import-partners",
-  "timestamp": "2026-10-22T20:23:22.768Z",
+  "timestamp": "2026-10-24T00:22:13.081Z",
   "title": "H&R Block Tax Import Partners | H&R Block®",
   "template": "card-grid-landing",
   "blocks": [
@@ -13,5 +13,5 @@
     "columns-banner",
     "columns-banner"
   ],
-  "importScript": "cc79b2fd70c8"
+  "importScript": "b7930f0d0aeb"
 }

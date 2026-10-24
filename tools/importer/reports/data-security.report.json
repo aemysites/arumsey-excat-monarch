@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/data-security/",
   "path": "data-security",
-  "timestamp": "2026-10-22T19:35:16.742Z",
+  "timestamp": "2026-10-23T21:09:00.877Z",
   "title": "Data Security from Multiple Levels of Protection | H&R Block®",
   "template": "info-photo-hero",
   "blocks": [
@@ -10,5 +10,5 @@
     "columns-banner",
     "columns-banner"
   ],
-  "importScript": "c48ce518734c"
+  "importScript": "fc6562576d56"
 }

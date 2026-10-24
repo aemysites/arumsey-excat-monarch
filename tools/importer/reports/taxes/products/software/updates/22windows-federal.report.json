@@ -2,11 +2,11 @@
   "status": "success",
   "url": "https://www.hrblock.com/taxes/products/software/updates/22windows-federal/",
   "path": "taxes/products/software/updates/22windows-federal",
-  "timestamp": "2026-10-22T22:01:45.844Z",
+  "timestamp": "2026-10-23T21:35:38.641Z",
   "title": "Download 2022 Federal Updates for Windows | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
     "software-download"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

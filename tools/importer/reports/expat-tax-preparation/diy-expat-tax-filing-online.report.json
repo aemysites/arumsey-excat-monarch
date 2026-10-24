@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/diy-expat-tax-filing-online/",
   "path": "expat-tax-preparation/diy-expat-tax-filing-online",
-  "timestamp": "2026-10-23T02:19:52.521Z",
+  "timestamp": "2026-10-23T19:42:13.291Z",
   "title": "DIY Expat Tax Filing Online | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -20,5 +20,5 @@
     "fragments/diy-expat-tax-filing-online-tab-2",
     "fragments/diy-expat-tax-filing-online-tab-3"
   ],
-  "importScript": "d33c66e64059"
+  "importScript": "5a445135de87"
 }

@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/outlook-on-american-life/",
   "path": "outlook-on-american-life",
-  "timestamp": "2026-10-22T21:11:03.252Z",
+  "timestamp": "2026-10-23T23:53:48.660Z",
   "title": "Outlook on American Life 2024 Report | H&R Block®",
   "template": "campaign-full-bleed-hero",
   "blocks": [
@@ -16,5 +16,5 @@
     "cards-feature",
     "hero-banner"
   ],
-  "importScript": "7f0f877f1c55"
+  "importScript": "9b8a00bb78b3"
 }

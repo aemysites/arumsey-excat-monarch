@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/japan/",
   "path": "expat-tax-preparation/resource-center/country/japan",
-  "timestamp": "2026-10-22T18:31:40.696Z",
+  "timestamp": "2026-10-24T00:57:05.712Z",
   "title": "Taxes for U.S. Expats in Japan | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -16,5 +16,5 @@
     "fragments/expat-steps-to-prep",
     "fragments/expat-testimonials"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "6c0bdfa47818"
 }

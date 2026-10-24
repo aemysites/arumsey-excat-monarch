@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/country/canada/the-u-s-canada-tax-treaty-explained/",
   "path": "expat-tax-preparation/resource-center/country/canada/the-u-s-canada-tax-treaty-explained",
-  "timestamp": "2026-10-22T20:35:33.901Z",
+  "timestamp": "2026-10-23T22:37:44.852Z",
   "title": "The U.S./Canada Tax Treaty Explained | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-testimonials",
     "fragments/expat-ways-to-file"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

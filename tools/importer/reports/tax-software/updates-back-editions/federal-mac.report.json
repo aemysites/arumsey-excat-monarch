@@ -2,11 +2,11 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-software/updates-back-editions/federal-mac/",
   "path": "tax-software/updates-back-editions/federal-mac",
-  "timestamp": "2026-10-22T21:31:36.771Z",
+  "timestamp": "2026-10-23T20:42:02.103Z",
   "title": "Download Federal Updates for Mac | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
     "software-download"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

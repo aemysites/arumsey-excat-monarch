@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/filing/status/physical-presence-test/",
   "path": "expat-tax-preparation/resource-center/filing/status/physical-presence-test",
-  "timestamp": "2026-10-22T20:46:57.411Z",
+  "timestamp": "2026-10-23T22:44:43.425Z",
   "title": "Physical Presence Test | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -14,5 +14,5 @@
     "fragments/expat-ways-to-file",
     "fragments/expat-recommended-state-taxes"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

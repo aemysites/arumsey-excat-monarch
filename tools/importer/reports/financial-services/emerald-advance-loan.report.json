@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/financial-services/emerald-advance-loan/",
   "path": "financial-services/emerald-advance-loan",
-  "timestamp": "2026-10-22T18:38:45.143Z",
+  "timestamp": "2026-10-23T19:47:36.872Z",
   "title": "H&R Block Emerald Advance® Loan | H&R Block®",
   "template": "product-split-hero",
   "blocks": [
@@ -17,5 +17,5 @@
     "columns-banner",
     "columns-banner"
   ],
-  "importScript": "d4c454421d77"
+  "importScript": "5a445135de87"
 }

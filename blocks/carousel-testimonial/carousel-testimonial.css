@@ -133,6 +133,7 @@
   letter-spacing: -0.25px;
 }
 
+
 .carousel-testimonial .carousel-testimonial-slide-quote > * {
   margin: 0;
 }
@@ -552,4 +553,9 @@
     justify-content: flex-start;
     padding-left: 58px;
   }
+}
+
+/* main-site trust band (forest): source quote is medium weight */
+.section.forest .carousel-testimonial .carousel-testimonial-slide-quote {
+  font-weight: 500;
 }

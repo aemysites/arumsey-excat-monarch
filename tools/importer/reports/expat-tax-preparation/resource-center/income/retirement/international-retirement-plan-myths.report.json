@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/expat-tax-preparation/resource-center/income/retirement/international-retirement-plan-myths/",
   "path": "expat-tax-preparation/resource-center/income/retirement/international-retirement-plan-myths",
-  "timestamp": "2026-10-22T20:58:27.469Z",
+  "timestamp": "2026-10-23T22:55:29.096Z",
   "title": "International Retirement Plans: Fact vs. Fiction | H&R Block®",
   "template": "resource-article",
   "blocks": [
@@ -13,5 +13,5 @@
     "fragments/expat-tax-help-cta",
     "fragments/expat-testimonials"
   ],
-  "importScript": "f58ad7bf6aa4"
+  "importScript": "3623921e8c86"
 }

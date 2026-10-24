@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/offers/refund-advance/",
   "path": "offers/refund-advance",
-  "timestamp": "2026-10-22T19:42:28.325Z",
+  "timestamp": "2026-10-24T00:35:49.781Z",
   "title": "You Could Get a Tax Advance Loan Up to $4,000 on Your Tax Refund with Refund Advance loan | H&R Block®",
   "template": "info-photo-hero",
   "blocks": [
@@ -12,5 +12,5 @@
     "columns-banner",
     "columns-banner"
   ],
-  "importScript": "c48ce518734c"
+  "importScript": "a355c8f6437c"
 }

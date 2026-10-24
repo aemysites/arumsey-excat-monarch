@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/makeeveryblockbetter/",
   "path": "makeeveryblockbetter",
-  "timestamp": "2026-10-22T19:41:25.315Z",
+  "timestamp": "2026-10-23T21:15:12.971Z",
   "title": "Make Every Block Better | H&R Block®",
   "template": "info-photo-hero",
   "blocks": [
@@ -13,5 +13,5 @@
     "cards-icon",
     "columns-banner"
   ],
-  "importScript": "c48ce518734c"
+  "importScript": "fc6562576d56"
 }
