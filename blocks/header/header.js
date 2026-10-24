@@ -23,6 +23,11 @@ async function loadNav() {
   // Document Authoring renders a list item that holds a nested list as <li><p>…</p><ul>:
   // unwrap those paragraphs so items look the same as in the local nav (<li><a>…</a><ul>)
   wrapper.querySelectorAll('li > p').forEach((p) => p.replaceWith(...p.childNodes));
+  // menu icons are sized as <img> (local nav); DA delivers them as <picture>: keep the <img>
+  wrapper.querySelectorAll('li picture').forEach((picture) => {
+    const img = picture.querySelector('img');
+    if (img) picture.replaceWith(img);
+  });
   return wrapper;
 }
 
