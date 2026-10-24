@@ -434,6 +434,16 @@ export default function parse(element, { document, params }) {
     .map((col) => extract(document, col, { icons: true }))
     .filter((content) => content.length);
 
+  // full-bleed image band (div.fb-image-wrapper: .image-container with per-breakpoint
+  // img.fb-img-bg, then the copy section): the column list lives in the copy section,
+  // so the background photo is a sibling of it. Author the desktop rendition as the
+  // image cell (no-panel-image-background shows it behind the copy).
+  const bandImages = element.querySelector('.fb-image-wrapper > .image-container');
+  if (bandImages && !columns.some((c) => c.contains(bandImages))) {
+    const bg = bandImages.querySelector('img.show-large[src]') || bandImages.querySelector('img[src]');
+    if (bg) row.unshift([bg]);
+  }
+
   const cells = row.length ? [row] : [];
   let variant = variantFromCatalog;
   if (variant === undefined) {

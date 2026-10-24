@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.hrblock.com/tax-offices/drop-off/",
   "path": "tax-offices/drop-off",
-  "timestamp": "2026-10-24T00:23:07.140Z",
+  "timestamp": "2026-10-24T12:57:24.565Z",
   "title": "Tax Return Drop-Off Service | H&R Block®",
   "template": "card-grid-landing",
   "blocks": [
@@ -19,5 +19,5 @@
   "fragments": [
     "fragments/guarantees-cards-forest"
   ],
-  "importScript": "b7930f0d0aeb"
+  "importScript": "5c963cc36529"
 }

@@ -404,6 +404,62 @@ main .columns-banner.deadline .button-wrapper + .button-wrapper a.button.primary
   background: var(--columns-banner-scrim);
 }
 
+/* no-panel-image-background band (source xf .fb-image-wrapper "Find your office"):
+   full-bleed photo with the dark overlay baked into the image, eggshell copy and a
+   neon search CTA, no extra scrim */
+.columns-banner-wrapper:has(> .columns-banner.no-panel-image-background) {
+  max-width: unset;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.columns-banner.no-panel-image-background > .columns-banner-has-bg > .columns-banner-text-col {
+  padding: 60px var(--content-gutter);
+  background: none;
+  color: var(--color-eggshell);
+  text-align: center;
+}
+
+.columns-banner.no-panel-image-background .columns-banner-text-col :is(h1, h2, h3, h4, p) {
+  color: var(--color-eggshell);
+}
+
+.columns-banner.no-panel-image-background .columns-banner-text-col h2 {
+  margin: 0 0 20px;
+}
+
+.columns-banner.no-panel-image-background .columns-banner-text-col p:not(.button-wrapper) {
+  margin: 0;
+}
+
+.columns-banner.no-panel-image-background .columns-banner-text-col .button-wrapper {
+  margin: 20px 0 0;
+}
+
+/* neon pill with a leading search icon (source .btn--hrb--neon.btn-wide .ctaIconLeft) */
+.columns-banner.no-panel-image-background a.button.primary:any-link {
+  gap: 10px;
+  min-width: 260px;
+  border-color: var(--color-neon);
+  background-color: var(--color-neon);
+  color: var(--color-black);
+}
+
+.columns-banner.no-panel-image-background a.button.primary:hover {
+  border-color: var(--color-neon-hover);
+  background-color: var(--color-neon-hover);
+  color: var(--color-black);
+}
+
+.columns-banner.no-panel-image-background a.button.primary::before {
+  content: '';
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Ccircle cx='15.2' cy='15.2' r='7.8' stroke='%23000' stroke-width='2'/%3E%3Cpath d='M21 21l5 5' stroke='%23000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 /* strip: slim one-row CTA strip (source .alignBanner: centered, 20px padding) */
 .columns-banner.strip > .columns-banner-row {
   gap: calc(var(--columns-banner-gap) / 2);
@@ -762,11 +818,11 @@ main .columns-banner.columns-banner-cta a.button:any-link {
   }
 
   /* default two-cell split: copy column insets (source content-wrap 0 60px 0 120px | 0 70px 0 110px) */
-  .columns-banner-2-cols:not(.pair, .no-panel, .strip, .deadline, .bleed) > .columns-banner-row > .columns-banner-text-col:first-child {
+  .columns-banner-2-cols:not(.pair, .no-panel, .strip, .deadline, .bleed, .no-panel-image-background) > .columns-banner-row > .columns-banner-text-col:first-child {
     padding-right: 60px;
   }
 
-  .columns-banner-2-cols:not(.pair, .no-panel, .strip, .deadline, .bleed) > .columns-banner-row > div + .columns-banner-text-col {
+  .columns-banner-2-cols:not(.pair, .no-panel, .strip, .deadline, .bleed, .no-panel-image-background) > .columns-banner-row > div + .columns-banner-text-col {
     padding-left: 110px;
   }
 
@@ -926,6 +982,34 @@ main .columns-banner.columns-banner-cta a.button:any-link {
     z-index: 1;
     background: var(--columns-banner-scrim);
     pointer-events: none;
+  }
+
+  /* find-your-office band: copy (434px) | CTA in one centred row, 20px apart;
+     band 251px = 60px section padding + 20px row padding around the copy
+     (the copy column grows to keep the bold line on one line with fallback fonts) */
+  .columns-banner.no-panel-image-background > .columns-banner-row.columns-banner-has-bg::before {
+    content: none;
+  }
+
+  .columns-banner.no-panel-image-background > .columns-banner-has-bg > .columns-banner-text-col {
+    display: grid;
+    grid-template-columns: minmax(434px, max-content) auto;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    justify-self: stretch;
+    max-width: none;
+    padding: 80px var(--content-gutter);
+    text-align: start;
+  }
+
+  .columns-banner.no-panel-image-background .columns-banner-text-col > :not(.button-wrapper) {
+    grid-column: 1;
+  }
+
+  .columns-banner.no-panel-image-background .columns-banner-text-col > .button-wrapper {
+    grid-area: 1 / 2 / span 2;
+    margin: 0;
   }
 
   /* strip: heading | copy | button in one centered row */

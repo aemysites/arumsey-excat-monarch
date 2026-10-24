@@ -2238,6 +2238,11 @@ var CustomImportScript = (() => {
       return text9(outside) ? [col] : items;
     });
     const row = columns.map((col) => extract5(document, col, { icons: true })).filter((content) => content.length);
+    const bandImages = element.querySelector(".fb-image-wrapper > .image-container");
+    if (bandImages && !columns.some((c) => c.contains(bandImages))) {
+      const bg = bandImages.querySelector("img.show-large[src]") || bandImages.querySelector("img[src]");
+      if (bg) row.unshift([bg]);
+    }
     const cells = row.length ? [row] : [];
     let variant = variantFromCatalog;
     if (variant === void 0) {
