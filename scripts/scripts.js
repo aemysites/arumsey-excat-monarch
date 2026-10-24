@@ -80,10 +80,40 @@ function buildDmOpenApiRendition(src, { width }) {
   return url.toString();
 }
 
+// Sentinel used by the transformer when source <img> alt is empty. Document
+// view shows the visible cue; we translate it back to alt="" here so screen
+// readers correctly skip decorative images. If an author edits the link
+// text away from the sentinel, their edit becomes the real alt — a11y
+// improves. Must stay byte-identical to dm-scene7-helpers.js EMPTY_ALT_SENTINEL.
+const EMPTY_ALT_SENTINEL = 'Image without alt text';
+
+function linkTextToAlt(linkText) {
+  return linkText === EMPTY_ALT_SENTINEL ? '' : linkText;
+}
+
+// Site fallback (not part of the shared DM helpers): image links saved in Document
+// Authoring with the Scene7 host stripped (`/is/image/hrblock/...`). Only an anchor
+// that is clearly an image carrier — the empty-alt sentinel text, or the sole content
+// of a block cell / paragraph — is resolved against the H&R Block Scene7 origin, so
+// ordinary text links are never turned into pictures.
+const SCENE7_ORIGIN = 'https://hrbent.scene7.com';
+
+function relativeScene7Url(a, href) {
+  if (!/^\/is\/image\/[^?#]+/.test(href)) return null;
+  const text = a.textContent.trim();
+  const parent = a.parentElement;
+  const sole = parent && parent.children.length === 1
+    && parent.textContent.trim() === text
+    && (parent.tagName === 'P' || (parent.tagName === 'DIV' && parent.closest('.block, [class] > div > div')));
+  return text === EMPTY_ALT_SENTINEL || sole ? `${SCENE7_ORIGIN}${href}` : null;
+}
+
 function findDmOnAnchor(a) {
   if (!a || typeof a.getAttribute !== 'function') return null;
   const href = a.getAttribute('href') || '';
   if (detectDynamicMediaUrl(href)) return { mode: 'unlinked', dmUrl: href };
+  const relative = relativeScene7Url(a, href);
+  if (relative) return { mode: 'unlinked', dmUrl: relative };
   const title = a.getAttribute('title') || '';
   if (detectDynamicMediaUrl(title)) return { mode: 'linked', dmUrl: title };
   return null;
@@ -103,17 +133,6 @@ function isUnwrappableMarkdownParagraph(anchor) {
   if (!parent || parent.tagName !== 'P') return false;
   if (parent.children.length !== 1 || parent.firstElementChild !== anchor) return false;
   return parent.textContent.trim() === anchor.textContent.trim();
-}
-
-// Sentinel used by the transformer when source <img> alt is empty. Document
-// view shows the visible cue; we translate it back to alt="" here so screen
-// readers correctly skip decorative images. If an author edits the link
-// text away from the sentinel, their edit becomes the real alt — a11y
-// improves. Must stay byte-identical to dm-scene7-helpers.js EMPTY_ALT_SENTINEL.
-const EMPTY_ALT_SENTINEL = 'Image without alt text';
-
-function linkTextToAlt(linkText) {
-  return linkText === EMPTY_ALT_SENTINEL ? '' : linkText;
 }
 
 // ---- Rendering ----
