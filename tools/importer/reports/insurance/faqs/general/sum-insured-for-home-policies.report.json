@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/sum-insured-for-home-policies.html",
+  "path": "insurance/faqs/general/sum-insured-for-home-policies",
+  "timestamp": "2026-10-24T02:07:03.850Z",
+  "title": "Sum insured (for Home policies)",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

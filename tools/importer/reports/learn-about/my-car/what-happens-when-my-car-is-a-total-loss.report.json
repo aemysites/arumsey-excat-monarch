@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/what-happens-when-my-car-is-a-total-loss.html",
+  "path": "learn-about/my-car/what-happens-when-my-car-is-a-total-loss",
+  "timestamp": "2026-10-24T01:56:52.309Z",
+  "title": "What Happens When My Car Is A Total Loss? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

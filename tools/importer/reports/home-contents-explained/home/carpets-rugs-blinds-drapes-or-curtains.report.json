@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/carpets-rugs-blinds-drapes-or-curtains.html",
+  "path": "home-contents-explained/home/carpets-rugs-blinds-drapes-or-curtains",
+  "timestamp": "2026-10-24T01:30:09.799Z",
+  "title": "Carpets, rugs, internal blinds and shutters, drapes, or curtains | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

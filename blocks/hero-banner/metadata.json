@@ -1,0 +1,95 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "",
+    "purpose": "Page-top banner with a full-bleed photo (or colour) background, a main text box (heading, text, ticks, CTAs) and an optional side panel (offer, lifestage links, 'this page covers' contents)"
+  },
+  "contentPattern": {
+    "structure": "a picture-only cell is the background (with `logo`, it is a brand mark beside the copy); the first text cell is the main text box (heading, text, lists, CTA links); a second text cell becomes the side panel; further picture-only cells sit with the copy. Cells can be in one row or separate rows",
+    "cells": [
+      "background picture",
+      "main copy",
+      "side panel (optional)"
+    ]
+  },
+  "options": [
+    {
+      "class": "text-box",
+      "label": "Text Box"
+    },
+    {
+      "class": "text-box-2",
+      "label": "Text Box 2"
+    },
+    {
+      "class": "text-box-3",
+      "label": "Text Box 3"
+    },
+    {
+      "class": "text-box-cyan",
+      "label": "Text Box Cyan"
+    },
+    {
+      "class": "offer-box",
+      "label": "Offer Box"
+    },
+    {
+      "class": "offer-box-cyan-light-image",
+      "label": "Offer Box Cyan Light Image"
+    },
+    {
+      "class": "link-panel",
+      "label": "Link Panel"
+    },
+    {
+      "class": "text-box-rounded",
+      "label": "Text Box Rounded"
+    },
+    {
+      "class": "text-box-4",
+      "label": "Text Box 4"
+    },
+    {
+      "class": "logo",
+      "label": "Logo"
+    },
+    {
+      "class": "text-overlay",
+      "label": "Text Overlay"
+    },
+    {
+      "class": "promo-card",
+      "label": "Promo Card"
+    },
+    {
+      "class": "contents-panel",
+      "label": "Contents Panel"
+    }
+  ],
+  "memberVariantIds": [
+    "v_ac5fa92901be",
+    "v_61850ea0e0f2",
+    "v_0fe97976e726-2",
+    "v_369d73988990",
+    "v_fbc5b1339bdc",
+    "v_0fe97976e726-7",
+    "v_afe8fb47118e",
+    "v_e1e939d453e6-2",
+    "v_0fe97976e726-3",
+    "v_0fe97976e726-9",
+    "v_6835de0b0762",
+    "v_aafae6885be8",
+    "v_aafae6885be8-1",
+    "v_aafae6885be8-2",
+    "v_e2fb3a608267",
+    "v_fbc5b1339bdc-1"
+  ],
+  "usage": "Top-of-page hero on most content pages (304 pages default) and product/landing pages: text boxes over photos, offer boxes, link panels, contents panels, logo banners, text overlays and promo cards.",
+  "reuseGuidance": "Use for the page-top banner with copy over or beside an image. Use hero-title for plain title bands without a photo, and columns-media for in-page image/text splits. `text-box*`/`offer-box*`/`promo-card` pad the text box; `text-box` puts it on the right; `offer-box*` drop the second (offer) panel low; `link-panel`/`contents-panel` render the second cell as a list panel; `logo` treats the picture as a brand mark; `text-overlay` keeps copy directly on the photo."
+}

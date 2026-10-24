@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/clothing.html",
+  "path": "home-contents-explained/contents/clothing",
+  "timestamp": "2026-10-24T01:22:14.005Z",
+  "title": "Clothing | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/personal-valuables-specified-items.html",
+  "path": "home-contents-explained/contents/personal-valuables-specified-items",
+  "timestamp": "2026-10-24T01:24:04.347Z",
+  "title": "Personal Valuables - Specified Items | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

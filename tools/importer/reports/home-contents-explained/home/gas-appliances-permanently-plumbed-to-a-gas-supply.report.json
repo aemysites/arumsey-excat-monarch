@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/gas-appliances-permanently-plumbed-to-a-gas-supply.html",
+  "path": "home-contents-explained/home/gas-appliances-permanently-plumbed-to-a-gas-supply",
+  "timestamp": "2026-10-24T01:30:56.333Z",
+  "title": "Gas appliances permanently plumbed to a gas supply | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

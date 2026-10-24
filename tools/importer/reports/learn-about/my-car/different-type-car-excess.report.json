@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/different-type-car-excess.html",
+  "path": "learn-about/my-car/different-type-car-excess",
+  "timestamp": "2026-10-24T02:17:12.133Z",
+  "title": "What Is Car Insurance Excess? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

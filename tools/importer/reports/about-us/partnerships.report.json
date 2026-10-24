@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/partnerships.html",
+  "path": "about-us/partnerships",
+  "timestamp": "2026-10-24T01:20:10.245Z",
+  "title": "Partnerships and Sponsorships | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

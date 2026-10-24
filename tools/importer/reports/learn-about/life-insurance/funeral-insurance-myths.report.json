@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/funeral-insurance-myths.html",
+  "path": "learn-about/life-insurance/funeral-insurance-myths",
+  "timestamp": "2026-10-24T01:46:41.033Z",
+  "title": "Busting Funeral Insurance Myths | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/legal-liability-with-your-home-insurance.html",
+  "path": "learn-about/maintaining-a-home/legal-liability-with-your-home-insurance",
+  "timestamp": "2026-10-24T01:52:28.139Z",
+  "title": "Home Insurance & Legal Liability Cover 101 | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

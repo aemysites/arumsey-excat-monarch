@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/funeral/beneficiary.html",
+  "path": "insurance/faqs/funeral/beneficiary",
+  "timestamp": "2026-10-24T02:04:11.030Z",
+  "title": "Can I nominate a beneficiary for my policy?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/anything-defined-as-the-home.html",
+  "path": "home-contents-explained/contents/anything-defined-as-the-home",
+  "timestamp": "2026-10-24T01:21:50.727Z",
+  "title": "Anything defined as the home | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/leading-causes-of-death-australia.html",
+  "path": "learn-about/life-insurance/leading-causes-of-death-australia",
+  "timestamp": "2026-10-24T01:47:18.756Z",
+  "title": "What are The Leading Causes of Death in Australia? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

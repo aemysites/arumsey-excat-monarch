@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/when-you-need-a-power-of-attorney.html",
+  "path": "learn-about/life-insurance/when-you-need-a-power-of-attorney",
+  "timestamp": "2026-10-24T01:48:26.451Z",
+  "title": "When You Need A Power Of Attorney | Suncorp Funeral Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

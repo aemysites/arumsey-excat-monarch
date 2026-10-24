@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/how-does-optional-illness-cover-work.html",
+  "path": "insurance/faqs/life-protect/how-does-optional-illness-cover-work",
+  "timestamp": "2026-10-24T02:10:39.792Z",
+  "title": "How does Optional Illness Cover work?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

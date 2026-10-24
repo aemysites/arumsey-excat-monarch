@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/loose-or-compacted-soil-sand-lawn-artificial-grass-gravel-pebbles-or-rocks.html",
+  "path": "home-contents-explained/home/loose-or-compacted-soil-sand-lawn-artificial-grass-gravel-pebbles-or-rocks",
+  "timestamp": "2026-10-24T01:31:20.800Z",
+  "title": "Loose or compacted soil, sand, lawn, artificial grass, gravel, pebbles, or rocks | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

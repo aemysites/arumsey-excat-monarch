@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/partnerships/new-sponsorships.html",
+  "path": "about-us/partnerships/new-sponsorships",
+  "timestamp": "2026-10-24T01:20:18.660Z",
+  "title": "New Sponsorships | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "locator-search"
+  ],
+  "importScript": "cd73baba663a"
+}

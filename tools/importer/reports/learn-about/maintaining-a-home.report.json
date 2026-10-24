@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home.html",
+  "path": "learn-about/maintaining-a-home",
+  "timestamp": "2026-10-24T12:54:01.441Z",
+  "title": "Maintaining a home | Learn About | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "article-list",
+    "tag-label",
+    "columns-teaser"
+  ],
+  "importScript": "853cd45f1cf3"
+}

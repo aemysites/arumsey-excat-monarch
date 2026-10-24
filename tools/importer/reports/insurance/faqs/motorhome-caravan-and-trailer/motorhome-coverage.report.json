@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/motorhome-caravan-and-trailer/motorhome-coverage.html",
+  "path": "insurance/faqs/motorhome-caravan-and-trailer/motorhome-coverage",
+  "timestamp": "2026-10-24T02:11:13.523Z",
+  "title": "What types of motorhomes do you cover?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

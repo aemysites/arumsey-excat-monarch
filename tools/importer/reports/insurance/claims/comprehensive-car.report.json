@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/claims/comprehensive-car.html",
+  "path": "insurance/claims/comprehensive-car",
+  "timestamp": "2026-10-24T01:34:02.704Z",
+  "title": "Make an Insurance Claim Online | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "columns-links",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/claims/comprehensive-car/make-a-claim",
+    "fragments/insurance/claims/comprehensive-car/track-your-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

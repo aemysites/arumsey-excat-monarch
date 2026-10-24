@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/how-to-prevent-a-house-fire.html",
+  "path": "learn-about/maintaining-a-home/how-to-prevent-a-house-fire",
+  "timestamp": "2026-10-24T01:52:02.262Z",
+  "title": "How To Prevent Fires In Your Home | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

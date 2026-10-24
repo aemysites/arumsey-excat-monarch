@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp.html",
+  "path": "learn-about/injury-recovery-and-ctp",
+  "timestamp": "2026-10-24T01:44:58.500Z",
+  "title": "Injury Recovery & CTP | Learn About",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "article-list",
+    "tag-label",
+    "columns-teaser"
+  ],
+  "importScript": "cd73baba663a"
+}

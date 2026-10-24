@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/writing-your-will.html",
+  "path": "learn-about/life-insurance/writing-your-will",
+  "timestamp": "2026-10-24T01:48:39.137Z",
+  "title": "Writing your will | Suncorp Life Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,141 @@
+.quick-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quick-links .quick-links-label > * {
+  margin: 0;
+}
+
+.quick-links .quick-links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quick-links .quick-links-list li {
+  display: flex;
+}
+
+.quick-links .quick-links-link {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* default: bordered bar of jump links (source .sg-Menu--bar) */
+.quick-links:not(.label) .quick-links-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+}
+
+.quick-links:not(.label) .quick-links-list li {
+  flex: 0 0 auto;
+}
+
+.quick-links:not(.label) .quick-links-link {
+  padding: 15px 50px 15px 20px;
+  border-bottom: 1px solid var(--light-color);
+  background-color: var(--background-color);
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+/* label: leading "I want to:" heading with secondary pill links (source sg-Btn--secondary) */
+.quick-links.label nav {
+  gap: 0;
+}
+
+.quick-links.label .quick-links-label {
+  margin: 0 0 2.5px;
+  color: var(--heading-color);
+  font-family: var(--heading-font-family);
+  font-size: 32.256px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.quick-links.label .quick-links-label > * {
+  color: inherit;
+  font: inherit;
+}
+
+.quick-links.label .quick-links-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-links.label .quick-links-link:any-link {
+  box-sizing: border-box;
+  margin: 5px 0;
+  padding: 12px 20px;
+  border: 1px solid var(--brand-teal);
+  border-radius: var(--button-radius);
+  background-color: #fff;
+  color: var(--brand-teal);
+  font-weight: 700;
+  line-height: 1.21;
+  text-decoration: none;
+}
+
+.quick-links.label .quick-links-link:hover,
+.quick-links.label .quick-links-link:focus-visible {
+  background-color: #e6f4f2;
+  color: var(--brand-teal);
+}
+
+@media (width >= 900px) {
+  .quick-links:not(.label) .quick-links-list {
+    flex-direction: row;
+  }
+
+  .quick-links:not(.label) .quick-links-list li {
+    flex: 1 1 auto;
+  }
+
+  .quick-links:not(.label) .quick-links-link {
+    padding: 15px 50px 15px 15px;
+    border-bottom: 0;
+  }
+
+  /* source: label in a 2/12 column, four equal pills in the remaining 10/12, 16px apart */
+  .quick-links.label .quick-links-list {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    column-gap: 16px;
+  }
+
+  .quick-links.quick-links-has-label nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .quick-links.quick-links-has-label .quick-links-label {
+    flex: 0 0 auto;
+  }
+
+  .quick-links.label.quick-links-has-label nav {
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .quick-links.label.quick-links-has-label .quick-links-label {
+    flex: 0 0 calc((100% + 16px) / 6);
+    margin: 0;
+  }
+
+  .quick-links.quick-links-has-label .quick-links-list {
+    flex: 1 1 auto;
+  }
+}

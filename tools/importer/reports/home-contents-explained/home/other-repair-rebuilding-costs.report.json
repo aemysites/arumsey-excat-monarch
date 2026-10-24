@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/other-repair-rebuilding-costs.html",
+  "path": "home-contents-explained/home/other-repair-rebuilding-costs",
+  "timestamp": "2026-10-24T01:31:32.352Z",
+  "title": "Other repair/rebuilding costs | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

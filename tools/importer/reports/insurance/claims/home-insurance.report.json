@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/claims/home-insurance.html",
+  "path": "insurance/claims/home-insurance",
+  "timestamp": "2026-10-24T01:34:08.859Z",
+  "title": "Home, Contents & Landlord Insurance Claims",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-links",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "tabs-panel",
+    "columns-teaser"
+  ],
+  "fragments": [
+    "fragments/insurance/claims/home-insurance/make-a-claim",
+    "fragments/insurance/claims/home-insurance/track-your-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/boat/motor-break-down.html",
+  "path": "insurance/faqs/boat/motor-break-down",
+  "timestamp": "2026-10-24T02:01:41.849Z",
+  "title": "Will I be covered if my boat motor breaks down?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

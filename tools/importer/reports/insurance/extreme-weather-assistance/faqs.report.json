@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/faqs.html",
+  "path": "insurance/extreme-weather-assistance/faqs",
+  "timestamp": "2026-10-24T01:35:47.002Z",
+  "title": "Extreme weather event FAQs",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "cards-feature",
+    "jump-select"
+  ],
+  "importScript": "cd73baba663a"
+}

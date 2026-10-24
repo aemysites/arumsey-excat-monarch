@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/haven.html",
+  "path": "insurance/haven",
+  "timestamp": "2026-10-24T02:13:34.391Z",
+  "title": "Haven Home Resilience | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "hero-banner",
+    "embed-video",
+    "columns-media",
+    "accordion-panel",
+    "columns-teaser",
+    "quick-links"
+  ],
+  "fragments": [
+    "fragments/insurance/haven/listen-to-your-home-talk-about-its-weather-risks"
+  ],
+  "importScript": "cd73baba663a"
+}

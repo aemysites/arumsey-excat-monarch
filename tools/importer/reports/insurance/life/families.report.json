@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/families.html",
+  "path": "insurance/life/families",
+  "timestamp": "2026-10-24T02:13:42.454Z",
+  "title": "Life Insurance for Families - Get a Quote | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "embed-video",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

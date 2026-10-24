@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/what-to-do-in-a-not-at-fault-car-accident.html",
+  "path": "learn-about/my-car/what-to-do-in-a-not-at-fault-car-accident",
+  "timestamp": "2026-10-24T02:16:22.443Z",
+  "title": "What To Do After A Not At Fault Car Accident If | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

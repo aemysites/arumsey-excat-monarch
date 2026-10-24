@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/cryptocurrency-or-non-fungible-tokens-nfts.html",
+  "path": "home-contents-explained/contents/cryptocurrency-or-non-fungible-tokens-nfts",
+  "timestamp": "2026-10-24T01:22:41.554Z",
+  "title": "Cryptocurrency or non-fungible tokens (NFTs) | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

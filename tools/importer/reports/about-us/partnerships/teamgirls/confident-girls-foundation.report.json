@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/partnerships/teamgirls/confident-girls-foundation.html",
+  "path": "about-us/partnerships/teamgirls/confident-girls-foundation",
+  "timestamp": "2026-10-24T01:20:37.850Z",
+  "title": "Confident Girls Foundation Partnership | Team Girls | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

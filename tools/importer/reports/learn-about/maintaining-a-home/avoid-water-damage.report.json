@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/avoid-water-damage.html",
+  "path": "learn-about/maintaining-a-home/avoid-water-damage",
+  "timestamp": "2026-10-24T12:54:14.956Z",
+  "title": "Avoiding Water Damage at Home | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "853cd45f1cf3"
+}

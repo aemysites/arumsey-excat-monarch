@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/your-guide-to-personal-valuables-insurance.html",
+  "path": "learn-about/maintaining-a-home/your-guide-to-personal-valuables-insurance",
+  "timestamp": "2026-10-24T01:53:41.753Z",
+  "title": "Your Guide to Personal Valuables Insurance | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

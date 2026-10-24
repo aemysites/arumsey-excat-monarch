@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/car/increasing-premium.html",
+  "path": "insurance/faqs/car/increasing-premium",
+  "timestamp": "2026-10-24T02:02:09.636Z",
+  "title": "Why has my car insurance premium gone up this year?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

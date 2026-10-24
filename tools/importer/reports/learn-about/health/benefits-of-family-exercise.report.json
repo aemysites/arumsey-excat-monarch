@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/health/benefits-of-family-exercise.html",
+  "path": "learn-about/health/benefits-of-family-exercise",
+  "timestamp": "2026-10-24T01:43:52.398Z",
+  "title": "How To Exercise Together As A Family | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

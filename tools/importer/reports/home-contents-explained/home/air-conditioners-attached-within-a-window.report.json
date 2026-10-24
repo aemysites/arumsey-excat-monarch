@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/air-conditioners-attached-within-a-window.html",
+  "path": "home-contents-explained/home/air-conditioners-attached-within-a-window",
+  "timestamp": "2026-10-24T01:29:43.201Z",
+  "title": "Air conditioners attached within a window | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

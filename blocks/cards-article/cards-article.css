@@ -1,0 +1,337 @@
+/* Cards Article - structural styles only; brand styling comes from the design pass. */
+.cards-article > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 24px;
+}
+
+.cards-article .cards-article-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #dadada;
+  background-color: var(--background-color);
+}
+
+.cards-article .cards-article-card-image {
+  line-height: 0;
+}
+
+.cards-article .cards-article-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.cards-article .cards-article-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.cards-article .cards-article-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-article .cards-article-card-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.cards-article .cards-article-card-tag {
+  align-self: flex-start;
+  margin: 0 0 10px;
+  padding: 4.2336px 9.8784px;
+  background-color: var(--brand-yellow);
+  color: var(--brand-teal-dark);
+  font-size: 14.112px;
+  font-weight: 300;
+  line-height: 21.168px;
+  text-transform: uppercase;
+}
+
+/* news teaser: date + plain-paragraph title (no heading authored) */
+.cards-article .cards-article-card-date {
+  margin: 0 0 10px;
+  color: var(--brand-teal-dark);
+  font-size: 12.096px;
+  font-weight: 700;
+  line-height: 25.704px;
+  text-transform: uppercase;
+}
+
+.cards-article .cards-article-card-title {
+  margin: 0 0 40px;
+  color: var(--brand-teal-dark);
+  font-size: 24.192px;
+  font-weight: 400;
+  line-height: 36.288px;
+}
+
+.cards-article a.cards-article-card-link:any-link {
+  color: var(--brand-teal-dark);
+  font-size: 12.096px;
+  font-weight: 700;
+  line-height: 18.144px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cards-article a.cards-article-card-link:hover {
+  text-decoration: underline;
+}
+
+/* whole card is the link target */
+.cards-article a.cards-article-card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.cards-article a.cards-article-card-link:focus-visible {
+  outline: none;
+}
+
+.cards-article .cards-article-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cards-article .cards-article-card-actions > p {
+  margin: 0;
+}
+
+.cards-article .cards-article-card-actions.is-last {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+/* centered layouts */
+.cards-article.image-orange-light .cards-article-card-body,
+.cards-article.image-cyan-orange-light .cards-article-card-body,
+.cards-article.offers .cards-article-card-icon,
+.cards-article.offers .cards-article-card-tag {
+  align-items: center;
+  text-align: center;
+}
+
+.cards-article.image-orange-light .cards-article-card-actions,
+.cards-article.image-cyan-orange-light .cards-article-card-actions {
+  justify-content: center;
+}
+
+.cards-article.offers .cards-article-card-tag {
+  align-self: center;
+}
+
+/* accent top bar */
+.cards-article.image-orange-light .cards-article-card,
+.cards-article.image-cyan-orange-light .cards-article-card,
+.cards-article.plan .cards-article-card-image,
+.cards-article.offers .cards-article-card {
+  border-top: 4px solid currentcolor;
+}
+
+/* orange-shadow: news cards, 3-up from tablet, rounded raised cards */
+.cards-article.orange-shadow > ul {
+  grid-template-columns: 1fr;
+  gap: 10px 16px;
+}
+
+.cards-article.orange-shadow .cards-article-card {
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 50%);
+}
+
+.cards-article.orange-shadow .cards-article-card-image img {
+  aspect-ratio: auto;
+}
+
+.cards-article.orange-shadow .cards-article-card-body {
+  padding: 15px 15px 5px;
+}
+
+.cards-article.orange-shadow .cards-article-card-actions.is-last {
+  padding-top: 20px;
+}
+
+.cards-article.orange-shadow .cards-article-card-actions > p {
+  margin: 0 0 10px;
+  line-height: 25.704px;
+}
+
+@media (width >= 600px) {
+  .cards-article.orange-shadow > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-article.orange-shadow > ul:has(> li:last-child:nth-child(2)) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* raised cards */
+.cards-article.cta-panel .cards-article-card,
+.cards-article.offers .cards-article-card {
+  box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+}
+
+/* offers: icon badge straddles the top bar */
+.cards-article.offers .cards-article-card-icon {
+  margin-top: -52px;
+}
+
+.cards-article.offers > ul {
+  padding-top: 28px;
+}
+
+/* cta-panel: full-width stacked buttons */
+.cards-article.cta-panel .cards-article-card-actions {
+  flex-direction: column;
+}
+
+.cards-article.cta-panel .cards-article-card-actions .button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* location: heading band above details */
+.cards-article.location .cards-article-card-body {
+  padding: 0;
+}
+
+.cards-article.location .cards-article-card-body > :not(h1, h2, h3, h4, h5, h6) {
+  margin-inline: 16px;
+}
+
+.cards-article.location .cards-article-card-body > :is(h1, h2, h3, h4, h5, h6):first-of-type {
+  margin: 0 0 16px;
+  padding: 24px 16px;
+  border-bottom: 1px solid #dadada;
+  text-align: center;
+}
+
+/* cyan-image: feature teasers, icon badge straddling a teal top bar, 3-up on desktop */
+.cards-article.cyan-image > ul {
+  grid-template-columns: 1fr;
+  gap: 40px 24px;
+  padding-top: 25px;
+}
+
+.cards-article.cyan-image .cards-article-card {
+  border: 0;
+  border-top: 5px solid var(--brand-teal);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+  text-align: left;
+}
+
+.cards-article.cyan-image .cards-article-card-body {
+  padding: 20px;
+  color: var(--text-color);
+  font-size: 17.136px;
+  line-height: 25.704px;
+}
+
+.cards-article.cyan-image .cards-article-card-body > p {
+  margin: 0 0 10px;
+}
+
+.cards-article.cyan-image .cards-article-card-body > p.cards-article-card-icon {
+  margin: -50px 0 0;
+  line-height: 0;
+  text-align: center;
+}
+
+.cards-article.cyan-image .cards-article-card-icon .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #cce8e6;
+}
+
+.cards-article.cyan-image .cards-article-card-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.cards-article.cyan-image .cards-article-card-body > p.cards-article-card-tag {
+  align-self: center;
+  margin: 20px 0 0;
+  background-color: var(--brand-teal);
+  color: #fff;
+  text-align: center;
+}
+
+.cards-article.cyan-image .cards-article-card-body > p.cards-article-card-tag:first-child {
+  margin-top: 26px;
+}
+
+.cards-article.cyan-image .cards-article-card-body > p.cards-article-card-heading {
+  margin: 20px 0;
+  color: var(--brand-teal-dark);
+  font-size: 22.176px;
+  font-weight: 700;
+  line-height: 26.6112px;
+}
+
+.cards-article.cyan-image .cards-article-card-actions,
+.cards-article.cyan-image .cards-article-card-actions.is-last {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.cards-article.cyan-image .cards-article-card-actions a:any-link {
+  position: relative;
+  padding: 0 1.7136px 0 20.5632px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.cards-article.cyan-image .cards-article-card-actions a:any-link:hover {
+  text-decoration: underline;
+}
+
+.cards-article.cyan-image .cards-article-card-actions a:any-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid var(--brand-teal-dark);
+  border-right: 1px solid var(--brand-teal-dark);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* small-print footnote after the links */
+.cards-article.cyan-image .cards-article-card-actions ~ p {
+  margin: 20px 0 0;
+  font-size: 13.104px;
+  line-height: 19.656px;
+}
+
+@media (width >= 900px) {
+  .cards-article.cyan-image > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* keyboard focus ring for whole-card links */
+.cards-article .cards-article-card:has(a.cards-article-card-link:focus-visible) {
+  outline: 2px solid var(--brand-teal);
+  outline-offset: 2px;
+}

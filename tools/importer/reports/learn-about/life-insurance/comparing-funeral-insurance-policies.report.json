@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/comparing-funeral-insurance-policies.html",
+  "path": "learn-about/life-insurance/comparing-funeral-insurance-policies",
+  "timestamp": "2026-10-24T01:46:19.647Z",
+  "title": "Comparing Funeral Insurance Policies | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

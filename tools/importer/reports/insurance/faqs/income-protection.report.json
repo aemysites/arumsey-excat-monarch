@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection.html",
+  "path": "insurance/faqs/income-protection",
+  "timestamp": "2026-10-24T01:36:41.513Z",
+  "title": "FAQs | Common Income Protection Insurance Questions | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "search-faq"
+  ],
+  "importScript": "cd73baba663a"
+}

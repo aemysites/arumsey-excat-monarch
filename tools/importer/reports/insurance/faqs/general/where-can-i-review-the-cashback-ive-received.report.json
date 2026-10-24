@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/where-can-i-review-the-cashback-ive-received.html",
+  "path": "insurance/faqs/general/where-can-i-review-the-cashback-ive-received",
+  "timestamp": "2026-10-24T02:07:49.154Z",
+  "title": "Where can I review the cashback I’ve received? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

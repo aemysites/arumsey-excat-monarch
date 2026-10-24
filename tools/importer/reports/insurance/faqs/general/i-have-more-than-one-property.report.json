@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/i-have-more-than-one-property.html",
+  "path": "insurance/faqs/general/i-have-more-than-one-property",
+  "timestamp": "2026-10-24T02:06:31.453Z",
+  "title": "I have more than one property - can I record my tasks for each property? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

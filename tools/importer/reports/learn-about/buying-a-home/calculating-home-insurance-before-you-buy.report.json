@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/buying-a-home/calculating-home-insurance-before-you-buy.html",
+  "path": "learn-about/buying-a-home/calculating-home-insurance-before-you-buy",
+  "timestamp": "2026-10-24T01:43:22.559Z",
+  "title": "Calculating Home Insurance Before You Buy | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

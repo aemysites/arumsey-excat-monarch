@@ -1,0 +1,22 @@
+{
+  "variantName": "reviews-list",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "",
+    "purpose": "authored replacement for a third-party reviews widget: overall rating, star distribution and individual reviews"
+  },
+  "contentPattern": {
+    "structure": "summary rows (heading/text, score cell such as \"4.3\", review-count link); distribution rows [5 stars] [1110]; review rows [rating number] [title heading, author/date, review text] [details (optional)]. A cell holding only a /fragments/ link loads that fragment"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_c3ffc3d2e658"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use where the source embeds a reviews widget; author a curated list or load reviews from a fragment."
+}

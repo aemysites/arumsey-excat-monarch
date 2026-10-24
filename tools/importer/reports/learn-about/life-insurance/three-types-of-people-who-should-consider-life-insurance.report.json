@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/three-types-of-people-who-should-consider-life-insurance.html",
+  "path": "learn-about/life-insurance/three-types-of-people-who-should-consider-life-insurance",
+  "timestamp": "2026-10-24T01:47:53.743Z",
+  "title": "3 people who should consider Life Insurance | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

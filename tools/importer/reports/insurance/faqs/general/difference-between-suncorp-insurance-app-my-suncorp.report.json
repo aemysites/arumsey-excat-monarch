@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/difference-between-suncorp-insurance-app-my-suncorp.html",
+  "path": "insurance/faqs/general/difference-between-suncorp-insurance-app-my-suncorp",
+  "timestamp": "2026-10-24T02:05:05.835Z",
+  "title": "What’s the difference between using the Suncorp Insurance App, and logging into My Suncorp? Which should I use? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

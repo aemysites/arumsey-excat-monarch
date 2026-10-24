@@ -143,11 +143,43 @@ function decorateButtons(main) {
 }
 
 /**
+ * Turns :icon-name: tokens left as plain text into icon spans (the EDS pipeline does this for
+ * authored documents; imported plain HTML can still carry the raw tokens).
+ * @param {Element} main The main element
+ */
+function wrapIconTokens(main) {
+  // names start with a letter and tokens don't touch digits, so times like 8:00am-6:00pm stay text
+  const TOKEN = /(?<!\d):([a-z][a-z0-9]*(?:-[a-z0-9]+)*):(?!\d)/g;
+  const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    TOKEN.lastIndex = 0;
+    if (TOKEN.test(node.nodeValue) && !node.parentElement.closest('code, pre')) nodes.push(node);
+  }
+  nodes.forEach((node) => {
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    node.nodeValue.replace(TOKEN, (match, name, offset) => {
+      frag.append(node.nodeValue.slice(last, offset));
+      const span = document.createElement('span');
+      span.className = `icon icon-${name}`;
+      frag.append(span);
+      last = offset + match.length;
+      return match;
+    });
+    frag.append(node.nodeValue.slice(last));
+    node.replaceWith(frag);
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
+  wrapIconTokens(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);

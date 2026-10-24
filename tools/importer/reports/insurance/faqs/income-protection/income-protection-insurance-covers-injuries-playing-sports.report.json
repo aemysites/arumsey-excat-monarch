@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/income-protection-insurance-covers-injuries-playing-sports.html",
+  "path": "insurance/faqs/income-protection/income-protection-insurance-covers-injuries-playing-sports",
+  "timestamp": "2026-10-24T02:09:52.725Z",
+  "title": "Does my income protection insurance cover injuries sustained while playing sports like football?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

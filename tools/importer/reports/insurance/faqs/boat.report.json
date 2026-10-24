@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/boat.html",
+  "path": "insurance/faqs/boat",
+  "timestamp": "2026-10-24T01:36:22.051Z",
+  "title": "Boat Insurance FAQs | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

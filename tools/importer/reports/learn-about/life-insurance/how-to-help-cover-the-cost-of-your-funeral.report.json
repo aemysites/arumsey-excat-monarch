@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/how-to-help-cover-the-cost-of-your-funeral.html",
+  "path": "learn-about/life-insurance/how-to-help-cover-the-cost-of-your-funeral",
+  "timestamp": "2026-10-24T01:46:55.545Z",
+  "title": "How much does a funeral cost in Australia? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

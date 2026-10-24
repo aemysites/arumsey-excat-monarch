@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/netballandsocialmedia.html",
+  "path": "learn-about/teamgirls/netballandsocialmedia",
+  "timestamp": "2026-10-24T01:59:39.438Z",
+  "title": "Team Girls and Social Media | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

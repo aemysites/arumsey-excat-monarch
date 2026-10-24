@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/legal/online-terms.html",
+  "path": "about-us/legal/online-terms",
+  "timestamp": "2026-10-24T01:20:00.289Z",
+  "title": "Online Terms and Conditions | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title"
+  ],
+  "importScript": "cd73baba663a"
+}

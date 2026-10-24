@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/fire-including-bushfire.html",
+  "path": "home-contents-explained/events/fire-including-bushfire",
+  "timestamp": "2026-10-24T01:26:45.409Z",
+  "title": "Fire (including Bushfire) | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

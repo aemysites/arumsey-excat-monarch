@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/car/hire-car.html",
+  "path": "insurance/faqs/car/hire-car",
+  "timestamp": "2026-10-24T02:01:59.098Z",
+  "title": "Do I get a hire car in the event of a claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

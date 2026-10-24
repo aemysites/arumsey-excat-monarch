@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/boat/boat-options.html",
+  "path": "insurance/faqs/boat/boat-options",
+  "timestamp": "2026-10-24T02:01:34.259Z",
+  "title": "What options do you offer as part of Suncorp comprehensive boat insurance cover?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

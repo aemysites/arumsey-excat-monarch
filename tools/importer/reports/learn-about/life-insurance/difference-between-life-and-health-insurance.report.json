@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/difference-between-life-and-health-insurance.html",
+  "path": "learn-about/life-insurance/difference-between-life-and-health-insurance",
+  "timestamp": "2026-10-24T01:46:23.104Z",
+  "title": "Difference Between Life And Health Insurance | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

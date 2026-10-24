@@ -1,0 +1,327 @@
+/* Cards Product - values from suncorp.com.au/home-c.html #insurance-statement */
+.cards-product > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 3px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 40px 24px;
+}
+
+.cards-product .cards-product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--brand-teal);
+  background-color: var(--background-color);
+}
+
+.cards-product .cards-product-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 15px 15px 20px;
+}
+
+.cards-product .cards-product-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-product .cards-product-card-body p {
+  margin: 0 0 10px;
+}
+
+/* centered heading and offer */
+.cards-product .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) {
+  margin: 20px 0 2.5px;
+  color: var(--brand-teal);
+  font-size: 30.24px;
+  font-weight: 700;
+  line-height: 38.7072px;
+  text-align: center;
+}
+
+.cards-product .cards-product-card-body > .cards-product-card-offer {
+  font-size: 18.144px;
+  font-weight: 700;
+  line-height: 27.216px;
+  text-align: center;
+}
+
+.cards-product .cards-product-card-body > .cards-product-card-icon {
+  align-self: center;
+  margin: -55px 0 5px;
+  line-height: 0;
+}
+
+.cards-product .cards-product-card-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.cards-product > ul:has(.cards-product-card-icon) {
+  padding-top: 51px;
+}
+
+.cards-product .cards-product-card-tag {
+  align-self: center;
+  padding: 4px 10px;
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+}
+
+.cards-product .cards-product-check-list,
+.cards-product .cards-product-icon-list {
+  list-style: none;
+
+  /* flex items: margins do not collapse; source gap is 17.136px around the list */
+  margin: 2.136px 0 12.136px;
+  padding: 0;
+}
+
+.cards-product .cards-product-check-list > li {
+  position: relative;
+  margin: 5px;
+  padding-left: 21px;
+}
+
+/* thin teal tick (source: 16px Icon-tick.svg at 0 3px) */
+.cards-product .cards-product-check-list > li::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--brand-teal);
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.cards-product .cards-product-check-list sup {
+  font-size: 12.852px;
+  line-height: 0;
+}
+
+/* rating row: review logo beside the star meter */
+.cards-product .cards-product-card-rating {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 20px;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.cards-product .cards-product-card-rating > p {
+  margin: 0;
+}
+
+.cards-product .cards-product-card-rating-logo {
+  line-height: 0;
+}
+
+.cards-product .cards-product-card-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cards-product .cards-product-stars-meter {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.cards-product .cards-product-stars-meter img {
+  display: block;
+  width: 114px;
+  max-width: none;
+  height: 16px;
+}
+
+.cards-product .cards-product-stars-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  overflow: hidden;
+}
+
+.cards-product .cards-product-card-rating-link {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.cards-product .cards-product-card-actions > p {
+  margin: 0;
+}
+
+.cards-product .cards-product-card-actions,
+.cards-product .cards-product-card-actions > p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px 15px;
+}
+
+.cards-product .cards-product-card-actions.is-last {
+  margin-top: auto;
+  padding-top: 49px;
+}
+
+.cards-product .cards-product-card-rating ~ .cards-product-card-actions.is-last {
+  margin-top: 0;
+}
+
+main .cards-product .cards-product-card-actions a.button:any-link {
+  width: 214.2px;
+  max-width: 100%;
+  line-height: 20.7346px;
+}
+
+.cards-product .cards-product-icon-list > li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cards-product .cards-product-icon-list > li > p {
+  margin: 0;
+}
+
+.cards-product .cards-product-icon-list img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+@media (width >= 900px) {
+  .cards-product > ul {
+    padding-inline: 12px;
+  }
+}
+
+/* shadow: raised card, left-aligned headings */
+.cards-product.shadow .cards-product-card {
+  border-color: #dadada;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+}
+
+.cards-product.shadow .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) {
+  text-align: start;
+}
+
+main .cards-product.shadow .cards-product-card-actions a.button:any-link,
+main .cards-product.compare .cards-product-card-actions a.button:any-link {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cards-product.shadow .cards-product-card-actions > p,
+.cards-product.compare .cards-product-card-actions > p {
+  flex: 1 1 100%;
+}
+
+/* compare: icon above a left-aligned title, no badge overlap */
+.cards-product.compare .cards-product-card-body > .cards-product-card-icon {
+  align-self: flex-start;
+  margin: 0 0 8px;
+}
+
+.cards-product.compare .cards-product-card-icon img {
+  border-radius: 0;
+}
+
+.cards-product.compare > ul:has(.cards-product-card-icon) {
+  padding-top: 0;
+}
+
+.cards-product.compare .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) {
+  text-align: start;
+}
+
+/* icon tokens (:name:) render as span.icon inside the badge */
+.cards-product .cards-product-card-icon .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 72px;
+  height: 72px;
+  padding: 14px;
+  border-radius: 50%;
+  background-color: #cceae7;
+}
+
+.cards-product .cards-product-card-icon .icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.cards-product.light .cards-product-card-tag,
+.cards-product.grey-light .cards-product-card-tag {
+  margin: 0 0 10px;
+  background-color: var(--light-color);
+}
+
+.cards-product.light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) a,
+.cards-product.grey-light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* second heading is the offer, drawn between rules */
+.cards-product.light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6),
+.cards-product.grey-light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  color: var(--heading-color);
+}
+
+.cards-product.light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6)::before,
+.cards-product.light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6)::after,
+.cards-product.grey-light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6)::before,
+.cards-product.grey-light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6)::after {
+  content: '';
+  flex: 1;
+  border-top: 2px solid var(--heading-color);
+}
+
+.cards-product.light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) + p,
+.cards-product.grey-light .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) + p {
+  color: var(--heading-color);
+  text-align: center;
+}
+
+/* plain: a default-look card with no icon badge (product pages' "Why choose ..." tick list)
+   is unboxed in the source: no border, centered heading in the heading color */
+.cards-product:not(.light, .grey-light, .shadow, .compare) .cards-product-card:not(:has(.cards-product-card-icon)) {
+  border: 0;
+}
+
+.cards-product:not(.light, .grey-light, .shadow, .compare) .cards-product-card:not(:has(.cards-product-card-icon)) .cards-product-card-body {
+  padding: 20px 0;
+}
+
+.cards-product:not(.light, .grey-light, .shadow, .compare) .cards-product-card:not(:has(.cards-product-card-icon)) .cards-product-card-body > :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 40px;
+  color: var(--heading-color);
+  font-size: 38.304px;
+  line-height: 45.9648px;
+}
+
+.cards-product:not(.light, .grey-light, .shadow, .compare) .cards-product-card:not(:has(.cards-product-card-icon)) .cards-product-check-list {
+  margin: 17.136px 0;
+}
+
+@media (width >= 900px) {
+  .cards-product:not(.light, .grey-light, .shadow, .compare) .cards-product-card:not(:has(.cards-product-card-icon)) .cards-product-card-body {
+    padding: 40px 0;
+  }
+}

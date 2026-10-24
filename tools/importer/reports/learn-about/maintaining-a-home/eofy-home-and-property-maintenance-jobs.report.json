@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/eofy-home-and-property-maintenance-jobs.html",
+  "path": "learn-about/maintaining-a-home/eofy-home-and-property-maintenance-jobs",
+  "timestamp": "2026-10-24T01:51:05.631Z",
+  "title": "Property Investors: Completing Repairs By EOFY | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

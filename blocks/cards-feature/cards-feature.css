@@ -1,0 +1,612 @@
+/* cards-feature: values measured from www.suncorp.com.au computed styles
+   (migration-work/cards-feature-*-extracted.css, cards-feature-source-styles-*.json) */
+.cards-feature {
+  position: relative;
+}
+
+.cards-feature > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px 24px;
+}
+
+/* intro row (block heading) */
+.cards-feature .cards-feature-intro {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cards-feature .cards-feature-intro :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0;
+}
+
+/* card: centred icon card (default, persona, light) */
+.cards-feature .cards-feature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.cards-feature:not([class*="icon-left"], .boxed, .steps, .grey, .shadow, .link-tiles) .cards-feature-card {
+  align-items: center;
+  text-align: center;
+}
+
+.cards-feature .cards-feature-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.cards-feature .cards-feature-card-body :is(h2, h3, h4, h5, h6) {
+  margin: 10px 0;
+  font-size: 26.208px;
+  line-height: 1.2;
+}
+
+.cards-feature .cards-feature-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-feature .cards-feature-card-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* push trailing CTA paragraphs to the bottom of equal-height cards */
+.cards-feature :where(.cards-feature-card-body > p:last-child:has(> a:only-child, > strong > a:only-child, > em > a:only-child)) {
+  margin-top: auto;
+}
+
+/* media: source icons are 72px (Icon--xxxlarge) with 10px below */
+.cards-feature .cards-feature-card-image {
+  line-height: 0;
+  margin-bottom: 10px;
+}
+
+.cards-feature .cards-feature-card-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cards-feature .cards-feature-card-image img[src$=".svg"],
+.cards-feature .cards-feature-card-image .icon {
+  width: auto;
+  height: 72px;
+}
+
+.cards-feature .cards-feature-card-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 10px;
+}
+
+.cards-feature .cards-feature-card-video iframe,
+.cards-feature .cards-feature-card-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* whole-card links */
+.cards-feature .cards-feature-card-linked a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* ---- link-tiles: white tile, 3px teal top rule, small outline CTA ---- */
+.cards-feature.link-tiles > ul {
+  gap: 15px 16px;
+}
+
+.cards-feature.link-tiles .cards-feature-intro {
+  text-align: left;
+}
+
+.cards-feature.link-tiles .cards-feature-card {
+  padding: 15px 15px 5px;
+  border-top: 3px solid var(--brand-teal);
+  background-color: #fff;
+  box-shadow: var(--button-shadow);
+  text-align: left;
+}
+
+.cards-feature.link-tiles .cards-feature-card-body > :where(p:first-child) {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.cards-feature.link-tiles .cards-feature-card-body > :where(p.button-wrapper:last-child) {
+  margin: auto 0 20px;
+  padding-top: 30px;
+}
+
+main .cards-feature.link-tiles a.button:any-link {
+  display: flex;
+  width: 100%;
+  padding: 4px 12px;
+  font-size: 14.5656px;
+  line-height: 1.5;
+}
+
+/* ---- shadow-image: rounded link tile, icon over bold teal label ---- */
+.cards-feature.shadow-image > ul {
+  gap: 10px 16px;
+}
+
+.cards-feature.shadow-image .cards-feature-card {
+  padding: 14px 4px 6px;
+  border: 1px solid #c6c6b4;
+  border-radius: var(--button-radius);
+  background-color: #fff;
+  box-shadow: var(--button-shadow);
+}
+
+.cards-feature.shadow-image .cards-feature-card-image img[src$=".svg"],
+.cards-feature.shadow-image .cards-feature-card-image .icon {
+  height: 40px;
+}
+
+.cards-feature.shadow-image .cards-feature-card-body > p {
+  margin: 10px 0;
+  font-weight: 700;
+  line-height: 1.21;
+}
+
+main .cards-feature.shadow-image a.button:any-link,
+main .cards-feature.shadow-image .cards-feature-card-body a:any-link {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--heading-color);
+  font-weight: 700;
+  line-height: 1.21;
+  text-decoration: none;
+  white-space: normal;
+}
+
+main .cards-feature.shadow-image a:any-link:hover {
+  text-decoration: underline;
+}
+
+/* ---- shadow: white panel, 8px teal top rule, heading above logo ---- */
+.cards-feature.shadow > ul {
+  gap: 20px 16px;
+}
+
+.cards-feature.shadow .cards-feature-card {
+  padding: 15px 15px 5px;
+  border-top: 8px solid var(--brand-teal);
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 50%);
+  text-align: left;
+}
+
+.cards-feature.shadow .cards-feature-card-body {
+  display: contents;
+}
+
+.cards-feature.shadow .cards-feature-card-body > :is(h2, h3, h4, h5, h6):first-child {
+  order: -1;
+  margin: 10px 0 0;
+}
+
+.cards-feature.shadow .cards-feature-card-image {
+  margin: 0;
+  padding: 15px 15px 5px;
+}
+
+/* ---- grey-light: transparent cards on a grey section, black headings, outline CTAs ---- */
+.cards-feature.grey-light > ul {
+  gap: 0 24px;
+}
+
+.cards-feature.grey-light .cards-feature-card {
+  padding: 0;
+}
+
+.cards-feature.grey-light .cards-feature-card-body :is(h2, h3, h4, h5, h6) {
+  margin: 10px 0 0;
+  color: #000;
+}
+
+.cards-feature.grey-light .cards-feature-card-body > p {
+  margin: 20px 0 0;
+}
+
+.cards-feature.grey-light .cards-feature-card-body > p + p {
+  margin-top: 10px;
+}
+
+.cards-feature.grey-light .cards-feature-card-body > p.button-wrapper {
+  margin: 5px 0;
+}
+
+main .cards-feature.grey-light a.button:any-link {
+  width: 300px;
+}
+
+/* ---- grey: stone panels, teal "Step" headings ---- */
+.cards-feature.grey .cards-feature-card {
+  border: 1px solid #dcdcd1;
+  background-color: var(--light-color);
+  text-align: left;
+}
+
+.cards-feature.grey .cards-feature-card-body > h3 {
+  margin: 0;
+  color: var(--brand-teal);
+  font-size: 32.256px;
+}
+
+.cards-feature.grey .cards-feature-card-body > h4 {
+  margin: 20px 0 2.5px;
+}
+
+/* ---- cyan: white bordered panels, bold lead line, small text ---- */
+.cards-feature.cyan > ul {
+  gap: 0 18px;
+}
+
+.cards-feature.cyan .cards-feature-card {
+  border: 1px solid #c6c6b4;
+  background-color: #fff;
+}
+
+.cards-feature.cyan .cards-feature-card-body > p:first-child {
+  margin: 10px 0;
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+.cards-feature.cyan .cards-feature-card-body > p:nth-child(2) {
+  font-size: var(--body-font-size-s);
+  line-height: 1.4;
+}
+
+/* app-store badges: 36px tall, side by side */
+main .cards-feature.cyan .cards-feature-card-body a:any-link:has(> picture) {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.cards-feature.cyan :where(.cards-feature-card-body a > picture > img) {
+  width: auto;
+  height: 36px;
+}
+
+.cards-feature.cyan .cards-feature-card-image img[src$=".svg"],
+.cards-feature.cyan .cards-feature-card-image .icon {
+  height: 56px;
+}
+
+/* ---- unmigrated shell options: shared white bordered card ---- */
+.cards-feature.boxed .cards-feature-card,
+.cards-feature.grey-image .cards-feature-card,
+.cards-feature.cyan-2 .cards-feature-card,
+.cards-feature.cyan-grey .cards-feature-card,
+.cards-feature.partner .cards-feature-card,
+.cards-feature.steps .cards-feature-card,
+.cards-feature[class*="icon-left"] .cards-feature-card {
+  border: 1px solid #c6c6b4;
+  background-color: #fff;
+}
+
+.cards-feature.light .cards-feature-card-body :is(h2, h3, h4, h5, h6) {
+  font-size: var(--body-font-size-m);
+}
+
+/* icon-left family: icon beside the card title */
+.cards-feature .cards-feature-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cards-feature .cards-feature-card-title > .cards-feature-card-image {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.cards-feature .cards-feature-card-title > :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+}
+
+.cards-feature.icon-left-download .cards-feature-card {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+/* photo background behind the card group */
+.cards-feature.icon-left-photo-background {
+  padding: 40px 24px;
+}
+
+.cards-feature .cards-feature-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.cards-feature .cards-feature-background picture,
+.cards-feature .cards-feature-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* steps: numbered badge */
+.cards-feature .cards-feature-card-step {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border: 4px solid var(--brand-teal);
+  border-radius: 50%;
+  color: var(--brand-teal);
+  line-height: 1;
+}
+
+.cards-feature .cards-feature-card-step strong {
+  font-size: 2.5em;
+}
+
+/* partner: expandable tiles */
+.cards-feature.partner > ul {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
+}
+
+.cards-feature.partner .cards-feature-card {
+  padding: 12px 16px;
+}
+
+.cards-feature .cards-feature-card-toggle {
+  all: unset;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cards-feature .cards-feature-card-toggle:focus-visible {
+  outline: 2px solid rgb(255 205 5 / 30%);
+  outline-offset: 2px;
+}
+
+.cards-feature .cards-feature-card-panel[hidden] {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .cards-feature.shadow-image > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-feature.cyan {
+    max-width: 896px;
+    margin: 20px auto;
+  }
+
+  .cards-feature.icon-left-compact > ul,
+  .cards-feature.icon-left > ul {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+/* icon-font glyphs imported as :name: icons sit above the card heading at the source's size */
+/* stylelint-disable-next-line no-descending-specificity -- text-cell icons, not image-cell icons */
+.cards-feature .cards-feature-card-body .icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 10px;
+}
+
+/* stylelint-disable no-descending-specificity -- shape rules below style other elements than the option rules above */
+
+/* ---- default (no option): source Flextable icon cards, Icon--xxxlarge 72px ---- */
+.cards-feature .cards-feature-default .cards-feature-card-icon {
+  margin: 0;
+  line-height: 0;
+}
+
+.cards-feature .cards-feature-default .cards-feature-card-body .icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+}
+
+.cards-feature .cards-feature-default .cards-feature-card-icon + p {
+  margin-top: 10px;
+}
+
+.cards-feature .cards-feature-default .cards-feature-card-body > h3 {
+  font-size: 32.256px;
+}
+
+/* CTAs: sg-u-widthMedium pills (257.04px), 5px above/below */
+.cards-feature .cards-feature-default .cards-feature-card-body > p.button-wrapper {
+  margin: 5px 0;
+}
+
+main .cards-feature .cards-feature-default a.button:any-link {
+  width: 257.04px;
+}
+
+/* ---- tiles: every card is one link (weather events) ---- */
+.cards-feature > ul.cards-feature-tiles {
+  gap: 20px 23.1875px;
+}
+
+.cards-feature .cards-feature-tiles .cards-feature-card-tile {
+  padding: 15px;
+  border: 1px solid #b6b3a7;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.cards-feature .cards-feature-tiles .cards-feature-card-body .icon {
+  width: 32px;
+  height: 32px;
+}
+
+.cards-feature .cards-feature-tiles .cards-feature-card-icon + p {
+  margin: 0;
+}
+
+main .cards-feature .cards-feature-tiles .cards-feature-card-tile a:any-link {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+main .cards-feature .cards-feature-tiles .cards-feature-card-tile a:any-link:hover {
+  text-decoration: underline;
+}
+
+/* ---- sequence: claim steps on a white panel ---- */
+.cards-feature:has(> .cards-feature-sequence) {
+  padding: 15px 15px 5px;
+  background-color: #fff;
+}
+
+.cards-feature > ul.cards-feature-sequence {
+  gap: 10px;
+}
+
+.cards-feature .cards-feature-intro + ul.cards-feature-sequence {
+  margin-top: 40px;
+}
+
+.cards-feature .cards-feature-sequence .cards-feature-card {
+  padding: 15px 15px 5px;
+  background-color: #fff;
+}
+
+.cards-feature .cards-feature-sequence .cards-feature-card-icon + p {
+  font-weight: 700;
+}
+
+/* ---- product: circle icon badge, grey eyebrow pill, struck offer heading, 300px CTAs ---- */
+.cards-feature .cards-feature-default > .cards-feature-card-product {
+  width: 100%;
+  max-width: 812px;
+  margin-inline: auto;
+  padding: 15px 15px 5px;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product > .cards-feature-card-image {
+  margin-bottom: 5px;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product > .cards-feature-card-image p {
+  margin: 0;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product > .cards-feature-card-image .icon {
+  box-sizing: border-box;
+  width: 72px;
+  height: 72px;
+  padding: 14px;
+  border-radius: 50%;
+  background-color: #cce8e6;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product > .cards-feature-card-body {
+  display: block;
+  text-align: center;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product .cards-feature-card-body > .cards-feature-card-eyebrow {
+  display: table;
+  margin: 20px auto 10px;
+  padding: 4.2336px 9.8784px;
+  background-color: var(--light-color);
+  font-size: 14.112px;
+  font-weight: 300;
+  line-height: 21.168px;
+  text-transform: uppercase;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product .cards-feature-card-body > h2 {
+  margin: 20px 0 10px;
+  color: var(--brand-teal);
+  font-size: 34.272px;
+  line-height: 45.9648px;
+}
+
+main .cards-feature .cards-feature-default > .cards-feature-card-product h2 a:any-link {
+  color: var(--brand-teal);
+  text-decoration: none;
+}
+
+main .cards-feature .cards-feature-default > .cards-feature-card-product h2 a:any-link:hover {
+  text-decoration: underline;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product .cards-feature-card-body > h3 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 20px 0 2.5px;
+  font-size: 32.256px;
+  line-height: 38.7072px;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product .cards-feature-card-body > h3::before,
+.cards-feature .cards-feature-default > .cards-feature-card-product .cards-feature-card-body > h3::after {
+  content: "";
+  flex: 1 1 0;
+  border-top: 2px solid currentcolor;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product .cards-feature-card-body > h3 + p {
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product .cards-feature-card-body > p.button-wrapper {
+  display: inline-block;
+  margin: 15px 5px 5px;
+}
+
+main .cards-feature .cards-feature-default > .cards-feature-card-product a.button:any-link {
+  width: 299.88px;
+}
+
+.cards-feature .cards-feature-default > .cards-feature-card-product .cards-feature-card-body > p.button-wrapper + p:not(.button-wrapper) {
+  margin: 10px 0 20px;
+  font-size: 14.112px;
+  line-height: 21.168px;
+}
+
+@media (width >= 900px) {
+  .cards-feature .cards-feature-tiles .cards-feature-card-body .icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .cards-feature > ul:is(.cards-feature-tiles, .cards-feature-sequence) {
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+  }
+}
+
+/* stylelint-enable no-descending-specificity */

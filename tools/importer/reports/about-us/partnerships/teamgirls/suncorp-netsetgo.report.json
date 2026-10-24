@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/partnerships/teamgirls/suncorp-netsetgo.html",
+  "path": "about-us/partnerships/teamgirls/suncorp-netsetgo",
+  "timestamp": "2026-10-24T02:13:25.963Z",
+  "title": "NetSetGO Partnership | Team Girls | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "embed-video"
+  ],
+  "importScript": "cd73baba663a"
+}

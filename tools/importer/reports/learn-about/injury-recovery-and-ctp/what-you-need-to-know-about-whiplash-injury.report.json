@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/what-you-need-to-know-about-whiplash-injury.html",
+  "path": "learn-about/injury-recovery-and-ctp/what-you-need-to-know-about-whiplash-injury",
+  "timestamp": "2026-10-24T01:45:45.740Z",
+  "title": "What You Need To Know About Whiplash | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

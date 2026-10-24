@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/safety-with-lithium-ion-batteries.html",
+  "path": "insurance/extreme-weather-assistance/safety-with-lithium-ion-batteries",
+  "timestamp": "2026-10-24T01:36:09.648Z",
+  "title": "Staying Safe With Household Lithium-Ion Batteries | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "columns-media",
+    "columns-media",
+    "columns-media",
+    "tag-label",
+    "tag-label",
+    "accordion-panel",
+    "cards-checklist"
+  ],
+  "importScript": "cd73baba663a"
+}

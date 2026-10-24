@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/mortgage-discharge-costs.html",
+  "path": "home-contents-explained/home/mortgage-discharge-costs",
+  "timestamp": "2026-10-24T01:31:26.691Z",
+  "title": "Mortgage discharge costs | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

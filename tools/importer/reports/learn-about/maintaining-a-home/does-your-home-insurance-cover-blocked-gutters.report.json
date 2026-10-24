@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/does-your-home-insurance-cover-blocked-gutters.html",
+  "path": "learn-about/maintaining-a-home/does-your-home-insurance-cover-blocked-gutters",
+  "timestamp": "2026-10-24T01:50:58.440Z",
+  "title": "Home Insurance: Am I Covered For Blocked Gutters? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

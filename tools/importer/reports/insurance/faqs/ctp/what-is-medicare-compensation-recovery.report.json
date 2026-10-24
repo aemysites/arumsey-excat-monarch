@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-is-medicare-compensation-recovery.html",
+  "path": "insurance/faqs/ctp/what-is-medicare-compensation-recovery",
+  "timestamp": "2026-10-24T02:03:51.127Z",
+  "title": "What is Medicare Compensation Recovery?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/life-drills.html",
+  "path": "learn-about/teamgirls/life-drills",
+  "timestamp": "2026-10-24T02:15:32.295Z",
+  "title": "Life Drills | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video"
+  ],
+  "importScript": "cd73baba663a"
+}

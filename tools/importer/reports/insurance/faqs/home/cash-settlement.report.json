@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/home/cash-settlement.html",
+  "path": "insurance/faqs/home/cash-settlement",
+  "timestamp": "2026-10-24T02:08:56.145Z",
+  "title": "I would like a cash settlement for my claim – am I entitled to one?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

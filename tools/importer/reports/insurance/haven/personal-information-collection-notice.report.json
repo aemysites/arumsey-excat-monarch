@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/haven/personal-information-collection-notice.html",
+  "path": "insurance/haven/personal-information-collection-notice",
+  "timestamp": "2026-10-24T01:37:07.422Z",
+  "title": "Haven Personal Information Collection Notice | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title"
+  ],
+  "importScript": "cd73baba663a"
+}

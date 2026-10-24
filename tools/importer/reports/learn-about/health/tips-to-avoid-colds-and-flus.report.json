@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/health/tips-to-avoid-colds-and-flus.html",
+  "path": "learn-about/health/tips-to-avoid-colds-and-flus",
+  "timestamp": "2026-10-24T01:44:50.199Z",
+  "title": "How To Avoid Colds And Flus | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

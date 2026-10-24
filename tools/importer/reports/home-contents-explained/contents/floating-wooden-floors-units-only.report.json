@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/floating-wooden-floors-units-only.html",
+  "path": "home-contents-explained/contents/floating-wooden-floors-units-only",
+  "timestamp": "2026-10-24T01:23:00.924Z",
+  "title": "Floating wooden floors (units only) | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/traditional-modern-twist.html",
+  "path": "learn-about/maintaining-a-home/traditional-modern-twist",
+  "timestamp": "2026-10-24T01:53:15.638Z",
+  "title": "Neo-traditional Interiors | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

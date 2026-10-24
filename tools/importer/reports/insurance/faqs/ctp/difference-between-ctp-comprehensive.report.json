@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/difference-between-ctp-comprehensive.html",
+  "path": "insurance/faqs/ctp/difference-between-ctp-comprehensive",
+  "timestamp": "2026-10-24T02:11:46.599Z",
+  "title": "I have Comprehensive Car Insurance – is this different to CTP?",
+  "template": "message-page",
+  "blocks": [
+    "accordion-panel"
+  ],
+  "importScript": "7f36f986e00a"
+}

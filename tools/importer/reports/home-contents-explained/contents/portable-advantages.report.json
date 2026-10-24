@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/portable-advantages.html",
+  "path": "home-contents-explained/contents/portable-advantages",
+  "timestamp": "2026-10-24T01:24:24.666Z",
+  "title": "Portable advantages | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

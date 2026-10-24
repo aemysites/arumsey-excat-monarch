@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/your-eofy-life-insurance-stocktake.html",
+  "path": "learn-about/life-insurance/your-eofy-life-insurance-stocktake",
+  "timestamp": "2026-10-24T01:48:41.635Z",
+  "title": "Your EOFY Life Insurance Stocktake | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

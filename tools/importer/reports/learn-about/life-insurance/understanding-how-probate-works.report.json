@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/understanding-how-probate-works.html",
+  "path": "learn-about/life-insurance/understanding-how-probate-works",
+  "timestamp": "2026-10-24T01:48:00.067Z",
+  "title": "Understanding how probate works | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

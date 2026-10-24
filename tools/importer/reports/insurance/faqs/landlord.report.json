@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/landlord.html",
+  "path": "insurance/faqs/landlord",
+  "timestamp": "2026-10-24T01:36:52.803Z",
+  "title": "FAQs | Common Landlord Insurance Questions | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "columns-teaser",
+    "search-faq"
+  ],
+  "importScript": "cd73baba663a"
+}

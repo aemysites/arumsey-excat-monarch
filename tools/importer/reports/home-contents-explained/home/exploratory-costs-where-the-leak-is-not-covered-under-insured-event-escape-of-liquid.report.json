@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/exploratory-costs-where-the-leak-is-not-covered-under-insured-event-escape-of-liquid.html",
+  "path": "home-contents-explained/home/exploratory-costs-where-the-leak-is-not-covered-under-insured-event-escape-of-liquid",
+  "timestamp": "2026-10-24T01:30:35.994Z",
+  "title": "Exploratory cost where the liquid escaping isn't covered under insured event 'Escape of Liquid' | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

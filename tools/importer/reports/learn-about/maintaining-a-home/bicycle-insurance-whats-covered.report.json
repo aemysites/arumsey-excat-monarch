@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/bicycle-insurance-whats-covered.html",
+  "path": "learn-about/maintaining-a-home/bicycle-insurance-whats-covered",
+  "timestamp": "2026-10-24T01:50:16.157Z",
+  "title": "Bicycle Insurance – Coverage Options For Cyclists | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

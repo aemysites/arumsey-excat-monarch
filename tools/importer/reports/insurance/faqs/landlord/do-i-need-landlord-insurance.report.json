@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/landlord/do-i-need-landlord-insurance.html",
+  "path": "insurance/faqs/landlord/do-i-need-landlord-insurance",
+  "timestamp": "2026-10-24T02:10:21.785Z",
+  "title": "Do I need Landlord Insurance if the building is covered by strata insurance?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

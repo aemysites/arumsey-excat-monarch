@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/accidental-damage-at-home-contents.html",
+  "path": "home-contents-explained/contents/accidental-damage-at-home-contents",
+  "timestamp": "2026-10-24T01:21:48.200Z",
+  "title": "Accidental damage at home (contents) | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

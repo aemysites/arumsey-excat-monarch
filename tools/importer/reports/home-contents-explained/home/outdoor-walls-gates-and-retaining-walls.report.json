@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/outdoor-walls-gates-and-retaining-walls.html",
+  "path": "home-contents-explained/home/outdoor-walls-gates-and-retaining-walls",
+  "timestamp": "2026-10-24T01:31:35.717Z",
+  "title": "Outdoor walls, free-standing outdoor walls, gates and retaining walls | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

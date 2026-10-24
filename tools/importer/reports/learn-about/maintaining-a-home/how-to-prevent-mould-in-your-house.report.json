@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/how-to-prevent-mould-in-your-house.html",
+  "path": "learn-about/maintaining-a-home/how-to-prevent-mould-in-your-house",
+  "timestamp": "2026-10-24T02:17:43.209Z",
+  "title": "How to prevent mould in your house | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

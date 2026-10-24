@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/faqs/floodstorm.html",
+  "path": "insurance/extreme-weather-assistance/faqs/floodstorm",
+  "timestamp": "2026-10-24T02:01:26.644Z",
+  "title": "Flood & Storm",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/extreme-weather-assistance/faqs/floodstorm/tab-1",
+    "fragments/insurance/extreme-weather-assistance/faqs/floodstorm/tab-2",
+    "fragments/insurance/extreme-weather-assistance/faqs/floodstorm/tab-3",
+    "fragments/insurance/extreme-weather-assistance/faqs/floodstorm/tab-4"
+  ],
+  "importScript": "c5a31badb343"
+}

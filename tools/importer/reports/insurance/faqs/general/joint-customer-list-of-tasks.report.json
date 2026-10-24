@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/joint-customer-list-of-tasks.html",
+  "path": "insurance/faqs/general/joint-customer-list-of-tasks",
+  "timestamp": "2026-10-24T02:06:36.449Z",
+  "title": "If I am a joint customer does my partner or co-owner see the list of tasks as well? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

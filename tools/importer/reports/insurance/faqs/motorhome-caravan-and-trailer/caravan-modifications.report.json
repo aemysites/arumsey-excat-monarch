@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/motorhome-caravan-and-trailer/caravan-modifications.html",
+  "path": "insurance/faqs/motorhome-caravan-and-trailer/caravan-modifications",
+  "timestamp": "2026-10-24T02:11:10.733Z",
+  "title": "What modifications or accessories to my caravan do I need to tell you about?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

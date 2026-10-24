@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/how-do-I-add-an-authorised-contact-to-my-policy.html",
+  "path": "insurance/faqs/general/how-do-i-add-an-authorised-contact-to-my-policy",
+  "timestamp": "2026-10-24T02:05:37.742Z",
+  "title": "How Do I Add An Authorised Contact? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

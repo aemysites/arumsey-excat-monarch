@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/home/claims.html",
+  "path": "insurance/home/claims",
+  "timestamp": "2026-10-24T01:38:27.108Z",
+  "title": "Home Insurance Claims For Owners, Renters & Landlords | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "cards-article",
+    "hero-title",
+    "columns-media",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "columns-teaser"
+  ],
+  "fragments": [
+    "fragments/insurance/home/claims/manage-your-insurance-policy-and-claims"
+  ],
+  "importScript": "cd73baba663a"
+}

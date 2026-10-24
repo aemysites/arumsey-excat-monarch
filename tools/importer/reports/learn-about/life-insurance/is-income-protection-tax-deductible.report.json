@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/is-income-protection-tax-deductible.html",
+  "path": "learn-about/life-insurance/is-income-protection-tax-deductible",
+  "timestamp": "2026-10-24T01:47:15.250Z",
+  "title": "Is income protection Insurance tax deductible? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

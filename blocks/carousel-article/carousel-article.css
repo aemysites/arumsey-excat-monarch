@@ -1,0 +1,228 @@
+/* Carousel Article - values from suncorp.com.au ContentHub article carousel (slick) */
+.carousel-article {
+  --carousel-article-gap: 10px;
+  --carousel-article-inset: 32px;
+  --carousel-article-per-view: 1;
+
+  position: relative;
+}
+
+/* "Showing X of Y articles" */
+.carousel-article .carousel-article-status {
+  margin: 10px 5% 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: start;
+}
+
+.carousel-article .carousel-article-viewport {
+  position: relative;
+  margin: 0 10px;
+}
+
+.carousel-article .carousel-article-slides {
+  display: flex;
+  gap: var(--carousel-article-gap);
+  list-style: none;
+  margin: 0;
+  padding: 5px var(--carousel-article-inset);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--carousel-article-inset);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.carousel-article .carousel-article-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-article .carousel-article-slide {
+  position: relative;
+  display: flex;
+  flex: 0 0 calc((100% - (var(--carousel-article-per-view) - 1) * var(--carousel-article-gap)) / var(--carousel-article-per-view));
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 0;
+  scroll-snap-align: start;
+  border: 1px solid var(--light-color);
+  border-left-color: #e5e5e5;
+  background-color: var(--background-color);
+}
+
+.carousel-article .carousel-article-slide-image {
+  line-height: 0;
+}
+
+.carousel-article .carousel-article-slide-image picture {
+  display: block;
+}
+
+.carousel-article .carousel-article-slide-image img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.carousel-article .carousel-article-slide-content {
+  padding: 16px 16px 6px;
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.carousel-article .carousel-article-slide-content > :first-child {
+  margin-top: 0;
+}
+
+.carousel-article .carousel-article-slide-content > :last-child {
+  margin-bottom: 0;
+}
+
+.carousel-article .carousel-article-slide-content :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 12.5px;
+  font-family: var(--heading-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--heading-color);
+}
+
+.carousel-article .carousel-article-slide-content :is(h1, h2, h3, h4, h5, h6) a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* source sg-Type--size18 titles when the carousel follows its own heading */
+.carousel-article.is-headed .carousel-article-slide-content :is(h1, h2, h3, h4, h5, h6) {
+  font-size: 18.144px;
+  line-height: 21.7728px;
+}
+
+.carousel-article .carousel-article-slide-content :is(h1, h2, h3, h4, h5, h6) a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.carousel-article .carousel-article-slide-content p {
+  margin: 0;
+}
+
+/* stretch the heading link over the whole card */
+.carousel-article .carousel-article-slide.has-link :is(h1, h2, h3, h4, h5, h6) a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-article .carousel-article-slide:focus-within {
+  outline: 2px solid var(--link-color);
+  outline-offset: -2px;
+}
+
+.carousel-article .carousel-article-slide:focus-within a:focus {
+  outline: none;
+}
+
+/* hover: card lifts, title link turns light teal and underlines (source has no transition) */
+.carousel-article .carousel-article-slide:hover {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+
+.carousel-article .carousel-article-slide:hover :is(h1, h2, h3, h4, h5, h6) a:any-link {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* arrows */
+.carousel-article .carousel-article-prev,
+.carousel-article .carousel-article-next {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 30px;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--link-color);
+  border-radius: 0;
+  background-color: var(--background-color);
+  box-shadow: var(--button-shadow);
+  color: var(--link-color);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carousel-article .carousel-article-prev {
+  left: -10px;
+}
+
+.carousel-article .carousel-article-next {
+  right: -10px;
+}
+
+.carousel-article .carousel-article-prev::after,
+.carousel-article .carousel-article-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8.5 4.5 16 12l-7.5 7.5' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-article .carousel-article-prev::after {
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.carousel-article .carousel-article-prev:focus-visible,
+.carousel-article .carousel-article-next:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.carousel-article .carousel-article-prev:disabled,
+.carousel-article .carousel-article-next:disabled,
+.carousel-article:not(.is-scrollable) .carousel-article-prev,
+.carousel-article:not(.is-scrollable) .carousel-article-next {
+  display: none;
+}
+
+.carousel-article.is-single .carousel-article-status {
+  display: none;
+}
+
+@media (width >= 600px) {
+  .carousel-article {
+    --carousel-article-per-view: 2;
+  }
+
+  .carousel-article .carousel-article-status {
+    padding-top: 8px;
+    text-align: end;
+  }
+
+  .carousel-article .carousel-article-viewport {
+    margin: 0 2.5%;
+  }
+
+  .carousel-article .carousel-article-prev {
+    left: -32px;
+  }
+
+  .carousel-article .carousel-article-next {
+    right: -32px;
+  }
+}
+
+@media (width >= 900px) {
+  .carousel-article {
+    --carousel-article-per-view: 3;
+  }
+}

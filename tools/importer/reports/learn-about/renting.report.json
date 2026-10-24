@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/renting.html",
+  "path": "learn-about/renting",
+  "timestamp": "2026-10-24T01:57:23.243Z",
+  "title": "Renting | Learn About | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "article-list",
+    "tag-label",
+    "columns-teaser"
+  ],
+  "importScript": "cd73baba663a"
+}

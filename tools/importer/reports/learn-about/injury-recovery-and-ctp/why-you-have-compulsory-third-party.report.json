@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/why-you-have-compulsory-third-party.html",
+  "path": "learn-about/injury-recovery-and-ctp/why-you-have-compulsory-third-party",
+  "timestamp": "2026-10-24T01:45:49.234Z",
+  "title": "What CTP Insurance Is And Why Queenslanders Have It | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

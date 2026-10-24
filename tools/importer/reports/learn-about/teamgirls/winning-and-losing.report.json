@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/winning-and-losing.html",
+  "path": "learn-about/teamgirls/winning-and-losing",
+  "timestamp": "2026-10-24T02:00:31.229Z",
+  "title": "Navigating winning and losing | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

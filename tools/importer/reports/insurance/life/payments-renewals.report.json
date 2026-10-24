@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/payments-renewals.html",
+  "path": "insurance/life/payments-renewals",
+  "timestamp": "2026-10-24T01:40:45.357Z",
+  "title": "Make Easy Life Insurance Payments Online | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "cards-feature",
+    "hero-title",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "cards-checklist"
+  ],
+  "importScript": "cd73baba663a"
+}

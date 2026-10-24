@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/buying-a-car/buying-private-vs-dealer.html",
+  "path": "learn-about/buying-a-car/buying-private-vs-dealer",
+  "timestamp": "2026-10-24T01:42:29.038Z",
+  "title": "Buying A Car Privately Vs Buying From A Dealer | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/floods.html",
+  "path": "home-contents-explained/events/floods",
+  "timestamp": "2026-10-24T01:26:47.867Z",
+  "title": "Floods | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

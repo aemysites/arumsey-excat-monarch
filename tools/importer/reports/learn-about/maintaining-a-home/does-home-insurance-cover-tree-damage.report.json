@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/does-home-insurance-cover-tree-damage.html",
+  "path": "learn-about/maintaining-a-home/does-home-insurance-cover-tree-damage",
+  "timestamp": "2026-10-24T01:50:46.850Z",
+  "title": "Does Home Insurance Cover Tree Damage? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

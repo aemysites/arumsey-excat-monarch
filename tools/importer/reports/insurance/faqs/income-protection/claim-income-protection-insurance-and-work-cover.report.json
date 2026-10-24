@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/claim-income-protection-insurance-and-work-cover.html",
+  "path": "insurance/faqs/income-protection/claim-income-protection-insurance-and-work-cover",
+  "timestamp": "2026-10-24T02:09:27.248Z",
+  "title": "Can I claim income protection insurance and work cover?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

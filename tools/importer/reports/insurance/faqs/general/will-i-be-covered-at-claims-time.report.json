@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/will-i-be-covered-at-claims-time.html",
+  "path": "insurance/faqs/general/will-i-be-covered-at-claims-time",
+  "timestamp": "2026-10-24T02:08:09.022Z",
+  "title": "Will I be covered at claims time? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

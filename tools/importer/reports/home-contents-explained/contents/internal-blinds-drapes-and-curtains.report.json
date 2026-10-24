@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/internal-blinds-drapes-and-curtains.html",
+  "path": "home-contents-explained/contents/internal-blinds-drapes-and-curtains",
+  "timestamp": "2026-10-24T01:23:33.100Z",
+  "title": "Internal blinds and shutters, drapes, or curtains | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

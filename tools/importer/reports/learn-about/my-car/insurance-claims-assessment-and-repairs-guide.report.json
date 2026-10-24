@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/insurance-claims-assessment-and-repairs-guide.html",
+  "path": "learn-about/my-car/insurance-claims-assessment-and-repairs-guide",
+  "timestamp": "2026-10-24T01:55:53.741Z",
+  "title": "Insurance claims assessment and repairs guide | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

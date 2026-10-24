@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/5-myths-about-life-insurance.html",
+  "path": "learn-about/life-insurance/5-myths-about-life-insurance",
+  "timestamp": "2026-10-24T01:45:55.797Z",
+  "title": "5 myths about Life Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

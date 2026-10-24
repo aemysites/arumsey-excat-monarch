@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/remote-controlled-model-or-toy-watercraft-or-aircraft.html",
+  "path": "home-contents-explained/contents/remote-controlled-model-or-toy-watercraft-or-aircraft",
+  "timestamp": "2026-10-24T01:24:36.154Z",
+  "title": "Remote controlled model or toy watercraft or aircraft | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

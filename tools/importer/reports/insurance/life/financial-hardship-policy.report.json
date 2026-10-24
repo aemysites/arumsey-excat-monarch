@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/financial-hardship-policy.html",
+  "path": "insurance/life/financial-hardship-policy",
+  "timestamp": "2026-10-24T01:40:01.041Z",
+  "title": "Life Insurance - Financial Hardship Policy | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/real-cost-car-service.html",
+  "path": "learn-about/my-car/real-cost-car-service",
+  "timestamp": "2026-10-24T02:17:04.542Z",
+  "title": "A Guide To Car Maintenance | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

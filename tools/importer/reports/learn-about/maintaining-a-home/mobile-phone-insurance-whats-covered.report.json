@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/mobile-phone-insurance-whats-covered.html",
+  "path": "learn-about/maintaining-a-home/mobile-phone-insurance-whats-covered",
+  "timestamp": "2026-10-24T01:52:44.600Z",
+  "title": "Mobile Phone & Smartphone Insurance – What’s Covered? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

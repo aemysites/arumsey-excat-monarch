@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/car-insurance-for-p-platers.html",
+  "path": "learn-about/my-car/car-insurance-for-p-platers",
+  "timestamp": "2026-10-24T01:54:17.361Z",
+  "title": "Car Insurance Tips For Young & First Time Drivers | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

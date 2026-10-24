@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/home/update-credit-card-details.html",
+  "path": "insurance/faqs/home/update-credit-card-details",
+  "timestamp": "2026-10-24T02:09:19.542Z",
+  "title": "My credit card details have changed – how do I update them for my direct debit payments?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-teaser"
+  ],
+  "importScript": "c5a31badb343"
+}

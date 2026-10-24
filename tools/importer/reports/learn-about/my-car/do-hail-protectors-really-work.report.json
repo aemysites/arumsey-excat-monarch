@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/do-hail-protectors-really-work.html",
+  "path": "learn-about/my-car/do-hail-protectors-really-work",
+  "timestamp": "2026-10-24T01:54:46.339Z",
+  "title": "Do Hail Protectors Really Work? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/does-landlord-insurance-cover-airbnb-and-short-term-rentals.html",
+  "path": "learn-about/maintaining-a-home/does-landlord-insurance-cover-airbnb-and-short-term-rentals",
+  "timestamp": "2026-10-24T01:50:54.549Z",
+  "title": "Does Landlord Insurance Cover Short Term Rentals? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/lifestyle/building-climate-resilient-landscapes-through-cultural-burning.html",
+  "path": "learn-about/lifestyle/building-climate-resilient-landscapes-through-cultural-burning",
+  "timestamp": "2026-10-24T02:16:07.497Z",
+  "title": "Building climate resilient landscapes through cultural burning | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

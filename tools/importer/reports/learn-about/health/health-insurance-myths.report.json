@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/health/health-insurance-myths.html",
+  "path": "learn-about/health/health-insurance-myths",
+  "timestamp": "2026-10-24T01:44:27.825Z",
+  "title": "7 Common Health Insurance Myths Busted | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

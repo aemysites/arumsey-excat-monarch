@@ -1,0 +1,60 @@
+/* source: fieldset.pagedropdown padding 15px 10px 0; question margin-bottom 80px (mobile) / 70px (desktop) */
+.jump-select .jump-select-field {
+  margin: 0 0 80px;
+  padding: 15px 10px 0;
+}
+
+.jump-select .jump-select-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.jump-select .jump-select-field .jump-select-label-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* source: select.sg-pageTabs--dropdown */
+.jump-select select {
+  appearance: none;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  height: 44.28px;
+  margin: 0 auto;
+  padding: 10px 31px 10px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: #fff url('chevron-down.svg') calc(100% - 10px) 50% / 16px 16px no-repeat;
+  color: #000;
+  font-family: inherit;
+  font-size: 17.136px;
+  font-weight: 400;
+  line-height: 22.2768px;
+  text-align: start;
+  cursor: pointer;
+}
+
+.jump-select select:focus {
+  border-color: var(--brand-yellow);
+  outline: none;
+}
+
+.jump-select select:focus-visible {
+  outline: 2px solid var(--brand-yellow);
+  outline-offset: 1px;
+}
+
+@media (width >= 900px) {
+  .jump-select .jump-select-field {
+    margin-bottom: 70px;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/instagram-interiors.html",
+  "path": "learn-about/maintaining-a-home/instagram-interiors",
+  "timestamp": "2026-10-24T01:52:15.341Z",
+  "title": "Instagram’s Top Interior Trends | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

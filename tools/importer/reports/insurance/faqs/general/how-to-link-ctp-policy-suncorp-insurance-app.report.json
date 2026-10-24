@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/how-to-link-CTP-policy-suncorp-insurance-app.html",
+  "path": "insurance/faqs/general/how-to-link-ctp-policy-suncorp-insurance-app",
+  "timestamp": "2026-10-24T02:06:09.922Z",
+  "title": "Can I link my CTP policy in the Suncorp Insurance App? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-teaser"
+  ],
+  "importScript": "c5a31badb343"
+}

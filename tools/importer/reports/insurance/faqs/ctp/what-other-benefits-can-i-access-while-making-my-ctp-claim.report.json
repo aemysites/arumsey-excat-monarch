@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-other-benefits-can-I-access-while-making-my-ctp-claim.html",
+  "path": "insurance/faqs/ctp/what-other-benefits-can-i-access-while-making-my-ctp-claim",
+  "timestamp": "2026-10-24T02:03:57.252Z",
+  "title": "What other benefits can I access while making my CTP claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

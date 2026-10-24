@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/premium-payments.html",
+  "path": "insurance/faqs/income-protection/premium-payments",
+  "timestamp": "2026-10-24T02:10:05.101Z",
+  "title": "What options are there if I can't afford my premium payments?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

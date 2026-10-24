@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/health/does-my-family-income-affect-the-mls.html",
+  "path": "insurance/faqs/health/does-my-family-income-affect-the-mls",
+  "timestamp": "2026-10-24T02:08:29.699Z",
+  "title": "Does my family income affect the MLS?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

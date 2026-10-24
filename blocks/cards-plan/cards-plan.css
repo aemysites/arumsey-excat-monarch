@@ -1,0 +1,209 @@
+/* Cards Plan - structural styles only; brand styling comes from the design pass. */
+.cards-plan > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 24px;
+}
+
+.cards-plan .cards-plan-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dadada;
+  background-color: var(--background-color);
+}
+
+.cards-plan .cards-plan-card-header {
+  padding: 16px;
+  background-color: var(--link-color);
+  color: var(--background-color);
+}
+
+.cards-plan .cards-plan-card-header > * {
+  margin: 0;
+}
+
+.cards-plan .cards-plan-card-header > * + * {
+  margin-top: 8px;
+}
+
+.cards-plan .cards-plan-card-header :is(h1, h2, h3, h4, h5, h6) {
+  color: inherit;
+}
+
+.cards-plan .cards-plan-card-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cards-plan .cards-plan-card-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+}
+
+.cards-plan .cards-plan-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.cards-plan .cards-plan-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-plan .cards-plan-card-body hr {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.cards-plan .cards-plan-icon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cards-plan .cards-plan-icon-list > li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.cards-plan .cards-plan-icon-list img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.cards-plan .cards-plan-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cards-plan .cards-plan-card-actions > p {
+  margin: 0;
+}
+
+.cards-plan .cards-plan-card-actions.is-last {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+/* image / image-light / light: centered header with title and badge */
+.cards-plan.image .cards-plan-card-header,
+.cards-plan.image-light .cards-plan-card-header,
+.cards-plan.light .cards-plan-card-header {
+  text-align: center;
+}
+
+.cards-plan.image .cards-plan-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 160px;
+}
+
+.cards-plan.light .cards-plan-card-body {
+  text-align: center;
+}
+
+/* default: teal "next level" bar over a white body (source: sg-Flextable--4cols);
+   icon stacks above the label on mobile, sits inline from 600px */
+.cards-plan:not(.image, .image-light, .light) > ul {
+  gap: 9px 24px;
+  grid-template-columns: 1fr;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card {
+  border: 0;
+  background-color: transparent;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-header {
+  border: 1px solid #005951;
+  padding: 15px;
+  background-color: var(--brand-teal);
+  color: #fff;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-header > p {
+  margin: 0 0 10px;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-header > .cards-plan-card-icon {
+  margin: 0;
+  line-height: 0;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-header .cards-plan-card-icon img {
+  width: 48px;
+  height: 26px;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-body {
+  margin-top: -1px;
+  border: 1px solid #c6c6b4;
+  padding: 15px;
+  background-color: #fff;
+  color: #000;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-body :is(h2, h3) {
+  margin: 0 0 10px;
+  font-size: 38.304px;
+  line-height: 1.2;
+  color: var(--brand-teal);
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-body > p {
+  margin: 0 0 10px;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-body hr {
+  display: none;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-actions.is-last {
+  padding: 61px 0 40px;
+}
+
+.cards-plan:not(.image, .image-light, .light) .cards-plan-card-actions > p {
+  margin: 5px 0;
+}
+
+@media (width >= 600px) {
+  .cards-plan:not(.image, .image-light, .light) > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-plan:not(.image, .image-light, .light) .cards-plan-card-header:has(.cards-plan-card-icon) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cards-plan:not(.image, .image-light, .light) .cards-plan-card-header:has(.cards-plan-card-icon) > .cards-plan-card-icon {
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+}
+
+@media (width >= 1200px) {
+  .cards-plan:not(.image, .image-light, .light) > ul {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 12px;
+  }
+
+  /* DM Sans sets the label ~4px wider than GT Walsheim; keep it on one line like the source */
+  .cards-plan:not(.image, .image-light, .light) .cards-plan-card-header:has(.cards-plan-card-icon) > p:not(.cards-plan-card-icon) {
+    white-space: nowrap;
+  }
+}

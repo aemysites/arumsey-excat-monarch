@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/general-contents.html",
+  "path": "home-contents-explained/contents/general-contents",
+  "timestamp": "2026-10-24T01:23:16.736Z",
+  "title": "General contents | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb"
+  ],
+  "importScript": "cd73baba663a"
+}

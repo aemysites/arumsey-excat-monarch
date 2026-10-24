@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/how-much-to-register-a-vehicle-in-australia.html",
+  "path": "learn-about/my-car/how-much-to-register-a-vehicle-in-australia",
+  "timestamp": "2026-10-24T01:55:25.509Z",
+  "title": "The Cost to Register a Car in Australia | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

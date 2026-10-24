@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/home.html",
+  "path": "insurance/faqs/home",
+  "timestamp": "2026-10-24T01:36:38.744Z",
+  "title": "FAQs | Common Home & Contents Insurance Questions | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "search-faq"
+  ],
+  "importScript": "cd73baba663a"
+}

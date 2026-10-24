@@ -1,0 +1,136 @@
+/*
+ * Tag Label
+ * Values measured from www.suncorp.com.au (sg-Type--tagLine chips, contentBoxContainer
+ * notice panels, sg-Flextable dark/light cells). Source values are the same on mobile
+ * and desktop, so no breakpoint overrides are needed.
+ */
+.tag-label .tag-label-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* chip: sg-Type--tagLine */
+.tag-label .tag-label-item {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #dedcd5;
+  color: var(--text-color);
+  font-size: var(--body-font-size-xs);
+  font-weight: 300;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.tag-label .tag-label-item a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.tag-label .tag-label-item a:hover {
+  color: var(--link-hover-color);
+}
+
+/* notice panel: contentBoxContainer */
+.tag-label .tag-label-panel {
+  flex: 1 1 100%;
+  padding: 30px;
+  background-color: var(--light-color);
+}
+
+.tag-label .tag-label-panel > :first-child {
+  margin-top: 0;
+}
+
+.tag-label .tag-label-panel h4 {
+  margin-bottom: 10px;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+/* not-covered: yellow status chip (sg-Type--tagLinePrimary) */
+.tag-label.not-covered .tag-label-item {
+  background-color: var(--brand-yellow);
+}
+
+/* cyan: dark teal header cell (sg-Flextable-cell--dark) */
+.tag-label.cyan .tag-label-item,
+.tag-label.cyan .tag-label-panel {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid #000;
+  background-color: var(--brand-teal-dark);
+  color: var(--background-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: var(--body-line-height);
+  text-align: center;
+  text-transform: none;
+}
+
+.tag-label.cyan .tag-label-panel > p {
+  margin: 0;
+}
+
+.tag-label.cyan .tag-label-panel > p:first-child {
+  font-size: 22px;
+}
+
+/* grey: bordered light cell (sg-Flextable-cell--light) */
+.tag-label.grey .tag-label-item,
+.tag-label.grey .tag-label-panel {
+  flex: 1 1 100%;
+  padding: 15px;
+  border: 1px solid #c6c6b4;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.tag-label.grey .tag-label-item {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.tag-label.grey .tag-label-item a:any-link {
+  border-bottom: 2px dotted var(--link-color);
+  color: var(--text-color);
+}
+
+/* alt: row of topic link chips separated by a word space */
+.tag-label.alt .tag-label-list {
+  gap: 0 4px;
+}
+
+/*
+ * message panel: heading + text + closing CTA button (e.g. contact-us/thank-you
+ * "Thank you for your enquiry."). Source: bordered contentBoxContainer with
+ * centred text (inline styles the import drops).
+ */
+.tag-label:not(.cyan, .grey) .tag-label-panel:has(> :is(h1, h2, h3, h4, h5, h6)):has(> p.button-wrapper:last-child) {
+  padding: 15px 15px 5px;
+  border: 1px solid #dcdcd1;
+  text-align: center;
+}
+
+.tag-label:not(.cyan, .grey) .tag-label-panel:has(> p.button-wrapper:last-child) > :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 10px;
+
+  /* source is weight 400 of GT Walsheim Bold; DM Sans needs 700 to match */
+  font-weight: 700;
+}
+
+.tag-label:not(.cyan, .grey) .tag-label-panel:has(> p.button-wrapper:last-child) > p {
+  margin: 0 0 10px;
+}
+
+main .tag-label:not(.cyan, .grey) .tag-label-panel > p.button-wrapper:last-child a.button:any-link {
+  margin: 5px 0;
+}

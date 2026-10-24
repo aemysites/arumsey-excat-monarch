@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/rebuilding-your-home.html",
+  "path": "insurance/extreme-weather-assistance/rebuilding-your-home",
+  "timestamp": "2026-10-24T01:36:05.950Z",
+  "title": "Repair & Rebuild Your Home | Scope of Work Guide | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "columns-media",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,28 @@
+{
+  "variantName": "form-enquiry",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text",
+    "purpose": "enquiry / complaint web form with optional help panel, built from authored config"
+  },
+  "contentPattern": {
+    "structure": "content rows (heading, intro); config rows [form | action | submit | help | success | error | required note] [value]; field rows [label] [type: text, email, tel, number, date, url, textarea, select, radio, checkbox, heading, hidden] [options (comma list) or placeholder] [required: yes]. `form` may link to a form definition spreadsheet (.json: Name, Type, Label, Placeholder, Options, Mandatory, Value, Help). Submits JSON {data} via POST to `action`"
+  },
+  "options": [
+    {
+      "class": "alt",
+      "label": "Alt"
+    }
+  ],
+  "memberVariantIds": [
+    "v_2f8c9664c210",
+    "v_e8937bdbe937"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use for enquiry, complaint and application forms. alt option renders a compact single-column form (e.g. a single enquiry-type field)."
+}

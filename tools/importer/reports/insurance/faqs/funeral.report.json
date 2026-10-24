@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/funeral.html",
+  "path": "insurance/faqs/funeral",
+  "timestamp": "2026-10-24T01:36:31.322Z",
+  "title": "Funeral Insurance FAQs | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "search-faq"
+  ],
+  "importScript": "cd73baba663a"
+}

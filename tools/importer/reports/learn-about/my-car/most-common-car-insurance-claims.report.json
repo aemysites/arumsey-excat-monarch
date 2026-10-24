@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/most-common-car-insurance-claims.html",
+  "path": "learn-about/my-car/most-common-car-insurance-claims",
+  "timestamp": "2026-10-24T01:56:00.738Z",
+  "title": "Most Common Car Insurance Claims | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

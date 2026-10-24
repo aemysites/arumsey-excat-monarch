@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/how-to-wash-your-car-at-home.html",
+  "path": "learn-about/my-car/how-to-wash-your-car-at-home",
+  "timestamp": "2026-10-24T02:17:20.723Z",
+  "title": "How To Wash Your Car At Home | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

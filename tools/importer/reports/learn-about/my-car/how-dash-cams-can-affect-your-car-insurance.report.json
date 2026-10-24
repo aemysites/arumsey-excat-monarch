@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/how-dash-cams-can-affect-your-car-insurance.html",
+  "path": "learn-about/my-car/how-dash-cams-can-affect-your-car-insurance",
+  "timestamp": "2026-10-24T01:55:14.666Z",
+  "title": "How Dash Cams Affect Car Insurance | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

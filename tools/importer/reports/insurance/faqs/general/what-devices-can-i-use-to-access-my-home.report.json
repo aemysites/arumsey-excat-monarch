@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/what-devices-can-i-use-to-access-my-home.html",
+  "path": "insurance/faqs/general/what-devices-can-i-use-to-access-my-home",
+  "timestamp": "2026-10-24T02:07:20.023Z",
+  "title": "What devices can I use to access My Home? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

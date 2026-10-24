@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/claims/motorcycle-third-party-fire-and-theft.html",
+  "path": "insurance/claims/motorcycle-third-party-fire-and-theft",
+  "timestamp": "2026-10-24T01:34:15.097Z",
+  "title": "Third Party Motorcycle Insurance Claims",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "columns-links",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/claims/motorcycle-third-party-fire-and-theft/make-a-claim",
+    "fragments/insurance/claims/motorcycle-third-party-fire-and-theft/track-your-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

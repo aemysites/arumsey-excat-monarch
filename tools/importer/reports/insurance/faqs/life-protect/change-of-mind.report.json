@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/change-of-mind.html",
+  "path": "insurance/faqs/life-protect/change-of-mind",
+  "timestamp": "2026-10-24T02:10:37.267Z",
+  "title": "Is it possible to cancel my policy if I change my mind?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

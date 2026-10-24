@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/how-we-can-help-with-motor-accident-injury-claim.html",
+  "path": "learn-about/injury-recovery-and-ctp/how-we-can-help-with-motor-accident-injury-claim",
+  "timestamp": "2026-10-24T01:45:32.951Z",
+  "title": "Injured In A Motor Accident? We Are Here To Help | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

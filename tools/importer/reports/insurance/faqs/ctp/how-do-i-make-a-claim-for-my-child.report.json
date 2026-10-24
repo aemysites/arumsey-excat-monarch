@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/how-do-i-make-a-claim-for-my-child.html",
+  "path": "insurance/faqs/ctp/how-do-i-make-a-claim-for-my-child",
+  "timestamp": "2026-10-24T02:02:43.923Z",
+  "title": "How do I make a claim for my child?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/things-you-didnt-know-were-covered.html",
+  "path": "learn-about/maintaining-a-home/things-you-didnt-know-were-covered",
+  "timestamp": "2026-10-24T01:53:12.742Z",
+  "title": "7 Surprising Things Covered By Home & Contents Insurance | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

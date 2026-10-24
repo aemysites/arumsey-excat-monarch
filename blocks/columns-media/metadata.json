@@ -1,0 +1,138 @@
+{
+  "variantName": "columns-media",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text + list",
+    "purpose": "Two-column media/text splits: text beside an image, app mockup, badge or stacked photos, plus text/side-panel and heading/content pairs"
+  },
+  "contentPattern": {
+    "structure": "one row (or more) with 2 cells: a text cell (heading, paragraphs, lists, CTA links, optional leading icon, optional inline table) and a media cell (one picture, or several stacked pictures), or two text cells. Authored cell order is the visual order. A cell holding only a link to a /fragments/ path is replaced by that fragment, for complex content such as nested tables and FAQ panels",
+    "cells": [
+      "text or media",
+      "text or media"
+    ]
+  },
+  "options": [
+    {
+      "class": "wide-right",
+      "label": "Wide Right"
+    },
+    {
+      "class": "boxed",
+      "label": "Boxed"
+    },
+    {
+      "class": "image-left",
+      "label": "Image Left"
+    },
+    {
+      "class": "image-left-2",
+      "label": "Image Left 2"
+    },
+    {
+      "class": "image-right",
+      "label": "Image Right"
+    },
+    {
+      "class": "image-right-2",
+      "label": "Image Right 2"
+    },
+    {
+      "class": "image-left-app",
+      "label": "Image Left App"
+    },
+    {
+      "class": "wide",
+      "label": "Wide"
+    },
+    {
+      "class": "image-right-3",
+      "label": "Image Right 3"
+    },
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "image-right-4",
+      "label": "Image Right 4"
+    },
+    {
+      "class": "heading-left",
+      "label": "Heading Left"
+    },
+    {
+      "class": "image-right-5",
+      "label": "Image Right 5"
+    },
+    {
+      "class": "image-light",
+      "label": "Image Light"
+    },
+    {
+      "class": "image-right-6",
+      "label": "Image Right 6"
+    },
+    {
+      "class": "boxed-2",
+      "label": "Boxed 2"
+    },
+    {
+      "class": "image-left-3",
+      "label": "Image Left 3"
+    },
+    {
+      "class": "image-light-2",
+      "label": "Image Light 2"
+    },
+    {
+      "class": "boxed-3",
+      "label": "Boxed 3"
+    },
+    {
+      "class": "alt",
+      "label": "Alt"
+    },
+    {
+      "class": "image-orange",
+      "label": "Image Orange"
+    },
+    {
+      "class": "image-right-7",
+      "label": "Image Right 7"
+    }
+  ],
+  "memberVariantIds": [
+    "v_9f08043c2a20",
+    "v_61850ea0e0f2-6",
+    "v_b185ea0bbd41",
+    "v_0fe97976e726-5",
+    "v_d115fe5f14a6",
+    "v_01f60f7bd62f",
+    "v_64e1f7de7695",
+    "v_35770285bf06",
+    "v_61850ea0e0f2-4",
+    "v_d19e937a2885",
+    "v_eedb9caa15fb",
+    "v_61850ea0e0f2-24",
+    "v_61850ea0e0f2-9",
+    "v_790fd420f49d",
+    "v_7d2d5ccc2afb",
+    "v_9695cfcc668f-2",
+    "v_9f3b9842dd7d-1",
+    "v_ad8eff79c207",
+    "v_b630803a3a4e",
+    "v_bc50014f5321",
+    "v_be070ac3f73f",
+    "v_bf2c7b54a4de",
+    "v_c7c45d8c7b9c",
+    "v_cd56c532d1df"
+  ],
+  "usage": "Content and product pages: image/text intros, app promotions, partner badges, side info panels, 'when you make a claim' heading + checklist splits (24 catalogued variants).",
+  "reuseGuidance": "Use for a 2-column split where one side is media or a side panel. `wide-right`/`wide` give the text column two thirds; `heading-left` gives the second (content) column two thirds; `boxed*` puts text columns in a bordered panel; the `image-*` and `alt` options record source section treatments and only centre the media column structurally. Use cards-feature for 3+ equal cards and columns-links for link lists."
+}

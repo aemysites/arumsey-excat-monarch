@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/legal-liability-fines-penalties-and-other-damages.html",
+  "path": "home-contents-explained/events/legal-liability-fines-penalties-and-other-damages",
+  "timestamp": "2026-10-24T01:27:28.270Z",
+  "title": "Fines, penalties and other damages | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

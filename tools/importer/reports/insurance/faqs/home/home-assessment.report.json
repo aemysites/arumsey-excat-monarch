@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/home/home-assessment.html",
+  "path": "insurance/faqs/home/home-assessment",
+  "timestamp": "2026-10-24T02:09:04.951Z",
+  "title": "How long will a home claim assessment take?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

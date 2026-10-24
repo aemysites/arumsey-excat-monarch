@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/how-to-claim-for-a-car-accident-injury.html",
+  "path": "learn-about/injury-recovery-and-ctp/how-to-claim-for-a-car-accident-injury",
+  "timestamp": "2026-10-24T01:45:26.461Z",
+  "title": "How To Claim For A Car Accident Injury | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

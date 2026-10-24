@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/food-and-medication-spoilage.html",
+  "path": "home-contents-explained/contents/food-and-medication-spoilage",
+  "timestamp": "2026-10-24T01:23:03.154Z",
+  "title": "Food and medication spoilage | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

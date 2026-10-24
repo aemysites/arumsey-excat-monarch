@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/legal-liability-watercraft.html",
+  "path": "home-contents-explained/events/legal-liability-watercraft",
+  "timestamp": "2026-10-24T01:27:47.459Z",
+  "title": "Watercraft | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

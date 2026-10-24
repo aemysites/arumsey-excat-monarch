@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/selling-a-car/trading-in.html",
+  "path": "learn-about/selling-a-car/trading-in",
+  "timestamp": "2026-10-24T01:57:54.237Z",
+  "title": "Trading In Vs Private Sale | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

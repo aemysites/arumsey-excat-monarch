@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/motorhome-caravan-and-trailer/caravan-contents.html",
+  "path": "insurance/faqs/motorhome-caravan-and-trailer/caravan-contents",
+  "timestamp": "2026-10-24T02:11:08.389Z",
+  "title": "Are all the contents of my caravan covered?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

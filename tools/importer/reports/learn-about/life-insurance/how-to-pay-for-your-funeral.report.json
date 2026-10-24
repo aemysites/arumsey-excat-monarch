@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/how-to-pay-for-your-funeral.html",
+  "path": "learn-about/life-insurance/how-to-pay-for-your-funeral",
+  "timestamp": "2026-10-24T01:46:59.467Z",
+  "title": "How To Pay For Your Funeral | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

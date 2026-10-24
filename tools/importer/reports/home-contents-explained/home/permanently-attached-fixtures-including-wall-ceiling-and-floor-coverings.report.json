@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/permanently-attached-fixtures-including-wall-ceiling-and-floor-coverings.html",
+  "path": "home-contents-explained/home/permanently-attached-fixtures-including-wall-ceiling-and-floor-coverings",
+  "timestamp": "2026-10-24T01:31:42.201Z",
+  "title": "Permanently attached fixtures including wall, ceiling and floor coverings | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

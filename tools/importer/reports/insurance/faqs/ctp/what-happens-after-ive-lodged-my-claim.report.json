@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-happens-after-ive-lodged-my-claim.html",
+  "path": "insurance/faqs/ctp/what-happens-after-ive-lodged-my-claim",
+  "timestamp": "2026-10-24T02:03:30.133Z",
+  "title": "What happens after I’ve lodged my claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

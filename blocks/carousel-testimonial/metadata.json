@@ -1,0 +1,24 @@
+{
+  "variantName": "carousel-testimonial",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text",
+    "purpose": "scrolling row of customer review quotes"
+  },
+  "contentPattern": {
+    "structure": "one row per review: rating (e.g. \"5\" or \"★★★★★\"), quote text, reviewer line starting with \"-\""
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_12cfa77a71f1"
+  ],
+  "usage": {
+    "when": "customer review/testimonial strips"
+  },
+  "reuseGuidance": "Use for review quotes only; for article teasers use carousel-article."
+}

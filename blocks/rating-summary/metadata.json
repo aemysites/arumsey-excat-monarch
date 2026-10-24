@@ -1,0 +1,29 @@
+{
+  "variantName": "rating-summary",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "image + link",
+    "purpose": "review badge, star rating, score and review-count link; stars derive from the authored numeric score"
+  },
+  "contentPattern": {
+    "structure": "cells (any order): [badge image] [score, e.g. \"(4.3 out of 5)\"] [review count link, e.g. \"1770 Car Reviews\"]; optional key/value rows [score] [4.3], [max] [5], [count] [link], [badge] [image]. With intro-text, extra cells (heading, paragraphs) render beside the rating"
+  },
+  "options": [
+    {
+      "class": "intro-text",
+      "label": "Intro Text"
+    }
+  ],
+  "memberVariantIds": [
+    "v_9df623f14b80-1",
+    "v_701c463af7ff",
+    "v_7342771aa2f3"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use for an aggregate review score. intro-text option places a heading and paragraphs beside the rating."
+}

@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/earthquake.html",
+  "path": "insurance/extreme-weather-assistance/earthquake",
+  "timestamp": "2026-10-24T12:52:06.138Z",
+  "title": "Earthquake support | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel",
+    "cards-checklist",
+    "cards-checklist"
+  ],
+  "importScript": "853cd45f1cf3"
+}

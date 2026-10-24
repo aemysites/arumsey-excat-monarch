@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/health/children-screentime.html",
+  "path": "learn-about/health/children-screentime",
+  "timestamp": "2026-10-24T01:43:55.135Z",
+  "title": "Screen Time Tips | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

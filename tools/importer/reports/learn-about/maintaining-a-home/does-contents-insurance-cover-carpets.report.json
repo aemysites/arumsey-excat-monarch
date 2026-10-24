@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/does-contents-insurance-cover-carpets.html",
+  "path": "learn-about/maintaining-a-home/does-contents-insurance-cover-carpets",
+  "timestamp": "2026-10-24T01:50:40.324Z",
+  "title": "Does Contents Insurance Cover Carpets? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

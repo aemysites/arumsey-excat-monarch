@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/claim-payout.html",
+  "path": "insurance/faqs/income-protection/claim-payout",
+  "timestamp": "2026-10-24T02:09:30.028Z",
+  "title": "How long can I be paid a claim for?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

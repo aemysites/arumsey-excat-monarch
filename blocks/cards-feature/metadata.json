@@ -1,0 +1,144 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text",
+    "purpose": "Grid of feature cards (icon or image, heading, short text, optional CTA) used for benefits, ways to help, payment options, download tiles, steps and expandable FAQ tiles"
+  },
+  "contentPattern": {
+    "structure": "one row per card; each row has an optional icon/image cell + body cell (heading, text, lists, CTA links). An optional first single-cell row with a heading becomes the block intro; with `icon-left-photo-background` an optional first picture-only row becomes the background. A body cell holding only a link to a /fragments/ path is replaced by that fragment; a cell holding only a YouTube/Vimeo/MP4 link becomes an embedded video",
+    "rows": "one row per card",
+    "cells": [
+      "media (picture or icon, optional)",
+      "body (heading, text, list, links)"
+    ]
+  },
+  "options": [
+    {
+      "class": "persona",
+      "label": "Persona"
+    },
+    {
+      "class": "link-tiles",
+      "label": "Link Tiles"
+    },
+    {
+      "class": "shadow-image",
+      "label": "Shadow Image"
+    },
+    {
+      "class": "shadow",
+      "label": "Shadow"
+    },
+    {
+      "class": "icon-left",
+      "label": "Icon Left"
+    },
+    {
+      "class": "boxed",
+      "label": "Boxed"
+    },
+    {
+      "class": "cyan",
+      "label": "Cyan"
+    },
+    {
+      "class": "partner",
+      "label": "Partner"
+    },
+    {
+      "class": "grey-image",
+      "label": "Grey Image"
+    },
+    {
+      "class": "light",
+      "label": "Light"
+    },
+    {
+      "class": "icon-left-compact",
+      "label": "Icon Left Compact"
+    },
+    {
+      "class": "cyan-2",
+      "label": "Cyan 2"
+    },
+    {
+      "class": "grey-light",
+      "label": "Grey Light"
+    },
+    {
+      "class": "icon-left-download",
+      "label": "Icon Left Download"
+    },
+    {
+      "class": "icon-left-photo-background",
+      "label": "Icon Left Photo Background"
+    },
+    {
+      "class": "grey",
+      "label": "Grey"
+    },
+    {
+      "class": "steps",
+      "label": "Steps"
+    },
+    {
+      "class": "cyan-grey",
+      "label": "Cyan Grey"
+    }
+  ],
+  "memberVariantIds": [
+    "v_956182324063",
+    "v_30bc454acb03",
+    "v_dca7f9c0d911",
+    "v_d6fbcc988569",
+    "v_1c9e15ea5824",
+    "v_820fabb44863",
+    "v_9695cfcc668f",
+    "v_a57342cca861",
+    "v_c5945adf40a5",
+    "v_00c1611545a1",
+    "v_c7f697a6e7d0",
+    "v_0740752bf90e",
+    "v_3065156cb82c",
+    "v_6d4217a0d733",
+    "v_cb17adc4227d",
+    "v_f3637661e714",
+    "v_206a34375dc0",
+    "v_61850ea0e0f2-2",
+    "v_97435d117516",
+    "v_bd25f4ba54d3",
+    "v_f98793cfcf4b",
+    "v_086ff70e0fb4",
+    "v_0e1b4d18e411",
+    "v_29011b89304b",
+    "v_407c8bbfddf0",
+    "v_40e2e00aae6f",
+    "v_4e382d77a7f0",
+    "v_51b1afb8cffb",
+    "v_5a562e2ab9d5",
+    "v_5d24e0e80784",
+    "v_6802351d3f9c-1",
+    "v_6bd910ddef87",
+    "v_735cfddb9e6b",
+    "v_89f3a109031e",
+    "v_8cf6ad114bb0",
+    "v_910aae13c89e",
+    "v_910aae13c89e-1",
+    "v_95d61b6c9bc4",
+    "v_a6f537515fd7",
+    "v_a999c9a718c0",
+    "v_b0cab4a3b112-1",
+    "v_c216f79c3794",
+    "v_d03361463293",
+    "v_f10a22281bd3",
+    "v_f1bff30bc9d6"
+  ],
+  "usage": "Feature/benefit grids across content pages: 'Ways we can help', product options, payment methods, claim channels, disaster checklists, numbered process steps and partner FAQ tiles.",
+  "reuseGuidance": "Use for 2-5 equal cards with an icon or small image and short copy. Use `boxed`/`shadow`/`grey*`/`cyan*` for bordered or filled card shells, `icon-left*` to put the icon beside the title, `link-tiles`/`shadow-image`/`grey-image`/`icon-left-download` when each card is a single link, `steps` for numbered steps, and `partner` for collapsible question tiles. Large media/text splits belong in columns-media."
+}

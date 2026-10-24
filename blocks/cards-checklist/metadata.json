@@ -1,0 +1,45 @@
+{
+  "variantName": "cards-checklist",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "columns of tick-icon list items (covered events, useful links)"
+  },
+  "contentPattern": {
+    "structure": "each cell is a column: optional image, optional heading/intro, and a bulleted list; a cell without a list is a full-width note/footnote. List items that start with an icon (e.g. :cross:) keep that icon instead of the default tick"
+  },
+  "options": [
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "image-alt",
+      "label": "Image Alt"
+    },
+    {
+      "class": "light",
+      "label": "Light"
+    }
+  ],
+  "memberVariantIds": [
+    "v_286c1d12a39a",
+    "v_cc7dbeef9baf",
+    "v_33e5d2f3bcf1",
+    "v_06d25c09f084",
+    "v_079276f84af9",
+    "v_3065156cb82c-1",
+    "v_343b01b78721",
+    "v_4ba56acba372",
+    "v_c638d8817961"
+  ],
+  "usage": {
+    "when": "covered/not-covered checklists and link lists flowing in columns"
+  },
+  "reuseGuidance": "light boxes the lists in a panel; image puts a picture over each list; image-alt gives two wide columns with headings."
+}

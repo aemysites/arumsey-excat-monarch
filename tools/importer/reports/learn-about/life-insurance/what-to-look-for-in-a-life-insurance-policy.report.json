@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/what-to-look-for-in-a-life-insurance-policy.html",
+  "path": "learn-about/life-insurance/what-to-look-for-in-a-life-insurance-policy",
+  "timestamp": "2026-10-24T01:48:09.037Z",
+  "title": "What To Look For In A Life Insurance Policy | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

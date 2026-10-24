@@ -1,0 +1,43 @@
+{
+  "variantName": "embed-video",
+  "baseBlock": "embed",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "video",
+    "purpose": "Responsive 16:9 YouTube/Vimeo/MP4 player with optional poster image, heading, description and collapsible transcript"
+  },
+  "contentPattern": {
+    "structure": "a cell with the video link (YouTube, Vimeo or .mp4); optionally a poster picture (click to play), heading/text/CTA cells, and a transcript: a paragraph labelled 'Transcript', 'Transcription' or 'Read transcript' followed by the transcript text, either in the same cell or in the next cell, or as a single link to a /fragments/ path loaded on first open",
+    "cells": [
+      "video link (+ optional poster picture)",
+      "text / transcript (optional)"
+    ]
+  },
+  "options": [
+    {
+      "class": "light",
+      "label": "Light"
+    },
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "dark",
+      "label": "Dark"
+    }
+  ],
+  "memberVariantIds": [
+    "v_8b66fa490ca5",
+    "v_1d1fbf92d099",
+    "v_5267ef446c1f",
+    "v_9df623f14b80-3",
+    "v_deff98711627"
+  ],
+  "usage": "Product and campaign videos (14 pages), wellbeing exercise videos with description and transcription, a poster-image campaign video, and a dark product explainer.",
+  "reuseGuidance": "Use for one video. `light` frames the video with its text; `image` signals a poster image (any authored picture is used as the poster); `dark` keeps a leading heading above the video. Use cards-feature for grids of cards that include videos."
+}

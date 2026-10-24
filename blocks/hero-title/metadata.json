@@ -1,0 +1,44 @@
+{
+  "variantName": "hero-title",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading",
+    "purpose": "Plain page-title band (heading, optional intro text) without a photo backdrop, optionally with a link-list chooser, a collapsible notice panel or a side image"
+  },
+  "contentPattern": {
+    "structure": "one cell with the page heading and optional text, ticked lists and links. A list made only of links becomes a chooser button that reveals the list (the item for the current page, else the first, labels the button). With `cyan-2`, the first line is a header that collapses the rest. A picture-only cell becomes a side image",
+    "cells": [
+      "title content",
+      "picture (optional)"
+    ]
+  },
+  "options": [
+    {
+      "class": "cyan",
+      "label": "Cyan"
+    },
+    {
+      "class": "cyan-2",
+      "label": "Cyan 2"
+    },
+    {
+      "class": "image",
+      "label": "Image"
+    }
+  ],
+  "memberVariantIds": [
+    "v_0fe97976e726",
+    "v_0fe97976e726-4",
+    "v_0fe97976e726-1",
+    "v_0fe97976e726-6",
+    "v_6802351d3f9c",
+    "v_9df623f14b80"
+  ],
+  "usage": "Title bands on utility and content pages (64 pages heading-only), payments pages with a product chooser, 'Things you should know' notice panels, lifestage intro text.",
+  "reuseGuidance": "Use when the page top is a heading band with no background photo. `cyan`/`cyan-2` record section colour treatments (`cyan-2` also adds the collapsible header panel); `image` signals a side image. Use hero-banner for copy over a photo."
+}

@@ -1,0 +1,264 @@
+/* Accordion Panel - values from suncorp.com.au .sg-Accordion (help-support, boat, policy-documents) */
+.accordion-panel {
+  --accordion-panel-icon-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 40a16 16 0 1 1 16-16 16.02 16.02 0 0 1-16 16Zm0-30a14 14 0 1 0 14 14 14.02 14.02 0 0 0-14-14Z'/%3E%3Cpath d='M34 23h-9v-9h-2v9h-9v2h9v9h2v-9h9z'/%3E%3C/svg%3E");
+  --accordion-panel-icon-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 40a16 16 0 1 1 16-16 16.02 16.02 0 0 1-16 16Zm0-30a14 14 0 1 0 14 14 14.02 14.02 0 0 0-14-14Z'/%3E%3Cpath d='M14 23h20v2H14z'/%3E%3C/svg%3E");
+
+  display: grid;
+  gap: 32px;
+}
+
+.accordion-panel .accordion-panel-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.accordion-panel .accordion-panel-items {
+  display: grid;
+  gap: 10px;
+  align-items: start;
+}
+
+/* row: 1px teal box + 1px teal label border = 2px visual rule */
+.accordion-panel .accordion-panel-item {
+  border: 1px solid var(--brand-teal);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.accordion-panel .accordion-panel-item-label {
+  position: relative;
+  display: block;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid var(--brand-teal);
+  border-radius: 4px;
+  color: var(--brand-teal);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-panel .accordion-panel-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-panel .accordion-panel-item-label:focus-visible {
+  outline: 2px solid var(--brand-teal-dark);
+  outline-offset: 2px;
+}
+
+/* circled plus / minus icon, centred on the first text line */
+.accordion-panel .accordion-panel-item-label::before {
+  content: '';
+  position: absolute;
+  top: calc(10px + 0.75em);
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask: var(--accordion-panel-icon-plus) center / contain no-repeat;
+  transform: translateY(-50%);
+}
+
+.accordion-panel .accordion-panel-item[open] > .accordion-panel-item-label {
+  border-radius: 4px 4px 0 0;
+  background-color: var(--brand-teal);
+  color: var(--background-color);
+}
+
+.accordion-panel .accordion-panel-item[open] > .accordion-panel-item-label::before {
+  mask-image: var(--accordion-panel-icon-minus);
+}
+
+.accordion-panel .accordion-panel-item-body {
+  padding: 7.5px 15px 0;
+}
+
+.accordion-panel .accordion-panel-item-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion-panel .accordion-panel-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+.accordion-panel .accordion-panel-item-body p {
+  margin: 0 0 10px;
+}
+
+.accordion-panel .accordion-panel-item-body a:any-link {
+  color: var(--brand-teal);
+  text-decoration: underline;
+}
+
+/* "Read More" and other standalone links stay text links, not buttons */
+.accordion-panel .accordion-panel-item-body .button-container {
+  margin: 0 0 10px;
+}
+
+main .accordion-panel .accordion-panel-item-body a.button:any-link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--brand-teal);
+  font-weight: 400;
+  text-decoration: underline;
+  white-space: normal;
+}
+
+/* footnote markers: 0.75em, no line-box growth (source sup) */
+.accordion-panel sup {
+  font-size: 0.75em;
+  line-height: 0;
+}
+
+.accordion-panel .accordion-panel-extra > :first-child {
+  margin-top: 0;
+}
+
+.accordion-panel .accordion-panel-extra > :last-child {
+  margin-bottom: 0;
+}
+
+/* terms: same boxed row, rendered open by default (see JS); small print body */
+.accordion-panel.terms .accordion-panel-item-body {
+  font-size: var(--body-font-size-xs);
+  line-height: 1.5;
+}
+
+/* plain: unboxed text toggle (auto-applied to a lone fragment-backed item) */
+.accordion-panel.plain .accordion-panel-item {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.accordion-panel.plain .accordion-panel-item > .accordion-panel-item-label {
+  padding: 0 0 0 30px;
+  border: 0;
+  border-radius: 0;
+}
+
+.accordion-panel.plain .accordion-panel-item > .accordion-panel-item-label::before {
+  top: 0.75em;
+  left: 5px;
+}
+
+.accordion-panel.plain .accordion-panel-item[open] > .accordion-panel-item-label {
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.accordion-panel.plain .accordion-panel-item[open] > .accordion-panel-item-label::before {
+  background-color: var(--brand-teal);
+}
+
+.accordion-panel.plain .accordion-panel-item-body {
+  padding: 7.5px 10px 0;
+}
+
+/* sidebar: related-links column */
+.accordion-panel .accordion-panel-aside > p {
+  margin: 0 0 16px;
+}
+
+.accordion-panel .accordion-panel-aside > :first-child {
+  margin-top: 0;
+}
+
+.accordion-panel .accordion-panel-aside > p:first-child {
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+}
+
+/* lined: policy document list - one document per row (title link + note),
+   indented beside a document icon, as on /insurance/policy-documents */
+.accordion-panel.lined {
+  --accordion-panel-icon-doc: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M8 3h11l7 7v19H8Zm2 2v22h14V11h-6V5Zm10 1.4V9h2.6ZM12 15h10v1.5H12Zm0 4h10v1.5H12Zm0 4h7v1.5h-7Z'/%3E%3C/svg%3E");
+}
+
+.accordion-panel.lined .accordion-panel-extra {
+  position: relative;
+  padding: 15px 15px 15px 60px;
+}
+
+.accordion-panel.lined .accordion-panel-extra::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 32px;
+  height: 32px;
+  background-color: var(--brand-teal);
+  mask: var(--accordion-panel-icon-doc) center / contain no-repeat;
+}
+
+.accordion-panel.lined .accordion-panel-extra p {
+  margin: 0 0 10px;
+}
+
+.accordion-panel.lined .accordion-panel-extra > :first-child a:any-link {
+  color: var(--brand-teal);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.accordion-panel.lined .accordion-panel-extra > :first-child a:any-link:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  /* narrow: single question column centred at 8/12 (source sg-Grid-col8) */
+  .accordion-panel.narrow {
+    max-width: 795px;
+    margin-inline: auto;
+  }
+
+  /* two-column: question grid */
+  .accordion-panel.two-column .accordion-panel-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+
+  /* sidebar: questions beside a related-links column. The main column's
+     children join the block grid so a leading heading can span the top and
+     the aside lines up with the first question; the last 1fr row absorbs a
+     taller aside. */
+  .accordion-panel.sidebar:has(.accordion-panel-aside) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-rows: auto auto auto 1fr;
+    gap: 0 36px;
+  }
+
+  .accordion-panel.sidebar:has(.accordion-panel-aside) .accordion-panel-main {
+    display: contents;
+  }
+
+  .accordion-panel.sidebar:has(.accordion-panel-aside) .accordion-panel-main > * {
+    grid-column: 1;
+  }
+
+  .accordion-panel.sidebar:has(.accordion-panel-aside) .accordion-panel-main > * + * {
+    margin-top: 10px;
+  }
+
+  .accordion-panel.sidebar:has(.accordion-panel-aside) .accordion-panel-aside {
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+
+  .accordion-panel.sidebar .accordion-panel-main > .accordion-panel-extra:first-child:has(> :is(h2, h3):first-child) {
+    grid-column: 1 / -1;
+  }
+
+  .accordion-panel.sidebar:has(.accordion-panel-main > .accordion-panel-extra:first-child > :is(h2, h3):first-child) .accordion-panel-aside {
+    grid-row: 2 / -1;
+  }
+}

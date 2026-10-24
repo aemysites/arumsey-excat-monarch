@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/income-protection-insurance-through-super.html",
+  "path": "insurance/faqs/income-protection/income-protection-insurance-through-super",
+  "timestamp": "2026-10-24T02:09:55.587Z",
+  "title": "How does income protection insurance through super work?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

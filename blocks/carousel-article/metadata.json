@@ -1,0 +1,26 @@
+{
+  "variantName": "carousel-article",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "link + heading + button",
+    "purpose": "scrolling row of article cards with arrow navigation"
+  },
+  "contentPattern": {
+    "structure": "one row per article card: image cell | content cell (heading with link, short text)"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_81eb3c3fa5b2",
+    "v_e1e939d453e6",
+    "v_8de5ef068fdb"
+  ],
+  "usage": {
+    "when": "Insights and stories rows of related articles"
+  },
+  "reuseGuidance": "Use for horizontally scrolling article teasers; use cards-article for a static grid."
+}

@@ -1,0 +1,208 @@
+/* callout-banner: values measured from suncorp.com.au (boat, emotional-readiness-guide,
+   compare-extras-cover, about-us). Default/image/image-light = dark icon panel + teal body. */
+
+.callout-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.callout-banner .callout-banner-item {
+  display: flex;
+  position: relative;
+}
+
+.callout-banner .callout-banner-media {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.callout-banner .callout-banner-media img,
+.callout-banner .callout-banner-media svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.callout-banner .callout-banner-icon {
+  display: block;
+  flex: none;
+  width: 72px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  background-color: currentcolor;
+  mask: url('/icons/file.svg') center / contain no-repeat;
+}
+
+.callout-banner .callout-banner-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.callout-banner .callout-banner-body > * {
+  margin: 0 0 10px;
+}
+
+.callout-banner .callout-banner-body > :last-child {
+  margin-bottom: 0;
+}
+
+.callout-banner .callout-banner-linked {
+  cursor: pointer;
+}
+
+.callout-banner .callout-banner-chevron {
+  position: absolute;
+  top: 50%;
+  right: 33px;
+  width: 12px;
+  height: 12px;
+  border-top: 1.5px solid currentcolor;
+  border-right: 1.5px solid currentcolor;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* dark icon panel + teal body (default, image, image-light) */
+.callout-banner:not(.light, .button, .image-light-2) .callout-banner-item {
+  border: 1px solid #005951;
+  background-color: var(--brand-teal);
+  color: #fff;
+}
+
+.callout-banner:not(.light, .button, .image-light-2) .callout-banner-media {
+  flex-basis: 25%;
+  min-width: 0;
+  margin: -1px 0 -1px -1px;
+  border: 1px solid #000;
+  padding: 15px;
+  background-color: var(--brand-teal-dark);
+}
+
+.callout-banner:not(.light, .button, .image-light-2, .image, .image-light) .callout-banner-icon {
+  width: 84px;
+  mask-image: url('/icons/pds.svg');
+}
+
+.callout-banner:not(.light, .button, .image-light-2) .callout-banner-body {
+  align-self: center;
+  padding: 25px 15px;
+}
+
+.callout-banner:not(.light, .button, .image-light-2) .callout-banner-body > :first-child:not(:only-child) {
+  margin: 0 0 10px;
+  color: inherit;
+  font-size: 18.144px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.callout-banner:not(.light, .button, .image-light-2) .callout-banner-body a:any-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.callout-banner.image-light .callout-banner-body {
+  font-size: 18.144px;
+  line-height: 1.5;
+}
+
+/* light: tinted panel with a rule under the heading */
+.callout-banner.light .callout-banner-item {
+  border: 2px solid var(--brand-teal);
+  border-radius: 4px;
+  padding: 20px 25px;
+  background-color: var(--brand-teal-light);
+  color: var(--text-color);
+}
+
+.callout-banner.light .callout-banner-body > :last-child {
+  margin-bottom: 10px;
+}
+
+.callout-banner.light .callout-banner-body :is(h2, h3, h4) {
+  margin: 0 0 30px;
+  border-bottom: 1px solid #00baa9;
+  padding-bottom: 30px;
+  color: var(--text-color);
+  font-size: 32.256px;
+  line-height: 45.9648px;
+}
+
+/* button: file icon, title and an outline pill button */
+.callout-banner.button .callout-banner-item {
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
+.callout-banner.button .callout-banner-media {
+  flex-basis: 56px;
+  color: var(--brand-teal-dark);
+}
+
+.callout-banner.button .callout-banner-icon {
+  width: 56px;
+}
+
+.callout-banner.button .callout-banner-body {
+  flex: 1 1 0;
+  padding: 10px 0 10px 10px;
+  font-size: 20.16px;
+  line-height: 1.5;
+}
+
+.callout-banner.button .callout-banner-actions {
+  display: flex;
+  flex: 0 0 100%;
+  padding: 5px 0 15px;
+}
+
+main .callout-banner.button a.button:any-link {
+  width: 100%;
+  border-color: var(--brand-teal);
+  background-color: #fff;
+  color: var(--brand-teal);
+  line-height: 20.7346px;
+}
+
+main .callout-banner.button a.button:any-link:hover,
+main .callout-banner.button a.button:any-link:focus-visible {
+  background-color: #e6f4f2;
+}
+
+/* image-light-2: small grey note */
+.callout-banner.image-light-2 .callout-banner-item {
+  padding: 15px;
+  background-color: var(--light-color);
+}
+
+@media (width >= 900px) {
+  .callout-banner.image .callout-banner-media,
+  .callout-banner.image-light .callout-banner-media {
+    flex-basis: 16.75%;
+  }
+
+  .callout-banner.button .callout-banner-item {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 20px 180px 10px;
+  }
+
+  .callout-banner.button .callout-banner-body {
+    padding: 13px 16px 10px 10px;
+  }
+
+  .callout-banner.button .callout-banner-actions {
+    flex: 0 0 calc((100% + 16px) / 3 - 16px);
+    margin-left: auto;
+    padding: 5px 0 15px;
+  }
+}
+
+/* kept last: highest-specificity body rule */
+.callout-banner:not(.light, .button, .image-light-2) .callout-banner-linked .callout-banner-body {
+  padding-right: 72px;
+}

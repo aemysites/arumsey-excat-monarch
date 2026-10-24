@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/decks-pergolas-pagodas-verandas-and-balconies.html",
+  "path": "home-contents-explained/home/decks-pergolas-pagodas-verandas-and-balconies",
+  "timestamp": "2026-10-24T01:30:24.255Z",
+  "title": "Decks, pergolas, pagodas, verandas and balconies | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

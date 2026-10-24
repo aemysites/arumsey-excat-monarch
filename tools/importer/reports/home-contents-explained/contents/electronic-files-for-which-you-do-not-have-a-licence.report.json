@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/electronic-files-for-which-you-do-not-have-a-licence.html",
+  "path": "home-contents-explained/contents/electronic-files-for-which-you-do-not-have-a-licence",
+  "timestamp": "2026-10-24T01:22:50.541Z",
+  "title": "Electronic files for which you don’t have a licence | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/claims/motorcycle-comprehensive.html",
+  "path": "insurance/claims/motorcycle-comprehensive",
+  "timestamp": "2026-10-24T01:34:11.954Z",
+  "title": "Comprehensive Motorcycle Insurance Claims",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-links",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/claims/motorcycle-comprehensive/make-a-claim",
+    "fragments/insurance/claims/motorcycle-comprehensive/track-your-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

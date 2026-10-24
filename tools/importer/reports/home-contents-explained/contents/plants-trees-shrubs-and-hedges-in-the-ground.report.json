@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/plants-trees-shrubs-and-hedges-in-the-ground.html",
+  "path": "home-contents-explained/contents/plants-trees-shrubs-and-hedges-in-the-ground",
+  "timestamp": "2026-10-24T01:24:12.744Z",
+  "title": "Plants, trees, shrubs and hedges in the ground | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/health/will-lifetime-health-cover-lhs-loading-interact-with-the-mls.html",
+  "path": "insurance/faqs/health/will-lifetime-health-cover-lhs-loading-interact-with-the-mls",
+  "timestamp": "2026-10-24T02:08:49.789Z",
+  "title": "Will Lifetime Health Cover (LHC) loading interact with the MLS?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

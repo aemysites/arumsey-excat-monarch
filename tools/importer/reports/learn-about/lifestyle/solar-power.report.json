@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/lifestyle/solar-power.html",
+  "path": "learn-about/lifestyle/solar-power",
+  "timestamp": "2026-10-24T01:49:16.502Z",
+  "title": "A Guide To Solar Power In Australia | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

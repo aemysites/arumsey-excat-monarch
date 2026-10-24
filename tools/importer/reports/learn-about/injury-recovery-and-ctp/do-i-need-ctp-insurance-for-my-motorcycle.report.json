@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/do-i-need-ctp-insurance-for-my-motorcycle.html",
+  "path": "learn-about/injury-recovery-and-ctp/do-i-need-ctp-insurance-for-my-motorcycle",
+  "timestamp": "2026-10-24T01:45:08.514Z",
+  "title": "Do I Need CTP Insurance For My Motorcycle? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/ctp-medical-certificate-guide-for-general-practitioners.html",
+  "path": "learn-about/injury-recovery-and-ctp/ctp-medical-certificate-guide-for-general-practitioners",
+  "timestamp": "2026-10-24T01:45:02.006Z",
+  "title": "CTP Medical Certificate Guide For GPs And Hospital Staff | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

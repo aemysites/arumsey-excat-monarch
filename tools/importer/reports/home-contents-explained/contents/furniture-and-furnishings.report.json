@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/furniture-and-furnishings.html",
+  "path": "home-contents-explained/contents/furniture-and-furnishings",
+  "timestamp": "2026-10-24T01:23:14.014Z",
+  "title": "Furniture and furnishings | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

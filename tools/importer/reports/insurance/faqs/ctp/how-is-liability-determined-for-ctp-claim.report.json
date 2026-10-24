@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/how-is-liability-determined-for-ctp-claim.html",
+  "path": "insurance/faqs/ctp/how-is-liability-determined-for-ctp-claim",
+  "timestamp": "2026-10-24T02:02:50.250Z",
+  "title": "How is liability determined for a CTP claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

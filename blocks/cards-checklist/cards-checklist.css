@@ -1,0 +1,129 @@
+/* Cards Checklist - values measured from suncorp.com.au sg-Flextable / sg-List-icon lists */
+.cards-checklist > ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 0;
+}
+
+.cards-checklist .cards-checklist-column {
+  padding: 1px 0 0 11px;
+}
+
+.cards-checklist .cards-checklist-column > :first-child {
+  margin-top: 0;
+}
+
+.cards-checklist .cards-checklist-note {
+  grid-column: 1 / -1;
+  font-size: var(--body-font-size-xs);
+  text-align: center;
+}
+
+.cards-checklist .cards-checklist-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* default: tick list item */
+.cards-checklist .cards-checklist-list > li {
+  margin: 6px 0;
+  padding: 0 5px 0 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8.5l3.5 3.5 7.5-8' fill='none' stroke='%23008c80' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat 0 4px / 16px;
+}
+
+/* link items: arrow-right icon, 10px rhythm, 21px indent (source Icon-arrowRight) */
+.cards-checklist .cards-checklist-list > li.is-link {
+  margin: 10px 0;
+  padding: 0 5px 0 21px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5.5 3l5 5-5 5' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E") no-repeat 0 1px / 16px;
+}
+
+.cards-checklist .cards-checklist-list > li:first-child {
+  margin-top: 10px;
+}
+
+.cards-checklist .cards-checklist-list > li:last-child {
+  margin-bottom: 0;
+}
+
+.cards-checklist .cards-checklist-list > li.is-link a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.cards-checklist .cards-checklist-list > li.is-link a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.cards-checklist .cards-checklist-list > li.has-icon {
+  padding-left: 0;
+  background: none;
+}
+
+.cards-checklist .cards-checklist-list > li.has-icon .icon:first-child {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.cards-checklist .cards-checklist-image {
+  margin: 0 0 16px;
+  line-height: 0;
+}
+
+.cards-checklist .cards-checklist-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* image looks: image-led columns with a gutter, no inset */
+.cards-checklist.image > ul,
+.cards-checklist.image-alt > ul {
+  padding: 0;
+  gap: 8px 16px;
+}
+
+.cards-checklist.image .cards-checklist-column,
+.cards-checklist.image-alt .cards-checklist-column {
+  padding: 0;
+}
+
+/* light: boxed panel (source sg-Cell--neutral) with large ticks */
+.cards-checklist.light > ul {
+  padding: 30px 30px 25px;
+  border: 1px solid #dcdcd1;
+  background-color: var(--light-color);
+  gap: 0 16px;
+}
+
+.cards-checklist.light .cards-checklist-column {
+  padding: 0;
+}
+
+.cards-checklist.light .cards-checklist-list > li:not(.is-link, .has-icon) {
+  margin: 6px;
+  padding: 3.4px 5px 0 34px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M5 15.5l6.5 6.5 14-15' fill='none' stroke='%23004346' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-position: 0 0;
+  background-size: 29.3px;
+}
+
+/* image-alt: two wide columns with headings */
+.cards-checklist.image-alt > ul {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+}
+
+@media (width >= 900px) {
+  .cards-checklist.image > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-checklist.light > ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

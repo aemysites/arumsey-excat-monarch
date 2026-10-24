@@ -1,0 +1,179 @@
+/* search-faq: centred teal heading over a grey search panel (source: suncorp FAQ search) */
+.search-faq {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.search-faq .search-faq-intro {
+  text-align: center;
+}
+
+.search-faq .search-faq-intro h1,
+.search-faq .search-faq-intro h2 {
+  margin: 0 0 10px;
+  color: var(--brand-teal);
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.search-faq .search-faq-intro > :first-child {
+  margin-top: 0;
+}
+
+.search-faq .search-faq-intro > :last-child {
+  margin-bottom: 10px;
+}
+
+.search-faq .search-faq-form {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px 35px;
+  background-color: #f4f4f4;
+}
+
+.search-faq .search-faq-label {
+  display: block;
+  font-weight: 600;
+}
+
+.search-faq .search-faq-label-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-faq .search-faq-field {
+  display: flex;
+  align-items: stretch;
+  margin: 10px 0 20px;
+}
+
+.search-faq .search-faq-field input {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0 0 5px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  font: inherit;
+  line-height: 1.3;
+  appearance: none;
+}
+
+.search-faq .search-faq-field input::placeholder {
+  color: #a6a6a6;
+  opacity: 1;
+}
+
+.search-faq .search-faq-field input:focus-visible {
+  outline: 2px solid var(--brand-teal);
+  outline-offset: 0;
+}
+
+.search-faq .search-faq-field input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+main .search-faq button.search-faq-submit {
+  flex: 0 0 auto;
+  width: 54px;
+  margin: 0 0 0 10px;
+  padding: 9px;
+  border-color: var(--brand-yellow);
+  background-color: var(--brand-yellow);
+  color: #000;
+  box-shadow: var(--button-shadow);
+}
+
+main .search-faq button.search-faq-submit:hover,
+main .search-faq button.search-faq-submit:focus-visible {
+  background-color: #ffe784;
+}
+
+/* mobile: icon-only button, label kept for assistive tech */
+.search-faq .search-faq-submit::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url('/icons/search.svg') center / contain no-repeat;
+}
+
+.search-faq .search-faq-submit-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-faq .search-faq-status {
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.search-faq .search-faq-results {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.search-faq .search-faq-status:empty,
+.search-faq .search-faq-results:empty {
+  display: none;
+}
+
+.search-faq .search-faq-results li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-faq .search-faq-results p {
+  margin: 4px 0 0;
+}
+
+@media (width >= 900px) {
+  .search-faq {
+    padding: 40px 0;
+  }
+
+  /* source grid: 7 of 12 columns (8px gutters), centred */
+  .search-faq .search-faq-form,
+  .search-faq .search-faq-results {
+    width: calc((100% + 16px) * 7 / 12 - 16px);
+  }
+
+  .search-faq .search-faq-form {
+    padding: 40px 0 0;
+  }
+
+  main .search-faq button.search-faq-submit {
+    width: auto;
+    min-width: 126px;
+    padding: 12px 20px 11px;
+  }
+
+  .search-faq .search-faq-submit::before {
+    display: none;
+  }
+
+  .search-faq .search-faq-submit-label {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+  }
+}

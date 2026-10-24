@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/what-happens-if-i-am-being-investigated-on-an-insurance-claim.html",
+  "path": "insurance/faqs/general/what-happens-if-i-am-being-investigated-on-an-insurance-claim",
+  "timestamp": "2026-10-24T02:07:23.142Z",
+  "title": "What happens if I am being investigated on an insurance claim? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,56 @@
+{
+  "variantName": "tabs-panel",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button + text + list + link",
+    "purpose": "tab strip over a bordered panel"
+  },
+  "contentPattern": {
+    "structure": "one row per tab: tab label | panel content (rich text, or a link to a /fragments/ path to load blocks such as accordions)"
+  },
+  "options": [
+    {
+      "class": "alt",
+      "label": "Alt"
+    },
+    {
+      "class": "steps",
+      "label": "Steps"
+    },
+    {
+      "class": "tiles",
+      "label": "Tiles"
+    },
+    {
+      "class": "shadow",
+      "label": "Shadow"
+    }
+  ],
+  "memberVariantIds": [
+    "v_2f2baa010d54",
+    "v_00af75fb41c1",
+    "v_075a84bd905d",
+    "v_542b4d4e6c5b",
+    "v_6bf0e693d131",
+    "v_9df623f14b80-2",
+    "v_2e37f94f1874",
+    "v_3d4fff0d50ea",
+    "v_4c97a500fd41",
+    "v_4d6241ae39cb",
+    "v_61850ea0e0f2-15",
+    "v_61850ea0e0f2-16",
+    "v_61850ea0e0f2-17",
+    "v_61850ea0e0f2-18",
+    "v_ab77164db2f4",
+    "v_b28f7193bb39"
+  ],
+  "usage": {
+    "when": "make/track a claim tabs, claim steps, coverage option tabs"
+  },
+  "reuseGuidance": "alt for pill tabs over FAQ accordions, steps for numbered claim steps (each top-level heading starts a step), tiles for coverage item tiles, shadow for a raised panel."
+}

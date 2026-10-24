@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/boat/comparison.html",
+  "path": "insurance/boat/comparison",
+  "timestamp": "2026-10-24T01:33:05.340Z",
+  "title": "Boat Insurance Comparison | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "cards-feature",
+    "cards-feature",
+    "hero-title",
+    "table-comparison",
+    "table-comparison",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

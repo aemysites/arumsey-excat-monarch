@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/pets-or-animals.html",
+  "path": "home-contents-explained/contents/pets-or-animals",
+  "timestamp": "2026-10-24T01:24:09.557Z",
+  "title": "Pets or animals | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

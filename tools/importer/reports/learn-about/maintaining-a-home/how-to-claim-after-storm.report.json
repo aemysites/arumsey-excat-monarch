@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/how-to-claim-after-storm.html",
+  "path": "learn-about/maintaining-a-home/how-to-claim-after-storm",
+  "timestamp": "2026-10-24T01:51:53.038Z",
+  "title": "How To Make A Storm Damage Insurance Claim | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

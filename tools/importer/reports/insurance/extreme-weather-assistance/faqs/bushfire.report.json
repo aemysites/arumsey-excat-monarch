@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/faqs/bushfire.html",
+  "path": "insurance/extreme-weather-assistance/faqs/bushfire",
+  "timestamp": "2026-10-24T02:01:18.197Z",
+  "title": "Bushfire",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/extreme-weather-assistance/faqs/bushfire/tab-1",
+    "fragments/insurance/extreme-weather-assistance/faqs/bushfire/tab-2",
+    "fragments/insurance/extreme-weather-assistance/faqs/bushfire/tab-3"
+  ],
+  "importScript": "c5a31badb343"
+}

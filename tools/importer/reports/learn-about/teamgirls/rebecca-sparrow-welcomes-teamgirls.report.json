@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/rebecca-sparrow-welcomes-teamgirls.html",
+  "path": "learn-about/teamgirls/rebecca-sparrow-welcomes-teamgirls",
+  "timestamp": "2026-10-24T01:59:49.256Z",
+  "title": "Rebecca Sparrow Welcomes #TeamGirls | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

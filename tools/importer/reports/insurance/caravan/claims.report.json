@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/caravan/claims.html",
+  "path": "insurance/caravan/claims",
+  "timestamp": "2026-10-24T01:33:50.666Z",
+  "title": "Make Caravan, Motorhome & Trailer Claims Online | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/caravan/claims/make-a-claim",
+    "fragments/insurance/caravan/claims/track-a-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/future-of-cars.html",
+  "path": "learn-about/future-of-cars",
+  "timestamp": "2026-10-24T01:43:32.034Z",
+  "title": "Future of Cars",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "article-list",
+    "tag-label",
+    "columns-teaser"
+  ],
+  "importScript": "cd73baba663a"
+}

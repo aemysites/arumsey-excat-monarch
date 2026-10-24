@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/lifestyle/aussie-destinations-need-tourism.html",
+  "path": "learn-about/lifestyle/aussie-destinations-need-tourism",
+  "timestamp": "2026-10-24T01:48:56.744Z",
+  "title": "Five Aussie Regions That Need Your Tourist Dollars | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

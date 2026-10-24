@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/paying-by-instalments-home-car.html",
+  "path": "insurance/faqs/general/paying-by-instalments-home-car",
+  "timestamp": "2026-10-24T02:06:42.304Z",
+  "title": "Paying by instalments-home and car",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

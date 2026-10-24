@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/home-computers-and-electronic-tablets-laptops-phones-unfixed-electrical-goods-and-appliances.html",
+  "path": "home-contents-explained/contents/home-computers-and-electronic-tablets-laptops-phones-unfixed-electrical-goods-and-appliances",
+  "timestamp": "2026-10-24T01:23:23.699Z",
+  "title": "Home computers and electronic tablets, laptops, phones, unfixed electrical goods and appliances | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

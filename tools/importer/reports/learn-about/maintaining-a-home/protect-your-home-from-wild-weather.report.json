@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/protect-your-home-from-wild-weather.html",
+  "path": "learn-about/maintaining-a-home/protect-your-home-from-wild-weather",
+  "timestamp": "2026-10-24T02:17:39.646Z",
+  "title": "Protecting Your Home from Extreme Weather | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video"
+  ],
+  "importScript": "cd73baba663a"
+}

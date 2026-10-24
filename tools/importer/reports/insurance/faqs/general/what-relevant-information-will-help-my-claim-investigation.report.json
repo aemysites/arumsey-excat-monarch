@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/what-relevant-information-will-help-my-claim-investigation.html",
+  "path": "insurance/faqs/general/what-relevant-information-will-help-my-claim-investigation",
+  "timestamp": "2026-10-24T02:07:45.845Z",
+  "title": "What relevant information will help my claim investigation? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

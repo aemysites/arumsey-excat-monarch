@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-is-economic-loss.html",
+  "path": "insurance/faqs/ctp/what-is-economic-loss",
+  "timestamp": "2026-10-24T02:03:41.600Z",
+  "title": "What is economic loss?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

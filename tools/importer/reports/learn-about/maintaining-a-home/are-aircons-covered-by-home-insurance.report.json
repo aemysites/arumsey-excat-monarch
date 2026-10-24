@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/are-aircons-covered-by-home-insurance.html",
+  "path": "learn-about/maintaining-a-home/are-aircons-covered-by-home-insurance",
+  "timestamp": "2026-10-24T01:49:44.825Z",
+  "title": "Are Aircons Covered By Home Insurance? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

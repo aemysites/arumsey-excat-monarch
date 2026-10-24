@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/what-you-need-to-know-when-taking-out-funeral-insurance.html",
+  "path": "learn-about/life-insurance/what-you-need-to-know-when-taking-out-funeral-insurance",
+  "timestamp": "2026-10-24T01:48:17.138Z",
+  "title": "What You Need to Know When Taking Out Funeral Insurance | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

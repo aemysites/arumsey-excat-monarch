@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/rideshare-insurance-for-brisbane-drivers.html",
+  "path": "learn-about/my-car/rideshare-insurance-for-brisbane-drivers",
+  "timestamp": "2026-10-24T02:16:50.352Z",
+  "title": "Rideshare Insurance For Drivers | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

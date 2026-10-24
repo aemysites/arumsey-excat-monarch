@@ -1,0 +1,66 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + link + text",
+    "purpose": "teaser cards linking to guide/article pages"
+  },
+  "contentPattern": {
+    "structure": "one row per card: optional image cell | body cell (optional icon image, short eyebrow tag paragraph, heading, text, link/button paragraphs)"
+  },
+  "options": [
+    {
+      "class": "image-orange-light",
+      "label": "Image Orange Light"
+    },
+    {
+      "class": "plan",
+      "label": "Plan"
+    },
+    {
+      "class": "orange-shadow",
+      "label": "Orange Shadow"
+    },
+    {
+      "class": "location",
+      "label": "Location"
+    },
+    {
+      "class": "cta-panel",
+      "label": "Cta Panel"
+    },
+    {
+      "class": "image-cyan-orange-light",
+      "label": "Image Cyan Orange Light"
+    },
+    {
+      "class": "cyan-image",
+      "label": "Cyan Image"
+    },
+    {
+      "class": "offers",
+      "label": "Offers"
+    }
+  ],
+  "memberVariantIds": [
+    "v_61850ea0e0f2-1",
+    "v_61850ea0e0f2-7",
+    "v_d594e81fdbeb",
+    "v_1c4ecbaafa71",
+    "v_1cabcb520bc4",
+    "v_51e29aeb19f2",
+    "v_64568a06f78c",
+    "v_b616ffbc78fd",
+    "v_c29eff99a89b-1",
+    "v_dea80c5143c6"
+  ],
+  "usage": {
+    "when": "grids of linked teaser cards (legal links, calculators, news, offers, support tiles)"
+  },
+  "reuseGuidance": "Pick the option matching the card chrome: plan (image over bordered body), orange-shadow (news tiles), location (heading band + details), cta-panel (stacked full-width buttons), offers (icon badge on top bar), image-orange-light / image-cyan-orange-light / cyan-image (centred icon cards)."
+}

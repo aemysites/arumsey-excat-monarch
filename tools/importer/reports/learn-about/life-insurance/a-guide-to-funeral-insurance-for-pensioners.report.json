@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/a-guide-to-funeral-insurance-for-pensioners.html",
+  "path": "learn-about/life-insurance/a-guide-to-funeral-insurance-for-pensioners",
+  "timestamp": "2026-10-24T01:45:59.254Z",
+  "title": "A guide to Funeral Insurance for Pensioners | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

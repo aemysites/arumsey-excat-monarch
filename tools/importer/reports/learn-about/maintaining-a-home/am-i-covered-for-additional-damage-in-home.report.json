@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/am-i-covered-for-additional-damage-in-home.html",
+  "path": "learn-about/maintaining-a-home/am-i-covered-for-additional-damage-in-home",
+  "timestamp": "2026-10-24T01:49:41.346Z",
+  "title": "Am I Covered For Accidental Damage At The Home? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

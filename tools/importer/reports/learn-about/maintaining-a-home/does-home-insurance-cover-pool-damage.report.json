@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/does-home-insurance-cover-pool-damage.html",
+  "path": "learn-about/maintaining-a-home/does-home-insurance-cover-pool-damage",
+  "timestamp": "2026-10-24T01:50:44.409Z",
+  "title": "Does home insurance cover pool damage? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/do-demerit-points-affect-car-insurance-in-australia.html",
+  "path": "learn-about/my-car/do-demerit-points-affect-car-insurance-in-australia",
+  "timestamp": "2026-10-24T01:54:42.758Z",
+  "title": "Do Demerit Points Affect Your Car Insurance in Australia? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

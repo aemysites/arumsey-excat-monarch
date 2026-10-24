@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/calculating-my-life-insurance-needs.html",
+  "path": "learn-about/life-insurance/calculating-my-life-insurance-needs",
+  "timestamp": "2026-10-24T01:46:04.596Z",
+  "title": "Calculating My Life Insurance Needs | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

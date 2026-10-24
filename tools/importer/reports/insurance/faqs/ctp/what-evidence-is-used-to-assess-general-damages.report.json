@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-evidence-is-used-to-assess-general-damages.html",
+  "path": "insurance/faqs/ctp/what-evidence-is-used-to-assess-general-damages",
+  "timestamp": "2026-10-24T02:03:27.557Z",
+  "title": "What evidence is used to assess General damages?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

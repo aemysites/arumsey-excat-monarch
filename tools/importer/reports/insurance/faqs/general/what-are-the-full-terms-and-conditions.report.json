@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/what-are-the-full-terms-and-conditions.html",
+  "path": "insurance/faqs/general/what-are-the-full-terms-and-conditions",
+  "timestamp": "2026-10-24T02:07:15.428Z",
+  "title": "What are the full Terms and conditions? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

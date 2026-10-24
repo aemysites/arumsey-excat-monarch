@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/waiting-period-and-benefit-period.html",
+  "path": "learn-about/life-insurance/waiting-period-and-benefit-period",
+  "timestamp": "2026-10-24T01:48:02.447Z",
+  "title": "Waiting Period and Benefit Period | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

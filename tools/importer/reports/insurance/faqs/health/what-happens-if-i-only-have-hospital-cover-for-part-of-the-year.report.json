@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/health/what-happens-if-i-only-have-hospital-cover-for-part-of-the-year.html",
+  "path": "insurance/faqs/health/what-happens-if-i-only-have-hospital-cover-for-part-of-the-year",
+  "timestamp": "2026-10-24T02:08:44.158Z",
+  "title": "What happens if I only have hospital cover for part of the year?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/partnerships/north-queensland-cowboys.html",
+  "path": "about-us/partnerships/north-queensland-cowboys",
+  "timestamp": "2026-10-24T02:13:17.242Z",
+  "title": "North Queensland Cowboys | Community Partnerships | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "embed-video"
+  ],
+  "importScript": "cd73baba663a"
+}

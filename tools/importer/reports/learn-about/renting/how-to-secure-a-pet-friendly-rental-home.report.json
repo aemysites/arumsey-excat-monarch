@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/renting/how-to-secure-a-pet-friendly-rental-home.html",
+  "path": "learn-about/renting/how-to-secure-a-pet-friendly-rental-home",
+  "timestamp": "2026-10-24T01:57:31.842Z",
+  "title": "How To Secure A Pet Friendly Rental Home | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

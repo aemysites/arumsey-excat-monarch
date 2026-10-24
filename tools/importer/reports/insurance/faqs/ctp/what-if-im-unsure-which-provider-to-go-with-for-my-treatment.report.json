@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-if-im-unsure-which-provider-to-go-with-for-my-treatment.html",
+  "path": "insurance/faqs/ctp/what-if-im-unsure-which-provider-to-go-with-for-my-treatment",
+  "timestamp": "2026-10-24T02:03:39.145Z",
+  "title": "What if I’m unsure which provider to go with for my treatment?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/how-does-my-home-work.html",
+  "path": "insurance/faqs/general/how-does-my-home-work",
+  "timestamp": "2026-10-24T02:05:49.449Z",
+  "title": "How does My Home work? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

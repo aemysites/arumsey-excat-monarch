@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/lifestyle/planning-ahead-for-christmas.html",
+  "path": "learn-about/lifestyle/planning-ahead-for-christmas",
+  "timestamp": "2026-10-24T01:49:06.497Z",
+  "title": "Planning for Christmas: Contents Insurance | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/why-do-I-need-to-sign-a-claim-form.html",
+  "path": "insurance/faqs/ctp/why-do-i-need-to-sign-a-claim-form",
+  "timestamp": "2026-10-24T02:04:04.940Z",
+  "title": "Why do I need to sign a claim form?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/funeral/joint-policy.html",
+  "path": "insurance/faqs/funeral/joint-policy",
+  "timestamp": "2026-10-24T02:04:27.936Z",
+  "title": "How many people can be on my Suncorp Funeral Insurance policy?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/trauma-or-tpd-cover.html",
+  "path": "insurance/faqs/life-protect/trauma-or-tpd-cover",
+  "timestamp": "2026-10-24T02:10:55.845Z",
+  "title": "When I take out Suncorp Life Protect, am I covered for trauma or total permanent disablement (TPD)?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

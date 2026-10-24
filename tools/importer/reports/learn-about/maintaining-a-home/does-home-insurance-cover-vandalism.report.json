@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/does-home-insurance-cover-vandalism.html",
+  "path": "learn-about/maintaining-a-home/does-home-insurance-cover-vandalism",
+  "timestamp": "2026-10-24T01:50:49.135Z",
+  "title": "Does Home Insurance Cover Vandalism? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

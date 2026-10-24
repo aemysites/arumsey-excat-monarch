@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-happens-when-i-accept-offer-of-settlement-ctp.html",
+  "path": "insurance/faqs/ctp/what-happens-when-i-accept-offer-of-settlement-ctp",
+  "timestamp": "2026-10-24T02:03:33.250Z",
+  "title": "What happens when I accept an offer of settlement for my CTP claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

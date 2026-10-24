@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/can-i-add-my-own-personal-home-maintenance-tasks-to-the-app.html",
+  "path": "insurance/faqs/general/can-i-add-my-own-personal-home-maintenance-tasks-to-the-app",
+  "timestamp": "2026-10-24T02:04:52.451Z",
+  "title": "Can I add my own personal home maintenance tasks to the app? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/what-are-the-different-types-or-rewards-offers.html",
+  "path": "insurance/faqs/general/what-are-the-different-types-or-rewards-offers",
+  "timestamp": "2026-10-24T02:07:12.825Z",
+  "title": "What are the different types of rewards offers? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

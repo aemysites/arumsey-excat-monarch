@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/how-do-i-receive-treatment-and-rehabilitation-of-my-injuries.html",
+  "path": "insurance/faqs/ctp/how-do-i-receive-treatment-and-rehabilitation-of-my-injuries",
+  "timestamp": "2026-10-24T02:02:47.540Z",
+  "title": "How do I receive treatment and rehabilitation of my injuries?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

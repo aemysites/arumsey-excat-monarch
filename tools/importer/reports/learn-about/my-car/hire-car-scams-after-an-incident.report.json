@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/hire-car-scams-after-an-incident.html",
+  "path": "learn-about/my-car/hire-car-scams-after-an-incident",
+  "timestamp": "2026-10-24T01:55:03.356Z",
+  "title": "How To Avoid Hire Car Scams After A Not At Fault Incident | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

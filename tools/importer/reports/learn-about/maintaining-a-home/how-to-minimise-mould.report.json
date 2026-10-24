@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/how-to-minimise-mould.html",
+  "path": "learn-about/maintaining-a-home/how-to-minimise-mould",
+  "timestamp": "2026-10-24T01:51:55.636Z",
+  "title": "How To Minimise Mould | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

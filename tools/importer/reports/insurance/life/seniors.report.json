@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/seniors.html",
+  "path": "insurance/life/seniors",
+  "timestamp": "2026-10-24T12:51:56.713Z",
+  "title": "Life Insurance for Seniors - Get a Quote | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel"
+  ],
+  "importScript": "853cd45f1cf3"
+}

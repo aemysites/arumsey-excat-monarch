@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/how-to-clean-interior.html",
+  "path": "learn-about/my-car/how-to-clean-interior",
+  "timestamp": "2026-10-24T01:55:36.008Z",
+  "title": "How to Clean Your Car Interior | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/how-exercise-physiologists-help-you-exercise-right.html",
+  "path": "learn-about/injury-recovery-and-ctp/how-exercise-physiologists-help-you-exercise-right",
+  "timestamp": "2026-10-24T01:45:11.656Z",
+  "title": "How Exercise Physiologists Help You Exercise Right | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/contact-us/barristers-professional-indemnity.html",
+  "path": "contact-us/barristers-professional-indemnity",
+  "timestamp": "2026-10-24T01:20:58.029Z",
+  "title": "Barristers Professional Indemnity",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "columns-contact",
+    "columns-links"
+  ],
+  "importScript": "cd73baba663a"
+}

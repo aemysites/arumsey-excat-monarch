@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/funeral/claims.html",
+  "path": "insurance/life/funeral/claims",
+  "timestamp": "2026-10-24T01:40:06.441Z",
+  "title": "Funeral Insurance - Make A Claim Online | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/life/funeral/claims/make-a-claim",
+    "fragments/insurance/life/funeral/claims/track-a-claim",
+    "fragments/insurance/life/funeral/claims/claims-philosophy"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance.html",
+  "path": "learn-about/life-insurance",
+  "timestamp": "2026-10-24T01:45:52.754Z",
+  "title": "Life, Income & Funeral Articles | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label",
+    "columns-teaser",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

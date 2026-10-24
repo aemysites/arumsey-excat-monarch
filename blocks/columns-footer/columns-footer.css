@@ -1,0 +1,64 @@
+/* columns-footer: structural layout only; brand styling comes from the design pass */
+.columns-footer .columns-footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.columns-footer .columns-footer-row + .columns-footer-row {
+  margin-top: 16px;
+}
+
+.columns-footer .columns-footer-col {
+  min-width: 0;
+}
+
+.columns-footer .columns-footer-col > :first-child {
+  margin-top: 0;
+}
+
+/* social: inline row of round icon links */
+.columns-footer.social .columns-footer-row {
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.columns-footer.social .columns-footer-col {
+  flex: 0 0 auto;
+}
+
+.columns-footer.social ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns-footer.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.columns-footer.social a img,
+.columns-footer.social a .icon {
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .columns-footer:not(.social) .columns-footer-row {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .columns-footer:not(.social) .columns-footer-col {
+    flex: 1 1 0;
+  }
+}

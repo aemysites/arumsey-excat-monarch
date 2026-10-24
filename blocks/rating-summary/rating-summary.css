@@ -1,0 +1,245 @@
+/* rating-summary: review badge, star meter, score and review-count link */
+.rating-summary {
+  --rating-summary-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 16'%3E%3Cpath fill='%23ffcd05' d='M8.5 0l2.4 5.3 6.1.6-4.4 4.1 1.2 6-5.3-2.9L3.2 16l1.2-6L0 5.9l6.1-.6z'/%3E%3C/svg%3E");
+  --rating-summary-star-empty: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-0.6 -0.6 18.2 17.2'%3E%3Cpath fill='none' stroke='%23ffcd05' stroke-width='1' stroke-linejoin='round' d='M8.5 0l2.4 5.3 6.1.6-4.4 4.1 1.2 6-5.3-2.9L3.2 16l1.2-6L0 5.9l6.1-.6z'/%3E%3C/svg%3E");
+  --rating-summary-star-width: 17px;
+  --rating-summary-star-height: 16px;
+  --rating-summary-star-pitch: 24.25px;
+
+  padding: 0 0 20px;
+  color: rgb(0 0 0);
+  text-align: center;
+}
+
+.rating-summary .rating-summary-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-summary .rating-summary-badge {
+  margin: 10px 30px 10px 0;
+  line-height: 0;
+}
+
+.rating-summary .rating-summary-badge img {
+  display: block;
+  width: 112px;
+  max-width: none;
+  height: auto;
+}
+
+.rating-summary .rating-summary-rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.rating-summary .rating-summary-value {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding-left: 10px;
+}
+
+/* star strip: outlined stars, with filled stars cropped to the score */
+.rating-summary .rating-summary-stars {
+  --rating-summary-strip: calc(var(--rating-summary-star-pitch) * (var(--rating-summary-star-count, 5) - 1) + var(--rating-summary-star-width));
+
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: var(--rating-summary-strip);
+  height: var(--rating-summary-star-height);
+  background: var(--rating-summary-star-empty) 0 0 / var(--rating-summary-star-width) var(--rating-summary-star-height) space no-repeat;
+}
+
+.rating-summary .rating-summary-stars-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  overflow: hidden;
+}
+
+.rating-summary .rating-summary-stars-fill::before {
+  content: '';
+  display: block;
+  width: var(--rating-summary-strip);
+  height: var(--rating-summary-star-height);
+  background: var(--rating-summary-star) 0 0 / var(--rating-summary-star-width) var(--rating-summary-star-height) space no-repeat;
+}
+
+.rating-summary .rating-summary-score {
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+.rating-summary .rating-summary-score[hidden] {
+  display: none;
+}
+
+.rating-summary a.rating-summary-count,
+.rating-summary .rating-summary-count {
+  margin: 10px;
+  color: var(--link-color);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.rating-summary a.rating-summary-count:hover {
+  text-decoration: underline;
+}
+
+/* the source shows only "1770 Car Reviews"; keep "Read all" for screen readers */
+.rating-summary .rating-summary-count-prefix {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* compact: key/value form (no badge, no intro), left-aligned teal stars, "4.3" and "(1770)" */
+.rating-summary.rating-summary-compact {
+  --rating-summary-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='%23006f66' d='M24.8676481,9.0008973 C24.7082329,8.54565507 24.2825324,8.23189792 23.7931772,8.20897226 L16.1009423,8.20897226 L13.658963,0.793674161 C13.4850788,0.296529881 12.9965414,-0.0267985214 12.4623931,0.00174912135 L12.4623931,0.00174912135 C11.9394964,-0.00194214302 11.4747239,0.328465149 11.3146628,0.81767189 L8.87268352,8.23296999 L1.20486846,8.23296999 C0.689809989,8.22949161 0.230279943,8.55030885 0.0640800798,9.0294023 C-0.102119784,9.50849575 0.0623083246,10.0383495 0.472274662,10.3447701 L6.69932193,14.9763317 L4.25734261,22.4396253 C4.08483744,22.9295881 4.25922828,23.4727606 4.68662933,23.7767181 C5.11403038,24.0806756 5.69357086,24.0736812 6.11324689,23.7595003 L12.6333317,18.9599546 L19.1778362,23.7595003 C19.381674,23.9119158 19.6299003,23.9960316 19.8860103,23.9994776 C20.2758842,24.0048539 20.6439728,23.8232161 20.8724402,23.5127115 C21.1009077,23.202207 21.1610972,22.8017824 21.0337405,22.4396253 L18.5917612,14.9763317 L24.6967095,10.3207724 C25.0258477,9.95783882 25.0937839,9.43328063 24.8676481,9.0008973 Z'/%3E%3C/svg%3E");
+  --rating-summary-star-empty: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='%23a7a7a7' d='M24.8676481,9.0008973 C24.7082329,8.54565507 24.2825324,8.23189792 23.7931772,8.20897226 L16.1009423,8.20897226 L13.658963,0.793674161 C13.4850788,0.296529881 12.9965414,-0.0267985214 12.4623931,0.00174912135 L12.4623931,0.00174912135 C11.9394964,-0.00194214302 11.4747239,0.328465149 11.3146628,0.81767189 L8.87268352,8.23296999 L1.20486846,8.23296999 C0.689809989,8.22949161 0.230279943,8.55030885 0.0640800798,9.0294023 C-0.102119784,9.50849575 0.0623083246,10.0383495 0.472274662,10.3447701 L6.69932193,14.9763317 L4.25734261,22.4396253 C4.08483744,22.9295881 4.25922828,23.4727606 4.68662933,23.7767181 C5.11403038,24.0806756 5.69357086,24.0736812 6.11324689,23.7595003 L12.6333317,18.9599546 L19.1778362,23.7595003 C19.381674,23.9119158 19.6299003,23.9960316 19.8860103,23.9994776 C20.2758842,24.0048539 20.6439728,23.8232161 20.8724402,23.5127115 C21.1009077,23.202207 21.1610972,22.8017824 21.0337405,22.4396253 L18.5917612,14.9763317 L24.6967095,10.3207724 C25.0258477,9.95783882 25.0937839,9.43328063 24.8676481,9.0008973 Z'/%3E%3C/svg%3E");
+  --rating-summary-star-width: 20px;
+  --rating-summary-star-height: 20px;
+  --rating-summary-star-pitch: 21px;
+
+  padding: 0;
+  text-align: start;
+}
+
+.rating-summary.rating-summary-compact .rating-summary-summary,
+.rating-summary.rating-summary-compact .rating-summary-rating {
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rating-summary.rating-summary-compact .rating-summary-rating {
+  min-height: 26px;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.rating-summary.rating-summary-compact .rating-summary-value {
+  margin: 0;
+  padding: 3px 0;
+}
+
+.rating-summary.rating-summary-compact .rating-summary-stars {
+  margin-right: 10px;
+}
+
+.rating-summary.rating-summary-compact .rating-summary-score,
+.rating-summary.rating-summary-compact a.rating-summary-count {
+  color: rgb(0 111 102);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
+  text-decoration: underline;
+}
+
+.rating-summary.rating-summary-compact .rating-summary-score {
+  margin: 0 4.3px 0 0;
+}
+
+.rating-summary.rating-summary-compact a.rating-summary-count {
+  margin: 0;
+}
+
+/* intro-text: badge + stacked rating beside a heading and paragraphs */
+.rating-summary.intro-text {
+  padding: 0;
+}
+
+.rating-summary.intro-text .rating-summary-summary {
+  padding: 0 0 20px;
+}
+
+.rating-summary.intro-text .rating-summary-badge {
+  margin: 10px 0 0;
+}
+
+.rating-summary.intro-text .rating-summary-rating {
+  flex-flow: column nowrap;
+}
+
+.rating-summary.intro-text .rating-summary-value {
+  flex-direction: column;
+  gap: 32px;
+  margin: 13px 10px 0;
+  padding: 0;
+}
+
+.rating-summary.intro-text .rating-summary-score {
+  margin: 0;
+}
+
+.rating-summary.intro-text a.rating-summary-count {
+  margin: 0 10px 10px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.rating-summary.intro-text .rating-summary-intro {
+  text-align: start;
+}
+
+.rating-summary.intro-text .rating-summary-intro > :first-child {
+  margin-top: 0;
+}
+
+.rating-summary.intro-text .rating-summary-intro :is(h2, h3, h4) {
+  margin: 0 0 20px;
+  color: var(--text-color);
+  font-size: 32.256px;
+  line-height: 38.7072px;
+}
+
+.rating-summary.intro-text .rating-summary-intro p {
+  margin: 0 0 10px;
+}
+
+@media (width >= 900px) {
+  .rating-summary .rating-summary-summary {
+    flex-direction: row;
+  }
+
+  .rating-summary.intro-text {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 -8px;
+  }
+
+  .rating-summary.intro-text .rating-summary-summary {
+    box-sizing: border-box;
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 8px 20px;
+  }
+
+  .rating-summary.intro-text .rating-summary-badge {
+    margin: 10px 30px 10px 0;
+  }
+
+  .rating-summary.intro-text .rating-summary-intro {
+    box-sizing: border-box;
+    flex: 1 1 75%;
+    min-width: 0;
+    padding: 0 8px;
+  }
+
+  /* source keeps the copy in a two-thirds column beside the quote button */
+  .rating-summary.intro-text .rating-summary-intro p {
+    max-width: calc((100% + 16px) * 2 / 3 - 16px);
+  }
+}

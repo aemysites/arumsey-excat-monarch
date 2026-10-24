@@ -1,0 +1,151 @@
+/* Carousel Testimonial - values from suncorp.com.au #ctp-claims-review (slick carousel) */
+.carousel-testimonial .carousel-testimonial-viewport {
+  position: relative;
+}
+
+/* slick-list: 30px side padding, cards peek into it */
+.carousel-testimonial .carousel-testimonial-slides {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 35px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel-testimonial .carousel-testimonial-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* sg-Carousel-item + inner sg-Cell (padding 20px) */
+.carousel-testimonial .carousel-testimonial-slide {
+  display: flex;
+  flex: 0 0 calc(100% - 10px);
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 20px;
+  scroll-snap-align: start;
+  border: 1px solid #c6c6b4;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 17.136px;
+  font-weight: 400;
+  line-height: 25.704px;
+  text-align: left;
+}
+
+/* star row: 5 x 28.66px icons, grid row margin 0 -8px, 20px gap to quote */
+.carousel-testimonial .carousel-testimonial-rating {
+  display: flex;
+  gap: 0;
+  margin: 0 -8px 30px;
+  line-height: 1;
+}
+
+.carousel-testimonial .carousel-testimonial-star {
+  display: block;
+  width: 28.66px;
+  height: 28.2px;
+  overflow: hidden;
+  font-size: 0;
+  color: transparent;
+  background-color: #dadada;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1.8l3.05 6.53 7.15.8-5.32 4.88 1.47 7.06L12 17.55l-6.35 3.52 1.47-7.06L1.8 9.13l7.15-.8z'/%3E%3C/svg%3E") center / 25px 25px no-repeat;
+}
+
+.carousel-testimonial .carousel-testimonial-star.is-full {
+  background-color: var(--brand-yellow);
+}
+
+.carousel-testimonial .carousel-testimonial-star.is-half {
+  background: linear-gradient(90deg, var(--brand-yellow) 50%, #dadada 50%);
+}
+
+.carousel-testimonial .carousel-testimonial-quote {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-testimonial .carousel-testimonial-quote p {
+  margin: 0 0 10px;
+}
+
+.carousel-testimonial .carousel-testimonial-author {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+/* slick arrows: 30x30 at top right, above the list */
+.carousel-testimonial .carousel-testimonial-prev,
+.carousel-testimonial .carousel-testimonial-next {
+  position: absolute;
+  top: -45px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--link-color);
+  border-radius: 0;
+  background-color: var(--background-color);
+  box-shadow: var(--button-shadow);
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.carousel-testimonial .carousel-testimonial-prev {
+  right: 55px;
+}
+
+.carousel-testimonial .carousel-testimonial-next {
+  right: 20px;
+}
+
+.carousel-testimonial .carousel-testimonial-prev::after,
+.carousel-testimonial .carousel-testimonial-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8.5 4.5 16 12l-7.5 7.5' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-testimonial .carousel-testimonial-prev::after {
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.carousel-testimonial .carousel-testimonial-prev:focus-visible,
+.carousel-testimonial .carousel-testimonial-next:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+/* slick-disabled */
+.carousel-testimonial .carousel-testimonial-prev:disabled,
+.carousel-testimonial .carousel-testimonial-next:disabled {
+  border-style: dashed;
+  background-color: rgb(0 140 128 / 20%);
+  box-shadow: none;
+  cursor: default;
+}
+
+.carousel-testimonial:not(.is-scrollable) .carousel-testimonial-prev,
+.carousel-testimonial:not(.is-scrollable) .carousel-testimonial-next {
+  display: none;
+}
+
+/* large screen: 3 slides to show (370px cards in a 1200px list) */
+@media (width >= 900px) {
+  .carousel-testimonial .carousel-testimonial-slide {
+    flex-basis: calc(100% / 3 - 10px);
+  }
+}

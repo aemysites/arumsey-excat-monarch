@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/common-life-insurance-terms.html",
+  "path": "learn-about/life-insurance/common-life-insurance-terms",
+  "timestamp": "2026-10-24T01:46:14.453Z",
+  "title": "Common Life Insurance Terms and Definitions | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

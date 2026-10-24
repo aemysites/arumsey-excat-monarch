@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/what-insurance-do-i-need-when-renovating.html",
+  "path": "learn-about/maintaining-a-home/what-insurance-do-i-need-when-renovating",
+  "timestamp": "2026-10-24T01:53:27.396Z",
+  "title": "Do I need insurance when renovating my home? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

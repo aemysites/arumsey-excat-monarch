@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/how-to-prepare-for-a-flood.html",
+  "path": "learn-about/maintaining-a-home/how-to-prepare-for-a-flood",
+  "timestamp": "2026-10-24T01:51:58.700Z",
+  "title": "How to Prepare for a Flood | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

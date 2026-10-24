@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/health/do-i-need-hospital-cover-for-the-entire-year.html",
+  "path": "insurance/faqs/health/do-i-need-hospital-cover-for-the-entire-year",
+  "timestamp": "2026-10-24T02:08:26.624Z",
+  "title": "Do I need hospital cover for the entire year?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

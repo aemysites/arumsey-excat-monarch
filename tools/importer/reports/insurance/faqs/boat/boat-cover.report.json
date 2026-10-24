@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/boat/boat-cover.html",
+  "path": "insurance/faqs/boat/boat-cover",
+  "timestamp": "2026-10-24T02:01:31.631Z",
+  "title": "What different types of cover can I choose from, and what is the difference between them?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

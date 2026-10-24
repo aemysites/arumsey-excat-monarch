@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/lightning.html",
+  "path": "home-contents-explained/events/lightning",
+  "timestamp": "2026-10-24T01:27:55.948Z",
+  "title": "Lightning | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

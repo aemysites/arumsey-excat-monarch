@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/what-compensation-can-I-claim-for-car-accident-injury.html",
+  "path": "learn-about/injury-recovery-and-ctp/what-compensation-can-i-claim-for-car-accident-injury",
+  "timestamp": "2026-10-24T01:45:42.762Z",
+  "title": "What Can I Claim If I’m Injured In A Car Accident? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

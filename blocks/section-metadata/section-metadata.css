@@ -1,0 +1,4 @@
+/* the block is removed once decorated; keep it hidden until then */
+.section-metadata {
+  display: none;
+}

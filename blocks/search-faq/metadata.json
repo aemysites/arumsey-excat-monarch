@@ -1,0 +1,22 @@
+{
+  "variantName": "search-faq",
+  "baseBlock": "search",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text",
+    "purpose": "FAQ search box with heading that filters FAQ items on the page or searches a query index"
+  },
+  "contentPattern": {
+    "structure": "content rows (heading, intro); config rows [source] [query-index link, optional], [label], [placeholder], [button], [no results] [message], [limit] [10]. Without source it filters details / .accordion-item / .faq-item elements in main"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_7c5b602d0168"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use above FAQ accordions or as an FAQ search entry point."
+}

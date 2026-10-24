@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/why-Glasgow-was-desperate-to-return-west.html",
+  "path": "learn-about/teamgirls/why-glasgow-was-desperate-to-return-west",
+  "timestamp": "2026-10-24T02:00:20.150Z",
+  "title": "Why Glasgow was ‘desperate’ to return west | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

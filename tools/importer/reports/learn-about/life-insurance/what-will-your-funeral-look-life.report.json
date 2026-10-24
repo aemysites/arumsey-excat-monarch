@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/what-will-your-funeral-look-life.html",
+  "path": "learn-about/life-insurance/what-will-your-funeral-look-life",
+  "timestamp": "2026-10-24T01:48:11.714Z",
+  "title": "What Will Your Funeral Look Like | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

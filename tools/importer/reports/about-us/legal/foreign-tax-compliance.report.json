@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/legal/foreign-tax-compliance.html",
+  "path": "about-us/legal/foreign-tax-compliance",
+  "timestamp": "2026-10-24T01:19:55.997Z",
+  "title": "Foreign Account Tax Compliance Act | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "table-comparison"
+  ],
+  "importScript": "cd73baba663a"
+}

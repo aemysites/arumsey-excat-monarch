@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/car/comprehensive.html",
+  "path": "insurance/car/comprehensive",
+  "timestamp": "2026-10-24T12:52:47.434Z",
+  "title": "Comprehensive Car Insurance Quotes Online | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "hero-banner",
+    "columns-media",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "cards-checklist",
+    "rating-summary"
+  ],
+  "importScript": "853cd45f1cf3"
+}

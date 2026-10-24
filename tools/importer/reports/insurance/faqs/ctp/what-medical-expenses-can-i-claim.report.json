@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-medical-expenses-can-i-claim.html",
+  "path": "insurance/faqs/ctp/what-medical-expenses-can-i-claim",
+  "timestamp": "2026-10-24T02:03:54.850Z",
+  "title": "What medical expenses can I claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

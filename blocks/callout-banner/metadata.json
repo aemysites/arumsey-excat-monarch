@@ -1,0 +1,48 @@
+{
+  "variantName": "callout-banner",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "link + text",
+    "purpose": "notice panel with an icon/image panel beside a heading, text and links (e.g. PDS / policy booklet notices, annual report link)"
+  },
+  "contentPattern": {
+    "structure": "one row per callout; cells: [icon or image (optional)] [heading, text, links; or a /fragments/ link] [action link (optional)]. A single link makes the whole panel clickable with a chevron; with the button option the last link renders as a button"
+  },
+  "options": [
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "light",
+      "label": "Light"
+    },
+    {
+      "class": "button",
+      "label": "Button"
+    },
+    {
+      "class": "image-light",
+      "label": "Image Light"
+    },
+    {
+      "class": "image-light-2",
+      "label": "Image Light 2"
+    }
+  ],
+  "memberVariantIds": [
+    "v_9f3b9842dd7d",
+    "v_c29eff99a89b",
+    "v_08a56397bf5f",
+    "v_0fe97976e726-8",
+    "v_3065156cb82c-3",
+    "v_abc401e0106d"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use for highlighted notices pointing to documents or further reading. Options: image (icon panel), light (light bordered panel), button (link as button), image-light / image-light-2 (light panel with inline icon)."
+}

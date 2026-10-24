@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/customer-remediation.html",
+  "path": "insurance/customer-remediation",
+  "timestamp": "2026-10-24T01:35:03.954Z",
+  "title": "Customer Remediation | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "cards-feature",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/future-of-cars/electric-cars-in-australia.html",
+  "path": "learn-about/future-of-cars/electric-cars-in-australia",
+  "timestamp": "2026-10-24T01:43:34.740Z",
+  "title": "Your Guide To Buying An Electric Car | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

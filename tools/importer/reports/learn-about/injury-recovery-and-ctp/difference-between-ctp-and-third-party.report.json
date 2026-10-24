@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/difference-between-ctp-and-third-party.html",
+  "path": "learn-about/injury-recovery-and-ctp/difference-between-ctp-and-third-party",
+  "timestamp": "2026-10-24T12:54:04.231Z",
+  "title": "How do compulsory third party and third party car insurance differ? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "853cd45f1cf3"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/lifestyle/seven-family-holiday-locations.html",
+  "path": "learn-about/lifestyle/seven-family-holiday-locations",
+  "timestamp": "2026-10-24T01:49:13.537Z",
+  "title": "Seven Great Spots For A Family Holiday | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

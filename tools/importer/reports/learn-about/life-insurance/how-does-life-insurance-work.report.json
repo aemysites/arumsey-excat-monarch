@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/how-does-life-insurance-work.html",
+  "path": "learn-about/life-insurance/how-does-life-insurance-work",
+  "timestamp": "2026-10-24T01:46:49.738Z",
+  "title": "How does Life Insurance work in Australia? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

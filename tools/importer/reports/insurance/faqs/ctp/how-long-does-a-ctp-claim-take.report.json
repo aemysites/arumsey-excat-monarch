@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/how-long-does-a-ctp-claim-take.html",
+  "path": "insurance/faqs/ctp/how-long-does-a-ctp-claim-take",
+  "timestamp": "2026-10-24T02:02:55.315Z",
+  "title": "How long does a CTP claim take?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

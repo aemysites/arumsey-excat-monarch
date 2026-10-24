@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/i-am-having-technical-issues.html",
+  "path": "insurance/faqs/general/i-am-having-technical-issues",
+  "timestamp": "2026-10-24T02:06:29.247Z",
+  "title": "I am having technical issues | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

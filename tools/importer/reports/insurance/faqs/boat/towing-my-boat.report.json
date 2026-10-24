@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/boat/towing-my-boat.html",
+  "path": "insurance/faqs/boat/towing-my-boat",
+  "timestamp": "2026-10-24T02:01:47.831Z",
+  "title": "Am I covered if I am towing my boat and I hit another car, or reverse into a parked car causing damage?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

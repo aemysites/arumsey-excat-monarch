@@ -1,0 +1,37 @@
+{
+  "variantName": "columns-teaser",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button + text + link",
+    "purpose": "Boxed expandable question teaser (default), framed image + text promo (grey) and framed icon-link row (shadow)"
+  },
+  "contentPattern": {
+    "structure": "default: first cell is the question; the remaining cells or rows are the answer (text, links), or a single link to a /fragments/ path that is loaded on first expand. grey: one row with an image cell and a text cell (heading, text, CTA). shadow: one row of cells, each an icon + link",
+    "cells": [
+      "question / media / link group",
+      "answer / text"
+    ]
+  },
+  "options": [
+    {
+      "class": "grey",
+      "label": "Grey"
+    },
+    {
+      "class": "shadow",
+      "label": "Shadow"
+    }
+  ],
+  "memberVariantIds": [
+    "v_aa6e3680bd21",
+    "v_57dd7cb53cc7",
+    "v_c6747b4ceb76"
+  ],
+  "usage": "Single FAQ teaser questions on claims and FAQ pages (23 pages); a resilience promo panel; a quick-actions icon link bar on the CTP page.",
+  "reuseGuidance": "Use the default for one standalone expandable question; use an accordion block for a list of questions. `grey` is an image + text promo in a framed box; `shadow` is a framed row of icon links."
+}

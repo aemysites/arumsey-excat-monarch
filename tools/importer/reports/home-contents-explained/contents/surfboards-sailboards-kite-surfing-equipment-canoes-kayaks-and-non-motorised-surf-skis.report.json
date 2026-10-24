@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/surfboards-sailboards-kite-surfing-equipment-canoes-kayaks-and-non-motorised-surf-skis.html",
+  "path": "home-contents-explained/contents/surfboards-sailboards-kite-surfing-equipment-canoes-kayaks-and-non-motorised-surf-skis",
+  "timestamp": "2026-10-24T01:24:54.252Z",
+  "title": "Surfboards, sailboards, kite surfing equipment, canoes, kayaks and non-motorised surf skis | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

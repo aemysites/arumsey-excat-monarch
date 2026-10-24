@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance.html",
+  "path": "insurance/extreme-weather-assistance",
+  "timestamp": "2026-10-24T12:51:05.103Z",
+  "title": "Support After Severe Weather Events | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "tag-label",
+    "tag-label",
+    "accordion-panel",
+    "cards-checklist",
+    "cards-checklist"
+  ],
+  "importScript": "853cd45f1cf3"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/claims/car-third-party-insurance.html",
+  "path": "insurance/claims/car-third-party-insurance",
+  "timestamp": "2026-10-24T01:34:00.354Z",
+  "title": "Make an Insurance Claim Online | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "columns-links",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/claims/car-third-party-insurance/make-a-claim",
+    "fragments/insurance/claims/car-third-party-insurance/track-your-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

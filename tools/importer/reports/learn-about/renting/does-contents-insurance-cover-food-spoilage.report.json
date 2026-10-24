@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/renting/does-contents-insurance-cover-food-spoilage.html",
+  "path": "learn-about/renting/does-contents-insurance-cover-food-spoilage",
+  "timestamp": "2026-10-24T01:57:25.800Z",
+  "title": "Does Renters Insurance Cover Food Spoilage? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

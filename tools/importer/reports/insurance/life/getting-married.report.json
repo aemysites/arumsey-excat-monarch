@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/getting-married.html",
+  "path": "insurance/life/getting-married",
+  "timestamp": "2026-10-24T02:14:03.638Z",
+  "title": "Life Insurance Guide for Married Couples | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "hero-banner",
+    "hero-banner",
+    "hero-banner",
+    "embed-video",
+    "cards-feature",
+    "columns-media",
+    "columns-media"
+  ],
+  "importScript": "cd73baba663a"
+}

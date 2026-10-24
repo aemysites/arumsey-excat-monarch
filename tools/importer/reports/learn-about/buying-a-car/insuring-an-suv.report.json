@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/buying-a-car/insuring-an-SUV.html",
+  "path": "learn-about/buying-a-car/insuring-an-suv",
+  "timestamp": "2026-10-24T01:42:43.242Z",
+  "title": "Insuring An SUV – Car Insurance Guide | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

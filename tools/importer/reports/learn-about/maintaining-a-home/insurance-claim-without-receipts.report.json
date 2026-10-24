@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/insurance-claim-without-receipts.html",
+  "path": "learn-about/maintaining-a-home/insurance-claim-without-receipts",
+  "timestamp": "2026-10-24T01:52:17.842Z",
+  "title": "Making an Insurance Claim Without Receipts | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,32 @@
+{
+  "variantName": "article-list",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "text + link + image + heading + list",
+    "purpose": "article listing fed by the site page index (/query-index.json)"
+  },
+  "contentPattern": {
+    "structure": "no authored cards; optional key/value rows: index (default /query-index.json), path (folder to list; default the current page folder, then its parent), template, limit (page size; 6 hub / 4 latest), title (latest heading), see all (link for the latest list)"
+  },
+  "options": [
+    {
+      "class": "latest",
+      "label": "Latest"
+    }
+  ],
+  "memberVariantIds": [
+    "v_61850ea0e0f2-5",
+    "v_61850ea0e0f2-12",
+    "v_61850ea0e0f2-20",
+    "v_61850ea0e0f2-21"
+  ],
+  "usage": {
+    "when": "article hub pages (Most Recent / Search tabs + Load more) and the article sidebar \"Latest articles\" list"
+  },
+  "reuseGuidance": "Use the default on hub pages; add latest in the sidebar section. Pages must be in the query index with title, description, image and a date (date/publishDate, else lastModified)."
+}

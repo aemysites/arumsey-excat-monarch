@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/5-common-incidents-where-personal-valuables-insurance-can-help.html",
+  "path": "learn-about/maintaining-a-home/5-common-incidents-where-personal-valuables-insurance-can-help",
+  "timestamp": "2026-10-24T01:49:30.360Z",
+  "title": "How Personal Valuables Insurance Can Help With Accidents | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

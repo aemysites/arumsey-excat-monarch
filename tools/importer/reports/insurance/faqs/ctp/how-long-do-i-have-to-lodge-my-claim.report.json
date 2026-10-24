@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/how-long-do-i-have-to-lodge-my-claim.html",
+  "path": "insurance/faqs/ctp/how-long-do-i-have-to-lodge-my-claim",
+  "timestamp": "2026-10-24T02:02:52.428Z",
+  "title": "How long do I have to lodge my claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,42 @@
+{
+  "variantName": "cards-plan",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + heading + link",
+    "purpose": "cover tier cards with a coloured header bar"
+  },
+  "contentPattern": {
+    "structure": "one row per card: header cell (optional icon, title, badge) | body cell (text, lists, horizontal rules, links). With one cell, content up to and including the first heading (plus a short badge paragraph) becomes the header"
+  },
+  "options": [
+    {
+      "class": "image-light",
+      "label": "Image Light"
+    },
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "light",
+      "label": "Light"
+    }
+  ],
+  "memberVariantIds": [
+    "v_f73275a2c466",
+    "v_00f9db94a124",
+    "v_2b055d64677c",
+    "v_57cce6f893b8",
+    "v_61850ea0e0f2-19",
+    "v_a7ade5222db1"
+  ],
+  "usage": {
+    "when": "comparing cover tiers / plan levels side by side"
+  },
+  "reuseGuidance": "image for tall centred header bars, image-light for title + badge headers with feature lists, light for centred compact tiers."
+}

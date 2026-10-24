@@ -1,0 +1,200 @@
+/* embed-video: values from suncorp.com.au .youtube-video / sg-Accordion computed styles */
+.embed-video {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 100%;
+}
+
+.embed-video .embed-video-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+/* YouTube thumbnail shown until the player loads (hqdefault is 4:3 letterboxed; cover crops the bars) */
+.embed-video .embed-video-placeholder {
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.embed-video .embed-video-media iframe,
+.embed-video .embed-video-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-video .embed-video-poster {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+.embed-video .embed-video-poster picture,
+.embed-video .embed-video-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* play button: dark rounded tile with a white triangle (source icon-video-player) */
+.embed-video .embed-video-poster::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96px;
+  height: 64px;
+  border-radius: 12px;
+  background-color: rgb(0 0 0 / 70%);
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s;
+}
+
+.embed-video .embed-video-poster::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 13px 0 13px 22px;
+  border-color: transparent transparent transparent #fff;
+  transform: translate(-40%, -50%);
+}
+
+.embed-video .embed-video-poster:hover::before {
+  background-color: rgb(0 0 0 / 85%);
+}
+
+.embed-video .embed-video-poster:focus-visible {
+  outline: 3px solid var(--brand-teal);
+  outline-offset: -3px;
+}
+
+.embed-video .embed-video-body > :first-child,
+.embed-video .embed-video-header > :first-child {
+  margin-top: 0;
+}
+
+.embed-video .embed-video-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* heading under the video: sg-Type--heading5 */
+.embed-video .embed-video-body :is(h2, h3, h4) {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+.embed-video .embed-video-body p {
+  margin: 0 0 20px;
+}
+
+/* transcript toggle: sg-Accordion-label */
+.embed-video .embed-video-body > .embed-video-transcript {
+  margin: 0 0 10px;
+}
+
+.embed-video .embed-video-transcript-toggle {
+  all: unset;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0 0 30px;
+  border-radius: 4px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.embed-video .embed-video-transcript-toggle::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  border: 1px solid currentcolor;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.embed-video .embed-video-transcript-toggle[aria-expanded="true"]::before {
+  content: "\2212";
+}
+
+.embed-video .embed-video-transcript-toggle:hover {
+  color: var(--link-hover-color);
+}
+
+.embed-video .embed-video-transcript-toggle:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+.embed-video .embed-video-transcript-panel {
+  padding: 10px 10px 0;
+}
+
+.embed-video .embed-video-transcript-panel p {
+  margin: 0;
+}
+
+.embed-video .embed-video-transcript-panel[hidden] {
+  display: none;
+}
+
+/* light: framed panel with the text under the video (sg-Flextable-cell--neutral) */
+.embed-video.light {
+  padding: 15px;
+  border: 1px solid #dcdcd1;
+  background-color: var(--light-color);
+}
+
+/* image: poster tile, teal heading under it */
+.embed-video.image {
+  gap: 20px;
+}
+
+.embed-video.image .embed-video-body :is(h2, h3, h4) {
+  margin-bottom: 10px;
+  color: var(--brand-teal);
+}
+
+/* dark: centred heading above the video */
+.embed-video.dark {
+  gap: 20px;
+}
+
+.embed-video.dark .embed-video-header :is(h1, h2, h3, h4) {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.37;
+  color: var(--heading-color);
+  text-align: center;
+}

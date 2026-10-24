@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/terminal-illness.html",
+  "path": "insurance/faqs/life-protect/terminal-illness",
+  "timestamp": "2026-10-24T02:10:52.730Z",
+  "title": "Will I still receive my payout if I am diagnosed with a terminal illness?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

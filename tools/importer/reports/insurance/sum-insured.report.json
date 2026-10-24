@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/sum-insured.html",
+  "path": "insurance/sum-insured",
+  "timestamp": "2026-10-24T01:42:04.232Z",
+  "title": "Sum Insured | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

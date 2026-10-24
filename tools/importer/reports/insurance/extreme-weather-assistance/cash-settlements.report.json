@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/cash-settlements.html",
+  "path": "insurance/extreme-weather-assistance/cash-settlements",
+  "timestamp": "2026-10-24T01:35:22.312Z",
+  "title": "A Guide to Cash Settlements: Benefits & Process | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "columns-media",
+    "tag-label",
+    "tag-label",
+    "accordion-panel",
+    "cards-product"
+  ],
+  "importScript": "cd73baba663a"
+}

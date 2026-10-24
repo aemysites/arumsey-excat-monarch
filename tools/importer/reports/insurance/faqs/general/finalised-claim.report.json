@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/finalised-claim.html",
+  "path": "insurance/faqs/general/finalised-claim",
+  "timestamp": "2026-10-24T02:05:29.332Z",
+  "title": "When will my claim be finalised?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

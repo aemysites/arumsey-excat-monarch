@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents.html",
+  "path": "home-contents-explained/contents",
+  "timestamp": "2026-10-24T01:21:33.449Z",
+  "title": "Suncorp Insurance - Home & Contents Insurance Explained - Contents",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-media",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/home-contents-explained/contents/covered",
+    "fragments/home-contents-explained/contents/optional",
+    "fragments/home-contents-explained/contents/not-covered"
+  ],
+  "importScript": "cd73baba663a"
+}

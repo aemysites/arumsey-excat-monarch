@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car.html",
+  "path": "learn-about/my-car",
+  "timestamp": "2026-10-24T01:53:53.853Z",
+  "title": "My Car | Learn About | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "article-list",
+    "tag-label",
+    "columns-teaser"
+  ],
+  "importScript": "cd73baba663a"
+}

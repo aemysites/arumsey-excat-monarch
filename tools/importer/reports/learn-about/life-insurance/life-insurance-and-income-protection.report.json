@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/life-insurance-and-income-protection.html",
+  "path": "learn-about/life-insurance/life-insurance-and-income-protection",
+  "timestamp": "2026-10-24T01:47:21.945Z",
+  "title": "What is Life Insurance and Income Protection? | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

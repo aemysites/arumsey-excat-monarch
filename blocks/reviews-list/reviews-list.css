@@ -1,0 +1,107 @@
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reviews-list .reviews-list-summary > :first-child {
+  margin-top: 0;
+}
+
+.reviews-list .reviews-list-overall {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviews-list .reviews-list-score {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.reviews-list .reviews-list-stars {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.reviews-list .reviews-list-stars-empty {
+  opacity: 0.3;
+}
+
+.reviews-list .reviews-list-stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.reviews-list .reviews-list-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 400px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reviews-list .reviews-list-distribution li {
+  display: grid;
+  grid-template-columns: 60px 1fr 48px;
+  align-items: center;
+  gap: 8px;
+}
+
+.reviews-list .reviews-list-distribution-bar {
+  position: relative;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: rgb(0 0 0 / 10%);
+}
+
+.reviews-list .reviews-list-distribution-bar > span {
+  display: block;
+  height: 100%;
+  background-color: currentcolor;
+}
+
+.reviews-list .reviews-list-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reviews-list .reviews-list-review {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid rgb(0 0 0 / 15%);
+}
+
+.reviews-list .reviews-list-review-title {
+  margin: 8px 0;
+}
+
+.reviews-list .reviews-list-review-body > :last-child {
+  margin-bottom: 0;
+}
+
+@media (width >= 900px) {
+  .reviews-list .reviews-list-review {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .reviews-list .reviews-list-review-body {
+    flex: 2 1 0;
+  }
+
+  .reviews-list .reviews-list-review-details {
+    flex: 1 1 0;
+  }
+}

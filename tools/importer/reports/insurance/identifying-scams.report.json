@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/identifying-scams.html",
+  "path": "insurance/identifying-scams",
+  "timestamp": "2026-10-24T02:13:30.253Z",
+  "title": "Identifying Insurance Scams | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "embed-video",
+    "hero-title",
+    "table-comparison",
+    "tag-label",
+    "tag-label",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

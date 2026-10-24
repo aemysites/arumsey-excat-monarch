@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/home/renters.html",
+  "path": "insurance/home/renters",
+  "timestamp": "2026-10-24T12:53:36.035Z",
+  "title": "Renters Insurance | Quote & Buy Online For $50 Off | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "columns-media",
+    "accordion-panel",
+    "carousel-article",
+    "cards-checklist",
+    "rating-summary"
+  ],
+  "importScript": "853cd45f1cf3"
+}

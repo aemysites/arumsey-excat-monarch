@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/ctp/claims.html",
+  "path": "insurance/ctp/claims",
+  "timestamp": "2026-10-24T12:53:54.646Z",
+  "title": "How To Lodge Your Qld CTP Insurance Claim | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "embed-video",
+    "cards-feature",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "cards-product",
+    "carousel-article",
+    "carousel-testimonial"
+  ],
+  "importScript": "853cd45f1cf3"
+}

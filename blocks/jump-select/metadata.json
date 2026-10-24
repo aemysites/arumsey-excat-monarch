@@ -1,0 +1,22 @@
+{
+  "variantName": "jump-select",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "large",
+    "structure": "field",
+    "purpose": "dropdown picker that navigates to the chosen page"
+  },
+  "contentPattern": {
+    "structure": "a list of links (or one link per row) - each link is an option; optional config rows [label] [text] and [placeholder] [text] (default \"Please select...\")"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_027cc26645a6"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use where a list of destination pages is offered as a single select (e.g. choose an event type)."
+}

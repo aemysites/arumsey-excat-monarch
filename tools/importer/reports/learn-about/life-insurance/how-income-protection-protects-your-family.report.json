@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/how-income-protection-protects-your-family.html",
+  "path": "learn-about/life-insurance/how-income-protection-protects-your-family",
+  "timestamp": "2026-10-24T01:46:53.165Z",
+  "title": "How Income Protection Can Help You and Your Family| Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

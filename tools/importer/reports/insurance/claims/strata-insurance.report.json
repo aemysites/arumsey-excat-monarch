@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/claims/strata-insurance.html",
+  "path": "insurance/claims/strata-insurance",
+  "timestamp": "2026-10-24T01:34:28.294Z",
+  "title": "Strata Insurance Claims",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-links",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/claims/strata-insurance/make-a-claim",
+    "fragments/insurance/claims/strata-insurance/track-your-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

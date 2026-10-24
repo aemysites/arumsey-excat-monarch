@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/motorhome-caravan-and-trailer.html",
+  "path": "insurance/faqs/motorhome-caravan-and-trailer",
+  "timestamp": "2026-10-24T02:11:05.709Z",
+  "title": "Motorhome Insurance FAQs | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

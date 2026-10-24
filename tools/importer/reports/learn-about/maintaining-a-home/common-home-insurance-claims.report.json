@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/common-home-insurance-claims.html",
+  "path": "learn-about/maintaining-a-home/common-home-insurance-claims",
+  "timestamp": "2026-10-24T01:50:27.908Z",
+  "title": "Most Common Home And Contents Insurance Claims | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

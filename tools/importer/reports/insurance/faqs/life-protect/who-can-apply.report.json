@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/who-can-apply.html",
+  "path": "insurance/faqs/life-protect/who-can-apply",
+  "timestamp": "2026-10-24T02:10:58.156Z",
+  "title": "Who can apply for life insurance?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

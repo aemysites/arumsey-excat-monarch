@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/suncorp-insurance-home-assist.html",
+  "path": "home-contents-explained/home/suncorp-insurance-home-assist",
+  "timestamp": "2026-10-24T01:32:18.966Z",
+  "title": "Suncorp Insurance Home Assist | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

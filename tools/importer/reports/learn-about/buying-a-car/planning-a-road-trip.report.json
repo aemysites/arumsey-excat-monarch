@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/buying-a-car/planning-a-road-trip.html",
+  "path": "learn-about/buying-a-car/planning-a-road-trip",
+  "timestamp": "2026-10-24T01:42:51.203Z",
+  "title": "5 Tips When Planning A Road Trip in Australia | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

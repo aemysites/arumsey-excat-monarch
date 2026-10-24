@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/road-accident-treatment-plan-guide.html",
+  "path": "learn-about/injury-recovery-and-ctp/road-accident-treatment-plan-guide",
+  "timestamp": "2026-10-24T01:45:39.345Z",
+  "title": "Road Accident Treatment Plan Guide | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

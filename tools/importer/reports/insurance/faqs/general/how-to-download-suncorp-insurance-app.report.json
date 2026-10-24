@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/how-to-download-suncorp-insurance-app.html",
+  "path": "insurance/faqs/general/how-to-download-suncorp-insurance-app",
+  "timestamp": "2026-10-24T02:06:03.997Z",
+  "title": "How do I download the Suncorp Insurance App? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

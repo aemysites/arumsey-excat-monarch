@@ -1,0 +1,55 @@
+/* Suncorp brand tokens, measured from www.suncorp.com.au (migration-work/brand.json) */
+:root {
+  /* colors */
+  --background-color: #fff;
+  --text-color: #000;
+  --heading-color: #004346;
+  --link-color: #008c80;
+  --link-hover-color: #33a399;
+  --brand-teal-dark: #004346;
+  --brand-teal: #008c80;
+  --brand-teal-light: #e5f3f2;
+  --brand-yellow: #ffcd05;
+  --brand-yellow-light: #ffe582;
+  --light-color: #f2f2ee;
+  --grey-color: #f5f5f5;
+  --dark-color: #004346;
+  --border-color: #b6b3a7;
+
+  /* fonts: GT Walsheim is Suncorp's licensed font; DM Sans is the closest open match */
+  --body-font-family: 'DM Sans', dm-sans-fallback, arial, sans-serif;
+  --heading-font-family: 'DM Sans', dm-sans-fallback, arial, sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 17px;
+  --body-font-size-s: 15px;
+  --body-font-size-xs: 14px;
+  --body-line-height: 1.5;
+
+  /* heading sizes (mobile) */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* buttons */
+  --button-radius: 23px;
+  --button-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+
+  /* layout */
+  --content-max-width: 1200px;
+  --section-padding: 40px;
+}
+
+@media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 42px;
+    --heading-font-size-xl: 38px;
+    --heading-font-size-l: 32px;
+    --heading-font-size-m: 26px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 17px;
+  }
+}

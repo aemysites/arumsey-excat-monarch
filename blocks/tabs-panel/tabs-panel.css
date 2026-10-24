@@ -1,0 +1,210 @@
+/* Tabs Panel - values measured from suncorp.com.au sg-Tab (secondary, centred) */
+.tabs-panel .tabs-panel-list {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tabs-panel .tabs-panel-tab {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1px -1px 0;
+  border: 0;
+  border-bottom: 1px solid var(--brand-teal);
+  border-radius: 0;
+  padding: 20px 10px;
+  background-color: var(--brand-teal-light);
+  color: var(--brand-teal);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  white-space: normal;
+  cursor: pointer;
+}
+
+.tabs-panel .tabs-panel-tab:last-child {
+  margin-right: 0;
+}
+
+.tabs-panel .tabs-panel-tab[aria-selected='true'] {
+  position: relative;
+  z-index: 1;
+  border-bottom: 0;
+  border-left: 1px solid var(--brand-teal);
+  border-right: 1px solid var(--brand-teal);
+  background-color: var(--background-color);
+  box-shadow: inset 0 6px 0 0 var(--brand-yellow);
+}
+
+.tabs-panel .tabs-panel-tab:focus-visible {
+  outline: 2px solid var(--brand-teal-dark);
+  outline-offset: -2px;
+}
+
+.tabs-panel .tabs-panel-panel {
+  padding: 15px;
+  border: 1px solid var(--brand-teal);
+  background-color: var(--background-color);
+}
+
+.tabs-panel .tabs-panel-panel[hidden] {
+  display: none;
+}
+
+.tabs-panel .tabs-panel-panel > :first-child {
+  margin-top: 0;
+}
+
+.tabs-panel .tabs-panel-panel > :last-child {
+  margin-bottom: 0;
+}
+
+/* default panel content: icon heading centred, rule as on source */
+.tabs-panel .tabs-panel-panel > p:first-child:has(> .icon) {
+  margin: 24px 0 10px;
+  color: var(--brand-teal-dark);
+  font-size: 26.208px;
+  font-weight: 700;
+  line-height: 39.312px;
+  text-align: center;
+}
+
+.tabs-panel .tabs-panel-panel > p:first-child > .icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.tabs-panel .tabs-panel-panel .button-container {
+  text-align: center;
+}
+
+.tabs-panel .tabs-panel-panel hr {
+  margin: 40px 0 20px;
+  border: 0;
+  border-top: 1px solid #cdcbc3;
+}
+
+/* alt: separate pill buttons, unboxed panel */
+.tabs-panel.alt .tabs-panel-list {
+  gap: 10px;
+}
+
+.tabs-panel.alt .tabs-panel-tab {
+  margin: 0;
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: inherit;
+}
+
+.tabs-panel.alt .tabs-panel-tab[aria-selected='true'] {
+  border-color: currentcolor;
+  background-color: var(--light-color);
+  box-shadow: none;
+}
+
+.tabs-panel.alt .tabs-panel-panel,
+.tabs-panel.steps .tabs-panel-panel,
+.tabs-panel.tiles .tabs-panel-panel {
+  padding: 24px 0 0;
+  border: 0;
+}
+
+/* steps: centred step groups led by the authored step badge image */
+.tabs-panel.steps .tabs-panel-panel {
+  padding-top: 80px;
+  counter-reset: tabs-panel-step;
+  text-align: center;
+}
+
+.tabs-panel.steps .tabs-panel-panel :is(ul, ol) {
+  text-align: start;
+}
+
+.tabs-panel.steps .tabs-panel-step {
+  counter-increment: tabs-panel-step;
+  margin-bottom: 40px;
+}
+
+.tabs-panel.steps .tabs-panel-step > p:first-child:has(> picture) {
+  margin: 0;
+}
+
+.tabs-panel.steps .tabs-panel-step > p:first-child > picture img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.tabs-panel.steps .tabs-panel-step :is(h2, h3) {
+  margin: 20px 0 10px;
+}
+
+/* steps without an authored badge image get a drawn one */
+.tabs-panel.steps .tabs-panel-step:not(:has(> p:first-child > picture))::before {
+  content: 'Step\A' counter(tabs-panel-step);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 6px solid var(--brand-yellow);
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: var(--light-color);
+  color: var(--brand-teal-dark);
+  white-space: pre;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* tiles: inactive tabs on the warm grey; panel holds a link-tiles cards block */
+.tabs-panel.tiles .tabs-panel-tab {
+  background-color: var(--light-color);
+}
+
+.tabs-panel.tiles .tabs-panel-tab[aria-selected='true'] {
+  background-color: var(--background-color);
+}
+
+.tabs-panel.tiles .tabs-panel-panel {
+  padding-top: 0;
+}
+
+/* shadow: raised panel */
+.tabs-panel.shadow .tabs-panel-panel {
+  box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+}
+
+@media (width >= 600px) {
+  .tabs-panel .tabs-panel-tab {
+    padding: 20px 30px;
+  }
+}
+
+@media (width >= 900px) {
+  /* consecutive lists sit side by side as two columns, as on source */
+  .tabs-panel .tabs-panel-panel > ul:has(+ ul) {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding-right: 16px;
+  }
+
+  .tabs-panel .tabs-panel-panel > ul:has(+ ul) + ul {
+    margin-top: 0;
+    margin-left: 50%;
+  }
+
+  .tabs-panel .tabs-panel-panel > ul:has(+ ul) + ul + * {
+    clear: both;
+  }
+}

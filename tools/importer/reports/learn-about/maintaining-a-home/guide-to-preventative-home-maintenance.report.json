@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/guide-to-preventative-home-maintenance.html",
+  "path": "learn-about/maintaining-a-home/guide-to-preventative-home-maintenance",
+  "timestamp": "2026-10-24T01:51:12.603Z",
+  "title": "A Guide To Preventative Home Maintenance | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

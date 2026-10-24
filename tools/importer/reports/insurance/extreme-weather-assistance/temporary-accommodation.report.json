@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/temporary-accommodation.html",
+  "path": "insurance/extreme-weather-assistance/temporary-accommodation",
+  "timestamp": "2026-10-24T01:36:12.363Z",
+  "title": "Temporary Accommodation for Extreme Weather Events | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "hero-banner",
+    "columns-media",
+    "tag-label",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

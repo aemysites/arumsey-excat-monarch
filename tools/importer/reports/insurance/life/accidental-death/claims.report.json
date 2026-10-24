@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/accidental-death/claims.html",
+  "path": "insurance/life/accidental-death/claims",
+  "timestamp": "2026-10-24T01:39:36.732Z",
+  "title": "Accidental Death Insurance - Make a Claim | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/life/accidental-death/claims/make-a-claim",
+    "fragments/insurance/life/accidental-death/claims/track-a-claim",
+    "fragments/insurance/life/accidental-death/claims/claims-philosophy"
+  ],
+  "importScript": "cd73baba663a"
+}

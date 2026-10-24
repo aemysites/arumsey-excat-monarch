@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/what-is-the-rewards-cashback-process.html",
+  "path": "insurance/faqs/general/what-is-the-rewards-cashback-process",
+  "timestamp": "2026-10-24T02:07:43.020Z",
+  "title": "What is the rewards cashback process? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

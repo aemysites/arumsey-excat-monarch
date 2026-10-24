@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/laura-geitz-podcast.html",
+  "path": "learn-about/teamgirls/laura-geitz-podcast",
+  "timestamp": "2026-10-24T02:15:14.491Z",
+  "title": "Laura Geitz On Her Game Podcast | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video"
+  ],
+  "importScript": "cd73baba663a"
+}

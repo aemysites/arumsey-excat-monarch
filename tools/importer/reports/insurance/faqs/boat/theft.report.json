@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/boat/theft.html",
+  "path": "insurance/faqs/boat/theft",
+  "timestamp": "2026-10-24T02:01:45.535Z",
+  "title": "What do I need to do to make sure my boat and its contents are secured against theft?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "cards-article",
+    "cards-article"
+  ],
+  "importScript": "c5a31badb343"
+}

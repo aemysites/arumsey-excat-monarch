@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/funeral/pre-paid-funeral-plans.html",
+  "path": "insurance/faqs/funeral/pre-paid-funeral-plans",
+  "timestamp": "2026-10-24T02:04:38.488Z",
+  "title": "How are pre-paid funeral plans and funeral insurance different?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

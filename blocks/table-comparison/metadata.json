@@ -1,0 +1,60 @@
+{
+  "variantName": "table-comparison",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "table",
+    "purpose": "Accessible data/plan comparison table: column headers for plans or fields, optional row labels, tick/cross cells"
+  },
+  "contentPattern": {
+    "structure": "optional leading single-cell rows (heading, text) become the intro; the next row is the column header row (plan names, optional CTA links); each further row is one table row. The first column becomes row headers when the top-left header cell is empty or with `dark`/`image-*`. Cells holding only a tick/cross (or tick/cross icon) are marked included/not included",
+    "cells": [
+      "row label",
+      "value per column"
+    ]
+  },
+  "options": [
+    {
+      "class": "cyan-grey",
+      "label": "Cyan Grey"
+    },
+    {
+      "class": "cyan-grey-light",
+      "label": "Cyan Grey Light"
+    },
+    {
+      "class": "image-cyan-grey-light",
+      "label": "Image Cyan Grey Light"
+    },
+    {
+      "class": "dark",
+      "label": "Dark"
+    },
+    {
+      "class": "image-grey",
+      "label": "Image Grey"
+    },
+    {
+      "class": "image-cyan-grey",
+      "label": "Image Cyan Grey"
+    }
+  ],
+  "memberVariantIds": [
+    "v_4e24273e667e",
+    "v_793449e597e1",
+    "v_9ebc05d9597d",
+    "v_61850ea0e0f2-10",
+    "v_61850ea0e0f2-11",
+    "v_92202bff7d33",
+    "v_14eb93aecb1f",
+    "v_bda7a835aab2",
+    "v_c5d899746f88",
+    "v_e1e939d453e6-3"
+  ],
+  "usage": "Cover comparison tables on product pages (Classic / Classic Extras / Classic Advantages), limits tables (94 pages cyan-grey) and data tables such as FATCA institution lists.",
+  "reuseGuidance": "Use for any tabular data. `cyan-grey`/`cyan-grey-light` are plan limit tables without row labels; `image-*` and `dark` are feature comparisons with a row-label column; the default is a plain data table. Colours come from the design pass."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/partnerships/teamgirls/partners.html",
+  "path": "about-us/partnerships/teamgirls/partners",
+  "timestamp": "2026-10-24T01:20:40.757Z",
+  "title": "Partners | Team Girls | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

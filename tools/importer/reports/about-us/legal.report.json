@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/legal.html",
+  "path": "about-us/legal",
+  "timestamp": "2026-10-24T01:19:42.733Z",
+  "title": "Legal Information | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "cards-article",
+    "cards-article",
+    "cards-article",
+    "hero-title"
+  ],
+  "importScript": "cd73baba663a"
+}

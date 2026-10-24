@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/health/health-and-wellbeing-at-home.html",
+  "path": "learn-about/health/health-and-wellbeing-at-home",
+  "timestamp": "2026-10-24T02:16:02.144Z",
+  "title": "5 ways to maintain wellbeing while stuck at home | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "embed-video"
+  ],
+  "importScript": "cd73baba663a"
+}

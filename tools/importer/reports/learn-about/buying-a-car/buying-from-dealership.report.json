@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/buying-a-car/buying-from-dealership.html",
+  "path": "learn-about/buying-a-car/buying-from-dealership",
+  "timestamp": "2026-10-24T01:42:26.424Z",
+  "title": "Read This Before You Walk Into The Car Dealership | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

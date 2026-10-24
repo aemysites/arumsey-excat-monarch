@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/what-are-my-home-rewards.html",
+  "path": "insurance/faqs/general/what-are-my-home-rewards",
+  "timestamp": "2026-10-24T02:07:09.323Z",
+  "title": "What are My Home rewards? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

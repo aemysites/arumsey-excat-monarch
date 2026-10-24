@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/is-my-granny-flat-or-shed-covered-by-insurance.html",
+  "path": "learn-about/maintaining-a-home/is-my-granny-flat-or-shed-covered-by-insurance",
+  "timestamp": "2026-10-24T01:52:20.940Z",
+  "title": "Does Home Insurance Cover My Granny Flat Or Shed? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

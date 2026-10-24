@@ -1,0 +1,28 @@
+{
+  "variantName": "quick-links",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "bar of quick task or category links, optionally led by a label such as \"I want to:\""
+  },
+  "contentPattern": {
+    "structure": "a list of links or one link per row/cell; with the label option, the first row (heading or text) is the label"
+  },
+  "options": [
+    {
+      "class": "label",
+      "label": "Label"
+    }
+  ],
+  "memberVariantIds": [
+    "v_24e0f00d3c58",
+    "v_3065156cb82c-2"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use for a short row of task/category shortcuts. label option shows a leading label and pill-style links."
+}

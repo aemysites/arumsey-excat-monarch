@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/health/does-suncorp-extras-cover-help-me-avoid-the-mls.html",
+  "path": "insurance/faqs/health/does-suncorp-extras-cover-help-me-avoid-the-mls",
+  "timestamp": "2026-10-24T02:08:40.924Z",
+  "title": "Does Suncorp Extras Cover help me avoid the MLS?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

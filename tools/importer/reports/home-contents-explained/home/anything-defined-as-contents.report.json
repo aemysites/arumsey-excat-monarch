@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/anything-defined-as-contents.html",
+  "path": "home-contents-explained/home/anything-defined-as-contents",
+  "timestamp": "2026-10-24T01:30:00.641Z",
+  "title": "Anything defined as contents | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

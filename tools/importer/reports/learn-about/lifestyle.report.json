@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/lifestyle.html",
+  "path": "learn-about/lifestyle",
+  "timestamp": "2026-10-24T01:48:45.196Z",
+  "title": "Lifestyle",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "article-list",
+    "tag-label",
+    "columns-teaser"
+  ],
+  "importScript": "cd73baba663a"
+}

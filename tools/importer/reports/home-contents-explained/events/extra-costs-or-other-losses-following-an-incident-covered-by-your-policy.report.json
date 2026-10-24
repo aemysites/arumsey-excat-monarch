@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/extra-costs-or-other-losses-following-an-incident-covered-by-your-policy.html",
+  "path": "home-contents-explained/events/extra-costs-or-other-losses-following-an-incident-covered-by-your-policy",
+  "timestamp": "2026-10-24T01:26:42.756Z",
+  "title": "Extra costs or other losses following an incident covered by your policy | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

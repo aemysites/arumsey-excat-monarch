@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/does-your-home-insurance-cover-fire-damage.html",
+  "path": "learn-about/maintaining-a-home/does-your-home-insurance-cover-fire-damage",
+  "timestamp": "2026-10-24T02:17:59.099Z",
+  "title": "Does My Home Insurance Cover Fire Damage? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/why-wallam-chooses-fear-over-comfort.html",
+  "path": "learn-about/teamgirls/why-wallam-chooses-fear-over-comfort",
+  "timestamp": "2026-10-24T02:00:25.450Z",
+  "title": "Why Wallam chooses fear over comfort | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

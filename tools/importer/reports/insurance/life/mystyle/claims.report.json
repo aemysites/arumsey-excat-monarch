@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/mystyle/claims.html",
+  "path": "insurance/life/mystyle/claims",
+  "timestamp": "2026-10-24T01:40:42.440Z",
+  "title": "Life Insurance Claims - Make a MyStyle Claim | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/life/mystyle/claims/make-a-claim",
+    "fragments/insurance/life/mystyle/claims/track-a-claim",
+    "fragments/insurance/life/mystyle/claims/claims-philosophy"
+  ],
+  "importScript": "cd73baba663a"
+}

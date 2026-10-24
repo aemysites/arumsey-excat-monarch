@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-is-medical-certificate-and-how-do-i-get-ctp.html",
+  "path": "insurance/faqs/ctp/what-is-medical-certificate-and-how-do-i-get-ctp",
+  "timestamp": "2026-10-24T02:03:47.892Z",
+  "title": "What is a Medical Certificate and how do I get one for my CTP claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/income-protection-cover.html",
+  "path": "insurance/faqs/income-protection/income-protection-cover",
+  "timestamp": "2026-10-24T02:09:46.822Z",
+  "title": "What is Income Protection cover?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

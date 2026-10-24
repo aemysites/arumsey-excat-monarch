@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/life-insurance-without-medical-exam.html",
+  "path": "learn-about/life-insurance/life-insurance-without-medical-exam",
+  "timestamp": "2026-10-24T01:47:33.857Z",
+  "title": "Can I Get Life Insurance Without A Medical Exam? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

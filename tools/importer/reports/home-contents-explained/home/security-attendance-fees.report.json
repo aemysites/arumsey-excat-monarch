@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/security-attendance-fees.html",
+  "path": "home-contents-explained/home/security-attendance-fees",
+  "timestamp": "2026-10-24T01:32:00.352Z",
+  "title": "Security attendance fees | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

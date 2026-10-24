@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/any-new-building-under-construction.html",
+  "path": "home-contents-explained/home/any-new-building-under-construction",
+  "timestamp": "2026-10-24T01:29:48.961Z",
+  "title": "Any new building under construction | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

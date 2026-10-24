@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/motorhome-caravan-and-trailer/types.html",
+  "path": "insurance/faqs/motorhome-caravan-and-trailer/types",
+  "timestamp": "2026-10-24T02:11:17.126Z",
+  "title": "What types of caravans does Suncorp insure?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

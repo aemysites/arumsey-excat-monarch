@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/buying-a-home/how-much-should-i-insure-my-house-for.html",
+  "path": "learn-about/buying-a-home/how-much-should-i-insure-my-house-for",
+  "timestamp": "2026-10-24T02:15:58.637Z",
+  "title": "How Much Should I Insure My House For? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

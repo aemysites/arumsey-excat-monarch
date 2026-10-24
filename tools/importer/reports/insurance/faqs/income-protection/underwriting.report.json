@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/underwriting.html",
+  "path": "insurance/faqs/income-protection/underwriting",
+  "timestamp": "2026-10-24T02:10:13.549Z",
+  "title": "What is underwriting?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

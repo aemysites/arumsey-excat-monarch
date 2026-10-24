@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/what-to-consider-when-going-for-a-weekend-getaway.html",
+  "path": "learn-about/my-car/what-to-consider-when-going-for-a-weekend-getaway",
+  "timestamp": "2026-10-24T01:56:58.930Z",
+  "title": "What to Consider When Going for a Weekend Caravan Trip | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/my-home-terms-and-conditions.html",
+  "path": "insurance/my-home-terms-and-conditions",
+  "timestamp": "2026-10-24T01:41:16.429Z",
+  "title": "My Home Terms and Conditions | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb"
+  ],
+  "importScript": "cd73baba663a"
+}

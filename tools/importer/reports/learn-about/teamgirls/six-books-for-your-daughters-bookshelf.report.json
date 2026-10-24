@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/six-books-for-your-daughters-bookshelf.html",
+  "path": "learn-about/teamgirls/six-books-for-your-daughters-bookshelf",
+  "timestamp": "2026-10-24T01:59:51.727Z",
+  "title": "6 Books For Your Daughters Bookshelf | #TeamGirls | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/life-insurance-cost-in-australia.html",
+  "path": "learn-about/life-insurance/life-insurance-cost-in-australia",
+  "timestamp": "2026-10-24T01:47:27.606Z",
+  "title": "Understanding Life Insurance Costs In Australia | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

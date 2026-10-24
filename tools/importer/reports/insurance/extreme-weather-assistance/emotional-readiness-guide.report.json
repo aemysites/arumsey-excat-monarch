@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/emotional-readiness-guide.html",
+  "path": "insurance/extreme-weather-assistance/emotional-readiness-guide",
+  "timestamp": "2026-10-24T02:14:20.455Z",
+  "title": "Emotional readiness guide",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "hero-banner",
+    "embed-video",
+    "cards-feature",
+    "tag-label",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

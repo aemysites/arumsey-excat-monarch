@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/difference-between-life-insurance-income-protection.html",
+  "path": "insurance/faqs/income-protection/difference-between-life-insurance-income-protection",
+  "timestamp": "2026-10-24T02:09:33.320Z",
+  "title": "What's the difference between life insurance and income protection?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

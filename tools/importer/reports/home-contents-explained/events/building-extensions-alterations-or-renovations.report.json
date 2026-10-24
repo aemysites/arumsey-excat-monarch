@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/building-extensions-alterations-or-renovations.html",
+  "path": "home-contents-explained/events/building-extensions-alterations-or-renovations",
+  "timestamp": "2026-10-24T01:25:53.029Z",
+  "title": "Building works | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

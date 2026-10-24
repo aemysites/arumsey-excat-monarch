@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/new-for-old-car-replacement.html",
+  "path": "learn-about/my-car/new-for-old-car-replacement",
+  "timestamp": "2026-10-24T01:56:04.314Z",
+  "title": "What Is New For Old Car Replacement? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/boat.html",
+  "path": "insurance/boat",
+  "timestamp": "2026-10-24T01:32:58.455Z",
+  "title": "Boat Insurance Quotes | Comprehensive & Third Party Cover | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "hero-banner",
+    "cards-feature",
+    "table-comparison",
+    "table-comparison",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

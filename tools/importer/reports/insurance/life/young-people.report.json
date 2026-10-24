@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/young-people.html",
+  "path": "insurance/life/young-people",
+  "timestamp": "2026-10-24T02:13:55.547Z",
+  "title": "Life Insurance for Young People - Get a Quote | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "embed-video",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

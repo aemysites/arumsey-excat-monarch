@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/services-eg-a-water-or-waste-line.html",
+  "path": "home-contents-explained/home/services-eg-a-water-or-waste-line",
+  "timestamp": "2026-10-24T01:32:12.003Z",
+  "title": "Services (eg. a water or waste line) | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/buying-funeral-insurance-guide.html",
+  "path": "learn-about/life-insurance/buying-funeral-insurance-guide",
+  "timestamp": "2026-10-24T01:46:01.737Z",
+  "title": "Step By Step Guide to Buying Funeral Insurance | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

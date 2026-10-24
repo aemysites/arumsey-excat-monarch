@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/bushfires-storms-storm-surges-floods-tsunamis-first-72-hours-of-cover.html",
+  "path": "home-contents-explained/events/bushfires-storms-storm-surges-floods-tsunamis-first-72-hours-of-cover",
+  "timestamp": "2026-10-24T01:25:56.340Z",
+  "title": "Bushfires, storms, storm surges, floods, tsunamis in the first 72 hours of a new policy | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

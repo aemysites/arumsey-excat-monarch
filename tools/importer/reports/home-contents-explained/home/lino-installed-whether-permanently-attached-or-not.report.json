@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/lino-installed-whether-permanently-attached-or-not.html",
+  "path": "home-contents-explained/home/lino-installed-whether-permanently-attached-or-not",
+  "timestamp": "2026-10-24T01:31:15.032Z",
+  "title": "Lino or vinyl flooring installed, whether permanently attached or not | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

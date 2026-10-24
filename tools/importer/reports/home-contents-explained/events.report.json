@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events.html",
+  "path": "home-contents-explained/events",
+  "timestamp": "2026-10-24T01:25:35.255Z",
+  "title": "Suncorp Insurance - Home & Contents Insurance Explained - Events",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-media",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/home-contents-explained/events/covered",
+    "fragments/home-contents-explained/events/not-covered"
+  ],
+  "importScript": "cd73baba663a"
+}

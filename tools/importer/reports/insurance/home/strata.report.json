@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/home/strata.html",
+  "path": "insurance/home/strata",
+  "timestamp": "2026-10-24T12:53:39.334Z",
+  "title": "Strata Insurance | Protect Your Common Areas | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "table-comparison",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "cards-checklist"
+  ],
+  "importScript": "853cd45f1cf3"
+}

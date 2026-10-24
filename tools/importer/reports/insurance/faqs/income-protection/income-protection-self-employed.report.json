@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/income-protection-self-employed.html",
+  "path": "insurance/faqs/income-protection/income-protection-self-employed",
+  "timestamp": "2026-10-24T02:09:58.629Z",
+  "title": "Can I get income protection if I am self-employed?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

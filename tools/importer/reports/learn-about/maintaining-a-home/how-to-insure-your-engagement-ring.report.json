@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/How-to-insure-your-engagement-ring.html",
+  "path": "learn-about/maintaining-a-home/how-to-insure-your-engagement-ring",
+  "timestamp": "2026-10-24T02:17:47.455Z",
+  "title": "How To Insure Your Engagement Ring | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

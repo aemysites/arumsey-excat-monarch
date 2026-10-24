@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/contact-us/customer-relations-complaints.html",
+  "path": "insurance/contact-us/customer-relations-complaints",
+  "timestamp": "2026-10-24T01:34:34.233Z",
+  "title": "Complaints | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "columns-links"
+  ],
+  "importScript": "cd73baba663a"
+}

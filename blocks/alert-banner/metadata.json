@@ -1,0 +1,22 @@
+{
+  "variantName": "alert-banner",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link",
+    "purpose": "dismissible site-wide notice bar with an icon, a short message with inline links and a close button (dismissal remembered for the session)"
+  },
+  "contentPattern": {
+    "structure": "one row; cells: [icon (optional, image or :icon:)] [message text with links]"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_9bf03a26abd4"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use for a short, dismissible site-wide notice. Not for in-page content callouts (use callout-banner)."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/fixed-swimming-pools-and-spas.html",
+  "path": "home-contents-explained/home/fixed-swimming-pools-and-spas",
+  "timestamp": "2026-10-24T01:30:44.190Z",
+  "title": "Fixed swimming pools and spas | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

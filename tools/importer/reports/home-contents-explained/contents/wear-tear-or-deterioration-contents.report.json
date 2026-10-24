@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/wear-tear-or-deterioration-contents.html",
+  "path": "home-contents-explained/contents/wear-tear-or-deterioration-contents",
+  "timestamp": "2026-10-24T01:25:28.634Z",
+  "title": "Wear, tear, and deterioration (contents) | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

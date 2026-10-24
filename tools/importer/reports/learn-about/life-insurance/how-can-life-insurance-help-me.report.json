@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/how-can-life-insurance-help-me.html",
+  "path": "learn-about/life-insurance/how-can-life-insurance-help-me",
+  "timestamp": "2026-10-24T01:46:46.635Z",
+  "title": "How Can Life Insurance Help Me | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

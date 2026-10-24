@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/barristers-professional-indemnity.html",
+  "path": "insurance/barristers-professional-indemnity",
+  "timestamp": "2026-10-24T01:32:48.612Z",
+  "title": "Barristers Professional Indemnity Insurance | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel",
+    "tabs-panel",
+    "cards-checklist"
+  ],
+  "fragments": [
+    "fragments/insurance/barristers-professional-indemnity/lodge-a-claim",
+    "fragments/insurance/barristers-professional-indemnity/claims-examples"
+  ],
+  "importScript": "cd73baba663a"
+}

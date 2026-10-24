@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/goal-setting-101.html",
+  "path": "learn-about/teamgirls/goal-setting-101",
+  "timestamp": "2026-10-24T01:58:41.702Z",
+  "title": "Goal Setting 101 | #TeamGirls | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/temporary-or-mobile-structures.html",
+  "path": "home-contents-explained/home/temporary-or-mobile-structures",
+  "timestamp": "2026-10-24T01:32:27.654Z",
+  "title": "Temporary or mobile structures | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

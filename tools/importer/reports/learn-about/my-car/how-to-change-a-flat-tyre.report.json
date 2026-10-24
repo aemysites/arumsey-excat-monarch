@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/how-to-change-a-flat-tyre.html",
+  "path": "learn-about/my-car/how-to-change-a-flat-tyre",
+  "timestamp": "2026-10-24T02:16:25.947Z",
+  "title": "How To Change A Flat Tyre (with Video) | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

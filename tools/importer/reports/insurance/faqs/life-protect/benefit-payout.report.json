@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/benefit-payout.html",
+  "path": "insurance/faqs/life-protect/benefit-payout",
+  "timestamp": "2026-10-24T02:10:30.350Z",
+  "title": "Who will receive the benefit payout from my policy when I die?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/waiting-period.html",
+  "path": "insurance/faqs/income-protection/waiting-period",
+  "timestamp": "2026-10-24T02:10:16.621Z",
+  "title": "How long do I have to wait to get paid after making a claim on my Income Protection policy?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

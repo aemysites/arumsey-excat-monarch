@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/make-your-home-more-eco-friendly.html",
+  "path": "learn-about/maintaining-a-home/make-your-home-more-eco-friendly",
+  "timestamp": "2026-10-24T01:52:38.938Z",
+  "title": "7 Ways To Make Your Home More Eco-Friendly | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

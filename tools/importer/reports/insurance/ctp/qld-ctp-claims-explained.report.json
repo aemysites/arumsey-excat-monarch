@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/ctp/qld-ctp-claims-explained.html",
+  "path": "insurance/ctp/qld-ctp-claims-explained",
+  "timestamp": "2026-10-24T12:53:58.461Z",
+  "title": "Qld CTP Insurance Explained | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "cards-feature",
+    "hero-title",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "carousel-article",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/ctp/qld-ctp-claims-explained/covered",
+    "fragments/insurance/ctp/qld-ctp-claims-explained/not-covered"
+  ],
+  "importScript": "853cd45f1cf3"
+}

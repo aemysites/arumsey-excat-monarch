@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/barristers-professional-indemnity/payments.html",
+  "path": "insurance/barristers-professional-indemnity/payments",
+  "timestamp": "2026-10-24T01:32:56.021Z",
+  "title": "Make a Barrister Professional Indemnity Payment | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "cards-feature",
+    "hero-title"
+  ],
+  "importScript": "cd73baba663a"
+}

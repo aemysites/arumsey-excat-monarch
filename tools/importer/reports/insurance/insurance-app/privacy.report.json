@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/insurance-app/privacy.html",
+  "path": "insurance/insurance-app/privacy",
+  "timestamp": "2026-10-24T01:39:27.545Z",
+  "title": "Suncorp Insurance App Privacy Policy",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-links"
+  ],
+  "importScript": "cd73baba663a"
+}

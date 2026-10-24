@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/home-insurance-claim-assessment-settlement-repair-guide.html",
+  "path": "learn-about/maintaining-a-home/home-insurance-claim-assessment-settlement-repair-guide",
+  "timestamp": "2026-10-24T01:51:26.730Z",
+  "title": "The Home insurance Claims Process | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/will-superannuation-life-insurance-be-sufficient.html",
+  "path": "learn-about/life-insurance/will-superannuation-life-insurance-be-sufficient",
+  "timestamp": "2026-10-24T01:48:31.943Z",
+  "title": "Superannuation Life Insurance - Is It Enough? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/when-can-settle-my-ctp-claim.html",
+  "path": "insurance/faqs/ctp/when-can-settle-my-ctp-claim",
+  "timestamp": "2026-10-24T02:03:59.921Z",
+  "title": "When can I settle my CTP claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

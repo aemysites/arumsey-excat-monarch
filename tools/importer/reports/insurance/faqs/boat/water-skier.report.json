@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/boat/water-skier.html",
+  "path": "insurance/faqs/boat/water-skier",
+  "timestamp": "2026-10-24T02:01:50.936Z",
+  "title": "I use my power boat to tow a water-skier, will I have cover under my insurance?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

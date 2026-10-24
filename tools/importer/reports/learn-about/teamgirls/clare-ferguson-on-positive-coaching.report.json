@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/clare-ferguson-on-positive-coaching.html",
+  "path": "learn-about/teamgirls/clare-ferguson-on-positive-coaching",
+  "timestamp": "2026-10-24T01:58:39.249Z",
+  "title": "Clare Ferguson On Positive Coaching | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

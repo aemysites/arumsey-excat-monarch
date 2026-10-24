@@ -1,0 +1,31 @@
+{
+  "variantName": "columns-footer",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link",
+    "purpose": "In-page legal/disclaimer columns placed above the site footer, plus a social-icon link row"
+  },
+  "contentPattern": {
+    "structure": "one row with 2 cells; each cell holds uppercase section labels followed by disclaimer paragraphs with inline links. With `social`, a single cell holds a list (or run) of icon links to social profiles",
+    "cells": [
+      "disclaimer column (labels, paragraphs, links)"
+    ]
+  },
+  "options": [
+    {
+      "class": "social",
+      "label": "Social"
+    }
+  ],
+  "memberVariantIds": [
+    "v_4d8f1b417662",
+    "v_aeb035584d1c"
+  ],
+  "usage": "Appears on almost every page (679 pages) as the pre-footer issuer/disclaimer text and the social links strip.",
+  "reuseGuidance": "Use for dense legal or disclaimer text split into columns near the page foot. Use `social` for the icon-only social profile links. The global site footer is built separately by the footer orchestrator."
+}

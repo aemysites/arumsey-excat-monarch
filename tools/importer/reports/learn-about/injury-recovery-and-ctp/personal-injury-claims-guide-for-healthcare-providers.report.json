@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/personal-injury-claims-guide-for-healthcare-providers.html",
+  "path": "learn-about/injury-recovery-and-ctp/personal-injury-claims-guide-for-healthcare-providers",
+  "timestamp": "2026-10-24T01:45:36.436Z",
+  "title": "Personal Injury Claims Guide For Healthcare Providers | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

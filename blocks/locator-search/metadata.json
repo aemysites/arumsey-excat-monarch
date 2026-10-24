@@ -1,0 +1,22 @@
+{
+  "variantName": "locator-search",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "text + button",
+    "purpose": "postcode/suburb locator search (e.g. find a repairer) that submits to an authored URL"
+  },
+  "contentPattern": {
+    "structure": "content rows (heading, intro); config rows [action] [URL], [param] [query name, default q], [label], [placeholder], [button], [states] [comma list -> state select], [state param] [default state], [new window] [yes]. Submits a GET to `action`"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_07e4bce50d03"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use for location lookups that hand off to a locator page or external tool."
+}

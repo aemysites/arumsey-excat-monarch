@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/how-home-maintenance-reduces-risk-of-denied-claims.html",
+  "path": "learn-about/maintaining-a-home/how-home-maintenance-reduces-risk-of-denied-claims",
+  "timestamp": "2026-10-24T01:51:46.840Z",
+  "title": "How Home Maintenance Can Help Reduce The Risk Of Insurance Claims Being Denied | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/buying-a-car/popular-car-insurance-myths-debunked.html",
+  "path": "learn-about/buying-a-car/popular-car-insurance-myths-debunked",
+  "timestamp": "2026-10-24T01:42:54.847Z",
+  "title": "Common Car Insurance Myths Debunked | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

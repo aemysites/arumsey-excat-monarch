@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/claim-serious-injury.html",
+  "path": "insurance/faqs/ctp/claim-serious-injury",
+  "timestamp": "2026-10-24T02:02:22.901Z",
+  "title": "How can I claim for a serious personal injury?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

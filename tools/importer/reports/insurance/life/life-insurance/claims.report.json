@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/life-insurance/claims.html",
+  "path": "insurance/life/life-insurance/claims",
+  "timestamp": "2026-10-24T01:40:38.634Z",
+  "title": "Make a Life Protect Insurance Claim | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/life/life-insurance/claims/make-a-claim",
+    "fragments/insurance/life/life-insurance/claims/track-a-claim",
+    "fragments/insurance/life/life-insurance/claims/claims-philosophy"
+  ],
+  "importScript": "cd73baba663a"
+}

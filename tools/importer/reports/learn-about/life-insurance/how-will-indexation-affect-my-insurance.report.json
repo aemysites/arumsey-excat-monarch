@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/how-will-indexation-affect-my-insurance.html",
+  "path": "learn-about/life-insurance/how-will-indexation-affect-my-insurance",
+  "timestamp": "2026-10-24T01:47:02.911Z",
+  "title": "How Will Indexation Affect My Insurance | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

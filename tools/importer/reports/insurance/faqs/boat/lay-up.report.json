@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/boat/lay-up.html",
+  "path": "insurance/faqs/boat/lay-up",
+  "timestamp": "2026-10-24T02:01:39.728Z",
+  "title": "How does lay-up actually work?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

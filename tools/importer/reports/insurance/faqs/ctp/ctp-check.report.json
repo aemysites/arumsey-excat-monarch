@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/ctp-check.html",
+  "path": "insurance/faqs/ctp/ctp-check",
+  "timestamp": "2026-10-24T02:02:28.388Z",
+  "title": "How do I know whether I have CTP insurance?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

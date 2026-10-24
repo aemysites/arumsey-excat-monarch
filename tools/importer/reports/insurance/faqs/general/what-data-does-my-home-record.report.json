@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/what-data-does-my-home-record.html",
+  "path": "insurance/faqs/general/what-data-does-my-home-record",
+  "timestamp": "2026-10-24T02:07:17.848Z",
+  "title": "What data does My Home record? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

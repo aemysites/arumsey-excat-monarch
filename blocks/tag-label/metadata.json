@@ -1,0 +1,45 @@
+{
+  "variantName": "tag-label",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link",
+    "purpose": "small category/status chips or a short labelled callout"
+  },
+  "contentPattern": {
+    "structure": "each cell is one item: a short text or link becomes a chip; a cell with a heading or several paragraphs becomes a callout panel"
+  },
+  "options": [
+    {
+      "class": "not-covered",
+      "label": "Not Covered"
+    },
+    {
+      "class": "cyan",
+      "label": "Cyan"
+    },
+    {
+      "class": "grey",
+      "label": "Grey"
+    },
+    {
+      "class": "alt",
+      "label": "Alt"
+    }
+  ],
+  "memberVariantIds": [
+    "v_aefdad195779",
+    "v_a6bf1ced33dc",
+    "v_775b58fe5b26",
+    "v_4a135041b6ba",
+    "v_2d9c366ab869"
+  ],
+  "usage": {
+    "when": "status labels (Not covered), topic tags, tier labels and small callouts"
+  },
+  "reuseGuidance": "not-covered for status chips, cyan for dark tier labels, grey for bordered table-like cells, alt for topic link tags."
+}

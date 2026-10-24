@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/how-to-talk-about-body-image.html",
+  "path": "learn-about/teamgirls/how-to-talk-about-body-image",
+  "timestamp": "2026-10-24T01:58:44.608Z",
+  "title": "Talking to your daughter about body image | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

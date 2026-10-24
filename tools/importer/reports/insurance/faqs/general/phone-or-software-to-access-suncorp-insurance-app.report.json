@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/phone-or-software-to-access-suncorp-insurance-app.html",
+  "path": "insurance/faqs/general/phone-or-software-to-access-suncorp-insurance-app",
+  "timestamp": "2026-10-24T02:06:53.056Z",
+  "title": "What kind of phone or software do I need to access the Suncorp Insurance App? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

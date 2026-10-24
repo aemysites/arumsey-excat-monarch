@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-contact",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link",
+    "purpose": "Side-by-side contact details (department heading, phone numbers, operating hours, postal/email addresses)"
+  },
+  "contentPattern": {
+    "structure": "one row with 2-3 cells; each cell holds a bold label or heading, then paragraphs with phone (tel:) or email (mailto:) links and opening hours. Extra rows stack below",
+    "cells": [
+      "contact group (heading/label, text, tel/mailto links)"
+    ]
+  },
+  "options": [
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "alt",
+      "label": "Alt"
+    }
+  ],
+  "memberVariantIds": [
+    "v_44afb7a3c43c",
+    "v_055e25bacead-1",
+    "v_44afb7a3c43c-1",
+    "v_44afb7a3c43c-2",
+    "v_6d7310bf7dcb",
+    "v_7161ec8388b9",
+    "v_ca8ca86f2287"
+  ],
+  "usage": "Contact and claims pages listing phone lines, operating hours, in-person/post/email channels.",
+  "reuseGuidance": "Use for text-only contact columns. `image` is for contact columns with small inline icons (for example an envelope before an email link); `alt` is the same layout used on a different section treatment. Use columns-media for image/text splits."
+}

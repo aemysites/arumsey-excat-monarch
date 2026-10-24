@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/can-i-afford-income-protection.html",
+  "path": "learn-about/life-insurance/can-i-afford-income-protection",
+  "timestamp": "2026-10-24T01:46:11.435Z",
+  "title": "Can I Afford Income Protection Insurance | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

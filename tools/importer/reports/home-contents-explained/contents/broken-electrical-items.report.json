@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/broken-electrical-items.html",
+  "path": "home-contents-explained/contents/broken-electrical-items",
+  "timestamp": "2026-10-24T01:22:05.016Z",
+  "title": "Broken electrical items | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

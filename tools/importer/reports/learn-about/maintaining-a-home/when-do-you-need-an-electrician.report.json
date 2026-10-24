@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/when-do-you-need-an-electrician.html",
+  "path": "learn-about/maintaining-a-home/when-do-you-need-an-electrician",
+  "timestamp": "2026-10-24T01:53:38.240Z",
+  "title": "When Do I Need An Electrician? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/pro-athletes-guide-to-resilience.html",
+  "path": "learn-about/teamgirls/pro-athletes-guide-to-resilience",
+  "timestamp": "2026-10-24T01:59:46.665Z",
+  "title": "The pro athletes’ guide to building resilience | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

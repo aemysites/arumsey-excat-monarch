@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/legal-liability.html",
+  "path": "home-contents-explained/events/legal-liability",
+  "timestamp": "2026-10-24T01:27:53.505Z",
+  "title": "Legal liability | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

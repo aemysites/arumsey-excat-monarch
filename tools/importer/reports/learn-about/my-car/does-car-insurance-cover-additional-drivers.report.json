@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/does-car-insurance-cover-additional-drivers.html",
+  "path": "learn-about/my-car/does-car-insurance-cover-additional-drivers",
+  "timestamp": "2026-10-24T01:54:48.825Z",
+  "title": "Does Car Insurance Cover Additional Drivers? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

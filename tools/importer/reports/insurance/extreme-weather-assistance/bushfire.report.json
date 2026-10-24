@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/bushfire.html",
+  "path": "insurance/extreme-weather-assistance/bushfire",
+  "timestamp": "2026-10-24T12:52:02.552Z",
+  "title": "Bushfire support | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel",
+    "cards-checklist",
+    "cards-checklist"
+  ],
+  "importScript": "853cd45f1cf3"
+}

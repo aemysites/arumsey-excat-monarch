@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/top-tips-when-getting-life-insurance.html",
+  "path": "learn-about/life-insurance/top-tips-when-getting-life-insurance",
+  "timestamp": "2026-10-24T01:47:57.338Z",
+  "title": "Top Tips When Getting Life Insurance | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

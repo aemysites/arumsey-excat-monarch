@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/how-to-protect-your-home-against-hailstorms.html",
+  "path": "learn-about/maintaining-a-home/how-to-protect-your-home-against-hailstorms",
+  "timestamp": "2026-10-24T01:52:10.000Z",
+  "title": "How to Prepare Your Home For Hailstorms | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

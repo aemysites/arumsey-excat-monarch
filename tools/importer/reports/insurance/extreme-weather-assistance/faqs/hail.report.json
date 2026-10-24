@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/faqs/hail.html",
+  "path": "insurance/extreme-weather-assistance/faqs/hail",
+  "timestamp": "2026-10-24T02:01:29.095Z",
+  "title": "Hail",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/extreme-weather-assistance/faqs/hail/tab-1",
+    "fragments/insurance/extreme-weather-assistance/faqs/hail/tab-2",
+    "fragments/insurance/extreme-weather-assistance/faqs/hail/tab-3"
+  ],
+  "importScript": "c5a31badb343"
+}

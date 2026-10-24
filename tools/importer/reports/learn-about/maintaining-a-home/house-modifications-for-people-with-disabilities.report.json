@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/house-modifications-for-people-with-disabilities.html",
+  "path": "learn-about/maintaining-a-home/house-modifications-for-people-with-disabilities",
+  "timestamp": "2026-10-24T01:51:43.745Z",
+  "title": "Home Modifications For Individuals With Disabilities | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

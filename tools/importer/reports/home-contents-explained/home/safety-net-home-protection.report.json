@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/safety-net-home-protection.html",
+  "path": "home-contents-explained/home/safety-net-home-protection",
+  "timestamp": "2026-10-24T01:31:55.230Z",
+  "title": "Safety net home protection | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

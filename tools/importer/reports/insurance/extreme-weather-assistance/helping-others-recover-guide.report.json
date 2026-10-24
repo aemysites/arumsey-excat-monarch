@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/helping-others-recover-guide.html",
+  "path": "insurance/extreme-weather-assistance/helping-others-recover-guide",
+  "timestamp": "2026-10-24T02:14:32.455Z",
+  "title": "Guide to helping others recover",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "hero-banner",
+    "embed-video",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

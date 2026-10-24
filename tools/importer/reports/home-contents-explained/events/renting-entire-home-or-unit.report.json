@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/renting-entire-home-or-unit.html",
+  "path": "home-contents-explained/events/renting-entire-home-or-unit",
+  "timestamp": "2026-10-24T01:28:24.091Z",
+  "title": "Renting entire home or unit | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

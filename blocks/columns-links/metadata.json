@@ -1,0 +1,37 @@
+{
+  "variantName": "columns-links",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link + list",
+    "purpose": "Columns of navigational link lists (support links, product directories, sitemap) with optional icon headings"
+  },
+  "contentPattern": {
+    "structure": "optional first single-cell intro row (heading + text); then one row with 2-3 cells, each holding an optional icon + heading and a list (or run of paragraphs) of links. Nested lists render as bulleted sub-links. A cell holding only a link to a /fragments/ path is replaced by that fragment, for long sitemap columns",
+    "cells": [
+      "link column (optional icon, heading, link list)"
+    ]
+  },
+  "options": [
+    {
+      "class": "image",
+      "label": "Image"
+    },
+    {
+      "class": "grey",
+      "label": "Grey"
+    }
+  ],
+  "memberVariantIds": [
+    "v_041e48882540",
+    "v_d3ed3b311999",
+    "v_07e4bce50d03-1",
+    "v_b0a0213d6ee1"
+  ],
+  "usage": "Extra help and support link lists (27 pages), 'Explore our products' directories, the sitemap page.",
+  "reuseGuidance": "Use for columns whose main content is lists of links. `image` adds an icon beside each column heading with leading chevrons; `grey` is the same structure on a grey section (sitemap). Use columns-contact for contact details and cards-feature for cards."
+}

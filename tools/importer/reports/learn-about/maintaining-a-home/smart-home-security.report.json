@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/smart-home-security.html",
+  "path": "learn-about/maintaining-a-home/smart-home-security",
+  "timestamp": "2026-10-24T01:52:57.653Z",
+  "title": "How To Set Up A Secure Smart Home | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

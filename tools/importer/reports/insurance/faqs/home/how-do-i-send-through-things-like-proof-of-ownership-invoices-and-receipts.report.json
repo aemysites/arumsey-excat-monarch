@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/home/how-do-i-send-through-things-like-proof-of-ownership-invoices-and-receipts.html",
+  "path": "insurance/faqs/home/how-do-i-send-through-things-like-proof-of-ownership-invoices-and-receipts",
+  "timestamp": "2026-10-24T02:09:11.453Z",
+  "title": "How do I send through things like proof of ownership, invoices and receipts? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "columns-teaser"
+  ],
+  "importScript": "c5a31badb343"
+}

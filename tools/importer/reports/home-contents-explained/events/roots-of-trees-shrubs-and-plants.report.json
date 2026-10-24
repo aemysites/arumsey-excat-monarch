@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/events/roots-of-trees-shrubs-and-plants.html",
+  "path": "home-contents-explained/events/roots-of-trees-shrubs-and-plants",
+  "timestamp": "2026-10-24T01:28:37.295Z",
+  "title": "Roots of trees, shrubs and plants | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

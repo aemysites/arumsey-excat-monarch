@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/excess-free-glass-cover.html",
+  "path": "home-contents-explained/home/excess-free-glass-cover",
+  "timestamp": "2026-10-24T01:30:32.449Z",
+  "title": "Excess-free Glass cover | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

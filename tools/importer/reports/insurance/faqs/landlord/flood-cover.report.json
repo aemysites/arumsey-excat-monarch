@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/landlord/flood-cover.html",
+  "path": "insurance/faqs/landlord/flood-cover",
+  "timestamp": "2026-10-24T02:10:25.189Z",
+  "title": "Why do I need flood cover when I’m not in a flood zone?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

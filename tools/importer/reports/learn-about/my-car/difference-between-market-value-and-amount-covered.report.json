@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/difference-between-market-value-and-amount-covered.html",
+  "path": "learn-about/my-car/difference-between-market-value-and-amount-covered",
+  "timestamp": "2026-10-24T01:54:35.047Z",
+  "title": "Exploring Market Value Vs Amount Covered Car Insurance | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

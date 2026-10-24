@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/fatal-injury-compensation-contents.html",
+  "path": "home-contents-explained/contents/fatal-injury-compensation-contents",
+  "timestamp": "2026-10-24T01:22:54.165Z",
+  "title": "Fatal injury compensation (contents) | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

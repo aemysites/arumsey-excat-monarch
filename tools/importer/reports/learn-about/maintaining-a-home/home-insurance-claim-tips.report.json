@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/home-insurance-claim-tips.html",
+  "path": "learn-about/maintaining-a-home/home-insurance-claim-tips",
+  "timestamp": "2026-10-24T01:51:29.856Z",
+  "title": "How To Make A Home Insurance Claim | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

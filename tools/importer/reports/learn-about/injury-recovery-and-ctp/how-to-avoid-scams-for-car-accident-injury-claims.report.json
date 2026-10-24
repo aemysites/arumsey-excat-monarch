@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/how-to-avoid-scams-for-car-accident-injury-claims.html",
+  "path": "learn-about/injury-recovery-and-ctp/how-to-avoid-scams-for-car-accident-injury-claims",
+  "timestamp": "2026-10-24T01:45:14.844Z",
+  "title": "How To Avoid Scams When Making A Car Accident Injury Claim | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

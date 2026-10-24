@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/funeral/make-a-claim.html",
+  "path": "insurance/faqs/funeral/make-a-claim",
+  "timestamp": "2026-10-24T02:04:30.827Z",
+  "title": "How do I make a claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

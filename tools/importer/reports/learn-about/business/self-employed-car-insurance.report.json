@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/business/self-employed-car-insurance.html",
+  "path": "learn-about/business/self-employed-car-insurance",
+  "timestamp": "2026-10-24T01:42:15.706Z",
+  "title": "Does Being Self-employed Affect My Car Insurance? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

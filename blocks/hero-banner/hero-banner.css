@@ -1,0 +1,508 @@
+/* hero-banner: values measured from www.suncorp.com.au canvas--responsive_image banners;
+   variant and shape overrides follow the shared rules on purpose */
+
+/* stylelint-disable no-descending-specificity */
+main > .section > .hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* mobile: the photo sits above the text box (source: 375 x 96px strip) */
+.hero-banner .hero-banner-background {
+  position: relative;
+  aspect-ratio: 1600 / 411;
+}
+
+.hero-banner .hero-banner-background picture,
+.hero-banner .hero-banner-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.hero-banner .hero-banner-media img,
+.hero-banner .hero-banner-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-banner.text-box .hero-banner-background img {
+  object-position: 50% 50%;
+}
+
+.hero-banner.text-box-2 .hero-banner-background img {
+  object-position: 0 0;
+}
+
+/* in-page text-overlay banner (no page title): the copy stays on the photo at every width */
+.hero-banner.text-overlay:not(:has(h1)) .hero-banner-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  aspect-ratio: auto;
+}
+
+.hero-banner.text-overlay:not(:has(h1)) .hero-banner-background img {
+  object-position: 50% 100%;
+}
+
+.hero-banner.text-overlay:not(:has(h1)) {
+  max-width: 997px;
+  min-height: 300px;
+  margin: 20px 20px 40px;
+}
+
+.hero-banner .hero-banner-foreground {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hero-banner:not(.hero-banner-has-background) .hero-banner-foreground {
+  padding: 40px 24px;
+}
+
+.hero-banner.text-overlay:not(:has(h1)) .hero-banner-foreground {
+  padding: 10px 5px;
+}
+
+/* page-top text-overlay: on mobile the photo strip sits above dark copy on white */
+.hero-banner.text-overlay:has(h1) {
+  background-color: transparent;
+}
+
+.hero-banner .hero-banner-content,
+.hero-banner .hero-banner-aside {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* default: white text box */
+.hero-banner .hero-banner-content {
+  padding: 15px 20px 15px 12px;
+  background-color: #fff;
+  color: #000;
+}
+
+.hero-banner.text-overlay .hero-banner-content,
+.hero-banner.logo .hero-banner-content {
+  padding: 0;
+  background-color: transparent;
+}
+
+.hero-banner.text-overlay:has(h1) .hero-banner-content {
+  padding: 20px 20px 20px 15px;
+}
+
+.hero-banner.text-overlay:not(:has(h1)) .hero-banner-content {
+  padding: 15px;
+  color: #fff;
+}
+
+.hero-banner .hero-banner-content > :first-child,
+.hero-banner .hero-banner-aside > :first-child {
+  margin-top: 0;
+}
+
+.hero-banner .hero-banner-content > :last-child,
+.hero-banner .hero-banner-aside > :last-child {
+  margin-bottom: 0;
+}
+
+.hero-banner .hero-banner-content p {
+  margin: 0 0 10px;
+}
+
+.hero-banner .hero-banner-content h1 {
+  margin: 0 0 20px;
+  color: var(--heading-color);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* offer line under the title: "SAVE $50 OFF" */
+.hero-banner .hero-banner-content h3 {
+  margin: 20px 0 2.5px;
+  color: var(--heading-color);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-banner .hero-banner-content h3 + p {
+  margin-bottom: 20px;
+  color: var(--heading-color);
+}
+
+/* tagline chip between the title and the offer */
+.hero-banner .hero-banner-content h1 + p:has(+ h3) {
+  width: fit-content;
+  margin: 0;
+  padding: 4.2336px 9.8784px;
+  background-color: var(--brand-teal);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.168px;
+  text-transform: uppercase;
+}
+
+/* text-overlay page title, subtitle and yellow tagline */
+.hero-banner.text-overlay .hero-banner-content h1 {
+  margin: 0 0 10px;
+}
+
+.hero-banner.text-overlay .hero-banner-content h1 ~ h2 {
+  margin: 20px 0 10px;
+  color: var(--heading-color);
+  font-size: 32.256px;
+  font-weight: 400;
+  line-height: 38.7072px;
+}
+
+.hero-banner.text-overlay .hero-banner-content h4 {
+  margin: 20px 0 2.5px;
+  color: var(--heading-color);
+  font-size: 26.208px;
+  font-weight: 400;
+  line-height: 31.4496px;
+}
+
+.hero-banner.text-overlay .hero-banner-content h1 + p:has(+ h2) {
+  width: fit-content;
+  margin: 0 0 10px;
+  padding: 4.2336px 9.8784px;
+  background-color: var(--brand-yellow);
+  color: #000;
+  font-size: 14.112px;
+  font-weight: 300;
+  line-height: 21.168px;
+  text-transform: uppercase;
+}
+
+/* in-page text-overlay banner: white copy on the photo */
+.hero-banner.text-overlay:not(:has(h1)) .hero-banner-content > :is(h2, h3) {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 38.304px;
+  font-weight: 700;
+  line-height: 45.9648px;
+}
+
+.hero-banner.text-overlay:not(:has(h1)) .hero-banner-content > :is(h2, h3) + p {
+  margin: 10px 0 0;
+}
+
+.hero-banner.text-overlay:not(:has(h1)) .hero-banner-content p.button-wrapper {
+  margin: 25px 0 5px;
+}
+
+/* category chip above the title (e.g. TeamGirls) */
+.hero-banner .hero-banner-content > p:first-child:has(+ h1) {
+  width: fit-content;
+  margin: 0;
+  padding: 4.2336px 9.8784px;
+  background-color: rgb(222 220 213);
+  color: #000;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.168px;
+  text-transform: uppercase;
+}
+
+.hero-banner .hero-banner-content sup {
+  font-size: 75%;
+  line-height: 0;
+}
+
+/* CTAs */
+.hero-banner .hero-banner-content p.button-wrapper {
+  margin: 5px 0;
+}
+
+.hero-banner .hero-banner-content > p.button-wrapper:last-child {
+  margin-bottom: 5px;
+}
+
+.hero-banner .hero-banner-content p.button-wrapper + p.button-wrapper {
+  margin-top: 10px;
+}
+
+.hero-banner .hero-banner-content p.button-wrapper:has(+ p.button-wrapper),
+.hero-banner .hero-banner-content p.button-wrapper + p.button-wrapper {
+  display: flex;
+}
+
+main .hero-banner .hero-banner-content p.button-wrapper:has(+ p.button-wrapper) a.button:any-link,
+main .hero-banner .hero-banner-content p.button-wrapper + p.button-wrapper a.button:any-link {
+  flex: 1 1 auto;
+  padding: 12px 20px;
+}
+
+.hero-banner .hero-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* text-box: large dark statement */
+.hero-banner.text-box .hero-banner-content {
+  padding: 15px 20px;
+  color: var(--heading-color);
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.hero-banner.text-box .hero-banner-content strong {
+  font-size: 34px;
+  line-height: 1.5;
+}
+
+/* text-box-2: translucent neutral panel with teal title */
+.hero-banner.text-box-2 .hero-banner-content {
+  padding: 30px 30px 30px 22px;
+  background-color: rgb(242 242 238 / 90%);
+}
+
+.hero-banner.text-box-2 .hero-banner-content > :is(h1, h2, h3):first-child {
+  margin: 0 0 10px;
+  color: var(--brand-teal);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* text-box-2 title only (e.g. confirmation pages): solid neutral box with a hairline border */
+.hero-banner.text-box-2 .hero-banner-content:has(> h1:only-child) {
+  padding: 15px 15px 5px;
+  border: 1px solid rgb(220 220 209);
+  background-color: var(--light-color);
+}
+
+/* text-box-cyan: translucent teal panel, white copy */
+.hero-banner.text-box-cyan .hero-banner-content {
+  padding: 30px 20px 20px 12px;
+  background-color: rgb(0 140 128 / 90%);
+  color: #fff;
+}
+
+.hero-banner.text-box-cyan .hero-banner-content h1 {
+  margin: 20px 0 10px;
+  color: #fff;
+}
+
+.hero-banner.text-box-cyan .hero-banner-content > h1:first-child {
+  margin-top: 0;
+}
+
+/* other boxed variants */
+.hero-banner:is(.text-box-3, .text-box-4, .text-box-rounded, .offer-box, .offer-box-cyan-light-image, .promo-card) .hero-banner-content,
+.hero-banner .hero-banner-aside {
+  padding: 32px;
+}
+
+.hero-banner.text-box-rounded .hero-banner-content {
+  border-radius: 16px;
+}
+
+/* promo-card: white card with a yellow top rule */
+.hero-banner.promo-card .hero-banner-content {
+  padding: 30px;
+  border-top: 5px solid var(--brand-yellow);
+}
+
+.hero-banner.promo-card .hero-banner-content p:not(.button-wrapper) {
+  font-size: 20.16px;
+  line-height: 30.24px;
+}
+
+/* aside list panels (link-panel, contents-panel) */
+.hero-banner .hero-banner-aside {
+  background-color: #fff;
+}
+
+.hero-banner .hero-banner-aside ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (width >= 900px) {
+  /* desktop: the photo fills the banner behind the text box */
+  .hero-banner .hero-banner-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    aspect-ratio: auto;
+  }
+
+  .hero-banner .hero-banner-foreground,
+  .hero-banner:not(.hero-banner-has-background) .hero-banner-foreground,
+  .hero-banner.text-overlay .hero-banner-foreground {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 40px 32px;
+  }
+
+  /* default + text-box-cyan: half-width box on the left */
+  .hero-banner .hero-banner-content {
+    flex: 0 0 calc(50% + 8px);
+    margin-left: -8px;
+    padding-left: 20px;
+  }
+
+  .hero-banner.text-box-cyan .hero-banner-content {
+    padding-left: 20px;
+  }
+
+  .hero-banner.text-overlay .hero-banner-content,
+  .hero-banner.logo .hero-banner-content {
+    margin-left: 0;
+  }
+
+  .hero-banner .hero-banner-content p.button-wrapper:has(+ p.button-wrapper),
+  .hero-banner .hero-banner-content p.button-wrapper + p.button-wrapper {
+    display: inline-flex;
+    width: calc(50% - 8px);
+    vertical-align: top;
+  }
+
+  .hero-banner .hero-banner-content p.button-wrapper + p.button-wrapper {
+    margin-top: 5px;
+    margin-left: 16px;
+  }
+
+  /* text-box: the box sits on the right of the photo */
+  .hero-banner.text-box .hero-banner-content {
+    flex-basis: calc(50% - 8px);
+    margin-left: auto;
+    padding: 70px 20px 80px 40px;
+  }
+
+  /* text-box-2: 5 of 12 columns */
+  .hero-banner.text-box-2 .hero-banner-content {
+    flex-basis: calc((100% + 16px) * 5 / 12);
+    padding-left: 30px;
+  }
+
+  .hero-banner .hero-banner-aside {
+    flex: 0 1 40%;
+    margin-left: auto;
+  }
+
+  /* offer-box: the offer panel drops to the lower half beside the copy */
+  .hero-banner:is(.offer-box, .offer-box-cyan-light-image) .hero-banner-aside {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+
+  .hero-banner.contents-panel .hero-banner-foreground {
+    align-items: center;
+  }
+
+  .hero-banner.contents-panel .hero-banner-aside {
+    flex-basis: 25%;
+  }
+
+  /* logo: centred copy with the brand mark on the right */
+  .hero-banner.logo .hero-banner-foreground {
+    align-items: center;
+  }
+
+  .hero-banner.logo .hero-banner-content {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .hero-banner.logo .hero-banner-logo {
+    flex: 0 0 30%;
+  }
+
+  .hero-banner.hero-banner-has-background .hero-banner-foreground {
+    min-height: 343px;
+  }
+
+  .hero-banner.hero-banner-has-background:not([class*="text-box"], .text-overlay, .logo, .offer-box, .offer-box-cyan-light-image, .promo-card, .link-panel, .contents-panel) .hero-banner-foreground {
+    min-height: 400px;
+  }
+
+  /* picture-only banner (article pages): the source canvas preset is 290px by default;
+     `tall` is the 400px preset, whose photo is anchored right top */
+  .hero-banner.hero-banner-has-background:not(:has(.hero-banner-content)) .hero-banner-foreground {
+    min-height: 290px;
+    padding: 0;
+  }
+
+  .hero-banner.tall.hero-banner-has-background:not(:has(.hero-banner-content)) .hero-banner-foreground {
+    min-height: 400px;
+  }
+
+  .hero-banner.tall .hero-banner-background img {
+    object-position: 100% 0;
+  }
+
+  /* page-top text-overlay: white copy over the photo, 6 of 12 columns (7 with a subtitle) */
+  .hero-banner.text-overlay:has(h1) .hero-banner-foreground {
+    min-height: 400px;
+  }
+
+  .hero-banner.text-overlay:has(h1) .hero-banner-content {
+    flex: 0 0 calc((100% + 16px) * 6 / 12 - 16px);
+    color: #fff;
+  }
+
+  .hero-banner.text-overlay:has(h1 ~ h2) .hero-banner-content {
+    flex-basis: calc((100% + 16px) * 7 / 12 - 16px);
+  }
+
+  .hero-banner.text-overlay .hero-banner-content :is(h1, h1 ~ h2, h4) {
+    color: #fff;
+  }
+
+  /* in-page text-overlay: a 997px panel, copy in the left half */
+  .hero-banner.text-overlay:not(:has(h1)) {
+    margin: 20px auto 40px;
+  }
+
+  .hero-banner.text-overlay:not(:has(h1)) .hero-banner-foreground {
+    padding: 30px 40px;
+  }
+
+  .hero-banner.text-overlay:not(:has(h1)) .hero-banner-content {
+    flex: 0 0 calc(50% - 18px);
+    margin-left: 9px;
+  }
+
+  /* text-box-2 title only: the box sits at the foot of the banner */
+  .hero-banner.text-box-2:has(.hero-banner-content > h1:only-child) .hero-banner-foreground {
+    align-items: flex-end;
+    min-height: 293px;
+    padding: 80px 32px 40px;
+  }
+
+  .hero-banner.text-box-2 .hero-banner-content:has(> h1:only-child) {
+    flex-basis: calc((100% + 16px) * 5 / 12 - 16px);
+    margin-left: 0;
+  }
+
+  /* promo-card: 5 of 12 columns */
+  .hero-banner.promo-card .hero-banner-content {
+    flex-basis: calc((100% + 16px) * 5 / 12);
+  }
+}

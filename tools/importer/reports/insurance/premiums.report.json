@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/premiums.html",
+  "path": "insurance/premiums",
+  "timestamp": "2026-10-24T01:41:50.174Z",
+  "title": "Why do insurance premiums change? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "tabs-panel",
+    "tabs-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

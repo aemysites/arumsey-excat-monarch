@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/income-protection-what-is-covered-what-is-not.html",
+  "path": "learn-about/life-insurance/income-protection-what-is-covered-what-is-not",
+  "timestamp": "2026-10-24T01:47:09.209Z",
+  "title": "Income Protection: what’s covered, what’s not | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

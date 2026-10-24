@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/does-insurance-cover-pest-control.html",
+  "path": "learn-about/maintaining-a-home/does-insurance-cover-pest-control",
+  "timestamp": "2026-10-24T12:54:17.745Z",
+  "title": "Is Animal Damage Covered By Home Insurance? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "853cd45f1cf3"
+}

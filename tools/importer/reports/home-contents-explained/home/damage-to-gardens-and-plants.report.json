@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/damage-to-gardens-and-plants.html",
+  "path": "home-contents-explained/home/damage-to-gardens-and-plants",
+  "timestamp": "2026-10-24T01:30:17.922Z",
+  "title": "Damage to gardens and plants | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

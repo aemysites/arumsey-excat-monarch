@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/golf-cart-and-buggy-wheelchairs-and-mobility-scooters-or-similar-aids.html",
+  "path": "home-contents-explained/contents/golf-cart-and-buggy-wheelchairs-and-mobility-scooters-or-similar-aids",
+  "timestamp": "2026-10-24T01:23:20.059Z",
+  "title": "Golf cart and buggy, wheelchairs and mobility scooters or similar aids | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

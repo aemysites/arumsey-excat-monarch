@@ -1,0 +1,31 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/home/landlord.html",
+  "path": "insurance/home/landlord",
+  "timestamp": "2026-10-24T12:53:13.012Z",
+  "title": "Landlord Insurance | Quote & Cover Your Investment Today | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "callout-banner",
+    "callout-banner",
+    "callout-banner",
+    "callout-banner",
+    "hero-banner",
+    "cards-article",
+    "table-comparison",
+    "tag-label",
+    "tag-label",
+    "tag-label",
+    "tag-label",
+    "tag-label",
+    "tag-label",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "cards-checklist",
+    "quick-links"
+  ],
+  "importScript": "853cd45f1cf3"
+}

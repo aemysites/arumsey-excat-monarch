@@ -1,0 +1,59 @@
+{
+  "variantName": "accordion-panel",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button + text + link",
+    "purpose": "bordered collapsible FAQ / \"Things you should know\" panels"
+  },
+  "contentPattern": {
+    "structure": "one row per question: question label | answer (rich text, or a link to a /fragments/ path to load complex content). Single-cell rows are extra content (intro text, \"View all FAQs\" link); with the sidebar option the last single-cell row becomes the side column of related links"
+  },
+  "options": [
+    {
+      "class": "terms",
+      "label": "Terms"
+    },
+    {
+      "class": "two-column",
+      "label": "Two Column"
+    },
+    {
+      "class": "sidebar",
+      "label": "Sidebar"
+    },
+    {
+      "class": "lined",
+      "label": "Lined"
+    }
+  ],
+  "memberVariantIds": [
+    "v_5026ca867e80",
+    "v_acf0b025e84d",
+    "v_3eddc2861a3e",
+    "v_27ea2ccd273b",
+    "v_f515d05a0277",
+    "v_055e25bacead",
+    "v_74cabc629d2b",
+    "v_947bdf2c877a",
+    "v_e1e939d453e6-1",
+    "v_70a6c208913b",
+    "v_9695cfcc668f-1",
+    "v_c8f95262cfba",
+    "v_e2ccdc27f3e8",
+    "v_f3f9901055eb",
+    "v_fcb35cccea03",
+    "v_fcb35cccea03-1",
+    "v_fcb35cccea03-2",
+    "v_fcb35cccea03-3",
+    "v_fe33f08495bb"
+  ],
+  "usage": {
+    "when": "FAQ questions and expandable terms/conditions panels"
+  },
+  "reuseGuidance": "Use two-column for a 2-up question grid, sidebar for FAQs beside a links column, terms for the filled single \"Things you should know\" panel, lined for full-width ruled rows."
+}

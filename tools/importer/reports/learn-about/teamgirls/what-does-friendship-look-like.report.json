@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/what-does-friendship-look-like.html",
+  "path": "learn-about/teamgirls/what-does-friendship-look-like",
+  "timestamp": "2026-10-24T02:00:17.424Z",
+  "title": "TeamGirls | What does friendship look like? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

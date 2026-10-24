@@ -1,0 +1,22 @@
+{
+  "variantName": "breadcrumb",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "breadcrumb trail from home to the current page"
+  },
+  "contentPattern": {
+    "structure": "one cell holding a list of links (home first); last item may be plain text for the current page. Leave empty to derive the trail from the URL path and the page H1"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_f2e29c71c7a1"
+  ],
+  "sourceUrl": "https://www.suncorp.com.au/",
+  "reuseGuidance": "Use once per page, above the page heading."
+}

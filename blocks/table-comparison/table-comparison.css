@@ -1,0 +1,323 @@
+/* stylelint-disable no-descending-specificity -- table-comparison: values from suncorp.com.au sg-Flextable / legal table computed styles */
+.table-comparison {
+  --tc-border: rgb(198 198 180);
+  --tc-border-light: rgb(220 220 209);
+  --tc-stripe: #f2f2f2;
+  --tc-error: #bd1903;
+  --tc-mark-size: 32px;
+  --tc-tick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M18.865,38a1,1,0,0,1-.693-0.279L8,27.947,9.386,26.5l9.367,9L38.416,10,40,11.221,19.657,37.61a1,1,0,0,1-.718.387Z'/%3E%3C/svg%3E");
+  --tc-cross: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpolygon points='37.999 11.414 36.585 10 23.999 22.586 11.414 10 9.999 11.414 22.585 24 9.999 36.586 11.414 38 23.999 25.414 36.585 38 37.999 36.586 25.414 24 37.999 11.414'/%3E%3C/svg%3E");
+
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+  color: var(--text-color);
+}
+
+.table-comparison .table-comparison-intro {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.table-comparison .table-comparison-intro > :first-child {
+  margin-top: 0;
+}
+
+/* wide tables scroll sideways on narrow screens (the source hides them there) */
+.table-comparison .table-comparison-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-comparison .table-comparison-scroll:focus-visible {
+  outline: 2px solid var(--brand-teal);
+  outline-offset: 2px;
+}
+
+.table-comparison table {
+  width: 100%;
+  min-width: 600px;
+  margin: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: inherit;
+}
+
+/* plan tables with four or more columns need more room before they scroll */
+.table-comparison table:has(tr > :nth-child(4)) {
+  min-width: 800px;
+}
+
+.table-comparison th,
+.table-comparison td {
+  padding: 15px;
+  border: 1px solid var(--tc-border);
+  background-color: var(--background-color);
+  line-height: var(--body-line-height);
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.table-comparison th > :first-child,
+.table-comparison td > :first-child {
+  margin-top: 0;
+}
+
+.table-comparison th > :last-child,
+.table-comparison td > :last-child {
+  margin-bottom: 0;
+}
+
+.table-comparison th p,
+.table-comparison td p {
+  margin: 0;
+}
+
+/* default (legal tables): bold white header on a teal rule, striped rows */
+.table-comparison thead th {
+  border: 0;
+  border-bottom: 5px solid var(--brand-teal);
+  font-weight: 700;
+}
+
+.table-comparison tbody tr:nth-child(even) > * {
+  background-color: var(--tc-stripe);
+}
+
+.table-comparison tbody th {
+  font-weight: inherit;
+}
+
+.table-comparison thead th :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  color: var(--heading-color);
+}
+
+/* row-header comparisons: label column left, plan columns centred */
+.table-comparison.table-comparison-row-headers td,
+.table-comparison.table-comparison-row-headers thead th:not(:first-child) {
+  text-align: center;
+}
+
+/* tick / cross marks (source Icon-tick / Icon-cross artwork) */
+.table-comparison .table-comparison-mark {
+  display: inline-block;
+  width: var(--tc-mark-size);
+  height: var(--tc-mark-size);
+  background-color: var(--brand-teal-dark);
+  mask: var(--tc-tick) center / contain no-repeat;
+  vertical-align: middle;
+}
+
+.table-comparison .table-comparison-mark-no {
+  mask-image: var(--tc-cross);
+}
+
+.table-comparison .table-comparison-has-mark .table-comparison-mark {
+  display: block;
+  margin: 0 auto;
+}
+
+.table-comparison td.table-comparison-yes,
+.table-comparison td.table-comparison-no {
+  vertical-align: middle;
+  text-align: center;
+  line-height: 0;
+}
+
+.table-comparison td.table-comparison-yes:has(sup),
+.table-comparison td.table-comparison-no:has(sup) {
+  line-height: inherit;
+}
+
+.table-comparison td img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* authored tick / cross artwork (source renders these at 24px) */
+.table-comparison td img:is([alt*="tick" i], [alt*="cross" i]) {
+  width: 24px;
+}
+
+.table-comparison thead img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* shared dark plan header (cyan-grey, cyan-grey-light, image-cyan-grey*) */
+.table-comparison:is(.cyan-grey, .cyan-grey-light, .image-cyan-grey, .image-cyan-grey-light) thead th {
+  border: 1px solid #000;
+  background-color: var(--brand-teal-dark);
+  color: #fff;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.table-comparison:is(.cyan-grey, .cyan-grey-light, .image-cyan-grey, .image-cyan-grey-light) thead th a:any-link {
+  color: #fff;
+}
+
+.table-comparison:is(.cyan-grey, .cyan-grey-light, .image-cyan-grey, .image-cyan-grey-light) tbody tr:nth-child(even) > * {
+  background-color: var(--background-color);
+}
+
+/* cyan-grey: dark header, grey cover-limit cells; label tables get teal 48px ticks */
+.table-comparison.cyan-grey tbody td {
+  background-color: var(--tc-stripe);
+}
+
+.table-comparison.cyan-grey thead th:has(h1, h2, h3, h4, h5, h6) {
+  border: 0;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.table-comparison.cyan-grey thead th :is(h1, h2, h3, h4, h5, h6) {
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--heading-color);
+}
+
+.table-comparison.cyan-grey thead tr > th:first-child:nth-last-child(3) {
+  width: 60%;
+}
+
+.table-comparison.cyan-grey.table-comparison-row-headers tbody th,
+.table-comparison.cyan-grey.table-comparison-row-headers tbody tr:nth-child(even) > th {
+  background-color: var(--tc-stripe);
+  vertical-align: middle;
+}
+
+.table-comparison.cyan-grey.table-comparison-row-headers tbody td,
+.table-comparison.cyan-grey.table-comparison-row-headers tbody tr:nth-child(even) > td {
+  background-color: var(--background-color);
+}
+
+.table-comparison.cyan-grey .table-comparison-mark {
+  --tc-mark-size: 48px;
+
+  background-color: var(--brand-teal);
+}
+
+.table-comparison.cyan-grey .table-comparison-mark-no {
+  --tc-mark-size: 40px;
+
+  background-color: var(--tc-error);
+}
+
+/* cyan-grey-light: dark header, neutral label column, white values */
+.table-comparison.cyan-grey-light thead th {
+  font-weight: 500;
+}
+
+.table-comparison.cyan-grey-light tbody tr > :first-child,
+.table-comparison.cyan-grey-light tbody tr:nth-child(even) > :first-child {
+  border-color: var(--tc-border-light);
+  background-color: var(--light-color);
+}
+
+.table-comparison.cyan-grey-light tbody tr > :first-child:has(.icon) {
+  position: relative;
+  padding-left: 60px;
+}
+
+.table-comparison.cyan-grey-light tbody tr > :first-child .icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+/* image-cyan-grey-light: white label column, neutral plan cells, centred marks */
+.table-comparison.image-cyan-grey-light thead th:first-child {
+  border-color: var(--tc-border);
+  background-color: var(--background-color);
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+.table-comparison.image-cyan-grey-light thead th:not(:first-child) {
+  text-align: center;
+}
+
+.table-comparison.image-cyan-grey-light thead th > p:first-child {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.table-comparison.image-cyan-grey-light tbody th {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.table-comparison.image-cyan-grey-light tbody td,
+.table-comparison.image-cyan-grey-light tbody tr:nth-child(even) > td {
+  border-color: var(--tc-border-light);
+  background-color: var(--light-color);
+  vertical-align: middle;
+}
+
+/* image-cyan-grey: dark header across, striped rows, bold row labels */
+.table-comparison.image-cyan-grey tbody tr:nth-child(odd) > * {
+  background-color: var(--tc-stripe);
+}
+
+.table-comparison.image-cyan-grey tbody th {
+  font-weight: 700;
+}
+
+.table-comparison.image-cyan-grey td {
+  text-align: left;
+}
+
+/* dark: white header with teal plan headings over a teal rule, striped rows */
+.table-comparison.dark thead th {
+  border-bottom: 0;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.table-comparison.dark thead th:not(:first-child) {
+  border-bottom: 5px solid var(--brand-teal);
+}
+
+.table-comparison.dark thead th:first-child {
+  border-bottom: 1px solid var(--tc-border);
+}
+
+.table-comparison.dark tbody td {
+  vertical-align: top;
+}
+
+/* image-grey: white header, grey body cells */
+.table-comparison.image-grey thead th {
+  border: 0;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.table-comparison.image-grey thead th:first-child {
+  text-align: left;
+}
+
+.table-comparison.image-grey tbody > tr > *,
+.table-comparison.image-grey tbody tr:nth-child(even) > * {
+  background-color: var(--tc-stripe);
+}
+
+.table-comparison:is(.dark, .image-grey) thead th :is(h1, h2, h3, h4, h5, h6) {
+  font-size: var(--heading-font-size-m);
+}
+
+.table-comparison:is(.dark, .image-grey) thead .button-container {
+  margin: 12px 0 0;
+}
+
+@media (width >= 900px) {
+  .table-comparison table {
+    min-width: 0;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/why-you-should-know-how-to-drive-a-manual-car.html",
+  "path": "learn-about/my-car/why-you-should-know-how-to-drive-a-manual-car",
+  "timestamp": "2026-10-24T01:57:20.228Z",
+  "title": "Why You Should Know How To Drive A Manual Car | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

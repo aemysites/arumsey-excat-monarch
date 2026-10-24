@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/preparing-to-claim.html",
+  "path": "insurance/faqs/income-protection/preparing-to-claim",
+  "timestamp": "2026-10-24T02:10:07.900Z",
+  "title": "What do I need to provide to make a claim on my Income Protection policy?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/does-car-insurance-cover-trailers-or-towed-caravans.html",
+  "path": "learn-about/my-car/does-car-insurance-cover-trailers-or-towed-caravans",
+  "timestamp": "2026-10-24T01:54:51.442Z",
+  "title": "Does Car Insurance Cover Trailers or Towed Caravans? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

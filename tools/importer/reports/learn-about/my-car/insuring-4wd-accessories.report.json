@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/insuring-4wd-accessories.html",
+  "path": "learn-about/my-car/insuring-4wd-accessories",
+  "timestamp": "2026-10-24T01:55:56.840Z",
+  "title": "What To Know About Insuring Your 4WD Accessories | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

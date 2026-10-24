@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/accident-my-fault.html",
+  "path": "insurance/faqs/ctp/accident-my-fault",
+  "timestamp": "2026-10-24T02:02:17.104Z",
+  "title": "What if I was at fault for the accident?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

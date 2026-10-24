@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/any-building-or-part-of-a-building-which-is-legally-part-of-a-strata-title-building.html",
+  "path": "home-contents-explained/home/any-building-or-part-of-a-building-which-is-legally-part-of-a-strata-title-building",
+  "timestamp": "2026-10-24T01:29:46.566Z",
+  "title": "Any building or part of a building insured or required to be insured which is legally part of a strata title building | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

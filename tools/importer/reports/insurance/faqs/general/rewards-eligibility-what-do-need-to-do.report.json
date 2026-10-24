@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/rewards-eligibility-what-do-need-to-do.html",
+  "path": "insurance/faqs/general/rewards-eligibility-what-do-need-to-do",
+  "timestamp": "2026-10-24T02:06:59.131Z",
+  "title": "Rewards eligibility, what do I need to do? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

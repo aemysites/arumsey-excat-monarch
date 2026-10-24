@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/injury-recovery-and-ctp/how-to-optimise-recovery-for-whiplash-associated-disorder.html",
+  "path": "learn-about/injury-recovery-and-ctp/how-to-optimise-recovery-for-whiplash-associated-disorder",
+  "timestamp": "2026-10-24T01:45:29.511Z",
+  "title": "How To Optimise Your Recovery After A Whiplash-Associated Disorder | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

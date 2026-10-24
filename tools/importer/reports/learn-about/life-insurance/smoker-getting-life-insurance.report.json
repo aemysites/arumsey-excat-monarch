@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/smoker-getting-life-insurance.html",
+  "path": "learn-about/life-insurance/smoker-getting-life-insurance",
+  "timestamp": "2026-10-24T01:47:48.050Z",
+  "title": "What a smoker should expect about Life Insurance | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/how-do-we-calculate-the-cost-of-caravan-insurance-premiums.html",
+  "path": "learn-about/my-car/how-do-we-calculate-the-cost-of-caravan-insurance-premiums",
+  "timestamp": "2026-10-24T01:55:18.447Z",
+  "title": "How do we calculate the costs of caravan insurance premiums? | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

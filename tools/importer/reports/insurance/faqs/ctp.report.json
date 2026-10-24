@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp.html",
+  "path": "insurance/faqs/ctp",
+  "timestamp": "2026-10-24T01:36:28.870Z",
+  "title": "Frequently asked questions about Qld Compulsory Third Party (CTP)",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "cards-feature",
+    "cards-feature",
+    "hero-title",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

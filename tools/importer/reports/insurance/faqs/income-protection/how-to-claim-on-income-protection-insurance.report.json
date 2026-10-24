@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/income-protection/how-to-claim-on-income-protection-insurance.html",
+  "path": "insurance/faqs/income-protection/how-to-claim-on-income-protection-insurance",
+  "timestamp": "2026-10-24T02:09:36.343Z",
+  "title": "How to claim on income protection insurance?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

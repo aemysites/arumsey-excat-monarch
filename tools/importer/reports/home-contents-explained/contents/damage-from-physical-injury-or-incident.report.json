@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/damage-from-physical-injury-or-incident.html",
+  "path": "home-contents-explained/contents/damage-from-physical-injury-or-incident",
+  "timestamp": "2026-10-24T01:22:44.306Z",
+  "title": "Damage from physical injury or incident | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

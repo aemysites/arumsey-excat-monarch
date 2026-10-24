@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-clearances-required-other-statutory-before-settlement-paid.html",
+  "path": "insurance/faqs/ctp/what-clearances-required-other-statutory-before-settlement-paid",
+  "timestamp": "2026-10-24T02:03:21.102Z",
+  "title": "What clearances are required from other statutory bodies before my settlement is paid?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

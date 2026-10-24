@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/health/compare-hospital-cover/gold.html",
+  "path": "insurance/health/compare-hospital-cover/gold",
+  "timestamp": "2026-10-24T01:37:29.808Z",
+  "title": "Health Insurance with Gold Hospital Cover | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "hero-title",
+    "accordion-panel",
+    "cards-plan"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/claims/boat-insurance.html",
+  "path": "insurance/claims/boat-insurance",
+  "timestamp": "2026-10-24T01:33:57.294Z",
+  "title": "Boat Insurance Claims",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "columns-links",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/claims/boat-insurance/make-a-claim",
+    "fragments/insurance/claims/boat-insurance/track-your-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

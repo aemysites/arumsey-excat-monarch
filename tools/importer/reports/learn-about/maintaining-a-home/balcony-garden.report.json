@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/balcony-garden.html",
+  "path": "learn-about/maintaining-a-home/balcony-garden",
+  "timestamp": "2026-10-24T01:50:01.734Z",
+  "title": "Balcony Gardens | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

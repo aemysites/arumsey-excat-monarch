@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/extreme-weather-assistance/home-maintenance-guide.html",
+  "path": "insurance/extreme-weather-assistance/home-maintenance-guide",
+  "timestamp": "2026-10-24T01:36:03.549Z",
+  "title": "Home Maintenance Guide & Tips for Claiming Repairs | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "callout-banner",
+    "hero-banner",
+    "hero-banner",
+    "hero-banner",
+    "columns-media",
+    "tag-label",
+    "accordion-panel",
+    "cards-checklist"
+  ],
+  "importScript": "cd73baba663a"
+}

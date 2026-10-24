@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/home/home-building.html",
+  "path": "insurance/home/home-building",
+  "timestamp": "2026-10-24T12:53:09.552Z",
+  "title": "Building Insurance | $50 Discount Online Only | Suncorp​",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "hero-banner",
+    "cards-feature",
+    "hero-title",
+    "tag-label",
+    "accordion-panel",
+    "carousel-article",
+    "cards-checklist",
+    "rating-summary",
+    "cards-plan"
+  ],
+  "importScript": "853cd45f1cf3"
+}

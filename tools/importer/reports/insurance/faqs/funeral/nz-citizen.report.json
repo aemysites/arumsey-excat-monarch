@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/funeral/nz-citizen.html",
+  "path": "insurance/faqs/funeral/nz-citizen",
+  "timestamp": "2026-10-24T02:04:33.631Z",
+  "title": "I’m a NZ Citizen, can I apply for this insurance policy?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

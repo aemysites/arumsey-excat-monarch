@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/when-is-the-best-time-to-get-income-protection.html",
+  "path": "learn-about/life-insurance/when-is-the-best-time-to-get-income-protection",
+  "timestamp": "2026-10-24T01:48:20.140Z",
+  "title": "When Is The Best Time To Get Income Protection? | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

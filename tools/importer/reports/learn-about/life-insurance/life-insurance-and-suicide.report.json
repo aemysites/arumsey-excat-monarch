@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/life-insurance-and-suicide.html",
+  "path": "learn-about/life-insurance/life-insurance-and-suicide",
+  "timestamp": "2026-10-24T01:47:25.203Z",
+  "title": "Does Life Insurance Cover Suicidal Death In Australia? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

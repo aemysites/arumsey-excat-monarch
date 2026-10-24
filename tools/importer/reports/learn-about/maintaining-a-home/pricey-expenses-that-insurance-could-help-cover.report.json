@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/pricey-expenses-that-insurance-could-help-cover.html",
+  "path": "learn-about/maintaining-a-home/pricey-expenses-that-insurance-could-help-cover",
+  "timestamp": "2026-10-24T01:52:47.443Z",
+  "title": "The Financial Benefit of Having Home and Contents Insurance | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

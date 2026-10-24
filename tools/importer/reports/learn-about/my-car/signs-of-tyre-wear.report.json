@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/signs-of-tyre-wear.html",
+  "path": "learn-about/my-car/signs-of-tyre-wear",
+  "timestamp": "2026-10-24T01:56:46.412Z",
+  "title": "Tyres: Signs of wear and what they mean | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

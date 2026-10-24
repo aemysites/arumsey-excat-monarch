@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general.html",
+  "path": "insurance/faqs/general",
+  "timestamp": "2026-10-24T01:36:35.215Z",
+  "title": "General FAQs | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "search-faq"
+  ],
+  "importScript": "cd73baba663a"
+}

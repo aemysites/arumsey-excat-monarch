@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/prevention-of-access-when-you-have-home-cover.html",
+  "path": "home-contents-explained/home/prevention-of-access-when-you-have-home-cover",
+  "timestamp": "2026-10-24T01:31:50.256Z",
+  "title": "Prevention of access when you have home cover | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

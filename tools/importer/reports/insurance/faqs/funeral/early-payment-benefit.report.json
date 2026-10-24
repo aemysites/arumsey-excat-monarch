@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/funeral/early-payment-benefit.html",
+  "path": "insurance/faqs/funeral/early-payment-benefit",
+  "timestamp": "2026-10-24T02:04:21.562Z",
+  "title": "What is the Early Payment Benefit?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

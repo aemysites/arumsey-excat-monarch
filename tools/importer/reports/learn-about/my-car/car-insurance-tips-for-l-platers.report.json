@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/my-car/car-insurance-tips-for-L-platers.html",
+  "path": "learn-about/my-car/car-insurance-tips-for-l-platers",
+  "timestamp": "2026-10-24T02:17:25.139Z",
+  "title": "Car Insurance Tips for L-Platers | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

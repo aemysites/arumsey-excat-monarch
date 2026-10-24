@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/whole-life-insurance.html",
+  "path": "insurance/faqs/life-protect/whole-life-insurance",
+  "timestamp": "2026-10-24T02:11:01.937Z",
+  "title": "Whole Life Insurance",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/buying-a-car/windscreen-cover-insurance-options.html",
+  "path": "learn-about/buying-a-car/windscreen-cover-insurance-options",
+  "timestamp": "2026-10-24T01:43:18.937Z",
+  "title": "Can I Add Windscreen Cover To My Insurance| Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

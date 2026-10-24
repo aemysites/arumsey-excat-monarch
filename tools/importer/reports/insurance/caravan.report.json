@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/caravan.html",
+  "path": "insurance/caravan",
+  "timestamp": "2026-10-24T12:51:28.203Z",
+  "title": "Caravan Insurance - Get a Quote Online | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "cards-checklist"
+  ],
+  "importScript": "853cd45f1cf3"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/life-insurance/insurance-through-your-superannuation.html",
+  "path": "learn-about/life-insurance/insurance-through-your-superannuation",
+  "timestamp": "2026-10-24T01:47:11.948Z",
+  "title": "Insurance Through Your Superannuation | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

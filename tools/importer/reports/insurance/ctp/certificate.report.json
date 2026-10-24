@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/ctp/certificate.html",
+  "path": "insurance/ctp/certificate",
+  "timestamp": "2026-10-24T01:34:49.201Z",
+  "title": "CTP Insurance Certificate | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "accordion-panel",
+    "accordion-panel",
+    "cards-plan"
+  ],
+  "importScript": "cd73baba663a"
+}

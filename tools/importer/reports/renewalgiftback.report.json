@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/renewalgiftback.html",
+  "path": "renewalgiftback",
+  "timestamp": "2026-10-24T02:00:48.716Z",
+  "title": "Renewal Giftback competition",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "hero-banner",
+    "cards-feature",
+    "table-comparison"
+  ],
+  "importScript": "cd73baba663a"
+}

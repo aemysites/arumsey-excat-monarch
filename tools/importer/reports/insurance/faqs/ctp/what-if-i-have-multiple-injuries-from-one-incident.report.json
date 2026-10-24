@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/what-if-I-have-multiple-injuries-from-one-incident.html",
+  "path": "insurance/faqs/ctp/what-if-i-have-multiple-injuries-from-one-incident",
+  "timestamp": "2026-10-24T02:03:36.098Z",
+  "title": "What if I have multiple injuries from one incident?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

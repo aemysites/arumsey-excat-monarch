@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/making-a-claim.html",
+  "path": "insurance/faqs/life-protect/making-a-claim",
+  "timestamp": "2026-10-24T02:10:42.552Z",
+  "title": "What do I need to do to make a claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

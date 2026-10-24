@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/5-sustainable-housing-materials-for-climate-resistant-home.html",
+  "path": "learn-about/maintaining-a-home/5-sustainable-housing-materials-for-climate-resistant-home",
+  "timestamp": "2026-10-24T01:49:34.299Z",
+  "title": "5 Sustainable Housing Materials For A Climate-Resistant Home | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

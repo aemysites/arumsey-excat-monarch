@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/home/what-is-legal-liability-cover.html",
+  "path": "insurance/faqs/home/what-is-legal-liability-cover",
+  "timestamp": "2026-10-24T02:09:22.026Z",
+  "title": "What is legal liability cover?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

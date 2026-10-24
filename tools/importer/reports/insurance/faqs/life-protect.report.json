@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect.html",
+  "path": "insurance/faqs/life-protect",
+  "timestamp": "2026-10-24T01:36:56.798Z",
+  "title": "FAQs | Common Life Protect Insurance Questions | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "accordion-panel",
+    "search-faq"
+  ],
+  "importScript": "cd73baba663a"
+}

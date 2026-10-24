@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/about-us/legal/code-of-conduct.html",
+  "path": "about-us/legal/code-of-conduct",
+  "timestamp": "2026-10-24T01:19:49.753Z",
+  "title": "Motor Vehicle Insurance and Repair Industry Code | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "columns-media"
+  ],
+  "importScript": "cd73baba663a"
+}

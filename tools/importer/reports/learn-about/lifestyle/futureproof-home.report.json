@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/lifestyle/futureproof-home.html",
+  "path": "learn-about/lifestyle/futureproof-home",
+  "timestamp": "2026-10-24T01:49:04.099Z",
+  "title": "Home for the Future | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

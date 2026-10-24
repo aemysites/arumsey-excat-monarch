@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/health/detox-2021.html",
+  "path": "learn-about/health/detox-2021",
+  "timestamp": "2026-10-24T01:43:57.327Z",
+  "title": "Detox Your Way To A Healthy New You | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner"
+  ],
+  "importScript": "cd73baba663a"
+}

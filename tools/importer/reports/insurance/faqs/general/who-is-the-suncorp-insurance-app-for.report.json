@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/general/who-is-the-suncorp-insurance-app-for.html",
+  "path": "insurance/faqs/general/who-is-the-suncorp-insurance-app-for",
+  "timestamp": "2026-10-24T02:07:57.520Z",
+  "title": "Who is the Suncorp Insurance App for? | Suncorp",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/life/buying-a-home.html",
+  "path": "insurance/life/buying-a-home",
+  "timestamp": "2026-10-24T02:13:38.152Z",
+  "title": "Life Insurance for Home Buyers | Suncorp Life",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "embed-video",
+    "cards-feature",
+    "cards-feature",
+    "accordion-panel"
+  ],
+  "importScript": "cd73baba663a"
+}

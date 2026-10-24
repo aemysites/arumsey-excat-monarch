@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/wall-paint-and-paper-nsw-units-only.html",
+  "path": "home-contents-explained/contents/wall-paint-and-paper-nsw-units-only",
+  "timestamp": "2026-10-24T01:25:17.487Z",
+  "title": "Wall paint and paper (NSW units only) | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb"
+  ],
+  "importScript": "cd73baba663a"
+}

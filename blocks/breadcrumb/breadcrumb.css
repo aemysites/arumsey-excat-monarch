@@ -1,0 +1,81 @@
+/* breadcrumb: values from suncorp.com.au .sg-List-breadcrumb */
+.breadcrumb {
+  font-size: 15.12px;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+/* source trail sits 15px in from the content edge (.Middle-column padding-left);
+   on mobile that edge is the viewport, inside the 24px section gutter here */
+.breadcrumb nav {
+  display: block;
+  margin-left: -9px;
+}
+
+.breadcrumb .breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 5px 5px 5px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb .breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+/* chevron separator after every item except the current page */
+.breadcrumb .breadcrumb-item:not(:last-child)::after {
+  content: '\00a0';
+  display: block;
+  width: 1em;
+  min-height: 1em;
+  margin: 0 0.5em 0 0.15em;
+  background: url('chevron.svg') 50% 50% / contain no-repeat;
+}
+
+.breadcrumb .breadcrumb-item a:any-link {
+  display: block;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+  color: var(--link-hover-color);
+}
+
+.breadcrumb .breadcrumb-home-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.breadcrumb .breadcrumb-home-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  background: url('home.svg') 0 0 / 24px 24px no-repeat;
+}
+
+.breadcrumb .breadcrumb-item [aria-current='page'] {
+  color: var(--text-color);
+}
+
+@media (width >= 600px) {
+  .breadcrumb {
+    font-size: 17.136px;
+  }
+}
+
+@media (width >= 900px) {
+  .breadcrumb nav {
+    margin-left: 0;
+    padding-left: 15px;
+  }
+}

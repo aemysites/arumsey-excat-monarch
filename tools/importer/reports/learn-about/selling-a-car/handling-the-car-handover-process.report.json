@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/selling-a-car/handling-the-car-handover-process.html",
+  "path": "learn-about/selling-a-car/handling-the-car-handover-process",
+  "timestamp": "2026-10-24T01:57:36.600Z",
+  "title": "How To Handle The Car Handover Process | Suncorp Insurance",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

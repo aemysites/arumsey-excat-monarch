@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/car/motor-repairer-network.html",
+  "path": "insurance/car/motor-repairer-network",
+  "timestamp": "2026-10-24T01:33:31.838Z",
+  "title": "Motor Repairer Network",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "breadcrumb",
+    "locator-search"
+  ],
+  "importScript": "cd73baba663a"
+}

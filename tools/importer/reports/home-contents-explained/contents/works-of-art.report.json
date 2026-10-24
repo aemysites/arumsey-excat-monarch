@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/contents/works-of-art.html",
+  "path": "home-contents-explained/contents/works-of-art",
+  "timestamp": "2026-10-24T01:25:32.235Z",
+  "title": "Works of art | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

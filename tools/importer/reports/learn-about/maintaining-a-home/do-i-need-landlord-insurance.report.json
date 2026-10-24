@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/maintaining-a-home/do-i-need-landlord-insurance.html",
+  "path": "learn-about/maintaining-a-home/do-i-need-landlord-insurance",
+  "timestamp": "2026-10-24T02:17:51.634Z",
+  "title": "Should You Consider Landlord Insurance? | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label",
+    "embed-video",
+    "article-list"
+  ],
+  "importScript": "cd73baba663a"
+}

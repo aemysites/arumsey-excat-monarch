@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/home-contents-explained/home/uninstalled-building-fittings-fixtures-and-materials.html",
+  "path": "home-contents-explained/home/uninstalled-building-fittings-fixtures-and-materials",
+  "timestamp": "2026-10-24T01:32:33.325Z",
+  "title": "Uninstalled building fittings, fixtures and materials | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "table-comparison",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/barristers-professional-indemnity/claims.html",
+  "path": "insurance/barristers-professional-indemnity/claims",
+  "timestamp": "2026-10-24T01:32:52.123Z",
+  "title": "Make a Barrister Professional Indemnity Claim | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-title",
+    "tabs-panel"
+  ],
+  "fragments": [
+    "fragments/insurance/barristers-professional-indemnity/claims/make-a-claim",
+    "fragments/insurance/barristers-professional-indemnity/claims/track-a-claim"
+  ],
+  "importScript": "cd73baba663a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/business.html",
+  "path": "learn-about/business",
+  "timestamp": "2026-10-24T01:42:12.743Z",
+  "title": "Starting & managing a business | Learn About | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "article-list",
+    "tag-label",
+    "columns-teaser"
+  ],
+  "importScript": "cd73baba663a"
+}

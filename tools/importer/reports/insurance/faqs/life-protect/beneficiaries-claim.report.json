@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/life-protect/beneficiaries-claim.html",
+  "path": "insurance/faqs/life-protect/beneficiaries-claim",
+  "timestamp": "2026-10-24T02:10:27.945Z",
+  "title": "How do my beneficiaries make a claim?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

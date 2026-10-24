@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/insurance/faqs/ctp/death-loved-one.html",
+  "path": "insurance/faqs/ctp/death-loved-one",
+  "timestamp": "2026-10-24T02:02:34.852Z",
+  "title": "What do I do if a loved one has died in an accident?",
+  "template": "utility-page",
+  "blocks": [
+    "breadcrumb",
+    "accordion-panel"
+  ],
+  "importScript": "c5a31badb343"
+}

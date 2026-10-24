@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.suncorp.com.au/learn-about/teamgirls/7-technology-rules-for-your-household.html",
+  "path": "learn-about/teamgirls/7-technology-rules-for-your-household",
+  "timestamp": "2026-10-24T01:58:06.973Z",
+  "title": "7 Technology Rules for Your Household | Team Girls | Suncorp",
+  "template": "content-page",
+  "blocks": [
+    "breadcrumb",
+    "hero-banner",
+    "tag-label"
+  ],
+  "importScript": "cd73baba663a"
+}
