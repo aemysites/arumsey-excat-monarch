@@ -15,8 +15,14 @@ async function loadNav() {
   wrapper.querySelectorAll('img[src], source[srcset]').forEach((el) => {
     const attr = el.hasAttribute('src') ? 'src' : 'srcset';
     const value = el.getAttribute(attr);
-    if (value && !/^([a-z]+:|\/)/i.test(value)) el.setAttribute(attr, new URL(value, resp.url).pathname);
+    if (value && !/^([a-z]+:|\/)/i.test(value)) {
+      const url = new URL(value, resp.url);
+      el.setAttribute(attr, `${url.pathname}${url.search}`);
+    }
   });
+  // Document Authoring renders a list item that holds a nested list as <li><p>…</p><ul>:
+  // unwrap those paragraphs so items look the same as in the local nav (<li><a>…</a><ul>)
+  wrapper.querySelectorAll('li > p').forEach((p) => p.replaceWith(...p.childNodes));
   return wrapper;
 }
 
