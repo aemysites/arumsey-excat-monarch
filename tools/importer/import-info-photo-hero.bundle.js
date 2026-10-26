@@ -35,13 +35,13 @@ var CustomImportScript = (() => {
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // tools/importer/import-info-photo-hero.js
+  // import-info-photo-hero.js
   var import_info_photo_hero_exports = {};
   __export(import_info_photo_hero_exports, {
     default: () => import_info_photo_hero_default
   });
 
-  // tools/importer/parsers/accordion-faq.js
+  // parsers/accordion-faq.js
   function cleanInline(root) {
     root.querySelectorAll("svg, .icon-svg, span.reader").forEach((n) => n.remove());
     root.querySelectorAll("button.js-disclaimer-link, button.symbol-disclaimer").forEach((btn) => {
@@ -137,7 +137,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/savings-calculator.js
+  // parsers/savings-calculator.js
   var FIELD_KEYS = ["net-income", "salary", "w2-income", "w2-ss-withheld", "other-se-income"];
   function text(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
@@ -235,7 +235,7 @@ var CustomImportScript = (() => {
     return [block, ...after];
   }
 
-  // tools/importer/parsers/tabs-pill.js
+  // parsers/tabs-pill.js
   var BLOCK_SEL = "div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, section, article, header, footer, table, figure, blockquote, form, aside, nav";
   function text2(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
@@ -507,7 +507,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/search-articles.js
+  // parsers/search-articles.js
   function text3(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -530,7 +530,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/carousel-testimonial.js
+  // parsers/carousel-testimonial.js
   function text4(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -609,7 +609,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/accordion-media.js
+  // parsers/accordion-media.js
   var CATALOG_VARIANTS = {
     // card-grid-landing (catalog variants, class selectors stable between catalog and live)
     "/tax-offices/drop-off/": [["section.column-control.spruce-eggshell-theme.padding-bottom-20.two-column-control", "link-list"]],
@@ -824,7 +824,7 @@ var CustomImportScript = (() => {
     beforeBlock.forEach((n) => block.before(n));
   }
 
-  // tools/importer/parsers/cards-product.js
+  // parsers/cards-product.js
   var CATALOG_VARIANTS2 = {
     "/expat-tax-preparation/expat-tax-preparation-and-services/": [["section.column-control.two-column-control:has(li.imageOverflow)", "image"]],
     "/expat-tax-preparation/expat-tax-preparation-and-services/federal-tax-prep/": [["section.column-control.two-column-control:has(li.imageOverflow)", "image"]],
@@ -1019,7 +1019,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-feature.js
+  // parsers/cards-feature.js
   var DARK_THEMES = ["green-dark-theme", "spruce-forest-theme", "green-forest-theme", "black-theme"];
   function cleanInline5(root) {
     root.querySelectorAll("svg, span.reader, span.spacer, input, script, style, link, noscript, meta").forEach((n) => n.remove());
@@ -1208,7 +1208,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-promo-card.js
+  // parsers/columns-promo-card.js
   var CATALOG_VARIANTS3 = {
     "/easignup/": [["#container-69a88a9f0b > section.column-control.spruce-forest-theme.padding-top-100", "checklist"]],
     "/financial-services/emerald-advance-loan/": [["#container-69a88a9f0b > section.column-control.spruce-forest-theme.padding-top-100", "checklist"]],
@@ -1417,7 +1417,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-icon.js
+  // parsers/cards-icon.js
   var CATALOG_VARIANTS4 = {
     "/financial-services/spruce/": [["section.column-control:has(.snackBar)", "dividers"], ["section.column-control:has(.card-secondary.featurecard)", "light-3"]],
     "/tax-calculator/": [["section.column-control.spruce-eggshell-theme:has(.alignBanner)", "light"]],
@@ -1648,7 +1648,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-icon-list.js
+  // parsers/columns-icon-list.js
   function text9(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -1757,7 +1757,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-banner.js
+  // parsers/columns-banner.js
   var CATALOG_VARIANTS5 = {
     "/corporate/": [["section.content-two-column:has(.white-theme)", "bleed"]],
     "/corporate/our-company/": [["section.column-control.white-theme:not(.two-column-control):has(li.col-3 .introImageVariant)", "no-panel"]],
@@ -2162,7 +2162,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/hero-split.js
+  // parsers/hero-split.js
   var CATALOG_VARIANTS6 = {
     "/corporate/income-tax-course/": [["#container-096c529025 > section:nth-child(1)", "bleed"]],
     "/easignup/": [["#container-5a359b941f > section.column-control.spruce-eggshell-theme.two-column-control", "bleed"]],
@@ -2470,7 +2470,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/promo-strip.js
+  // parsers/promo-strip.js
   var CATALOG_VARIANTS7 = {
     "/lp/creator-taxes/": [["#container-d8006e96a0 > section.column-control.spruce-eggshell-theme.padding-top-20.padding-bottom-100", "light"]],
     "/offers/turbotax-price-comparison/": [["#container-e8bf00d4c6 > div:nth-child(8)", null]],
@@ -2702,7 +2702,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-stats.js
+  // parsers/columns-stats.js
   function text13(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -2778,7 +2778,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-article.js
+  // parsers/cards-article.js
   function cleanInline13(root) {
     root.querySelectorAll("svg, span.reader, span.spacer, input, script, style, link, noscript, meta").forEach((n) => n.remove());
     root.querySelectorAll("button.js-disclaimer-link, button.symbol-disclaimer").forEach((btn) => {
@@ -2915,7 +2915,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/transformers/hrblock-cleanup.js
+  // transformers/hrblock-cleanup.js
   var CATALOG_CLEANUP_RULES = [
     '[id*="truste"]',
     'body [class*="popup"]:not(nav *)',
@@ -3236,6 +3236,15 @@ var CustomImportScript = (() => {
     } catch (e) {
       return h;
     }
+  }
+  function stripTrailingSlashes(root) {
+    safeQueryAll(root, "a[href]").forEach((a) => {
+      const href = (a.getAttribute("href") || "").trim();
+      if (/^(mailto|tel|javascript|data):/i.test(href)) return;
+      const m = href.match(/^([^?#]*?)\/+([?#].*)?$/);
+      if (!m || !m[1] || /^([a-z][a-z\d+.-]*:)?\/?$/i.test(m[1])) return;
+      a.setAttribute("href", `${m[1]}${m[2] || ""}`);
+    });
   }
   function recordButtons(document) {
     const reg = /* @__PURE__ */ new Map();
@@ -3779,6 +3788,7 @@ var CustomImportScript = (() => {
       isolateCtas(element, document);
       applyButtonKinds(element, document);
       safeQueryAll(element, 'a[href^="javascript:" i]').forEach((a) => a.setAttribute("href", "#"));
+      stripTrailingSlashes(element);
       safeQueryAll(element, "ul.column-container").forEach((ul) => {
         if (!ul.isConnected || ul.closest("table")) return;
         const grid = document.createElement("div");
@@ -3798,7 +3808,7 @@ var CustomImportScript = (() => {
     }
   }
 
-  // tools/importer/transformers/hrblock-sections.js
+  // transformers/hrblock-sections.js
   var MARKER = "data-excat-section-style";
   var FRAGMENT_ATTR = "data-excat-fragment-style";
   var NONE = "";
@@ -4331,7 +4341,7 @@ var CustomImportScript = (() => {
     }
   }
 
-  // tools/importer/transformers/hrblock-fragments.js
+  // transformers/hrblock-fragments.js
   var FRAGMENTS = [
     {
       "block": "hero-split",
@@ -5147,7 +5157,7 @@ var CustomImportScript = (() => {
     });
   }
 
-  // tools/importer/transformers/hrblock-dm-images.js
+  // transformers/hrblock-dm-images.js
   var EMPTY_ALT_SENTINEL = "Image without alt text";
   function detectDynamicMediaUrl(urlStr) {
     if (!urlStr || !/^(https?:\/\/|\/\/)/i.test(urlStr)) return false;
@@ -5229,7 +5239,7 @@ var CustomImportScript = (() => {
     });
   }
 
-  // tools/importer/import-info-photo-hero.js
+  // import-info-photo-hero.js
   var PAGE_TEMPLATE = {
     "name": "info-photo-hero",
     "urls": [

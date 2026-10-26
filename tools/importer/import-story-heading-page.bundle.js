@@ -35,13 +35,13 @@ var CustomImportScript = (() => {
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // tools/importer/import-story-heading-page.js
+  // import-story-heading-page.js
   var import_story_heading_page_exports = {};
   __export(import_story_heading_page_exports, {
     default: () => import_story_heading_page_default
   });
 
-  // tools/importer/parsers/hero-banner.js
+  // parsers/hero-banner.js
   var CATALOG_VARIANTS = {
     "/offers/turbotax-price-comparison/": [["#container-e8bf00d4c6 > div.fb-image-wrapper", "alt-2"], ["#container-e8bf00d4c6 > section:nth-child(12)", "dark"]],
     "/tax-payment-center/": [["#container-77a8166999 > section.teaser", "alt"]],
@@ -247,7 +247,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-banner.js
+  // parsers/columns-banner.js
   var CATALOG_VARIANTS2 = {
     "/corporate/": [["section.content-two-column:has(.white-theme)", "bleed"]],
     "/corporate/our-company/": [["section.column-control.white-theme:not(.two-column-control):has(li.col-3 .introImageVariant)", "no-panel"]],
@@ -634,6 +634,11 @@ var CustomImportScript = (() => {
       return text2(outside) ? [col] : items;
     });
     const row = columns.map((col) => extract2(document, col, { icons: true })).filter((content) => content.length);
+    const bandImages = element.querySelector(".fb-image-wrapper > .image-container");
+    if (bandImages && !columns.some((c) => c.contains(bandImages))) {
+      const bg = bandImages.querySelector("img.show-large[src]") || bandImages.querySelector("img[src]");
+      if (bg) row.unshift([bg]);
+    }
     const cells = row.length ? [row] : [];
     let variant = variantFromCatalog;
     if (variant === void 0) {
@@ -647,7 +652,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/hero-split.js
+  // parsers/hero-split.js
   var CATALOG_VARIANTS3 = {
     "/corporate/income-tax-course/": [["#container-096c529025 > section:nth-child(1)", "bleed"]],
     "/easignup/": [["#container-5a359b941f > section.column-control.spruce-eggshell-theme.two-column-control", "bleed"]],
@@ -955,7 +960,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/carousel-testimonial.js
+  // parsers/carousel-testimonial.js
   function text4(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -1034,7 +1039,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-feature.js
+  // parsers/cards-feature.js
   var DARK_THEMES = ["green-dark-theme", "spruce-forest-theme", "green-forest-theme", "black-theme"];
   function cleanInline4(root) {
     root.querySelectorAll("svg, span.reader, span.spacer, input, script, style, link, noscript, meta").forEach((n) => n.remove());
@@ -1223,7 +1228,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/promo-strip.js
+  // parsers/promo-strip.js
   var CATALOG_VARIANTS4 = {
     "/lp/creator-taxes/": [["#container-d8006e96a0 > section.column-control.spruce-eggshell-theme.padding-top-20.padding-bottom-100", "light"]],
     "/offers/turbotax-price-comparison/": [["#container-e8bf00d4c6 > div:nth-child(8)", null]],
@@ -1455,7 +1460,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-icon.js
+  // parsers/cards-icon.js
   var CATALOG_VARIANTS5 = {
     "/financial-services/spruce/": [["section.column-control:has(.snackBar)", "dividers"], ["section.column-control:has(.card-secondary.featurecard)", "light-3"]],
     "/tax-calculator/": [["section.column-control.spruce-eggshell-theme:has(.alignBanner)", "light"]],
@@ -1686,7 +1691,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-stats.js
+  // parsers/columns-stats.js
   function text8(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -1762,7 +1767,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-article.js
+  // parsers/cards-article.js
   function cleanInline8(root) {
     root.querySelectorAll("svg, span.reader, span.spacer, input, script, style, link, noscript, meta").forEach((n) => n.remove());
     root.querySelectorAll("button.js-disclaimer-link, button.symbol-disclaimer").forEach((btn) => {
@@ -1899,7 +1904,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/transformers/hrblock-cleanup.js
+  // transformers/hrblock-cleanup.js
   var CATALOG_CLEANUP_RULES = [
     '[id*="truste"]',
     'body [class*="popup"]:not(nav *)',
@@ -2220,6 +2225,15 @@ var CustomImportScript = (() => {
     } catch (e) {
       return h;
     }
+  }
+  function stripTrailingSlashes(root) {
+    safeQueryAll(root, "a[href]").forEach((a) => {
+      const href = (a.getAttribute("href") || "").trim();
+      if (/^(mailto|tel|javascript|data):/i.test(href)) return;
+      const m = href.match(/^([^?#]*?)\/+([?#].*)?$/);
+      if (!m || !m[1] || /^([a-z][a-z\d+.-]*:)?\/?$/i.test(m[1])) return;
+      a.setAttribute("href", `${m[1]}${m[2] || ""}`);
+    });
   }
   function recordButtons(document) {
     const reg = /* @__PURE__ */ new Map();
@@ -2763,6 +2777,7 @@ var CustomImportScript = (() => {
       isolateCtas(element, document);
       applyButtonKinds(element, document);
       safeQueryAll(element, 'a[href^="javascript:" i]').forEach((a) => a.setAttribute("href", "#"));
+      stripTrailingSlashes(element);
       safeQueryAll(element, "ul.column-container").forEach((ul) => {
         if (!ul.isConnected || ul.closest("table")) return;
         const grid = document.createElement("div");
@@ -2782,7 +2797,7 @@ var CustomImportScript = (() => {
     }
   }
 
-  // tools/importer/transformers/hrblock-sections.js
+  // transformers/hrblock-sections.js
   var MARKER = "data-excat-section-style";
   var FRAGMENT_ATTR = "data-excat-fragment-style";
   var NONE = "";
@@ -3315,7 +3330,7 @@ var CustomImportScript = (() => {
     }
   }
 
-  // tools/importer/transformers/hrblock-fragments.js
+  // transformers/hrblock-fragments.js
   var FRAGMENTS = [
     {
       "block": "hero-split",
@@ -4131,7 +4146,7 @@ var CustomImportScript = (() => {
     });
   }
 
-  // tools/importer/transformers/hrblock-dm-images.js
+  // transformers/hrblock-dm-images.js
   var EMPTY_ALT_SENTINEL = "Image without alt text";
   function detectDynamicMediaUrl(urlStr) {
     if (!urlStr || !/^(https?:\/\/|\/\/)/i.test(urlStr)) return false;
@@ -4213,7 +4228,7 @@ var CustomImportScript = (() => {
     });
   }
 
-  // tools/importer/import-story-heading-page.js
+  // import-story-heading-page.js
   var PAGE_TEMPLATE = {
     "name": "story-heading-page",
     "urls": [

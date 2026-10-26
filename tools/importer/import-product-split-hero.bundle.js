@@ -35,13 +35,13 @@ var CustomImportScript = (() => {
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // tools/importer/import-product-split-hero.js
+  // import-product-split-hero.js
   var import_product_split_hero_exports = {};
   __export(import_product_split_hero_exports, {
     default: () => import_product_split_hero_default
   });
 
-  // tools/importer/parsers/accordion-faq.js
+  // parsers/accordion-faq.js
   function cleanInline(root) {
     root.querySelectorAll("svg, .icon-svg, span.reader").forEach((n) => n.remove());
     root.querySelectorAll("button.js-disclaimer-link, button.symbol-disclaimer").forEach((btn) => {
@@ -137,7 +137,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/savings-calculator.js
+  // parsers/savings-calculator.js
   var FIELD_KEYS = ["net-income", "salary", "w2-income", "w2-ss-withheld", "other-se-income"];
   function text(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
@@ -235,7 +235,7 @@ var CustomImportScript = (() => {
     return [block, ...after];
   }
 
-  // tools/importer/parsers/tabs-pill.js
+  // parsers/tabs-pill.js
   var BLOCK_SEL = "div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, section, article, header, footer, table, figure, blockquote, form, aside, nav";
   function text2(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
@@ -507,7 +507,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/product-reviews.js
+  // parsers/product-reviews.js
   function text3(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -588,7 +588,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/carousel-testimonial.js
+  // parsers/carousel-testimonial.js
   function text4(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -667,7 +667,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/breadcrumb.js
+  // parsers/breadcrumb.js
   function parse6(element, { document }) {
     const ul = document.createElement("ul");
     const crumbs = [...element.querySelectorAll(".ba--breadcrumbs > span, .ba--breadcrumbs > a")].filter((n) => !n.classList.contains("ba--breadcrumbs--divide"));
@@ -693,7 +693,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/brand-bar.js
+  // parsers/brand-bar.js
   var BRAND_NAMES = {
     hrb: "H&R Block",
     barc: "Block Advisors",
@@ -739,7 +739,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/results-toolbar.js
+  // parsers/results-toolbar.js
   function text5(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -777,7 +777,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/search-articles.js
+  // parsers/search-articles.js
   function text6(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -800,7 +800,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/hero-resource.js
+  // parsers/hero-resource.js
   var CATALOG_VARIANTS = {
     "/expat-tax-preparation/resource-center/": [["#site-content > section.expat-homepage-hero.expat-bg--grey", "featured-list"]],
     "/expat-tax-preparation/resource-center/all-topics/": [["#site-content > section.ba--catall--header", "illustration"]],
@@ -1102,7 +1102,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/review-filter.js
+  // parsers/review-filter.js
   var CATALOG_VARIANTS2 = {
     "/reviews/": [["#container-d76e475a04 > div.xf-content-height", "dark"]],
     "/reviews/basic-tax-software-reviews/": [["#container-e8ac0db58e > div.xf-content-height", null]],
@@ -1177,7 +1177,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/price-estimator.js
+  // parsers/price-estimator.js
   function text9(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -1219,7 +1219,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/newsletter-signup.js
+  // parsers/newsletter-signup.js
   function text10(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -1261,7 +1261,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/embed-form.js
+  // parsers/embed-form.js
   var BLOCK_SEL3 = "div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, section, article, header, footer, table, figure, blockquote, form, aside, nav";
   function text11(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
@@ -1422,7 +1422,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/article-body.js
+  // parsers/article-body.js
   var SHARE_NAMES = {
     linkedin: "LinkedIn",
     facebook: "Facebook",
@@ -1697,7 +1697,7 @@ var CustomImportScript = (() => {
     if (feedback) block.after(feedback);
   }
 
-  // tools/importer/parsers/software-finder.js
+  // parsers/software-finder.js
   function text12(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -1734,7 +1734,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-pricing.js
+  // parsers/cards-pricing.js
   function text13(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -1869,7 +1869,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/table-data.js
+  // parsers/table-data.js
   var BLOCK_SEL4 = "div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, section, article, header, footer, table, figure, blockquote, form, aside, nav";
   function text14(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
@@ -2115,7 +2115,7 @@ var CustomImportScript = (() => {
     intro.forEach((n) => block.before(n));
   }
 
-  // tools/importer/parsers/hero-banner.js
+  // parsers/hero-banner.js
   var CATALOG_VARIANTS3 = {
     "/offers/turbotax-price-comparison/": [["#container-e8bf00d4c6 > div.fb-image-wrapper", "alt-2"], ["#container-e8bf00d4c6 > section:nth-child(12)", "dark"]],
     "/tax-payment-center/": [["#container-77a8166999 > section.teaser", "alt"]],
@@ -2321,7 +2321,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/lottie-animation.js
+  // parsers/lottie-animation.js
   var CATALOG_VARIANTS4 = {
     "/lp/creator-taxes/": [["#container-d8006e96a0 > section:nth-child(7)", "ribbon"]],
     // campaign-full-bleed-hero (catalog variant default, not ribbon)
@@ -2391,7 +2391,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/accordion-media.js
+  // parsers/accordion-media.js
   var CATALOG_VARIANTS5 = {
     // card-grid-landing (catalog variants, class selectors stable between catalog and live)
     "/tax-offices/drop-off/": [["section.column-control.spruce-eggshell-theme.padding-bottom-20.two-column-control", "link-list"]],
@@ -2606,7 +2606,7 @@ var CustomImportScript = (() => {
     beforeBlock.forEach((n) => block.before(n));
   }
 
-  // tools/importer/parsers/landing-stack.js
+  // parsers/landing-stack.js
   var BLOCK_SEL6 = "div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, section, article, header, footer, table, figure, blockquote, form, aside, nav";
   function text16(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
@@ -2831,7 +2831,7 @@ var CustomImportScript = (() => {
     else element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-tip.js
+  // parsers/cards-tip.js
   function text17(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -2921,7 +2921,7 @@ var CustomImportScript = (() => {
     element.replaceWith(wrapper);
   }
 
-  // tools/importer/parsers/columns-callout.js
+  // parsers/columns-callout.js
   var BLOCK_SEL7 = "div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, section, article, header, footer, table, figure, blockquote, form, aside, nav";
   function text18(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
@@ -3072,7 +3072,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-product.js
+  // parsers/cards-product.js
   var CATALOG_VARIANTS6 = {
     "/expat-tax-preparation/expat-tax-preparation-and-services/": [["section.column-control.two-column-control:has(li.imageOverflow)", "image"]],
     "/expat-tax-preparation/expat-tax-preparation-and-services/federal-tax-prep/": [["section.column-control.two-column-control:has(li.imageOverflow)", "image"]],
@@ -3267,7 +3267,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-article.js
+  // parsers/cards-article.js
   function cleanInline13(root) {
     root.querySelectorAll("svg, span.reader, span.spacer, input, script, style, link, noscript, meta").forEach((n) => n.remove());
     root.querySelectorAll("button.js-disclaimer-link, button.symbol-disclaimer").forEach((btn) => {
@@ -3404,7 +3404,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-promo-card.js
+  // parsers/columns-promo-card.js
   var CATALOG_VARIANTS7 = {
     "/easignup/": [["#container-69a88a9f0b > section.column-control.spruce-forest-theme.padding-top-100", "checklist"]],
     "/financial-services/emerald-advance-loan/": [["#container-69a88a9f0b > section.column-control.spruce-forest-theme.padding-top-100", "checklist"]],
@@ -3613,7 +3613,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-icon.js
+  // parsers/cards-icon.js
   var CATALOG_VARIANTS8 = {
     "/financial-services/spruce/": [["section.column-control:has(.snackBar)", "dividers"], ["section.column-control:has(.card-secondary.featurecard)", "light-3"]],
     "/tax-calculator/": [["section.column-control.spruce-eggshell-theme:has(.alignBanner)", "light"]],
@@ -3844,7 +3844,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/cards-feature.js
+  // parsers/cards-feature.js
   var DARK_THEMES = ["green-dark-theme", "spruce-forest-theme", "green-forest-theme", "black-theme"];
   function cleanInline16(root) {
     root.querySelectorAll("svg, span.reader, span.spacer, input, script, style, link, noscript, meta").forEach((n) => n.remove());
@@ -4033,7 +4033,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/promo-strip.js
+  // parsers/promo-strip.js
   var CATALOG_VARIANTS9 = {
     "/lp/creator-taxes/": [["#container-d8006e96a0 > section.column-control.spruce-eggshell-theme.padding-top-20.padding-bottom-100", "light"]],
     "/offers/turbotax-price-comparison/": [["#container-e8bf00d4c6 > div:nth-child(8)", null]],
@@ -4265,7 +4265,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-feature.js
+  // parsers/columns-feature.js
   var CATALOG_VARIANTS10 = {
     "/w-4-calculator/": [["section.white-theme.two-column-control:has(.iconlist)", "steps-2"]],
     "/offers/saf/": [["#container-5b3cccfaf0 > section.column-control.spruce-eggshell-theme.two-column-control", "steps-3"]],
@@ -4541,7 +4541,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/hero-split.js
+  // parsers/hero-split.js
   var CATALOG_VARIANTS11 = {
     "/corporate/income-tax-course/": [["#container-096c529025 > section:nth-child(1)", "bleed"]],
     "/easignup/": [["#container-5a359b941f > section.column-control.spruce-eggshell-theme.two-column-control", "bleed"]],
@@ -4849,7 +4849,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/software-download.js
+  // parsers/software-download.js
   var CATALOG_VARIANTS12 = {
     "/amending-your-tax-return/": [["#container-e7335a08eb > section.column-control.spruce-eggshell-theme.padding-top-60.padding-bottom-60.two-column-control", "with-image"]],
     "/financial-services/emerald-card-services/": [["#container-e85b1470d9 > section.column-control.green-dark-theme.padding-top-40.padding-bottom-40.two-column-control", "product"]],
@@ -5113,7 +5113,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-banner.js
+  // parsers/columns-banner.js
   var CATALOG_VARIANTS13 = {
     "/corporate/": [["section.content-two-column:has(.white-theme)", "bleed"]],
     "/corporate/our-company/": [["section.column-control.white-theme:not(.two-column-control):has(li.col-3 .introImageVariant)", "no-panel"]],
@@ -5518,7 +5518,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/parsers/columns-stats.js
+  // parsers/columns-stats.js
   function text29(el) {
     return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -5594,7 +5594,7 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
-  // tools/importer/transformers/hrblock-cleanup.js
+  // transformers/hrblock-cleanup.js
   var CATALOG_CLEANUP_RULES = [
     '[id*="truste"]',
     'body [class*="popup"]:not(nav *)',
@@ -5915,6 +5915,15 @@ var CustomImportScript = (() => {
     } catch (e) {
       return h;
     }
+  }
+  function stripTrailingSlashes(root) {
+    safeQueryAll(root, "a[href]").forEach((a) => {
+      const href = (a.getAttribute("href") || "").trim();
+      if (/^(mailto|tel|javascript|data):/i.test(href)) return;
+      const m = href.match(/^([^?#]*?)\/+([?#].*)?$/);
+      if (!m || !m[1] || /^([a-z][a-z\d+.-]*:)?\/?$/i.test(m[1])) return;
+      a.setAttribute("href", `${m[1]}${m[2] || ""}`);
+    });
   }
   function recordButtons(document) {
     const reg = /* @__PURE__ */ new Map();
@@ -6458,6 +6467,7 @@ var CustomImportScript = (() => {
       isolateCtas(element, document);
       applyButtonKinds(element, document);
       safeQueryAll(element, 'a[href^="javascript:" i]').forEach((a) => a.setAttribute("href", "#"));
+      stripTrailingSlashes(element);
       safeQueryAll(element, "ul.column-container").forEach((ul) => {
         if (!ul.isConnected || ul.closest("table")) return;
         const grid = document.createElement("div");
@@ -6477,7 +6487,7 @@ var CustomImportScript = (() => {
     }
   }
 
-  // tools/importer/transformers/hrblock-sections.js
+  // transformers/hrblock-sections.js
   var MARKER = "data-excat-section-style";
   var FRAGMENT_ATTR = "data-excat-fragment-style";
   var NONE = "";
@@ -7010,7 +7020,7 @@ var CustomImportScript = (() => {
     }
   }
 
-  // tools/importer/transformers/hrblock-fragments.js
+  // transformers/hrblock-fragments.js
   var FRAGMENTS = [
     {
       "block": "hero-split",
@@ -7826,7 +7836,7 @@ var CustomImportScript = (() => {
     });
   }
 
-  // tools/importer/transformers/hrblock-dm-images.js
+  // transformers/hrblock-dm-images.js
   var EMPTY_ALT_SENTINEL = "Image without alt text";
   function detectDynamicMediaUrl(urlStr) {
     if (!urlStr || !/^(https?:\/\/|\/\/)/i.test(urlStr)) return false;
@@ -7908,7 +7918,7 @@ var CustomImportScript = (() => {
     });
   }
 
-  // tools/importer/import-product-split-hero.js
+  // import-product-split-hero.js
   var PAGE_TEMPLATE = {
     "name": "product-split-hero",
     "urls": [

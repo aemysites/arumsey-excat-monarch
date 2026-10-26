@@ -445,6 +445,20 @@ function normHref(href) {
   }
 }
 
+// Link paths are written without a trailing slash ("/tax-software/" ->
+// "/tax-software", "https://x.com/fees/?a=1" -> "https://x.com/fees?a=1").
+// A bare "/" (site root) is kept. Runs after applyButtonKinds, whose
+// registry keys use the source hrefs of external links.
+function stripTrailingSlashes(root) {
+  safeQueryAll(root, 'a[href]').forEach((a) => {
+    const href = (a.getAttribute('href') || '').trim();
+    if (/^(mailto|tel|javascript|data):/i.test(href)) return;
+    const m = href.match(/^([^?#]*?)\/+([?#].*)?$/);
+    if (!m || !m[1] || /^([a-z][a-z\d+.-]*:)?\/?$/i.test(m[1])) return;
+    a.setAttribute('href', `${m[1]}${m[2] || ''}`);
+  });
+}
+
 function recordButtons(document) {
   const reg = new Map();
   safeQueryAll(document.body || document, BUTTON_SEL).forEach((b) => {
@@ -1113,6 +1127,7 @@ export default function transform(hookName, element, payload) {
     applyButtonKinds(element, document);
     // JS-only links have no destination on EDS
     safeQueryAll(element, 'a[href^="javascript:" i]').forEach((a) => a.setAttribute('href', '#'));
+    stripTrailingSlashes(element);
     // ul.column-container > li.column is the site's layout grid, not a list:
     // default content left in it (section intros, CTAs) must not become
     // bullet items. Block tables are already built, so only layout remains.
