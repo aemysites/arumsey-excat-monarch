@@ -1,0 +1,79 @@
+/* cards-facts: facts and figures grid (label over icon + value) */
+.cards-facts {
+  color: var(--brand-grey-text);
+}
+
+.cards-facts > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.cards-facts > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 11px 0;
+}
+
+.cards-facts .cards-facts-label {
+  color: var(--heading-color);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.cards-facts .cards-facts-label strong,
+.cards-facts .cards-facts-label b {
+  font-weight: inherit;
+}
+
+.cards-facts .cards-facts-label > *,
+.cards-facts .cards-facts-value > * {
+  margin: 0;
+}
+
+.cards-facts .cards-facts-value {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 24px;
+}
+
+.cards-facts .cards-facts-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  line-height: 0;
+}
+
+.cards-facts .cards-facts-icon img,
+.cards-facts .cards-facts-icon svg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+@media (width >= 900px) {
+  .cards-facts > ul {
+    /* source columns are 25% - 10px; the last column takes the rest so row rules run full width */
+    grid-template-columns: repeat(3, calc(25% - 10px)) 1fr;
+    padding: 7px 0 8px;
+  }
+
+  .cards-facts > ul > li {
+    padding: 13px 0 16px;
+    border-bottom: 1px solid var(--brand-grey-line);
+  }
+
+  /* no rule under the last row */
+  .cards-facts > ul > li:nth-child(4n + 1):nth-last-child(-n + 4),
+  .cards-facts > ul > li:nth-child(4n + 1):nth-last-child(-n + 4) ~ li {
+    border-bottom: 0;
+  }
+}

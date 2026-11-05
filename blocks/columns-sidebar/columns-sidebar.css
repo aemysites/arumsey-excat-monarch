@@ -1,0 +1,214 @@
+/*
+ * columns-sidebar, styled from www.mnp.ca: a bootstrap row of col-lg-8 (textblock section, 1em padding)
+ * and col-lg-4 (featured-card-cta card or media-container video), 15px column padding.
+ * The global section gutter already stands in for the column + textblock inset of the body text,
+ * so the sidebar hangs 15px past it (as on the source). Mobile first; desktop from 900px.
+ */
+.columns-sidebar {
+  color: var(--brand-grey-text);
+}
+
+.columns-sidebar > .columns-sidebar-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-sidebar > .columns-sidebar-row > div {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.columns-sidebar .columns-sidebar-empty-col {
+  display: none;
+}
+
+/* body text column: source textblock padding 1em (vertical; the gutter covers the horizontal inset) */
+.columns-sidebar .columns-sidebar-main {
+  padding: 16px 0;
+}
+
+.columns-sidebar h2 {
+  margin: 13px 0;
+  padding-top: 33px;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36.01px;
+}
+
+.columns-sidebar h2::after {
+  content: '';
+  display: block;
+  width: 125px;
+  height: 2px;
+  margin-top: 15px;
+  background-color: var(--brand-orange);
+}
+
+.columns-sidebar p {
+  margin: 0 0 16px;
+  color: var(--brand-grey-text);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.columns-sidebar a:any-link {
+  color: var(--brand-navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.columns-sidebar img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* sidebar column: column content box sits 15px from the viewport edge on mobile */
+.columns-sidebar .columns-sidebar-aside {
+  margin: 0 -15px;
+}
+
+/* promo card (source featured-card-cta, 48px above) */
+.columns-sidebar .columns-sidebar-card {
+  margin-top: 48px;
+  border: 1px solid var(--brand-grey-line);
+  border-top: 4px solid rgb(16 127 138);
+  background-color: var(--background-color);
+}
+
+.columns-sidebar .columns-sidebar-card + .columns-sidebar-card {
+  margin-top: 24px;
+}
+
+/* the card photo only shows on desktop */
+.columns-sidebar .columns-sidebar-card-image {
+  display: none;
+  margin: 0;
+}
+
+.columns-sidebar .columns-sidebar-card-image picture {
+  display: block;
+}
+
+.columns-sidebar .columns-sidebar-card-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 7 / 4;
+  object-fit: cover;
+}
+
+.columns-sidebar .columns-sidebar-card-body {
+  padding: 10px 20px 12px;
+}
+
+.columns-sidebar .columns-sidebar-card-body h3 {
+  margin: 0 0 11px;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.columns-sidebar .columns-sidebar-card-body h3 a:any-link {
+  color: var(--brand-navy);
+  font-weight: 400;
+}
+
+/* "read more" row: 1px divider, caret link */
+.columns-sidebar .columns-sidebar-card-body > p.columns-sidebar-card-cta {
+  margin: 36px 0 0;
+  padding: 20px 0 0 17px;
+  border-top: 1px solid var(--brand-grey-line);
+  font-size: var(--body-font-size-xs);
+}
+
+main .columns-sidebar .columns-sidebar-card-cta a:any-link,
+main .columns-sidebar .columns-sidebar-card-cta a.button:any-link {
+  display: inline;
+  color: var(--brand-grey-text);
+  font-size: inherit;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.columns-sidebar .columns-sidebar-card-cta a::after {
+  content: '';
+  display: inline-block;
+  margin-left: 8px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid currentcolor;
+  vertical-align: -1px;
+}
+
+/* media (source media-container: full column width, 16:9 player) */
+.columns-sidebar .columns-sidebar-media img {
+  display: block;
+  width: 100%;
+}
+
+.columns-sidebar .columns-sidebar-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.columns-sidebar .columns-sidebar-video iframe,
+.columns-sidebar .columns-sidebar-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.columns-sidebar .columns-sidebar-video + .columns-sidebar-video {
+  margin-top: 24px;
+}
+
+@media (width >= 900px) {
+  /* bootstrap row: 8/4 columns, body text inset 31px (15px column + 16px textblock), sidebar 15px */
+  .columns-sidebar > .columns-sidebar-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    margin: 0 -31px;
+  }
+
+  .columns-sidebar .columns-sidebar-main {
+    padding: 16px 31px;
+  }
+
+  .columns-sidebar .columns-sidebar-aside {
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  .columns-sidebar .columns-sidebar-row:has(> .columns-sidebar-empty-col) > div {
+    grid-column: 1 / -1;
+  }
+
+  .columns-sidebar p {
+    line-height: 22px;
+  }
+
+  .columns-sidebar .columns-sidebar-card {
+    border-top: 1px solid var(--brand-grey-line);
+  }
+
+  .columns-sidebar .columns-sidebar-card-image {
+    display: block;
+  }
+
+  .columns-sidebar .columns-sidebar-card-body {
+    padding-bottom: 16px;
+  }
+
+  .columns-sidebar .columns-sidebar-card-body > p.columns-sidebar-card-cta {
+    margin: 36px -10px 0;
+    font-size: 16px;
+  }
+}

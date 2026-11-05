@@ -1,0 +1,22 @@
+{
+  "variantName": "link-pills",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + field",
+    "purpose": "wrapping row of rounded pill links, e.g. an industries list"
+  },
+  "contentPattern": {
+    "structure": "one row per pill with a link (or one cell holding a bulleted list of links); text without a link renders as a non-linked pill"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_9765843b1ef6-1"
+  ],
+  "usage": "Industry pill list on the French homepage (source is a filter list of industries).",
+  "reuseGuidance": "Use for tag/topic/industry link clouds. The source pills were filter checkboxes; here they are links to the matching pages."
+}

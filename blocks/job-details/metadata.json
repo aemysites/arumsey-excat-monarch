@@ -1,0 +1,22 @@
+{
+  "variantName": "job-details",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "",
+    "purpose": "job posting strip showing location and employment type next to a map-pin icon"
+  },
+  "contentPattern": {
+    "structure": "one row; cells = location, employment type (and any extra facts); a single cell with values separated by | also works"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_34a9363e799b"
+  ],
+  "usage": "Under the title of career opportunity (job posting) pages.",
+  "reuseGuidance": "Use for any short pipe-separated fact strip on job postings. The first value is treated as the location."
+}

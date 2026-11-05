@@ -1,0 +1,25 @@
+{
+  "variantName": "columns-profile",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + link + image + text + list",
+    "purpose": "person profile: portrait, name/title/contact details and a biography in fixed columns"
+  },
+  "contentPattern": {
+    "structure": "optional first row with one cell holding a heading; then one row per person with three cells [portrait image | name heading, job title, phone and email links list, Read more link | biography paragraphs]; the portrait or biography cell may be omitted"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_0d831eb7212a",
+    "v_ac8fc3913403",
+    "v_ac8fc3913403-1",
+    "v_ac8fc3913403-2"
+  ],
+  "usage": "Executive committee bios, office contact and service-page contact person.",
+  "reuseGuidance": "Use for one or a few people with full details or a bio. For grids of people cards use cards-people; for the compact contact card use profile-contact."
+}

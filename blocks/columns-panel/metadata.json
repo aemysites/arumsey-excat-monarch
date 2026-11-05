@@ -1,0 +1,35 @@
+{
+  "variantName": "columns-panel",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link + list",
+    "purpose": "dark boxed band of columns: intro beside link list, case study beside image, client video beside text, or a row of testimonials"
+  },
+  "contentPattern": {
+    "structure": "one row, two or more cells; each cell holds text, a list of links (rendered as arrowed rows), an image, or a lone YouTube/Vimeo link (rendered as an embedded player). With testimonials each cell is: quote-icon image, quote paragraph, attribution paragraph"
+  },
+  "options": [
+    {
+      "class": "testimonials",
+      "label": "Testimonials"
+    },
+    {
+      "class": "alt-2",
+      "label": "Alt 2"
+    }
+  ],
+  "memberVariantIds": [
+    "v_afce4a963f6c",
+    "v_91d3b6ecf4e0",
+    "v_afce4a963f6c-1",
+    "v_e39c98912905-1",
+    "v_b478149dec2d"
+  ],
+  "usage": "Practice-area intro with sub-service links, case studies, client success videos and testimonial rows on a dark band.",
+  "reuseGuidance": "Use for content columns that sit inside a dark panel. Use columns-media for the same layouts on a light background."
+}

@@ -1,0 +1,510 @@
+/* cards-article: article / insight teaser cards (values measured from mnp.ca) */
+.cards-article {
+  margin: 0 21px 16px;
+  color: var(--brand-grey-text);
+}
+
+.cards-article > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 15px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.cards-article > ul:empty {
+  display: none;
+}
+
+.cards-article > ul > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--brand-grey-line);
+  border-top: 4px solid transparent;
+  background-color: var(--background-color);
+}
+
+/* on mobile the photo is hidden and a tagged card shows a teal top rule instead */
+.cards-article > ul > li:has(.cards-article-card-tag) {
+  border-top-color: rgb(16 127 138);
+}
+
+.cards-article .cards-article-card-image {
+  display: none;
+  position: relative;
+  line-height: 0;
+}
+
+.cards-article .cards-article-card-image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cards-article .cards-article-card-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  padding: 6px 10px;
+  background-color: rgb(16 127 138);
+  color: rgb(255 255 255);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.cards-article .cards-article-card-tag:has(> p) {
+  padding: 0;
+}
+
+.cards-article .cards-article-card-tag > p {
+  margin: 0;
+  padding: 6px 10px;
+}
+
+.cards-article .cards-article-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px 20px 14px;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.cards-article .cards-article-card-body p {
+  margin: 0 0 16px;
+}
+
+.cards-article .cards-article-card-body .cards-article-card-date {
+  align-self: flex-start;
+  margin: 0 0 8px;
+  padding-top: 8px;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.cards-article .cards-article-card-body h1,
+.cards-article .cards-article-card-body h2,
+.cards-article .cards-article-card-body h3,
+.cards-article .cards-article-card-body h4 {
+  margin: 0 0 11px;
+  color: var(--brand-grey-text);
+  font-family: var(--heading-font-family);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+/* divider + right-aligned Read more */
+.cards-article .cards-article-card-body > :has(+ .cards-article-card-cta) {
+  margin-bottom: 36px;
+}
+
+.cards-article .cards-article-card-body .cards-article-card-cta {
+  display: block;
+  margin: auto 0 0;
+  padding: 25px 10px 0;
+  border-top: 1px solid var(--brand-grey-line);
+  text-align: right;
+}
+
+.cards-article .cards-article-card-cta a:any-link,
+.cards-article .cards-article-view-all a:any-link {
+  display: inline;
+  padding-right: 5px;
+  color: var(--brand-grey-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.5px;
+  text-align: left;
+}
+
+.cards-article .cards-article-card-cta a:any-link::after,
+.cards-article .cards-article-view-all a:any-link::after {
+  content: '';
+  display: inline-block;
+  margin-left: 18px;
+  border-block: 5px solid transparent;
+  border-left: 5px solid currentcolor;
+  vertical-align: -1px;
+}
+
+.cards-article .cards-article-card-body :is(h1, h2, h3, h4) a:any-link {
+  color: inherit;
+  font-weight: 400;
+}
+
+/* banner header row (photo-banner, photo-banner-boxed) */
+.cards-article .cards-article-banner {
+  position: relative;
+  display: flex;
+}
+
+.cards-article .cards-article-banner-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.cards-article .cards-article-banner-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 55%);
+}
+
+.cards-article .cards-article-banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards-article .cards-article-banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 116px 25px 30px;
+}
+
+.cards-article .cards-article-banner-content :is(h1, h2, h3, h4, h5, h6) {
+  position: relative;
+  margin: 13px 0;
+  padding-bottom: 15px;
+  color: rgb(255 255 255);
+  font-family: var(--heading-font-family);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.cards-article .cards-article-banner-content :is(h1, h2, h3, h4, h5, h6)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 125px;
+  height: 2px;
+  background-color: var(--brand-orange);
+}
+
+.cards-article .cards-article-intro {
+  position: relative;
+  z-index: 1;
+  padding: 16px 40px 18px;
+  text-align: right;
+}
+
+.cards-article .cards-article-intro > * {
+  margin: 0;
+}
+
+.cards-article .cards-article-view-all {
+  line-height: 22px;
+}
+
+.cards-article.photo-banner {
+  margin: 0 6px 16px;
+}
+
+/* no View all: keep the gap between the photo and the cards */
+.cards-article .cards-article-banner + ul {
+  margin-top: 30px;
+}
+
+.cards-article.photo-banner > ul {
+  padding: 0 30px 16px;
+}
+
+/* photo-banner-boxed: intro and cards sit on a white panel over the photo */
+.cards-article.photo-banner-boxed {
+  position: relative;
+  margin: 0 0 16px;
+}
+
+.cards-article.photo-banner-boxed .cards-article-banner {
+  position: static;
+}
+
+.cards-article.photo-banner-boxed .cards-article-banner-content {
+  padding-inline: 31px;
+}
+
+.cards-article.photo-banner-boxed .cards-article-intro,
+.cards-article.photo-banner-boxed > ul {
+  position: relative;
+  z-index: 1;
+  margin: 0 6px;
+  background-color: var(--background-color);
+}
+
+.cards-article.photo-banner-boxed .cards-article-intro {
+  padding: 30px 35px 16px;
+  text-align: left;
+}
+
+.cards-article.photo-banner-boxed .cards-article-intro :is(h2, h3, h4, p:not(.cards-article-view-all)) {
+  margin: 0 0 16px;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.cards-article.photo-banner-boxed .cards-article-view-all {
+  text-align: right;
+}
+
+.cards-article.photo-banner-boxed > ul {
+  padding: 0 35px 40px;
+}
+
+/* photo-banner-light: one image + navy panel sign-up banner */
+.cards-article.photo-banner-light {
+  margin: 0 0 16px;
+}
+
+.cards-article.photo-banner-light > ul {
+  padding: 0;
+}
+
+.cards-article.photo-banner-light > ul > li {
+  border: 0;
+  background-color: var(--brand-navy);
+  color: rgb(255 255 255);
+}
+
+.cards-article.photo-banner-light .cards-article-card-image {
+  display: block;
+}
+
+.cards-article.photo-banner-light .cards-article-card-image img {
+  height: 320px;
+}
+
+.cards-article.photo-banner-light .cards-article-card-body {
+  padding: 32px 15px 60px;
+}
+
+.cards-article.photo-banner-light .cards-article-card-body :is(h1, h2, h3, h4) {
+  margin: 13px 0;
+  color: rgb(255 255 255);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.cards-article.photo-banner-light .cards-article-card-body p {
+  color: rgb(255 255 255);
+}
+
+.cards-article.photo-banner-light .cards-article-card-body > :has(+ .cards-article-card-cta) {
+  margin-bottom: 16px;
+}
+
+.cards-article.photo-banner-light .cards-article-card-body .cards-article-card-cta {
+  margin-top: 0;
+  padding-top: 22px;
+  border-top-color: rgb(255 255 255);
+}
+
+.cards-article.photo-banner-light .cards-article-card-cta a:any-link {
+  color: rgb(255 255 255);
+}
+
+/* overlay: title over a full-bleed photo tile */
+.cards-article.overlay {
+  margin: 0 0 16px;
+}
+
+.cards-article.overlay > ul {
+  padding: 0;
+}
+
+.cards-article.overlay > ul > li {
+  border: 0;
+  min-height: 250px;
+}
+
+.cards-article.overlay .cards-article-card-image {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.cards-article.overlay .cards-article-card-image img {
+  height: 100%;
+}
+
+.cards-article.overlay .cards-article-card-body {
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  padding: 16px;
+}
+
+.cards-article.overlay .cards-article-card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+@media (width >= 900px) {
+  .cards-article {
+    margin: 0 18px 16px;
+  }
+
+  .cards-article > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 28px 16px;
+  }
+
+  .cards-article > ul > li,
+  .cards-article > ul > li:has(.cards-article-card-tag) {
+    border-top: 1px solid var(--brand-grey-line);
+  }
+
+  .cards-article .cards-article-card-image {
+    display: block;
+  }
+
+  .cards-article .cards-article-card-body {
+    padding: 10px 20px 22px;
+    line-height: 22px;
+  }
+
+  .cards-article .cards-article-card-body .cards-article-card-date {
+    margin-bottom: 6px;
+    padding-top: 6px;
+    font-size: 12px;
+    line-height: 16.5px;
+  }
+
+  .cards-article .cards-article-card-body .cards-article-card-cta {
+    margin-inline: -10px;
+    padding-top: 20px;
+  }
+
+  .cards-article .cards-article-card-cta a:any-link,
+  .cards-article .cards-article-view-all a:any-link {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .cards-article .cards-article-card-cta a:any-link::after,
+  .cards-article .cards-article-view-all a:any-link::after {
+    margin-left: 15px;
+  }
+
+  .cards-article .cards-article-banner-content {
+    padding-top: 86px;
+  }
+
+  .cards-article .cards-article-intro {
+    padding: 19px 10px 22px;
+  }
+
+  .cards-article .cards-article-banner + ul {
+    margin-top: 40px;
+  }
+
+  .cards-article.photo-banner {
+    margin: 0 3px 16px;
+  }
+
+  .cards-article.photo-banner > ul {
+    gap: 32px;
+    padding: 0 15px 16px 45px;
+  }
+
+  .cards-article.photo-banner-boxed {
+    margin: 0 0 16px;
+  }
+
+  .cards-article.photo-banner-boxed .cards-article-banner-content {
+    padding-inline: 49px;
+  }
+
+  .cards-article.photo-banner-boxed .cards-article-intro,
+  .cards-article.photo-banner-boxed > ul {
+    margin: 0 24px;
+  }
+
+  .cards-article.photo-banner-boxed .cards-article-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 40px 20px;
+  }
+
+  .cards-article.photo-banner-boxed .cards-article-intro :is(h2, h3, h4, p:not(.cards-article-view-all)) {
+    margin: 0;
+  }
+
+  .cards-article.photo-banner-boxed .cards-article-view-all {
+    flex-shrink: 0;
+  }
+
+  .cards-article.photo-banner-boxed > ul {
+    gap: 32px;
+    padding: 0 45px 40px;
+  }
+
+  .cards-article.photo-banner-light > ul,
+  .cards-article.overlay > ul {
+    padding: 0;
+  }
+
+  .cards-article.photo-banner-light > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-article.photo-banner-light > ul > li {
+    flex-direction: row;
+    min-height: 320px;
+    border: 0;
+  }
+
+  .cards-article.photo-banner-light .cards-article-card-image {
+    flex: 0 0 50%;
+  }
+
+  .cards-article.photo-banner-light .cards-article-card-image img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .cards-article.photo-banner-light .cards-article-card-body {
+    flex: 0 0 50%;
+    padding: 46px 50px;
+    font-size: 18px;
+    line-height: 31.5px;
+  }
+
+  .cards-article.photo-banner-light .cards-article-card-body .cards-article-card-cta {
+    margin-inline: 0;
+    line-height: 22px;
+  }
+
+  .cards-article.overlay > ul {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+
+  .cards-article.overlay > ul > li {
+    border: 0;
+  }
+}

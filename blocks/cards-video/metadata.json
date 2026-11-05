@@ -1,0 +1,23 @@
+{
+  "variantName": "cards-video",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + video",
+    "purpose": "look-alike items each with a heading (name or episode), role, description, optional link and an embedded video"
+  },
+  "contentPattern": {
+    "structure": "one row per item: cell 1 body with heading, optional bold role paragraph, description and optional link (e.g. Contact Kyla); cell 2 video link (YouTube or Vimeo URL, or .mp4), optionally with a poster image. With a poster the video loads on click; without, it loads lazily when scrolled into view"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_adc05a916003-4",
+    "v_cd1491307806-2"
+  ],
+  "usage": "Webinar episode listings and Faces of MNP video profiles on industry pages",
+  "reuseGuidance": "Use for repeating text-plus-video items. For a single standalone video or third-party embed use embed-interactive."
+}

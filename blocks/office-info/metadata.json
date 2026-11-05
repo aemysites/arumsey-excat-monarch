@@ -1,0 +1,28 @@
+{
+  "variantName": "office-info",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + link + list + button + video + image",
+    "purpose": "Office location details (address, phone, fax, description) beside a map"
+  },
+  "contentPattern": {
+    "structure": "One row, two cells. Cell 1: heading, address paragraph(s) linked to Google Maps, a bulleted list of Phone / Toll Free / Fax lines, optional description heading and paragraphs. Cell 2 (optional): a Google Maps embed link (/maps/embed or /maps/d/embed), any Google Maps link, or a map picture; when empty the first address is embedded automatically. An 'Open location in Maps' link is added under the map"
+  },
+  "options": [
+    { "class": "image", "label": "Image" },
+    { "class": "grey", "label": "Grey" }
+  ],
+  "memberVariantIds": [
+    "v_7f042dbf4c5f",
+    "v_7f042dbf4c5f-1",
+    "v_7f042dbf4c5f-2",
+    "v_e39c98912905-2"
+  ],
+  "usage": "Office location pages (/offices/*) and local landing pages listing one or more office addresses next to a map.",
+  "reuseGuidance": "Use for any address + map pairing. Use grey for multi-office lists beside a Google My Maps embed, image when the map is authored as a static picture. Person contact details belong in profile-contact."
+}

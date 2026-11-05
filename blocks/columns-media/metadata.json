@@ -1,0 +1,29 @@
+{
+  "variantName": "columns-media",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + video",
+    "purpose": "two fixed columns pairing a heading and text with a video, photo, icon list or embedded form"
+  },
+  "contentPattern": {
+    "structure": "one row, two cells: [heading + text | media]; a media cell holding only a YouTube/Vimeo/.mp4 link becomes an embedded player, only a /fragments/ link loads that fragment (e.g. a form), only an image is shown full width; paragraphs that start with a small icon image render as icon + text items"
+  },
+  "options": [
+    {
+      "class": "light",
+      "label": "Light"
+    }
+  ],
+  "memberVariantIds": [
+    "v_a8052e48990b",
+    "v_e39c98912905",
+    "v_af558ce3f9b7-2"
+  ],
+  "usage": "Story or intro text beside a video, a photo beside icon highlights, or text beside a sign-up form.",
+  "reuseGuidance": "Use for a fixed text-plus-media pair. Use columns-sidebar when the second column is a narrow promo sidebar, columns-panel for the dark boxed version."
+}

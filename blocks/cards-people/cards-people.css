@@ -1,0 +1,203 @@
+/* cards-people: team member cards (values from mnp.ca .mnp-secondary-personnel-card) */
+.cards-people {
+  padding: 32px;
+  color: var(--brand-grey-text);
+}
+
+.cards-people > ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-people > ul > li {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 20px 15px 0;
+}
+
+.cards-people .cards-people-card-image,
+.cards-people .cards-people-card-body {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0 15px;
+}
+
+.cards-people .cards-people-card-image {
+  line-height: 0;
+}
+
+.cards-people .cards-people-card-image img {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto 3 / 4;
+  object-fit: cover;
+  border: 1px solid rgb(216 216 216);
+}
+
+.cards-people .cards-people-card-body h1,
+.cards-people .cards-people-card-body h2,
+.cards-people .cards-people-card-body h3,
+.cards-people .cards-people-card-body h4,
+.cards-people .cards-people-card-body h5,
+.cards-people .cards-people-card-body h6 {
+  margin: 10px 0 0;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.cards-people .cards-people-card-body p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.cards-people .cards-people-card-role {
+  color: var(--brand-navy);
+}
+
+.cards-people .cards-people-card-body a:any-link {
+  color: var(--brand-grey-text);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cards-people .cards-people-card-contacts {
+  list-style: none;
+  margin: 0;
+  padding: 16px 0;
+  border-top: 1px solid rgb(216 216 216);
+}
+
+.cards-people .cards-people-card-contacts li {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 25.6px;
+  overflow-wrap: anywhere;
+}
+
+.cards-people .cards-people-card-body p.cards-people-card-cta {
+  margin: 0;
+  padding: 10px 0 20px;
+  border-top: 1px solid rgb(216 216 216);
+  font-size: 14px;
+  line-height: 17.5px;
+}
+
+.cards-people .cards-people-card-body .cards-people-card-cta a:any-link {
+  padding-right: 5px;
+  font-size: 14px;
+}
+
+/* caret after the "Read More" link */
+.cards-people .cards-people-card-cta a::after {
+  content: '';
+  display: inline-block;
+  margin: 0 6px 0 11px;
+  border-style: solid;
+  border-width: 5px 0 5px 7px;
+  border-color: transparent transparent transparent currentcolor;
+  vertical-align: 0;
+}
+
+/* boxed: event detail row (bold navy label beside grey value) on a grey card */
+.cards-people.boxed {
+  padding: 0 20px;
+  background-color: var(--brand-grey-bg);
+}
+
+.cards-people.boxed > ul > li {
+  display: block;
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(216 216 216);
+}
+
+.cards-people.boxed .cards-people-card-body {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  column-gap: 15px;
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.cards-people.boxed .cards-people-card-body h1,
+.cards-people.boxed .cards-people-card-body h2,
+.cards-people.boxed .cards-people-card-body h3,
+.cards-people.boxed .cards-people-card-body h4,
+.cards-people.boxed .cards-people-card-body h5,
+.cards-people.boxed .cards-people-card-body h6 {
+  grid-column: 1;
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.cards-people.boxed .cards-people-card-body > :not(h1, h2, h3, h4, h5, h6) {
+  grid-column: 2;
+}
+
+.cards-people.boxed .cards-people-card-body p {
+  margin: 0;
+  color: var(--brand-grey-text);
+  line-height: 22px;
+}
+
+/* boxed-2: single person contact card in a full grey band */
+.cards-people.boxed-2 > ul > li {
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 24px;
+  background-color: var(--brand-grey-bg);
+}
+
+@media (width >= 900px) {
+  .cards-people > ul > li {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .cards-people .cards-people-card-image {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+    padding-bottom: 20px;
+  }
+
+  .cards-people .cards-people-card-body {
+    flex-basis: 66.6667%;
+    max-width: 66.6667%;
+  }
+
+  .cards-people .cards-people-card-body p,
+  .cards-people .cards-people-card-contacts li {
+    line-height: 22px;
+  }
+
+  .cards-people .cards-people-card-body p.cards-people-card-cta {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .cards-people .cards-people-card-body .cards-people-card-cta a:any-link {
+    font-size: 16px;
+  }
+}

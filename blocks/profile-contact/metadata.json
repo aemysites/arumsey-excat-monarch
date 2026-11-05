@@ -1,0 +1,22 @@
+{
+  "variantName": "profile-contact",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "Contact strip on a person profile page: office address and LinkedIn link"
+  },
+  "contentPattern": {
+    "structure": "One row per contact item (or one cell holding a bulleted list): office address linked to the office page, LinkedIn (or other social) URL, optional tel: phone and mailto: email links. Items are typed by link (linkedin/twitter/facebook/instagram/phone/email, otherwise address); bare social URLs become icon links with an aria-label"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_42b7bbe5eb8a"
+  ],
+  "usage": "Person profile pages (/personnel/*), directly below the profile intro.",
+  "reuseGuidance": "Use for short contact/address + social strips tied to a person. For full office details with a map use office-info."
+}

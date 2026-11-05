@@ -1,0 +1,53 @@
+/* MNP brand tokens, measured from www.mnp.ca */
+:root {
+  /* colors */
+  --brand-navy: rgb(10 51 67);
+  --brand-navy-band: rgb(15 61 79);
+  --brand-navy-deep: rgb(7 34 45);
+  --brand-green: rgb(0 80 68);
+  --brand-teal: rgb(16 129 128);
+  --brand-orange: rgb(207 74 12);
+  --brand-grey-text: rgb(109 109 109);
+  --brand-grey-bg: rgb(248 248 248);
+  --brand-grey-line: rgb(201 201 201);
+  --background-color: rgb(255 255 255);
+  --light-color: rgb(248 248 248);
+  --dark-color: rgb(15 61 79);
+  --text-color: rgb(109 109 109);
+  --heading-color: rgb(10 51 67);
+  --link-color: rgb(10 51 67);
+  --link-hover-color: rgb(0 86 179);
+
+  /* fonts */
+  --body-font-family: 'Open Sans', open-sans-fallback, sans-serif;
+  --heading-font-family: soleil, 'Open Sans', open-sans-fallback, sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14.4px;
+  --body-font-size-xs: 13px;
+
+  /* heading sizes (mobile) */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* layout */
+  --content-max-width: 1400px;
+  --section-spacing: 32px;
+  --nav-height: 64px;
+}
+
+@media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 48px;
+    --heading-font-size-xl: 26px;
+    --heading-font-size-l: 22px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 18px;
+    --heading-font-size-xs: 16px;
+  }
+}

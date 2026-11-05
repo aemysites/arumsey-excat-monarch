@@ -1,0 +1,151 @@
+/*
+ * cards-video: source is a bootstrap row (margin 0 -15px) of equal columns (padding 0 15px).
+ * Each column holds a textblock (margin-left 30px, padding 16px 15px) and a media-container
+ * (48px above the video, pulled up 30px by the textblock) whose iframe keeps 48px of
+ * padding below the player inside a 16:9 wrapper.
+ */
+.cards-video {
+  margin: 0 -15px;
+  color: var(--brand-grey-text);
+}
+
+.cards-video > ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-video > ul > li {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
+  padding: 0 15px;
+}
+
+/* source textblock is full column width shifted right 30px (it overhangs the column) */
+.cards-video .cards-video-card-body {
+  margin: 0 -30px 0 30px;
+  padding: 16px 15px;
+}
+
+.cards-video .cards-video-card-body h1,
+.cards-video .cards-video-card-body h2,
+.cards-video .cards-video-card-body h3,
+.cards-video .cards-video-card-body h4 {
+  margin: 11px 0;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 35.992px;
+}
+
+.cards-video .cards-video-card-body p {
+  margin: 0 0 16px;
+  color: var(--brand-grey-text);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* "Contact Kyla" style link (source: cta-secondary caret) */
+.cards-video .cards-video-card-body a:any-link {
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cards-video .cards-video-card-body a:hover {
+  text-decoration: underline;
+}
+
+.cards-video .cards-video-card-body .button-container a:any-link::after {
+  content: '';
+  display: inline-block;
+  margin-left: 8px;
+  border-block: 5px solid transparent;
+  border-left: 5px solid currentcolor;
+  vertical-align: -1px;
+}
+
+/* video: 16:9 wrapper, player keeps 48px empty space below it as on the source */
+.cards-video .cards-video-card-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: 18px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.cards-video .cards-video-card-video.cards-video-is-loaded {
+  cursor: auto;
+}
+
+.cards-video .cards-video-card-video picture,
+.cards-video .cards-video-card-video img,
+.cards-video .cards-video-card-video iframe,
+.cards-video .cards-video-card-video video {
+  position: absolute;
+  inset: 0 0 48px;
+  width: 100%;
+  height: calc(100% - 48px);
+  border: 0;
+  object-fit: cover;
+}
+
+.cards-video .cards-video-card-video iframe,
+.cards-video .cards-video-card-video video {
+  object-fit: contain;
+}
+
+.cards-video .cards-video-play {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0 0 0 / 60%);
+  cursor: pointer;
+}
+
+.cards-video .cards-video-play::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid #fff;
+}
+
+/* desktop: two per row (source col-lg-6); a block of exactly three items shares one row (source col-md) */
+@media (width >= 900px) {
+  .cards-video > ul {
+    flex-flow: row wrap;
+  }
+
+  .cards-video > ul > li {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .cards-video > ul:has(> li:nth-child(3):last-child) > li {
+    flex: 1 1 0;
+    max-width: none;
+  }
+
+  .cards-video .cards-video-card-body {
+    flex: 1;
+  }
+}

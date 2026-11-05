@@ -1,0 +1,55 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link + image + text + heading",
+    "purpose": "article and insight teaser cards (photo, optional tag, date, title, summary, Read more) linking to detail pages, optionally under a titled photo banner"
+  },
+  "contentPattern": {
+    "structure": "one row per card: cell 1 image (optional), cell 2 optional short tag text (e.g. Performance), last cell body with date paragraph, heading with link, summary and a Read more link paragraph. With photo-banner or photo-banner-boxed, an optional first row with a single cell holds the banner photo, an h2 title and a View all link"
+  },
+  "options": [
+    {
+      "class": "photo-banner",
+      "label": "Photo Banner"
+    },
+    {
+      "class": "photo-banner-boxed",
+      "label": "Photo Banner Boxed"
+    },
+    {
+      "class": "photo-banner-light",
+      "label": "Photo Banner Light"
+    },
+    {
+      "class": "overlay",
+      "label": "Overlay"
+    }
+  ],
+  "memberVariantIds": [
+    "v_0457e1bedd24",
+    "v_365334e8af2d",
+    "v_ec1cfdad5fc8",
+    "v_0457e1bedd24-1",
+    "v_0457e1bedd24-2",
+    "v_365334e8af2d-1",
+    "v_6f4030f78c6b-1",
+    "v_adc05a916003-2",
+    "v_6f4030f78c6b",
+    "v_799fec78c602",
+    "v_0457e1bedd24-3",
+    "v_35c1c40456a5-1",
+    "v_5115c24501da",
+    "v_6f4030f78c6b-2",
+    "v_a23719ff89f0",
+    "v_adc05a916003-6",
+    "v_c959fbb317e3"
+  ],
+  "usage": "Insights/news/event listings on home, industry, service and office pages; event recaps; chapter tiles of a report (overlay); single sign-up CTA panel (photo-banner-light)",
+  "reuseGuidance": "Use for any list of linked content teasers with a photo. Use photo-banner when the list has a titled photo strip above it, photo-banner-boxed when the cards sit in a white box overlapping the photo, overlay for photo tiles with the title over the image, photo-banner-light for a single image-plus-text CTA panel. Use cards-service for text or icon tiles without photos and cards-people for personnel."
+}

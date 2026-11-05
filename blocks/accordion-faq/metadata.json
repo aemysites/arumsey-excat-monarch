@@ -1,0 +1,22 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "button",
+    "purpose": "collapsible FAQ list where each question row expands to reveal its answer"
+  },
+  "contentPattern": {
+    "structure": "one row per FAQ item; cell 1 = question (heading or text), cell 2 = answer (rich text); a row with only a question renders as a non-expandable item"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_a1c51f865b8c"
+  ],
+  "usage": "FAQ sections on industry and service pages (about 40 pages), typically several questions stacked in one block.",
+  "reuseGuidance": "Use for any question/answer or expandable-topic list. Use a fragment link in the answer cell only if the answer needs other blocks."
+}

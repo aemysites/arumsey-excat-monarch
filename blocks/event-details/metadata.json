@@ -1,0 +1,22 @@
+{
+  "variantName": "event-details",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link",
+    "purpose": "details panel with a title and meta line (event date/time or read time), clamped description with a Read more toggle, and optional presenter headshots"
+  },
+  "contentPattern": {
+    "structure": "row 1: [title, e.g. Synopsis or Event details] [meta, e.g. date/time or 6 Minute Read]; row 2: description text; optional row: Read more (becomes the expand toggle); optional rows, one per presenter: [headshot image] [name (link) + role]"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_7a67c6ecaabb"
+  ],
+  "usage": "Synopsis/details panel on insight and event pages (about 12 pages); captured instances show the panel without presenters.",
+  "reuseGuidance": "Use for synopsis or event detail panels without author bylines; presenters are optional rows. Use article-synopsis when the panel carries article author bylines."
+}

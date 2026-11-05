@@ -1,0 +1,23 @@
+{
+  "variantName": "article-synopsis",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link + image",
+    "purpose": "insight article synopsis panel with read time, clamped summary text with a Read more toggle, and author bylines beside it"
+  },
+  "contentPattern": {
+    "structure": "row 1: [title, e.g. Synopsis] [read time, e.g. 5 Minute Read]; row 2: summary text; optional row: Read more (turns into the expand toggle); then one row per author: [headshot image] [name (linked to profile) + role]"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_7a67c6ecaabb-1",
+    "v_7a67c6ecaabb-2"
+  ],
+  "usage": "Top of insight/article pages that list authors (insights directory articles).",
+  "reuseGuidance": "Use when an article synopsis has author bylines. For the synopsis without authors, event-details renders the same structure; both blocks accept any subset of rows."
+}

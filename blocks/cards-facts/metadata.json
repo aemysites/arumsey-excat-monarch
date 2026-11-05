@@ -1,0 +1,22 @@
+{
+  "variantName": "cards-facts",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list",
+    "purpose": "grid of key company facts, each a bold label over an icon and a short value"
+  },
+  "contentPattern": {
+    "structure": "one row per fact: cell 1 label (e.g. Head Office:), cell 2 value text, optionally preceded by an icon (:icon-name: or a small image), either inline or in its own cell before the value"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_d7631461778f"
+  ],
+  "usage": "About page facts strip (CEO, head office, team members, partners, offices, established, alliance)",
+  "reuseGuidance": "Use for short label/value facts or statistics in a grid. For descriptive tiles with a heading, text and link use cards-service."
+}

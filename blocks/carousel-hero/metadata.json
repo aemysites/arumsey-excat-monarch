@@ -1,0 +1,20 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "button + heading + link + image",
+    "purpose": "full-bleed rotating homepage hero: each slide shows a background image with date, headline, summary and CTA, with a row of story tabs (slide titles), prev/next and pause/play controls"
+  },
+  "contentPattern": {
+    "structure": "one row per slide; cell 1 = background image; cell 2 = date/eyebrow paragraph, heading (h1/h2, also used as the tab label), description paragraph and a CTA link. Missing image or extra cells are tolerated"
+  },
+  "options": [],
+  "memberVariantIds": ["v_03c88435e139"],
+  "usage": "Homepage top hero with several featured stories that rotate automatically.",
+  "reuseGuidance": "Use for multi-story rotating heroes. For a single static hero use hero-page; for an image-only slider use carousel-gallery."
+}

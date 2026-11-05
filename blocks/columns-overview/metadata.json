@@ -1,0 +1,28 @@
+{
+  "variantName": "columns-overview",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + list + link",
+    "purpose": "section heading and intro on the left with a ruled list of arrowed service links on the right"
+  },
+  "contentPattern": {
+    "structure": "one row, two cells: [heading + optional intro text | bulleted list of links]; an optional short plain-text paragraph right after the list (e.g. \"Load more\") becomes a toggle that reveals items beyond the first four"
+  },
+  "options": [
+    {
+      "class": "grey",
+      "label": "Grey"
+    }
+  ],
+  "memberVariantIds": [
+    "v_6103ab9d55d9",
+    "v_c00814923153"
+  ],
+  "usage": "Our Services / sub-service link lists on industry, office and service pages.",
+  "reuseGuidance": "Use for heading-left, link-list-right overviews. For linked cards with descriptions use cards-service."
+}

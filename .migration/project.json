@@ -1,0 +1,12 @@
+{
+  "type": "da",
+  "sites": {
+    "excat-mnp": {
+      "previewOrg": "aemysites",
+      "previewSite": "excat-mnp",
+      "contentHostUrl": "https://content.da.live/aemysites/excat-mnp/",
+      "botProtected": true,
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

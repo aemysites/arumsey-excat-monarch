@@ -1,0 +1,225 @@
+/* Columns Pricing: pricing text + table (light grey) beside a navy info panel */
+.columns-pricing {
+  margin: 0 -15px;
+  color: var(--brand-grey-text);
+}
+
+.columns-pricing > .columns-pricing-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-pricing .columns-pricing-intro,
+.columns-pricing .columns-pricing-panel {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* backgrounds run out to the viewport edges (source bg-extend-left/right) */
+.columns-pricing .columns-pricing-intro {
+  padding: 11px 31px 6px;
+  background-color: rgb(249 249 249);
+  border-image: conic-gradient(rgb(249 249 249) 0 0) fill 0 / 0 / 0 100vw;
+}
+
+.columns-pricing .columns-pricing-panel {
+  padding: 13px 32px 8px 30px;
+  background-color: rgb(26 70 90);
+  border-image: conic-gradient(rgb(26 70 90) 0 0) fill 0 / 0 / 0 100vw;
+  color: rgb(255 255 255);
+}
+
+.columns-pricing .columns-pricing-empty-col {
+  display: none;
+}
+
+.columns-pricing h2 {
+  margin: 13px 0;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36.01px;
+}
+
+.columns-pricing p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.columns-pricing ul {
+  margin: 0 0 16px;
+  padding-left: 40px;
+}
+
+.columns-pricing li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.columns-pricing strong {
+  font-weight: 600;
+}
+
+.columns-pricing .columns-pricing-panel h2,
+.columns-pricing .columns-pricing-panel p,
+.columns-pricing .columns-pricing-panel li {
+  color: rgb(255 255 255);
+}
+
+/* pricing table: stacked label/value rows on mobile */
+.columns-pricing .columns-pricing-table-wrapper {
+  margin: 0 0 16px;
+}
+
+.columns-pricing .columns-pricing-table {
+  display: block;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.columns-pricing .columns-pricing-table thead {
+  display: none;
+}
+
+.columns-pricing .columns-pricing-table tbody,
+.columns-pricing .columns-pricing-table tr {
+  display: block;
+}
+
+.columns-pricing .columns-pricing-table tbody tr:nth-child(odd) {
+  background-color: var(--brand-grey-bg);
+}
+
+.columns-pricing .columns-pricing-table tbody tr:nth-child(even) {
+  background-color: rgb(255 255 255);
+}
+
+.columns-pricing .columns-pricing-table td {
+  display: flex;
+  padding: 0;
+  color: var(--brand-grey-text);
+}
+
+.columns-pricing .columns-pricing-table td::before {
+  content: attr(data-label) " :";
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 5px 10px 4px;
+  border-bottom: 1px dotted rgb(255 255 255);
+  background-color: rgb(59 126 137);
+  color: rgb(255 255 255);
+  font-weight: 700;
+}
+
+.columns-pricing .columns-pricing-table td:last-child::before {
+  padding-bottom: 10px;
+  border-bottom: 0;
+}
+
+.columns-pricing .columns-pricing-table .columns-pricing-value {
+  display: block;
+  margin: 0 10px;
+  padding: 5px 0;
+}
+
+.columns-pricing .columns-pricing-table td:first-child::before,
+.columns-pricing .columns-pricing-table td:first-child .columns-pricing-value {
+  padding-top: 10px;
+}
+
+.columns-pricing .columns-pricing-table td:last-child .columns-pricing-value {
+  padding-bottom: 10px;
+}
+
+@media (width >= 900px) {
+  .columns-pricing > .columns-pricing-row {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .columns-pricing > .columns-pricing-row > div {
+    flex: 1 1 50%;
+  }
+
+  .columns-pricing .columns-pricing-intro {
+    padding: 35px 63px 64px;
+    border-image-outset: 0 0 0 100vw;
+  }
+
+  .columns-pricing .columns-pricing-panel {
+    padding: 35px 65px 64px 61px;
+    border-image-outset: 0 100vw 0 0;
+  }
+
+  .columns-pricing p {
+    font-size: 18px;
+    line-height: 31.5px;
+  }
+
+  .columns-pricing li {
+    line-height: 22px;
+  }
+
+  /* regular table layout on desktop */
+  .columns-pricing .columns-pricing-table {
+    display: table;
+  }
+
+  .columns-pricing .columns-pricing-table thead {
+    display: table-header-group;
+  }
+
+  .columns-pricing .columns-pricing-table tbody {
+    display: table-row-group;
+  }
+
+  .columns-pricing .columns-pricing-table tr {
+    display: table-row;
+  }
+
+  .columns-pricing .columns-pricing-table th,
+  .columns-pricing .columns-pricing-table td {
+    display: table-cell;
+    width: 23.33%;
+    padding: 13px 20px;
+    vertical-align: middle;
+  }
+
+  .columns-pricing .columns-pricing-table th {
+    border-bottom: 4px solid rgb(59 126 137);
+    background-color: var(--brand-navy-band);
+    color: rgb(255 255 255);
+    font-weight: 700;
+  }
+
+  .columns-pricing .columns-pricing-table th:last-child,
+  .columns-pricing .columns-pricing-table td:last-child {
+    width: 30%;
+  }
+
+  .columns-pricing .columns-pricing-table tbody tr:nth-child(odd) {
+    background-color: transparent;
+  }
+
+  .columns-pricing .columns-pricing-table tbody tr:nth-child(even) {
+    background-color: var(--brand-grey-bg);
+  }
+
+  .columns-pricing .columns-pricing-table td::before {
+    content: none;
+  }
+
+  .columns-pricing .columns-pricing-table .columns-pricing-value,
+  .columns-pricing .columns-pricing-table td:first-child .columns-pricing-value,
+  .columns-pricing .columns-pricing-table td:last-child .columns-pricing-value {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+}

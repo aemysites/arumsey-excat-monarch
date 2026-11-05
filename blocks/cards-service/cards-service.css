@@ -1,0 +1,291 @@
+/* cards-service: one card per row, stacked on mobile, side by side from 900px */
+
+/* default look: text cells in a row (source row gutters bleed past the section padding) */
+.cards-service {
+  margin: 0 -9px;
+  color: var(--brand-grey-text);
+}
+
+.cards-service > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-service > ul > li {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 16px 31px;
+}
+
+/* a photo (presenter portrait) sits beside its text as a round thumbnail */
+.cards-service > ul > li:has(> .cards-service-card-image) {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.cards-service .cards-service-card-image {
+  flex: 0 0 90px;
+  line-height: 0;
+}
+
+.cards-service .cards-service-card-image img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cards-service .cards-service-card-image + .cards-service-card-body > * {
+  margin: 0;
+}
+
+/* source text blocks on grey bands use 2em padding instead of 1em */
+main .section.light-grey .cards-service > ul > li {
+  padding: 32px 47px;
+}
+
+.cards-service .cards-service-card-icon {
+  /* the heading's top margin spaces it from the icon (flex items do not collapse margins) */
+  margin: 11px 0 0;
+  line-height: 0;
+  text-align: center;
+}
+
+.cards-service .cards-service-card-icon img,
+.cards-service .cards-service-card-icon .icon {
+  width: auto;
+  height: auto;
+  max-width: 50px;
+  max-height: 57px;
+}
+
+.cards-service.icon-features .cards-service-card-icon img,
+.cards-service.icon-features .cards-service-card-icon .icon {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.cards-service .cards-service-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cards-service h3 {
+  margin: 11px 0;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 35.992px;
+}
+
+.cards-service h3 a:any-link {
+  color: inherit;
+}
+
+.cards-service p,
+.cards-service .cards-service-card-body ul {
+  margin: 0 0 16px;
+  color: var(--brand-grey-text);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+/* icon-features: centred icon and heading, left-aligned text */
+.cards-service.icon-features h3 {
+  text-align: center;
+}
+
+/* bordered family: white tiles with a grey outline and a ruled "Learn More" row */
+.cards-service.bordered,
+.cards-service.bordered-grey {
+  margin: 0;
+}
+
+.cards-service.bordered > ul,
+.cards-service.bordered-grey > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+main .section .cards-service.bordered > ul > li,
+main .section .cards-service.bordered-grey > ul > li {
+  padding: 0;
+  border: 1px solid var(--brand-grey-line);
+  border-top-width: 3px;
+  background-color: var(--background-color);
+}
+
+.cards-service.bordered .cards-service-card-body,
+.cards-service.bordered-grey .cards-service-card-body {
+  padding: 20px 20px 0;
+}
+
+.cards-service.bordered h3,
+.cards-service.bordered-grey h3 {
+  line-height: 29px;
+}
+
+.cards-service.bordered h3 a:any-link,
+.cards-service.bordered-grey h3 a:any-link {
+  color: var(--brand-navy);
+  font-weight: 400;
+}
+
+.cards-service.bordered .cards-service-card-cta,
+.cards-service.bordered-grey .cards-service-card-cta {
+  margin: auto -10px 0;
+  padding: 20px 20px 16px;
+  border-top: 1px solid var(--brand-grey-line);
+  line-height: 22px;
+  text-align: right;
+}
+
+.cards-service.bordered .cards-service-card-cta a:any-link,
+.cards-service.bordered-grey .cards-service-card-cta a:any-link,
+.cards-service.dark-panels .cards-service-card-cta a:any-link,
+.cards-service.dark .cards-service-card-cta a:any-link {
+  color: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cards-service.bordered .cards-service-card-cta a:any-link::after,
+.cards-service.bordered-grey .cards-service-card-cta a:any-link::after,
+.cards-service.dark-panels .cards-service-card-cta a:any-link::after,
+.cards-service.dark .cards-service-card-cta a:any-link::after {
+  content: '';
+  display: inline-block;
+  margin-left: 8px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid currentcolor;
+}
+
+/* bordered-dark-light: icon tiles on a grey band (source: 2em text blocks) */
+.cards-service.bordered-dark-light {
+  background-color: var(--brand-grey-bg);
+}
+
+main .section .cards-service.bordered-dark-light > ul > li {
+  padding: 32px 47px;
+}
+
+/* bordered-grey-2: compact pill links that wrap inline */
+.cards-service.bordered-grey-2 {
+  margin: 0;
+}
+
+.cards-service.bordered-grey-2 > ul {
+  flex-flow: row wrap;
+  gap: 8px;
+}
+
+main .section .cards-service.bordered-grey-2 > ul > li {
+  padding: 8px 24px;
+  border: 1px solid var(--brand-grey-line);
+  border-radius: 999px;
+}
+
+.cards-service.bordered-grey-2 .cards-service-card-body > * {
+  margin: 0;
+}
+
+/* dark-panels and dark: navy panels with white text and a ruled "View All" row */
+main .section .cards-service.dark-panels > ul > li,
+main .section .cards-service.dark > ul > li {
+  padding: 36px 24px 48px;
+  background-color: var(--brand-navy);
+  color: #fff;
+}
+
+main .section .cards-service.dark-panels > ul > li:nth-child(even),
+main .section .cards-service.dark > ul > li:nth-child(even) {
+  background-color: rgb(25 70 89);
+}
+
+.cards-service.dark-panels h2,
+.cards-service.dark-panels h3,
+.cards-service.dark h2,
+.cards-service.dark h3 {
+  margin: 13px 0;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36.01px;
+}
+
+.cards-service.dark-panels p,
+.cards-service.dark-panels .cards-service-card-body ul,
+.cards-service.dark p,
+.cards-service.dark .cards-service-card-body ul {
+  color: #fff;
+  font-size: 18px;
+  line-height: 31.5px;
+}
+
+.cards-service.dark-panels .cards-service-card-body a:any-link,
+.cards-service.dark .cards-service-card-body a:any-link {
+  color: #fff;
+}
+
+.cards-service.dark-panels .cards-service-card-cta,
+.cards-service.dark .cards-service-card-cta {
+  margin: auto 0 0;
+  padding: 24px 10px 0;
+  border-top: 1px solid #fff;
+  line-height: 22px;
+  text-align: right;
+}
+
+@media (width >= 900px) {
+  .cards-service {
+    margin: 0 -12px;
+  }
+
+  .cards-service > ul {
+    flex-direction: row;
+  }
+
+  .cards-service > ul > li {
+    flex: 1 1 0;
+  }
+
+  .cards-service p,
+  .cards-service .cards-service-card-body ul {
+    line-height: 22px;
+  }
+
+  .cards-service.bordered,
+  .cards-service.bordered-grey {
+    margin: 0;
+  }
+
+  .cards-service.bordered > ul,
+  .cards-service.bordered-grey > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  main .section .cards-service.dark-panels > ul > li,
+  main .section .cards-service.dark > ul > li {
+    padding: 36px 64px 88px;
+  }
+
+  .cards-service.dark-panels p,
+  .cards-service.dark-panels .cards-service-card-body ul,
+  .cards-service.dark p,
+  .cards-service.dark .cards-service-card-body ul {
+    line-height: 31.5px;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "variantName": "hero-page",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "image + heading + text + link",
+    "purpose": "inner-page title hero: either a full-bleed background photo with the page title over it (optionally with a text intro strip beneath), or a split layout with the photo beside a dark title/CTA panel"
+  },
+  "contentPattern": {
+    "structure": "row 1 = image (optional); row 2 = heading (h1 for page titles), optional subtitle/description and optional CTA link; optional row 3 = intro strip text (shown in a band beneath the photo). Image and content may also share one row as two cells. Default and split options render the split layout; image-dark, dark and intro-strip* options render the overlay layout"
+  },
+  "options": [
+    { "class": "image-dark", "label": "Image Dark" },
+    { "class": "intro-strip", "label": "Intro Strip" },
+    { "class": "intro-strip-stacked", "label": "Intro Strip Stacked" },
+    { "class": "dark", "label": "Dark" },
+    { "class": "split", "label": "Split" },
+    { "class": "intro-strip-cyan-dark", "label": "Intro Strip Cyan Dark" },
+    { "class": "intro-strip-stacked-cyan-dark", "label": "Intro Strip Stacked Cyan Dark" },
+    { "class": "split-cyan", "label": "Split Cyan" }
+  ],
+  "memberVariantIds": ["v_35c1c40456a5", "v_c45fbe03bff3", "v_c45fbe03bff3-1", "v_c45fbe03bff3-3", "v_7d5098f5421f", "v_c45fbe03bff3-5", "v_c45fbe03bff3-2", "v_35c1c40456a5-2", "v_c45fbe03bff3-4", "v_c45fbe03bff3-6"],
+  "usage": "Top of inner pages (offices, industries, services, about, community) and image + CTA banners such as the Indigenous Services promo.",
+  "reuseGuidance": "Use for any single static page-title hero. No option = image half beside a title/CTA panel. Use image-dark/dark for a title over a photo, intro-strip for a photo title with a short intro sentence in a band below, intro-strip-stacked for a longer intro paragraph, split/split-cyan for photo beside title panel. Cyan options are colour hooks for the design pass. Rotating multi-story heroes use carousel-hero."
+}

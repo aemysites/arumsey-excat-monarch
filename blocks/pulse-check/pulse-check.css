@@ -1,0 +1,267 @@
+/* statements are numbered across steps, like the source "1. … 10." headings */
+.pulse-check .pulse-check-form {
+  counter-reset: pulse-check-question;
+}
+
+/* step tabs: navy chevron for the current step, light grey for the others */
+.pulse-check .pulse-check-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  margin: 0 0 31px;
+  padding: 0;
+}
+
+.pulse-check .pulse-check-tabs li {
+  flex: 0 1 340px;
+  min-width: 0;
+}
+
+.pulse-check .pulse-check-tab {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 39px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0 20px 0 22px;
+  background-color: rgb(230 230 230);
+  color: var(--brand-navy-deep);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 10px 50%);
+  cursor: pointer;
+}
+
+.pulse-check .pulse-check-tab:disabled {
+  cursor: default;
+}
+
+.pulse-check .pulse-check-tabs li.current .pulse-check-tab {
+  background-color: var(--brand-navy);
+  color: #fff;
+}
+
+.pulse-check .pulse-check-tab-number {
+  margin-right: 0.25em;
+}
+
+.pulse-check .pulse-check-step[hidden] {
+  display: none;
+}
+
+/* the source keeps the step heading for screen readers only */
+.pulse-check .pulse-check-step-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pulse-check .pulse-check-step-intro p {
+  margin: 0 0 14px;
+}
+
+.pulse-check .pulse-check-step-content {
+  display: grid;
+  gap: 24px 30px;
+  padding-left: 16px;
+}
+
+.pulse-check .pulse-check-step-body {
+  padding-top: 9px;
+}
+
+.pulse-check .pulse-check-step-body > p {
+  margin: 0 0 16px;
+}
+
+/* rating statements */
+.pulse-check .pulse-check-question {
+  counter-increment: pulse-check-question;
+  min-width: 0;
+  border: 0;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.pulse-check .pulse-check-question legend {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 0;
+  color: var(--brand-navy-deep);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-s);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.pulse-check .pulse-check-question legend::before {
+  content: counter(pulse-check-question) '. ';
+}
+
+.pulse-check .pulse-check-choices {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pulse-check .pulse-check-choice {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 24px;
+}
+
+.pulse-check .pulse-check-choice input[type='radio'] {
+  appearance: none;
+  flex: none;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: 1px solid rgb(177 178 180);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.pulse-check .pulse-check-choice input[type='radio']:checked {
+  border-color: var(--brand-navy);
+  box-shadow: inset 0 0 0 3px #fff;
+  background-color: var(--brand-navy);
+}
+
+.pulse-check .pulse-check-choice input[type='radio']:focus-visible {
+  outline: 2px solid var(--brand-navy);
+  outline-offset: 2px;
+}
+
+.pulse-check .pulse-check-choice label {
+  color: var(--brand-navy-deep);
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.pulse-check .pulse-check-invalid .pulse-check-question:has(input:invalid) legend {
+  color: var(--brand-orange);
+}
+
+/* contact step fields */
+.pulse-check .pulse-check-fields {
+  display: grid;
+  gap: 16px 30px;
+  margin-bottom: 16px;
+}
+
+.pulse-check .pulse-check-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--brand-navy-deep);
+  font-size: var(--body-font-size-s);
+}
+
+.pulse-check .pulse-check-field-checkbox {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.pulse-check .pulse-check-field label[data-required]::after {
+  content: ' *';
+}
+
+.pulse-check .pulse-check-field input:not([type='checkbox']),
+.pulse-check .pulse-check-field select,
+.pulse-check .pulse-check-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--brand-grey-line);
+  border-radius: 0;
+  padding: 6px 12px;
+  background-color: #fff;
+  color: var(--brand-navy-deep);
+  font: inherit;
+  font-size: 16px;
+}
+
+.pulse-check .pulse-check-step-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Previous / Next / Finish */
+.pulse-check .pulse-check-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+  padding: 0 6px;
+}
+
+.pulse-check .pulse-check-actions button.button {
+  flex: 0 1 331px;
+  min-width: 0;
+  height: 41px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0 16px;
+  background-color: var(--brand-navy);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.pulse-check .pulse-check-actions button.button:hover,
+.pulse-check .pulse-check-actions button.button:focus-visible {
+  background-color: var(--brand-navy-band);
+}
+
+.pulse-check .pulse-check-actions button.button:disabled {
+  cursor: default;
+}
+
+.pulse-check .pulse-check-actions button[hidden] {
+  display: none;
+}
+
+.pulse-check .pulse-check-actions .pulse-check-next,
+.pulse-check .pulse-check-actions .pulse-check-finish {
+  margin-left: auto;
+}
+
+@media (width >= 900px) {
+  .pulse-check .pulse-check-step-has-media .pulse-check-step-content {
+    grid-template-columns: minmax(0, 1fr) calc(25% - 22.5px);
+    margin-right: -16px;
+  }
+
+  .pulse-check .pulse-check-fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pulse-check .pulse-check-field-checkbox {
+    grid-column: 1 / -1;
+  }
+}

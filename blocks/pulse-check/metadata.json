@@ -1,0 +1,25 @@
+{
+  "variantName": "pulse-check",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "list + link",
+    "purpose": "Multi-step self-assessment questionnaire (rating statements, then contact details) with step tabs and Previous / Next / Finish navigation"
+  },
+  "contentPattern": {
+    "structure": "One row per step: cell 1 step title (e.g. 'Instructions:', 'Information'); cell 2 intro copy plus a numbered list whose items become rating statements, and/or a link to a .json field sheet (Name, Label, Type, Mandatory, Options, Value) for the contact step; optional cell 3 right-rail image. Optional config rows keyed by the first cell: 'Scale' (comma-separated answer labels, first scores highest; default Strongly agree..Strongly disagree), 'Submit' (link to the endpoint answers are POSTed to as {data}), 'Results' (content shown after Finish, with {score} and {max} placeholders)"
+  },
+  "options": [
+    { "class": "cyan", "label": "Cyan" }
+  ],
+  "memberVariantIds": [
+    "v_06dbf38c6d3c",
+    "v_bed07b8ebce8"
+  ],
+  "usage": "The Organizational Health and Wellness Pulse Check questionnaire page (/services/consulting/hr/organizational-health-and-wellness-pulse-check). The catalog captured only the step tabs and the Previous/Next buttons; this one block replaces the whole wizard form.",
+  "reuseGuidance": "Use for any scored multi-step self-assessment. Single-step lead forms belong in the form block."
+}

@@ -1,0 +1,133 @@
+/* Title bar (article / news): grey bar, title left, white round icons right */
+.share-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background-color: var(--brand-grey-bg);
+}
+
+.share-bar .share-bar-title {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.share-bar .share-bar-title > * {
+  margin: 0;
+  color: var(--heading-color);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 600;
+  line-height: 1.385;
+}
+
+.share-bar .share-bar-links {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share-bar .share-bar-links li {
+  margin: 0;
+}
+
+main .share-bar a.share-bar-link:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  color: var(--brand-navy);
+  text-decoration: none;
+}
+
+main .share-bar a.share-bar-link:hover {
+  color: var(--brand-teal);
+}
+
+.share-bar .share-bar-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.share-bar .share-bar-icon-x {
+  width: 18px;
+  height: 18px;
+}
+
+/* Share label (job postings): "Share this job" above small navy filled icons, right aligned */
+.share-bar.label {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.share-bar.label .share-bar-title {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.share-bar.label .share-bar-title > * {
+  font-size: var(--heading-font-size-m);
+}
+
+.share-bar.label .share-bar-links {
+  gap: 4px;
+}
+
+main .share-bar.label a.share-bar-link:any-link {
+  width: 30px;
+  height: 30px;
+  background-color: var(--brand-navy);
+  color: var(--background-color);
+}
+
+main .share-bar.label a.share-bar-link:hover {
+  background-color: var(--brand-teal);
+}
+
+.share-bar.label .share-bar-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.share-bar.label .share-bar-icon-email {
+  width: 17px;
+  height: 17px;
+}
+
+/* The Facebook glyph is itself a disc: draw it full size in navy instead of on a navy disc */
+main .share-bar.label a.share-bar-facebook:any-link {
+  background-color: transparent;
+  color: var(--brand-navy);
+}
+
+main .share-bar.label a.share-bar-facebook:hover {
+  background-color: transparent;
+  color: var(--brand-teal);
+}
+
+.share-bar.label .share-bar-icon-facebook {
+  width: 30px;
+  height: 30px;
+}
+
+@media (width >= 900px) {
+  .share-bar {
+    padding: 16px 28px 16px 20px;
+  }
+
+  .share-bar.label {
+    padding: 0;
+  }
+}

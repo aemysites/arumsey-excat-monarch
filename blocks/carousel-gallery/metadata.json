@@ -1,0 +1,20 @@
+{
+  "variantName": "carousel-gallery",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "button + list",
+    "purpose": "event photo gallery: a sliding row of photos (3 per view on desktop) with prev/next arrows and page dots; clicking a photo opens it enlarged in a lightbox"
+  },
+  "contentPattern": {
+    "structure": "one row per photo; cell 1 = image; optional cell 2 = caption text. Rows without an image or text are dropped; with one page of photos the arrows and dots are hidden"
+  },
+  "options": [],
+  "memberVariantIds": ["v_59c4c41dbae8", "v_59c4c41dbae8-1"],
+  "usage": "Community event pages showing a strip of event photos.",
+  "reuseGuidance": "Use for image-only galleries. For rotating story heroes with headline and CTA use carousel-hero."
+}

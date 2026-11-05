@@ -1,0 +1,207 @@
+/*
+ * Two looks share this file:
+ *  - event panel (default): grey panel with a teal left rule, date/time lines,
+ *    description, presenter names and portrait headshots (mnp.ca event pages).
+ *  - synopsis (block has a Read more toggle): Synopsis heading + read time,
+ *    clamped intro, "Read more" down-arrow toggle and a bottom rule (insights).
+ */
+
+/* event panel (default) */
+.event-details {
+  margin: 0 0 25px;
+  padding: 25px;
+  border-left: 5px solid var(--brand-teal);
+  background-color: var(--brand-grey-bg);
+  color: var(--brand-grey-text);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+}
+
+.event-details p {
+  margin: 0;
+  line-height: inherit;
+}
+
+.event-details .event-details-title > *,
+.event-details .event-details-meta > *,
+.event-details .event-details-presenter-info > * {
+  margin: 0;
+}
+
+.event-details .event-details-header {
+  font-weight: 600;
+  line-height: normal;
+}
+
+.event-details .event-details-text {
+  margin: 0 0 16px;
+  line-height: 25.6px;
+}
+
+.event-details .event-details-text > :last-child {
+  margin-bottom: 0;
+}
+
+/* presenters: names stacked above a row of portrait headshots */
+.event-details .event-details-presenters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.event-details .event-details-presenter {
+  display: contents;
+}
+
+.event-details .event-details-presenter-info {
+  order: -1;
+  flex: 0 0 100%;
+  line-height: 25.6px;
+}
+
+.event-details .event-details-presenter:last-child .event-details-presenter-info {
+  margin-bottom: 16px;
+}
+
+.event-details .event-details-presenter-image {
+  flex: 0 0 200px;
+}
+
+.event-details .event-details-presenter-image p {
+  margin: 0;
+}
+
+.event-details .event-details-presenter-image img {
+  display: block;
+  width: 200px;
+  height: 267px;
+  object-fit: fill;
+}
+
+/* synopsis look (insights articles) */
+.event-details:has(.event-details-toggle) {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 24px 0;
+  border-left: 0;
+  border-bottom: 1px solid var(--brand-grey-line);
+  background-color: transparent;
+}
+
+.event-details:has(.event-details-toggle) .event-details-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.event-details:has(.event-details-toggle) .event-details-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 24px;
+  margin: 0 0 24px;
+  font-weight: 400;
+}
+
+.event-details:has(.event-details-toggle) .event-details-title {
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-s);
+  font-weight: 600;
+}
+
+.event-details:has(.event-details-toggle) .event-details-meta {
+  font-size: var(--body-font-size-s);
+}
+
+.event-details:has(.event-details-toggle) .event-details-text {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  line-height: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.event-details.event-details-expanded .event-details-text {
+  display: block;
+}
+
+.event-details .event-details-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 32px 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.event-details .event-details-toggle::before {
+  content: '\2193';
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.event-details.event-details-expanded .event-details-toggle::before {
+  transform: rotate(180deg);
+}
+
+/* synopsis presenters keep the round byline treatment */
+.event-details:has(.event-details-toggle) .event-details-presenters {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-details:has(.event-details-toggle) .event-details-presenter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.event-details:has(.event-details-toggle) .event-details-presenter > .event-details-presenter-info {
+  order: 0;
+  flex: 1 1 auto;
+  margin: 0;
+}
+
+.event-details:has(.event-details-toggle) .event-details-presenter-image {
+  flex: 0 0 80px;
+}
+
+.event-details:has(.event-details-toggle) .event-details-presenter-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (width >= 900px) {
+  .event-details .event-details-text,
+  .event-details .event-details-presenter-info {
+    line-height: 22px;
+  }
+
+  .event-details:has(.event-details-toggle) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .event-details:has(.event-details-toggle) .event-details-main {
+    flex: 0 1 75%;
+  }
+
+  .event-details:has(.event-details-toggle) .event-details-presenters {
+    flex: 0 0 25%;
+  }
+}

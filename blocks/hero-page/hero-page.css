@@ -1,0 +1,302 @@
+/*
+ * Hero Page
+ * Values measured from www.mnp.ca (migration-work/design/hero-page*).
+ * The source grid is a 1400px container with 15px gutters: title heroes
+ * (.image-dark, .intro-strip*, .split*) sit inside the gutter (1370px), promo
+ * banners (default, .dark) span the full container (1400px).
+ */
+
+main > .section > .hero-page-wrapper {
+  box-sizing: border-box;
+  max-width: var(--content-max-width);
+  padding: 0 15px;
+}
+
+.hero-page {
+  position: relative;
+}
+
+/* promo banners and text boxes carry white text */
+.hero-page:not(.image-dark, .intro-strip, .intro-strip-stacked, .intro-strip-cyan-dark,
+  .intro-strip-stacked-cyan-dark, .split, .split-cyan) {
+  color: #fff;
+}
+
+/* title heroes sit inside the 15px gutter */
+.hero-page:is(.image-dark, .intro-strip, .intro-strip-stacked, .intro-strip-cyan-dark,
+  .intro-strip-stacked-cyan-dark, .split, .split-cyan) {
+  margin: 0 15px;
+  padding: 0 15px;
+}
+
+.hero-page:is(.image-dark, .intro-strip, .intro-strip-stacked, .intro-strip-cyan-dark,
+  .intro-strip-stacked-cyan-dark, .split, .split-cyan) > div {
+  margin: 0 -15px;
+}
+
+.hero-page.dark {
+  background-color: var(--brand-navy);
+}
+
+/* ---------- inner row ---------- */
+.hero-page .hero-page-inner {
+  position: relative;
+}
+
+.hero-page.hero-page-layout-split .hero-page-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-page.hero-page-layout-overlay .hero-page-inner {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero-page.hero-page-layout-overlay:not(.dark, .hero-page-has-strip, .hero-page-no-image) .hero-page-inner {
+  min-height: 520px;
+}
+
+/* ---------- media ---------- */
+.hero-page .hero-page-media picture,
+.hero-page .hero-page-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-page .hero-page-media img {
+  object-fit: cover;
+}
+
+.hero-page.hero-page-layout-overlay .hero-page-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ---------- content panel ---------- */
+.hero-page .hero-page-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* default: navy promo panel beside (below on mobile) the photo */
+.hero-page.hero-page-layout-split .hero-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 15px;
+  background-color: var(--brand-navy);
+}
+
+/* split: navy title panel */
+.hero-page:is(.split, .split-cyan) .hero-page-content {
+  justify-content: flex-start;
+  padding: 25px 18px;
+}
+
+.hero-page.dark .hero-page-content {
+  width: 100%;
+  padding: 30px 15px;
+}
+
+/* overlay title heroes: title on the photo */
+.hero-page.hero-page-layout-overlay:not(.dark) .hero-page-content {
+  width: 100%;
+  padding: 150px 18px 130px;
+}
+
+/* default without a photo: plain navy heading box */
+.hero-page.hero-page-layout-split.hero-page-no-image .hero-page-content {
+  padding: 19px 31px;
+  background-color: var(--brand-navy-band);
+}
+
+.hero-page .hero-page-content > :first-child {
+  margin-top: 0;
+}
+
+.hero-page .hero-page-content > :last-child {
+  margin-bottom: 0;
+}
+
+.hero-page.hero-page-layout-split.hero-page-no-image .hero-page-content > :first-child {
+  margin-top: 13px;
+}
+
+.hero-page.hero-page-layout-split.hero-page-no-image .hero-page-content > :last-child {
+  margin-bottom: 13px;
+}
+
+/* ---------- typography ---------- */
+.hero-page .hero-page-content h1,
+.hero-page .hero-page-content h2,
+.hero-page .hero-page-content h3,
+.hero-page .hero-page-content a:any-link {
+  color: #fff;
+}
+
+.hero-page:is(.hero-page-layout-split, .dark) .hero-page-content h2 {
+  margin: 13px 0;
+  font-family: var(--heading-font-family);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36.01px;
+}
+
+.hero-page .hero-page-content p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.hero-page:is(.split, .split-cyan) .hero-page-content p {
+  line-height: 25.6px;
+}
+
+/* title H1: white soleil with a short orange underline */
+.hero-page:is(.image-dark, .intro-strip, .intro-strip-stacked, .intro-strip-cyan-dark,
+  .intro-strip-stacked-cyan-dark, .split, .split-cyan) .hero-page-content h1 {
+  position: relative;
+  max-width: 700px;
+  margin: 14.4px 0 20px;
+  padding-bottom: 17px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 28.8px;
+  font-weight: 700;
+  line-height: 34.56px;
+}
+
+.hero-page:is(.image-dark, .intro-strip, .intro-strip-stacked, .intro-strip-cyan-dark,
+  .intro-strip-stacked-cyan-dark, .split, .split-cyan) .hero-page-content h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 125px;
+  height: 2px;
+  background-color: rgb(241 90 34);
+}
+
+/* call to action: rule above a right-aligned caret link */
+.hero-page .hero-page-content p.hero-page-cta {
+  margin: 13px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--brand-grey-line);
+  text-align: right;
+}
+
+.hero-page .hero-page-cta a:any-link {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.hero-page .hero-page-cta a:any-link::after {
+  content: '';
+  display: inline-block;
+  margin-left: 8px;
+  border-block: 5px solid transparent;
+  border-left: 5px solid currentcolor;
+  vertical-align: -1px;
+}
+
+.hero-page .hero-page-cta a:hover {
+  text-decoration: underline;
+}
+
+/* intro strip: navy band with the intro text beneath the photo */
+.hero-page .hero-page-strip {
+  padding: 25px;
+  background-color: var(--brand-navy);
+  color: #fff;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.hero-page .hero-page-strip > * {
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  /* promo banners span the full container */
+  .hero-page:not(.image-dark, .intro-strip, .intro-strip-stacked, .intro-strip-cyan-dark,
+    .intro-strip-stacked-cyan-dark, .split, .split-cyan) {
+    margin: 0 -15px;
+  }
+
+  .hero-page:is(.image-dark, .intro-strip, .intro-strip-stacked, .intro-strip-cyan-dark,
+    .intro-strip-stacked-cyan-dark, .split, .split-cyan) {
+    margin: 0;
+  }
+
+  .hero-page.hero-page-layout-split .hero-page-inner {
+    flex-direction: row;
+  }
+
+  .hero-page.hero-page-layout-overlay:not(.dark, .hero-page-no-image) .hero-page-inner {
+    min-height: 320px;
+  }
+
+  .hero-page:is(.intro-strip-stacked, .intro-strip-stacked-cyan-dark).hero-page-layout-overlay .hero-page-inner {
+    min-height: 270px;
+  }
+
+  /* default promo banner: 321px tall, photo cropped to fit */
+  .hero-page.hero-page-layout-split:not(.split, .split-cyan, .hero-page-no-image) .hero-page-inner {
+    min-height: 321px;
+  }
+
+  .hero-page.hero-page-layout-split .hero-page-media,
+  .hero-page.hero-page-layout-split .hero-page-content {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .hero-page.hero-page-layout-split .hero-page-content {
+    padding: 30px 50px;
+  }
+
+  .hero-page:is(.split, .split-cyan) .hero-page-content {
+    padding: 0 40px 30px;
+  }
+
+  .hero-page.dark .hero-page-content {
+    padding: 30px 50px;
+  }
+
+  .hero-page.hero-page-layout-overlay:not(.dark) .hero-page-content {
+    padding: 0 33px 110px;
+  }
+
+  .hero-page.hero-page-layout-split.hero-page-no-image .hero-page-content {
+    flex-basis: 100%;
+    padding: 19px 31px;
+  }
+
+  .hero-page:is(.image-dark, .intro-strip, .intro-strip-stacked, .intro-strip-cyan-dark,
+    .intro-strip-stacked-cyan-dark, .split, .split-cyan) .hero-page-content h1 {
+    margin: 24px 0 20px;
+    font-size: 48px;
+    line-height: 55.2px;
+  }
+
+  .hero-page:is(.split, .split-cyan) .hero-page-content h1 {
+    margin: 18px 0 24px;
+    font-size: 45px;
+    line-height: 51.75px;
+  }
+
+  .hero-page:is(.split, .split-cyan) .hero-page-content p {
+    font-size: 18px;
+  }
+
+  .hero-page .hero-page-strip {
+    font-size: 20px;
+    line-height: 27.5px;
+  }
+}

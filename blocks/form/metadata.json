@@ -1,0 +1,38 @@
+{
+  "variantName": "form",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": false,
+    "imagePattern": "noimg",
+    "structure": "heading + text + field + button + list + link + image",
+    "purpose": "Contact, consultation, sponsorship, newsletter and gated-content forms with optional intro copy or advisor profiles"
+  },
+  "contentPattern": {
+    "structure": "Any number of intro rows (heading, text, lists, advisor photos/contacts; each cell becomes an intro part) plus one row whose only content is a link to the form source. A link to a .json spreadsheet (columns Name, Label, Type, Placeholder, Mandatory, Options, Value; Type text/email/tel/number/date/textarea/select/checkbox/radio/hidden/heading/plaintext/submit) renders a native form that POSTs {data} to the sheet path; any other link (Moosend, Dynamics or other hosted form) is embedded in an iframe"
+  },
+  "options": [
+    { "class": "text-left", "label": "Text Left" },
+    { "class": "dark", "label": "Dark" },
+    { "class": "boxed", "label": "Boxed" },
+    { "class": "boxed-2", "label": "Boxed 2" },
+    { "class": "boxed-3", "label": "Boxed 3" }
+  ],
+  "memberVariantIds": [
+    "v_4b8a4de166cc",
+    "v_fc6e623a5569",
+    "v_7fc10ead0e56",
+    "v_adc05a916003",
+    "v_adc05a916003-1",
+    "v_d64f8b0e27e2",
+    "v_6e5aa6e395c3",
+    "v_a23719ff89f0-3",
+    "v_a23719ff89f0-4",
+    "v_cd1491307806-4",
+    "v_d0cd841aecef-1"
+  ],
+  "usage": "Use for any on-page form: the advisor contact/consultation form (intro above, or beside it with text-left), community sponsorship requests (boxed), newsletter subscriptions (boxed-3) and gated downloads (boxed-2). The source forms are Sitecore Forms, Moosend and Dynamics Marketing; recreate fields in a .json sheet or link the hosted form URL.",
+  "reuseGuidance": "Reuse for every form-style section; pick text-left when intro copy or advisor profiles sit beside the form, dark for dark-background sections, boxed/boxed-2/boxed-3 for panelled forms. Search/filter UIs on listing pages (A-Z filters) are not forms to author; they need a dedicated listing block."
+}

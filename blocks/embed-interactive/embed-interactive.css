@@ -1,0 +1,156 @@
+/* source: bootstrap row (margin 0 -15px) whose columns carry 15px padding */
+.embed-interactive {
+  width: auto;
+  max-width: 1400px;
+  margin: 0 -15px;
+  color: var(--text-color);
+}
+
+/* intro (source: textblock section) */
+.embed-interactive .embed-interactive-intro {
+  margin-bottom: 32px;
+  padding: 0 15px;
+}
+
+.embed-interactive .embed-interactive-intro h2 {
+  margin: 48px 0 13px;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.embed-interactive .embed-interactive-intro h2:first-child {
+  margin-top: 0;
+}
+
+.embed-interactive .embed-interactive-intro h2::after {
+  content: '';
+  display: block;
+  width: 125px;
+  height: 2px;
+  margin-top: 15px;
+  background-color: var(--brand-orange);
+}
+
+.embed-interactive .embed-interactive-intro p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* items (source: media-container, 48px above each video) */
+.embed-interactive .embed-interactive-items {
+  display: grid;
+  gap: 48px 30px;
+  padding: 48px 15px 0;
+}
+
+.embed-interactive .embed-interactive-item {
+  min-width: 0;
+}
+
+.embed-interactive .embed-interactive-media {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+
+.embed-interactive .embed-interactive-frame {
+  position: relative;
+  width: 100%;
+}
+
+.embed-interactive .embed-interactive-frame iframe {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+}
+
+.embed-interactive .embed-interactive-video {
+  aspect-ratio: 16 / 9;
+}
+
+.embed-interactive .embed-interactive-video iframe {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.embed-interactive .embed-interactive-iframe iframe {
+  min-height: 600px;
+}
+
+/* source multi-video rows: the iframe keeps 48px bottom padding inside its 16:9 box */
+.embed-interactive.embed-interactive-multi .embed-interactive-video iframe {
+  padding-bottom: 48px;
+}
+
+.embed-interactive .embed-interactive-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+}
+
+.embed-interactive .embed-interactive-placeholder picture,
+.embed-interactive .embed-interactive-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.embed-interactive .embed-interactive-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.embed-interactive .embed-interactive-play::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid currentcolor;
+  transform: translate(-50%, -50%);
+}
+
+.embed-interactive .embed-interactive-caption {
+  margin-top: 16px;
+}
+
+/* default look sits on a light grey band (source .bg-alt-grey) */
+.embed-interactive:not(.dark) {
+  background-color: var(--brand-grey-bg);
+}
+
+@media (width >= 900px) {
+  /* source col-lg-8 text column */
+  .embed-interactive .embed-interactive-intro {
+    max-width: calc(100% * 2 / 3 - 30px);
+    box-sizing: border-box;
+  }
+
+  .embed-interactive:not(.embed-interactive-multi) .embed-interactive-video,
+  .embed-interactive:not(.embed-interactive-multi) .embed-interactive-placeholder {
+    max-width: 817px;
+  }
+
+  /* source: equal bootstrap columns, three per row */
+  .embed-interactive.embed-interactive-multi .embed-interactive-items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .embed-interactive.embed-interactive-multi .embed-interactive-items:has(> :nth-child(2):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

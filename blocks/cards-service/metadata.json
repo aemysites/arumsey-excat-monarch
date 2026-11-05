@@ -1,0 +1,61 @@
+{
+  "variantName": "cards-service",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading",
+    "purpose": "grid of service or topic tiles (optional icon, heading, short description, Learn more link) linking to detail pages"
+  },
+  "contentPattern": {
+    "structure": "one row per tile: optional first cell with an icon (:icon: or small SVG image) or photo, then a body cell with heading (often linked), description and an optional link paragraph (Learn more / View All); an icon may also be the first paragraph of the body"
+  },
+  "options": [
+    {
+      "class": "icon-features",
+      "label": "Icon Features"
+    },
+    {
+      "class": "dark-panels",
+      "label": "Dark Panels"
+    },
+    {
+      "class": "bordered",
+      "label": "Bordered"
+    },
+    {
+      "class": "bordered-grey",
+      "label": "Bordered Grey"
+    },
+    {
+      "class": "bordered-grey-2",
+      "label": "Bordered Grey 2"
+    },
+    {
+      "class": "bordered-dark-light",
+      "label": "Bordered Dark Light"
+    },
+    {
+      "class": "dark",
+      "label": "Dark"
+    }
+  ],
+  "memberVariantIds": [
+    "v_0674be92ce0b",
+    "v_06a0164e2d49",
+    "v_cd1491307806-1",
+    "v_0c117c5ec90e",
+    "v_44bb4829e7e4",
+    "v_adc05a916003-3",
+    "v_0c117c5ec90e-1",
+    "v_9765843b1ef6",
+    "v_06a0164e2d49-1",
+    "v_cd1491307806",
+    "v_cd1491307806-3"
+  ],
+  "usage": "Service and industry listings across industry, service and home pages; icon feature rows (icon-features, dark); Services/Industries overview panels (dark-panels); industry pill links (bordered-grey-2)",
+  "reuseGuidance": "Use for text or icon tiles that link to detail pages. icon-features centres icon tiles; bordered, bordered-grey and bordered-dark-light box each tile; bordered-grey-2 renders compact pill links; dark-panels for two large side-by-side overview panels; dark for icon tiles on a dark band. Use cards-article when tiles have a photo, date and summary."
+}

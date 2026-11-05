@@ -1,0 +1,267 @@
+/* full-bleed: the slides run edge to edge (source mnp-full-width-carousel) */
+main > .section > .carousel-hero-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
+.carousel-hero {
+  position: relative;
+}
+
+.carousel-hero .carousel-hero-slides-container {
+  position: relative;
+}
+
+.carousel-hero .carousel-hero-slides,
+.carousel-hero .carousel-hero-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-hero .carousel-hero-slides {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: scroll clip;
+  scrollbar-width: none;
+}
+
+.carousel-hero .carousel-hero-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-hero .carousel-hero-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  background-color: var(--brand-navy);
+}
+
+/* background photo with the source's darkening overlay */
+.carousel-hero .carousel-hero-slide-image picture {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-hero .carousel-hero-slide-image picture > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-hero .carousel-hero-slide-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 45%);
+}
+
+/* slide text (source .hero-text .title, all .on-image white) */
+.carousel-hero .carousel-hero-slide-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 48px 30px 88px;
+  color: rgb(255 255 255);
+}
+
+.carousel-hero .carousel-hero-slide-content > * {
+  max-width: 660px;
+}
+
+.carousel-hero .carousel-hero-slide-content p {
+  margin: 18px 0 0;
+  color: rgb(255 255 255);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+/* date / eyebrow (source .small-white) */
+.carousel-hero .carousel-hero-slide-content > p:first-child {
+  margin: 0;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.carousel-hero .carousel-hero-slide-content :is(h1, h2, h3) {
+  margin: 14px 0 0;
+  color: rgb(255 255 255);
+  font-family: var(--heading-font-family);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+/* orange slanted CTA (source .cta-tertiary.btn) */
+.carousel-hero .carousel-hero-slide-content p:has(> a:only-child) {
+  margin-top: 26px;
+}
+
+main .carousel-hero .carousel-hero-slide-content a:any-link {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  height: 44px;
+  padding: 0 45px 0 21px;
+  color: rgb(255 255 255);
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 44px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+main .carousel-hero .carousel-hero-slide-content a:any-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--brand-orange);
+  transform: skewX(-12deg);
+}
+
+main .carousel-hero .carousel-hero-slide-content a:hover::before,
+main .carousel-hero .carousel-hero-slide-content a:focus-visible::before {
+  background-color: var(--brand-navy);
+}
+
+/* pause / play pill */
+.carousel-hero .carousel-hero-toggle {
+  position: absolute;
+  right: 30px;
+  bottom: 24px;
+  z-index: 2;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  margin: 0;
+  padding: 0 13px 0 5px;
+  border: 0;
+  border-radius: 17px;
+  background-color: rgb(255 255 255);
+  color: var(--brand-grey-text);
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.carousel-hero .carousel-hero-toggle::before {
+  content: '';
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%236d6d6d'/%3E%3Cpath d='M6.5 7.5v9l6-4.5z' fill='%23fff'/%3E%3Crect x='13.5' y='7.5' width='1.8' height='9' fill='%23fff'/%3E%3Crect x='16.3' y='7.5' width='1.8' height='9' fill='%23fff'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* the source shows no prev/next arrows; the story tabs and swipe navigate */
+.carousel-hero .carousel-hero-navigation-buttons {
+  display: none;
+}
+
+/* story tabs: navy strip, active tab solid navy with an orange rule */
+.carousel-hero .carousel-hero-tabs-nav {
+  position: relative;
+  z-index: 2;
+  background-color: var(--brand-navy-band);
+}
+
+.carousel-hero .carousel-hero-tabs {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.carousel-hero .carousel-hero-tab {
+  position: relative;
+}
+
+.carousel-hero .carousel-hero-tab.active {
+  background-color: var(--brand-navy);
+}
+
+.carousel-hero .carousel-hero-tab button {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 20px 30px 22px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: rgb(255 255 255);
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: left;
+  white-space: normal;
+  cursor: pointer;
+}
+
+.carousel-hero .carousel-hero-tab.active::after {
+  content: '';
+  position: absolute;
+  left: 30px;
+  right: 20px;
+  bottom: 5px;
+  height: 2px;
+  background-color: var(--brand-orange);
+}
+
+@media (width >= 900px) {
+  .carousel-hero {
+    padding-bottom: 16px;
+  }
+
+  .carousel-hero .carousel-hero-slide {
+    min-height: 597px;
+  }
+
+  .carousel-hero .carousel-hero-slide-content {
+    padding: 49px 30px 120px max(124px, calc(50% - 596px));
+  }
+
+  .carousel-hero .carousel-hero-slide-content :is(h1, h2, h3) {
+    margin-top: 12px;
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .carousel-hero .carousel-hero-toggle {
+    right: max(90px, calc(50% - 630px));
+    bottom: 141px;
+  }
+
+  .carousel-hero .carousel-hero-tabs-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: min(1270px, 100% - 170px);
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  .carousel-hero .carousel-hero-tab {
+    background-color: rgb(10 51 67 / 88%);
+  }
+
+  .carousel-hero .carousel-hero-tabs {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    height: 120px;
+  }
+}

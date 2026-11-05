@@ -1,0 +1,47 @@
+/* source: mnp.ca section.mnp-choose-your-adventure label.cta-pill (measured from catalog screenshot) */
+.link-pills .link-pills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 5px;
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0 0 0 5px;
+}
+
+.link-pills .link-pills-item {
+  margin: 0;
+  padding: 0;
+}
+
+.link-pills .link-pills-pill {
+  display: inline-block;
+  padding: 9px 25px;
+  border: 1px solid var(--brand-grey-line);
+  border-radius: 22px;
+  color: var(--brand-grey-text);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+main .link-pills a.link-pills-pill:any-link {
+  color: var(--brand-grey-text);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+main .link-pills a.link-pills-pill:hover,
+main .link-pills a.link-pills-pill:focus-visible {
+  border-color: var(--brand-grey-text);
+  color: var(--brand-grey-text);
+  text-decoration: none;
+}
+
+@media (width < 600px) {
+  .link-pills .link-pills-pill {
+    white-space: normal;
+  }
+}

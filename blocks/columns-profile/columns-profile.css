@@ -1,0 +1,196 @@
+/* columns-profile: primary person card on a light band (mnp.ca .mnp-primary-personnel-card) */
+.columns-profile {
+  padding: 32px;
+  background-color: var(--brand-grey-bg);
+  color: var(--brand-grey-text);
+  font-family: var(--body-font-family);
+}
+
+.columns-profile h2 {
+  margin: 13px 0;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36.01px;
+}
+
+.columns-profile .columns-profile-heading h2::after {
+  content: '';
+  display: block;
+  width: 125px;
+  height: 2px;
+  margin-top: 15px;
+  background-color: var(--brand-orange);
+}
+
+.columns-profile .columns-profile-row {
+  display: grid;
+  grid-template-columns: 100%;
+  margin-top: 24px;
+}
+
+.columns-profile .columns-profile-heading + .columns-profile-row,
+.columns-profile .columns-profile-row:first-child {
+  margin-top: 0;
+}
+
+.columns-profile .columns-profile-heading + .columns-profile-row {
+  padding-top: 24px;
+}
+
+.columns-profile .columns-profile-row + .columns-profile-row {
+  margin-top: 48px;
+}
+
+/* portrait */
+.columns-profile .columns-profile-portrait {
+  padding: 0 30px;
+}
+
+.columns-profile .columns-profile-portrait picture {
+  display: block;
+}
+
+.columns-profile .columns-profile-portrait img {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(216 216 216);
+  object-fit: cover;
+}
+
+/* name, title, contacts, read more */
+.columns-profile .columns-profile-details {
+  padding: 0 30px;
+}
+
+.columns-profile .columns-profile-details h3 {
+  margin: 10px 0 8px;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.columns-profile .columns-profile-details p {
+  margin: 0 0 16px;
+  color: var(--brand-navy);
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.columns-profile .columns-profile-details .columns-profile-contacts {
+  margin: 0;
+  padding: 16px 0 11px;
+  border-top: 1px solid rgb(216 216 216);
+  list-style: none;
+}
+
+.columns-profile .columns-profile-contacts li {
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.columns-profile .columns-profile-contacts a:any-link {
+  color: var(--brand-grey-text);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.columns-profile .columns-profile-details p.columns-profile-more {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid rgb(216 216 216);
+  font-size: 14px;
+  line-height: 17.5px;
+}
+
+.columns-profile .columns-profile-more a:any-link,
+.columns-profile a.columns-profile-more:any-link {
+  padding: 0 5px 0 0;
+  color: var(--brand-grey-text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.5px;
+  text-decoration: none;
+}
+
+.columns-profile .columns-profile-more a::after,
+.columns-profile a.columns-profile-more::after {
+  content: '';
+  display: inline-block;
+  margin: 0 4px 0 15px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid currentcolor;
+  vertical-align: 0;
+}
+
+/* biography */
+.columns-profile .columns-profile-bio {
+  margin-top: 21px;
+  padding: 0 15px;
+}
+
+.columns-profile .columns-profile-bio p {
+  margin: 0 0 16px;
+  color: var(--brand-grey-text);
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.columns-profile .columns-profile-bio strong {
+  font-weight: 600;
+}
+
+@media (width >= 900px) {
+  .columns-profile .columns-profile-row {
+    grid-template-columns: 5fr 7fr 12fr;
+  }
+
+  .columns-profile .columns-profile-row.columns-profile-no-bio {
+    grid-template-columns: 5fr 19fr;
+  }
+
+  .columns-profile .columns-profile-row.columns-profile-no-portrait {
+    grid-template-columns: 12fr 12fr;
+  }
+
+  .columns-profile .columns-profile-portrait {
+    padding: 0 12px 0 30px;
+  }
+
+  .columns-profile .columns-profile-details {
+    padding: 0 30px 0 18px;
+  }
+
+  .columns-profile .columns-profile-details p,
+  .columns-profile .columns-profile-contacts li,
+  .columns-profile .columns-profile-bio p {
+    line-height: 22px;
+  }
+
+  .columns-profile .columns-profile-details .columns-profile-contacts {
+    padding-bottom: 9px;
+  }
+
+  .columns-profile .columns-profile-details p.columns-profile-more {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .columns-profile .columns-profile-more a:any-link,
+  .columns-profile a.columns-profile-more:any-link {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .columns-profile .columns-profile-bio {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-people",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + link + image + heading + list",
+    "purpose": "grid of people (portrait, name with credentials, role, phone/email contacts and a Read More profile link)"
+  },
+  "contentPattern": {
+    "structure": "one row per person: cell 1 portrait image, cell 2 body with a heading (name and credentials), a role paragraph, phone (tel:) and email (mailto:) links as a list or paragraphs, optional bio text and a Read More / Contact link paragraph"
+  },
+  "options": [
+    {
+      "class": "boxed",
+      "label": "Boxed"
+    },
+    {
+      "class": "boxed-2",
+      "label": "Boxed 2"
+    }
+  ],
+  "memberVariantIds": [
+    "v_68aa9ef9bf9b",
+    "v_c1c488a5caec",
+    "v_465542dd2027",
+    "v_a23719ff89f0-2",
+    "v_884803bfc32b",
+    "v_a9210a421b7f",
+    "v_c1c488a5caec-1"
+  ],
+  "usage": "Management and executive team grids on the About page, Meet the team / contacts on industry, service and office pages; single contact cards on webinar and personnel pages (boxed, boxed-2)",
+  "reuseGuidance": "Use for any list of people with portrait and contacts. Use boxed for a single contact card with a top rule, boxed-2 for a single contact card in a grey band. For a full personnel profile header use profile-contact."
+}

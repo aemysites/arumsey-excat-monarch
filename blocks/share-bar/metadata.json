@@ -1,0 +1,22 @@
+{
+  "variantName": "share-bar",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + list + link",
+    "purpose": "slim bar under an article or news title: the title on the left and round social share buttons (LinkedIn, Facebook, X) on the right"
+  },
+  "contentPattern": {
+    "structure": "row 1 = title heading (optional; omitted rows render only the share buttons); optional row 2 = which networks to show, as links or a comma list (linkedin, facebook, x, email). Without row 2 it shows LinkedIn, Facebook and X. Share URLs are built from the current page URL, not the authored links"
+  },
+  "options": [
+    { "class": "red-light", "label": "Red Light" }
+  ],
+  "memberVariantIds": ["v_07db98dbbb56", "v_f935db6d179a"],
+  "usage": "Insight articles and media/news releases, directly under the hero.",
+  "reuseGuidance": "Use wherever a page needs social share buttons. red-light is a colour hook for news pages (styled in the design pass). Icon glyphs (.share-bar-icon-<network>) are added in the design pass."
+}

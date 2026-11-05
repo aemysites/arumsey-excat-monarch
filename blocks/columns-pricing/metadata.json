@@ -1,0 +1,22 @@
+{
+  "variantName": "columns-pricing",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "heading + text + table + list",
+    "purpose": "pricing explanation and price table beside a highlighted content panel"
+  },
+  "contentPattern": {
+    "structure": "row 1: two cells [heading + intro text | panel heading + text + list]; rows 2+: the pricing table, one row per table row with one cell per column, the first of these rows being the column headers. The table is rendered under the intro text"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "v_91d3b6ecf4e0-1"
+  ],
+  "usage": "Learning Academy pricing table beside the customized-content panel.",
+  "reuseGuidance": "One-off layout; for a plain table on its own use default content."
+}

@@ -1,0 +1,588 @@
+/*
+ * Form block, styled from www.mnp.ca computed styles.
+ * Default look: Sitecore form in an 8/12 column (bootstrap row: -15px bleed, 15px column padding).
+ */
+.form {
+  margin: 0 -9px;
+  color: var(--brand-grey-text);
+}
+
+.form > div {
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.form > :first-child {
+  padding-top: 35px;
+}
+
+.form > .form-body {
+  padding-bottom: 10px;
+}
+
+.form form {
+  margin: 0;
+}
+
+/* intro copy */
+.form :is(h2, h3) {
+  position: relative;
+  padding-bottom: 17px;
+  color: var(--brand-navy);
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+}
+
+.form :is(h2, h3)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 125px;
+  height: 2px;
+  background-color: rgb(241 90 34);
+}
+
+.form h2 {
+  margin: 13px 0;
+  font-size: 26px;
+  line-height: 36.01px;
+}
+
+.form h3 {
+  margin: 11px 0;
+  font-size: 22px;
+  line-height: 35.992px;
+}
+
+.form .form-intro-part,
+.form p {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.form p {
+  margin: 0 0 16px;
+}
+
+.form .form-intro img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* fields */
+.form .form-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px 30px;
+}
+
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form .form-field label,
+.form .form-field legend {
+  margin-bottom: 4.8px;
+  color: var(--brand-navy);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.form .form-field label[data-required]::after {
+  content: '*';
+}
+
+.form .form-field input:not([type='checkbox'], [type='radio']),
+.form .form-field select,
+.form .form-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 42px;
+  margin: 0;
+  border: 1px solid var(--brand-grey-line);
+  border-radius: 0;
+  padding: 8px 12px;
+  background-color: rgb(255 255 255);
+  color: var(--brand-navy);
+  font: inherit;
+  line-height: 24px;
+}
+
+.form .form-field :is(input, select, textarea):focus-visible {
+  outline: 2px solid var(--brand-navy);
+  outline-offset: -1px;
+}
+
+.form .form-field textarea {
+  height: 240px;
+  resize: vertical;
+}
+
+.form .form-checkbox-wrapper,
+.form .form-radio-wrapper fieldset {
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.form .form-checkbox-wrapper label,
+.form .form-radio-wrapper fieldset label {
+  margin: 0;
+  line-height: 32px;
+}
+
+.form .form-field input:is([type='checkbox'], [type='radio']) {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin: 6px 0 0;
+  accent-color: var(--brand-navy);
+}
+
+.form .form-radio-wrapper fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.form .form-radio-wrapper legend {
+  width: 100%;
+}
+
+.form .form-hidden-wrapper {
+  display: none;
+}
+
+.form .form-checkbox-wrapper,
+.form .form-heading-wrapper,
+.form .form-plaintext-wrapper,
+.form .form-textarea-wrapper,
+.form .form-radio-wrapper,
+.form .form-submit-wrapper {
+  grid-column: 1 / -1;
+}
+
+.form .form-heading-wrapper h3 {
+  margin: 0;
+}
+
+/* submit */
+.form .form-submit-wrapper {
+  align-items: flex-end;
+}
+
+.form button.button {
+  border: 1px solid var(--brand-grey-line);
+  border-radius: 0;
+  padding: 8.8px 17.6px;
+  background-color: var(--brand-navy);
+  color: rgb(255 255 255);
+  font-size: 17.6px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.form button.button:disabled {
+  opacity: 0.6;
+}
+
+.form .form-status {
+  margin: 16px 0 0;
+  color: var(--brand-navy);
+}
+
+.form .form-error .form-status {
+  color: rgb(240 52 52);
+}
+
+.form .form-status:empty {
+  display: none;
+}
+
+/* hosted (Moosend, Dynamics) forms */
+.form .form-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 600px;
+  border: 0;
+}
+
+/* text-left: intro copy beside a compact contact form */
+.form.text-left {
+  margin: 0 6px;
+  padding-top: 20px;
+}
+
+.form.text-left > .form-body {
+  padding-top: 2px;
+  padding-bottom: 25px;
+}
+
+.form.text-left > .form-intro {
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+
+.form.text-left .form-intro-part {
+  margin-bottom: 16px;
+}
+
+.form.text-left .form-intro-part > :last-child {
+  margin-bottom: 0;
+}
+
+.form.text-left .form-fields {
+  row-gap: 12px;
+}
+
+.form.text-left .form-field label,
+.form.text-left .form-field legend,
+.form.boxed .form-field label,
+.form.boxed .form-field legend {
+  margin-bottom: 4.32px;
+  font-size: 14.4px;
+  line-height: normal;
+}
+
+.form.text-left .form-field label[data-required]::after {
+  content: none;
+}
+
+.form.text-left .form-field input:not([type='checkbox'], [type='radio']),
+.form.text-left .form-field select {
+  height: 41px;
+  min-height: 0;
+}
+
+.form.text-left .form-checkbox-wrapper {
+  padding: 16px 0 0 16px;
+}
+
+.form.text-left .form-checkbox-wrapper label {
+  color: var(--brand-grey-text);
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.form.text-left .form-field input:is([type='checkbox'], [type='radio']) {
+  margin-top: 3px;
+}
+
+.form.text-left .form-submit-wrapper {
+  padding-top: 62px;
+}
+
+.form.text-left button.button {
+  border-color: transparent;
+  padding: 16px 24px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* boxed: navy community-partnership panel with an orange slanted submit */
+.form.boxed {
+  margin: 0;
+  padding: 32px 15px 24px;
+  background-color: var(--brand-navy-band);
+  color: rgb(255 255 255);
+}
+
+.form.boxed > div {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.form.boxed :is(h1, h2, h3, h4, p, .form-intro-part),
+.form.boxed .form-field label,
+.form.boxed .form-field legend {
+  color: rgb(255 255 255);
+}
+
+.form.boxed > .form-intro {
+  margin-bottom: 47px;
+}
+
+.form.boxed h3 {
+  margin-bottom: 26px;
+}
+
+.form.boxed p {
+  line-height: 22px;
+}
+
+.form.boxed .form-fields {
+  gap: 20px 10px;
+}
+
+.form.boxed .form-field label[data-required]::after {
+  content: none;
+}
+
+.form.boxed .form-field input:not([type='checkbox'], [type='radio']),
+.form.boxed .form-field select,
+.form.boxed .form-field textarea {
+  min-height: 0;
+  border-color: rgb(255 255 255);
+}
+
+.form.boxed .form-field :is(input, select) {
+  height: 41px;
+}
+
+.form.boxed .form-field textarea {
+  height: 128px;
+}
+
+.form.boxed .form-submit-wrapper {
+  padding: 34px 5px 0 0;
+}
+
+.form.boxed button.button,
+.form.dark button.button {
+  position: relative;
+  isolation: isolate;
+  border: 0;
+  padding: 17px 25px;
+  background-color: transparent;
+  color: rgb(255 255 255);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  overflow: visible;
+}
+
+/* slanted orange plate behind upright text */
+.form.boxed button.button::before,
+.form.dark button.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(241 90 34);
+  transform: skewX(-12deg);
+}
+
+/* boxed-2 / boxed-3: Moosend panels, 800px wide and centred in the column */
+.form.boxed-2 > .form-body,
+.form.boxed-3 > .form-body {
+  padding: 0 15px;
+}
+
+.form.boxed-2 > .form-body > *,
+.form.boxed-3 > .form-body > * {
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form.boxed-3 > .form-body > * {
+  background-color: rgb(245 245 245);
+}
+
+.form.boxed-2 > .form-body > .form-header,
+.form.boxed-3 > .form-body > .form-header {
+  padding-bottom: 24px;
+}
+
+.form.boxed-2 > .form-body > .form-header + *,
+.form.boxed-3 > .form-body > .form-header + * {
+  padding-top: 0;
+}
+
+.form.boxed-2 > .form-body > :last-child,
+.form.boxed-3 > .form-body > :last-child {
+  padding-bottom: 40px;
+}
+
+.form .form-header h2 {
+  margin: 0 0 15px;
+}
+
+.form .form-header p {
+  margin: 0;
+}
+
+.form.boxed-3 > .form-intro {
+  padding: 16px 31px;
+}
+
+.form.boxed-3 > .form-intro h2:first-child {
+  padding-top: 33px;
+}
+
+.form.boxed-2 .form-fields,
+.form.boxed-3 .form-fields {
+  gap: 24px;
+}
+
+.form.boxed-3 .form-fields {
+  row-gap: 12px;
+}
+
+.form.boxed-2 .form-field label,
+.form.boxed-3 .form-field label {
+  margin-bottom: 8px;
+  line-height: normal;
+}
+
+.form.boxed-2 .form-field label[data-required]::after,
+.form.boxed-3 .form-field label[data-required]::after {
+  content: ' *';
+  color: rgb(240 52 52);
+}
+
+.form.boxed-3 .form-field input:not([type='checkbox'], [type='radio']),
+.form.boxed-3 .form-field select {
+  min-height: 38px;
+  padding-block: 6px;
+}
+
+.form.boxed-2 .form-checkbox-wrapper label,
+.form.boxed-3 .form-checkbox-wrapper label {
+  color: var(--brand-grey-text);
+  line-height: 22px;
+}
+
+.form.boxed-2 .form-submit-wrapper,
+.form.boxed-3 .form-submit-wrapper {
+  align-items: center;
+}
+
+.form.boxed-2 button.button,
+.form.boxed-3 button.button {
+  border: 0;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* dark: the default form on a navy band */
+.form.dark {
+  margin: 0;
+  padding-bottom: 32px;
+  background-color: var(--brand-navy-band);
+  color: rgb(255 255 255);
+}
+
+.form.dark :is(h1, h2, h3, h4, p, .form-intro-part),
+.form.dark .form-field label,
+.form.dark .form-field legend {
+  color: rgb(255 255 255);
+}
+
+.form.dark .form-field input:not([type='checkbox'], [type='radio']),
+.form.dark .form-field select,
+.form.dark .form-field textarea {
+  border-color: rgb(255 255 255);
+}
+
+/* a missing/empty sheet leaves the intro on its own: no empty box, no raw link */
+.form.form-unavailable > .form-body:empty {
+  display: none;
+}
+
+.form.form-unavailable:not(.boxed-2, .boxed-3) > .form-intro {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (width >= 900px) {
+  .form {
+    margin: 0 -12px;
+  }
+
+  .form .form-intro-part,
+  .form p {
+    line-height: 22px;
+  }
+
+  .form .form-fields {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 35px;
+  }
+
+  /* default, dark, boxed-2, boxed-3: content in an 8/12 column */
+  .form:not(.text-left, .boxed) > div {
+    max-width: calc(100% * 2 / 3);
+  }
+
+  .form.boxed-2 .form-fields,
+  .form.boxed-3 .form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .form.boxed-2 > .form-body,
+  .form.boxed-3 > .form-body {
+    padding: 0;
+  }
+
+  .form.boxed-2 > .form-body > *,
+  .form.boxed-3 > .form-body > * {
+    padding-inline: 48px;
+  }
+
+  .form.boxed-2 > .form-body > .form-header {
+    padding-top: 21px;
+  }
+
+  .form.boxed-3 > .form-body > .form-header {
+    padding-top: 40px;
+  }
+
+  /* text-left: two 6/12 columns */
+  .form.text-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    margin: 0 3px;
+  }
+
+  .form.text-left > .form-intro {
+    padding-bottom: 0;
+  }
+
+  .form.text-left > .form-body {
+    padding-bottom: 8px;
+  }
+
+  .form.text-left.form-no-intro > .form-body {
+    grid-column: 1 / -1;
+  }
+
+  .form.text-left .form-checkbox-wrapper {
+    padding-top: 13px;
+  }
+
+  .form.text-left .form-checkbox-wrapper label {
+    line-height: 22px;
+  }
+
+  .form.text-left .form-submit-wrapper {
+    padding-top: 56px;
+  }
+
+  .form.boxed {
+    padding: 32px 30px 24px;
+  }
+
+  .form.boxed .form-submit-wrapper {
+    padding-right: 0;
+  }
+
+  .form.boxed .form-fields {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+  }
+
+  .form.boxed .form-textarea-wrapper {
+    grid-column: span 2;
+  }
+}

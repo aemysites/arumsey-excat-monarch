@@ -1,0 +1,31 @@
+{
+  "variantName": "columns-sidebar",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "hasGrid": true,
+    "imagePattern": "noimg",
+    "structure": "text + list + link + image + heading",
+    "purpose": "wide body text column beside a narrow sidebar of promo cards or media"
+  },
+  "contentPattern": {
+    "structure": "one row, two cells: [body text, headings, lists | sidebar]; in the sidebar each image starts a promo card (image, heading, text, final link as CTA); a lone YouTube/Vimeo link becomes an embedded player"
+  },
+  "options": [
+    {
+      "class": "media-right",
+      "label": "Media Right"
+    }
+  ],
+  "memberVariantIds": [
+    "v_af558ce3f9b7",
+    "v_af558ce3f9b7-1",
+    "v_a23719ff89f0-1",
+    "v_af558ce3f9b7-3",
+    "v_2262dc3d7356"
+  ],
+  "usage": "Article and landing page body text with a related office/CTA card or webinar video alongside.",
+  "reuseGuidance": "Use media-right for an equal-width text and video/photo pair. Use columns-media when both columns are equally weighted without a sidebar card."
+}
