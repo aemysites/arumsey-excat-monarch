@@ -284,6 +284,56 @@
   line-height: 20px;
 }
 
+/* text-left advisor cards (mnp-personnel-card): headshot, then name, title, bio.
+   The source hides the phone/email list and Contact link in this campaign form. */
+.form.text-left .form-intro-part.form-advisor {
+  margin-bottom: 42px;
+  padding-top: 9px;
+}
+
+.form.text-left .form-advisor-photo {
+  max-width: 191px;
+}
+
+.form.text-left .form-advisor-photo > * {
+  margin: 0;
+}
+
+.form.text-left .form-advisor-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.form.text-left .form-advisor-name {
+  margin: 10px 0 8px;
+  padding-bottom: 0;
+  color: var(--brand-navy);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.form.text-left .form-advisor-name::after {
+  content: none;
+}
+
+.form.text-left .form-advisor-title {
+  margin: 0;
+  border-bottom: 1px solid rgb(216 216 216);
+  padding-bottom: 8px;
+  color: var(--brand-navy);
+}
+
+.form.text-left .form-advisor-bio {
+  margin: 16px 0 0;
+}
+
+.form.text-left .form-advisor-contact {
+  display: none;
+}
+
 /* boxed: navy community-partnership panel with an orange slanted submit */
 .form.boxed {
   margin: 0;
@@ -567,6 +617,31 @@
 
   .form.text-left .form-submit-wrapper {
     padding-top: 56px;
+  }
+
+  /* advisor card: headshot in a 26% column beside the details */
+  .form.text-left .form-intro-part.form-advisor {
+    display: grid;
+    grid-template-columns: 26% minmax(0, 1fr);
+    align-items: start;
+    column-gap: 25px;
+    padding-inline: 25px;
+  }
+
+  .form.text-left .form-advisor-photo {
+    max-width: none;
+  }
+
+  .form.text-left .form-advisor-name {
+    margin-top: 0;
+  }
+
+  .form.text-left .form-advisor-title {
+    line-height: 26px;
+  }
+
+  .form.text-left .form-advisor-bio {
+    line-height: 24px;
   }
 
   .form.boxed {

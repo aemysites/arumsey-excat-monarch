@@ -229,6 +229,39 @@ function findSourceLink(block) {
   return cell ? { cell, link: cell.querySelector('a') } : null;
 }
 
+/*
+ * An advisor card is an intro part that opens with a headshot (a picture on its own)
+ * followed by a heading (name), title, bio and contact links. The headshot and the rest
+ * are split into two wrappers so CSS can lay them out side by side.
+ */
+function decorateAdvisor(part) {
+  const first = part.firstElementChild;
+  if (!first) return;
+  const isPhoto = first.matches('picture, img')
+    || (first.matches('p') && first.children.length === 1
+      && first.firstElementChild.matches('picture, img') && !first.textContent.trim());
+  const name = first.nextElementSibling;
+  if (!isPhoto || !name?.matches('h2, h3, h4')) return;
+  name.classList.add('form-advisor-name');
+  if (name.nextElementSibling?.matches('p')) name.nextElementSibling.classList.add('form-advisor-title');
+  // the phone/email list and everything after it (the Contact link)
+  let contact = part.querySelector(':scope > ul');
+  while (contact) {
+    contact.classList.add('form-advisor-contact');
+    contact = contact.nextElementSibling;
+  }
+  part.querySelectorAll(':scope > p:not(.form-advisor-title, .form-advisor-contact)')
+    .forEach((p) => { if (p !== first) p.classList.add('form-advisor-bio'); });
+  const photo = document.createElement('div');
+  photo.className = 'form-advisor-photo';
+  photo.append(first);
+  const info = document.createElement('div');
+  info.className = 'form-advisor-info';
+  info.append(...part.childNodes);
+  part.classList.add('form-advisor');
+  part.append(photo, info);
+}
+
 export default async function decorate(block) {
   formCount += 1;
   const source = findSourceLink(block);
@@ -269,6 +302,8 @@ export default async function decorate(block) {
       if (!part.textContent.trim() && !part.querySelector('picture, img')) part.remove();
     }
   }
+
+  intro.querySelectorAll(':scope > .form-intro-part').forEach(decorateAdvisor);
 
   block.replaceChildren();
   if (intro.children.length) block.append(intro);

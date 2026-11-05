@@ -65,6 +65,11 @@
   height: auto;
 }
 
+/* SVG icons in the body copy (e.g. the service intro icon) keep the source's small size */
+.columns-sidebar .columns-sidebar-main img[src*='.svg'] {
+  width: 72px;
+}
+
 /* sidebar column: column content box sits 15px from the viewport edge on mobile */
 .columns-sidebar .columns-sidebar-aside {
   margin: 0 -15px;
