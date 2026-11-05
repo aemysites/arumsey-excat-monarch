@@ -81,7 +81,8 @@ function buildDropdown(li) {
   const body = document.createElement('div');
   body.className = 'nav-panel-body';
   if (list) {
-    const isCards = list.querySelector(':scope > li > p > a > img, :scope > li > p > img');
+    // published pages wrap images in <picture>, the raw fragment may not
+    const isCards = list.querySelector(':scope > li > p img');
     if (isCards) {
       list.classList.add('nav-cards');
       list.querySelectorAll(':scope > li').forEach((card) => {

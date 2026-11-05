@@ -69,7 +69,7 @@ export default async function decorate(block) {
     column.append(...section.childNodes);
     // a heading followed by an icon list is the social group: it gets its own grid cell
     const iconList = [...column.querySelectorAll(':scope > ul')].find((ul) => [...ul.children]
-      .every((li) => li.querySelector('a > img') && !li.textContent.trim()));
+      .every((li) => li.querySelector('a img') && !li.textContent.trim()));
     if (iconList && column.querySelector(':scope > ul') !== iconList) {
       const social = document.createElement('div');
       social.className = 'footer-social';
