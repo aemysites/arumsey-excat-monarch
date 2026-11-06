@@ -409,6 +409,23 @@ header .nav-tools img {
     background-color: var(--nav-navy);
   }
 
+  /* pages opening with a photo hero (body.header-overlay, set in scripts.js): the header sits
+     transparently over the photo, as on the source; the hero extends up behind it */
+  body.header-overlay header {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 10;
+  }
+
+  /* a soft dark fade keeps the white menu readable over light photos */
+  body.header-overlay header .nav-wrapper {
+    background: linear-gradient(rgb(0 0 0 / 45%), rgb(0 0 0 / 0%));
+  }
+
+  body.header-overlay header .nav-sections {
+    box-shadow: inset 0 -1px rgb(255 255 255 / 60%);
+  }
+
   header nav {
     position: relative;
     grid-template-columns: 1fr;

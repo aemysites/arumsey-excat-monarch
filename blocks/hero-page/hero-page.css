@@ -300,3 +300,19 @@ main > .section > .hero-page-wrapper {
     line-height: 27.5px;
   }
 }
+
+/* header over the photo (body.header-overlay, set in scripts.js): the photo extends up behind
+   the 151px desktop header */
+@media (width >= 900px) {
+  body.header-overlay main > .section:first-child .hero-page.hero-page-layout-overlay .hero-page-inner {
+    padding-top: 151px;
+  }
+
+  /* the source darkens the photo under the white menu and title */
+  body.header-overlay main > .section:first-child .hero-page.hero-page-layout-overlay .hero-page-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0 0 0 / 30%);
+  }
+}

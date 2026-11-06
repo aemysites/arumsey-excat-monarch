@@ -173,6 +173,22 @@ function decorateSectionMetadata(main) {
   });
 }
 
+/**
+ * Pages that open with a photo hero (homepage carousel, photo title banners) show the header
+ * over the photo, as on the source site. Marked before the first paint to avoid a layout shift;
+ * the header and hero CSS react to body.header-overlay (desktop only).
+ * @param {Element} main The main element
+ */
+function decorateHeaderOverlay(main) {
+  const first = main.querySelector(':scope > .section:first-child [data-block-name]');
+  if (!first) return;
+  const name = first.dataset.blockName;
+  const photoTitleHero = name === 'hero-page'
+    && first.matches('.image-dark, .intro-strip, .intro-strip-stacked')
+    && first.querySelector('picture, img');
+  if (name === 'carousel-hero' || photoTitleHero) document.body.classList.add('header-overlay');
+}
+
 export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
@@ -192,6 +208,7 @@ async function loadEager(doc) {
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
+    decorateHeaderOverlay(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }

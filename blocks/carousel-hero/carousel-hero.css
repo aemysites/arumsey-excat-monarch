@@ -234,6 +234,15 @@ main .carousel-hero .carousel-hero-slide-content a:focus-visible::before {
     padding: 49px 30px 120px max(124px, calc(50% - 596px));
   }
 
+  /* header over the photo (body.header-overlay): the slide grows by the 151px header */
+  body.header-overlay main > .section:first-child .carousel-hero .carousel-hero-slide {
+    min-height: 748px;
+  }
+
+  body.header-overlay main > .section:first-child .carousel-hero .carousel-hero-slide-content {
+    padding-top: 200px;
+  }
+
   .carousel-hero .carousel-hero-slide-content :is(h1, h2, h3) {
     margin-top: 12px;
     font-size: 42px;
