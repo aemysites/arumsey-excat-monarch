@@ -1,0 +1,20 @@
+{
+  "variantName": "listing",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "medium",
+    "hasGrid": true,
+    "imagePattern": "thumbnail",
+    "structure": "search + filters + result cards",
+    "purpose": "searchable, filterable list of site pages read from the page index"
+  },
+  "contentPattern": {
+    "structure": "key / value config rows: Source, Path, Filters, Page size, Sort, Heading"
+  },
+  "options": ["people", "insights", "events", "jobs"],
+  "memberVariantIds": [],
+  "usage": "Personnel directory, insights directory, community events and career opportunities listing pages (source: server-side search listing form#search).",
+  "reuseGuidance": "Use for any list of pages under a path; add index properties for extra card fields or filters."
+}
