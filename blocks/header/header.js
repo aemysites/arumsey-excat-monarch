@@ -225,6 +225,9 @@ export default async function decorate(block) {
   [...list.children].forEach((li) => {
     if (!li.querySelector(':scope > ul')) {
       li.classList.add('nav-link');
+      // published pages wrap a lone link in <p> (li > p > a): unwrap it to li > a
+      const p = li.querySelector(':scope > p');
+      if (p && li.children.length === 1 && p.querySelector(':scope > a')) p.replaceWith(...p.childNodes);
       return;
     }
     const { trigger, panel } = buildDropdown(li);
