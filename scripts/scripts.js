@@ -189,6 +189,8 @@ function decorateHeaderOverlay(main) {
   if (name === 'carousel-hero' || photoTitleHero) document.body.classList.add('header-overlay');
 }
 
+// named export: blocks/fragment/fragment.js imports { decorateMain }
+// eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
